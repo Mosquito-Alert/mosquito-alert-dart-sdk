@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for ReportLocationPoint
+// tests for LocationPoint
 void main() {
-  final instance = ReportLocationPointBuilder();
+  final instance = LocationPointBuilder();
   // TODO add properties to the builder and call build()
 
-  group(ReportLocationPoint, () {
+  group(LocationPoint, () {
     // double latitude
     test('to test the property `latitude`', () async {
       // TODO

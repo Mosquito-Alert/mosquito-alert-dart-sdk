@@ -3,56 +3,64 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:time_machine/time_machine.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'patched_detail_notification_request.g.dart';
+part 'create_notification.g.dart';
 
-/// PatchedDetailNotificationRequest
+/// CreateNotification
 ///
 /// Properties:
-/// * [seen] 
+/// * [id] 
+/// * [createdAt] 
 @BuiltValue()
-abstract class PatchedDetailNotificationRequest implements Built<PatchedDetailNotificationRequest, PatchedDetailNotificationRequestBuilder> {
-  @BuiltValueField(wireName: r'seen')
-  bool? get seen;
+abstract class CreateNotification implements Built<CreateNotification, CreateNotificationBuilder> {
+  @BuiltValueField(wireName: r'id')
+  int get id;
 
-  PatchedDetailNotificationRequest._();
+  @BuiltValueField(wireName: r'created_at')
+  OffsetDateTime get createdAt;
 
-  factory PatchedDetailNotificationRequest([void updates(PatchedDetailNotificationRequestBuilder b)]) = _$PatchedDetailNotificationRequest;
+  CreateNotification._();
+
+  factory CreateNotification([void updates(CreateNotificationBuilder b)]) = _$CreateNotification;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(PatchedDetailNotificationRequestBuilder b) => b;
+  static void _defaults(CreateNotificationBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<PatchedDetailNotificationRequest> get serializer => _$PatchedDetailNotificationRequestSerializer();
+  static Serializer<CreateNotification> get serializer => _$CreateNotificationSerializer();
 }
 
-class _$PatchedDetailNotificationRequestSerializer implements PrimitiveSerializer<PatchedDetailNotificationRequest> {
+class _$CreateNotificationSerializer implements PrimitiveSerializer<CreateNotification> {
   @override
-  final Iterable<Type> types = const [PatchedDetailNotificationRequest, _$PatchedDetailNotificationRequest];
+  final Iterable<Type> types = const [CreateNotification, _$CreateNotification];
 
   @override
-  final String wireName = r'PatchedDetailNotificationRequest';
+  final String wireName = r'CreateNotification';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    PatchedDetailNotificationRequest object, {
+    CreateNotification object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.seen != null) {
-      yield r'seen';
-      yield serializers.serialize(
-        object.seen,
-        specifiedType: const FullType(bool),
-      );
-    }
+    yield r'id';
+    yield serializers.serialize(
+      object.id,
+      specifiedType: const FullType(int),
+    );
+    yield r'created_at';
+    yield serializers.serialize(
+      object.createdAt,
+      specifiedType: const FullType(OffsetDateTime),
+    );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    PatchedDetailNotificationRequest object, {
+    CreateNotification object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -63,19 +71,26 @@ class _$PatchedDetailNotificationRequestSerializer implements PrimitiveSerialize
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required PatchedDetailNotificationRequestBuilder result,
+    required CreateNotificationBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'seen':
+        case r'id':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(bool),
-          ) as bool;
-          result.seen = valueDes;
+            specifiedType: const FullType(int),
+          ) as int;
+          result.id = valueDes;
+          break;
+        case r'created_at':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(OffsetDateTime),
+          ) as OffsetDateTime;
+          result.createdAt = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -86,12 +101,12 @@ class _$PatchedDetailNotificationRequestSerializer implements PrimitiveSerialize
   }
 
   @override
-  PatchedDetailNotificationRequest deserialize(
+  CreateNotification deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = PatchedDetailNotificationRequestBuilder();
+    final result = CreateNotificationBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

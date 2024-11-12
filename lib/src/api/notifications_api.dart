@@ -10,12 +10,12 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
-import 'package:mosquito_alert/src/model/base_notification_create.dart';
-import 'package:mosquito_alert/src/model/detail_notification.dart';
-import 'package:mosquito_alert/src/model/detail_notification_request.dart';
+import 'package:mosquito_alert/src/model/create_notification.dart';
 import 'package:mosquito_alert/src/model/meta_notification_request.dart';
-import 'package:mosquito_alert/src/model/paginated_detail_notification_list.dart';
-import 'package:mosquito_alert/src/model/patched_detail_notification_request.dart';
+import 'package:mosquito_alert/src/model/notification.dart';
+import 'package:mosquito_alert/src/model/notification_request.dart';
+import 'package:mosquito_alert/src/model/paginated_notification_list.dart';
+import 'package:mosquito_alert/src/model/patched_notification_request.dart';
 
 class NotificationsApi {
 
@@ -37,9 +37,9 @@ class NotificationsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BaseNotificationCreate] as data
+  /// Returns a [Future] containing a [Response] with a [CreateNotification] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BaseNotificationCreate>> notificationsCreate({ 
+  Future<Response<CreateNotification>> notificationsCreate({ 
     MetaNotificationRequest? metaNotificationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -105,14 +105,14 @@ class NotificationsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BaseNotificationCreate? _responseData;
+    CreateNotification? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BaseNotificationCreate),
-      ) as BaseNotificationCreate;
+        specifiedType: const FullType(CreateNotification),
+      ) as CreateNotification;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -124,7 +124,7 @@ class NotificationsApi {
       );
     }
 
-    return Response<BaseNotificationCreate>(
+    return Response<CreateNotification>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -151,9 +151,9 @@ class NotificationsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PaginatedDetailNotificationList] as data
+  /// Returns a [Future] containing a [Response] with a [PaginatedNotificationList] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PaginatedDetailNotificationList>> notificationsList({ 
+  Future<Response<PaginatedNotificationList>> notificationsList({ 
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
@@ -210,14 +210,14 @@ class NotificationsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PaginatedDetailNotificationList? _responseData;
+    PaginatedNotificationList? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PaginatedDetailNotificationList),
-      ) as PaginatedDetailNotificationList;
+        specifiedType: const FullType(PaginatedNotificationList),
+      ) as PaginatedNotificationList;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -229,7 +229,7 @@ class NotificationsApi {
       );
     }
 
-    return Response<PaginatedDetailNotificationList>(
+    return Response<PaginatedNotificationList>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -246,7 +246,7 @@ class NotificationsApi {
   ///
   /// Parameters:
   /// * [id] - A unique integer value identifying this notification.
-  /// * [patchedDetailNotificationRequest] 
+  /// * [patchedNotificationRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -254,11 +254,11 @@ class NotificationsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [DetailNotification] as data
+  /// Returns a [Future] containing a [Response] with a [Notification] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DetailNotification>> notificationsPartialUpdate({ 
+  Future<Response<Notification>> notificationsPartialUpdate({ 
     required int id,
-    PatchedDetailNotificationRequest? patchedDetailNotificationRequest,
+    PatchedNotificationRequest? patchedNotificationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -299,8 +299,8 @@ class NotificationsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(PatchedDetailNotificationRequest);
-      _bodyData = patchedDetailNotificationRequest == null ? null : _serializers.serialize(patchedDetailNotificationRequest, specifiedType: _type);
+      const _type = FullType(PatchedNotificationRequest);
+      _bodyData = patchedNotificationRequest == null ? null : _serializers.serialize(patchedNotificationRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(
@@ -323,14 +323,14 @@ class NotificationsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    DetailNotification? _responseData;
+    Notification? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(DetailNotification),
-      ) as DetailNotification;
+        specifiedType: const FullType(Notification),
+      ) as Notification;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -342,7 +342,7 @@ class NotificationsApi {
       );
     }
 
-    return Response<DetailNotification>(
+    return Response<Notification>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -366,9 +366,9 @@ class NotificationsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [DetailNotification] as data
+  /// Returns a [Future] containing a [Response] with a [Notification] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DetailNotification>> notificationsRetrieve({ 
+  Future<Response<Notification>> notificationsRetrieve({ 
     required int id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -414,14 +414,14 @@ class NotificationsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    DetailNotification? _responseData;
+    Notification? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(DetailNotification),
-      ) as DetailNotification;
+        specifiedType: const FullType(Notification),
+      ) as Notification;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -433,7 +433,7 @@ class NotificationsApi {
       );
     }
 
-    return Response<DetailNotification>(
+    return Response<Notification>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -450,7 +450,7 @@ class NotificationsApi {
   ///
   /// Parameters:
   /// * [id] - A unique integer value identifying this notification.
-  /// * [detailNotificationRequest] 
+  /// * [notificationRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -458,11 +458,11 @@ class NotificationsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [DetailNotification] as data
+  /// Returns a [Future] containing a [Response] with a [Notification] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DetailNotification>> notificationsUpdate({ 
+  Future<Response<Notification>> notificationsUpdate({ 
     required int id,
-    required DetailNotificationRequest detailNotificationRequest,
+    required NotificationRequest notificationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -503,8 +503,8 @@ class NotificationsApi {
     dynamic _bodyData;
 
     try {
-      const _type = FullType(DetailNotificationRequest);
-      _bodyData = _serializers.serialize(detailNotificationRequest, specifiedType: _type);
+      const _type = FullType(NotificationRequest);
+      _bodyData = _serializers.serialize(notificationRequest, specifiedType: _type);
 
     } catch(error, stackTrace) {
       throw DioException(
@@ -527,14 +527,14 @@ class NotificationsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    DetailNotification? _responseData;
+    Notification? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(DetailNotification),
-      ) as DetailNotification;
+        specifiedType: const FullType(Notification),
+      ) as Notification;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -546,7 +546,7 @@ class NotificationsApi {
       );
     }
 
-    return Response<DetailNotification>(
+    return Response<Notification>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

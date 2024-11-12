@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // ReportLocationRequest location
+    // LocationRequest location
     test('to test the property `location`', () async {
       // TODO
     });
@@ -43,7 +43,7 @@ void main() {
       // TODO
     });
 
-    // BuiltList<ReportPhotoRequest> photos
+    // BuiltList<SimplePhotoRequest> photos
     test('to test the property `photos`', () async {
       // TODO
     });

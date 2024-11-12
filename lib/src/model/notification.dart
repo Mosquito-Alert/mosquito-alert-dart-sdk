@@ -7,9 +7,9 @@ import 'package:time_machine/time_machine.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'detail_notification.g.dart';
+part 'notification.g.dart';
 
-/// DetailNotification
+/// Notification
 ///
 /// Properties:
 /// * [id] 
@@ -19,7 +19,7 @@ part 'detail_notification.g.dart';
 /// * [body] 
 /// * [seen] 
 @BuiltValue()
-abstract class DetailNotification implements Built<DetailNotification, DetailNotificationBuilder> {
+abstract class Notification implements Built<Notification, NotificationBuilder> {
   @BuiltValueField(wireName: r'id')
   int get id;
 
@@ -39,27 +39,27 @@ abstract class DetailNotification implements Built<DetailNotification, DetailNot
   @BuiltValueField(wireName: r'seen')
   bool get seen;
 
-  DetailNotification._();
+  Notification._();
 
-  factory DetailNotification([void updates(DetailNotificationBuilder b)]) = _$DetailNotification;
+  factory Notification([void updates(NotificationBuilder b)]) = _$Notification;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(DetailNotificationBuilder b) => b;
+  static void _defaults(NotificationBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<DetailNotification> get serializer => _$DetailNotificationSerializer();
+  static Serializer<Notification> get serializer => _$NotificationSerializer();
 }
 
-class _$DetailNotificationSerializer implements PrimitiveSerializer<DetailNotification> {
+class _$NotificationSerializer implements PrimitiveSerializer<Notification> {
   @override
-  final Iterable<Type> types = const [DetailNotification, _$DetailNotification];
+  final Iterable<Type> types = const [Notification, _$Notification];
 
   @override
-  final String wireName = r'DetailNotification';
+  final String wireName = r'Notification';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    DetailNotification object, {
+    Notification object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'id';
@@ -97,7 +97,7 @@ class _$DetailNotificationSerializer implements PrimitiveSerializer<DetailNotifi
   @override
   Object serialize(
     Serializers serializers,
-    DetailNotification object, {
+    Notification object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -108,7 +108,7 @@ class _$DetailNotificationSerializer implements PrimitiveSerializer<DetailNotifi
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required DetailNotificationBuilder result,
+    required NotificationBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -167,12 +167,12 @@ class _$DetailNotificationSerializer implements PrimitiveSerializer<DetailNotifi
   }
 
   @override
-  DetailNotification deserialize(
+  Notification deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = DetailNotificationBuilder();
+    final result = NotificationBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

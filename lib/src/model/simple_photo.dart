@@ -3,66 +3,64 @@
 //
 
 // ignore_for_file: unused_element
-import 'dart:typed_data';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'report_photo_request.g.dart';
+part 'simple_photo.g.dart';
 
-/// ReportPhotoRequest
+/// SimplePhoto
 ///
 /// Properties:
 /// * [uuid] 
-/// * [file] 
+/// * [url] - URL of the photo associated with the item. Note: This URL may change over time. Do not rely on it for permanent storage.
 @BuiltValue()
-abstract class ReportPhotoRequest implements Built<ReportPhotoRequest, ReportPhotoRequestBuilder> {
+abstract class SimplePhoto implements Built<SimplePhoto, SimplePhotoBuilder> {
   @BuiltValueField(wireName: r'uuid')
-  String? get uuid;
+  String get uuid;
 
-  @BuiltValueField(wireName: r'file')
-  Uint8List get file;
+  /// URL of the photo associated with the item. Note: This URL may change over time. Do not rely on it for permanent storage.
+  @BuiltValueField(wireName: r'url')
+  String get url;
 
-  ReportPhotoRequest._();
+  SimplePhoto._();
 
-  factory ReportPhotoRequest([void updates(ReportPhotoRequestBuilder b)]) = _$ReportPhotoRequest;
+  factory SimplePhoto([void updates(SimplePhotoBuilder b)]) = _$SimplePhoto;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(ReportPhotoRequestBuilder b) => b;
+  static void _defaults(SimplePhotoBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<ReportPhotoRequest> get serializer => _$ReportPhotoRequestSerializer();
+  static Serializer<SimplePhoto> get serializer => _$SimplePhotoSerializer();
 }
 
-class _$ReportPhotoRequestSerializer implements PrimitiveSerializer<ReportPhotoRequest> {
+class _$SimplePhotoSerializer implements PrimitiveSerializer<SimplePhoto> {
   @override
-  final Iterable<Type> types = const [ReportPhotoRequest, _$ReportPhotoRequest];
+  final Iterable<Type> types = const [SimplePhoto, _$SimplePhoto];
 
   @override
-  final String wireName = r'ReportPhotoRequest';
+  final String wireName = r'SimplePhoto';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    ReportPhotoRequest object, {
+    SimplePhoto object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.uuid != null) {
-      yield r'uuid';
-      yield serializers.serialize(
-        object.uuid,
-        specifiedType: const FullType(String),
-      );
-    }
-    yield r'file';
+    yield r'uuid';
     yield serializers.serialize(
-      object.file,
-      specifiedType: const FullType(Uint8List),
+      object.uuid,
+      specifiedType: const FullType(String),
+    );
+    yield r'url';
+    yield serializers.serialize(
+      object.url,
+      specifiedType: const FullType(String),
     );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    ReportPhotoRequest object, {
+    SimplePhoto object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -73,7 +71,7 @@ class _$ReportPhotoRequestSerializer implements PrimitiveSerializer<ReportPhotoR
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required ReportPhotoRequestBuilder result,
+    required SimplePhotoBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -87,12 +85,12 @@ class _$ReportPhotoRequestSerializer implements PrimitiveSerializer<ReportPhotoR
           ) as String;
           result.uuid = valueDes;
           break;
-        case r'file':
+        case r'url':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(Uint8List),
-          ) as Uint8List;
-          result.file = valueDes;
+            specifiedType: const FullType(String),
+          ) as String;
+          result.url = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -103,12 +101,12 @@ class _$ReportPhotoRequestSerializer implements PrimitiveSerializer<ReportPhotoR
   }
 
   @override
-  ReportPhotoRequest deserialize(
+  SimplePhoto deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = ReportPhotoRequestBuilder();
+    final result = SimplePhotoBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

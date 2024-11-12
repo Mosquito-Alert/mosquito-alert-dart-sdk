@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **notificationsCreate**
-> BaseNotificationCreate notificationsCreate(metaNotificationRequest)
+> CreateNotification notificationsCreate(metaNotificationRequest)
 
 
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BaseNotificationCreate**](BaseNotificationCreate.md)
+[**CreateNotification**](CreateNotification.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notificationsList**
-> PaginatedDetailNotificationList notificationsList(orderBy, page, pageSize, seen)
+> PaginatedNotificationList notificationsList(orderBy, page, pageSize, seen)
 
 
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PaginatedDetailNotificationList**](PaginatedDetailNotificationList.md)
+[**PaginatedNotificationList**](PaginatedNotificationList.md)
 
 ### Authorization
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notificationsPartialUpdate**
-> DetailNotification notificationsPartialUpdate(id, patchedDetailNotificationRequest)
+> Notification notificationsPartialUpdate(id, patchedNotificationRequest)
 
 
 
@@ -139,10 +139,10 @@ import 'package:mosquito_alert/api.dart';
 
 final api = MosquitoAlert().getNotificationsApi();
 final int id = 56; // int | A unique integer value identifying this notification.
-final PatchedDetailNotificationRequest patchedDetailNotificationRequest = ; // PatchedDetailNotificationRequest | 
+final PatchedNotificationRequest patchedNotificationRequest = ; // PatchedNotificationRequest | 
 
 try {
-    final response = api.notificationsPartialUpdate(id, patchedDetailNotificationRequest);
+    final response = api.notificationsPartialUpdate(id, patchedNotificationRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling NotificationsApi->notificationsPartialUpdate: $e\n');
@@ -154,11 +154,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this notification. | 
- **patchedDetailNotificationRequest** | [**PatchedDetailNotificationRequest**](PatchedDetailNotificationRequest.md)|  | [optional] 
+ **patchedNotificationRequest** | [**PatchedNotificationRequest**](PatchedNotificationRequest.md)|  | [optional] 
 
 ### Return type
 
-[**DetailNotification**](DetailNotification.md)
+[**Notification**](Notification.md)
 
 ### Authorization
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notificationsRetrieve**
-> DetailNotification notificationsRetrieve(id)
+> Notification notificationsRetrieve(id)
 
 
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DetailNotification**](DetailNotification.md)
+[**Notification**](Notification.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notificationsUpdate**
-> DetailNotification notificationsUpdate(id, detailNotificationRequest)
+> Notification notificationsUpdate(id, notificationRequest)
 
 
 
@@ -239,10 +239,10 @@ import 'package:mosquito_alert/api.dart';
 
 final api = MosquitoAlert().getNotificationsApi();
 final int id = 56; // int | A unique integer value identifying this notification.
-final DetailNotificationRequest detailNotificationRequest = ; // DetailNotificationRequest | 
+final NotificationRequest notificationRequest = ; // NotificationRequest | 
 
 try {
-    final response = api.notificationsUpdate(id, detailNotificationRequest);
+    final response = api.notificationsUpdate(id, notificationRequest);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling NotificationsApi->notificationsUpdate: $e\n');
@@ -254,11 +254,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this notification. | 
- **detailNotificationRequest** | [**DetailNotificationRequest**](DetailNotificationRequest.md)|  | 
+ **notificationRequest** | [**NotificationRequest**](NotificationRequest.md)|  | 
 
 ### Return type
 
-[**DetailNotification**](DetailNotification.md)
+[**Notification**](Notification.md)
 
 ### Authorization
 

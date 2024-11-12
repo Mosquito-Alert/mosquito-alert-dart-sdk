@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for DetailNotification
+// tests for Notification
 void main() {
-  final instance = DetailNotificationBuilder();
+  final instance = NotificationBuilder();
   // TODO add properties to the builder and call build()
 
-  group(DetailNotification, () {
+  group(Notification, () {
     // int id
     test('to test the property `id`', () async {
       // TODO

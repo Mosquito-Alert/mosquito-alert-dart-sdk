@@ -3,67 +3,67 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/report_location_point.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/location_point.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'report_location_request.g.dart';
+part 'location_request.g.dart';
 
-/// ReportLocationRequest
+/// LocationRequest
 ///
 /// Properties:
 /// * [type] - Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
 /// * [point] 
 @BuiltValue()
-abstract class ReportLocationRequest implements Built<ReportLocationRequest, ReportLocationRequestBuilder> {
+abstract class LocationRequest implements Built<LocationRequest, LocationRequestBuilder> {
   /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
   @BuiltValueField(wireName: r'type')
-  ReportLocationRequestTypeEnum get type;
+  LocationRequestTypeEnum get type;
   // enum typeEnum {  current,  selected,  missing,  };
 
   @BuiltValueField(wireName: r'point')
-  ReportLocationPoint? get point;
+  LocationPoint? get point;
 
-  ReportLocationRequest._();
+  LocationRequest._();
 
-  factory ReportLocationRequest([void updates(ReportLocationRequestBuilder b)]) = _$ReportLocationRequest;
+  factory LocationRequest([void updates(LocationRequestBuilder b)]) = _$LocationRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(ReportLocationRequestBuilder b) => b;
+  static void _defaults(LocationRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<ReportLocationRequest> get serializer => _$ReportLocationRequestSerializer();
+  static Serializer<LocationRequest> get serializer => _$LocationRequestSerializer();
 }
 
-class _$ReportLocationRequestSerializer implements PrimitiveSerializer<ReportLocationRequest> {
+class _$LocationRequestSerializer implements PrimitiveSerializer<LocationRequest> {
   @override
-  final Iterable<Type> types = const [ReportLocationRequest, _$ReportLocationRequest];
+  final Iterable<Type> types = const [LocationRequest, _$LocationRequest];
 
   @override
-  final String wireName = r'ReportLocationRequest';
+  final String wireName = r'LocationRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    ReportLocationRequest object, {
+    LocationRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'type';
     yield serializers.serialize(
       object.type,
-      specifiedType: const FullType(ReportLocationRequestTypeEnum),
+      specifiedType: const FullType(LocationRequestTypeEnum),
     );
     yield r'point';
     yield object.point == null ? null : serializers.serialize(
       object.point,
-      specifiedType: const FullType.nullable(ReportLocationPoint),
+      specifiedType: const FullType.nullable(LocationPoint),
     );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    ReportLocationRequest object, {
+    LocationRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -74,7 +74,7 @@ class _$ReportLocationRequestSerializer implements PrimitiveSerializer<ReportLoc
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required ReportLocationRequestBuilder result,
+    required LocationRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -84,15 +84,15 @@ class _$ReportLocationRequestSerializer implements PrimitiveSerializer<ReportLoc
         case r'type':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ReportLocationRequestTypeEnum),
-          ) as ReportLocationRequestTypeEnum;
+            specifiedType: const FullType(LocationRequestTypeEnum),
+          ) as LocationRequestTypeEnum;
           result.type = valueDes;
           break;
         case r'point':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(ReportLocationPoint),
-          ) as ReportLocationPoint?;
+            specifiedType: const FullType.nullable(LocationPoint),
+          ) as LocationPoint?;
           if (valueDes == null) continue;
           result.point.replace(valueDes);
           break;
@@ -105,12 +105,12 @@ class _$ReportLocationRequestSerializer implements PrimitiveSerializer<ReportLoc
   }
 
   @override
-  ReportLocationRequest deserialize(
+  LocationRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = ReportLocationRequestBuilder();
+    final result = LocationRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
@@ -125,23 +125,23 @@ class _$ReportLocationRequestSerializer implements PrimitiveSerializer<ReportLoc
   }
 }
 
-class ReportLocationRequestTypeEnum extends EnumClass {
+class LocationRequestTypeEnum extends EnumClass {
 
   /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
   @BuiltValueEnumConst(wireName: r'current')
-  static const ReportLocationRequestTypeEnum current = _$reportLocationRequestTypeEnum_current;
+  static const LocationRequestTypeEnum current = _$locationRequestTypeEnum_current;
   /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
   @BuiltValueEnumConst(wireName: r'selected')
-  static const ReportLocationRequestTypeEnum selected = _$reportLocationRequestTypeEnum_selected;
+  static const LocationRequestTypeEnum selected = _$locationRequestTypeEnum_selected;
   /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
   @BuiltValueEnumConst(wireName: r'missing')
-  static const ReportLocationRequestTypeEnum missing = _$reportLocationRequestTypeEnum_missing;
+  static const LocationRequestTypeEnum missing = _$locationRequestTypeEnum_missing;
 
-  static Serializer<ReportLocationRequestTypeEnum> get serializer => _$reportLocationRequestTypeEnumSerializer;
+  static Serializer<LocationRequestTypeEnum> get serializer => _$locationRequestTypeEnumSerializer;
 
-  const ReportLocationRequestTypeEnum._(String name): super(name);
+  const LocationRequestTypeEnum._(String name): super(name);
 
-  static BuiltSet<ReportLocationRequestTypeEnum> get values => _$reportLocationRequestTypeEnumValues;
-  static ReportLocationRequestTypeEnum valueOf(String name) => _$reportLocationRequestTypeEnumValueOf(name);
+  static BuiltSet<LocationRequestTypeEnum> get values => _$locationRequestTypeEnumValues;
+  static LocationRequestTypeEnum valueOf(String name) => _$locationRequestTypeEnumValueOf(name);
 }
 

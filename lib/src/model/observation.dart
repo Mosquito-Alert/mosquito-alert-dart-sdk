@@ -3,10 +3,10 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:time_machine/time_machine.dart';
-import 'package:mosquito_alert/src/model/report_location.dart';
-import 'package:mosquito_alert/src/model/report_photo.dart';
+import 'package:mosquito_alert/src/model/location.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -63,7 +63,7 @@ abstract class Observation implements Built<Observation, ObservationBuilder> {
   OffsetDateTime get updatedAt;
 
   @BuiltValueField(wireName: r'location')
-  ReportLocation get location;
+  Location get location;
 
   /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
@@ -76,7 +76,7 @@ abstract class Observation implements Built<Observation, ObservationBuilder> {
   bool get published;
 
   @BuiltValueField(wireName: r'photos')
-  BuiltList<ReportPhoto> get photos;
+  BuiltList<SimplePhoto> get photos;
 
   /// The environment where the event took place.
   @BuiltValueField(wireName: r'event_environment')
@@ -174,7 +174,7 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
     yield r'location';
     yield serializers.serialize(
       object.location,
-      specifiedType: const FullType(ReportLocation),
+      specifiedType: const FullType(Location),
     );
     if (object.note != null) {
       yield r'note';
@@ -198,7 +198,7 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
     yield r'photos';
     yield serializers.serialize(
       object.photos,
-      specifiedType: const FullType(BuiltList, [FullType(ReportPhoto)]),
+      specifiedType: const FullType(BuiltList, [FullType(SimplePhoto)]),
     );
     if (object.eventEnvironment != null) {
       yield r'event_environment';
@@ -324,8 +324,8 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
         case r'location':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ReportLocation),
-          ) as ReportLocation;
+            specifiedType: const FullType(Location),
+          ) as Location;
           result.location.replace(valueDes);
           break;
         case r'note':
@@ -353,8 +353,8 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
         case r'photos':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(ReportPhoto)]),
-          ) as BuiltList<ReportPhoto>;
+            specifiedType: const FullType(BuiltList, [FullType(SimplePhoto)]),
+          ) as BuiltList<SimplePhoto>;
           result.photos.replace(valueDes);
           break;
         case r'event_environment':

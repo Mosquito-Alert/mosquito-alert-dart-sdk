@@ -16,11 +16,11 @@ Name | Type | Description | Notes
 **sentAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **receivedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) | Date and time when the report was last modified | 
-**location** | [**ReportLocation**](ReportLocation.md) |  | 
+**location** | [**Location**](Location.md) |  | 
 **note** | **String** | Note user attached to report. | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **published** | **bool** |  | 
-**photos** | [**BuiltList&lt;ReportPhoto&gt;**](ReportPhoto.md) |  | 
+**photos** | [**BuiltList&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | 
 **siteType** | **String** | Breeding site type. | [optional] 
 **hasWater** | **bool** | Either if the user perceived water in the breeding site. | [optional] 
 **inPublicArea** | **bool** | Either if the breeding site is found in a public area. | [optional] 

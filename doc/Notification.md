@@ -1,4 +1,4 @@
-# mosquito_alert.model.ReportPhoto
+# mosquito_alert.model.Notification
 
 ## Load the model package
 ```dart
@@ -8,8 +8,12 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uuid** | **String** |  | [optional] 
-**url** | **String** | URL of the photo associated with the item. Note: This URL may change over time. Do not rely on it for permanent storage. | 
+**id** | **int** |  | 
+**expertId** | **int** | Expert sending the notification | 
+**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**title** | **String** |  | 
+**body** | **String** |  | 
+**seen** | **bool** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

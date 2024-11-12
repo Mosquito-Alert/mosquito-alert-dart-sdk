@@ -3,64 +3,54 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:time_machine/time_machine.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'base_notification_create.g.dart';
+part 'notification_request.g.dart';
 
-/// BaseNotificationCreate
+/// NotificationRequest
 ///
 /// Properties:
-/// * [id] 
-/// * [createdAt] 
+/// * [seen] 
 @BuiltValue()
-abstract class BaseNotificationCreate implements Built<BaseNotificationCreate, BaseNotificationCreateBuilder> {
-  @BuiltValueField(wireName: r'id')
-  int get id;
+abstract class NotificationRequest implements Built<NotificationRequest, NotificationRequestBuilder> {
+  @BuiltValueField(wireName: r'seen')
+  bool get seen;
 
-  @BuiltValueField(wireName: r'created_at')
-  OffsetDateTime get createdAt;
+  NotificationRequest._();
 
-  BaseNotificationCreate._();
-
-  factory BaseNotificationCreate([void updates(BaseNotificationCreateBuilder b)]) = _$BaseNotificationCreate;
+  factory NotificationRequest([void updates(NotificationRequestBuilder b)]) = _$NotificationRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(BaseNotificationCreateBuilder b) => b;
+  static void _defaults(NotificationRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<BaseNotificationCreate> get serializer => _$BaseNotificationCreateSerializer();
+  static Serializer<NotificationRequest> get serializer => _$NotificationRequestSerializer();
 }
 
-class _$BaseNotificationCreateSerializer implements PrimitiveSerializer<BaseNotificationCreate> {
+class _$NotificationRequestSerializer implements PrimitiveSerializer<NotificationRequest> {
   @override
-  final Iterable<Type> types = const [BaseNotificationCreate, _$BaseNotificationCreate];
+  final Iterable<Type> types = const [NotificationRequest, _$NotificationRequest];
 
   @override
-  final String wireName = r'BaseNotificationCreate';
+  final String wireName = r'NotificationRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    BaseNotificationCreate object, {
+    NotificationRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
+    yield r'seen';
     yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(int),
-    );
-    yield r'created_at';
-    yield serializers.serialize(
-      object.createdAt,
-      specifiedType: const FullType(OffsetDateTime),
+      object.seen,
+      specifiedType: const FullType(bool),
     );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    BaseNotificationCreate object, {
+    NotificationRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -71,26 +61,19 @@ class _$BaseNotificationCreateSerializer implements PrimitiveSerializer<BaseNoti
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required BaseNotificationCreateBuilder result,
+    required NotificationRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'id':
+        case r'seen':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.id = valueDes;
-          break;
-        case r'created_at':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
-          result.createdAt = valueDes;
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.seen = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -101,12 +84,12 @@ class _$BaseNotificationCreateSerializer implements PrimitiveSerializer<BaseNoti
   }
 
   @override
-  BaseNotificationCreate deserialize(
+  NotificationRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = BaseNotificationCreateBuilder();
+    final result = NotificationRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

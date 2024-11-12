@@ -3,63 +3,55 @@
 //
 
 // ignore_for_file: unused_element
+import 'dart:typed_data';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'report_location_point.g.dart';
+part 'simple_photo_request.g.dart';
 
-/// ReportLocationPoint
+/// SimplePhotoRequest
 ///
 /// Properties:
-/// * [latitude] 
-/// * [longitude] 
+/// * [file] 
 @BuiltValue()
-abstract class ReportLocationPoint implements Built<ReportLocationPoint, ReportLocationPointBuilder> {
-  @BuiltValueField(wireName: r'latitude')
-  double get latitude;
+abstract class SimplePhotoRequest implements Built<SimplePhotoRequest, SimplePhotoRequestBuilder> {
+  @BuiltValueField(wireName: r'file')
+  Uint8List get file;
 
-  @BuiltValueField(wireName: r'longitude')
-  double get longitude;
+  SimplePhotoRequest._();
 
-  ReportLocationPoint._();
-
-  factory ReportLocationPoint([void updates(ReportLocationPointBuilder b)]) = _$ReportLocationPoint;
+  factory SimplePhotoRequest([void updates(SimplePhotoRequestBuilder b)]) = _$SimplePhotoRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(ReportLocationPointBuilder b) => b;
+  static void _defaults(SimplePhotoRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<ReportLocationPoint> get serializer => _$ReportLocationPointSerializer();
+  static Serializer<SimplePhotoRequest> get serializer => _$SimplePhotoRequestSerializer();
 }
 
-class _$ReportLocationPointSerializer implements PrimitiveSerializer<ReportLocationPoint> {
+class _$SimplePhotoRequestSerializer implements PrimitiveSerializer<SimplePhotoRequest> {
   @override
-  final Iterable<Type> types = const [ReportLocationPoint, _$ReportLocationPoint];
+  final Iterable<Type> types = const [SimplePhotoRequest, _$SimplePhotoRequest];
 
   @override
-  final String wireName = r'ReportLocationPoint';
+  final String wireName = r'SimplePhotoRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    ReportLocationPoint object, {
+    SimplePhotoRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'latitude';
+    yield r'file';
     yield serializers.serialize(
-      object.latitude,
-      specifiedType: const FullType(double),
-    );
-    yield r'longitude';
-    yield serializers.serialize(
-      object.longitude,
-      specifiedType: const FullType(double),
+      object.file,
+      specifiedType: const FullType(Uint8List),
     );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    ReportLocationPoint object, {
+    SimplePhotoRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -70,26 +62,19 @@ class _$ReportLocationPointSerializer implements PrimitiveSerializer<ReportLocat
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required ReportLocationPointBuilder result,
+    required SimplePhotoRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'latitude':
+        case r'file':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(double),
-          ) as double;
-          result.latitude = valueDes;
-          break;
-        case r'longitude':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(double),
-          ) as double;
-          result.longitude = valueDes;
+            specifiedType: const FullType(Uint8List),
+          ) as Uint8List;
+          result.file = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -100,12 +85,12 @@ class _$ReportLocationPointSerializer implements PrimitiveSerializer<ReportLocat
   }
 
   @override
-  ReportLocationPoint deserialize(
+  SimplePhotoRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = ReportLocationPointBuilder();
+    final result = SimplePhotoRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

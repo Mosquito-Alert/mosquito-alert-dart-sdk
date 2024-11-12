@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // ReportLocationRequest location
+    // LocationRequest location
     test('to test the property `location`', () async {
       // TODO
     });

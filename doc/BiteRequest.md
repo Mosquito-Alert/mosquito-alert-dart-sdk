@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **sentAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**location** | [**ReportLocationRequest**](ReportLocationRequest.md) |  | 
+**location** | [**LocationRequest**](LocationRequest.md) |  | 
 **note** | **String** | Note user attached to report. | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **package** | [**PackageRequest**](PackageRequest.md) |  | [optional] 

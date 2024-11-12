@@ -5,7 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
 import 'package:time_machine/time_machine.dart';
-import 'package:mosquito_alert/src/model/report_location.dart';
+import 'package:mosquito_alert/src/model/location.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -64,7 +64,7 @@ abstract class Bite implements Built<Bite, BiteBuilder> {
   OffsetDateTime get updatedAt;
 
   @BuiltValueField(wireName: r'location')
-  ReportLocation get location;
+  Location get location;
 
   /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
@@ -186,7 +186,7 @@ class _$BiteSerializer implements PrimitiveSerializer<Bite> {
     yield r'location';
     yield serializers.serialize(
       object.location,
-      specifiedType: const FullType(ReportLocation),
+      specifiedType: const FullType(Location),
     );
     if (object.note != null) {
       yield r'note';
@@ -350,8 +350,8 @@ class _$BiteSerializer implements PrimitiveSerializer<Bite> {
         case r'location':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ReportLocation),
-          ) as ReportLocation;
+            specifiedType: const FullType(Location),
+          ) as Location;
           result.location.replace(valueDes);
           break;
         case r'note':

@@ -1,4 +1,4 @@
-# mosquito_alert.model.ReportLocation
+# mosquito_alert.model.Location
 
 ## Load the model package
 ```dart
@@ -9,7 +9,7 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** | Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing') | 
-**point** | [**ReportLocationPoint**](ReportLocationPoint.md) |  | 
+**point** | [**LocationPoint**](LocationPoint.md) |  | 
 **timezone** | **String** |  | 
 **countryId** | **int** |  | 
 **nuts2** | **String** |  | 

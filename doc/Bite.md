@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **sentAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **receivedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 **updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) | Date and time when the report was last modified | 
-**location** | [**ReportLocation**](ReportLocation.md) |  | 
+**location** | [**Location**](Location.md) |  | 
 **note** | **String** | Note user attached to report. | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **published** | **bool** |  | 

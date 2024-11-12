@@ -4,13 +4,13 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/detail_notification.dart';
+import 'package:mosquito_alert/src/model/notification.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'paginated_detail_notification_list.g.dart';
+part 'paginated_notification_list.g.dart';
 
-/// PaginatedDetailNotificationList
+/// PaginatedNotificationList
 ///
 /// Properties:
 /// * [count] 
@@ -18,7 +18,7 @@ part 'paginated_detail_notification_list.g.dart';
 /// * [previous] 
 /// * [results] 
 @BuiltValue()
-abstract class PaginatedDetailNotificationList implements Built<PaginatedDetailNotificationList, PaginatedDetailNotificationListBuilder> {
+abstract class PaginatedNotificationList implements Built<PaginatedNotificationList, PaginatedNotificationListBuilder> {
   @BuiltValueField(wireName: r'count')
   int? get count;
 
@@ -29,29 +29,29 @@ abstract class PaginatedDetailNotificationList implements Built<PaginatedDetailN
   String? get previous;
 
   @BuiltValueField(wireName: r'results')
-  BuiltList<DetailNotification>? get results;
+  BuiltList<Notification>? get results;
 
-  PaginatedDetailNotificationList._();
+  PaginatedNotificationList._();
 
-  factory PaginatedDetailNotificationList([void updates(PaginatedDetailNotificationListBuilder b)]) = _$PaginatedDetailNotificationList;
+  factory PaginatedNotificationList([void updates(PaginatedNotificationListBuilder b)]) = _$PaginatedNotificationList;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(PaginatedDetailNotificationListBuilder b) => b;
+  static void _defaults(PaginatedNotificationListBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<PaginatedDetailNotificationList> get serializer => _$PaginatedDetailNotificationListSerializer();
+  static Serializer<PaginatedNotificationList> get serializer => _$PaginatedNotificationListSerializer();
 }
 
-class _$PaginatedDetailNotificationListSerializer implements PrimitiveSerializer<PaginatedDetailNotificationList> {
+class _$PaginatedNotificationListSerializer implements PrimitiveSerializer<PaginatedNotificationList> {
   @override
-  final Iterable<Type> types = const [PaginatedDetailNotificationList, _$PaginatedDetailNotificationList];
+  final Iterable<Type> types = const [PaginatedNotificationList, _$PaginatedNotificationList];
 
   @override
-  final String wireName = r'PaginatedDetailNotificationList';
+  final String wireName = r'PaginatedNotificationList';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    PaginatedDetailNotificationList object, {
+    PaginatedNotificationList object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.count != null) {
@@ -79,7 +79,7 @@ class _$PaginatedDetailNotificationListSerializer implements PrimitiveSerializer
       yield r'results';
       yield serializers.serialize(
         object.results,
-        specifiedType: const FullType(BuiltList, [FullType(DetailNotification)]),
+        specifiedType: const FullType(BuiltList, [FullType(Notification)]),
       );
     }
   }
@@ -87,7 +87,7 @@ class _$PaginatedDetailNotificationListSerializer implements PrimitiveSerializer
   @override
   Object serialize(
     Serializers serializers,
-    PaginatedDetailNotificationList object, {
+    PaginatedNotificationList object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -98,7 +98,7 @@ class _$PaginatedDetailNotificationListSerializer implements PrimitiveSerializer
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required PaginatedDetailNotificationListBuilder result,
+    required PaginatedNotificationListBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -131,8 +131,8 @@ class _$PaginatedDetailNotificationListSerializer implements PrimitiveSerializer
         case r'results':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(DetailNotification)]),
-          ) as BuiltList<DetailNotification>;
+            specifiedType: const FullType(BuiltList, [FullType(Notification)]),
+          ) as BuiltList<Notification>;
           result.results.replace(valueDes);
           break;
         default:
@@ -144,12 +144,12 @@ class _$PaginatedDetailNotificationListSerializer implements PrimitiveSerializer
   }
 
   @override
-  PaginatedDetailNotificationList deserialize(
+  PaginatedNotificationList deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = PaginatedDetailNotificationListBuilder();
+    final result = PaginatedNotificationListBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

@@ -49,7 +49,7 @@ void main() {
       // TODO
     });
 
-    // ReportLocation location
+    // Location location
     test('to test the property `location`', () async {
       // TODO
     });

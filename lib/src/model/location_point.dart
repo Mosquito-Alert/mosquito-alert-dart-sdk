@@ -6,63 +6,60 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'report_photo.g.dart';
+part 'location_point.g.dart';
 
-/// ReportPhoto
+/// LocationPoint
 ///
 /// Properties:
-/// * [uuid] 
-/// * [url] - URL of the photo associated with the item. Note: This URL may change over time. Do not rely on it for permanent storage.
+/// * [latitude] 
+/// * [longitude] 
 @BuiltValue()
-abstract class ReportPhoto implements Built<ReportPhoto, ReportPhotoBuilder> {
-  @BuiltValueField(wireName: r'uuid')
-  String? get uuid;
+abstract class LocationPoint implements Built<LocationPoint, LocationPointBuilder> {
+  @BuiltValueField(wireName: r'latitude')
+  double get latitude;
 
-  /// URL of the photo associated with the item. Note: This URL may change over time. Do not rely on it for permanent storage.
-  @BuiltValueField(wireName: r'url')
-  String get url;
+  @BuiltValueField(wireName: r'longitude')
+  double get longitude;
 
-  ReportPhoto._();
+  LocationPoint._();
 
-  factory ReportPhoto([void updates(ReportPhotoBuilder b)]) = _$ReportPhoto;
+  factory LocationPoint([void updates(LocationPointBuilder b)]) = _$LocationPoint;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(ReportPhotoBuilder b) => b;
+  static void _defaults(LocationPointBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<ReportPhoto> get serializer => _$ReportPhotoSerializer();
+  static Serializer<LocationPoint> get serializer => _$LocationPointSerializer();
 }
 
-class _$ReportPhotoSerializer implements PrimitiveSerializer<ReportPhoto> {
+class _$LocationPointSerializer implements PrimitiveSerializer<LocationPoint> {
   @override
-  final Iterable<Type> types = const [ReportPhoto, _$ReportPhoto];
+  final Iterable<Type> types = const [LocationPoint, _$LocationPoint];
 
   @override
-  final String wireName = r'ReportPhoto';
+  final String wireName = r'LocationPoint';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    ReportPhoto object, {
+    LocationPoint object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.uuid != null) {
-      yield r'uuid';
-      yield serializers.serialize(
-        object.uuid,
-        specifiedType: const FullType(String),
-      );
-    }
-    yield r'url';
+    yield r'latitude';
     yield serializers.serialize(
-      object.url,
-      specifiedType: const FullType(String),
+      object.latitude,
+      specifiedType: const FullType(double),
+    );
+    yield r'longitude';
+    yield serializers.serialize(
+      object.longitude,
+      specifiedType: const FullType(double),
     );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    ReportPhoto object, {
+    LocationPoint object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -73,26 +70,26 @@ class _$ReportPhotoSerializer implements PrimitiveSerializer<ReportPhoto> {
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required ReportPhotoBuilder result,
+    required LocationPointBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'uuid':
+        case r'latitude':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.uuid = valueDes;
+            specifiedType: const FullType(double),
+          ) as double;
+          result.latitude = valueDes;
           break;
-        case r'url':
+        case r'longitude':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.url = valueDes;
+            specifiedType: const FullType(double),
+          ) as double;
+          result.longitude = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -103,12 +100,12 @@ class _$ReportPhotoSerializer implements PrimitiveSerializer<ReportPhoto> {
   }
 
   @override
-  ReportPhoto deserialize(
+  LocationPoint deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = ReportPhotoBuilder();
+    final result = LocationPointBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for ReportPhoto
+// tests for SimplePhoto
 void main() {
-  final instance = ReportPhotoBuilder();
+  final instance = SimplePhotoBuilder();
   // TODO add properties to the builder and call build()
 
-  group(ReportPhoto, () {
+  group(SimplePhoto, () {
     // String uuid
     test('to test the property `uuid`', () async {
       // TODO

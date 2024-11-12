@@ -5,10 +5,10 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/package_request.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/report_location_request.dart';
 import 'package:time_machine/time_machine.dart';
+import 'package:mosquito_alert/src/model/location_request.dart';
+import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 import 'package:mosquito_alert/src/model/device_request.dart';
-import 'package:mosquito_alert/src/model/report_photo_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -40,7 +40,7 @@ abstract class ObservationRequest implements Built<ObservationRequest, Observati
   OffsetDateTime get sentAt;
 
   @BuiltValueField(wireName: r'location')
-  ReportLocationRequest get location;
+  LocationRequest get location;
 
   /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
@@ -56,7 +56,7 @@ abstract class ObservationRequest implements Built<ObservationRequest, Observati
   DeviceRequest? get device;
 
   @BuiltValueField(wireName: r'photos')
-  BuiltList<ReportPhotoRequest> get photos;
+  BuiltList<SimplePhotoRequest> get photos;
 
   /// The environment where the event took place.
   @BuiltValueField(wireName: r'event_environment')
@@ -124,7 +124,7 @@ class _$ObservationRequestSerializer implements PrimitiveSerializer<ObservationR
     yield r'location';
     yield serializers.serialize(
       object.location,
-      specifiedType: const FullType(ReportLocationRequest),
+      specifiedType: const FullType(LocationRequest),
     );
     if (object.note != null) {
       yield r'note';
@@ -157,7 +157,7 @@ class _$ObservationRequestSerializer implements PrimitiveSerializer<ObservationR
     yield r'photos';
     yield serializers.serialize(
       object.photos,
-      specifiedType: const FullType(BuiltList, [FullType(ReportPhotoRequest)]),
+      specifiedType: const FullType(BuiltList, [FullType(SimplePhotoRequest)]),
     );
     if (object.eventEnvironment != null) {
       yield r'event_environment';
@@ -241,8 +241,8 @@ class _$ObservationRequestSerializer implements PrimitiveSerializer<ObservationR
         case r'location':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ReportLocationRequest),
-          ) as ReportLocationRequest;
+            specifiedType: const FullType(LocationRequest),
+          ) as LocationRequest;
           result.location.replace(valueDes);
           break;
         case r'note':
@@ -277,8 +277,8 @@ class _$ObservationRequestSerializer implements PrimitiveSerializer<ObservationR
         case r'photos':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(ReportPhotoRequest)]),
-          ) as BuiltList<ReportPhotoRequest>;
+            specifiedType: const FullType(BuiltList, [FullType(SimplePhotoRequest)]),
+          ) as BuiltList<SimplePhotoRequest>;
           result.photos.replace(valueDes);
           break;
         case r'event_environment':

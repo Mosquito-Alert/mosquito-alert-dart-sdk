@@ -28,7 +28,7 @@ If this Dart package is published to Github, please include the following in pub
 dependencies:
   mosquito_alert:
     git:
-      url: https://github.com/Mosquito_Alert/mosquito-alert-python-sdk.git
+      url: https://github.com/Mosquito-Alert/mosquito-alert-dart-sdk.git
       #ref: main
 ```
 
@@ -108,7 +108,6 @@ Class | Method | HTTP request | Description
 
  - [AppUserTokenObtainPair](doc/AppUserTokenObtainPair.md)
  - [AppUserTokenObtainPairRequest](doc/AppUserTokenObtainPairRequest.md)
- - [BaseNotificationCreate](doc/BaseNotificationCreate.md)
  - [Bite](doc/Bite.md)
  - [BiteRequest](doc/BiteRequest.md)
  - [BoundingBox](doc/BoundingBox.md)
@@ -117,17 +116,21 @@ Class | Method | HTTP request | Description
  - [BreedingSiteRequest](doc/BreedingSiteRequest.md)
  - [Campaign](doc/Campaign.md)
  - [Country](doc/Country.md)
+ - [CreateNotification](doc/CreateNotification.md)
  - [CreateUser](doc/CreateUser.md)
  - [CreateUserRequest](doc/CreateUserRequest.md)
- - [DetailNotification](doc/DetailNotification.md)
- - [DetailNotificationRequest](doc/DetailNotificationRequest.md)
  - [Device](doc/Device.md)
  - [DeviceRequest](doc/DeviceRequest.md)
  - [Fix](doc/Fix.md)
  - [FixLocation](doc/FixLocation.md)
  - [FixLocationRequest](doc/FixLocationRequest.md)
  - [FixRequest](doc/FixRequest.md)
+ - [Location](doc/Location.md)
+ - [LocationPoint](doc/LocationPoint.md)
+ - [LocationRequest](doc/LocationRequest.md)
  - [MetaNotificationRequest](doc/MetaNotificationRequest.md)
+ - [Notification](doc/Notification.md)
+ - [NotificationRequest](doc/NotificationRequest.md)
  - [Observation](doc/Observation.md)
  - [ObservationPrediction](doc/ObservationPrediction.md)
  - [ObservationPredictionRequest](doc/ObservationPredictionRequest.md)
@@ -137,23 +140,20 @@ Class | Method | HTTP request | Description
  - [PaginatedBiteList](doc/PaginatedBiteList.md)
  - [PaginatedBreedingSiteList](doc/PaginatedBreedingSiteList.md)
  - [PaginatedCampaignList](doc/PaginatedCampaignList.md)
- - [PaginatedDetailNotificationList](doc/PaginatedDetailNotificationList.md)
+ - [PaginatedNotificationList](doc/PaginatedNotificationList.md)
  - [PaginatedObservationList](doc/PaginatedObservationList.md)
  - [PaginatedPartnerList](doc/PaginatedPartnerList.md)
  - [Partner](doc/Partner.md)
  - [PartnerPoint](doc/PartnerPoint.md)
- - [PatchedDetailNotificationRequest](doc/PatchedDetailNotificationRequest.md)
+ - [PatchedNotificationRequest](doc/PatchedNotificationRequest.md)
  - [PatchedUserRequest](doc/PatchedUserRequest.md)
  - [Photo](doc/Photo.md)
  - [PhotoPrediction](doc/PhotoPrediction.md)
  - [PhotoPredictionRequest](doc/PhotoPredictionRequest.md)
  - [PredictionScore](doc/PredictionScore.md)
  - [PredictionScoreRequest](doc/PredictionScoreRequest.md)
- - [ReportLocation](doc/ReportLocation.md)
- - [ReportLocationPoint](doc/ReportLocationPoint.md)
- - [ReportLocationRequest](doc/ReportLocationRequest.md)
- - [ReportPhoto](doc/ReportPhoto.md)
- - [ReportPhotoRequest](doc/ReportPhotoRequest.md)
+ - [SimplePhoto](doc/SimplePhoto.md)
+ - [SimplePhotoRequest](doc/SimplePhotoRequest.md)
  - [TokenRefresh](doc/TokenRefresh.md)
  - [TokenRefreshRequest](doc/TokenRefreshRequest.md)
  - [TopicNotificationCreateRequest](doc/TopicNotificationCreateRequest.md)

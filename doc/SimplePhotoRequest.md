@@ -1,4 +1,4 @@
-# mosquito_alert.model.PatchedDetailNotificationRequest
+# mosquito_alert.model.SimplePhotoRequest
 
 ## Load the model package
 ```dart
@@ -8,7 +8,7 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**seen** | **bool** |  | [optional] 
+**file** | [**Uint8List**](Uint8List.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

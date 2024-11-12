@@ -3,10 +3,10 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:time_machine/time_machine.dart';
-import 'package:mosquito_alert/src/model/report_location.dart';
-import 'package:mosquito_alert/src/model/report_photo.dart';
+import 'package:mosquito_alert/src/model/location.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -62,7 +62,7 @@ abstract class BreedingSite implements Built<BreedingSite, BreedingSiteBuilder> 
   OffsetDateTime get updatedAt;
 
   @BuiltValueField(wireName: r'location')
-  ReportLocation get location;
+  Location get location;
 
   /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
@@ -75,7 +75,7 @@ abstract class BreedingSite implements Built<BreedingSite, BreedingSiteBuilder> 
   bool get published;
 
   @BuiltValueField(wireName: r'photos')
-  BuiltList<ReportPhoto> get photos;
+  BuiltList<SimplePhoto> get photos;
 
   /// Breeding site type.
   @BuiltValueField(wireName: r'site_type')
@@ -164,7 +164,7 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
     yield r'location';
     yield serializers.serialize(
       object.location,
-      specifiedType: const FullType(ReportLocation),
+      specifiedType: const FullType(Location),
     );
     if (object.note != null) {
       yield r'note';
@@ -188,7 +188,7 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
     yield r'photos';
     yield serializers.serialize(
       object.photos,
-      specifiedType: const FullType(BuiltList, [FullType(ReportPhoto)]),
+      specifiedType: const FullType(BuiltList, [FullType(SimplePhoto)]),
     );
     if (object.siteType != null) {
       yield r'site_type';
@@ -307,8 +307,8 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
         case r'location':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ReportLocation),
-          ) as ReportLocation;
+            specifiedType: const FullType(Location),
+          ) as Location;
           result.location.replace(valueDes);
           break;
         case r'note':
@@ -336,8 +336,8 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
         case r'photos':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(ReportPhoto)]),
-          ) as BuiltList<ReportPhoto>;
+            specifiedType: const FullType(BuiltList, [FullType(SimplePhoto)]),
+          ) as BuiltList<SimplePhoto>;
           result.photos.replace(valueDes);
           break;
         case r'site_type':

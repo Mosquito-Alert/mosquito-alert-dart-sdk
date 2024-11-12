@@ -1,4 +1,4 @@
-# mosquito_alert.model.ReportLocationPoint
+# mosquito_alert.model.LocationPoint
 
 ## Load the model package
 ```dart
