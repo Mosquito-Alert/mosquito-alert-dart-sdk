@@ -13,6 +13,7 @@ import 'package:mosquito_alert/src/api/bites_api.dart';
 import 'package:mosquito_alert/src/api/breeding_sites_api.dart';
 import 'package:mosquito_alert/src/api/campaigns_api.dart';
 import 'package:mosquito_alert/src/api/countries_api.dart';
+import 'package:mosquito_alert/src/api/devices_api.dart';
 import 'package:mosquito_alert/src/api/fixes_api.dart';
 import 'package:mosquito_alert/src/api/notifications_api.dart';
 import 'package:mosquito_alert/src/api/observations_api.dart';
@@ -97,6 +98,12 @@ class MosquitoAlert {
   /// by doing that all interceptors will not be executed
   CountriesApi getCountriesApi() {
     return CountriesApi(dio, serializers);
+  }
+
+  /// Get DevicesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  DevicesApi getDevicesApi() {
+    return DevicesApi(dio, serializers);
   }
 
   /// Get FixesApi instance, base route and serializer can be overridden by a given but be careful,

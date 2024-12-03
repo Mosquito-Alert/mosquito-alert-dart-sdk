@@ -33,16 +33,6 @@ void main() {
       // TODO
     });
 
-    // PackageRequest package
-    test('to test the property `package`', () async {
-      // TODO
-    });
-
-    // DeviceRequest device
-    test('to test the property `device`', () async {
-      // TODO
-    });
-
     // The environment where the event took place.
     // String eventEnvironment
     test('to test the property `eventEnvironment`', () async {

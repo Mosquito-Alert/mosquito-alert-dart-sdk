@@ -3,6 +3,10 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/device_os.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:time_machine/time_machine.dart';
+import 'package:mosquito_alert/src/model/mobile_app.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -11,32 +15,55 @@ part 'device.g.dart';
 /// Device
 ///
 /// Properties:
-/// * [manufacturer] - Manufacturer of device from which this report was submitted.
-/// * [model] - Model of device from which this report was submitted.
-/// * [os] - Operating system of device from which this report was submitted.
-/// * [osVersion] - Operating system version of device from which this report was submitted.
-/// * [osLanguage] - Language setting of operating system on device from which this report was submitted. 2-digit ISO-639-1 language code.
+/// * [deviceId] - Unique device identifier
+/// * [name] 
+/// * [type] 
+/// * [manufacturer] - The manufacturer of the device.
+/// * [model] - The end-user-visible name for the end product.
+/// * [os] 
+/// * [mobileApp] 
+/// * [userUuid] 
+/// * [lastLogin] 
+/// * [createdAt] 
+/// * [updatedAt] 
 @BuiltValue()
 abstract class Device implements Built<Device, DeviceBuilder> {
-  /// Manufacturer of device from which this report was submitted.
+  /// Unique device identifier
+  @BuiltValueField(wireName: r'device_id')
+  String get deviceId;
+
+  @BuiltValueField(wireName: r'name')
+  String? get name;
+
+  @BuiltValueField(wireName: r'type')
+  DeviceTypeEnum get type;
+  // enum typeEnum {  ios,  android,  web,  };
+
+  /// The manufacturer of the device.
   @BuiltValueField(wireName: r'manufacturer')
   String? get manufacturer;
 
-  /// Model of device from which this report was submitted.
+  /// The end-user-visible name for the end product.
   @BuiltValueField(wireName: r'model')
-  String? get model;
+  String get model;
 
-  /// Operating system of device from which this report was submitted.
   @BuiltValueField(wireName: r'os')
-  String? get os;
+  DeviceOs get os;
 
-  /// Operating system version of device from which this report was submitted.
-  @BuiltValueField(wireName: r'os_version')
-  String? get osVersion;
+  @BuiltValueField(wireName: r'mobile_app')
+  MobileApp? get mobileApp;
 
-  /// Language setting of operating system on device from which this report was submitted. 2-digit ISO-639-1 language code.
-  @BuiltValueField(wireName: r'os_language')
-  String? get osLanguage;
+  @BuiltValueField(wireName: r'user_uuid')
+  String get userUuid;
+
+  @BuiltValueField(wireName: r'last_login')
+  OffsetDateTime? get lastLogin;
+
+  @BuiltValueField(wireName: r'created_at')
+  OffsetDateTime get createdAt;
+
+  @BuiltValueField(wireName: r'updated_at')
+  OffsetDateTime get updatedAt;
 
   Device._();
 
@@ -61,6 +88,23 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
     Device object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    yield r'device_id';
+    yield serializers.serialize(
+      object.deviceId,
+      specifiedType: const FullType(String),
+    );
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    yield r'type';
+    yield serializers.serialize(
+      object.type,
+      specifiedType: const FullType(DeviceTypeEnum),
+    );
     if (object.manufacturer != null) {
       yield r'manufacturer';
       yield serializers.serialize(
@@ -68,34 +112,43 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.model != null) {
-      yield r'model';
+    yield r'model';
+    yield serializers.serialize(
+      object.model,
+      specifiedType: const FullType(String),
+    );
+    yield r'os';
+    yield serializers.serialize(
+      object.os,
+      specifiedType: const FullType(DeviceOs),
+    );
+    if (object.mobileApp != null) {
+      yield r'mobile_app';
       yield serializers.serialize(
-        object.model,
-        specifiedType: const FullType.nullable(String),
+        object.mobileApp,
+        specifiedType: const FullType(MobileApp),
       );
     }
-    if (object.os != null) {
-      yield r'os';
-      yield serializers.serialize(
-        object.os,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.osVersion != null) {
-      yield r'os_version';
-      yield serializers.serialize(
-        object.osVersion,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.osLanguage != null) {
-      yield r'os_language';
-      yield serializers.serialize(
-        object.osLanguage,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
+    yield r'user_uuid';
+    yield serializers.serialize(
+      object.userUuid,
+      specifiedType: const FullType(String),
+    );
+    yield r'last_login';
+    yield object.lastLogin == null ? null : serializers.serialize(
+      object.lastLogin,
+      specifiedType: const FullType.nullable(OffsetDateTime),
+    );
+    yield r'created_at';
+    yield serializers.serialize(
+      object.createdAt,
+      specifiedType: const FullType(OffsetDateTime),
+    );
+    yield r'updated_at';
+    yield serializers.serialize(
+      object.updatedAt,
+      specifiedType: const FullType(OffsetDateTime),
+    );
   }
 
   @override
@@ -119,6 +172,28 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'device_id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.deviceId = valueDes;
+          break;
+        case r'name':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.name = valueDes;
+          break;
+        case r'type':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(DeviceTypeEnum),
+          ) as DeviceTypeEnum;
+          result.type = valueDes;
+          break;
         case r'manufacturer':
           final valueDes = serializers.deserialize(
             value,
@@ -130,34 +205,52 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
         case r'model':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(String),
+          ) as String;
           result.model = valueDes;
           break;
         case r'os':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.os = valueDes;
+            specifiedType: const FullType(DeviceOs),
+          ) as DeviceOs;
+          result.os.replace(valueDes);
           break;
-        case r'os_version':
+        case r'mobile_app':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.osVersion = valueDes;
+            specifiedType: const FullType(MobileApp),
+          ) as MobileApp;
+          result.mobileApp.replace(valueDes);
           break;
-        case r'os_language':
+        case r'user_uuid':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
+            specifiedType: const FullType(String),
+          ) as String;
+          result.userUuid = valueDes;
+          break;
+        case r'last_login':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(OffsetDateTime),
+          ) as OffsetDateTime?;
           if (valueDes == null) continue;
-          result.osLanguage = valueDes;
+          result.lastLogin = valueDes;
+          break;
+        case r'created_at':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(OffsetDateTime),
+          ) as OffsetDateTime;
+          result.createdAt = valueDes;
+          break;
+        case r'updated_at':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(OffsetDateTime),
+          ) as OffsetDateTime;
+          result.updatedAt = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -186,5 +279,22 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
     );
     return result.build();
   }
+}
+
+class DeviceTypeEnum extends EnumClass {
+
+  @BuiltValueEnumConst(wireName: r'ios')
+  static const DeviceTypeEnum ios = _$deviceTypeEnum_ios;
+  @BuiltValueEnumConst(wireName: r'android')
+  static const DeviceTypeEnum android = _$deviceTypeEnum_android;
+  @BuiltValueEnumConst(wireName: r'web')
+  static const DeviceTypeEnum web = _$deviceTypeEnum_web;
+
+  static Serializer<DeviceTypeEnum> get serializer => _$deviceTypeEnumSerializer;
+
+  const DeviceTypeEnum._(String name): super(name);
+
+  static BuiltSet<DeviceTypeEnum> get values => _$deviceTypeEnumValues;
+  static DeviceTypeEnum valueOf(String name) => _$deviceTypeEnumValueOf(name);
 }
 

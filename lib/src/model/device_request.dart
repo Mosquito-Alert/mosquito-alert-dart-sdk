@@ -3,6 +3,9 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/mobile_app_request.dart';
+import 'package:mosquito_alert/src/model/device_os_request.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -11,32 +14,43 @@ part 'device_request.g.dart';
 /// DeviceRequest
 ///
 /// Properties:
-/// * [manufacturer] - Manufacturer of device from which this report was submitted.
-/// * [model] - Model of device from which this report was submitted.
-/// * [os] - Operating system of device from which this report was submitted.
-/// * [osVersion] - Operating system version of device from which this report was submitted.
-/// * [osLanguage] - Language setting of operating system on device from which this report was submitted. 2-digit ISO-639-1 language code.
+/// * [deviceId] - Unique device identifier
+/// * [name] 
+/// * [fcmToken] 
+/// * [type] 
+/// * [manufacturer] - The manufacturer of the device.
+/// * [model] - The end-user-visible name for the end product.
+/// * [os] 
+/// * [mobileApp] 
 @BuiltValue()
 abstract class DeviceRequest implements Built<DeviceRequest, DeviceRequestBuilder> {
-  /// Manufacturer of device from which this report was submitted.
+  /// Unique device identifier
+  @BuiltValueField(wireName: r'device_id')
+  String get deviceId;
+
+  @BuiltValueField(wireName: r'name')
+  String? get name;
+
+  @BuiltValueField(wireName: r'fcm_token')
+  String get fcmToken;
+
+  @BuiltValueField(wireName: r'type')
+  DeviceRequestTypeEnum get type;
+  // enum typeEnum {  ios,  android,  web,  };
+
+  /// The manufacturer of the device.
   @BuiltValueField(wireName: r'manufacturer')
   String? get manufacturer;
 
-  /// Model of device from which this report was submitted.
+  /// The end-user-visible name for the end product.
   @BuiltValueField(wireName: r'model')
-  String? get model;
+  String get model;
 
-  /// Operating system of device from which this report was submitted.
   @BuiltValueField(wireName: r'os')
-  String? get os;
+  DeviceOsRequest get os;
 
-  /// Operating system version of device from which this report was submitted.
-  @BuiltValueField(wireName: r'os_version')
-  String? get osVersion;
-
-  /// Language setting of operating system on device from which this report was submitted. 2-digit ISO-639-1 language code.
-  @BuiltValueField(wireName: r'os_language')
-  String? get osLanguage;
+  @BuiltValueField(wireName: r'mobile_app')
+  MobileAppRequest? get mobileApp;
 
   DeviceRequest._();
 
@@ -61,6 +75,28 @@ class _$DeviceRequestSerializer implements PrimitiveSerializer<DeviceRequest> {
     DeviceRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    yield r'device_id';
+    yield serializers.serialize(
+      object.deviceId,
+      specifiedType: const FullType(String),
+    );
+    if (object.name != null) {
+      yield r'name';
+      yield serializers.serialize(
+        object.name,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    yield r'fcm_token';
+    yield serializers.serialize(
+      object.fcmToken,
+      specifiedType: const FullType(String),
+    );
+    yield r'type';
+    yield serializers.serialize(
+      object.type,
+      specifiedType: const FullType(DeviceRequestTypeEnum),
+    );
     if (object.manufacturer != null) {
       yield r'manufacturer';
       yield serializers.serialize(
@@ -68,32 +104,21 @@ class _$DeviceRequestSerializer implements PrimitiveSerializer<DeviceRequest> {
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.model != null) {
-      yield r'model';
+    yield r'model';
+    yield serializers.serialize(
+      object.model,
+      specifiedType: const FullType(String),
+    );
+    yield r'os';
+    yield serializers.serialize(
+      object.os,
+      specifiedType: const FullType(DeviceOsRequest),
+    );
+    if (object.mobileApp != null) {
+      yield r'mobile_app';
       yield serializers.serialize(
-        object.model,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.os != null) {
-      yield r'os';
-      yield serializers.serialize(
-        object.os,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.osVersion != null) {
-      yield r'os_version';
-      yield serializers.serialize(
-        object.osVersion,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.osLanguage != null) {
-      yield r'os_language';
-      yield serializers.serialize(
-        object.osLanguage,
-        specifiedType: const FullType.nullable(String),
+        object.mobileApp,
+        specifiedType: const FullType(MobileAppRequest),
       );
     }
   }
@@ -119,6 +144,35 @@ class _$DeviceRequestSerializer implements PrimitiveSerializer<DeviceRequest> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'device_id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.deviceId = valueDes;
+          break;
+        case r'name':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.name = valueDes;
+          break;
+        case r'fcm_token':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.fcmToken = valueDes;
+          break;
+        case r'type':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(DeviceRequestTypeEnum),
+          ) as DeviceRequestTypeEnum;
+          result.type = valueDes;
+          break;
         case r'manufacturer':
           final valueDes = serializers.deserialize(
             value,
@@ -130,34 +184,23 @@ class _$DeviceRequestSerializer implements PrimitiveSerializer<DeviceRequest> {
         case r'model':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(String),
+          ) as String;
           result.model = valueDes;
           break;
         case r'os':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.os = valueDes;
+            specifiedType: const FullType(DeviceOsRequest),
+          ) as DeviceOsRequest;
+          result.os.replace(valueDes);
           break;
-        case r'os_version':
+        case r'mobile_app':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.osVersion = valueDes;
-          break;
-        case r'os_language':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.osLanguage = valueDes;
+            specifiedType: const FullType(MobileAppRequest),
+          ) as MobileAppRequest;
+          result.mobileApp.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -186,5 +229,22 @@ class _$DeviceRequestSerializer implements PrimitiveSerializer<DeviceRequest> {
     );
     return result.build();
   }
+}
+
+class DeviceRequestTypeEnum extends EnumClass {
+
+  @BuiltValueEnumConst(wireName: r'ios')
+  static const DeviceRequestTypeEnum ios = _$deviceRequestTypeEnum_ios;
+  @BuiltValueEnumConst(wireName: r'android')
+  static const DeviceRequestTypeEnum android = _$deviceRequestTypeEnum_android;
+  @BuiltValueEnumConst(wireName: r'web')
+  static const DeviceRequestTypeEnum web = _$deviceRequestTypeEnum_web;
+
+  static Serializer<DeviceRequestTypeEnum> get serializer => _$deviceRequestTypeEnumSerializer;
+
+  const DeviceRequestTypeEnum._(String name): super(name);
+
+  static BuiltSet<DeviceRequestTypeEnum> get values => _$deviceRequestTypeEnumValues;
+  static DeviceRequestTypeEnum valueOf(String name) => _$deviceRequestTypeEnumValueOf(name);
 }
 

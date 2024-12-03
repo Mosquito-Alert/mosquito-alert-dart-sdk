@@ -33,16 +33,6 @@ void main() {
       // TODO
     });
 
-    // PackageRequest package
-    test('to test the property `package`', () async {
-      // TODO
-    });
-
-    // DeviceRequest device
-    test('to test the property `device`', () async {
-      // TODO
-    });
-
     // BuiltList<SimplePhotoRequest> photos
     test('to test the property `photos`', () async {
       // TODO

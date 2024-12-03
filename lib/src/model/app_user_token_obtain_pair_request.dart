@@ -13,6 +13,7 @@ part 'app_user_token_obtain_pair_request.g.dart';
 /// Properties:
 /// * [uuid] 
 /// * [password] 
+/// * [deviceId] 
 @BuiltValue()
 abstract class AppUserTokenObtainPairRequest implements Built<AppUserTokenObtainPairRequest, AppUserTokenObtainPairRequestBuilder> {
   @BuiltValueField(wireName: r'uuid')
@@ -20,6 +21,9 @@ abstract class AppUserTokenObtainPairRequest implements Built<AppUserTokenObtain
 
   @BuiltValueField(wireName: r'password')
   String get password;
+
+  @BuiltValueField(wireName: r'device_id')
+  String? get deviceId;
 
   AppUserTokenObtainPairRequest._();
 
@@ -54,6 +58,13 @@ class _$AppUserTokenObtainPairRequestSerializer implements PrimitiveSerializer<A
       object.password,
       specifiedType: const FullType(String),
     );
+    if (object.deviceId != null) {
+      yield r'device_id';
+      yield serializers.serialize(
+        object.deviceId,
+        specifiedType: const FullType(String),
+      );
+    }
   }
 
   @override
@@ -90,6 +101,13 @@ class _$AppUserTokenObtainPairRequestSerializer implements PrimitiveSerializer<A
             specifiedType: const FullType(String),
           ) as String;
           result.password = valueDes;
+          break;
+        case r'device_id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.deviceId = valueDes;
           break;
         default:
           unhandled.add(key);

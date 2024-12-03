@@ -7,33 +7,61 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(Device, () {
-    // Manufacturer of device from which this report was submitted.
+    // Unique device identifier
+    // String deviceId
+    test('to test the property `deviceId`', () async {
+      // TODO
+    });
+
+    // String name
+    test('to test the property `name`', () async {
+      // TODO
+    });
+
+    // String type
+    test('to test the property `type`', () async {
+      // TODO
+    });
+
+    // The manufacturer of the device.
     // String manufacturer
     test('to test the property `manufacturer`', () async {
       // TODO
     });
 
-    // Model of device from which this report was submitted.
+    // The end-user-visible name for the end product.
     // String model
     test('to test the property `model`', () async {
       // TODO
     });
 
-    // Operating system of device from which this report was submitted.
-    // String os
+    // DeviceOs os
     test('to test the property `os`', () async {
       // TODO
     });
 
-    // Operating system version of device from which this report was submitted.
-    // String osVersion
-    test('to test the property `osVersion`', () async {
+    // MobileApp mobileApp
+    test('to test the property `mobileApp`', () async {
       // TODO
     });
 
-    // Language setting of operating system on device from which this report was submitted. 2-digit ISO-639-1 language code.
-    // String osLanguage
-    test('to test the property `osLanguage`', () async {
+    // String userUuid
+    test('to test the property `userUuid`', () async {
+      // TODO
+    });
+
+    // OffsetDateTime lastLogin
+    test('to test the property `lastLogin`', () async {
+      // TODO
+    });
+
+    // OffsetDateTime createdAt
+    test('to test the property `createdAt`', () async {
+      // TODO
+    });
+
+    // OffsetDateTime updatedAt
+    test('to test the property `updatedAt`', () async {
       // TODO
     });
 

@@ -140,7 +140,7 @@ class NotificationsApi {
   /// 
   ///
   /// Parameters:
-  /// * [orderBy] - Ordenamiento  
+  /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
   /// * [seen] 

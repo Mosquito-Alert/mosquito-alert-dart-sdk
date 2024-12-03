@@ -8,11 +8,17 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**manufacturer** | **String** | Manufacturer of device from which this report was submitted. | [optional] 
-**model** | **String** | Model of device from which this report was submitted. | [optional] 
-**os** | **String** | Operating system of device from which this report was submitted. | [optional] 
-**osVersion** | **String** | Operating system version of device from which this report was submitted. | [optional] 
-**osLanguage** | **String** | Language setting of operating system on device from which this report was submitted. 2-digit ISO-639-1 language code. | [optional] 
+**deviceId** | **String** | Unique device identifier | 
+**name** | **String** |  | [optional] 
+**type** | **String** |  | 
+**manufacturer** | **String** | The manufacturer of the device. | [optional] 
+**model** | **String** | The end-user-visible name for the end product. | 
+**os** | [**DeviceOs**](DeviceOs.md) |  | 
+**mobileApp** | [**MobileApp**](MobileApp.md) |  | [optional] 
+**userUuid** | **String** |  | 
+**lastLogin** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

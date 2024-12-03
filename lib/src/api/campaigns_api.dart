@@ -27,7 +27,7 @@ class CampaignsApi {
   /// Parameters:
   /// * [countryId] - Country in which the campaign is taking place
   /// * [isActive] 
-  /// * [orderBy] - Ordenamiento  
+  /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation

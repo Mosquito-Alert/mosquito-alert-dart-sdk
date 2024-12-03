@@ -3,12 +3,10 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/package_request.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:time_machine/time_machine.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/simple_photo_request.dart';
-import 'package:mosquito_alert/src/model/device_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -22,8 +20,6 @@ part 'breeding_site_request.g.dart';
 /// * [location] 
 /// * [note] - Note user attached to report.
 /// * [tags] 
-/// * [package] 
-/// * [device] 
 /// * [photos] 
 /// * [siteType] - Breeding site type.
 /// * [hasWater] - Either if the user perceived water in the breeding site.
@@ -47,12 +43,6 @@ abstract class BreedingSiteRequest implements Built<BreedingSiteRequest, Breedin
 
   @BuiltValueField(wireName: r'tags')
   BuiltList<String>? get tags;
-
-  @BuiltValueField(wireName: r'package')
-  PackageRequest? get package;
-
-  @BuiltValueField(wireName: r'device')
-  DeviceRequest? get device;
 
   @BuiltValueField(wireName: r'photos')
   BuiltList<SimplePhotoRequest> get photos;
@@ -128,20 +118,6 @@ class _$BreedingSiteRequestSerializer implements PrimitiveSerializer<BreedingSit
       yield serializers.serialize(
         object.tags,
         specifiedType: const FullType(BuiltList, [FullType(String)]),
-      );
-    }
-    if (object.package != null) {
-      yield r'package';
-      yield serializers.serialize(
-        object.package,
-        specifiedType: const FullType(PackageRequest),
-      );
-    }
-    if (object.device != null) {
-      yield r'device';
-      yield serializers.serialize(
-        object.device,
-        specifiedType: const FullType(DeviceRequest),
       );
     }
     yield r'photos';
@@ -242,20 +218,6 @@ class _$BreedingSiteRequestSerializer implements PrimitiveSerializer<BreedingSit
             specifiedType: const FullType(BuiltList, [FullType(String)]),
           ) as BuiltList<String>;
           result.tags.replace(valueDes);
-          break;
-        case r'package':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(PackageRequest),
-          ) as PackageRequest;
-          result.package.replace(valueDes);
-          break;
-        case r'device':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(DeviceRequest),
-          ) as DeviceRequest;
-          result.device.replace(valueDes);
           break;
         case r'photos':
           final valueDes = serializers.deserialize(

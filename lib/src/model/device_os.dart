@@ -6,69 +6,65 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'package.g.dart';
+part 'device_os.g.dart';
 
-/// Package
+/// DeviceOs
 ///
 /// Properties:
-/// * [name] - Name of tigatrapp package from which this report was submitted.
-/// * [version] - Version number of tigatrapp package from which this report was submitted.
-/// * [language] - Language setting, within tigatrapp, of device from which this report was submitted. 2-digit ISO-639-1 language code.
+/// * [name] - Operating system of device from which this report was submitted.
+/// * [version] - Operating system version of device from which this report was submitted.
+/// * [locale] - The locale configured in the device following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
 @BuiltValue()
-abstract class Package implements Built<Package, PackageBuilder> {
-  /// Name of tigatrapp package from which this report was submitted.
+abstract class DeviceOs implements Built<DeviceOs, DeviceOsBuilder> {
+  /// Operating system of device from which this report was submitted.
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String get name;
 
-  /// Version number of tigatrapp package from which this report was submitted.
+  /// Operating system version of device from which this report was submitted.
   @BuiltValueField(wireName: r'version')
-  int? get version;
+  String get version;
 
-  /// Language setting, within tigatrapp, of device from which this report was submitted. 2-digit ISO-639-1 language code.
-  @BuiltValueField(wireName: r'language')
-  String? get language;
+  /// The locale configured in the device following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
+  @BuiltValueField(wireName: r'locale')
+  String? get locale;
 
-  Package._();
+  DeviceOs._();
 
-  factory Package([void updates(PackageBuilder b)]) = _$Package;
+  factory DeviceOs([void updates(DeviceOsBuilder b)]) = _$DeviceOs;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(PackageBuilder b) => b;
+  static void _defaults(DeviceOsBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<Package> get serializer => _$PackageSerializer();
+  static Serializer<DeviceOs> get serializer => _$DeviceOsSerializer();
 }
 
-class _$PackageSerializer implements PrimitiveSerializer<Package> {
+class _$DeviceOsSerializer implements PrimitiveSerializer<DeviceOs> {
   @override
-  final Iterable<Type> types = const [Package, _$Package];
+  final Iterable<Type> types = const [DeviceOs, _$DeviceOs];
 
   @override
-  final String wireName = r'Package';
+  final String wireName = r'DeviceOs';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    Package object, {
+    DeviceOs object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
-      yield r'name';
+    yield r'name';
+    yield serializers.serialize(
+      object.name,
+      specifiedType: const FullType(String),
+    );
+    yield r'version';
+    yield serializers.serialize(
+      object.version,
+      specifiedType: const FullType(String),
+    );
+    if (object.locale != null) {
+      yield r'locale';
       yield serializers.serialize(
-        object.name,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
-    if (object.version != null) {
-      yield r'version';
-      yield serializers.serialize(
-        object.version,
-        specifiedType: const FullType.nullable(int),
-      );
-    }
-    if (object.language != null) {
-      yield r'language';
-      yield serializers.serialize(
-        object.language,
+        object.locale,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -77,7 +73,7 @@ class _$PackageSerializer implements PrimitiveSerializer<Package> {
   @override
   Object serialize(
     Serializers serializers,
-    Package object, {
+    DeviceOs object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -88,7 +84,7 @@ class _$PackageSerializer implements PrimitiveSerializer<Package> {
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required PackageBuilder result,
+    required DeviceOsBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -98,26 +94,24 @@ class _$PackageSerializer implements PrimitiveSerializer<Package> {
         case r'name':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(String),
+          ) as String;
           result.name = valueDes;
           break;
         case r'version':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(String),
+          ) as String;
           result.version = valueDes;
           break;
-        case r'language':
+        case r'locale':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.language = valueDes;
+          result.locale = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -128,12 +122,12 @@ class _$PackageSerializer implements PrimitiveSerializer<Package> {
   }
 
   @override
-  Package deserialize(
+  DeviceOs deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = PackageBuilder();
+    final result = DeviceOsBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

@@ -27,7 +27,11 @@ import 'package:mosquito_alert/src/model/create_notification.dart';
 import 'package:mosquito_alert/src/model/create_user.dart';
 import 'package:mosquito_alert/src/model/create_user_request.dart';
 import 'package:mosquito_alert/src/model/device.dart';
+import 'package:mosquito_alert/src/model/device_os.dart';
+import 'package:mosquito_alert/src/model/device_os_request.dart';
 import 'package:mosquito_alert/src/model/device_request.dart';
+import 'package:mosquito_alert/src/model/device_update.dart';
+import 'package:mosquito_alert/src/model/device_update_request.dart';
 import 'package:mosquito_alert/src/model/fix.dart';
 import 'package:mosquito_alert/src/model/fix_location.dart';
 import 'package:mosquito_alert/src/model/fix_location_request.dart';
@@ -36,14 +40,14 @@ import 'package:mosquito_alert/src/model/location.dart';
 import 'package:mosquito_alert/src/model/location_point.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/meta_notification_request.dart';
+import 'package:mosquito_alert/src/model/mobile_app.dart';
+import 'package:mosquito_alert/src/model/mobile_app_request.dart';
 import 'package:mosquito_alert/src/model/notification.dart';
 import 'package:mosquito_alert/src/model/notification_request.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
 import 'package:mosquito_alert/src/model/observation_prediction.dart';
 import 'package:mosquito_alert/src/model/observation_prediction_request.dart';
 import 'package:mosquito_alert/src/model/observation_request.dart';
-import 'package:mosquito_alert/src/model/package.dart';
-import 'package:mosquito_alert/src/model/package_request.dart';
 import 'package:mosquito_alert/src/model/paginated_bite_list.dart';
 import 'package:mosquito_alert/src/model/paginated_breeding_site_list.dart';
 import 'package:mosquito_alert/src/model/paginated_campaign_list.dart';
@@ -52,6 +56,7 @@ import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
 import 'package:mosquito_alert/src/model/partner.dart';
 import 'package:mosquito_alert/src/model/partner_point.dart';
+import 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 import 'package:mosquito_alert/src/model/patched_notification_request.dart';
 import 'package:mosquito_alert/src/model/patched_user_request.dart';
 import 'package:mosquito_alert/src/model/photo.dart';
@@ -85,7 +90,11 @@ part 'serializers.g.dart';
   CreateUser,
   CreateUserRequest,
   Device,
+  DeviceOs,
+  DeviceOsRequest,
   DeviceRequest,
+  DeviceUpdate,
+  DeviceUpdateRequest,
   Fix,
   FixLocation,
   FixLocationRequest,
@@ -94,14 +103,14 @@ part 'serializers.g.dart';
   LocationPoint,
   LocationRequest,
   MetaNotificationRequest,
+  MobileApp,
+  MobileAppRequest,
   Notification,
   NotificationRequest,
   Observation,
   ObservationPrediction,
   ObservationPredictionRequest,
   ObservationRequest,
-  Package,
-  PackageRequest,
   PaginatedBiteList,
   PaginatedBreedingSiteList,
   PaginatedCampaignList,
@@ -110,6 +119,7 @@ part 'serializers.g.dart';
   PaginatedPartnerList,
   Partner,
   PartnerPoint,
+  PatchedDeviceUpdateRequest,
   PatchedNotificationRequest,
   PatchedUserRequest,
   Photo,

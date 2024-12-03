@@ -211,7 +211,7 @@ class ObservationsApi {
   /// * [locationCountryId] 
   /// * [locationNuts2] 
   /// * [locationNuts3] 
-  /// * [orderBy] - Ordenamiento  
+  /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
   /// * [receivedAtAfter] - Received at

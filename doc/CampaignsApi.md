@@ -33,7 +33,7 @@ import 'package:mosquito_alert/api.dart';
 final api = MosquitoAlert().getCampaignsApi();
 final int countryId = 56; // int | Country in which the campaign is taking place
 final bool isActive = true; // bool | 
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **countryId** | **int**| Country in which the campaign is taking place | [optional] 
  **isActive** | **bool**|  | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
 

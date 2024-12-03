@@ -13,8 +13,6 @@ Name | Type | Description | Notes
 **location** | [**LocationRequest**](LocationRequest.md) |  | 
 **note** | **String** | Note user attached to report. | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
-**package** | [**PackageRequest**](PackageRequest.md) |  | [optional] 
-**device** | [**DeviceRequest**](DeviceRequest.md) |  | [optional] 
 **photos** | [**BuiltList&lt;SimplePhotoRequest&gt;**](SimplePhotoRequest.md) |  | 
 **siteType** | **String** | Breeding site type. | [optional] 
 **hasWater** | **bool** | Either if the user perceived water in the breeding site. | [optional] 

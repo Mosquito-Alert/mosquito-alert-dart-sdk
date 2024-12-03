@@ -135,7 +135,7 @@ final OffsetDateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateT
 final int locationCountryId = 56; // int | 
 final String locationNuts2 = locationNuts2_example; // String | 
 final String locationNuts3 = locationNuts3_example; // String | 
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
 final OffsetDateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Received at
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
  **locationCountryId** | **int**|  | [optional] 
  **locationNuts2** | **String**|  | [optional] 
  **locationNuts3** | **String**|  | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
  **receivedAtAfter** | **OffsetDateTime**| Received at | [optional] 

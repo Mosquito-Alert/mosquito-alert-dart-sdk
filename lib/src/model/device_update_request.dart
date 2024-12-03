@@ -3,52 +3,55 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/mobile_app_request.dart';
+import 'package:mosquito_alert/src/model/device_os_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'package_request.g.dart';
+part 'device_update_request.g.dart';
 
-/// PackageRequest
+/// DeviceUpdateRequest
 ///
 /// Properties:
-/// * [name] - Name of tigatrapp package from which this report was submitted.
-/// * [version] - Version number of tigatrapp package from which this report was submitted.
-/// * [language] - Language setting, within tigatrapp, of device from which this report was submitted. 2-digit ISO-639-1 language code.
+/// * [name] 
+/// * [fcmToken] 
+/// * [os] 
+/// * [mobileApp] 
 @BuiltValue()
-abstract class PackageRequest implements Built<PackageRequest, PackageRequestBuilder> {
-  /// Name of tigatrapp package from which this report was submitted.
+abstract class DeviceUpdateRequest implements Built<DeviceUpdateRequest, DeviceUpdateRequestBuilder> {
   @BuiltValueField(wireName: r'name')
   String? get name;
 
-  /// Version number of tigatrapp package from which this report was submitted.
-  @BuiltValueField(wireName: r'version')
-  int? get version;
+  @BuiltValueField(wireName: r'fcm_token')
+  String get fcmToken;
 
-  /// Language setting, within tigatrapp, of device from which this report was submitted. 2-digit ISO-639-1 language code.
-  @BuiltValueField(wireName: r'language')
-  String? get language;
+  @BuiltValueField(wireName: r'os')
+  DeviceOsRequest get os;
 
-  PackageRequest._();
+  @BuiltValueField(wireName: r'mobile_app')
+  MobileAppRequest? get mobileApp;
 
-  factory PackageRequest([void updates(PackageRequestBuilder b)]) = _$PackageRequest;
+  DeviceUpdateRequest._();
+
+  factory DeviceUpdateRequest([void updates(DeviceUpdateRequestBuilder b)]) = _$DeviceUpdateRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(PackageRequestBuilder b) => b;
+  static void _defaults(DeviceUpdateRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<PackageRequest> get serializer => _$PackageRequestSerializer();
+  static Serializer<DeviceUpdateRequest> get serializer => _$DeviceUpdateRequestSerializer();
 }
 
-class _$PackageRequestSerializer implements PrimitiveSerializer<PackageRequest> {
+class _$DeviceUpdateRequestSerializer implements PrimitiveSerializer<DeviceUpdateRequest> {
   @override
-  final Iterable<Type> types = const [PackageRequest, _$PackageRequest];
+  final Iterable<Type> types = const [DeviceUpdateRequest, _$DeviceUpdateRequest];
 
   @override
-  final String wireName = r'PackageRequest';
+  final String wireName = r'DeviceUpdateRequest';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    PackageRequest object, {
+    DeviceUpdateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.name != null) {
@@ -58,18 +61,21 @@ class _$PackageRequestSerializer implements PrimitiveSerializer<PackageRequest> 
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.version != null) {
-      yield r'version';
+    yield r'fcm_token';
+    yield serializers.serialize(
+      object.fcmToken,
+      specifiedType: const FullType(String),
+    );
+    yield r'os';
+    yield serializers.serialize(
+      object.os,
+      specifiedType: const FullType(DeviceOsRequest),
+    );
+    if (object.mobileApp != null) {
+      yield r'mobile_app';
       yield serializers.serialize(
-        object.version,
-        specifiedType: const FullType.nullable(int),
-      );
-    }
-    if (object.language != null) {
-      yield r'language';
-      yield serializers.serialize(
-        object.language,
-        specifiedType: const FullType.nullable(String),
+        object.mobileApp,
+        specifiedType: const FullType(MobileAppRequest),
       );
     }
   }
@@ -77,7 +83,7 @@ class _$PackageRequestSerializer implements PrimitiveSerializer<PackageRequest> 
   @override
   Object serialize(
     Serializers serializers,
-    PackageRequest object, {
+    DeviceUpdateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -88,7 +94,7 @@ class _$PackageRequestSerializer implements PrimitiveSerializer<PackageRequest> 
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required PackageRequestBuilder result,
+    required DeviceUpdateRequestBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -103,21 +109,26 @@ class _$PackageRequestSerializer implements PrimitiveSerializer<PackageRequest> 
           if (valueDes == null) continue;
           result.name = valueDes;
           break;
-        case r'version':
+        case r'fcm_token':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
-          result.version = valueDes;
+            specifiedType: const FullType(String),
+          ) as String;
+          result.fcmToken = valueDes;
           break;
-        case r'language':
+        case r'os':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.language = valueDes;
+            specifiedType: const FullType(DeviceOsRequest),
+          ) as DeviceOsRequest;
+          result.os.replace(valueDes);
+          break;
+        case r'mobile_app':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(MobileAppRequest),
+          ) as MobileAppRequest;
+          result.mobileApp.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -128,12 +139,12 @@ class _$PackageRequestSerializer implements PrimitiveSerializer<PackageRequest> 
   }
 
   @override
-  PackageRequest deserialize(
+  DeviceUpdateRequest deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = PackageRequestBuilder();
+    final result = DeviceUpdateRequestBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(
