@@ -12,6 +12,17 @@ import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/breeding_site.dart';
 import 'package:mosquito_alert/src/model/breeding_site_request.dart';
+import 'package:mosquito_alert/src/model/breeding_sites_create_error_response400.dart';
+import 'package:mosquito_alert/src/model/breeding_sites_destroy_error_response400.dart';
+import 'package:mosquito_alert/src/model/breeding_sites_list_error_response400.dart';
+import 'package:mosquito_alert/src/model/breeding_sites_retrieve_error_response400.dart';
+import 'package:mosquito_alert/src/model/error_response401.dart';
+import 'package:mosquito_alert/src/model/error_response403.dart';
+import 'package:mosquito_alert/src/model/error_response404.dart';
+import 'package:mosquito_alert/src/model/error_response405.dart';
+import 'package:mosquito_alert/src/model/error_response406.dart';
+import 'package:mosquito_alert/src/model/error_response415.dart';
+import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/paginated_breeding_site_list.dart';
 import 'package:time_machine/time_machine.dart';
 

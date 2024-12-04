@@ -10,10 +10,24 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
+import 'package:mosquito_alert/src/model/error_response401.dart';
+import 'package:mosquito_alert/src/model/error_response403.dart';
+import 'package:mosquito_alert/src/model/error_response404.dart';
+import 'package:mosquito_alert/src/model/error_response405.dart';
+import 'package:mosquito_alert/src/model/error_response406.dart';
+import 'package:mosquito_alert/src/model/error_response415.dart';
+import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
 import 'package:mosquito_alert/src/model/observation_prediction.dart';
 import 'package:mosquito_alert/src/model/observation_prediction_request.dart';
 import 'package:mosquito_alert/src/model/observation_request.dart';
+import 'package:mosquito_alert/src/model/observations_create_error_response400.dart';
+import 'package:mosquito_alert/src/model/observations_destroy_error_response400.dart';
+import 'package:mosquito_alert/src/model/observations_list_error_response400.dart';
+import 'package:mosquito_alert/src/model/observations_prediction_create_error_response400.dart';
+import 'package:mosquito_alert/src/model/observations_prediction_destroy_error_response400.dart';
+import 'package:mosquito_alert/src/model/observations_prediction_retrieve_error_response400.dart';
+import 'package:mosquito_alert/src/model/observations_retrieve_error_response400.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 import 'package:time_machine/time_machine.dart';
 

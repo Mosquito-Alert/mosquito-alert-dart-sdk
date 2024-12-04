@@ -11,9 +11,20 @@ import 'package:dio/dio.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/create_user.dart';
 import 'package:mosquito_alert/src/model/create_user_request.dart';
+import 'package:mosquito_alert/src/model/error_response401.dart';
+import 'package:mosquito_alert/src/model/error_response403.dart';
+import 'package:mosquito_alert/src/model/error_response404.dart';
+import 'package:mosquito_alert/src/model/error_response405.dart';
+import 'package:mosquito_alert/src/model/error_response406.dart';
+import 'package:mosquito_alert/src/model/error_response415.dart';
+import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/patched_user_request.dart';
 import 'package:mosquito_alert/src/model/user.dart';
 import 'package:mosquito_alert/src/model/user_request.dart';
+import 'package:mosquito_alert/src/model/users_create_error_response400.dart';
+import 'package:mosquito_alert/src/model/users_partial_update_error_response400.dart';
+import 'package:mosquito_alert/src/model/users_retrieve_error_response400.dart';
+import 'package:mosquito_alert/src/model/users_update_error_response400.dart';
 
 class UsersApi {
 

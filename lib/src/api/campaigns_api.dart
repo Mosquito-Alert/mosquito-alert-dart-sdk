@@ -11,6 +11,15 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/campaign.dart';
+import 'package:mosquito_alert/src/model/campaigns_list_error_response400.dart';
+import 'package:mosquito_alert/src/model/campaigns_retrieve_error_response400.dart';
+import 'package:mosquito_alert/src/model/error_response401.dart';
+import 'package:mosquito_alert/src/model/error_response403.dart';
+import 'package:mosquito_alert/src/model/error_response404.dart';
+import 'package:mosquito_alert/src/model/error_response405.dart';
+import 'package:mosquito_alert/src/model/error_response406.dart';
+import 'package:mosquito_alert/src/model/error_response415.dart';
+import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/paginated_campaign_list.dart';
 
 class CampaignsApi {

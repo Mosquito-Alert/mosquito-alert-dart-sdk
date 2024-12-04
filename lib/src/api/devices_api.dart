@@ -13,6 +13,17 @@ import 'package:mosquito_alert/src/model/device.dart';
 import 'package:mosquito_alert/src/model/device_request.dart';
 import 'package:mosquito_alert/src/model/device_update.dart';
 import 'package:mosquito_alert/src/model/device_update_request.dart';
+import 'package:mosquito_alert/src/model/devices_create_error_response400.dart';
+import 'package:mosquito_alert/src/model/devices_partial_update_error_response400.dart';
+import 'package:mosquito_alert/src/model/devices_retrieve_error_response400.dart';
+import 'package:mosquito_alert/src/model/devices_update_error_response400.dart';
+import 'package:mosquito_alert/src/model/error_response401.dart';
+import 'package:mosquito_alert/src/model/error_response403.dart';
+import 'package:mosquito_alert/src/model/error_response404.dart';
+import 'package:mosquito_alert/src/model/error_response405.dart';
+import 'package:mosquito_alert/src/model/error_response406.dart';
+import 'package:mosquito_alert/src/model/error_response415.dart';
+import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 
 class DevicesApi {
