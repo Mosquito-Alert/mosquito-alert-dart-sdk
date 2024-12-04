@@ -12,29 +12,18 @@ void main() {
       // TODO
     });
 
-    // Expert sending the notification
-    // int expertId
-    test('to test the property `expertId`', () async {
+    // NotificationMessage message
+    test('to test the property `message`', () async {
+      // TODO
+    });
+
+    // bool isRead
+    test('to test the property `isRead`', () async {
       // TODO
     });
 
     // OffsetDateTime createdAt
     test('to test the property `createdAt`', () async {
-      // TODO
-    });
-
-    // String title
-    test('to test the property `title`', () async {
-      // TODO
-    });
-
-    // String body
-    test('to test the property `body`', () async {
-      // TODO
-    });
-
-    // bool seen
-    test('to test the property `seen`', () async {
       // TODO
     });
 

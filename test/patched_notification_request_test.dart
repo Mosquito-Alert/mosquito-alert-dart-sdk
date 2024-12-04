@@ -7,8 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(PatchedNotificationRequest, () {
-    // bool seen
-    test('to test the property `seen`', () async {
+    // bool isRead
+    test('to test the property `isRead`', () async {
       // TODO
     });
 

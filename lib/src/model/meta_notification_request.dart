@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/topic_notification_create_request.dart';
+import 'package:mosquito_alert/src/model/create_notification_message_request.dart';
 import 'package:mosquito_alert/src/model/user_notification_create_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -16,10 +17,9 @@ part 'meta_notification_request.g.dart';
 ///
 /// Properties:
 /// * [receiverType] 
-/// * [titleEn] 
-/// * [bodyEn] 
-/// * [userUuid] 
-/// * [topicCode] 
+/// * [message] - The message of the notification
+/// * [userUuids] 
+/// * [topicCodes] 
 @BuiltValue()
 abstract class MetaNotificationRequest implements Built<MetaNotificationRequest, MetaNotificationRequestBuilder> {
   /// One Of [TopicNotificationCreateRequest], [UserNotificationCreateRequest]

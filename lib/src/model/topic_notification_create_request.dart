@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/create_notification_message_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,23 +14,20 @@ part 'topic_notification_create_request.g.dart';
 ///
 /// Properties:
 /// * [receiverType] 
-/// * [titleEn] 
-/// * [bodyEn] 
-/// * [topicCode] 
+/// * [message] - The message of the notification
+/// * [topicCodes] 
 @BuiltValue()
 abstract class TopicNotificationCreateRequest implements Built<TopicNotificationCreateRequest, TopicNotificationCreateRequestBuilder> {
   @BuiltValueField(wireName: r'receiver_type')
   TopicNotificationCreateRequestReceiverTypeEnum get receiverType;
   // enum receiverTypeEnum {  user,  topic,  };
 
-  @BuiltValueField(wireName: r'title_en')
-  String get titleEn;
+  /// The message of the notification
+  @BuiltValueField(wireName: r'message')
+  CreateNotificationMessageRequest get message;
 
-  @BuiltValueField(wireName: r'body_en')
-  String get bodyEn;
-
-  @BuiltValueField(wireName: r'topic_code')
-  String get topicCode;
+  @BuiltValueField(wireName: r'topic_codes')
+  BuiltList<String> get topicCodes;
 
   TopicNotificationCreateRequest._();
 
@@ -59,20 +57,15 @@ class _$TopicNotificationCreateRequestSerializer implements PrimitiveSerializer<
       object.receiverType,
       specifiedType: const FullType(TopicNotificationCreateRequestReceiverTypeEnum),
     );
-    yield r'title_en';
+    yield r'message';
     yield serializers.serialize(
-      object.titleEn,
-      specifiedType: const FullType(String),
+      object.message,
+      specifiedType: const FullType(CreateNotificationMessageRequest),
     );
-    yield r'body_en';
+    yield r'topic_codes';
     yield serializers.serialize(
-      object.bodyEn,
-      specifiedType: const FullType(String),
-    );
-    yield r'topic_code';
-    yield serializers.serialize(
-      object.topicCode,
-      specifiedType: const FullType(String),
+      object.topicCodes,
+      specifiedType: const FullType(BuiltList, [FullType(String)]),
     );
   }
 
@@ -104,26 +97,19 @@ class _$TopicNotificationCreateRequestSerializer implements PrimitiveSerializer<
           ) as TopicNotificationCreateRequestReceiverTypeEnum;
           result.receiverType = valueDes;
           break;
-        case r'title_en':
+        case r'message':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.titleEn = valueDes;
+            specifiedType: const FullType(CreateNotificationMessageRequest),
+          ) as CreateNotificationMessageRequest;
+          result.message.replace(valueDes);
           break;
-        case r'body_en':
+        case r'topic_codes':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.bodyEn = valueDes;
-          break;
-        case r'topic_code':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.topicCode = valueDes;
+            specifiedType: const FullType(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>;
+          result.topicCodes.replace(valueDes);
           break;
         default:
           unhandled.add(key);

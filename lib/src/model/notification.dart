@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/notification_message.dart';
 import 'package:time_machine/time_machine.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -13,31 +14,22 @@ part 'notification.g.dart';
 ///
 /// Properties:
 /// * [id] 
-/// * [expertId] - Expert sending the notification
+/// * [message] 
+/// * [isRead] 
 /// * [createdAt] 
-/// * [title] 
-/// * [body] 
-/// * [seen] 
 @BuiltValue()
 abstract class Notification implements Built<Notification, NotificationBuilder> {
   @BuiltValueField(wireName: r'id')
   int get id;
 
-  /// Expert sending the notification
-  @BuiltValueField(wireName: r'expert_id')
-  int? get expertId;
+  @BuiltValueField(wireName: r'message')
+  NotificationMessage get message;
+
+  @BuiltValueField(wireName: r'is_read')
+  bool get isRead;
 
   @BuiltValueField(wireName: r'created_at')
   OffsetDateTime get createdAt;
-
-  @BuiltValueField(wireName: r'title')
-  String get title;
-
-  @BuiltValueField(wireName: r'body')
-  String get body;
-
-  @BuiltValueField(wireName: r'seen')
-  bool get seen;
 
   Notification._();
 
@@ -67,30 +59,20 @@ class _$NotificationSerializer implements PrimitiveSerializer<Notification> {
       object.id,
       specifiedType: const FullType(int),
     );
-    yield r'expert_id';
-    yield object.expertId == null ? null : serializers.serialize(
-      object.expertId,
-      specifiedType: const FullType.nullable(int),
+    yield r'message';
+    yield serializers.serialize(
+      object.message,
+      specifiedType: const FullType(NotificationMessage),
+    );
+    yield r'is_read';
+    yield serializers.serialize(
+      object.isRead,
+      specifiedType: const FullType(bool),
     );
     yield r'created_at';
     yield serializers.serialize(
       object.createdAt,
       specifiedType: const FullType(OffsetDateTime),
-    );
-    yield r'title';
-    yield serializers.serialize(
-      object.title,
-      specifiedType: const FullType(String),
-    );
-    yield r'body';
-    yield serializers.serialize(
-      object.body,
-      specifiedType: const FullType(String),
-    );
-    yield r'seen';
-    yield serializers.serialize(
-      object.seen,
-      specifiedType: const FullType(bool),
     );
   }
 
@@ -122,13 +104,19 @@ class _$NotificationSerializer implements PrimitiveSerializer<Notification> {
           ) as int;
           result.id = valueDes;
           break;
-        case r'expert_id':
+        case r'message':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
-          result.expertId = valueDes;
+            specifiedType: const FullType(NotificationMessage),
+          ) as NotificationMessage;
+          result.message.replace(valueDes);
+          break;
+        case r'is_read':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.isRead = valueDes;
           break;
         case r'created_at':
           final valueDes = serializers.deserialize(
@@ -136,27 +124,6 @@ class _$NotificationSerializer implements PrimitiveSerializer<Notification> {
             specifiedType: const FullType(OffsetDateTime),
           ) as OffsetDateTime;
           result.createdAt = valueDes;
-          break;
-        case r'title':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.title = valueDes;
-          break;
-        case r'body':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.body = valueDes;
-          break;
-        case r'seen':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(bool),
-          ) as bool;
-          result.seen = valueDes;
           break;
         default:
           unhandled.add(key);

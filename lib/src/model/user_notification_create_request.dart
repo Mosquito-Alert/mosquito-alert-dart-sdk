@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/create_notification_message_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,23 +14,20 @@ part 'user_notification_create_request.g.dart';
 ///
 /// Properties:
 /// * [receiverType] 
-/// * [titleEn] 
-/// * [bodyEn] 
-/// * [userUuid] 
+/// * [message] - The message of the notification
+/// * [userUuids] 
 @BuiltValue()
 abstract class UserNotificationCreateRequest implements Built<UserNotificationCreateRequest, UserNotificationCreateRequestBuilder> {
   @BuiltValueField(wireName: r'receiver_type')
   UserNotificationCreateRequestReceiverTypeEnum get receiverType;
   // enum receiverTypeEnum {  user,  topic,  };
 
-  @BuiltValueField(wireName: r'title_en')
-  String get titleEn;
+  /// The message of the notification
+  @BuiltValueField(wireName: r'message')
+  CreateNotificationMessageRequest get message;
 
-  @BuiltValueField(wireName: r'body_en')
-  String get bodyEn;
-
-  @BuiltValueField(wireName: r'user_uuid')
-  String get userUuid;
+  @BuiltValueField(wireName: r'user_uuids')
+  BuiltList<String> get userUuids;
 
   UserNotificationCreateRequest._();
 
@@ -59,20 +57,15 @@ class _$UserNotificationCreateRequestSerializer implements PrimitiveSerializer<U
       object.receiverType,
       specifiedType: const FullType(UserNotificationCreateRequestReceiverTypeEnum),
     );
-    yield r'title_en';
+    yield r'message';
     yield serializers.serialize(
-      object.titleEn,
-      specifiedType: const FullType(String),
+      object.message,
+      specifiedType: const FullType(CreateNotificationMessageRequest),
     );
-    yield r'body_en';
+    yield r'user_uuids';
     yield serializers.serialize(
-      object.bodyEn,
-      specifiedType: const FullType(String),
-    );
-    yield r'user_uuid';
-    yield serializers.serialize(
-      object.userUuid,
-      specifiedType: const FullType(String),
+      object.userUuids,
+      specifiedType: const FullType(BuiltList, [FullType(String)]),
     );
   }
 
@@ -104,26 +97,19 @@ class _$UserNotificationCreateRequestSerializer implements PrimitiveSerializer<U
           ) as UserNotificationCreateRequestReceiverTypeEnum;
           result.receiverType = valueDes;
           break;
-        case r'title_en':
+        case r'message':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.titleEn = valueDes;
+            specifiedType: const FullType(CreateNotificationMessageRequest),
+          ) as CreateNotificationMessageRequest;
+          result.message.replace(valueDes);
           break;
-        case r'body_en':
+        case r'user_uuids':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.bodyEn = valueDes;
-          break;
-        case r'user_uuid':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.userUuid = valueDes;
+            specifiedType: const FullType(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>;
+          result.userUuids.replace(valueDes);
           break;
         default:
           unhandled.add(key);

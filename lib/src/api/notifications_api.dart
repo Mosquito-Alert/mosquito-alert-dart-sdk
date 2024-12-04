@@ -37,9 +37,9 @@ class NotificationsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [CreateNotification] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<CreateNotification>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<CreateNotification>> notificationsCreate({ 
+  Future<Response<BuiltList<CreateNotification>>> notificationsCreate({ 
     MetaNotificationRequest? metaNotificationRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -105,14 +105,14 @@ class NotificationsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    CreateNotification? _responseData;
+    BuiltList<CreateNotification>? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(CreateNotification),
-      ) as CreateNotification;
+        specifiedType: const FullType(BuiltList, [FullType(CreateNotification)]),
+      ) as BuiltList<CreateNotification>;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -124,7 +124,7 @@ class NotificationsApi {
       );
     }
 
-    return Response<CreateNotification>(
+    return Response<BuiltList<CreateNotification>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -140,10 +140,10 @@ class NotificationsApi {
   /// 
   ///
   /// Parameters:
+  /// * [isRead] 
   /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
-  /// * [seen] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -154,10 +154,10 @@ class NotificationsApi {
   /// Returns a [Future] containing a [Response] with a [PaginatedNotificationList] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<PaginatedNotificationList>> notificationsList({ 
+    bool? isRead,
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
-    bool? seen,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -195,10 +195,10 @@ class NotificationsApi {
     );
 
     final _queryParameters = <String, dynamic>{
+      if (isRead != null) r'is_read': encodeQueryParameter(_serializers, isRead, const FullType(bool)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
-      if (seen != null) r'seen': encodeQueryParameter(_serializers, seen, const FullType(bool)),
     };
 
     final _response = await _dio.request<Object>(

@@ -11,11 +11,11 @@ part 'notification_request.g.dart';
 /// NotificationRequest
 ///
 /// Properties:
-/// * [seen] 
+/// * [isRead] 
 @BuiltValue()
 abstract class NotificationRequest implements Built<NotificationRequest, NotificationRequestBuilder> {
-  @BuiltValueField(wireName: r'seen')
-  bool get seen;
+  @BuiltValueField(wireName: r'is_read')
+  bool get isRead;
 
   NotificationRequest._();
 
@@ -40,9 +40,9 @@ class _$NotificationRequestSerializer implements PrimitiveSerializer<Notificatio
     NotificationRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'seen';
+    yield r'is_read';
     yield serializers.serialize(
-      object.seen,
+      object.isRead,
       specifiedType: const FullType(bool),
     );
   }
@@ -68,12 +68,12 @@ class _$NotificationRequestSerializer implements PrimitiveSerializer<Notificatio
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'seen':
+        case r'is_read':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(bool),
           ) as bool;
-          result.seen = valueDes;
+          result.isRead = valueDes;
           break;
         default:
           unhandled.add(key);

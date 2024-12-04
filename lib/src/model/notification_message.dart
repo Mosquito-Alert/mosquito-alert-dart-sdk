@@ -6,53 +6,60 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'patched_notification_request.g.dart';
+part 'notification_message.g.dart';
 
-/// PatchedNotificationRequest
+/// NotificationMessage
 ///
 /// Properties:
-/// * [isRead] 
+/// * [title] 
+/// * [body] 
 @BuiltValue()
-abstract class PatchedNotificationRequest implements Built<PatchedNotificationRequest, PatchedNotificationRequestBuilder> {
-  @BuiltValueField(wireName: r'is_read')
-  bool? get isRead;
+abstract class NotificationMessage implements Built<NotificationMessage, NotificationMessageBuilder> {
+  @BuiltValueField(wireName: r'title')
+  String get title;
 
-  PatchedNotificationRequest._();
+  @BuiltValueField(wireName: r'body')
+  String get body;
 
-  factory PatchedNotificationRequest([void updates(PatchedNotificationRequestBuilder b)]) = _$PatchedNotificationRequest;
+  NotificationMessage._();
+
+  factory NotificationMessage([void updates(NotificationMessageBuilder b)]) = _$NotificationMessage;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(PatchedNotificationRequestBuilder b) => b;
+  static void _defaults(NotificationMessageBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<PatchedNotificationRequest> get serializer => _$PatchedNotificationRequestSerializer();
+  static Serializer<NotificationMessage> get serializer => _$NotificationMessageSerializer();
 }
 
-class _$PatchedNotificationRequestSerializer implements PrimitiveSerializer<PatchedNotificationRequest> {
+class _$NotificationMessageSerializer implements PrimitiveSerializer<NotificationMessage> {
   @override
-  final Iterable<Type> types = const [PatchedNotificationRequest, _$PatchedNotificationRequest];
+  final Iterable<Type> types = const [NotificationMessage, _$NotificationMessage];
 
   @override
-  final String wireName = r'PatchedNotificationRequest';
+  final String wireName = r'NotificationMessage';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    PatchedNotificationRequest object, {
+    NotificationMessage object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.isRead != null) {
-      yield r'is_read';
-      yield serializers.serialize(
-        object.isRead,
-        specifiedType: const FullType(bool),
-      );
-    }
+    yield r'title';
+    yield serializers.serialize(
+      object.title,
+      specifiedType: const FullType(String),
+    );
+    yield r'body';
+    yield serializers.serialize(
+      object.body,
+      specifiedType: const FullType(String),
+    );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    PatchedNotificationRequest object, {
+    NotificationMessage object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -63,19 +70,26 @@ class _$PatchedNotificationRequestSerializer implements PrimitiveSerializer<Patc
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required PatchedNotificationRequestBuilder result,
+    required NotificationMessageBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'is_read':
+        case r'title':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(bool),
-          ) as bool;
-          result.isRead = valueDes;
+            specifiedType: const FullType(String),
+          ) as String;
+          result.title = valueDes;
+          break;
+        case r'body':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.body = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -86,12 +100,12 @@ class _$PatchedNotificationRequestSerializer implements PrimitiveSerializer<Patc
   }
 
   @override
-  PatchedNotificationRequest deserialize(
+  NotificationMessage deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = PatchedNotificationRequestBuilder();
+    final result = NotificationMessageBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

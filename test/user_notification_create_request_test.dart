@@ -12,18 +12,14 @@ void main() {
       // TODO
     });
 
-    // String titleEn
-    test('to test the property `titleEn`', () async {
+    // The message of the notification
+    // CreateNotificationMessageRequest message
+    test('to test the property `message`', () async {
       // TODO
     });
 
-    // String bodyEn
-    test('to test the property `bodyEn`', () async {
-      // TODO
-    });
-
-    // String userUuid
-    test('to test the property `userUuid`', () async {
+    // BuiltList<String> userUuids
+    test('to test the property `userUuids`', () async {
       // TODO
     });
 

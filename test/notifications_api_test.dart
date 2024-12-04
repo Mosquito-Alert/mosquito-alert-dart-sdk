@@ -7,12 +7,12 @@ void main() {
   final instance = MosquitoAlert().getNotificationsApi();
 
   group(NotificationsApi, () {
-    //Future<CreateNotification> notificationsCreate({ MetaNotificationRequest metaNotificationRequest }) async
+    //Future<BuiltList<CreateNotification>> notificationsCreate({ MetaNotificationRequest metaNotificationRequest }) async
     test('test notificationsCreate', () async {
       // TODO
     });
 
-    //Future<PaginatedNotificationList> notificationsList({ BuiltList<String> orderBy, int page, int pageSize, bool seen }) async
+    //Future<PaginatedNotificationList> notificationsList({ bool isRead, BuiltList<String> orderBy, int page, int pageSize }) async
     test('test notificationsList', () async {
       // TODO
     });

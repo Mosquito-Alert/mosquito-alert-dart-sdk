@@ -24,6 +24,8 @@ import 'package:mosquito_alert/src/model/breeding_site_request.dart';
 import 'package:mosquito_alert/src/model/campaign.dart';
 import 'package:mosquito_alert/src/model/country.dart';
 import 'package:mosquito_alert/src/model/create_notification.dart';
+import 'package:mosquito_alert/src/model/create_notification_message.dart';
+import 'package:mosquito_alert/src/model/create_notification_message_request.dart';
 import 'package:mosquito_alert/src/model/create_user.dart';
 import 'package:mosquito_alert/src/model/create_user_request.dart';
 import 'package:mosquito_alert/src/model/device.dart';
@@ -36,6 +38,8 @@ import 'package:mosquito_alert/src/model/fix.dart';
 import 'package:mosquito_alert/src/model/fix_location.dart';
 import 'package:mosquito_alert/src/model/fix_location_request.dart';
 import 'package:mosquito_alert/src/model/fix_request.dart';
+import 'package:mosquito_alert/src/model/localized_field.dart';
+import 'package:mosquito_alert/src/model/localized_field_request.dart';
 import 'package:mosquito_alert/src/model/location.dart';
 import 'package:mosquito_alert/src/model/location_point.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
@@ -43,6 +47,7 @@ import 'package:mosquito_alert/src/model/meta_notification_request.dart';
 import 'package:mosquito_alert/src/model/mobile_app.dart';
 import 'package:mosquito_alert/src/model/mobile_app_request.dart';
 import 'package:mosquito_alert/src/model/notification.dart';
+import 'package:mosquito_alert/src/model/notification_message.dart';
 import 'package:mosquito_alert/src/model/notification_request.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
 import 'package:mosquito_alert/src/model/observation_prediction.dart';
@@ -87,6 +92,8 @@ part 'serializers.g.dart';
   Campaign,
   Country,
   CreateNotification,
+  CreateNotificationMessage,
+  CreateNotificationMessageRequest,
   CreateUser,
   CreateUserRequest,
   Device,
@@ -99,6 +106,8 @@ part 'serializers.g.dart';
   FixLocation,
   FixLocationRequest,
   FixRequest,
+  LocalizedField,
+  LocalizedFieldRequest,
   Location,
   LocationPoint,
   LocationRequest,
@@ -106,6 +115,7 @@ part 'serializers.g.dart';
   MobileApp,
   MobileAppRequest,
   Notification,
+  NotificationMessage,
   NotificationRequest,
   Observation,
   ObservationPrediction,
@@ -137,6 +147,10 @@ part 'serializers.g.dart';
   UserRequest,
 ])
 Serializers serializers = (_$serializers.toBuilder()
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(CreateNotification)]),
+        () => ListBuilder<CreateNotification>(),
+      )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(String)]),
         () => ListBuilder<String>(),

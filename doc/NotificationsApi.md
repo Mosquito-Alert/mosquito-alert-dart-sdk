@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **notificationsCreate**
-> CreateNotification notificationsCreate(metaNotificationRequest)
+> BuiltList<CreateNotification> notificationsCreate(metaNotificationRequest)
 
 
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CreateNotification**](CreateNotification.md)
+[**BuiltList&lt;CreateNotification&gt;**](CreateNotification.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **notificationsList**
-> PaginatedNotificationList notificationsList(orderBy, page, pageSize, seen)
+> PaginatedNotificationList notificationsList(isRead, orderBy, page, pageSize)
 
 
 
@@ -83,13 +83,13 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getNotificationsApi();
+final bool isRead = true; // bool | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
-final bool seen = true; // bool | 
 
 try {
-    final response = api.notificationsList(orderBy, page, pageSize, seen);
+    final response = api.notificationsList(isRead, orderBy, page, pageSize);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling NotificationsApi->notificationsList: $e\n');
@@ -100,10 +100,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **isRead** | **bool**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
- **seen** | **bool**|  | [optional] 
 
 ### Return type
 
