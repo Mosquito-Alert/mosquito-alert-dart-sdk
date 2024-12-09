@@ -9,12 +9,12 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**partnersList**](PartnersApi.md#partnerslist) | **GET** /partners/ | 
-[**partnersRetrieve**](PartnersApi.md#partnersretrieve) | **GET** /partners/{id}/ | 
+[**list**](PartnersApi.md#list) | **GET** /partners/ | 
+[**retrieve**](PartnersApi.md#retrieve) | **GET** /partners/{id}/ | 
 
 
-# **partnersList**
-> PaginatedPartnerList partnersList(page, pageSize)
+# **list**
+> PaginatedPartnerList list(page, pageSize)
 
 
 
@@ -35,10 +35,10 @@ final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
 
 try {
-    final response = api.partnersList(page, pageSize);
+    final response = api.list(page, pageSize);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling PartnersApi->partnersList: $e\n');
+    print('Exception when calling PartnersApi->list: $e\n');
 }
 ```
 
@@ -64,8 +64,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **partnersRetrieve**
-> Partner partnersRetrieve(id)
+# **retrieve**
+> Partner retrieve(id)
 
 
 
@@ -85,10 +85,10 @@ final api = MosquitoAlert().getPartnersApi();
 final int id = 56; // int | A unique integer value identifying this organization pin.
 
 try {
-    final response = api.partnersRetrieve(id);
+    final response = api.retrieve(id);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling PartnersApi->partnersRetrieve: $e\n');
+    print('Exception when calling PartnersApi->retrieve: $e\n');
 }
 ```
 

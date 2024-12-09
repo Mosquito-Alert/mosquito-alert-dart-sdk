@@ -9,11 +9,11 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**countriesRetrieve**](CountriesApi.md#countriesretrieve) | **GET** /countries/{id}/ | 
+[**retrieve**](CountriesApi.md#retrieve) | **GET** /countries/{id}/ | 
 
 
-# **countriesRetrieve**
-> Country countriesRetrieve(id)
+# **retrieve**
+> Country retrieve(id)
 
 
 
@@ -33,10 +33,10 @@ final api = MosquitoAlert().getCountriesApi();
 final int id = 56; // int | A unique integer value identifying this europe country.
 
 try {
-    final response = api.countriesRetrieve(id);
+    final response = api.retrieve(id);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling CountriesApi->countriesRetrieve: $e\n');
+    print('Exception when calling CountriesApi->retrieve: $e\n');
 }
 ```
 

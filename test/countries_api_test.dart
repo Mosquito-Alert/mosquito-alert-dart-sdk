@@ -7,8 +7,8 @@ void main() {
   final instance = MosquitoAlert().getCountriesApi();
 
   group(CountriesApi, () {
-    //Future<Country> countriesRetrieve(int id) async
-    test('test countriesRetrieve', () async {
+    //Future<Country> retrieve(int id) async
+    test('test retrieve', () async {
       // TODO
     });
 

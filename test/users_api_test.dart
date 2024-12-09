@@ -7,23 +7,25 @@ void main() {
   final instance = MosquitoAlert().getUsersApi();
 
   group(UsersApi, () {
-    //Future<CreateUser> usersCreate(CreateUserRequest createUserRequest) async
-    test('test usersCreate', () async {
+    //Future<User> partialUpdate(String uuid, { PatchedUserRequest patchedUserRequest }) async
+    test('test partialUpdate', () async {
       // TODO
     });
 
-    //Future<User> usersPartialUpdate(String uuid, { PatchedUserRequest patchedUserRequest }) async
-    test('test usersPartialUpdate', () async {
+    //Future<User> retrieve(String uuid) async
+    test('test retrieve', () async {
       // TODO
     });
 
-    //Future<User> usersRetrieve(String uuid) async
-    test('test usersRetrieve', () async {
+    // Get Current User's Profile
+    //
+    //Future<User> retrieveMine() async
+    test('test retrieveMine', () async {
       // TODO
     });
 
-    //Future<User> usersUpdate(String uuid, { UserRequest userRequest }) async
-    test('test usersUpdate', () async {
+    //Future<User> update(String uuid, { UserRequest userRequest }) async
+    test('test update', () async {
       // TODO
     });
 

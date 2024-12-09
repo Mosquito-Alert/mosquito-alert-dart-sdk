@@ -7,8 +7,8 @@ void main() {
   final instance = MosquitoAlert().getFixesApi();
 
   group(FixesApi, () {
-    //Future<Fix> fixesCreate(FixRequest fixRequest) async
-    test('test fixesCreate', () async {
+    //Future<Fix> create(FixRequest fixRequest) async
+    test('test create', () async {
       // TODO
     });
 

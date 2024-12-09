@@ -15,12 +15,33 @@ import 'package:time_machine/time_machine.dart';
 import 'package:mosquito_alert/src/offset_date_serializer.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
+import 'package:mosquito_alert/src/model/auth_change_password_error.dart';
+import 'package:mosquito_alert/src/model/auth_change_password_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_change_password_password_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_change_password_validation_error.dart';
+import 'package:mosquito_alert/src/model/auth_obtain_token_device_id_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_obtain_token_error.dart';
+import 'package:mosquito_alert/src/model/auth_obtain_token_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_obtain_token_password_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_obtain_token_username_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_obtain_token_validation_error.dart';
+import 'package:mosquito_alert/src/model/auth_refresh_token_error.dart';
+import 'package:mosquito_alert/src/model/auth_refresh_token_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_refresh_token_refresh_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_refresh_token_validation_error.dart';
+import 'package:mosquito_alert/src/model/auth_signup_guest_error.dart';
+import 'package:mosquito_alert/src/model/auth_signup_guest_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_signup_guest_password_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_signup_guest_validation_error.dart';
+import 'package:mosquito_alert/src/model/auth_verify_token_error.dart';
+import 'package:mosquito_alert/src/model/auth_verify_token_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_verify_token_token_error_component.dart';
+import 'package:mosquito_alert/src/model/auth_verify_token_validation_error.dart';
 import 'package:mosquito_alert/src/model/bite.dart';
 import 'package:mosquito_alert/src/model/bite_request.dart';
 import 'package:mosquito_alert/src/model/bites_create_chest_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_error.dart';
-import 'package:mosquito_alert/src/model/bites_create_error_response400.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_environment_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_moment_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_head_bite_count_error_component.dart';
@@ -37,72 +58,82 @@ import 'package:mosquito_alert/src/model/bites_create_sent_at_error_component.da
 import 'package:mosquito_alert/src/model/bites_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/bites_destroy_error_response400.dart';
 import 'package:mosquito_alert/src/model/bites_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_error.dart';
-import 'package:mosquito_alert/src/model/bites_list_error_response400.dart';
 import 'package:mosquito_alert/src/model/bites_list_location_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_location_nuts2_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_location_nuts3_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_location_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_location_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_location_nuts3_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_updated_at_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_user_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/bites_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_short_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/bites_retrieve_error_response400.dart';
 import 'package:mosquito_alert/src/model/bounding_box.dart';
 import 'package:mosquito_alert/src/model/bounding_box_request.dart';
 import 'package:mosquito_alert/src/model/breeding_site.dart';
 import 'package:mosquito_alert/src/model/breeding_site_request.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_created_at_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_error.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_error_response400.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_has_larvae_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_has_near_mosquitoes_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_has_water_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_in_public_area_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_location_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_location_point_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_location_type_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_note_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_photos_index_file_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_photos_index_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_photos_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_sent_at_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_site_type_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_tags_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_tags_index_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_destroy_error_response400.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_created_at_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_error.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_error_response400.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_location_country_id_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_location_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_location_nuts3_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_order_by_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_received_at_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_short_id_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_updated_at_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_user_uuid_error_component.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/breeding_sites_retrieve_error_response400.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_has_larvae_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_has_near_mosquitoes_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_has_water_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_in_public_area_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_location_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_location_point_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_location_type_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_note_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_file_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_photos_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_sent_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_site_type_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_tags_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_tags_index_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_location_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_location_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_location_nuts3_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_nuts3_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_updated_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_user_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_validation_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_updated_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_user_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/campaign.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_error.dart';
-import 'package:mosquito_alert/src/model/campaigns_list_error_response400.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/campaigns_retrieve_error_response400.dart';
-import 'package:mosquito_alert/src/model/countries_retrieve_error_response400.dart';
 import 'package:mosquito_alert/src/model/country.dart';
 import 'package:mosquito_alert/src/model/create_notification.dart';
 import 'package:mosquito_alert/src/model/create_notification_message.dart';
 import 'package:mosquito_alert/src/model/create_notification_message_request.dart';
-import 'package:mosquito_alert/src/model/create_user.dart';
-import 'package:mosquito_alert/src/model/create_user_request.dart';
 import 'package:mosquito_alert/src/model/device.dart';
 import 'package:mosquito_alert/src/model/device_os.dart';
 import 'package:mosquito_alert/src/model/device_os_request.dart';
@@ -111,7 +142,6 @@ import 'package:mosquito_alert/src/model/device_update.dart';
 import 'package:mosquito_alert/src/model/device_update_request.dart';
 import 'package:mosquito_alert/src/model/devices_create_device_id_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_create_error.dart';
-import 'package:mosquito_alert/src/model/devices_create_error_response400.dart';
 import 'package:mosquito_alert/src/model/devices_create_fcm_token_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_create_manufacturer_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_create_mobile_app_non_field_errors_error_component.dart';
@@ -127,7 +157,6 @@ import 'package:mosquito_alert/src/model/devices_create_os_version_error_compone
 import 'package:mosquito_alert/src/model/devices_create_type_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/devices_partial_update_error.dart';
-import 'package:mosquito_alert/src/model/devices_partial_update_error_response400.dart';
 import 'package:mosquito_alert/src/model/devices_partial_update_fcm_token_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_partial_update_mobile_app_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_partial_update_mobile_app_package_name_error_component.dart';
@@ -139,9 +168,7 @@ import 'package:mosquito_alert/src/model/devices_partial_update_os_name_error_co
 import 'package:mosquito_alert/src/model/devices_partial_update_os_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_partial_update_os_version_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_partial_update_validation_error.dart';
-import 'package:mosquito_alert/src/model/devices_retrieve_error_response400.dart';
 import 'package:mosquito_alert/src/model/devices_update_error.dart';
-import 'package:mosquito_alert/src/model/devices_update_error_response400.dart';
 import 'package:mosquito_alert/src/model/devices_update_fcm_token_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_update_mobile_app_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/devices_update_mobile_app_package_name_error_component.dart';
@@ -156,17 +183,9 @@ import 'package:mosquito_alert/src/model/devices_update_validation_error.dart';
 import 'package:mosquito_alert/src/model/error401.dart';
 import 'package:mosquito_alert/src/model/error403.dart';
 import 'package:mosquito_alert/src/model/error404.dart';
-import 'package:mosquito_alert/src/model/error405.dart';
-import 'package:mosquito_alert/src/model/error406.dart';
-import 'package:mosquito_alert/src/model/error415.dart';
-import 'package:mosquito_alert/src/model/error500.dart';
 import 'package:mosquito_alert/src/model/error_response401.dart';
 import 'package:mosquito_alert/src/model/error_response403.dart';
 import 'package:mosquito_alert/src/model/error_response404.dart';
-import 'package:mosquito_alert/src/model/error_response405.dart';
-import 'package:mosquito_alert/src/model/error_response406.dart';
-import 'package:mosquito_alert/src/model/error_response415.dart';
-import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/fix.dart';
 import 'package:mosquito_alert/src/model/fix_location.dart';
 import 'package:mosquito_alert/src/model/fix_location_request.dart';
@@ -174,7 +193,6 @@ import 'package:mosquito_alert/src/model/fix_request.dart';
 import 'package:mosquito_alert/src/model/fixes_create_coverage_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_error.dart';
-import 'package:mosquito_alert/src/model/fixes_create_error_response400.dart';
 import 'package:mosquito_alert/src/model/fixes_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_point_latitude_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_point_longitude_error_component.dart';
@@ -182,6 +200,8 @@ import 'package:mosquito_alert/src/model/fixes_create_point_non_field_errors_err
 import 'package:mosquito_alert/src/model/fixes_create_power_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/guest_registration.dart';
+import 'package:mosquito_alert/src/model/guest_registration_request.dart';
 import 'package:mosquito_alert/src/model/localized_field.dart';
 import 'package:mosquito_alert/src/model/localized_field_request.dart';
 import 'package:mosquito_alert/src/model/location.dart';
@@ -194,7 +214,6 @@ import 'package:mosquito_alert/src/model/notification.dart';
 import 'package:mosquito_alert/src/model/notification_message.dart';
 import 'package:mosquito_alert/src/model/notification_request.dart';
 import 'package:mosquito_alert/src/model/notifications_create_error.dart';
-import 'package:mosquito_alert/src/model/notifications_create_error_response400.dart';
 import 'package:mosquito_alert/src/model/notifications_create_message_body_bg_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_create_message_body_bn_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_create_message_body_ca_error_component.dart';
@@ -254,17 +273,16 @@ import 'package:mosquito_alert/src/model/notifications_create_user_uuids_error_c
 import 'package:mosquito_alert/src/model/notifications_create_user_uuids_index_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/notifications_list_error.dart';
-import 'package:mosquito_alert/src/model/notifications_list_error_response400.dart';
+import 'package:mosquito_alert/src/model/notifications_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/notifications_list_mine_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/notifications_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/notifications_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/notifications_partial_update_error.dart';
-import 'package:mosquito_alert/src/model/notifications_partial_update_error_response400.dart';
 import 'package:mosquito_alert/src/model/notifications_partial_update_is_read_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_partial_update_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_partial_update_validation_error.dart';
-import 'package:mosquito_alert/src/model/notifications_retrieve_error_response400.dart';
 import 'package:mosquito_alert/src/model/notifications_update_error.dart';
-import 'package:mosquito_alert/src/model/notifications_update_error_response400.dart';
 import 'package:mosquito_alert/src/model/notifications_update_is_read_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_update_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_update_validation_error.dart';
@@ -274,7 +292,6 @@ import 'package:mosquito_alert/src/model/observation_prediction_request.dart';
 import 'package:mosquito_alert/src/model/observation_request.dart';
 import 'package:mosquito_alert/src/model/observations_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_error.dart';
-import 'package:mosquito_alert/src/model/observations_create_error_response400.dart';
 import 'package:mosquito_alert/src/model/observations_create_event_environment_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_event_moment_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_non_field_errors_error_component.dart';
@@ -293,13 +310,22 @@ import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosq
 import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_specie_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_thorax_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/observations_destroy_error_response400.dart';
 import 'package:mosquito_alert/src/model/observations_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_error.dart';
-import 'package:mosquito_alert/src/model/observations_list_error_response400.dart';
 import 'package:mosquito_alert/src/model/observations_list_location_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_location_nuts2_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_location_nuts3_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_location_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_location_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_location_nuts3_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_updated_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_user_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/observations_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_short_id_error_component.dart';
@@ -307,26 +333,19 @@ import 'package:mosquito_alert/src/model/observations_list_updated_at_error_comp
 import 'package:mosquito_alert/src/model/observations_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/observations_prediction_create_error.dart';
-import 'package:mosquito_alert/src/model/observations_prediction_create_error_response400.dart';
 import 'package:mosquito_alert/src/model/observations_prediction_create_is_executive_validation_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_prediction_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_prediction_create_ref_photo_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_prediction_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/observations_prediction_destroy_error_response400.dart';
-import 'package:mosquito_alert/src/model/observations_prediction_retrieve_error_response400.dart';
-import 'package:mosquito_alert/src/model/observations_retrieve_error_response400.dart';
 import 'package:mosquito_alert/src/model/paginated_bite_list.dart';
 import 'package:mosquito_alert/src/model/paginated_breeding_site_list.dart';
 import 'package:mosquito_alert/src/model/paginated_campaign_list.dart';
 import 'package:mosquito_alert/src/model/paginated_notification_list.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
-import 'package:mosquito_alert/src/model/parse_error.dart';
-import 'package:mosquito_alert/src/model/parse_error_response.dart';
 import 'package:mosquito_alert/src/model/partner.dart';
 import 'package:mosquito_alert/src/model/partner_point.dart';
-import 'package:mosquito_alert/src/model/partners_list_error_response400.dart';
-import 'package:mosquito_alert/src/model/partners_retrieve_error_response400.dart';
+import 'package:mosquito_alert/src/model/password_change_request.dart';
 import 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 import 'package:mosquito_alert/src/model/patched_notification_request.dart';
 import 'package:mosquito_alert/src/model/patched_user_request.dart';
@@ -340,7 +359,6 @@ import 'package:mosquito_alert/src/model/photos_prediction_create_bbox_y_max_err
 import 'package:mosquito_alert/src/model/photos_prediction_create_bbox_y_min_error_component.dart';
 import 'package:mosquito_alert/src/model/photos_prediction_create_classifier_version_error_component.dart';
 import 'package:mosquito_alert/src/model/photos_prediction_create_error.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_error_response400.dart';
 import 'package:mosquito_alert/src/model/photos_prediction_create_insect_confidence_error_component.dart';
 import 'package:mosquito_alert/src/model/photos_prediction_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/photos_prediction_create_predicted_class_error_component.dart';
@@ -356,33 +374,22 @@ import 'package:mosquito_alert/src/model/photos_prediction_create_scores_not_sur
 import 'package:mosquito_alert/src/model/photos_prediction_create_scores_other_species_error_component.dart';
 import 'package:mosquito_alert/src/model/photos_prediction_create_threshold_deviation_error_component.dart';
 import 'package:mosquito_alert/src/model/photos_prediction_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_destroy_error_response400.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_retrieve_error_response400.dart';
-import 'package:mosquito_alert/src/model/photos_retrieve_error_response400.dart';
 import 'package:mosquito_alert/src/model/prediction_score.dart';
 import 'package:mosquito_alert/src/model/prediction_score_request.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 import 'package:mosquito_alert/src/model/token_refresh.dart';
 import 'package:mosquito_alert/src/model/token_refresh_request.dart';
+import 'package:mosquito_alert/src/model/token_verify_request.dart';
 import 'package:mosquito_alert/src/model/topic_notification_create_request.dart';
 import 'package:mosquito_alert/src/model/user.dart';
 import 'package:mosquito_alert/src/model/user_notification_create_request.dart';
 import 'package:mosquito_alert/src/model/user_request.dart';
-import 'package:mosquito_alert/src/model/users_create_error.dart';
-import 'package:mosquito_alert/src/model/users_create_error_response400.dart';
-import 'package:mosquito_alert/src/model/users_create_locale_error_component.dart';
-import 'package:mosquito_alert/src/model/users_create_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/users_create_password_error_component.dart';
-import 'package:mosquito_alert/src/model/users_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_error.dart';
-import 'package:mosquito_alert/src/model/users_partial_update_error_response400.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_validation_error.dart';
-import 'package:mosquito_alert/src/model/users_retrieve_error_response400.dart';
 import 'package:mosquito_alert/src/model/users_update_error.dart';
-import 'package:mosquito_alert/src/model/users_update_error_response400.dart';
 import 'package:mosquito_alert/src/model/users_update_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_update_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/users_update_validation_error.dart';
@@ -392,12 +399,33 @@ part 'serializers.g.dart';
 @SerializersFor([
   AppUserTokenObtainPair,
   AppUserTokenObtainPairRequest,
+  AuthChangePasswordError,
+  AuthChangePasswordNonFieldErrorsErrorComponent,
+  AuthChangePasswordPasswordErrorComponent,
+  AuthChangePasswordValidationError,
+  AuthObtainTokenDeviceIdErrorComponent,
+  AuthObtainTokenError,
+  AuthObtainTokenNonFieldErrorsErrorComponent,
+  AuthObtainTokenPasswordErrorComponent,
+  AuthObtainTokenUsernameErrorComponent,
+  AuthObtainTokenValidationError,
+  AuthRefreshTokenError,
+  AuthRefreshTokenNonFieldErrorsErrorComponent,
+  AuthRefreshTokenRefreshErrorComponent,
+  AuthRefreshTokenValidationError,
+  AuthSignupGuestError,
+  AuthSignupGuestNonFieldErrorsErrorComponent,
+  AuthSignupGuestPasswordErrorComponent,
+  AuthSignupGuestValidationError,
+  AuthVerifyTokenError,
+  AuthVerifyTokenNonFieldErrorsErrorComponent,
+  AuthVerifyTokenTokenErrorComponent,
+  AuthVerifyTokenValidationError,
   Bite,
   BiteRequest,
   BitesCreateChestBiteCountErrorComponent,
   BitesCreateCreatedAtErrorComponent,
   BitesCreateError,
-  BitesCreateErrorResponse400,
   BitesCreateEventEnvironmentErrorComponent,
   BitesCreateEventMomentErrorComponent,
   BitesCreateHeadBiteCountErrorComponent,
@@ -414,72 +442,82 @@ part 'serializers.g.dart';
   BitesCreateTagsErrorComponent,
   BitesCreateTagsINDEXErrorComponent,
   BitesCreateValidationError,
-  BitesDestroyErrorResponse400,
   BitesListCreatedAtErrorComponent,
   BitesListError,
-  BitesListErrorResponse400,
   BitesListLocationCountryIdErrorComponent,
   BitesListLocationNuts2ErrorComponent,
   BitesListLocationNuts3ErrorComponent,
+  BitesListMineCreatedAtErrorComponent,
+  BitesListMineError,
+  BitesListMineLocationCountryIdErrorComponent,
+  BitesListMineLocationNuts2ErrorComponent,
+  BitesListMineLocationNuts3ErrorComponent,
+  BitesListMineOrderByErrorComponent,
+  BitesListMineReceivedAtErrorComponent,
+  BitesListMineShortIdErrorComponent,
+  BitesListMineUpdatedAtErrorComponent,
+  BitesListMineUserUuidErrorComponent,
+  BitesListMineValidationError,
   BitesListOrderByErrorComponent,
   BitesListReceivedAtErrorComponent,
   BitesListShortIdErrorComponent,
   BitesListUpdatedAtErrorComponent,
   BitesListUserUuidErrorComponent,
   BitesListValidationError,
-  BitesRetrieveErrorResponse400,
   BoundingBox,
   BoundingBoxRequest,
   BreedingSite,
   BreedingSiteRequest,
-  BreedingSitesCreateCreatedAtErrorComponent,
-  BreedingSitesCreateError,
-  BreedingSitesCreateErrorResponse400,
-  BreedingSitesCreateHasLarvaeErrorComponent,
-  BreedingSitesCreateHasNearMosquitoesErrorComponent,
-  BreedingSitesCreateHasWaterErrorComponent,
-  BreedingSitesCreateInPublicAreaErrorComponent,
-  BreedingSitesCreateLocationNonFieldErrorsErrorComponent,
-  BreedingSitesCreateLocationPointErrorComponent,
-  BreedingSitesCreateLocationTypeErrorComponent,
-  BreedingSitesCreateNonFieldErrorsErrorComponent,
-  BreedingSitesCreateNoteErrorComponent,
-  BreedingSitesCreatePhotosINDEXFileErrorComponent,
-  BreedingSitesCreatePhotosINDEXNonFieldErrorsErrorComponent,
-  BreedingSitesCreatePhotosNonFieldErrorsErrorComponent,
-  BreedingSitesCreateSentAtErrorComponent,
-  BreedingSitesCreateSiteTypeErrorComponent,
-  BreedingSitesCreateTagsErrorComponent,
-  BreedingSitesCreateTagsINDEXErrorComponent,
-  BreedingSitesCreateValidationError,
-  BreedingSitesDestroyErrorResponse400,
-  BreedingSitesListCreatedAtErrorComponent,
-  BreedingSitesListError,
-  BreedingSitesListErrorResponse400,
-  BreedingSitesListLocationCountryIdErrorComponent,
-  BreedingSitesListLocationNuts2ErrorComponent,
-  BreedingSitesListLocationNuts3ErrorComponent,
-  BreedingSitesListOrderByErrorComponent,
-  BreedingSitesListReceivedAtErrorComponent,
-  BreedingSitesListShortIdErrorComponent,
-  BreedingSitesListUpdatedAtErrorComponent,
-  BreedingSitesListUserUuidErrorComponent,
-  BreedingSitesListValidationError,
-  BreedingSitesRetrieveErrorResponse400,
+  BreedingsitesCreateCreatedAtErrorComponent,
+  BreedingsitesCreateError,
+  BreedingsitesCreateHasLarvaeErrorComponent,
+  BreedingsitesCreateHasNearMosquitoesErrorComponent,
+  BreedingsitesCreateHasWaterErrorComponent,
+  BreedingsitesCreateInPublicAreaErrorComponent,
+  BreedingsitesCreateLocationNonFieldErrorsErrorComponent,
+  BreedingsitesCreateLocationPointErrorComponent,
+  BreedingsitesCreateLocationTypeErrorComponent,
+  BreedingsitesCreateNonFieldErrorsErrorComponent,
+  BreedingsitesCreateNoteErrorComponent,
+  BreedingsitesCreatePhotosINDEXFileErrorComponent,
+  BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent,
+  BreedingsitesCreatePhotosNonFieldErrorsErrorComponent,
+  BreedingsitesCreateSentAtErrorComponent,
+  BreedingsitesCreateSiteTypeErrorComponent,
+  BreedingsitesCreateTagsErrorComponent,
+  BreedingsitesCreateTagsINDEXErrorComponent,
+  BreedingsitesCreateValidationError,
+  BreedingsitesListCreatedAtErrorComponent,
+  BreedingsitesListError,
+  BreedingsitesListLocationCountryIdErrorComponent,
+  BreedingsitesListLocationNuts2ErrorComponent,
+  BreedingsitesListLocationNuts3ErrorComponent,
+  BreedingsitesListMineCreatedAtErrorComponent,
+  BreedingsitesListMineError,
+  BreedingsitesListMineLocationCountryIdErrorComponent,
+  BreedingsitesListMineLocationNuts2ErrorComponent,
+  BreedingsitesListMineLocationNuts3ErrorComponent,
+  BreedingsitesListMineOrderByErrorComponent,
+  BreedingsitesListMineReceivedAtErrorComponent,
+  BreedingsitesListMineShortIdErrorComponent,
+  BreedingsitesListMineUpdatedAtErrorComponent,
+  BreedingsitesListMineUserUuidErrorComponent,
+  BreedingsitesListMineValidationError,
+  BreedingsitesListOrderByErrorComponent,
+  BreedingsitesListReceivedAtErrorComponent,
+  BreedingsitesListShortIdErrorComponent,
+  BreedingsitesListUpdatedAtErrorComponent,
+  BreedingsitesListUserUuidErrorComponent,
+  BreedingsitesListValidationError,
   Campaign,
   CampaignsListCountryIdErrorComponent,
   CampaignsListError,
-  CampaignsListErrorResponse400,
   CampaignsListOrderByErrorComponent,
   CampaignsListValidationError,
-  CampaignsRetrieveErrorResponse400,
-  CountriesRetrieveErrorResponse400,
   Country,
   CreateNotification,
   CreateNotificationMessage,
   CreateNotificationMessageRequest,
-  CreateUser,
-  CreateUserRequest,
   Device,
   DeviceOs,
   DeviceOsRequest,
@@ -488,7 +526,6 @@ part 'serializers.g.dart';
   DeviceUpdateRequest,
   DevicesCreateDeviceIdErrorComponent,
   DevicesCreateError,
-  DevicesCreateErrorResponse400,
   DevicesCreateFcmTokenErrorComponent,
   DevicesCreateManufacturerErrorComponent,
   DevicesCreateMobileAppNonFieldErrorsErrorComponent,
@@ -504,7 +541,6 @@ part 'serializers.g.dart';
   DevicesCreateTypeErrorComponent,
   DevicesCreateValidationError,
   DevicesPartialUpdateError,
-  DevicesPartialUpdateErrorResponse400,
   DevicesPartialUpdateFcmTokenErrorComponent,
   DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponent,
   DevicesPartialUpdateMobileAppPackageNameErrorComponent,
@@ -516,9 +552,7 @@ part 'serializers.g.dart';
   DevicesPartialUpdateOsNonFieldErrorsErrorComponent,
   DevicesPartialUpdateOsVersionErrorComponent,
   DevicesPartialUpdateValidationError,
-  DevicesRetrieveErrorResponse400,
   DevicesUpdateError,
-  DevicesUpdateErrorResponse400,
   DevicesUpdateFcmTokenErrorComponent,
   DevicesUpdateMobileAppNonFieldErrorsErrorComponent,
   DevicesUpdateMobileAppPackageNameErrorComponent,
@@ -533,17 +567,9 @@ part 'serializers.g.dart';
   Error401,
   Error403,
   Error404,
-  Error405,
-  Error406,
-  Error415,
-  Error500,
   ErrorResponse401,
   ErrorResponse403,
   ErrorResponse404,
-  ErrorResponse405,
-  ErrorResponse406,
-  ErrorResponse415,
-  ErrorResponse500,
   Fix,
   FixLocation,
   FixLocationRequest,
@@ -551,7 +577,6 @@ part 'serializers.g.dart';
   FixesCreateCoverageUuidErrorComponent,
   FixesCreateCreatedAtErrorComponent,
   FixesCreateError,
-  FixesCreateErrorResponse400,
   FixesCreateNonFieldErrorsErrorComponent,
   FixesCreatePointLatitudeErrorComponent,
   FixesCreatePointLongitudeErrorComponent,
@@ -559,6 +584,8 @@ part 'serializers.g.dart';
   FixesCreatePowerErrorComponent,
   FixesCreateSentAtErrorComponent,
   FixesCreateValidationError,
+  GuestRegistration,
+  GuestRegistrationRequest,
   LocalizedField,
   LocalizedFieldRequest,
   Location,
@@ -571,7 +598,6 @@ part 'serializers.g.dart';
   NotificationMessage,
   NotificationRequest,
   NotificationsCreateError,
-  NotificationsCreateErrorResponse400,
   NotificationsCreateMessageBodyBgErrorComponent,
   NotificationsCreateMessageBodyBnErrorComponent,
   NotificationsCreateMessageBodyCaErrorComponent,
@@ -631,17 +657,16 @@ part 'serializers.g.dart';
   NotificationsCreateUserUuidsINDEXErrorComponent,
   NotificationsCreateValidationError,
   NotificationsListError,
-  NotificationsListErrorResponse400,
+  NotificationsListMineError,
+  NotificationsListMineOrderByErrorComponent,
+  NotificationsListMineValidationError,
   NotificationsListOrderByErrorComponent,
   NotificationsListValidationError,
   NotificationsPartialUpdateError,
-  NotificationsPartialUpdateErrorResponse400,
   NotificationsPartialUpdateIsReadErrorComponent,
   NotificationsPartialUpdateNonFieldErrorsErrorComponent,
   NotificationsPartialUpdateValidationError,
-  NotificationsRetrieveErrorResponse400,
   NotificationsUpdateError,
-  NotificationsUpdateErrorResponse400,
   NotificationsUpdateIsReadErrorComponent,
   NotificationsUpdateNonFieldErrorsErrorComponent,
   NotificationsUpdateValidationError,
@@ -651,7 +676,6 @@ part 'serializers.g.dart';
   ObservationRequest,
   ObservationsCreateCreatedAtErrorComponent,
   ObservationsCreateError,
-  ObservationsCreateErrorResponse400,
   ObservationsCreateEventEnvironmentErrorComponent,
   ObservationsCreateEventMomentErrorComponent,
   ObservationsCreateLocationNonFieldErrorsErrorComponent,
@@ -670,13 +694,22 @@ part 'serializers.g.dart';
   ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent,
   ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent,
   ObservationsCreateValidationError,
-  ObservationsDestroyErrorResponse400,
   ObservationsListCreatedAtErrorComponent,
   ObservationsListError,
-  ObservationsListErrorResponse400,
   ObservationsListLocationCountryIdErrorComponent,
   ObservationsListLocationNuts2ErrorComponent,
   ObservationsListLocationNuts3ErrorComponent,
+  ObservationsListMineCreatedAtErrorComponent,
+  ObservationsListMineError,
+  ObservationsListMineLocationCountryIdErrorComponent,
+  ObservationsListMineLocationNuts2ErrorComponent,
+  ObservationsListMineLocationNuts3ErrorComponent,
+  ObservationsListMineOrderByErrorComponent,
+  ObservationsListMineReceivedAtErrorComponent,
+  ObservationsListMineShortIdErrorComponent,
+  ObservationsListMineUpdatedAtErrorComponent,
+  ObservationsListMineUserUuidErrorComponent,
+  ObservationsListMineValidationError,
   ObservationsListOrderByErrorComponent,
   ObservationsListReceivedAtErrorComponent,
   ObservationsListShortIdErrorComponent,
@@ -684,26 +717,19 @@ part 'serializers.g.dart';
   ObservationsListUserUuidErrorComponent,
   ObservationsListValidationError,
   ObservationsPredictionCreateError,
-  ObservationsPredictionCreateErrorResponse400,
   ObservationsPredictionCreateIsExecutiveValidationErrorComponent,
   ObservationsPredictionCreateNonFieldErrorsErrorComponent,
   ObservationsPredictionCreateRefPhotoUuidErrorComponent,
   ObservationsPredictionCreateValidationError,
-  ObservationsPredictionDestroyErrorResponse400,
-  ObservationsPredictionRetrieveErrorResponse400,
-  ObservationsRetrieveErrorResponse400,
   PaginatedBiteList,
   PaginatedBreedingSiteList,
   PaginatedCampaignList,
   PaginatedNotificationList,
   PaginatedObservationList,
   PaginatedPartnerList,
-  ParseError,
-  ParseErrorResponse,
   Partner,
   PartnerPoint,
-  PartnersListErrorResponse400,
-  PartnersRetrieveErrorResponse400,
+  PasswordChangeRequest,
   PatchedDeviceUpdateRequest,
   PatchedNotificationRequest,
   PatchedUserRequest,
@@ -717,7 +743,6 @@ part 'serializers.g.dart';
   PhotosPredictionCreateBboxYMinErrorComponent,
   PhotosPredictionCreateClassifierVersionErrorComponent,
   PhotosPredictionCreateError,
-  PhotosPredictionCreateErrorResponse400,
   PhotosPredictionCreateInsectConfidenceErrorComponent,
   PhotosPredictionCreateNonFieldErrorsErrorComponent,
   PhotosPredictionCreatePredictedClassErrorComponent,
@@ -733,33 +758,22 @@ part 'serializers.g.dart';
   PhotosPredictionCreateScoresOtherSpeciesErrorComponent,
   PhotosPredictionCreateThresholdDeviationErrorComponent,
   PhotosPredictionCreateValidationError,
-  PhotosPredictionDestroyErrorResponse400,
-  PhotosPredictionRetrieveErrorResponse400,
-  PhotosRetrieveErrorResponse400,
   PredictionScore,
   PredictionScoreRequest,
   SimplePhoto,
   SimplePhotoRequest,
   TokenRefresh,
   TokenRefreshRequest,
+  TokenVerifyRequest,
   TopicNotificationCreateRequest,
   User,
   UserNotificationCreateRequest,
   UserRequest,
-  UsersCreateError,
-  UsersCreateErrorResponse400,
-  UsersCreateLocaleErrorComponent,
-  UsersCreateNonFieldErrorsErrorComponent,
-  UsersCreatePasswordErrorComponent,
-  UsersCreateValidationError,
   UsersPartialUpdateError,
-  UsersPartialUpdateErrorResponse400,
   UsersPartialUpdateLocaleErrorComponent,
   UsersPartialUpdateNonFieldErrorsErrorComponent,
   UsersPartialUpdateValidationError,
-  UsersRetrieveErrorResponse400,
   UsersUpdateError,
-  UsersUpdateErrorResponse400,
   UsersUpdateLocaleErrorComponent,
   UsersUpdateNonFieldErrorsErrorComponent,
   UsersUpdateValidationError,

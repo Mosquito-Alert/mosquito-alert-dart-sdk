@@ -9,6 +9,7 @@ import 'package:mosquito_alert/src/auth/api_key_auth.dart';
 import 'package:mosquito_alert/src/auth/basic_auth.dart';
 import 'package:mosquito_alert/src/auth/bearer_auth.dart';
 import 'package:mosquito_alert/src/auth/oauth.dart';
+import 'package:mosquito_alert/src/api/auth_api.dart';
 import 'package:mosquito_alert/src/api/bites_api.dart';
 import 'package:mosquito_alert/src/api/breeding_sites_api.dart';
 import 'package:mosquito_alert/src/api/campaigns_api.dart';
@@ -19,7 +20,6 @@ import 'package:mosquito_alert/src/api/notifications_api.dart';
 import 'package:mosquito_alert/src/api/observations_api.dart';
 import 'package:mosquito_alert/src/api/partners_api.dart';
 import 'package:mosquito_alert/src/api/photos_api.dart';
-import 'package:mosquito_alert/src/api/token_api.dart';
 import 'package:mosquito_alert/src/api/users_api.dart';
 
 class MosquitoAlert {
@@ -74,6 +74,12 @@ class MosquitoAlert {
     if (this.dio.interceptors.any((i) => i is ApiKeyAuthInterceptor)) {
       (this.dio.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor) as ApiKeyAuthInterceptor).apiKeys[name] = apiKey;
     }
+  }
+
+  /// Get AuthApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  AuthApi getAuthApi() {
+    return AuthApi(dio, serializers);
   }
 
   /// Get BitesApi instance, base route and serializer can be overridden by a given but be careful,
@@ -134,12 +140,6 @@ class MosquitoAlert {
   /// by doing that all interceptors will not be executed
   PhotosApi getPhotosApi() {
     return PhotosApi(dio, serializers);
-  }
-
-  /// Get TokenApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  TokenApi getTokenApi() {
-    return TokenApi(dio, serializers);
   }
 
   /// Get UsersApi instance, base route and serializer can be overridden by a given but be careful,

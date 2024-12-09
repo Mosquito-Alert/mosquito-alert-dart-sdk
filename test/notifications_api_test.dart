@@ -7,28 +7,35 @@ void main() {
   final instance = MosquitoAlert().getNotificationsApi();
 
   group(NotificationsApi, () {
-    //Future<BuiltList<CreateNotification>> notificationsCreate({ MetaNotificationRequest metaNotificationRequest }) async
-    test('test notificationsCreate', () async {
+    //Future<BuiltList<CreateNotification>> create({ MetaNotificationRequest metaNotificationRequest }) async
+    test('test create', () async {
       // TODO
     });
 
-    //Future<PaginatedNotificationList> notificationsList({ bool isRead, BuiltList<String> orderBy, int page, int pageSize }) async
-    test('test notificationsList', () async {
+    //Future<PaginatedNotificationList> list({ bool isRead, BuiltList<String> orderBy, int page, int pageSize }) async
+    test('test list', () async {
       // TODO
     });
 
-    //Future<Notification> notificationsPartialUpdate(int id, { PatchedNotificationRequest patchedNotificationRequest }) async
-    test('test notificationsPartialUpdate', () async {
+    // Get Current User's Notifications
+    //
+    //Future<PaginatedNotificationList> listMine({ bool isRead, BuiltList<String> orderBy, int page, int pageSize }) async
+    test('test listMine', () async {
       // TODO
     });
 
-    //Future<Notification> notificationsRetrieve(int id) async
-    test('test notificationsRetrieve', () async {
+    //Future<Notification> partialUpdate(int id, { PatchedNotificationRequest patchedNotificationRequest }) async
+    test('test partialUpdate', () async {
       // TODO
     });
 
-    //Future<Notification> notificationsUpdate(int id, NotificationRequest notificationRequest) async
-    test('test notificationsUpdate', () async {
+    //Future<Notification> retrieve(int id) async
+    test('test retrieve', () async {
+      // TODO
+    });
+
+    //Future<Notification> update(int id, NotificationRequest notificationRequest) async
+    test('test update', () async {
       // TODO
     });
 

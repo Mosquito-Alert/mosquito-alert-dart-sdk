@@ -14,15 +14,20 @@ part 'user.g.dart';
 ///
 /// Properties:
 /// * [uuid] 
+/// * [username] 
 /// * [registrationTime] - The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
 /// * [locale] - The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
 /// * [languageIso] - ISO 639-1 code
+/// * [isGuest] 
 /// * [score] - Global XP Score. This field is updated whenever the user asks for the score, and is only stored here. The content must equal score_v2_adult + score_v2_bite + score_v2_site
 /// * [lastScoreUpdate] - Last time score was updated
 @BuiltValue()
 abstract class User implements Built<User, UserBuilder> {
   @BuiltValueField(wireName: r'uuid')
   String get uuid;
+
+  @BuiltValueField(wireName: r'username')
+  String get username;
 
   /// The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
   @BuiltValueField(wireName: r'registration_time')
@@ -36,6 +41,9 @@ abstract class User implements Built<User, UserBuilder> {
   /// ISO 639-1 code
   @BuiltValueField(wireName: r'language_iso')
   String get languageIso;
+
+  @BuiltValueField(wireName: r'is_guest')
+  bool get isGuest;
 
   /// Global XP Score. This field is updated whenever the user asks for the score, and is only stored here. The content must equal score_v2_adult + score_v2_bite + score_v2_site
   @BuiltValueField(wireName: r'score')
@@ -73,6 +81,11 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
       object.uuid,
       specifiedType: const FullType(String),
     );
+    yield r'username';
+    yield serializers.serialize(
+      object.username,
+      specifiedType: const FullType(String),
+    );
     yield r'registration_time';
     yield serializers.serialize(
       object.registrationTime,
@@ -89,6 +102,11 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
     yield serializers.serialize(
       object.languageIso,
       specifiedType: const FullType(String),
+    );
+    yield r'is_guest';
+    yield serializers.serialize(
+      object.isGuest,
+      specifiedType: const FullType(bool),
     );
     yield r'score';
     yield serializers.serialize(
@@ -130,6 +148,13 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
           ) as String;
           result.uuid = valueDes;
           break;
+        case r'username':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.username = valueDes;
+          break;
         case r'registration_time':
           final valueDes = serializers.deserialize(
             value,
@@ -150,6 +175,13 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
             specifiedType: const FullType(String),
           ) as String;
           result.languageIso = valueDes;
+          break;
+        case r'is_guest':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.isGuest = valueDes;
           break;
         case r'score':
           final valueDes = serializers.deserialize(

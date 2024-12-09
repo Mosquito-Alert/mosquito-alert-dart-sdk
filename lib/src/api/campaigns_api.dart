@@ -11,15 +11,10 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/campaign.dart';
-import 'package:mosquito_alert/src/model/campaigns_list_error_response400.dart';
-import 'package:mosquito_alert/src/model/campaigns_retrieve_error_response400.dart';
+import 'package:mosquito_alert/src/model/campaigns_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/error_response401.dart';
 import 'package:mosquito_alert/src/model/error_response403.dart';
 import 'package:mosquito_alert/src/model/error_response404.dart';
-import 'package:mosquito_alert/src/model/error_response405.dart';
-import 'package:mosquito_alert/src/model/error_response406.dart';
-import 'package:mosquito_alert/src/model/error_response415.dart';
-import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/paginated_campaign_list.dart';
 
 class CampaignsApi {
@@ -30,7 +25,7 @@ class CampaignsApi {
 
   const CampaignsApi(this._dio, this._serializers);
 
-  /// campaignsList
+  /// list
   /// 
   ///
   /// Parameters:
@@ -48,7 +43,7 @@ class CampaignsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [PaginatedCampaignList] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PaginatedCampaignList>> campaignsList({ 
+  Future<Response<PaginatedCampaignList>> list({ 
     int? countryId,
     bool? isActive,
     BuiltList<String>? orderBy,
@@ -138,7 +133,7 @@ class CampaignsApi {
     );
   }
 
-  /// campaignsRetrieve
+  /// retrieve
   /// 
   ///
   /// Parameters:
@@ -152,7 +147,7 @@ class CampaignsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [Campaign] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<Campaign>> campaignsRetrieve({ 
+  Future<Response<Campaign>> retrieve({ 
     required int id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

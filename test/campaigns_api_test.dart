@@ -7,13 +7,13 @@ void main() {
   final instance = MosquitoAlert().getCampaignsApi();
 
   group(CampaignsApi, () {
-    //Future<PaginatedCampaignList> campaignsList({ int countryId, bool isActive, BuiltList<String> orderBy, int page, int pageSize }) async
-    test('test campaignsList', () async {
+    //Future<PaginatedCampaignList> list({ int countryId, bool isActive, BuiltList<String> orderBy, int page, int pageSize }) async
+    test('test list', () async {
       // TODO
     });
 
-    //Future<Campaign> campaignsRetrieve(int id) async
-    test('test campaignsRetrieve', () async {
+    //Future<Campaign> retrieve(int id) async
+    test('test retrieve', () async {
       // TODO
     });
 

@@ -9,14 +9,15 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bitesCreate**](BitesApi.md#bitescreate) | **POST** /bites/ | 
-[**bitesDestroy**](BitesApi.md#bitesdestroy) | **DELETE** /bites/{uuid}/ | 
-[**bitesList**](BitesApi.md#biteslist) | **GET** /bites/ | 
-[**bitesRetrieve**](BitesApi.md#bitesretrieve) | **GET** /bites/{uuid}/ | 
+[**create**](BitesApi.md#create) | **POST** /bites/ | 
+[**destroy**](BitesApi.md#destroy) | **DELETE** /bites/{uuid}/ | 
+[**list**](BitesApi.md#list) | **GET** /bites/ | 
+[**listMine**](BitesApi.md#listmine) | **GET** /me/bites/ | 
+[**retrieve**](BitesApi.md#retrieve) | **GET** /bites/{uuid}/ | 
 
 
-# **bitesCreate**
-> Bite bitesCreate(biteRequest)
+# **create**
+> Bite create(biteRequest)
 
 
 
@@ -36,10 +37,10 @@ final api = MosquitoAlert().getBitesApi();
 final BiteRequest biteRequest = ; // BiteRequest | 
 
 try {
-    final response = api.bitesCreate(biteRequest);
+    final response = api.create(biteRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling BitesApi->bitesCreate: $e\n');
+    print('Exception when calling BitesApi->create: $e\n');
 }
 ```
 
@@ -64,8 +65,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bitesDestroy**
-> bitesDestroy(uuid)
+# **destroy**
+> destroy(uuid)
 
 
 
@@ -85,9 +86,9 @@ final api = MosquitoAlert().getBitesApi();
 final String uuid = uuid_example; // String | 
 
 try {
-    api.bitesDestroy(uuid);
+    api.destroy(uuid);
 } catch on DioException (e) {
-    print('Exception when calling BitesApi->bitesDestroy: $e\n');
+    print('Exception when calling BitesApi->destroy: $e\n');
 }
 ```
 
@@ -112,8 +113,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bitesList**
-> PaginatedBiteList bitesList(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+# **list**
+> PaginatedBiteList list(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
 
 
 
@@ -146,10 +147,10 @@ final OffsetDateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateT
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.bitesList(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    final response = api.list(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling BitesApi->bitesList: $e\n');
+    print('Exception when calling BitesApi->list: $e\n');
 }
 ```
 
@@ -187,8 +188,77 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bitesRetrieve**
-> Bite bitesRetrieve(uuid)
+# **listMine**
+> PaginatedBiteList listMine(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+
+
+
+Get Current User's Bites
+
+### Example
+```dart
+import 'package:mosquito_alert/api.dart';
+
+final api = MosquitoAlert().getBitesApi();
+final OffsetDateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Created at
+final OffsetDateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Created at
+final int locationCountryId = 56; // int | 
+final String locationNuts2 = locationNuts2_example; // String | 
+final String locationNuts3 = locationNuts3_example; // String | 
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
+final OffsetDateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Received at
+final OffsetDateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Received at
+final String shortId = shortId_example; // String | Short ID
+final OffsetDateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Update at
+final OffsetDateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Update at
+final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+
+try {
+    final response = api.listMine(createdAtAfter, createdAtBefore, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling BitesApi->listMine: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createdAtAfter** | **OffsetDateTime**| Created at | [optional] 
+ **createdAtBefore** | **OffsetDateTime**| Created at | [optional] 
+ **locationCountryId** | **int**|  | [optional] 
+ **locationNuts2** | **String**|  | [optional] 
+ **locationNuts3** | **String**|  | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **receivedAtAfter** | **OffsetDateTime**| Received at | [optional] 
+ **receivedAtBefore** | **OffsetDateTime**| Received at | [optional] 
+ **shortId** | **String**| Short ID | [optional] 
+ **updatedAtAfter** | **OffsetDateTime**| Update at | [optional] 
+ **updatedAtBefore** | **OffsetDateTime**| Update at | [optional] 
+ **userUuid** | **String**|  | [optional] 
+
+### Return type
+
+[**PaginatedBiteList**](PaginatedBiteList.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **retrieve**
+> Bite retrieve(uuid)
 
 
 
@@ -208,10 +278,10 @@ final api = MosquitoAlert().getBitesApi();
 final String uuid = uuid_example; // String | 
 
 try {
-    final response = api.bitesRetrieve(uuid);
+    final response = api.retrieve(uuid);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling BitesApi->bitesRetrieve: $e\n');
+    print('Exception when calling BitesApi->retrieve: $e\n');
 }
 ```
 

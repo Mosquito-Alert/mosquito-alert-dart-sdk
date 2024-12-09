@@ -12,14 +12,8 @@ import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/error_response401.dart';
 import 'package:mosquito_alert/src/model/error_response403.dart';
 import 'package:mosquito_alert/src/model/error_response404.dart';
-import 'package:mosquito_alert/src/model/error_response405.dart';
-import 'package:mosquito_alert/src/model/error_response406.dart';
-import 'package:mosquito_alert/src/model/error_response415.dart';
-import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
 import 'package:mosquito_alert/src/model/partner.dart';
-import 'package:mosquito_alert/src/model/partners_list_error_response400.dart';
-import 'package:mosquito_alert/src/model/partners_retrieve_error_response400.dart';
 
 class PartnersApi {
 
@@ -29,7 +23,7 @@ class PartnersApi {
 
   const PartnersApi(this._dio, this._serializers);
 
-  /// partnersList
+  /// list
   /// 
   ///
   /// Parameters:
@@ -44,7 +38,7 @@ class PartnersApi {
   ///
   /// Returns a [Future] containing a [Response] with a [PaginatedPartnerList] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PaginatedPartnerList>> partnersList({ 
+  Future<Response<PaginatedPartnerList>> list({ 
     int? page,
     int? pageSize,
     CancelToken? cancelToken,
@@ -128,7 +122,7 @@ class PartnersApi {
     );
   }
 
-  /// partnersRetrieve
+  /// retrieve
   /// 
   ///
   /// Parameters:
@@ -142,7 +136,7 @@ class PartnersApi {
   ///
   /// Returns a [Future] containing a [Response] with a [Partner] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<Partner>> partnersRetrieve({ 
+  Future<Response<Partner>> retrieve({ 
     required int id,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

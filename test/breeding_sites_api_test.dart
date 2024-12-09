@@ -7,23 +7,30 @@ void main() {
   final instance = MosquitoAlert().getBreedingSitesApi();
 
   group(BreedingSitesApi, () {
-    //Future<BreedingSite> breedingSitesCreate(BreedingSiteRequest breedingSiteRequest) async
-    test('test breedingSitesCreate', () async {
+    //Future<BreedingSite> create(BreedingSiteRequest breedingSiteRequest) async
+    test('test create', () async {
       // TODO
     });
 
-    //Future breedingSitesDestroy(String uuid) async
-    test('test breedingSitesDestroy', () async {
+    //Future destroy(String uuid) async
+    test('test destroy', () async {
       // TODO
     });
 
-    //Future<PaginatedBreedingSiteList> breedingSitesList({ OffsetDateTime createdAtAfter, OffsetDateTime createdAtBefore, bool hasPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, OffsetDateTime receivedAtAfter, OffsetDateTime receivedAtBefore, String shortId, OffsetDateTime updatedAtAfter, OffsetDateTime updatedAtBefore, String userUuid }) async
-    test('test breedingSitesList', () async {
+    //Future<PaginatedBreedingSiteList> list({ OffsetDateTime createdAtAfter, OffsetDateTime createdAtBefore, bool hasPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, OffsetDateTime receivedAtAfter, OffsetDateTime receivedAtBefore, String shortId, OffsetDateTime updatedAtAfter, OffsetDateTime updatedAtBefore, String userUuid }) async
+    test('test list', () async {
       // TODO
     });
 
-    //Future<BreedingSite> breedingSitesRetrieve(String uuid) async
-    test('test breedingSitesRetrieve', () async {
+    // Get Current User's Breeding Sites
+    //
+    //Future<PaginatedBreedingSiteList> listMine({ OffsetDateTime createdAtAfter, OffsetDateTime createdAtBefore, bool hasPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, OffsetDateTime receivedAtAfter, OffsetDateTime receivedAtBefore, String shortId, OffsetDateTime updatedAtAfter, OffsetDateTime updatedAtBefore, String userUuid }) async
+    test('test listMine', () async {
+      // TODO
+    });
+
+    //Future<BreedingSite> retrieve(String uuid) async
+    test('test retrieve', () async {
       // TODO
     });
 

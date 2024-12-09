@@ -9,11 +9,11 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**fixesCreate**](FixesApi.md#fixescreate) | **POST** /fixes/ | 
+[**create**](FixesApi.md#create) | **POST** /fixes/ | 
 
 
-# **fixesCreate**
-> Fix fixesCreate(fixRequest)
+# **create**
+> Fix create(fixRequest)
 
 
 
@@ -33,10 +33,10 @@ final api = MosquitoAlert().getFixesApi();
 final FixRequest fixRequest = ; // FixRequest | 
 
 try {
-    final response = api.fixesCreate(fixRequest);
+    final response = api.create(fixRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling FixesApi->fixesCreate: $e\n');
+    print('Exception when calling FixesApi->create: $e\n');
 }
 ```
 

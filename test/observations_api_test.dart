@@ -7,38 +7,45 @@ void main() {
   final instance = MosquitoAlert().getObservationsApi();
 
   group(ObservationsApi, () {
-    //Future<Observation> observationsCreate(ObservationRequest observationRequest) async
-    test('test observationsCreate', () async {
+    //Future<Observation> create(ObservationRequest observationRequest) async
+    test('test create', () async {
       // TODO
     });
 
-    //Future observationsDestroy(String uuid) async
-    test('test observationsDestroy', () async {
+    //Future destroy(String uuid) async
+    test('test destroy', () async {
       // TODO
     });
 
-    //Future<PaginatedObservationList> observationsList({ OffsetDateTime createdAtAfter, OffsetDateTime createdAtBefore, bool hasPhotos, bool hasPrediction, bool hasPredictionsAllPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, OffsetDateTime receivedAtAfter, OffsetDateTime receivedAtBefore, String shortId, OffsetDateTime updatedAtAfter, OffsetDateTime updatedAtBefore, String userUuid }) async
-    test('test observationsList', () async {
+    //Future<PaginatedObservationList> list({ OffsetDateTime createdAtAfter, OffsetDateTime createdAtBefore, bool hasPhotos, bool hasPrediction, bool hasPredictionsAllPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, OffsetDateTime receivedAtAfter, OffsetDateTime receivedAtBefore, String shortId, OffsetDateTime updatedAtAfter, OffsetDateTime updatedAtBefore, String userUuid }) async
+    test('test list', () async {
       // TODO
     });
 
-    //Future<ObservationPrediction> observationsPredictionCreate(String uuid, ObservationPredictionRequest observationPredictionRequest) async
-    test('test observationsPredictionCreate', () async {
+    // Get Current User's Observations
+    //
+    //Future<PaginatedObservationList> listMine({ OffsetDateTime createdAtAfter, OffsetDateTime createdAtBefore, bool hasPhotos, bool hasPrediction, bool hasPredictionsAllPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, OffsetDateTime receivedAtAfter, OffsetDateTime receivedAtBefore, String shortId, OffsetDateTime updatedAtAfter, OffsetDateTime updatedAtBefore, String userUuid }) async
+    test('test listMine', () async {
       // TODO
     });
 
-    //Future observationsPredictionDestroy(String uuid) async
-    test('test observationsPredictionDestroy', () async {
+    //Future<ObservationPrediction> predictionCreate(String uuid, ObservationPredictionRequest observationPredictionRequest) async
+    test('test predictionCreate', () async {
       // TODO
     });
 
-    //Future<ObservationPrediction> observationsPredictionRetrieve(String uuid) async
-    test('test observationsPredictionRetrieve', () async {
+    //Future predictionDestroy(String uuid) async
+    test('test predictionDestroy', () async {
       // TODO
     });
 
-    //Future<Observation> observationsRetrieve(String uuid) async
-    test('test observationsRetrieve', () async {
+    //Future<ObservationPrediction> predictionRetrieve(String uuid) async
+    test('test predictionRetrieve', () async {
+      // TODO
+    });
+
+    //Future<Observation> retrieve(String uuid) async
+    test('test retrieve', () async {
       // TODO
     });
 

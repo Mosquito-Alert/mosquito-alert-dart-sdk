@@ -9,17 +9,18 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**observationsCreate**](ObservationsApi.md#observationscreate) | **POST** /observations/ | 
-[**observationsDestroy**](ObservationsApi.md#observationsdestroy) | **DELETE** /observations/{uuid}/ | 
-[**observationsList**](ObservationsApi.md#observationslist) | **GET** /observations/ | 
-[**observationsPredictionCreate**](ObservationsApi.md#observationspredictioncreate) | **POST** /observations/{uuid}/prediction/ | 
-[**observationsPredictionDestroy**](ObservationsApi.md#observationspredictiondestroy) | **DELETE** /observations/{uuid}/prediction/ | 
-[**observationsPredictionRetrieve**](ObservationsApi.md#observationspredictionretrieve) | **GET** /observations/{uuid}/prediction/ | 
-[**observationsRetrieve**](ObservationsApi.md#observationsretrieve) | **GET** /observations/{uuid}/ | 
+[**create**](ObservationsApi.md#create) | **POST** /observations/ | 
+[**destroy**](ObservationsApi.md#destroy) | **DELETE** /observations/{uuid}/ | 
+[**list**](ObservationsApi.md#list) | **GET** /observations/ | 
+[**listMine**](ObservationsApi.md#listmine) | **GET** /me/observations/ | 
+[**predictionCreate**](ObservationsApi.md#predictioncreate) | **POST** /observations/{uuid}/prediction/ | 
+[**predictionDestroy**](ObservationsApi.md#predictiondestroy) | **DELETE** /observations/{uuid}/prediction/ | 
+[**predictionRetrieve**](ObservationsApi.md#predictionretrieve) | **GET** /observations/{uuid}/prediction/ | 
+[**retrieve**](ObservationsApi.md#retrieve) | **GET** /observations/{uuid}/ | 
 
 
-# **observationsCreate**
-> Observation observationsCreate(observationRequest)
+# **create**
+> Observation create(observationRequest)
 
 
 
@@ -39,10 +40,10 @@ final api = MosquitoAlert().getObservationsApi();
 final ObservationRequest observationRequest = ; // ObservationRequest | 
 
 try {
-    final response = api.observationsCreate(observationRequest);
+    final response = api.create(observationRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling ObservationsApi->observationsCreate: $e\n');
+    print('Exception when calling ObservationsApi->create: $e\n');
 }
 ```
 
@@ -67,8 +68,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **observationsDestroy**
-> observationsDestroy(uuid)
+# **destroy**
+> destroy(uuid)
 
 
 
@@ -88,9 +89,9 @@ final api = MosquitoAlert().getObservationsApi();
 final String uuid = uuid_example; // String | 
 
 try {
-    api.observationsDestroy(uuid);
+    api.destroy(uuid);
 } catch on DioException (e) {
-    print('Exception when calling ObservationsApi->observationsDestroy: $e\n');
+    print('Exception when calling ObservationsApi->destroy: $e\n');
 }
 ```
 
@@ -115,8 +116,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **observationsList**
-> PaginatedObservationList observationsList(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+# **list**
+> PaginatedObservationList list(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
 
 
 
@@ -152,10 +153,10 @@ final OffsetDateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateT
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.observationsList(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    final response = api.list(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling ObservationsApi->observationsList: $e\n');
+    print('Exception when calling ObservationsApi->list: $e\n');
 }
 ```
 
@@ -196,8 +197,83 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **observationsPredictionCreate**
-> ObservationPrediction observationsPredictionCreate(uuid, observationPredictionRequest)
+# **listMine**
+> PaginatedObservationList listMine(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+
+
+
+Get Current User's Observations
+
+### Example
+```dart
+import 'package:mosquito_alert/api.dart';
+
+final api = MosquitoAlert().getObservationsApi();
+final OffsetDateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Created at
+final OffsetDateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Created at
+final bool hasPhotos = true; // bool | Has any photo
+final bool hasPrediction = true; // bool | Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
+final bool hasPredictionsAllPhotos = true; // bool | Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
+final int locationCountryId = 56; // int | 
+final String locationNuts2 = locationNuts2_example; // String | 
+final String locationNuts3 = locationNuts3_example; // String | 
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
+final OffsetDateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Received at
+final OffsetDateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Received at
+final String shortId = shortId_example; // String | Short ID
+final OffsetDateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Update at
+final OffsetDateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Update at
+final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
+
+try {
+    final response = api.listMine(createdAtAfter, createdAtBefore, hasPhotos, hasPrediction, hasPredictionsAllPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling ObservationsApi->listMine: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createdAtAfter** | **OffsetDateTime**| Created at | [optional] 
+ **createdAtBefore** | **OffsetDateTime**| Created at | [optional] 
+ **hasPhotos** | **bool**| Has any photo | [optional] 
+ **hasPrediction** | **bool**| Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from. | [optional] 
+ **hasPredictionsAllPhotos** | **bool**| Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction. | [optional] 
+ **locationCountryId** | **int**|  | [optional] 
+ **locationNuts2** | **String**|  | [optional] 
+ **locationNuts3** | **String**|  | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **receivedAtAfter** | **OffsetDateTime**| Received at | [optional] 
+ **receivedAtBefore** | **OffsetDateTime**| Received at | [optional] 
+ **shortId** | **String**| Short ID | [optional] 
+ **updatedAtAfter** | **OffsetDateTime**| Update at | [optional] 
+ **updatedAtBefore** | **OffsetDateTime**| Update at | [optional] 
+ **userUuid** | **String**|  | [optional] 
+
+### Return type
+
+[**PaginatedObservationList**](PaginatedObservationList.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **predictionCreate**
+> ObservationPrediction predictionCreate(uuid, observationPredictionRequest)
 
 
 
@@ -218,10 +294,10 @@ final String uuid = uuid_example; // String |
 final ObservationPredictionRequest observationPredictionRequest = ; // ObservationPredictionRequest | 
 
 try {
-    final response = api.observationsPredictionCreate(uuid, observationPredictionRequest);
+    final response = api.predictionCreate(uuid, observationPredictionRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling ObservationsApi->observationsPredictionCreate: $e\n');
+    print('Exception when calling ObservationsApi->predictionCreate: $e\n');
 }
 ```
 
@@ -247,8 +323,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **observationsPredictionDestroy**
-> observationsPredictionDestroy(uuid)
+# **predictionDestroy**
+> predictionDestroy(uuid)
 
 
 
@@ -268,9 +344,9 @@ final api = MosquitoAlert().getObservationsApi();
 final String uuid = uuid_example; // String | 
 
 try {
-    api.observationsPredictionDestroy(uuid);
+    api.predictionDestroy(uuid);
 } catch on DioException (e) {
-    print('Exception when calling ObservationsApi->observationsPredictionDestroy: $e\n');
+    print('Exception when calling ObservationsApi->predictionDestroy: $e\n');
 }
 ```
 
@@ -295,8 +371,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **observationsPredictionRetrieve**
-> ObservationPrediction observationsPredictionRetrieve(uuid)
+# **predictionRetrieve**
+> ObservationPrediction predictionRetrieve(uuid)
 
 
 
@@ -316,10 +392,10 @@ final api = MosquitoAlert().getObservationsApi();
 final String uuid = uuid_example; // String | 
 
 try {
-    final response = api.observationsPredictionRetrieve(uuid);
+    final response = api.predictionRetrieve(uuid);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling ObservationsApi->observationsPredictionRetrieve: $e\n');
+    print('Exception when calling ObservationsApi->predictionRetrieve: $e\n');
 }
 ```
 
@@ -344,8 +420,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **observationsRetrieve**
-> Observation observationsRetrieve(uuid)
+# **retrieve**
+> Observation retrieve(uuid)
 
 
 
@@ -365,10 +441,10 @@ final api = MosquitoAlert().getObservationsApi();
 final String uuid = uuid_example; // String | 
 
 try {
-    final response = api.observationsRetrieve(uuid);
+    final response = api.retrieve(uuid);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling ObservationsApi->observationsRetrieve: $e\n');
+    print('Exception when calling ObservationsApi->retrieve: $e\n');
 }
 ```
 

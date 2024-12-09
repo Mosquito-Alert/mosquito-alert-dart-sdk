@@ -19,7 +19,7 @@ part 'error401.g.dart';
 abstract class Error401 implements Built<Error401, Error401Builder> {
   @BuiltValueField(wireName: r'code')
   Error401CodeEnum get code;
-  // enum codeEnum {  authentication_failed,  not_authenticated,  };
+  // enum codeEnum {  token_not_valid,  authentication_failed,  not_authenticated,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -141,6 +141,8 @@ class _$Error401Serializer implements PrimitiveSerializer<Error401> {
 
 class Error401CodeEnum extends EnumClass {
 
+  @BuiltValueEnumConst(wireName: r'token_not_valid')
+  static const Error401CodeEnum tokenNotValid = _$error401CodeEnum_tokenNotValid;
   @BuiltValueEnumConst(wireName: r'authentication_failed')
   static const Error401CodeEnum authenticationFailed = _$error401CodeEnum_authenticationFailed;
   @BuiltValueEnumConst(wireName: r'not_authenticated')

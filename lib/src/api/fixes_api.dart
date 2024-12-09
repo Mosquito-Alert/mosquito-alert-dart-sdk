@@ -11,13 +11,9 @@ import 'package:dio/dio.dart';
 import 'package:mosquito_alert/src/model/error_response401.dart';
 import 'package:mosquito_alert/src/model/error_response403.dart';
 import 'package:mosquito_alert/src/model/error_response404.dart';
-import 'package:mosquito_alert/src/model/error_response405.dart';
-import 'package:mosquito_alert/src/model/error_response406.dart';
-import 'package:mosquito_alert/src/model/error_response415.dart';
-import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/fix.dart';
 import 'package:mosquito_alert/src/model/fix_request.dart';
-import 'package:mosquito_alert/src/model/fixes_create_error_response400.dart';
+import 'package:mosquito_alert/src/model/fixes_create_validation_error.dart';
 
 class FixesApi {
 
@@ -27,7 +23,7 @@ class FixesApi {
 
   const FixesApi(this._dio, this._serializers);
 
-  /// fixesCreate
+  /// create
   /// 
   ///
   /// Parameters:
@@ -41,7 +37,7 @@ class FixesApi {
   ///
   /// Returns a [Future] containing a [Response] with a [Fix] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<Fix>> fixesCreate({ 
+  Future<Response<Fix>> create({ 
     required FixRequest fixRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

@@ -9,14 +9,14 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**devicesCreate**](DevicesApi.md#devicescreate) | **POST** /devices/ | 
-[**devicesPartialUpdate**](DevicesApi.md#devicespartialupdate) | **PATCH** /devices/{device_id}/ | 
-[**devicesRetrieve**](DevicesApi.md#devicesretrieve) | **GET** /devices/{device_id}/ | 
-[**devicesUpdate**](DevicesApi.md#devicesupdate) | **PUT** /devices/{device_id}/ | 
+[**create**](DevicesApi.md#create) | **POST** /devices/ | 
+[**partialUpdate**](DevicesApi.md#partialupdate) | **PATCH** /devices/{device_id}/ | 
+[**retrieve**](DevicesApi.md#retrieve) | **GET** /devices/{device_id}/ | 
+[**update**](DevicesApi.md#update) | **PUT** /devices/{device_id}/ | 
 
 
-# **devicesCreate**
-> Device devicesCreate(deviceRequest)
+# **create**
+> Device create(deviceRequest)
 
 
 
@@ -28,10 +28,10 @@ final api = MosquitoAlert().getDevicesApi();
 final DeviceRequest deviceRequest = ; // DeviceRequest | 
 
 try {
-    final response = api.devicesCreate(deviceRequest);
+    final response = api.create(deviceRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling DevicesApi->devicesCreate: $e\n');
+    print('Exception when calling DevicesApi->create: $e\n');
 }
 ```
 
@@ -56,8 +56,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **devicesPartialUpdate**
-> DeviceUpdate devicesPartialUpdate(deviceId, patchedDeviceUpdateRequest)
+# **partialUpdate**
+> DeviceUpdate partialUpdate(deviceId, patchedDeviceUpdateRequest)
 
 
 
@@ -70,10 +70,10 @@ final String deviceId = deviceId_example; // String |
 final PatchedDeviceUpdateRequest patchedDeviceUpdateRequest = ; // PatchedDeviceUpdateRequest | 
 
 try {
-    final response = api.devicesPartialUpdate(deviceId, patchedDeviceUpdateRequest);
+    final response = api.partialUpdate(deviceId, patchedDeviceUpdateRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling DevicesApi->devicesPartialUpdate: $e\n');
+    print('Exception when calling DevicesApi->partialUpdate: $e\n');
 }
 ```
 
@@ -99,8 +99,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **devicesRetrieve**
-> Device devicesRetrieve(deviceId)
+# **retrieve**
+> Device retrieve(deviceId)
 
 
 
@@ -112,10 +112,10 @@ final api = MosquitoAlert().getDevicesApi();
 final String deviceId = deviceId_example; // String | 
 
 try {
-    final response = api.devicesRetrieve(deviceId);
+    final response = api.retrieve(deviceId);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling DevicesApi->devicesRetrieve: $e\n');
+    print('Exception when calling DevicesApi->retrieve: $e\n');
 }
 ```
 
@@ -140,8 +140,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **devicesUpdate**
-> DeviceUpdate devicesUpdate(deviceId, deviceUpdateRequest)
+# **update**
+> DeviceUpdate update(deviceId, deviceUpdateRequest)
 
 
 
@@ -154,10 +154,10 @@ final String deviceId = deviceId_example; // String |
 final DeviceUpdateRequest deviceUpdateRequest = ; // DeviceUpdateRequest | 
 
 try {
-    final response = api.devicesUpdate(deviceId, deviceUpdateRequest);
+    final response = api.update(deviceId, deviceUpdateRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling DevicesApi->devicesUpdate: $e\n');
+    print('Exception when calling DevicesApi->update: $e\n');
 }
 ```
 

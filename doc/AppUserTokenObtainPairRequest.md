@@ -8,7 +8,7 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uuid** | **String** |  | 
+**username** | **String** |  | 
 **password** | **String** |  | 
 **deviceId** | **String** |  | [optional] 
 

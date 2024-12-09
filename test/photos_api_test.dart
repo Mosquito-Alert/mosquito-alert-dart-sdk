@@ -7,23 +7,23 @@ void main() {
   final instance = MosquitoAlert().getPhotosApi();
 
   group(PhotosApi, () {
-    //Future<PhotoPrediction> photosPredictionCreate(String uuid, PhotoPredictionRequest photoPredictionRequest) async
-    test('test photosPredictionCreate', () async {
+    //Future<PhotoPrediction> predictionCreate(String uuid, PhotoPredictionRequest photoPredictionRequest) async
+    test('test predictionCreate', () async {
       // TODO
     });
 
-    //Future photosPredictionDestroy(String uuid) async
-    test('test photosPredictionDestroy', () async {
+    //Future predictionDestroy(String uuid) async
+    test('test predictionDestroy', () async {
       // TODO
     });
 
-    //Future<PhotoPrediction> photosPredictionRetrieve(String uuid) async
-    test('test photosPredictionRetrieve', () async {
+    //Future<PhotoPrediction> predictionRetrieve(String uuid) async
+    test('test predictionRetrieve', () async {
       // TODO
     });
 
-    //Future<Photo> photosRetrieve(String uuid) async
-    test('test photosRetrieve', () async {
+    //Future<Photo> retrieve(String uuid) async
+    test('test retrieve', () async {
       // TODO
     });
 

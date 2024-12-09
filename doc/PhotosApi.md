@@ -9,14 +9,14 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**photosPredictionCreate**](PhotosApi.md#photospredictioncreate) | **POST** /photos/{uuid}/prediction/ | 
-[**photosPredictionDestroy**](PhotosApi.md#photospredictiondestroy) | **DELETE** /photos/{uuid}/prediction/ | 
-[**photosPredictionRetrieve**](PhotosApi.md#photospredictionretrieve) | **GET** /photos/{uuid}/prediction/ | 
-[**photosRetrieve**](PhotosApi.md#photosretrieve) | **GET** /photos/{uuid}/ | 
+[**predictionCreate**](PhotosApi.md#predictioncreate) | **POST** /photos/{uuid}/prediction/ | 
+[**predictionDestroy**](PhotosApi.md#predictiondestroy) | **DELETE** /photos/{uuid}/prediction/ | 
+[**predictionRetrieve**](PhotosApi.md#predictionretrieve) | **GET** /photos/{uuid}/prediction/ | 
+[**retrieve**](PhotosApi.md#retrieve) | **GET** /photos/{uuid}/ | 
 
 
-# **photosPredictionCreate**
-> PhotoPrediction photosPredictionCreate(uuid, photoPredictionRequest)
+# **predictionCreate**
+> PhotoPrediction predictionCreate(uuid, photoPredictionRequest)
 
 
 
@@ -37,10 +37,10 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 final PhotoPredictionRequest photoPredictionRequest = ; // PhotoPredictionRequest | 
 
 try {
-    final response = api.photosPredictionCreate(uuid, photoPredictionRequest);
+    final response = api.predictionCreate(uuid, photoPredictionRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling PhotosApi->photosPredictionCreate: $e\n');
+    print('Exception when calling PhotosApi->predictionCreate: $e\n');
 }
 ```
 
@@ -66,8 +66,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **photosPredictionDestroy**
-> photosPredictionDestroy(uuid)
+# **predictionDestroy**
+> predictionDestroy(uuid)
 
 
 
@@ -87,9 +87,9 @@ final api = MosquitoAlert().getPhotosApi();
 final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    api.photosPredictionDestroy(uuid);
+    api.predictionDestroy(uuid);
 } catch on DioException (e) {
-    print('Exception when calling PhotosApi->photosPredictionDestroy: $e\n');
+    print('Exception when calling PhotosApi->predictionDestroy: $e\n');
 }
 ```
 
@@ -114,8 +114,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **photosPredictionRetrieve**
-> PhotoPrediction photosPredictionRetrieve(uuid)
+# **predictionRetrieve**
+> PhotoPrediction predictionRetrieve(uuid)
 
 
 
@@ -135,10 +135,10 @@ final api = MosquitoAlert().getPhotosApi();
 final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.photosPredictionRetrieve(uuid);
+    final response = api.predictionRetrieve(uuid);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling PhotosApi->photosPredictionRetrieve: $e\n');
+    print('Exception when calling PhotosApi->predictionRetrieve: $e\n');
 }
 ```
 
@@ -163,8 +163,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **photosRetrieve**
-> Photo photosRetrieve(uuid)
+# **retrieve**
+> Photo retrieve(uuid)
 
 
 
@@ -184,10 +184,10 @@ final api = MosquitoAlert().getPhotosApi();
 final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.photosRetrieve(uuid);
+    final response = api.retrieve(uuid);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling PhotosApi->photosRetrieve: $e\n');
+    print('Exception when calling PhotosApi->retrieve: $e\n');
 }
 ```
 

@@ -12,17 +12,10 @@ import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/error_response401.dart';
 import 'package:mosquito_alert/src/model/error_response403.dart';
 import 'package:mosquito_alert/src/model/error_response404.dart';
-import 'package:mosquito_alert/src/model/error_response405.dart';
-import 'package:mosquito_alert/src/model/error_response406.dart';
-import 'package:mosquito_alert/src/model/error_response415.dart';
-import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/photo.dart';
 import 'package:mosquito_alert/src/model/photo_prediction.dart';
 import 'package:mosquito_alert/src/model/photo_prediction_request.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_error_response400.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_destroy_error_response400.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_retrieve_error_response400.dart';
-import 'package:mosquito_alert/src/model/photos_retrieve_error_response400.dart';
+import 'package:mosquito_alert/src/model/photos_prediction_create_validation_error.dart';
 
 class PhotosApi {
 
@@ -32,7 +25,7 @@ class PhotosApi {
 
   const PhotosApi(this._dio, this._serializers);
 
-  /// photosPredictionCreate
+  /// predictionCreate
   /// 
   ///
   /// Parameters:
@@ -47,7 +40,7 @@ class PhotosApi {
   ///
   /// Returns a [Future] containing a [Response] with a [PhotoPrediction] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PhotoPrediction>> photosPredictionCreate({ 
+  Future<Response<PhotoPrediction>> predictionCreate({ 
     required String uuid,
     required PhotoPredictionRequest photoPredictionRequest,
     CancelToken? cancelToken,
@@ -141,7 +134,7 @@ class PhotosApi {
     );
   }
 
-  /// photosPredictionDestroy
+  /// predictionDestroy
   /// 
   ///
   /// Parameters:
@@ -155,7 +148,7 @@ class PhotosApi {
   ///
   /// Returns a [Future]
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> photosPredictionDestroy({ 
+  Future<Response<void>> predictionDestroy({ 
     required String uuid,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -200,7 +193,7 @@ class PhotosApi {
     return _response;
   }
 
-  /// photosPredictionRetrieve
+  /// predictionRetrieve
   /// 
   ///
   /// Parameters:
@@ -214,7 +207,7 @@ class PhotosApi {
   ///
   /// Returns a [Future] containing a [Response] with a [PhotoPrediction] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PhotoPrediction>> photosPredictionRetrieve({ 
+  Future<Response<PhotoPrediction>> predictionRetrieve({ 
     required String uuid,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -287,7 +280,7 @@ class PhotosApi {
     );
   }
 
-  /// photosRetrieve
+  /// retrieve
   /// 
   ///
   /// Parameters:
@@ -301,7 +294,7 @@ class PhotosApi {
   ///
   /// Returns a [Future] containing a [Response] with a [Photo] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<Photo>> photosRetrieve({ 
+  Future<Response<Photo>> retrieve({ 
     required String uuid,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,

@@ -7,13 +7,13 @@ void main() {
   final instance = MosquitoAlert().getPartnersApi();
 
   group(PartnersApi, () {
-    //Future<PaginatedPartnerList> partnersList({ int page, int pageSize }) async
-    test('test partnersList', () async {
+    //Future<PaginatedPartnerList> list({ int page, int pageSize }) async
+    test('test list', () async {
       // TODO
     });
 
-    //Future<Partner> partnersRetrieve(int id) async
-    test('test partnersRetrieve', () async {
+    //Future<Partner> retrieve(int id) async
+    test('test retrieve', () async {
       // TODO
     });
 

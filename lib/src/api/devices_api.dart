@@ -13,17 +13,12 @@ import 'package:mosquito_alert/src/model/device.dart';
 import 'package:mosquito_alert/src/model/device_request.dart';
 import 'package:mosquito_alert/src/model/device_update.dart';
 import 'package:mosquito_alert/src/model/device_update_request.dart';
-import 'package:mosquito_alert/src/model/devices_create_error_response400.dart';
-import 'package:mosquito_alert/src/model/devices_partial_update_error_response400.dart';
-import 'package:mosquito_alert/src/model/devices_retrieve_error_response400.dart';
-import 'package:mosquito_alert/src/model/devices_update_error_response400.dart';
+import 'package:mosquito_alert/src/model/devices_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/devices_partial_update_validation_error.dart';
+import 'package:mosquito_alert/src/model/devices_update_validation_error.dart';
 import 'package:mosquito_alert/src/model/error_response401.dart';
 import 'package:mosquito_alert/src/model/error_response403.dart';
 import 'package:mosquito_alert/src/model/error_response404.dart';
-import 'package:mosquito_alert/src/model/error_response405.dart';
-import 'package:mosquito_alert/src/model/error_response406.dart';
-import 'package:mosquito_alert/src/model/error_response415.dart';
-import 'package:mosquito_alert/src/model/error_response500.dart';
 import 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 
 class DevicesApi {
@@ -34,7 +29,7 @@ class DevicesApi {
 
   const DevicesApi(this._dio, this._serializers);
 
-  /// devicesCreate
+  /// create
   /// 
   ///
   /// Parameters:
@@ -48,7 +43,7 @@ class DevicesApi {
   ///
   /// Returns a [Future] containing a [Response] with a [Device] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<Device>> devicesCreate({ 
+  Future<Response<Device>> create({ 
     required DeviceRequest deviceRequest,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -135,7 +130,7 @@ class DevicesApi {
     );
   }
 
-  /// devicesPartialUpdate
+  /// partialUpdate
   /// 
   ///
   /// Parameters:
@@ -150,7 +145,7 @@ class DevicesApi {
   ///
   /// Returns a [Future] containing a [Response] with a [DeviceUpdate] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeviceUpdate>> devicesPartialUpdate({ 
+  Future<Response<DeviceUpdate>> partialUpdate({ 
     required String deviceId,
     PatchedDeviceUpdateRequest? patchedDeviceUpdateRequest,
     CancelToken? cancelToken,
@@ -238,7 +233,7 @@ class DevicesApi {
     );
   }
 
-  /// devicesRetrieve
+  /// retrieve
   /// 
   ///
   /// Parameters:
@@ -252,7 +247,7 @@ class DevicesApi {
   ///
   /// Returns a [Future] containing a [Response] with a [Device] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<Device>> devicesRetrieve({ 
+  Future<Response<Device>> retrieve({ 
     required String deviceId,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -319,7 +314,7 @@ class DevicesApi {
     );
   }
 
-  /// devicesUpdate
+  /// update
   /// 
   ///
   /// Parameters:
@@ -334,7 +329,7 @@ class DevicesApi {
   ///
   /// Returns a [Future] containing a [Response] with a [DeviceUpdate] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<DeviceUpdate>> devicesUpdate({ 
+  Future<Response<DeviceUpdate>> update({ 
     required String deviceId,
     required DeviceUpdateRequest deviceUpdateRequest,
     CancelToken? cancelToken,

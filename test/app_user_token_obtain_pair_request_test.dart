@@ -7,8 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(AppUserTokenObtainPairRequest, () {
-    // String uuid
-    test('to test the property `uuid`', () async {
+    // String username
+    test('to test the property `username`', () async {
       // TODO
     });
 

@@ -12,6 +12,11 @@ void main() {
       // TODO
     });
 
+    // String username
+    test('to test the property `username`', () async {
+      // TODO
+    });
+
     // The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
     // OffsetDateTime registrationTime
     test('to test the property `registrationTime`', () async {
@@ -27,6 +32,11 @@ void main() {
     // ISO 639-1 code
     // String languageIso
     test('to test the property `languageIso`', () async {
+      // TODO
+    });
+
+    // bool isGuest
+    test('to test the property `isGuest`', () async {
       // TODO
     });
 

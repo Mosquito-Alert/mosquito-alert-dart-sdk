@@ -9,15 +9,16 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**notificationsCreate**](NotificationsApi.md#notificationscreate) | **POST** /notifications/ | 
-[**notificationsList**](NotificationsApi.md#notificationslist) | **GET** /notifications/ | 
-[**notificationsPartialUpdate**](NotificationsApi.md#notificationspartialupdate) | **PATCH** /notifications/{id}/ | 
-[**notificationsRetrieve**](NotificationsApi.md#notificationsretrieve) | **GET** /notifications/{id}/ | 
-[**notificationsUpdate**](NotificationsApi.md#notificationsupdate) | **PUT** /notifications/{id}/ | 
+[**create**](NotificationsApi.md#create) | **POST** /notifications/ | 
+[**list**](NotificationsApi.md#list) | **GET** /notifications/ | 
+[**listMine**](NotificationsApi.md#listmine) | **GET** /me/notifications/ | 
+[**partialUpdate**](NotificationsApi.md#partialupdate) | **PATCH** /notifications/{id}/ | 
+[**retrieve**](NotificationsApi.md#retrieve) | **GET** /notifications/{id}/ | 
+[**update**](NotificationsApi.md#update) | **PUT** /notifications/{id}/ | 
 
 
-# **notificationsCreate**
-> BuiltList<CreateNotification> notificationsCreate(metaNotificationRequest)
+# **create**
+> BuiltList<CreateNotification> create(metaNotificationRequest)
 
 
 
@@ -37,10 +38,10 @@ final api = MosquitoAlert().getNotificationsApi();
 final MetaNotificationRequest metaNotificationRequest = ; // MetaNotificationRequest | 
 
 try {
-    final response = api.notificationsCreate(metaNotificationRequest);
+    final response = api.create(metaNotificationRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling NotificationsApi->notificationsCreate: $e\n');
+    print('Exception when calling NotificationsApi->create: $e\n');
 }
 ```
 
@@ -65,8 +66,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **notificationsList**
-> PaginatedNotificationList notificationsList(isRead, orderBy, page, pageSize)
+# **list**
+> PaginatedNotificationList list(isRead, orderBy, page, pageSize)
 
 
 
@@ -89,10 +90,10 @@ final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
 
 try {
-    final response = api.notificationsList(isRead, orderBy, page, pageSize);
+    final response = api.list(isRead, orderBy, page, pageSize);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling NotificationsApi->notificationsList: $e\n');
+    print('Exception when calling NotificationsApi->list: $e\n');
 }
 ```
 
@@ -120,8 +121,57 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **notificationsPartialUpdate**
-> Notification notificationsPartialUpdate(id, patchedNotificationRequest)
+# **listMine**
+> PaginatedNotificationList listMine(isRead, orderBy, page, pageSize)
+
+
+
+Get Current User's Notifications
+
+### Example
+```dart
+import 'package:mosquito_alert/api.dart';
+
+final api = MosquitoAlert().getNotificationsApi();
+final bool isRead = true; // bool | 
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
+
+try {
+    final response = api.listMine(isRead, orderBy, page, pageSize);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling NotificationsApi->listMine: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **isRead** | **bool**|  | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
+
+### Return type
+
+[**PaginatedNotificationList**](PaginatedNotificationList.md)
+
+### Authorization
+
+[jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **partialUpdate**
+> Notification partialUpdate(id, patchedNotificationRequest)
 
 
 
@@ -142,10 +192,10 @@ final int id = 56; // int | A unique integer value identifying this notification
 final PatchedNotificationRequest patchedNotificationRequest = ; // PatchedNotificationRequest | 
 
 try {
-    final response = api.notificationsPartialUpdate(id, patchedNotificationRequest);
+    final response = api.partialUpdate(id, patchedNotificationRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling NotificationsApi->notificationsPartialUpdate: $e\n');
+    print('Exception when calling NotificationsApi->partialUpdate: $e\n');
 }
 ```
 
@@ -171,8 +221,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **notificationsRetrieve**
-> Notification notificationsRetrieve(id)
+# **retrieve**
+> Notification retrieve(id)
 
 
 
@@ -192,10 +242,10 @@ final api = MosquitoAlert().getNotificationsApi();
 final int id = 56; // int | A unique integer value identifying this notification.
 
 try {
-    final response = api.notificationsRetrieve(id);
+    final response = api.retrieve(id);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling NotificationsApi->notificationsRetrieve: $e\n');
+    print('Exception when calling NotificationsApi->retrieve: $e\n');
 }
 ```
 
@@ -220,8 +270,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **notificationsUpdate**
-> Notification notificationsUpdate(id, notificationRequest)
+# **update**
+> Notification update(id, notificationRequest)
 
 
 
@@ -242,10 +292,10 @@ final int id = 56; // int | A unique integer value identifying this notification
 final NotificationRequest notificationRequest = ; // NotificationRequest | 
 
 try {
-    final response = api.notificationsUpdate(id, notificationRequest);
+    final response = api.update(id, notificationRequest);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling NotificationsApi->notificationsUpdate: $e\n');
+    print('Exception when calling NotificationsApi->update: $e\n');
 }
 ```
 

@@ -9,12 +9,12 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**campaignsList**](CampaignsApi.md#campaignslist) | **GET** /campaigns/ | 
-[**campaignsRetrieve**](CampaignsApi.md#campaignsretrieve) | **GET** /campaigns/{id}/ | 
+[**list**](CampaignsApi.md#list) | **GET** /campaigns/ | 
+[**retrieve**](CampaignsApi.md#retrieve) | **GET** /campaigns/{id}/ | 
 
 
-# **campaignsList**
-> PaginatedCampaignList campaignsList(countryId, isActive, orderBy, page, pageSize)
+# **list**
+> PaginatedCampaignList list(countryId, isActive, orderBy, page, pageSize)
 
 
 
@@ -38,10 +38,10 @@ final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
 
 try {
-    final response = api.campaignsList(countryId, isActive, orderBy, page, pageSize);
+    final response = api.list(countryId, isActive, orderBy, page, pageSize);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling CampaignsApi->campaignsList: $e\n');
+    print('Exception when calling CampaignsApi->list: $e\n');
 }
 ```
 
@@ -70,8 +70,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **campaignsRetrieve**
-> Campaign campaignsRetrieve(id)
+# **retrieve**
+> Campaign retrieve(id)
 
 
 
@@ -91,10 +91,10 @@ final api = MosquitoAlert().getCampaignsApi();
 final int id = 56; // int | A unique integer value identifying this ow campaigns.
 
 try {
-    final response = api.campaignsRetrieve(id);
+    final response = api.retrieve(id);
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling CampaignsApi->campaignsRetrieve: $e\n');
+    print('Exception when calling CampaignsApi->retrieve: $e\n');
 }
 ```
 
