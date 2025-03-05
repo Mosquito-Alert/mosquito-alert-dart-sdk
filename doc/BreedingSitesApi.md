@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **create**
-> BreedingSite create(breedingSiteRequest)
+> BreedingSite create(createdAt, sentAt, location, photos, note, tags, siteType, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae)
 
 
 
@@ -34,10 +34,20 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getBreedingSitesApi();
-final BreedingSiteRequest breedingSiteRequest = ; // BreedingSiteRequest | 
+final OffsetDateTime createdAt = 2013-10-20T19:20:30+01:00; // OffsetDateTime | 
+final OffsetDateTime sentAt = 2013-10-20T19:20:30+01:00; // OffsetDateTime | 
+final LocationRequest location = ; // LocationRequest | 
+final BuiltList<SimplePhotoRequest> photos = ; // BuiltList<SimplePhotoRequest> | 
+final String note = note_example; // String | Note user attached to report.
+final BuiltList<String> tags = ; // BuiltList<String> | 
+final String siteType = siteType_example; // String | Breeding site type.
+final bool hasWater = true; // bool | Either if the user perceived water in the breeding site.
+final bool inPublicArea = true; // bool | Either if the breeding site is found in a public area.
+final bool hasNearMosquitoes = true; // bool | Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
+final bool hasLarvae = true; // bool | Either if the user perceived larvaes the breeding site.
 
 try {
-    final response = api.create(breedingSiteRequest);
+    final response = api.create(createdAt, sentAt, location, photos, note, tags, siteType, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling BreedingSitesApi->create: $e\n');
@@ -48,7 +58,17 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **breedingSiteRequest** | [**BreedingSiteRequest**](BreedingSiteRequest.md)|  | 
+ **createdAt** | **OffsetDateTime**|  | 
+ **sentAt** | **OffsetDateTime**|  | 
+ **location** | [**LocationRequest**](LocationRequest.md)|  | 
+ **photos** | [**BuiltList&lt;SimplePhotoRequest&gt;**](SimplePhotoRequest.md)|  | 
+ **note** | **String**| Note user attached to report. | [optional] 
+ **tags** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
+ **siteType** | **String**| Breeding site type. | [optional] 
+ **hasWater** | **bool**| Either if the user perceived water in the breeding site. | [optional] 
+ **inPublicArea** | **bool**| Either if the breeding site is found in a public area. | [optional] 
+ **hasNearMosquitoes** | **bool**| Either if the user perceived mosquitoes near the breeding site (less than 10 meters). | [optional] 
+ **hasLarvae** | **bool**| Either if the user perceived larvaes the breeding site. | [optional] 
 
 ### Return type
 
@@ -60,7 +80,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

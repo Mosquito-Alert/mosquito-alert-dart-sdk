@@ -13,15 +13,13 @@ import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/error_response401.dart';
 import 'package:mosquito_alert/src/model/error_response403.dart';
 import 'package:mosquito_alert/src/model/error_response404.dart';
+import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
-import 'package:mosquito_alert/src/model/observation_prediction.dart';
-import 'package:mosquito_alert/src/model/observation_prediction_request.dart';
-import 'package:mosquito_alert/src/model/observation_request.dart';
 import 'package:mosquito_alert/src/model/observations_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/observations_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/observations_prediction_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
+import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 import 'package:time_machine/time_machine.dart';
 
 class ObservationsApi {
@@ -36,7 +34,18 @@ class ObservationsApi {
   /// 
   ///
   /// Parameters:
-  /// * [observationRequest] 
+  /// * [createdAt] 
+  /// * [sentAt] 
+  /// * [location] 
+  /// * [photos] 
+  /// * [note] - Note user attached to report.
+  /// * [tags] 
+  /// * [eventEnvironment] - The environment where the event took place.
+  /// * [eventMoment] - The moment of the day when the event took place.
+  /// * [userPerceivedMosquitoSpecie] - The mosquito specie perceived by the user.
+  /// * [userPerceivedMosquitoThorax] - The species of mosquito that the thorax resembles, according to the user.
+  /// * [userPerceivedMosquitoAbdomen] - The species of mosquito that the abdomen resembles, according to the user.
+  /// * [userPerceivedMosquitoLegs] - The species of mosquito that the leg resembles, according to the user.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -47,7 +56,18 @@ class ObservationsApi {
   /// Returns a [Future] containing a [Response] with a [Observation] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<Observation>> create({ 
-    required ObservationRequest observationRequest,
+    required OffsetDateTime createdAt,
+    required OffsetDateTime sentAt,
+    required LocationRequest location,
+    required BuiltList<SimplePhotoRequest> photos,
+    String? note,
+    BuiltList<String>? tags,
+    String? eventEnvironment,
+    String? eventMoment,
+    String? userPerceivedMosquitoSpecie,
+    String? userPerceivedMosquitoThorax,
+    String? userPerceivedMosquitoAbdomen,
+    String? userPerceivedMosquitoLegs,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -81,15 +101,27 @@ class ObservationsApi {
         ],
         ...?extra,
       },
-      contentType: 'application/json',
+      contentType: 'multipart/form-data',
       validateStatus: validateStatus,
     );
 
     dynamic _bodyData;
 
     try {
-      const _type = FullType(ObservationRequest);
-      _bodyData = _serializers.serialize(observationRequest, specifiedType: _type);
+      _bodyData = FormData.fromMap(<String, dynamic>{
+        r'created_at': encodeFormParameter(_serializers, createdAt, const FullType(OffsetDateTime)),
+        r'sent_at': encodeFormParameter(_serializers, sentAt, const FullType(OffsetDateTime)),
+        r'location': encodeFormParameter(_serializers, location, const FullType(LocationRequest)),
+        r'note': encodeFormParameter(_serializers, note, const FullType(String)),
+        if (tags != null) r'tags': encodeFormParameter(_serializers, tags, const FullType(BuiltList, [FullType(String)])),
+        r'photos': encodeFormParameter(_serializers, photos, const FullType(BuiltList, [FullType(SimplePhotoRequest)])),
+        r'event_environment': encodeFormParameter(_serializers, eventEnvironment, const FullType(String)),
+        r'event_moment': encodeFormParameter(_serializers, eventMoment, const FullType(String)),
+        r'user_perceived_mosquito_specie': encodeFormParameter(_serializers, userPerceivedMosquitoSpecie, const FullType(String)),
+        r'user_perceived_mosquito_thorax': encodeFormParameter(_serializers, userPerceivedMosquitoThorax, const FullType(String)),
+        r'user_perceived_mosquito_abdomen': encodeFormParameter(_serializers, userPerceivedMosquitoAbdomen, const FullType(String)),
+        r'user_perceived_mosquito_legs': encodeFormParameter(_serializers, userPerceivedMosquitoLegs, const FullType(String)),
+      });
 
     } catch(error, stackTrace) {
       throw DioException(
@@ -213,8 +245,6 @@ class ObservationsApi {
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [hasPhotos] - Has any photo
-  /// * [hasPrediction] - Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-  /// * [hasPredictionsAllPhotos] - Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
   /// * [locationCountryId] 
   /// * [locationNuts2] 
   /// * [locationNuts3] 
@@ -240,8 +270,6 @@ class ObservationsApi {
     OffsetDateTime? createdAtAfter,
     OffsetDateTime? createdAtBefore,
     bool? hasPhotos,
-    bool? hasPrediction,
-    bool? hasPredictionsAllPhotos,
     int? locationCountryId,
     String? locationNuts2,
     String? locationNuts3,
@@ -294,8 +322,6 @@ class ObservationsApi {
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(OffsetDateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(OffsetDateTime)),
       if (hasPhotos != null) r'has_photos': encodeQueryParameter(_serializers, hasPhotos, const FullType(bool)),
-      if (hasPrediction != null) r'has_prediction': encodeQueryParameter(_serializers, hasPrediction, const FullType(bool)),
-      if (hasPredictionsAllPhotos != null) r'has_predictions_all_photos': encodeQueryParameter(_serializers, hasPredictionsAllPhotos, const FullType(bool)),
       r'location_country_id': encodeQueryParameter(_serializers, locationCountryId, const FullType(int)),
       if (locationNuts2 != null) r'location_nuts_2': encodeQueryParameter(_serializers, locationNuts2, const FullType(String)),
       if (locationNuts3 != null) r'location_nuts_3': encodeQueryParameter(_serializers, locationNuts3, const FullType(String)),
@@ -357,8 +383,6 @@ class ObservationsApi {
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [hasPhotos] - Has any photo
-  /// * [hasPrediction] - Filter observations that have an associated prediction. An observation is considered to have a prediction if a photo has been selected as reference to use the prediction from.
-  /// * [hasPredictionsAllPhotos] - Filters observations based on whether all associated photos have predictions. Set to True to include observations where every photo has a prediction; set to False to include observations where at least one photo is missing a prediction.
   /// * [locationCountryId] 
   /// * [locationNuts2] 
   /// * [locationNuts3] 
@@ -384,8 +408,6 @@ class ObservationsApi {
     OffsetDateTime? createdAtAfter,
     OffsetDateTime? createdAtBefore,
     bool? hasPhotos,
-    bool? hasPrediction,
-    bool? hasPredictionsAllPhotos,
     int? locationCountryId,
     String? locationNuts2,
     String? locationNuts3,
@@ -428,8 +450,6 @@ class ObservationsApi {
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(OffsetDateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(OffsetDateTime)),
       if (hasPhotos != null) r'has_photos': encodeQueryParameter(_serializers, hasPhotos, const FullType(bool)),
-      if (hasPrediction != null) r'has_prediction': encodeQueryParameter(_serializers, hasPrediction, const FullType(bool)),
-      if (hasPredictionsAllPhotos != null) r'has_predictions_all_photos': encodeQueryParameter(_serializers, hasPredictionsAllPhotos, const FullType(bool)),
       r'location_country_id': encodeQueryParameter(_serializers, locationCountryId, const FullType(int)),
       if (locationNuts2 != null) r'location_nuts_2': encodeQueryParameter(_serializers, locationNuts2, const FullType(String)),
       if (locationNuts3 != null) r'location_nuts_3': encodeQueryParameter(_serializers, locationNuts3, const FullType(String)),
@@ -473,261 +493,6 @@ class ObservationsApi {
     }
 
     return Response<PaginatedObservationList>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// predictionCreate
-  /// 
-  ///
-  /// Parameters:
-  /// * [uuid] 
-  /// * [observationPredictionRequest] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [ObservationPrediction] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<ObservationPrediction>> predictionCreate({ 
-    required String uuid,
-    required ObservationPredictionRequest observationPredictionRequest,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/observations/{uuid}/prediction/'.replaceAll('{' r'uuid' '}', encodeQueryParameter(_serializers, uuid, const FullType(String)).toString());
-    final _options = Options(
-      method: r'POST',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'apiKey',
-            'name': 'cookieAuth',
-            'keyName': 'sessionid',
-            'where': '',
-          },{
-            'type': 'apiKey',
-            'name': 'tokenAuth',
-            'keyName': 'Authorization',
-            'where': 'header',
-          },
-        ],
-        ...?extra,
-      },
-      contentType: 'application/json',
-      validateStatus: validateStatus,
-    );
-
-    dynamic _bodyData;
-
-    try {
-      const _type = FullType(ObservationPredictionRequest);
-      _bodyData = _serializers.serialize(observationPredictionRequest, specifiedType: _type);
-
-    } catch(error, stackTrace) {
-      throw DioException(
-         requestOptions: _options.compose(
-          _dio.options,
-          _path,
-        ),
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    final _response = await _dio.request<Object>(
-      _path,
-      data: _bodyData,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    ObservationPrediction? _responseData;
-
-    try {
-      final rawResponse = _response.data;
-      _responseData = rawResponse == null ? null : _serializers.deserialize(
-        rawResponse,
-        specifiedType: const FullType(ObservationPrediction),
-      ) as ObservationPrediction;
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<ObservationPrediction>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// predictionDestroy
-  /// 
-  ///
-  /// Parameters:
-  /// * [uuid] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future]
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<void>> predictionDestroy({ 
-    required String uuid,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/observations/{uuid}/prediction/'.replaceAll('{' r'uuid' '}', encodeQueryParameter(_serializers, uuid, const FullType(String)).toString());
-    final _options = Options(
-      method: r'DELETE',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'apiKey',
-            'name': 'cookieAuth',
-            'keyName': 'sessionid',
-            'where': '',
-          },{
-            'type': 'apiKey',
-            'name': 'tokenAuth',
-            'keyName': 'Authorization',
-            'where': 'header',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    return _response;
-  }
-
-  /// predictionRetrieve
-  /// 
-  ///
-  /// Parameters:
-  /// * [uuid] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [ObservationPrediction] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<ObservationPrediction>> predictionRetrieve({ 
-    required String uuid,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/observations/{uuid}/prediction/'.replaceAll('{' r'uuid' '}', encodeQueryParameter(_serializers, uuid, const FullType(String)).toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'apiKey',
-            'name': 'cookieAuth',
-            'keyName': 'sessionid',
-            'where': '',
-          },{
-            'type': 'apiKey',
-            'name': 'tokenAuth',
-            'keyName': 'Authorization',
-            'where': 'header',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    ObservationPrediction? _responseData;
-
-    try {
-      final rawResponse = _response.data;
-      _responseData = rawResponse == null ? null : _serializers.deserialize(
-        rawResponse,
-        specifiedType: const FullType(ObservationPrediction),
-      ) as ObservationPrediction;
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<ObservationPrediction>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

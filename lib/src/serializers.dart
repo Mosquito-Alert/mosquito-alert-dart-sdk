@@ -80,10 +80,7 @@ import 'package:mosquito_alert/src/model/bites_list_short_id_error_component.dar
 import 'package:mosquito_alert/src/model/bites_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/bounding_box.dart';
-import 'package:mosquito_alert/src/model/bounding_box_request.dart';
 import 'package:mosquito_alert/src/model/breeding_site.dart';
-import 'package:mosquito_alert/src/model/breeding_site_request.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_error.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_has_larvae_error_component.dart';
@@ -287,9 +284,6 @@ import 'package:mosquito_alert/src/model/notifications_update_is_read_error_comp
 import 'package:mosquito_alert/src/model/notifications_update_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_update_validation_error.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
-import 'package:mosquito_alert/src/model/observation_prediction.dart';
-import 'package:mosquito_alert/src/model/observation_prediction_request.dart';
-import 'package:mosquito_alert/src/model/observation_request.dart';
 import 'package:mosquito_alert/src/model/observations_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_error.dart';
 import 'package:mosquito_alert/src/model/observations_create_event_environment_error_component.dart';
@@ -332,11 +326,6 @@ import 'package:mosquito_alert/src/model/observations_list_short_id_error_compon
 import 'package:mosquito_alert/src/model/observations_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/observations_prediction_create_error.dart';
-import 'package:mosquito_alert/src/model/observations_prediction_create_is_executive_validation_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_prediction_create_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_prediction_create_ref_photo_uuid_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_prediction_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/paginated_bite_list.dart';
 import 'package:mosquito_alert/src/model/paginated_breeding_site_list.dart';
 import 'package:mosquito_alert/src/model/paginated_campaign_list.dart';
@@ -350,32 +339,6 @@ import 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 import 'package:mosquito_alert/src/model/patched_notification_request.dart';
 import 'package:mosquito_alert/src/model/patched_user_request.dart';
 import 'package:mosquito_alert/src/model/photo.dart';
-import 'package:mosquito_alert/src/model/photo_prediction.dart';
-import 'package:mosquito_alert/src/model/photo_prediction_request.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_bbox_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_bbox_x_max_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_bbox_x_min_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_bbox_y_max_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_bbox_y_min_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_classifier_version_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_error.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_insect_confidence_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_predicted_class_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_ae_aegypti_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_ae_albopictus_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_ae_japonicus_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_ae_koreicus_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_anopheles_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_culex_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_culiseta_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_not_sure_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_scores_other_species_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_threshold_deviation_error_component.dart';
-import 'package:mosquito_alert/src/model/photos_prediction_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/prediction_score.dart';
-import 'package:mosquito_alert/src/model/prediction_score_request.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 import 'package:mosquito_alert/src/model/token_refresh.dart';
@@ -464,10 +427,7 @@ part 'serializers.g.dart';
   BitesListUpdatedAtErrorComponent,
   BitesListUserUuidErrorComponent,
   BitesListValidationError,
-  BoundingBox,
-  BoundingBoxRequest,
   BreedingSite,
-  BreedingSiteRequest,
   BreedingsitesCreateCreatedAtErrorComponent,
   BreedingsitesCreateError,
   BreedingsitesCreateHasLarvaeErrorComponent,
@@ -671,9 +631,6 @@ part 'serializers.g.dart';
   NotificationsUpdateNonFieldErrorsErrorComponent,
   NotificationsUpdateValidationError,
   Observation,
-  ObservationPrediction,
-  ObservationPredictionRequest,
-  ObservationRequest,
   ObservationsCreateCreatedAtErrorComponent,
   ObservationsCreateError,
   ObservationsCreateEventEnvironmentErrorComponent,
@@ -716,11 +673,6 @@ part 'serializers.g.dart';
   ObservationsListUpdatedAtErrorComponent,
   ObservationsListUserUuidErrorComponent,
   ObservationsListValidationError,
-  ObservationsPredictionCreateError,
-  ObservationsPredictionCreateIsExecutiveValidationErrorComponent,
-  ObservationsPredictionCreateNonFieldErrorsErrorComponent,
-  ObservationsPredictionCreateRefPhotoUuidErrorComponent,
-  ObservationsPredictionCreateValidationError,
   PaginatedBiteList,
   PaginatedBreedingSiteList,
   PaginatedCampaignList,
@@ -734,32 +686,6 @@ part 'serializers.g.dart';
   PatchedNotificationRequest,
   PatchedUserRequest,
   Photo,
-  PhotoPrediction,
-  PhotoPredictionRequest,
-  PhotosPredictionCreateBboxNonFieldErrorsErrorComponent,
-  PhotosPredictionCreateBboxXMaxErrorComponent,
-  PhotosPredictionCreateBboxXMinErrorComponent,
-  PhotosPredictionCreateBboxYMaxErrorComponent,
-  PhotosPredictionCreateBboxYMinErrorComponent,
-  PhotosPredictionCreateClassifierVersionErrorComponent,
-  PhotosPredictionCreateError,
-  PhotosPredictionCreateInsectConfidenceErrorComponent,
-  PhotosPredictionCreateNonFieldErrorsErrorComponent,
-  PhotosPredictionCreatePredictedClassErrorComponent,
-  PhotosPredictionCreateScoresAeAegyptiErrorComponent,
-  PhotosPredictionCreateScoresAeAlbopictusErrorComponent,
-  PhotosPredictionCreateScoresAeJaponicusErrorComponent,
-  PhotosPredictionCreateScoresAeKoreicusErrorComponent,
-  PhotosPredictionCreateScoresAnophelesErrorComponent,
-  PhotosPredictionCreateScoresCulexErrorComponent,
-  PhotosPredictionCreateScoresCulisetaErrorComponent,
-  PhotosPredictionCreateScoresNonFieldErrorsErrorComponent,
-  PhotosPredictionCreateScoresNotSureErrorComponent,
-  PhotosPredictionCreateScoresOtherSpeciesErrorComponent,
-  PhotosPredictionCreateThresholdDeviationErrorComponent,
-  PhotosPredictionCreateValidationError,
-  PredictionScore,
-  PredictionScoreRequest,
   SimplePhoto,
   SimplePhotoRequest,
   TokenRefresh,
@@ -782,6 +708,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CreateNotification)]),
         () => ListBuilder<CreateNotification>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(SimplePhotoRequest)]),
+        () => ListBuilder<SimplePhotoRequest>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(String)]),

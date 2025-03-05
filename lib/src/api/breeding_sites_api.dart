@@ -11,14 +11,15 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/breeding_site.dart';
-import 'package:mosquito_alert/src/model/breeding_site_request.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/error_response401.dart';
 import 'package:mosquito_alert/src/model/error_response403.dart';
 import 'package:mosquito_alert/src/model/error_response404.dart';
+import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/paginated_breeding_site_list.dart';
+import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 import 'package:time_machine/time_machine.dart';
 
 class BreedingSitesApi {
@@ -33,7 +34,17 @@ class BreedingSitesApi {
   /// 
   ///
   /// Parameters:
-  /// * [breedingSiteRequest] 
+  /// * [createdAt] 
+  /// * [sentAt] 
+  /// * [location] 
+  /// * [photos] 
+  /// * [note] - Note user attached to report.
+  /// * [tags] 
+  /// * [siteType] - Breeding site type.
+  /// * [hasWater] - Either if the user perceived water in the breeding site.
+  /// * [inPublicArea] - Either if the breeding site is found in a public area.
+  /// * [hasNearMosquitoes] - Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
+  /// * [hasLarvae] - Either if the user perceived larvaes the breeding site.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -44,7 +55,17 @@ class BreedingSitesApi {
   /// Returns a [Future] containing a [Response] with a [BreedingSite] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BreedingSite>> create({ 
-    required BreedingSiteRequest breedingSiteRequest,
+    required OffsetDateTime createdAt,
+    required OffsetDateTime sentAt,
+    required LocationRequest location,
+    required BuiltList<SimplePhotoRequest> photos,
+    String? note,
+    BuiltList<String>? tags,
+    String? siteType,
+    bool? hasWater,
+    bool? inPublicArea,
+    bool? hasNearMosquitoes,
+    bool? hasLarvae,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -78,15 +99,26 @@ class BreedingSitesApi {
         ],
         ...?extra,
       },
-      contentType: 'application/json',
+      contentType: 'multipart/form-data',
       validateStatus: validateStatus,
     );
 
     dynamic _bodyData;
 
     try {
-      const _type = FullType(BreedingSiteRequest);
-      _bodyData = _serializers.serialize(breedingSiteRequest, specifiedType: _type);
+      _bodyData = FormData.fromMap(<String, dynamic>{
+        r'created_at': encodeFormParameter(_serializers, createdAt, const FullType(OffsetDateTime)),
+        r'sent_at': encodeFormParameter(_serializers, sentAt, const FullType(OffsetDateTime)),
+        r'location': encodeFormParameter(_serializers, location, const FullType(LocationRequest)),
+        r'note': encodeFormParameter(_serializers, note, const FullType(String)),
+        if (tags != null) r'tags': encodeFormParameter(_serializers, tags, const FullType(BuiltList, [FullType(String)])),
+        r'photos': encodeFormParameter(_serializers, photos, const FullType(BuiltList, [FullType(SimplePhotoRequest)])),
+        if (siteType != null) r'site_type': encodeFormParameter(_serializers, siteType, const FullType(String)),
+        r'has_water': encodeFormParameter(_serializers, hasWater, const FullType(bool)),
+        r'in_public_area': encodeFormParameter(_serializers, inPublicArea, const FullType(bool)),
+        r'has_near_mosquitoes': encodeFormParameter(_serializers, hasNearMosquitoes, const FullType(bool)),
+        r'has_larvae': encodeFormParameter(_serializers, hasLarvae, const FullType(bool)),
+      });
 
     } catch(error, stackTrace) {
       throw DioException(
