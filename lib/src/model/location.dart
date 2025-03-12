@@ -31,7 +31,7 @@ abstract class Location implements Built<Location, LocationBuilder> {
 
   @BuiltValueField(wireName: r'timezone')
   LocationTimezoneEnum? get timezone;
-  // enum timezoneEnum {  Africa/Abidjan,  Africa/Accra,  Africa/Addis_Ababa,  Africa/Algiers,  Africa/Asmara,  Africa/Bamako,  Africa/Bangui,  Africa/Banjul,  Africa/Bissau,  Africa/Blantyre,  Africa/Brazzaville,  Africa/Bujumbura,  Africa/Cairo,  Africa/Casablanca,  Africa/Ceuta,  Africa/Conakry,  Africa/Dakar,  Africa/Dar_es_Salaam,  Africa/Djibouti,  Africa/Douala,  Africa/El_Aaiun,  Africa/Freetown,  Africa/Gaborone,  Africa/Harare,  Africa/Johannesburg,  Africa/Juba,  Africa/Kampala,  Africa/Khartoum,  Africa/Kigali,  Africa/Kinshasa,  Africa/Lagos,  Africa/Libreville,  Africa/Lome,  Africa/Luanda,  Africa/Lubumbashi,  Africa/Lusaka,  Africa/Malabo,  Africa/Maputo,  Africa/Maseru,  Africa/Mbabane,  Africa/Mogadishu,  Africa/Monrovia,  Africa/Nairobi,  Africa/Ndjamena,  Africa/Niamey,  Africa/Nouakchott,  Africa/Ouagadougou,  Africa/Porto-Novo,  Africa/Sao_Tome,  Africa/Tripoli,  Africa/Tunis,  Africa/Windhoek,  America/Adak,  America/Anchorage,  America/Anguilla,  America/Antigua,  America/Araguaina,  America/Argentina/Buenos_Aires,  America/Argentina/Catamarca,  America/Argentina/Cordoba,  America/Argentina/Jujuy,  America/Argentina/La_Rioja,  America/Argentina/Mendoza,  America/Argentina/Rio_Gallegos,  America/Argentina/Salta,  America/Argentina/San_Juan,  America/Argentina/San_Luis,  America/Argentina/Tucuman,  America/Argentina/Ushuaia,  America/Aruba,  America/Asuncion,  America/Atikokan,  America/Bahia,  America/Bahia_Banderas,  America/Barbados,  America/Belem,  America/Belize,  America/Blanc-Sablon,  America/Boa_Vista,  America/Bogota,  America/Boise,  America/Cambridge_Bay,  America/Campo_Grande,  America/Cancun,  America/Caracas,  America/Cayenne,  America/Cayman,  America/Chicago,  America/Chihuahua,  America/Ciudad_Juarez,  America/Costa_Rica,  America/Creston,  America/Cuiaba,  America/Curacao,  America/Danmarkshavn,  America/Dawson,  America/Dawson_Creek,  America/Denver,  America/Detroit,  America/Dominica,  America/Edmonton,  America/Eirunepe,  America/El_Salvador,  America/Fort_Nelson,  America/Fortaleza,  America/Glace_Bay,  America/Goose_Bay,  America/Grand_Turk,  America/Grenada,  America/Guadeloupe,  America/Guatemala,  America/Guayaquil,  America/Guyana,  America/Halifax,  America/Havana,  America/Hermosillo,  America/Indiana/Indianapolis,  America/Indiana/Knox,  America/Indiana/Marengo,  America/Indiana/Petersburg,  America/Indiana/Tell_City,  America/Indiana/Vevay,  America/Indiana/Vincennes,  America/Indiana/Winamac,  America/Inuvik,  America/Iqaluit,  America/Jamaica,  America/Juneau,  America/Kentucky/Louisville,  America/Kentucky/Monticello,  America/Kralendijk,  America/La_Paz,  America/Lima,  America/Los_Angeles,  America/Lower_Princes,  America/Maceio,  America/Managua,  America/Manaus,  America/Marigot,  America/Martinique,  America/Matamoros,  America/Mazatlan,  America/Menominee,  America/Merida,  America/Metlakatla,  America/Mexico_City,  America/Miquelon,  America/Moncton,  America/Monterrey,  America/Montevideo,  America/Montserrat,  America/Nassau,  America/New_York,  America/Nome,  America/Noronha,  America/North_Dakota/Beulah,  America/North_Dakota/Center,  America/North_Dakota/New_Salem,  America/Nuuk,  America/Ojinaga,  America/Panama,  America/Paramaribo,  America/Phoenix,  America/Port-au-Prince,  America/Port_of_Spain,  America/Porto_Velho,  America/Puerto_Rico,  America/Punta_Arenas,  America/Rankin_Inlet,  America/Recife,  America/Regina,  America/Resolute,  America/Rio_Branco,  America/Santarem,  America/Santiago,  America/Santo_Domingo,  America/Sao_Paulo,  America/Scoresbysund,  America/Sitka,  America/St_Barthelemy,  America/St_Johns,  America/St_Kitts,  America/St_Lucia,  America/St_Thomas,  America/St_Vincent,  America/Swift_Current,  America/Tegucigalpa,  America/Thule,  America/Tijuana,  America/Toronto,  America/Tortola,  America/Vancouver,  America/Whitehorse,  America/Winnipeg,  America/Yakutat,  Antarctica/Casey,  Antarctica/Davis,  Antarctica/DumontDUrville,  Antarctica/Macquarie,  Antarctica/Mawson,  Antarctica/McMurdo,  Antarctica/Palmer,  Antarctica/Rothera,  Antarctica/Syowa,  Antarctica/Troll,  Antarctica/Vostok,  Arctic/Longyearbyen,  Asia/Aden,  Asia/Almaty,  Asia/Amman,  Asia/Anadyr,  Asia/Aqtau,  Asia/Aqtobe,  Asia/Ashgabat,  Asia/Atyrau,  Asia/Baghdad,  Asia/Bahrain,  Asia/Baku,  Asia/Bangkok,  Asia/Barnaul,  Asia/Beirut,  Asia/Bishkek,  Asia/Brunei,  Asia/Chita,  Asia/Colombo,  Asia/Damascus,  Asia/Dhaka,  Asia/Dili,  Asia/Dubai,  Asia/Dushanbe,  Asia/Famagusta,  Asia/Gaza,  Asia/Hebron,  Asia/Ho_Chi_Minh,  Asia/Hong_Kong,  Asia/Hovd,  Asia/Irkutsk,  Asia/Jakarta,  Asia/Jayapura,  Asia/Jerusalem,  Asia/Kabul,  Asia/Kamchatka,  Asia/Karachi,  Asia/Kathmandu,  Asia/Khandyga,  Asia/Kolkata,  Asia/Krasnoyarsk,  Asia/Kuala_Lumpur,  Asia/Kuching,  Asia/Kuwait,  Asia/Macau,  Asia/Magadan,  Asia/Makassar,  Asia/Manila,  Asia/Muscat,  Asia/Nicosia,  Asia/Novokuznetsk,  Asia/Novosibirsk,  Asia/Omsk,  Asia/Oral,  Asia/Phnom_Penh,  Asia/Pontianak,  Asia/Pyongyang,  Asia/Qatar,  Asia/Qostanay,  Asia/Qyzylorda,  Asia/Riyadh,  Asia/Sakhalin,  Asia/Samarkand,  Asia/Seoul,  Asia/Shanghai,  Asia/Singapore,  Asia/Srednekolymsk,  Asia/Taipei,  Asia/Tashkent,  Asia/Tbilisi,  Asia/Tehran,  Asia/Thimphu,  Asia/Tokyo,  Asia/Tomsk,  Asia/Ulaanbaatar,  Asia/Urumqi,  Asia/Ust-Nera,  Asia/Vientiane,  Asia/Vladivostok,  Asia/Yakutsk,  Asia/Yangon,  Asia/Yekaterinburg,  Asia/Yerevan,  Atlantic/Azores,  Atlantic/Bermuda,  Atlantic/Canary,  Atlantic/Cape_Verde,  Atlantic/Faroe,  Atlantic/Madeira,  Atlantic/Reykjavik,  Atlantic/South_Georgia,  Atlantic/St_Helena,  Atlantic/Stanley,  Australia/Adelaide,  Australia/Brisbane,  Australia/Broken_Hill,  Australia/Darwin,  Australia/Eucla,  Australia/Hobart,  Australia/Lindeman,  Australia/Lord_Howe,  Australia/Melbourne,  Australia/Perth,  Australia/Sydney,  Canada/Atlantic,  Canada/Central,  Canada/Eastern,  Canada/Mountain,  Canada/Newfoundland,  Canada/Pacific,  Europe/Amsterdam,  Europe/Andorra,  Europe/Astrakhan,  Europe/Athens,  Europe/Belgrade,  Europe/Berlin,  Europe/Bratislava,  Europe/Brussels,  Europe/Bucharest,  Europe/Budapest,  Europe/Busingen,  Europe/Chisinau,  Europe/Copenhagen,  Europe/Dublin,  Europe/Gibraltar,  Europe/Guernsey,  Europe/Helsinki,  Europe/Isle_of_Man,  Europe/Istanbul,  Europe/Jersey,  Europe/Kaliningrad,  Europe/Kirov,  Europe/Kyiv,  Europe/Lisbon,  Europe/Ljubljana,  Europe/London,  Europe/Luxembourg,  Europe/Madrid,  Europe/Malta,  Europe/Mariehamn,  Europe/Minsk,  Europe/Monaco,  Europe/Moscow,  Europe/Oslo,  Europe/Paris,  Europe/Podgorica,  Europe/Prague,  Europe/Riga,  Europe/Rome,  Europe/Samara,  Europe/San_Marino,  Europe/Sarajevo,  Europe/Saratov,  Europe/Simferopol,  Europe/Skopje,  Europe/Sofia,  Europe/Stockholm,  Europe/Tallinn,  Europe/Tirane,  Europe/Ulyanovsk,  Europe/Vaduz,  Europe/Vatican,  Europe/Vienna,  Europe/Vilnius,  Europe/Volgograd,  Europe/Warsaw,  Europe/Zagreb,  Europe/Zurich,  GMT,  Indian/Antananarivo,  Indian/Chagos,  Indian/Christmas,  Indian/Cocos,  Indian/Comoro,  Indian/Kerguelen,  Indian/Mahe,  Indian/Maldives,  Indian/Mauritius,  Indian/Mayotte,  Indian/Reunion,  Pacific/Apia,  Pacific/Auckland,  Pacific/Bougainville,  Pacific/Chatham,  Pacific/Chuuk,  Pacific/Easter,  Pacific/Efate,  Pacific/Fakaofo,  Pacific/Fiji,  Pacific/Funafuti,  Pacific/Galapagos,  Pacific/Gambier,  Pacific/Guadalcanal,  Pacific/Guam,  Pacific/Honolulu,  Pacific/Kanton,  Pacific/Kiritimati,  Pacific/Kosrae,  Pacific/Kwajalein,  Pacific/Majuro,  Pacific/Marquesas,  Pacific/Midway,  Pacific/Nauru,  Pacific/Niue,  Pacific/Norfolk,  Pacific/Noumea,  Pacific/Pago_Pago,  Pacific/Palau,  Pacific/Pitcairn,  Pacific/Pohnpei,  Pacific/Port_Moresby,  Pacific/Rarotonga,  Pacific/Saipan,  Pacific/Tahiti,  Pacific/Tarawa,  Pacific/Tongatapu,  Pacific/Wake,  Pacific/Wallis,  US/Alaska,  US/Arizona,  US/Central,  US/Eastern,  US/Hawaii,  US/Mountain,  US/Pacific,  UTC,  ,  };
+  // enum timezoneEnum {  Africa/Abidjan,  Africa/Accra,  Africa/Addis_Ababa,  Africa/Algiers,  Africa/Asmara,  Africa/Asmera,  Africa/Bamako,  Africa/Bangui,  Africa/Banjul,  Africa/Bissau,  Africa/Blantyre,  Africa/Brazzaville,  Africa/Bujumbura,  Africa/Cairo,  Africa/Casablanca,  Africa/Ceuta,  Africa/Conakry,  Africa/Dakar,  Africa/Dar_es_Salaam,  Africa/Djibouti,  Africa/Douala,  Africa/El_Aaiun,  Africa/Freetown,  Africa/Gaborone,  Africa/Harare,  Africa/Johannesburg,  Africa/Juba,  Africa/Kampala,  Africa/Khartoum,  Africa/Kigali,  Africa/Kinshasa,  Africa/Lagos,  Africa/Libreville,  Africa/Lome,  Africa/Luanda,  Africa/Lubumbashi,  Africa/Lusaka,  Africa/Malabo,  Africa/Maputo,  Africa/Maseru,  Africa/Mbabane,  Africa/Mogadishu,  Africa/Monrovia,  Africa/Nairobi,  Africa/Ndjamena,  Africa/Niamey,  Africa/Nouakchott,  Africa/Ouagadougou,  Africa/Porto-Novo,  Africa/Sao_Tome,  Africa/Timbuktu,  Africa/Tripoli,  Africa/Tunis,  Africa/Windhoek,  America/Adak,  America/Anchorage,  America/Anguilla,  America/Antigua,  America/Araguaina,  America/Argentina/Buenos_Aires,  America/Argentina/Catamarca,  America/Argentina/ComodRivadavia,  America/Argentina/Cordoba,  America/Argentina/Jujuy,  America/Argentina/La_Rioja,  America/Argentina/Mendoza,  America/Argentina/Rio_Gallegos,  America/Argentina/Salta,  America/Argentina/San_Juan,  America/Argentina/San_Luis,  America/Argentina/Tucuman,  America/Argentina/Ushuaia,  America/Aruba,  America/Asuncion,  America/Atikokan,  America/Atka,  America/Bahia,  America/Bahia_Banderas,  America/Barbados,  America/Belem,  America/Belize,  America/Blanc-Sablon,  America/Boa_Vista,  America/Bogota,  America/Boise,  America/Buenos_Aires,  America/Cambridge_Bay,  America/Campo_Grande,  America/Cancun,  America/Caracas,  America/Catamarca,  America/Cayenne,  America/Cayman,  America/Chicago,  America/Chihuahua,  America/Ciudad_Juarez,  America/Coral_Harbour,  America/Cordoba,  America/Costa_Rica,  America/Creston,  America/Cuiaba,  America/Curacao,  America/Danmarkshavn,  America/Dawson,  America/Dawson_Creek,  America/Denver,  America/Detroit,  America/Dominica,  America/Edmonton,  America/Eirunepe,  America/El_Salvador,  America/Ensenada,  America/Fort_Nelson,  America/Fort_Wayne,  America/Fortaleza,  America/Glace_Bay,  America/Godthab,  America/Goose_Bay,  America/Grand_Turk,  America/Grenada,  America/Guadeloupe,  America/Guatemala,  America/Guayaquil,  America/Guyana,  America/Halifax,  America/Havana,  America/Hermosillo,  America/Indiana/Indianapolis,  America/Indiana/Knox,  America/Indiana/Marengo,  America/Indiana/Petersburg,  America/Indiana/Tell_City,  America/Indiana/Vevay,  America/Indiana/Vincennes,  America/Indiana/Winamac,  America/Indianapolis,  America/Inuvik,  America/Iqaluit,  America/Jamaica,  America/Jujuy,  America/Juneau,  America/Kentucky/Louisville,  America/Kentucky/Monticello,  America/Knox_IN,  America/Kralendijk,  America/La_Paz,  America/Lima,  America/Los_Angeles,  America/Louisville,  America/Lower_Princes,  America/Maceio,  America/Managua,  America/Manaus,  America/Marigot,  America/Martinique,  America/Matamoros,  America/Mazatlan,  America/Mendoza,  America/Menominee,  America/Merida,  America/Metlakatla,  America/Mexico_City,  America/Miquelon,  America/Moncton,  America/Monterrey,  America/Montevideo,  America/Montreal,  America/Montserrat,  America/Nassau,  America/New_York,  America/Nipigon,  America/Nome,  America/Noronha,  America/North_Dakota/Beulah,  America/North_Dakota/Center,  America/North_Dakota/New_Salem,  America/Nuuk,  America/Ojinaga,  America/Panama,  America/Pangnirtung,  America/Paramaribo,  America/Phoenix,  America/Port-au-Prince,  America/Port_of_Spain,  America/Porto_Acre,  America/Porto_Velho,  America/Puerto_Rico,  America/Punta_Arenas,  America/Rainy_River,  America/Rankin_Inlet,  America/Recife,  America/Regina,  America/Resolute,  America/Rio_Branco,  America/Rosario,  America/Santa_Isabel,  America/Santarem,  America/Santiago,  America/Santo_Domingo,  America/Sao_Paulo,  America/Scoresbysund,  America/Shiprock,  America/Sitka,  America/St_Barthelemy,  America/St_Johns,  America/St_Kitts,  America/St_Lucia,  America/St_Thomas,  America/St_Vincent,  America/Swift_Current,  America/Tegucigalpa,  America/Thule,  America/Thunder_Bay,  America/Tijuana,  America/Toronto,  America/Tortola,  America/Vancouver,  America/Virgin,  America/Whitehorse,  America/Winnipeg,  America/Yakutat,  America/Yellowknife,  Antarctica/Casey,  Antarctica/Davis,  Antarctica/DumontDUrville,  Antarctica/Macquarie,  Antarctica/Mawson,  Antarctica/McMurdo,  Antarctica/Palmer,  Antarctica/Rothera,  Antarctica/South_Pole,  Antarctica/Syowa,  Antarctica/Troll,  Antarctica/Vostok,  Arctic/Longyearbyen,  Asia/Aden,  Asia/Almaty,  Asia/Amman,  Asia/Anadyr,  Asia/Aqtau,  Asia/Aqtobe,  Asia/Ashgabat,  Asia/Ashkhabad,  Asia/Atyrau,  Asia/Baghdad,  Asia/Bahrain,  Asia/Baku,  Asia/Bangkok,  Asia/Barnaul,  Asia/Beirut,  Asia/Bishkek,  Asia/Brunei,  Asia/Calcutta,  Asia/Chita,  Asia/Choibalsan,  Asia/Chongqing,  Asia/Chungking,  Asia/Colombo,  Asia/Dacca,  Asia/Damascus,  Asia/Dhaka,  Asia/Dili,  Asia/Dubai,  Asia/Dushanbe,  Asia/Famagusta,  Asia/Gaza,  Asia/Harbin,  Asia/Hebron,  Asia/Ho_Chi_Minh,  Asia/Hong_Kong,  Asia/Hovd,  Asia/Irkutsk,  Asia/Istanbul,  Asia/Jakarta,  Asia/Jayapura,  Asia/Jerusalem,  Asia/Kabul,  Asia/Kamchatka,  Asia/Karachi,  Asia/Kashgar,  Asia/Kathmandu,  Asia/Katmandu,  Asia/Khandyga,  Asia/Kolkata,  Asia/Krasnoyarsk,  Asia/Kuala_Lumpur,  Asia/Kuching,  Asia/Kuwait,  Asia/Macao,  Asia/Macau,  Asia/Magadan,  Asia/Makassar,  Asia/Manila,  Asia/Muscat,  Asia/Nicosia,  Asia/Novokuznetsk,  Asia/Novosibirsk,  Asia/Omsk,  Asia/Oral,  Asia/Phnom_Penh,  Asia/Pontianak,  Asia/Pyongyang,  Asia/Qatar,  Asia/Qostanay,  Asia/Qyzylorda,  Asia/Rangoon,  Asia/Riyadh,  Asia/Saigon,  Asia/Sakhalin,  Asia/Samarkand,  Asia/Seoul,  Asia/Shanghai,  Asia/Singapore,  Asia/Srednekolymsk,  Asia/Taipei,  Asia/Tashkent,  Asia/Tbilisi,  Asia/Tehran,  Asia/Tel_Aviv,  Asia/Thimbu,  Asia/Thimphu,  Asia/Tokyo,  Asia/Tomsk,  Asia/Ujung_Pandang,  Asia/Ulaanbaatar,  Asia/Ulan_Bator,  Asia/Urumqi,  Asia/Ust-Nera,  Asia/Vientiane,  Asia/Vladivostok,  Asia/Yakutsk,  Asia/Yangon,  Asia/Yekaterinburg,  Asia/Yerevan,  Atlantic/Azores,  Atlantic/Bermuda,  Atlantic/Canary,  Atlantic/Cape_Verde,  Atlantic/Faeroe,  Atlantic/Faroe,  Atlantic/Jan_Mayen,  Atlantic/Madeira,  Atlantic/Reykjavik,  Atlantic/South_Georgia,  Atlantic/St_Helena,  Atlantic/Stanley,  Australia/ACT,  Australia/Adelaide,  Australia/Brisbane,  Australia/Broken_Hill,  Australia/Canberra,  Australia/Currie,  Australia/Darwin,  Australia/Eucla,  Australia/Hobart,  Australia/LHI,  Australia/Lindeman,  Australia/Lord_Howe,  Australia/Melbourne,  Australia/NSW,  Australia/North,  Australia/Perth,  Australia/Queensland,  Australia/South,  Australia/Sydney,  Australia/Tasmania,  Australia/Victoria,  Australia/West,  Australia/Yancowinna,  Brazil/Acre,  Brazil/DeNoronha,  Brazil/East,  Brazil/West,  CET,  CST6CDT,  Canada/Atlantic,  Canada/Central,  Canada/Eastern,  Canada/Mountain,  Canada/Newfoundland,  Canada/Pacific,  Canada/Saskatchewan,  Canada/Yukon,  Chile/Continental,  Chile/EasterIsland,  Cuba,  EET,  EST,  EST5EDT,  Egypt,  Eire,  Etc/GMT,  Etc/GMT+0,  Etc/GMT+1,  Etc/GMT+10,  Etc/GMT+11,  Etc/GMT+12,  Etc/GMT+2,  Etc/GMT+3,  Etc/GMT+4,  Etc/GMT+5,  Etc/GMT+6,  Etc/GMT+7,  Etc/GMT+8,  Etc/GMT+9,  Etc/GMT-0,  Etc/GMT-1,  Etc/GMT-10,  Etc/GMT-11,  Etc/GMT-12,  Etc/GMT-13,  Etc/GMT-14,  Etc/GMT-2,  Etc/GMT-3,  Etc/GMT-4,  Etc/GMT-5,  Etc/GMT-6,  Etc/GMT-7,  Etc/GMT-8,  Etc/GMT-9,  Etc/GMT0,  Etc/Greenwich,  Etc/UCT,  Etc/UTC,  Etc/Universal,  Etc/Zulu,  Europe/Amsterdam,  Europe/Andorra,  Europe/Astrakhan,  Europe/Athens,  Europe/Belfast,  Europe/Belgrade,  Europe/Berlin,  Europe/Bratislava,  Europe/Brussels,  Europe/Bucharest,  Europe/Budapest,  Europe/Busingen,  Europe/Chisinau,  Europe/Copenhagen,  Europe/Dublin,  Europe/Gibraltar,  Europe/Guernsey,  Europe/Helsinki,  Europe/Isle_of_Man,  Europe/Istanbul,  Europe/Jersey,  Europe/Kaliningrad,  Europe/Kiev,  Europe/Kirov,  Europe/Kyiv,  Europe/Lisbon,  Europe/Ljubljana,  Europe/London,  Europe/Luxembourg,  Europe/Madrid,  Europe/Malta,  Europe/Mariehamn,  Europe/Minsk,  Europe/Monaco,  Europe/Moscow,  Europe/Nicosia,  Europe/Oslo,  Europe/Paris,  Europe/Podgorica,  Europe/Prague,  Europe/Riga,  Europe/Rome,  Europe/Samara,  Europe/San_Marino,  Europe/Sarajevo,  Europe/Saratov,  Europe/Simferopol,  Europe/Skopje,  Europe/Sofia,  Europe/Stockholm,  Europe/Tallinn,  Europe/Tirane,  Europe/Tiraspol,  Europe/Ulyanovsk,  Europe/Uzhgorod,  Europe/Vaduz,  Europe/Vatican,  Europe/Vienna,  Europe/Vilnius,  Europe/Volgograd,  Europe/Warsaw,  Europe/Zagreb,  Europe/Zaporozhye,  Europe/Zurich,  GB,  GB-Eire,  GMT,  GMT+0,  GMT-0,  GMT0,  Greenwich,  HST,  Hongkong,  Iceland,  Indian/Antananarivo,  Indian/Chagos,  Indian/Christmas,  Indian/Cocos,  Indian/Comoro,  Indian/Kerguelen,  Indian/Mahe,  Indian/Maldives,  Indian/Mauritius,  Indian/Mayotte,  Indian/Reunion,  Iran,  Israel,  Jamaica,  Japan,  Kwajalein,  Libya,  MET,  MST,  MST7MDT,  Mexico/BajaNorte,  Mexico/BajaSur,  Mexico/General,  NZ,  NZ-CHAT,  Navajo,  PRC,  PST8PDT,  Pacific/Apia,  Pacific/Auckland,  Pacific/Bougainville,  Pacific/Chatham,  Pacific/Chuuk,  Pacific/Easter,  Pacific/Efate,  Pacific/Enderbury,  Pacific/Fakaofo,  Pacific/Fiji,  Pacific/Funafuti,  Pacific/Galapagos,  Pacific/Gambier,  Pacific/Guadalcanal,  Pacific/Guam,  Pacific/Honolulu,  Pacific/Johnston,  Pacific/Kanton,  Pacific/Kiritimati,  Pacific/Kosrae,  Pacific/Kwajalein,  Pacific/Majuro,  Pacific/Marquesas,  Pacific/Midway,  Pacific/Nauru,  Pacific/Niue,  Pacific/Norfolk,  Pacific/Noumea,  Pacific/Pago_Pago,  Pacific/Palau,  Pacific/Pitcairn,  Pacific/Pohnpei,  Pacific/Ponape,  Pacific/Port_Moresby,  Pacific/Rarotonga,  Pacific/Saipan,  Pacific/Samoa,  Pacific/Tahiti,  Pacific/Tarawa,  Pacific/Tongatapu,  Pacific/Truk,  Pacific/Wake,  Pacific/Wallis,  Pacific/Yap,  Poland,  Portugal,  ROC,  ROK,  Singapore,  Turkey,  UCT,  US/Alaska,  US/Aleutian,  US/Arizona,  US/Central,  US/East-Indiana,  US/Eastern,  US/Hawaii,  US/Indiana-Starke,  US/Michigan,  US/Mountain,  US/Pacific,  US/Samoa,  UTC,  Universal,  W-SU,  WET,  Zulu,  ,  };
 
   @BuiltValueField(wireName: r'country_id')
   int? get countryId;
@@ -226,6 +226,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum africaSlashAlgiers = _$locationTimezoneEnum_africaSlashAlgiers;
   @BuiltValueEnumConst(wireName: r'Africa/Asmara')
   static const LocationTimezoneEnum africaSlashAsmara = _$locationTimezoneEnum_africaSlashAsmara;
+  @BuiltValueEnumConst(wireName: r'Africa/Asmera')
+  static const LocationTimezoneEnum africaSlashAsmera = _$locationTimezoneEnum_africaSlashAsmera;
   @BuiltValueEnumConst(wireName: r'Africa/Bamako')
   static const LocationTimezoneEnum africaSlashBamako = _$locationTimezoneEnum_africaSlashBamako;
   @BuiltValueEnumConst(wireName: r'Africa/Bangui')
@@ -314,6 +316,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum africaSlashPortoNovo = _$locationTimezoneEnum_africaSlashPortoNovo;
   @BuiltValueEnumConst(wireName: r'Africa/Sao_Tome')
   static const LocationTimezoneEnum africaSlashSaoTome = _$locationTimezoneEnum_africaSlashSaoTome;
+  @BuiltValueEnumConst(wireName: r'Africa/Timbuktu')
+  static const LocationTimezoneEnum africaSlashTimbuktu = _$locationTimezoneEnum_africaSlashTimbuktu;
   @BuiltValueEnumConst(wireName: r'Africa/Tripoli')
   static const LocationTimezoneEnum africaSlashTripoli = _$locationTimezoneEnum_africaSlashTripoli;
   @BuiltValueEnumConst(wireName: r'Africa/Tunis')
@@ -334,6 +338,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashArgentinaSlashBuenosAires = _$locationTimezoneEnum_americaSlashArgentinaSlashBuenosAires;
   @BuiltValueEnumConst(wireName: r'America/Argentina/Catamarca')
   static const LocationTimezoneEnum americaSlashArgentinaSlashCatamarca = _$locationTimezoneEnum_americaSlashArgentinaSlashCatamarca;
+  @BuiltValueEnumConst(wireName: r'America/Argentina/ComodRivadavia')
+  static const LocationTimezoneEnum americaSlashArgentinaSlashComodRivadavia = _$locationTimezoneEnum_americaSlashArgentinaSlashComodRivadavia;
   @BuiltValueEnumConst(wireName: r'America/Argentina/Cordoba')
   static const LocationTimezoneEnum americaSlashArgentinaSlashCordoba = _$locationTimezoneEnum_americaSlashArgentinaSlashCordoba;
   @BuiltValueEnumConst(wireName: r'America/Argentina/Jujuy')
@@ -360,6 +366,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashAsuncion = _$locationTimezoneEnum_americaSlashAsuncion;
   @BuiltValueEnumConst(wireName: r'America/Atikokan')
   static const LocationTimezoneEnum americaSlashAtikokan = _$locationTimezoneEnum_americaSlashAtikokan;
+  @BuiltValueEnumConst(wireName: r'America/Atka')
+  static const LocationTimezoneEnum americaSlashAtka = _$locationTimezoneEnum_americaSlashAtka;
   @BuiltValueEnumConst(wireName: r'America/Bahia')
   static const LocationTimezoneEnum americaSlashBahia = _$locationTimezoneEnum_americaSlashBahia;
   @BuiltValueEnumConst(wireName: r'America/Bahia_Banderas')
@@ -378,6 +386,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashBogota = _$locationTimezoneEnum_americaSlashBogota;
   @BuiltValueEnumConst(wireName: r'America/Boise')
   static const LocationTimezoneEnum americaSlashBoise = _$locationTimezoneEnum_americaSlashBoise;
+  @BuiltValueEnumConst(wireName: r'America/Buenos_Aires')
+  static const LocationTimezoneEnum americaSlashBuenosAires = _$locationTimezoneEnum_americaSlashBuenosAires;
   @BuiltValueEnumConst(wireName: r'America/Cambridge_Bay')
   static const LocationTimezoneEnum americaSlashCambridgeBay = _$locationTimezoneEnum_americaSlashCambridgeBay;
   @BuiltValueEnumConst(wireName: r'America/Campo_Grande')
@@ -386,6 +396,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashCancun = _$locationTimezoneEnum_americaSlashCancun;
   @BuiltValueEnumConst(wireName: r'America/Caracas')
   static const LocationTimezoneEnum americaSlashCaracas = _$locationTimezoneEnum_americaSlashCaracas;
+  @BuiltValueEnumConst(wireName: r'America/Catamarca')
+  static const LocationTimezoneEnum americaSlashCatamarca = _$locationTimezoneEnum_americaSlashCatamarca;
   @BuiltValueEnumConst(wireName: r'America/Cayenne')
   static const LocationTimezoneEnum americaSlashCayenne = _$locationTimezoneEnum_americaSlashCayenne;
   @BuiltValueEnumConst(wireName: r'America/Cayman')
@@ -396,6 +408,10 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashChihuahua = _$locationTimezoneEnum_americaSlashChihuahua;
   @BuiltValueEnumConst(wireName: r'America/Ciudad_Juarez')
   static const LocationTimezoneEnum americaSlashCiudadJuarez = _$locationTimezoneEnum_americaSlashCiudadJuarez;
+  @BuiltValueEnumConst(wireName: r'America/Coral_Harbour')
+  static const LocationTimezoneEnum americaSlashCoralHarbour = _$locationTimezoneEnum_americaSlashCoralHarbour;
+  @BuiltValueEnumConst(wireName: r'America/Cordoba')
+  static const LocationTimezoneEnum americaSlashCordoba = _$locationTimezoneEnum_americaSlashCordoba;
   @BuiltValueEnumConst(wireName: r'America/Costa_Rica')
   static const LocationTimezoneEnum americaSlashCostaRica = _$locationTimezoneEnum_americaSlashCostaRica;
   @BuiltValueEnumConst(wireName: r'America/Creston')
@@ -422,12 +438,18 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashEirunepe = _$locationTimezoneEnum_americaSlashEirunepe;
   @BuiltValueEnumConst(wireName: r'America/El_Salvador')
   static const LocationTimezoneEnum americaSlashElSalvador = _$locationTimezoneEnum_americaSlashElSalvador;
+  @BuiltValueEnumConst(wireName: r'America/Ensenada')
+  static const LocationTimezoneEnum americaSlashEnsenada = _$locationTimezoneEnum_americaSlashEnsenada;
   @BuiltValueEnumConst(wireName: r'America/Fort_Nelson')
   static const LocationTimezoneEnum americaSlashFortNelson = _$locationTimezoneEnum_americaSlashFortNelson;
+  @BuiltValueEnumConst(wireName: r'America/Fort_Wayne')
+  static const LocationTimezoneEnum americaSlashFortWayne = _$locationTimezoneEnum_americaSlashFortWayne;
   @BuiltValueEnumConst(wireName: r'America/Fortaleza')
   static const LocationTimezoneEnum americaSlashFortaleza = _$locationTimezoneEnum_americaSlashFortaleza;
   @BuiltValueEnumConst(wireName: r'America/Glace_Bay')
   static const LocationTimezoneEnum americaSlashGlaceBay = _$locationTimezoneEnum_americaSlashGlaceBay;
+  @BuiltValueEnumConst(wireName: r'America/Godthab')
+  static const LocationTimezoneEnum americaSlashGodthab = _$locationTimezoneEnum_americaSlashGodthab;
   @BuiltValueEnumConst(wireName: r'America/Goose_Bay')
   static const LocationTimezoneEnum americaSlashGooseBay = _$locationTimezoneEnum_americaSlashGooseBay;
   @BuiltValueEnumConst(wireName: r'America/Grand_Turk')
@@ -464,18 +486,24 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashIndianaSlashVincennes = _$locationTimezoneEnum_americaSlashIndianaSlashVincennes;
   @BuiltValueEnumConst(wireName: r'America/Indiana/Winamac')
   static const LocationTimezoneEnum americaSlashIndianaSlashWinamac = _$locationTimezoneEnum_americaSlashIndianaSlashWinamac;
+  @BuiltValueEnumConst(wireName: r'America/Indianapolis')
+  static const LocationTimezoneEnum americaSlashIndianapolis = _$locationTimezoneEnum_americaSlashIndianapolis;
   @BuiltValueEnumConst(wireName: r'America/Inuvik')
   static const LocationTimezoneEnum americaSlashInuvik = _$locationTimezoneEnum_americaSlashInuvik;
   @BuiltValueEnumConst(wireName: r'America/Iqaluit')
   static const LocationTimezoneEnum americaSlashIqaluit = _$locationTimezoneEnum_americaSlashIqaluit;
   @BuiltValueEnumConst(wireName: r'America/Jamaica')
   static const LocationTimezoneEnum americaSlashJamaica = _$locationTimezoneEnum_americaSlashJamaica;
+  @BuiltValueEnumConst(wireName: r'America/Jujuy')
+  static const LocationTimezoneEnum americaSlashJujuy = _$locationTimezoneEnum_americaSlashJujuy;
   @BuiltValueEnumConst(wireName: r'America/Juneau')
   static const LocationTimezoneEnum americaSlashJuneau = _$locationTimezoneEnum_americaSlashJuneau;
   @BuiltValueEnumConst(wireName: r'America/Kentucky/Louisville')
   static const LocationTimezoneEnum americaSlashKentuckySlashLouisville = _$locationTimezoneEnum_americaSlashKentuckySlashLouisville;
   @BuiltValueEnumConst(wireName: r'America/Kentucky/Monticello')
   static const LocationTimezoneEnum americaSlashKentuckySlashMonticello = _$locationTimezoneEnum_americaSlashKentuckySlashMonticello;
+  @BuiltValueEnumConst(wireName: r'America/Knox_IN')
+  static const LocationTimezoneEnum americaSlashKnoxIN = _$locationTimezoneEnum_americaSlashKnoxIN;
   @BuiltValueEnumConst(wireName: r'America/Kralendijk')
   static const LocationTimezoneEnum americaSlashKralendijk = _$locationTimezoneEnum_americaSlashKralendijk;
   @BuiltValueEnumConst(wireName: r'America/La_Paz')
@@ -484,6 +512,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashLima = _$locationTimezoneEnum_americaSlashLima;
   @BuiltValueEnumConst(wireName: r'America/Los_Angeles')
   static const LocationTimezoneEnum americaSlashLosAngeles = _$locationTimezoneEnum_americaSlashLosAngeles;
+  @BuiltValueEnumConst(wireName: r'America/Louisville')
+  static const LocationTimezoneEnum americaSlashLouisville = _$locationTimezoneEnum_americaSlashLouisville;
   @BuiltValueEnumConst(wireName: r'America/Lower_Princes')
   static const LocationTimezoneEnum americaSlashLowerPrinces = _$locationTimezoneEnum_americaSlashLowerPrinces;
   @BuiltValueEnumConst(wireName: r'America/Maceio')
@@ -500,6 +530,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashMatamoros = _$locationTimezoneEnum_americaSlashMatamoros;
   @BuiltValueEnumConst(wireName: r'America/Mazatlan')
   static const LocationTimezoneEnum americaSlashMazatlan = _$locationTimezoneEnum_americaSlashMazatlan;
+  @BuiltValueEnumConst(wireName: r'America/Mendoza')
+  static const LocationTimezoneEnum americaSlashMendoza = _$locationTimezoneEnum_americaSlashMendoza;
   @BuiltValueEnumConst(wireName: r'America/Menominee')
   static const LocationTimezoneEnum americaSlashMenominee = _$locationTimezoneEnum_americaSlashMenominee;
   @BuiltValueEnumConst(wireName: r'America/Merida')
@@ -516,12 +548,16 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashMonterrey = _$locationTimezoneEnum_americaSlashMonterrey;
   @BuiltValueEnumConst(wireName: r'America/Montevideo')
   static const LocationTimezoneEnum americaSlashMontevideo = _$locationTimezoneEnum_americaSlashMontevideo;
+  @BuiltValueEnumConst(wireName: r'America/Montreal')
+  static const LocationTimezoneEnum americaSlashMontreal = _$locationTimezoneEnum_americaSlashMontreal;
   @BuiltValueEnumConst(wireName: r'America/Montserrat')
   static const LocationTimezoneEnum americaSlashMontserrat = _$locationTimezoneEnum_americaSlashMontserrat;
   @BuiltValueEnumConst(wireName: r'America/Nassau')
   static const LocationTimezoneEnum americaSlashNassau = _$locationTimezoneEnum_americaSlashNassau;
   @BuiltValueEnumConst(wireName: r'America/New_York')
   static const LocationTimezoneEnum americaSlashNewYork = _$locationTimezoneEnum_americaSlashNewYork;
+  @BuiltValueEnumConst(wireName: r'America/Nipigon')
+  static const LocationTimezoneEnum americaSlashNipigon = _$locationTimezoneEnum_americaSlashNipigon;
   @BuiltValueEnumConst(wireName: r'America/Nome')
   static const LocationTimezoneEnum americaSlashNome = _$locationTimezoneEnum_americaSlashNome;
   @BuiltValueEnumConst(wireName: r'America/Noronha')
@@ -538,6 +574,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashOjinaga = _$locationTimezoneEnum_americaSlashOjinaga;
   @BuiltValueEnumConst(wireName: r'America/Panama')
   static const LocationTimezoneEnum americaSlashPanama = _$locationTimezoneEnum_americaSlashPanama;
+  @BuiltValueEnumConst(wireName: r'America/Pangnirtung')
+  static const LocationTimezoneEnum americaSlashPangnirtung = _$locationTimezoneEnum_americaSlashPangnirtung;
   @BuiltValueEnumConst(wireName: r'America/Paramaribo')
   static const LocationTimezoneEnum americaSlashParamaribo = _$locationTimezoneEnum_americaSlashParamaribo;
   @BuiltValueEnumConst(wireName: r'America/Phoenix')
@@ -546,12 +584,16 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashPortAuPrince = _$locationTimezoneEnum_americaSlashPortAuPrince;
   @BuiltValueEnumConst(wireName: r'America/Port_of_Spain')
   static const LocationTimezoneEnum americaSlashPortOfSpain = _$locationTimezoneEnum_americaSlashPortOfSpain;
+  @BuiltValueEnumConst(wireName: r'America/Porto_Acre')
+  static const LocationTimezoneEnum americaSlashPortoAcre = _$locationTimezoneEnum_americaSlashPortoAcre;
   @BuiltValueEnumConst(wireName: r'America/Porto_Velho')
   static const LocationTimezoneEnum americaSlashPortoVelho = _$locationTimezoneEnum_americaSlashPortoVelho;
   @BuiltValueEnumConst(wireName: r'America/Puerto_Rico')
   static const LocationTimezoneEnum americaSlashPuertoRico = _$locationTimezoneEnum_americaSlashPuertoRico;
   @BuiltValueEnumConst(wireName: r'America/Punta_Arenas')
   static const LocationTimezoneEnum americaSlashPuntaArenas = _$locationTimezoneEnum_americaSlashPuntaArenas;
+  @BuiltValueEnumConst(wireName: r'America/Rainy_River')
+  static const LocationTimezoneEnum americaSlashRainyRiver = _$locationTimezoneEnum_americaSlashRainyRiver;
   @BuiltValueEnumConst(wireName: r'America/Rankin_Inlet')
   static const LocationTimezoneEnum americaSlashRankinInlet = _$locationTimezoneEnum_americaSlashRankinInlet;
   @BuiltValueEnumConst(wireName: r'America/Recife')
@@ -562,6 +604,10 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashResolute = _$locationTimezoneEnum_americaSlashResolute;
   @BuiltValueEnumConst(wireName: r'America/Rio_Branco')
   static const LocationTimezoneEnum americaSlashRioBranco = _$locationTimezoneEnum_americaSlashRioBranco;
+  @BuiltValueEnumConst(wireName: r'America/Rosario')
+  static const LocationTimezoneEnum americaSlashRosario = _$locationTimezoneEnum_americaSlashRosario;
+  @BuiltValueEnumConst(wireName: r'America/Santa_Isabel')
+  static const LocationTimezoneEnum americaSlashSantaIsabel = _$locationTimezoneEnum_americaSlashSantaIsabel;
   @BuiltValueEnumConst(wireName: r'America/Santarem')
   static const LocationTimezoneEnum americaSlashSantarem = _$locationTimezoneEnum_americaSlashSantarem;
   @BuiltValueEnumConst(wireName: r'America/Santiago')
@@ -572,6 +618,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashSaoPaulo = _$locationTimezoneEnum_americaSlashSaoPaulo;
   @BuiltValueEnumConst(wireName: r'America/Scoresbysund')
   static const LocationTimezoneEnum americaSlashScoresbysund = _$locationTimezoneEnum_americaSlashScoresbysund;
+  @BuiltValueEnumConst(wireName: r'America/Shiprock')
+  static const LocationTimezoneEnum americaSlashShiprock = _$locationTimezoneEnum_americaSlashShiprock;
   @BuiltValueEnumConst(wireName: r'America/Sitka')
   static const LocationTimezoneEnum americaSlashSitka = _$locationTimezoneEnum_americaSlashSitka;
   @BuiltValueEnumConst(wireName: r'America/St_Barthelemy')
@@ -592,6 +640,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashTegucigalpa = _$locationTimezoneEnum_americaSlashTegucigalpa;
   @BuiltValueEnumConst(wireName: r'America/Thule')
   static const LocationTimezoneEnum americaSlashThule = _$locationTimezoneEnum_americaSlashThule;
+  @BuiltValueEnumConst(wireName: r'America/Thunder_Bay')
+  static const LocationTimezoneEnum americaSlashThunderBay = _$locationTimezoneEnum_americaSlashThunderBay;
   @BuiltValueEnumConst(wireName: r'America/Tijuana')
   static const LocationTimezoneEnum americaSlashTijuana = _$locationTimezoneEnum_americaSlashTijuana;
   @BuiltValueEnumConst(wireName: r'America/Toronto')
@@ -600,12 +650,16 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum americaSlashTortola = _$locationTimezoneEnum_americaSlashTortola;
   @BuiltValueEnumConst(wireName: r'America/Vancouver')
   static const LocationTimezoneEnum americaSlashVancouver = _$locationTimezoneEnum_americaSlashVancouver;
+  @BuiltValueEnumConst(wireName: r'America/Virgin')
+  static const LocationTimezoneEnum americaSlashVirgin = _$locationTimezoneEnum_americaSlashVirgin;
   @BuiltValueEnumConst(wireName: r'America/Whitehorse')
   static const LocationTimezoneEnum americaSlashWhitehorse = _$locationTimezoneEnum_americaSlashWhitehorse;
   @BuiltValueEnumConst(wireName: r'America/Winnipeg')
   static const LocationTimezoneEnum americaSlashWinnipeg = _$locationTimezoneEnum_americaSlashWinnipeg;
   @BuiltValueEnumConst(wireName: r'America/Yakutat')
   static const LocationTimezoneEnum americaSlashYakutat = _$locationTimezoneEnum_americaSlashYakutat;
+  @BuiltValueEnumConst(wireName: r'America/Yellowknife')
+  static const LocationTimezoneEnum americaSlashYellowknife = _$locationTimezoneEnum_americaSlashYellowknife;
   @BuiltValueEnumConst(wireName: r'Antarctica/Casey')
   static const LocationTimezoneEnum antarcticaSlashCasey = _$locationTimezoneEnum_antarcticaSlashCasey;
   @BuiltValueEnumConst(wireName: r'Antarctica/Davis')
@@ -622,6 +676,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum antarcticaSlashPalmer = _$locationTimezoneEnum_antarcticaSlashPalmer;
   @BuiltValueEnumConst(wireName: r'Antarctica/Rothera')
   static const LocationTimezoneEnum antarcticaSlashRothera = _$locationTimezoneEnum_antarcticaSlashRothera;
+  @BuiltValueEnumConst(wireName: r'Antarctica/South_Pole')
+  static const LocationTimezoneEnum antarcticaSlashSouthPole = _$locationTimezoneEnum_antarcticaSlashSouthPole;
   @BuiltValueEnumConst(wireName: r'Antarctica/Syowa')
   static const LocationTimezoneEnum antarcticaSlashSyowa = _$locationTimezoneEnum_antarcticaSlashSyowa;
   @BuiltValueEnumConst(wireName: r'Antarctica/Troll')
@@ -644,6 +700,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum asiaSlashAqtobe = _$locationTimezoneEnum_asiaSlashAqtobe;
   @BuiltValueEnumConst(wireName: r'Asia/Ashgabat')
   static const LocationTimezoneEnum asiaSlashAshgabat = _$locationTimezoneEnum_asiaSlashAshgabat;
+  @BuiltValueEnumConst(wireName: r'Asia/Ashkhabad')
+  static const LocationTimezoneEnum asiaSlashAshkhabad = _$locationTimezoneEnum_asiaSlashAshkhabad;
   @BuiltValueEnumConst(wireName: r'Asia/Atyrau')
   static const LocationTimezoneEnum asiaSlashAtyrau = _$locationTimezoneEnum_asiaSlashAtyrau;
   @BuiltValueEnumConst(wireName: r'Asia/Baghdad')
@@ -662,10 +720,20 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum asiaSlashBishkek = _$locationTimezoneEnum_asiaSlashBishkek;
   @BuiltValueEnumConst(wireName: r'Asia/Brunei')
   static const LocationTimezoneEnum asiaSlashBrunei = _$locationTimezoneEnum_asiaSlashBrunei;
+  @BuiltValueEnumConst(wireName: r'Asia/Calcutta')
+  static const LocationTimezoneEnum asiaSlashCalcutta = _$locationTimezoneEnum_asiaSlashCalcutta;
   @BuiltValueEnumConst(wireName: r'Asia/Chita')
   static const LocationTimezoneEnum asiaSlashChita = _$locationTimezoneEnum_asiaSlashChita;
+  @BuiltValueEnumConst(wireName: r'Asia/Choibalsan')
+  static const LocationTimezoneEnum asiaSlashChoibalsan = _$locationTimezoneEnum_asiaSlashChoibalsan;
+  @BuiltValueEnumConst(wireName: r'Asia/Chongqing')
+  static const LocationTimezoneEnum asiaSlashChongqing = _$locationTimezoneEnum_asiaSlashChongqing;
+  @BuiltValueEnumConst(wireName: r'Asia/Chungking')
+  static const LocationTimezoneEnum asiaSlashChungking = _$locationTimezoneEnum_asiaSlashChungking;
   @BuiltValueEnumConst(wireName: r'Asia/Colombo')
   static const LocationTimezoneEnum asiaSlashColombo = _$locationTimezoneEnum_asiaSlashColombo;
+  @BuiltValueEnumConst(wireName: r'Asia/Dacca')
+  static const LocationTimezoneEnum asiaSlashDacca = _$locationTimezoneEnum_asiaSlashDacca;
   @BuiltValueEnumConst(wireName: r'Asia/Damascus')
   static const LocationTimezoneEnum asiaSlashDamascus = _$locationTimezoneEnum_asiaSlashDamascus;
   @BuiltValueEnumConst(wireName: r'Asia/Dhaka')
@@ -680,6 +748,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum asiaSlashFamagusta = _$locationTimezoneEnum_asiaSlashFamagusta;
   @BuiltValueEnumConst(wireName: r'Asia/Gaza')
   static const LocationTimezoneEnum asiaSlashGaza = _$locationTimezoneEnum_asiaSlashGaza;
+  @BuiltValueEnumConst(wireName: r'Asia/Harbin')
+  static const LocationTimezoneEnum asiaSlashHarbin = _$locationTimezoneEnum_asiaSlashHarbin;
   @BuiltValueEnumConst(wireName: r'Asia/Hebron')
   static const LocationTimezoneEnum asiaSlashHebron = _$locationTimezoneEnum_asiaSlashHebron;
   @BuiltValueEnumConst(wireName: r'Asia/Ho_Chi_Minh')
@@ -690,6 +760,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum asiaSlashHovd = _$locationTimezoneEnum_asiaSlashHovd;
   @BuiltValueEnumConst(wireName: r'Asia/Irkutsk')
   static const LocationTimezoneEnum asiaSlashIrkutsk = _$locationTimezoneEnum_asiaSlashIrkutsk;
+  @BuiltValueEnumConst(wireName: r'Asia/Istanbul')
+  static const LocationTimezoneEnum asiaSlashIstanbul = _$locationTimezoneEnum_asiaSlashIstanbul;
   @BuiltValueEnumConst(wireName: r'Asia/Jakarta')
   static const LocationTimezoneEnum asiaSlashJakarta = _$locationTimezoneEnum_asiaSlashJakarta;
   @BuiltValueEnumConst(wireName: r'Asia/Jayapura')
@@ -702,8 +774,12 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum asiaSlashKamchatka = _$locationTimezoneEnum_asiaSlashKamchatka;
   @BuiltValueEnumConst(wireName: r'Asia/Karachi')
   static const LocationTimezoneEnum asiaSlashKarachi = _$locationTimezoneEnum_asiaSlashKarachi;
+  @BuiltValueEnumConst(wireName: r'Asia/Kashgar')
+  static const LocationTimezoneEnum asiaSlashKashgar = _$locationTimezoneEnum_asiaSlashKashgar;
   @BuiltValueEnumConst(wireName: r'Asia/Kathmandu')
   static const LocationTimezoneEnum asiaSlashKathmandu = _$locationTimezoneEnum_asiaSlashKathmandu;
+  @BuiltValueEnumConst(wireName: r'Asia/Katmandu')
+  static const LocationTimezoneEnum asiaSlashKatmandu = _$locationTimezoneEnum_asiaSlashKatmandu;
   @BuiltValueEnumConst(wireName: r'Asia/Khandyga')
   static const LocationTimezoneEnum asiaSlashKhandyga = _$locationTimezoneEnum_asiaSlashKhandyga;
   @BuiltValueEnumConst(wireName: r'Asia/Kolkata')
@@ -716,6 +792,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum asiaSlashKuching = _$locationTimezoneEnum_asiaSlashKuching;
   @BuiltValueEnumConst(wireName: r'Asia/Kuwait')
   static const LocationTimezoneEnum asiaSlashKuwait = _$locationTimezoneEnum_asiaSlashKuwait;
+  @BuiltValueEnumConst(wireName: r'Asia/Macao')
+  static const LocationTimezoneEnum asiaSlashMacao = _$locationTimezoneEnum_asiaSlashMacao;
   @BuiltValueEnumConst(wireName: r'Asia/Macau')
   static const LocationTimezoneEnum asiaSlashMacau = _$locationTimezoneEnum_asiaSlashMacau;
   @BuiltValueEnumConst(wireName: r'Asia/Magadan')
@@ -748,8 +826,12 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum asiaSlashQostanay = _$locationTimezoneEnum_asiaSlashQostanay;
   @BuiltValueEnumConst(wireName: r'Asia/Qyzylorda')
   static const LocationTimezoneEnum asiaSlashQyzylorda = _$locationTimezoneEnum_asiaSlashQyzylorda;
+  @BuiltValueEnumConst(wireName: r'Asia/Rangoon')
+  static const LocationTimezoneEnum asiaSlashRangoon = _$locationTimezoneEnum_asiaSlashRangoon;
   @BuiltValueEnumConst(wireName: r'Asia/Riyadh')
   static const LocationTimezoneEnum asiaSlashRiyadh = _$locationTimezoneEnum_asiaSlashRiyadh;
+  @BuiltValueEnumConst(wireName: r'Asia/Saigon')
+  static const LocationTimezoneEnum asiaSlashSaigon = _$locationTimezoneEnum_asiaSlashSaigon;
   @BuiltValueEnumConst(wireName: r'Asia/Sakhalin')
   static const LocationTimezoneEnum asiaSlashSakhalin = _$locationTimezoneEnum_asiaSlashSakhalin;
   @BuiltValueEnumConst(wireName: r'Asia/Samarkand')
@@ -770,14 +852,22 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum asiaSlashTbilisi = _$locationTimezoneEnum_asiaSlashTbilisi;
   @BuiltValueEnumConst(wireName: r'Asia/Tehran')
   static const LocationTimezoneEnum asiaSlashTehran = _$locationTimezoneEnum_asiaSlashTehran;
+  @BuiltValueEnumConst(wireName: r'Asia/Tel_Aviv')
+  static const LocationTimezoneEnum asiaSlashTelAviv = _$locationTimezoneEnum_asiaSlashTelAviv;
+  @BuiltValueEnumConst(wireName: r'Asia/Thimbu')
+  static const LocationTimezoneEnum asiaSlashThimbu = _$locationTimezoneEnum_asiaSlashThimbu;
   @BuiltValueEnumConst(wireName: r'Asia/Thimphu')
   static const LocationTimezoneEnum asiaSlashThimphu = _$locationTimezoneEnum_asiaSlashThimphu;
   @BuiltValueEnumConst(wireName: r'Asia/Tokyo')
   static const LocationTimezoneEnum asiaSlashTokyo = _$locationTimezoneEnum_asiaSlashTokyo;
   @BuiltValueEnumConst(wireName: r'Asia/Tomsk')
   static const LocationTimezoneEnum asiaSlashTomsk = _$locationTimezoneEnum_asiaSlashTomsk;
+  @BuiltValueEnumConst(wireName: r'Asia/Ujung_Pandang')
+  static const LocationTimezoneEnum asiaSlashUjungPandang = _$locationTimezoneEnum_asiaSlashUjungPandang;
   @BuiltValueEnumConst(wireName: r'Asia/Ulaanbaatar')
   static const LocationTimezoneEnum asiaSlashUlaanbaatar = _$locationTimezoneEnum_asiaSlashUlaanbaatar;
+  @BuiltValueEnumConst(wireName: r'Asia/Ulan_Bator')
+  static const LocationTimezoneEnum asiaSlashUlanBator = _$locationTimezoneEnum_asiaSlashUlanBator;
   @BuiltValueEnumConst(wireName: r'Asia/Urumqi')
   static const LocationTimezoneEnum asiaSlashUrumqi = _$locationTimezoneEnum_asiaSlashUrumqi;
   @BuiltValueEnumConst(wireName: r'Asia/Ust-Nera')
@@ -802,8 +892,12 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum atlanticSlashCanary = _$locationTimezoneEnum_atlanticSlashCanary;
   @BuiltValueEnumConst(wireName: r'Atlantic/Cape_Verde')
   static const LocationTimezoneEnum atlanticSlashCapeVerde = _$locationTimezoneEnum_atlanticSlashCapeVerde;
+  @BuiltValueEnumConst(wireName: r'Atlantic/Faeroe')
+  static const LocationTimezoneEnum atlanticSlashFaeroe = _$locationTimezoneEnum_atlanticSlashFaeroe;
   @BuiltValueEnumConst(wireName: r'Atlantic/Faroe')
   static const LocationTimezoneEnum atlanticSlashFaroe = _$locationTimezoneEnum_atlanticSlashFaroe;
+  @BuiltValueEnumConst(wireName: r'Atlantic/Jan_Mayen')
+  static const LocationTimezoneEnum atlanticSlashJanMayen = _$locationTimezoneEnum_atlanticSlashJanMayen;
   @BuiltValueEnumConst(wireName: r'Atlantic/Madeira')
   static const LocationTimezoneEnum atlanticSlashMadeira = _$locationTimezoneEnum_atlanticSlashMadeira;
   @BuiltValueEnumConst(wireName: r'Atlantic/Reykjavik')
@@ -814,28 +908,64 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum atlanticSlashStHelena = _$locationTimezoneEnum_atlanticSlashStHelena;
   @BuiltValueEnumConst(wireName: r'Atlantic/Stanley')
   static const LocationTimezoneEnum atlanticSlashStanley = _$locationTimezoneEnum_atlanticSlashStanley;
+  @BuiltValueEnumConst(wireName: r'Australia/ACT')
+  static const LocationTimezoneEnum australiaSlashACT = _$locationTimezoneEnum_australiaSlashACT;
   @BuiltValueEnumConst(wireName: r'Australia/Adelaide')
   static const LocationTimezoneEnum australiaSlashAdelaide = _$locationTimezoneEnum_australiaSlashAdelaide;
   @BuiltValueEnumConst(wireName: r'Australia/Brisbane')
   static const LocationTimezoneEnum australiaSlashBrisbane = _$locationTimezoneEnum_australiaSlashBrisbane;
   @BuiltValueEnumConst(wireName: r'Australia/Broken_Hill')
   static const LocationTimezoneEnum australiaSlashBrokenHill = _$locationTimezoneEnum_australiaSlashBrokenHill;
+  @BuiltValueEnumConst(wireName: r'Australia/Canberra')
+  static const LocationTimezoneEnum australiaSlashCanberra = _$locationTimezoneEnum_australiaSlashCanberra;
+  @BuiltValueEnumConst(wireName: r'Australia/Currie')
+  static const LocationTimezoneEnum australiaSlashCurrie = _$locationTimezoneEnum_australiaSlashCurrie;
   @BuiltValueEnumConst(wireName: r'Australia/Darwin')
   static const LocationTimezoneEnum australiaSlashDarwin = _$locationTimezoneEnum_australiaSlashDarwin;
   @BuiltValueEnumConst(wireName: r'Australia/Eucla')
   static const LocationTimezoneEnum australiaSlashEucla = _$locationTimezoneEnum_australiaSlashEucla;
   @BuiltValueEnumConst(wireName: r'Australia/Hobart')
   static const LocationTimezoneEnum australiaSlashHobart = _$locationTimezoneEnum_australiaSlashHobart;
+  @BuiltValueEnumConst(wireName: r'Australia/LHI')
+  static const LocationTimezoneEnum australiaSlashLHI = _$locationTimezoneEnum_australiaSlashLHI;
   @BuiltValueEnumConst(wireName: r'Australia/Lindeman')
   static const LocationTimezoneEnum australiaSlashLindeman = _$locationTimezoneEnum_australiaSlashLindeman;
   @BuiltValueEnumConst(wireName: r'Australia/Lord_Howe')
   static const LocationTimezoneEnum australiaSlashLordHowe = _$locationTimezoneEnum_australiaSlashLordHowe;
   @BuiltValueEnumConst(wireName: r'Australia/Melbourne')
   static const LocationTimezoneEnum australiaSlashMelbourne = _$locationTimezoneEnum_australiaSlashMelbourne;
+  @BuiltValueEnumConst(wireName: r'Australia/NSW')
+  static const LocationTimezoneEnum australiaSlashNSW = _$locationTimezoneEnum_australiaSlashNSW;
+  @BuiltValueEnumConst(wireName: r'Australia/North')
+  static const LocationTimezoneEnum australiaSlashNorth = _$locationTimezoneEnum_australiaSlashNorth;
   @BuiltValueEnumConst(wireName: r'Australia/Perth')
   static const LocationTimezoneEnum australiaSlashPerth = _$locationTimezoneEnum_australiaSlashPerth;
+  @BuiltValueEnumConst(wireName: r'Australia/Queensland')
+  static const LocationTimezoneEnum australiaSlashQueensland = _$locationTimezoneEnum_australiaSlashQueensland;
+  @BuiltValueEnumConst(wireName: r'Australia/South')
+  static const LocationTimezoneEnum australiaSlashSouth = _$locationTimezoneEnum_australiaSlashSouth;
   @BuiltValueEnumConst(wireName: r'Australia/Sydney')
   static const LocationTimezoneEnum australiaSlashSydney = _$locationTimezoneEnum_australiaSlashSydney;
+  @BuiltValueEnumConst(wireName: r'Australia/Tasmania')
+  static const LocationTimezoneEnum australiaSlashTasmania = _$locationTimezoneEnum_australiaSlashTasmania;
+  @BuiltValueEnumConst(wireName: r'Australia/Victoria')
+  static const LocationTimezoneEnum australiaSlashVictoria = _$locationTimezoneEnum_australiaSlashVictoria;
+  @BuiltValueEnumConst(wireName: r'Australia/West')
+  static const LocationTimezoneEnum australiaSlashWest = _$locationTimezoneEnum_australiaSlashWest;
+  @BuiltValueEnumConst(wireName: r'Australia/Yancowinna')
+  static const LocationTimezoneEnum australiaSlashYancowinna = _$locationTimezoneEnum_australiaSlashYancowinna;
+  @BuiltValueEnumConst(wireName: r'Brazil/Acre')
+  static const LocationTimezoneEnum brazilSlashAcre = _$locationTimezoneEnum_brazilSlashAcre;
+  @BuiltValueEnumConst(wireName: r'Brazil/DeNoronha')
+  static const LocationTimezoneEnum brazilSlashDeNoronha = _$locationTimezoneEnum_brazilSlashDeNoronha;
+  @BuiltValueEnumConst(wireName: r'Brazil/East')
+  static const LocationTimezoneEnum brazilSlashEast = _$locationTimezoneEnum_brazilSlashEast;
+  @BuiltValueEnumConst(wireName: r'Brazil/West')
+  static const LocationTimezoneEnum brazilSlashWest = _$locationTimezoneEnum_brazilSlashWest;
+  @BuiltValueEnumConst(wireName: r'CET')
+  static const LocationTimezoneEnum CET = _$locationTimezoneEnum_CET;
+  @BuiltValueEnumConst(wireName: r'CST6CDT')
+  static const LocationTimezoneEnum cST6CDT = _$locationTimezoneEnum_cST6CDT;
   @BuiltValueEnumConst(wireName: r'Canada/Atlantic')
   static const LocationTimezoneEnum canadaSlashAtlantic = _$locationTimezoneEnum_canadaSlashAtlantic;
   @BuiltValueEnumConst(wireName: r'Canada/Central')
@@ -848,6 +978,96 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum canadaSlashNewfoundland = _$locationTimezoneEnum_canadaSlashNewfoundland;
   @BuiltValueEnumConst(wireName: r'Canada/Pacific')
   static const LocationTimezoneEnum canadaSlashPacific = _$locationTimezoneEnum_canadaSlashPacific;
+  @BuiltValueEnumConst(wireName: r'Canada/Saskatchewan')
+  static const LocationTimezoneEnum canadaSlashSaskatchewan = _$locationTimezoneEnum_canadaSlashSaskatchewan;
+  @BuiltValueEnumConst(wireName: r'Canada/Yukon')
+  static const LocationTimezoneEnum canadaSlashYukon = _$locationTimezoneEnum_canadaSlashYukon;
+  @BuiltValueEnumConst(wireName: r'Chile/Continental')
+  static const LocationTimezoneEnum chileSlashContinental = _$locationTimezoneEnum_chileSlashContinental;
+  @BuiltValueEnumConst(wireName: r'Chile/EasterIsland')
+  static const LocationTimezoneEnum chileSlashEasterIsland = _$locationTimezoneEnum_chileSlashEasterIsland;
+  @BuiltValueEnumConst(wireName: r'Cuba')
+  static const LocationTimezoneEnum cuba = _$locationTimezoneEnum_cuba;
+  @BuiltValueEnumConst(wireName: r'EET')
+  static const LocationTimezoneEnum EET = _$locationTimezoneEnum_EET;
+  @BuiltValueEnumConst(wireName: r'EST')
+  static const LocationTimezoneEnum EST = _$locationTimezoneEnum_EST;
+  @BuiltValueEnumConst(wireName: r'EST5EDT')
+  static const LocationTimezoneEnum eST5EDT = _$locationTimezoneEnum_eST5EDT;
+  @BuiltValueEnumConst(wireName: r'Egypt')
+  static const LocationTimezoneEnum egypt = _$locationTimezoneEnum_egypt;
+  @BuiltValueEnumConst(wireName: r'Eire')
+  static const LocationTimezoneEnum eire = _$locationTimezoneEnum_eire;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT')
+  static const LocationTimezoneEnum etcSlashGMT = _$locationTimezoneEnum_etcSlashGMT;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+0')
+  static const LocationTimezoneEnum etcSlashGMTPlus0 = _$locationTimezoneEnum_etcSlashGMTPlus0;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+1')
+  static const LocationTimezoneEnum etcSlashGMTPlus1 = _$locationTimezoneEnum_etcSlashGMTPlus1;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+10')
+  static const LocationTimezoneEnum etcSlashGMTPlus10 = _$locationTimezoneEnum_etcSlashGMTPlus10;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+11')
+  static const LocationTimezoneEnum etcSlashGMTPlus11 = _$locationTimezoneEnum_etcSlashGMTPlus11;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+12')
+  static const LocationTimezoneEnum etcSlashGMTPlus12 = _$locationTimezoneEnum_etcSlashGMTPlus12;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+2')
+  static const LocationTimezoneEnum etcSlashGMTPlus2 = _$locationTimezoneEnum_etcSlashGMTPlus2;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+3')
+  static const LocationTimezoneEnum etcSlashGMTPlus3 = _$locationTimezoneEnum_etcSlashGMTPlus3;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+4')
+  static const LocationTimezoneEnum etcSlashGMTPlus4 = _$locationTimezoneEnum_etcSlashGMTPlus4;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+5')
+  static const LocationTimezoneEnum etcSlashGMTPlus5 = _$locationTimezoneEnum_etcSlashGMTPlus5;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+6')
+  static const LocationTimezoneEnum etcSlashGMTPlus6 = _$locationTimezoneEnum_etcSlashGMTPlus6;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+7')
+  static const LocationTimezoneEnum etcSlashGMTPlus7 = _$locationTimezoneEnum_etcSlashGMTPlus7;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+8')
+  static const LocationTimezoneEnum etcSlashGMTPlus8 = _$locationTimezoneEnum_etcSlashGMTPlus8;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT+9')
+  static const LocationTimezoneEnum etcSlashGMTPlus9 = _$locationTimezoneEnum_etcSlashGMTPlus9;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-0')
+  static const LocationTimezoneEnum etcSlashGMT0 = _$locationTimezoneEnum_etcSlashGMT0;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-1')
+  static const LocationTimezoneEnum etcSlashGMT1 = _$locationTimezoneEnum_etcSlashGMT1;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-10')
+  static const LocationTimezoneEnum etcSlashGMT10 = _$locationTimezoneEnum_etcSlashGMT10;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-11')
+  static const LocationTimezoneEnum etcSlashGMT11 = _$locationTimezoneEnum_etcSlashGMT11;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-12')
+  static const LocationTimezoneEnum etcSlashGMT12 = _$locationTimezoneEnum_etcSlashGMT12;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-13')
+  static const LocationTimezoneEnum etcSlashGMT13 = _$locationTimezoneEnum_etcSlashGMT13;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-14')
+  static const LocationTimezoneEnum etcSlashGMT14 = _$locationTimezoneEnum_etcSlashGMT14;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-2')
+  static const LocationTimezoneEnum etcSlashGMT2 = _$locationTimezoneEnum_etcSlashGMT2;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-3')
+  static const LocationTimezoneEnum etcSlashGMT3 = _$locationTimezoneEnum_etcSlashGMT3;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-4')
+  static const LocationTimezoneEnum etcSlashGMT4 = _$locationTimezoneEnum_etcSlashGMT4;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-5')
+  static const LocationTimezoneEnum etcSlashGMT5 = _$locationTimezoneEnum_etcSlashGMT5;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-6')
+  static const LocationTimezoneEnum etcSlashGMT6 = _$locationTimezoneEnum_etcSlashGMT6;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-7')
+  static const LocationTimezoneEnum etcSlashGMT7 = _$locationTimezoneEnum_etcSlashGMT7;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-8')
+  static const LocationTimezoneEnum etcSlashGMT8 = _$locationTimezoneEnum_etcSlashGMT8;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT-9')
+  static const LocationTimezoneEnum etcSlashGMT9 = _$locationTimezoneEnum_etcSlashGMT9;
+  @BuiltValueEnumConst(wireName: r'Etc/GMT0')
+  static const LocationTimezoneEnum etcSlashGMT02 = _$locationTimezoneEnum_etcSlashGMT02;
+  @BuiltValueEnumConst(wireName: r'Etc/Greenwich')
+  static const LocationTimezoneEnum etcSlashGreenwich = _$locationTimezoneEnum_etcSlashGreenwich;
+  @BuiltValueEnumConst(wireName: r'Etc/UCT')
+  static const LocationTimezoneEnum etcSlashUCT = _$locationTimezoneEnum_etcSlashUCT;
+  @BuiltValueEnumConst(wireName: r'Etc/UTC')
+  static const LocationTimezoneEnum etcSlashUTC = _$locationTimezoneEnum_etcSlashUTC;
+  @BuiltValueEnumConst(wireName: r'Etc/Universal')
+  static const LocationTimezoneEnum etcSlashUniversal = _$locationTimezoneEnum_etcSlashUniversal;
+  @BuiltValueEnumConst(wireName: r'Etc/Zulu')
+  static const LocationTimezoneEnum etcSlashZulu = _$locationTimezoneEnum_etcSlashZulu;
   @BuiltValueEnumConst(wireName: r'Europe/Amsterdam')
   static const LocationTimezoneEnum europeSlashAmsterdam = _$locationTimezoneEnum_europeSlashAmsterdam;
   @BuiltValueEnumConst(wireName: r'Europe/Andorra')
@@ -856,6 +1076,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum europeSlashAstrakhan = _$locationTimezoneEnum_europeSlashAstrakhan;
   @BuiltValueEnumConst(wireName: r'Europe/Athens')
   static const LocationTimezoneEnum europeSlashAthens = _$locationTimezoneEnum_europeSlashAthens;
+  @BuiltValueEnumConst(wireName: r'Europe/Belfast')
+  static const LocationTimezoneEnum europeSlashBelfast = _$locationTimezoneEnum_europeSlashBelfast;
   @BuiltValueEnumConst(wireName: r'Europe/Belgrade')
   static const LocationTimezoneEnum europeSlashBelgrade = _$locationTimezoneEnum_europeSlashBelgrade;
   @BuiltValueEnumConst(wireName: r'Europe/Berlin')
@@ -890,6 +1112,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum europeSlashJersey = _$locationTimezoneEnum_europeSlashJersey;
   @BuiltValueEnumConst(wireName: r'Europe/Kaliningrad')
   static const LocationTimezoneEnum europeSlashKaliningrad = _$locationTimezoneEnum_europeSlashKaliningrad;
+  @BuiltValueEnumConst(wireName: r'Europe/Kiev')
+  static const LocationTimezoneEnum europeSlashKiev = _$locationTimezoneEnum_europeSlashKiev;
   @BuiltValueEnumConst(wireName: r'Europe/Kirov')
   static const LocationTimezoneEnum europeSlashKirov = _$locationTimezoneEnum_europeSlashKirov;
   @BuiltValueEnumConst(wireName: r'Europe/Kyiv')
@@ -914,6 +1138,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum europeSlashMonaco = _$locationTimezoneEnum_europeSlashMonaco;
   @BuiltValueEnumConst(wireName: r'Europe/Moscow')
   static const LocationTimezoneEnum europeSlashMoscow = _$locationTimezoneEnum_europeSlashMoscow;
+  @BuiltValueEnumConst(wireName: r'Europe/Nicosia')
+  static const LocationTimezoneEnum europeSlashNicosia = _$locationTimezoneEnum_europeSlashNicosia;
   @BuiltValueEnumConst(wireName: r'Europe/Oslo')
   static const LocationTimezoneEnum europeSlashOslo = _$locationTimezoneEnum_europeSlashOslo;
   @BuiltValueEnumConst(wireName: r'Europe/Paris')
@@ -946,8 +1172,12 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum europeSlashTallinn = _$locationTimezoneEnum_europeSlashTallinn;
   @BuiltValueEnumConst(wireName: r'Europe/Tirane')
   static const LocationTimezoneEnum europeSlashTirane = _$locationTimezoneEnum_europeSlashTirane;
+  @BuiltValueEnumConst(wireName: r'Europe/Tiraspol')
+  static const LocationTimezoneEnum europeSlashTiraspol = _$locationTimezoneEnum_europeSlashTiraspol;
   @BuiltValueEnumConst(wireName: r'Europe/Ulyanovsk')
   static const LocationTimezoneEnum europeSlashUlyanovsk = _$locationTimezoneEnum_europeSlashUlyanovsk;
+  @BuiltValueEnumConst(wireName: r'Europe/Uzhgorod')
+  static const LocationTimezoneEnum europeSlashUzhgorod = _$locationTimezoneEnum_europeSlashUzhgorod;
   @BuiltValueEnumConst(wireName: r'Europe/Vaduz')
   static const LocationTimezoneEnum europeSlashVaduz = _$locationTimezoneEnum_europeSlashVaduz;
   @BuiltValueEnumConst(wireName: r'Europe/Vatican')
@@ -962,10 +1192,30 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum europeSlashWarsaw = _$locationTimezoneEnum_europeSlashWarsaw;
   @BuiltValueEnumConst(wireName: r'Europe/Zagreb')
   static const LocationTimezoneEnum europeSlashZagreb = _$locationTimezoneEnum_europeSlashZagreb;
+  @BuiltValueEnumConst(wireName: r'Europe/Zaporozhye')
+  static const LocationTimezoneEnum europeSlashZaporozhye = _$locationTimezoneEnum_europeSlashZaporozhye;
   @BuiltValueEnumConst(wireName: r'Europe/Zurich')
   static const LocationTimezoneEnum europeSlashZurich = _$locationTimezoneEnum_europeSlashZurich;
+  @BuiltValueEnumConst(wireName: r'GB')
+  static const LocationTimezoneEnum GB = _$locationTimezoneEnum_GB;
+  @BuiltValueEnumConst(wireName: r'GB-Eire')
+  static const LocationTimezoneEnum gBEire = _$locationTimezoneEnum_gBEire;
   @BuiltValueEnumConst(wireName: r'GMT')
   static const LocationTimezoneEnum GMT = _$locationTimezoneEnum_GMT;
+  @BuiltValueEnumConst(wireName: r'GMT+0')
+  static const LocationTimezoneEnum gMTPlus0 = _$locationTimezoneEnum_gMTPlus0;
+  @BuiltValueEnumConst(wireName: r'GMT-0')
+  static const LocationTimezoneEnum gMT0 = _$locationTimezoneEnum_gMT0;
+  @BuiltValueEnumConst(wireName: r'GMT0')
+  static const LocationTimezoneEnum gMT02 = _$locationTimezoneEnum_gMT02;
+  @BuiltValueEnumConst(wireName: r'Greenwich')
+  static const LocationTimezoneEnum greenwich = _$locationTimezoneEnum_greenwich;
+  @BuiltValueEnumConst(wireName: r'HST')
+  static const LocationTimezoneEnum HST = _$locationTimezoneEnum_HST;
+  @BuiltValueEnumConst(wireName: r'Hongkong')
+  static const LocationTimezoneEnum hongkong = _$locationTimezoneEnum_hongkong;
+  @BuiltValueEnumConst(wireName: r'Iceland')
+  static const LocationTimezoneEnum iceland = _$locationTimezoneEnum_iceland;
   @BuiltValueEnumConst(wireName: r'Indian/Antananarivo')
   static const LocationTimezoneEnum indianSlashAntananarivo = _$locationTimezoneEnum_indianSlashAntananarivo;
   @BuiltValueEnumConst(wireName: r'Indian/Chagos')
@@ -988,6 +1238,40 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum indianSlashMayotte = _$locationTimezoneEnum_indianSlashMayotte;
   @BuiltValueEnumConst(wireName: r'Indian/Reunion')
   static const LocationTimezoneEnum indianSlashReunion = _$locationTimezoneEnum_indianSlashReunion;
+  @BuiltValueEnumConst(wireName: r'Iran')
+  static const LocationTimezoneEnum iran = _$locationTimezoneEnum_iran;
+  @BuiltValueEnumConst(wireName: r'Israel')
+  static const LocationTimezoneEnum israel = _$locationTimezoneEnum_israel;
+  @BuiltValueEnumConst(wireName: r'Jamaica')
+  static const LocationTimezoneEnum jamaica = _$locationTimezoneEnum_jamaica;
+  @BuiltValueEnumConst(wireName: r'Japan')
+  static const LocationTimezoneEnum japan = _$locationTimezoneEnum_japan;
+  @BuiltValueEnumConst(wireName: r'Kwajalein')
+  static const LocationTimezoneEnum kwajalein = _$locationTimezoneEnum_kwajalein;
+  @BuiltValueEnumConst(wireName: r'Libya')
+  static const LocationTimezoneEnum libya = _$locationTimezoneEnum_libya;
+  @BuiltValueEnumConst(wireName: r'MET')
+  static const LocationTimezoneEnum MET = _$locationTimezoneEnum_MET;
+  @BuiltValueEnumConst(wireName: r'MST')
+  static const LocationTimezoneEnum MST = _$locationTimezoneEnum_MST;
+  @BuiltValueEnumConst(wireName: r'MST7MDT')
+  static const LocationTimezoneEnum mST7MDT = _$locationTimezoneEnum_mST7MDT;
+  @BuiltValueEnumConst(wireName: r'Mexico/BajaNorte')
+  static const LocationTimezoneEnum mexicoSlashBajaNorte = _$locationTimezoneEnum_mexicoSlashBajaNorte;
+  @BuiltValueEnumConst(wireName: r'Mexico/BajaSur')
+  static const LocationTimezoneEnum mexicoSlashBajaSur = _$locationTimezoneEnum_mexicoSlashBajaSur;
+  @BuiltValueEnumConst(wireName: r'Mexico/General')
+  static const LocationTimezoneEnum mexicoSlashGeneral = _$locationTimezoneEnum_mexicoSlashGeneral;
+  @BuiltValueEnumConst(wireName: r'NZ')
+  static const LocationTimezoneEnum NZ = _$locationTimezoneEnum_NZ;
+  @BuiltValueEnumConst(wireName: r'NZ-CHAT')
+  static const LocationTimezoneEnum NZ_CHAT = _$locationTimezoneEnum_NZ_CHAT;
+  @BuiltValueEnumConst(wireName: r'Navajo')
+  static const LocationTimezoneEnum navajo = _$locationTimezoneEnum_navajo;
+  @BuiltValueEnumConst(wireName: r'PRC')
+  static const LocationTimezoneEnum PRC = _$locationTimezoneEnum_PRC;
+  @BuiltValueEnumConst(wireName: r'PST8PDT')
+  static const LocationTimezoneEnum pST8PDT = _$locationTimezoneEnum_pST8PDT;
   @BuiltValueEnumConst(wireName: r'Pacific/Apia')
   static const LocationTimezoneEnum pacificSlashApia = _$locationTimezoneEnum_pacificSlashApia;
   @BuiltValueEnumConst(wireName: r'Pacific/Auckland')
@@ -1002,6 +1286,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum pacificSlashEaster = _$locationTimezoneEnum_pacificSlashEaster;
   @BuiltValueEnumConst(wireName: r'Pacific/Efate')
   static const LocationTimezoneEnum pacificSlashEfate = _$locationTimezoneEnum_pacificSlashEfate;
+  @BuiltValueEnumConst(wireName: r'Pacific/Enderbury')
+  static const LocationTimezoneEnum pacificSlashEnderbury = _$locationTimezoneEnum_pacificSlashEnderbury;
   @BuiltValueEnumConst(wireName: r'Pacific/Fakaofo')
   static const LocationTimezoneEnum pacificSlashFakaofo = _$locationTimezoneEnum_pacificSlashFakaofo;
   @BuiltValueEnumConst(wireName: r'Pacific/Fiji')
@@ -1018,6 +1304,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum pacificSlashGuam = _$locationTimezoneEnum_pacificSlashGuam;
   @BuiltValueEnumConst(wireName: r'Pacific/Honolulu')
   static const LocationTimezoneEnum pacificSlashHonolulu = _$locationTimezoneEnum_pacificSlashHonolulu;
+  @BuiltValueEnumConst(wireName: r'Pacific/Johnston')
+  static const LocationTimezoneEnum pacificSlashJohnston = _$locationTimezoneEnum_pacificSlashJohnston;
   @BuiltValueEnumConst(wireName: r'Pacific/Kanton')
   static const LocationTimezoneEnum pacificSlashKanton = _$locationTimezoneEnum_pacificSlashKanton;
   @BuiltValueEnumConst(wireName: r'Pacific/Kiritimati')
@@ -1048,38 +1336,78 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum pacificSlashPitcairn = _$locationTimezoneEnum_pacificSlashPitcairn;
   @BuiltValueEnumConst(wireName: r'Pacific/Pohnpei')
   static const LocationTimezoneEnum pacificSlashPohnpei = _$locationTimezoneEnum_pacificSlashPohnpei;
+  @BuiltValueEnumConst(wireName: r'Pacific/Ponape')
+  static const LocationTimezoneEnum pacificSlashPonape = _$locationTimezoneEnum_pacificSlashPonape;
   @BuiltValueEnumConst(wireName: r'Pacific/Port_Moresby')
   static const LocationTimezoneEnum pacificSlashPortMoresby = _$locationTimezoneEnum_pacificSlashPortMoresby;
   @BuiltValueEnumConst(wireName: r'Pacific/Rarotonga')
   static const LocationTimezoneEnum pacificSlashRarotonga = _$locationTimezoneEnum_pacificSlashRarotonga;
   @BuiltValueEnumConst(wireName: r'Pacific/Saipan')
   static const LocationTimezoneEnum pacificSlashSaipan = _$locationTimezoneEnum_pacificSlashSaipan;
+  @BuiltValueEnumConst(wireName: r'Pacific/Samoa')
+  static const LocationTimezoneEnum pacificSlashSamoa = _$locationTimezoneEnum_pacificSlashSamoa;
   @BuiltValueEnumConst(wireName: r'Pacific/Tahiti')
   static const LocationTimezoneEnum pacificSlashTahiti = _$locationTimezoneEnum_pacificSlashTahiti;
   @BuiltValueEnumConst(wireName: r'Pacific/Tarawa')
   static const LocationTimezoneEnum pacificSlashTarawa = _$locationTimezoneEnum_pacificSlashTarawa;
   @BuiltValueEnumConst(wireName: r'Pacific/Tongatapu')
   static const LocationTimezoneEnum pacificSlashTongatapu = _$locationTimezoneEnum_pacificSlashTongatapu;
+  @BuiltValueEnumConst(wireName: r'Pacific/Truk')
+  static const LocationTimezoneEnum pacificSlashTruk = _$locationTimezoneEnum_pacificSlashTruk;
   @BuiltValueEnumConst(wireName: r'Pacific/Wake')
   static const LocationTimezoneEnum pacificSlashWake = _$locationTimezoneEnum_pacificSlashWake;
   @BuiltValueEnumConst(wireName: r'Pacific/Wallis')
   static const LocationTimezoneEnum pacificSlashWallis = _$locationTimezoneEnum_pacificSlashWallis;
+  @BuiltValueEnumConst(wireName: r'Pacific/Yap')
+  static const LocationTimezoneEnum pacificSlashYap = _$locationTimezoneEnum_pacificSlashYap;
+  @BuiltValueEnumConst(wireName: r'Poland')
+  static const LocationTimezoneEnum poland = _$locationTimezoneEnum_poland;
+  @BuiltValueEnumConst(wireName: r'Portugal')
+  static const LocationTimezoneEnum portugal = _$locationTimezoneEnum_portugal;
+  @BuiltValueEnumConst(wireName: r'ROC')
+  static const LocationTimezoneEnum ROC = _$locationTimezoneEnum_ROC;
+  @BuiltValueEnumConst(wireName: r'ROK')
+  static const LocationTimezoneEnum ROK = _$locationTimezoneEnum_ROK;
+  @BuiltValueEnumConst(wireName: r'Singapore')
+  static const LocationTimezoneEnum singapore = _$locationTimezoneEnum_singapore;
+  @BuiltValueEnumConst(wireName: r'Turkey')
+  static const LocationTimezoneEnum turkey = _$locationTimezoneEnum_turkey;
+  @BuiltValueEnumConst(wireName: r'UCT')
+  static const LocationTimezoneEnum UCT = _$locationTimezoneEnum_UCT;
   @BuiltValueEnumConst(wireName: r'US/Alaska')
   static const LocationTimezoneEnum uSSlashAlaska = _$locationTimezoneEnum_uSSlashAlaska;
+  @BuiltValueEnumConst(wireName: r'US/Aleutian')
+  static const LocationTimezoneEnum uSSlashAleutian = _$locationTimezoneEnum_uSSlashAleutian;
   @BuiltValueEnumConst(wireName: r'US/Arizona')
   static const LocationTimezoneEnum uSSlashArizona = _$locationTimezoneEnum_uSSlashArizona;
   @BuiltValueEnumConst(wireName: r'US/Central')
   static const LocationTimezoneEnum uSSlashCentral = _$locationTimezoneEnum_uSSlashCentral;
+  @BuiltValueEnumConst(wireName: r'US/East-Indiana')
+  static const LocationTimezoneEnum uSSlashEastIndiana = _$locationTimezoneEnum_uSSlashEastIndiana;
   @BuiltValueEnumConst(wireName: r'US/Eastern')
   static const LocationTimezoneEnum uSSlashEastern = _$locationTimezoneEnum_uSSlashEastern;
   @BuiltValueEnumConst(wireName: r'US/Hawaii')
   static const LocationTimezoneEnum uSSlashHawaii = _$locationTimezoneEnum_uSSlashHawaii;
+  @BuiltValueEnumConst(wireName: r'US/Indiana-Starke')
+  static const LocationTimezoneEnum uSSlashIndianaStarke = _$locationTimezoneEnum_uSSlashIndianaStarke;
+  @BuiltValueEnumConst(wireName: r'US/Michigan')
+  static const LocationTimezoneEnum uSSlashMichigan = _$locationTimezoneEnum_uSSlashMichigan;
   @BuiltValueEnumConst(wireName: r'US/Mountain')
   static const LocationTimezoneEnum uSSlashMountain = _$locationTimezoneEnum_uSSlashMountain;
   @BuiltValueEnumConst(wireName: r'US/Pacific')
   static const LocationTimezoneEnum uSSlashPacific = _$locationTimezoneEnum_uSSlashPacific;
+  @BuiltValueEnumConst(wireName: r'US/Samoa')
+  static const LocationTimezoneEnum uSSlashSamoa = _$locationTimezoneEnum_uSSlashSamoa;
   @BuiltValueEnumConst(wireName: r'UTC')
   static const LocationTimezoneEnum UTC = _$locationTimezoneEnum_UTC;
+  @BuiltValueEnumConst(wireName: r'Universal')
+  static const LocationTimezoneEnum universal = _$locationTimezoneEnum_universal;
+  @BuiltValueEnumConst(wireName: r'W-SU')
+  static const LocationTimezoneEnum W_SU = _$locationTimezoneEnum_W_SU;
+  @BuiltValueEnumConst(wireName: r'WET')
+  static const LocationTimezoneEnum WET = _$locationTimezoneEnum_WET;
+  @BuiltValueEnumConst(wireName: r'Zulu')
+  static const LocationTimezoneEnum zulu = _$locationTimezoneEnum_zulu;
 
   static Serializer<LocationTimezoneEnum> get serializer => _$locationTimezoneEnumSerializer;
 
