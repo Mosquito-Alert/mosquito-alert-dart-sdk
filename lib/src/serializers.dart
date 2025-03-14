@@ -721,7 +721,7 @@ Serializers serializers = (_$serializers.toBuilder()
       ..add(const AnyOfSerializer())      
       ..add(const OffsetDateSerializer())
       ..add(const OffsetDateTimeSerializer())
-    .build();
+    .build());
 
 Serializers standardSerializers =
     (serializers.toBuilder()..addPlugin(StandardJsonPlugin())).build();
