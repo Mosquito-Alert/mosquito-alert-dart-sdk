@@ -164,9 +164,9 @@ class _$BiteRequestEventMomentEnumSerializer
 
 class _$BiteRequest extends BiteRequest {
   @override
-  final OffsetDateTime createdAt;
+  final DateTime createdAt;
   @override
-  final OffsetDateTime sentAt;
+  final DateTime sentAt;
   @override
   final LocationRequest location;
   @override
@@ -283,13 +283,13 @@ class _$BiteRequest extends BiteRequest {
 class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
   _$BiteRequest? _$v;
 
-  OffsetDateTime? _createdAt;
-  OffsetDateTime? get createdAt => _$this._createdAt;
-  set createdAt(OffsetDateTime? createdAt) => _$this._createdAt = createdAt;
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
 
-  OffsetDateTime? _sentAt;
-  OffsetDateTime? get sentAt => _$this._sentAt;
-  set sentAt(OffsetDateTime? sentAt) => _$this._sentAt = sentAt;
+  DateTime? _sentAt;
+  DateTime? get sentAt => _$this._sentAt;
+  set sentAt(DateTime? sentAt) => _$this._sentAt = sentAt;
 
   LocationRequestBuilder? _location;
   LocationRequestBuilder get location =>

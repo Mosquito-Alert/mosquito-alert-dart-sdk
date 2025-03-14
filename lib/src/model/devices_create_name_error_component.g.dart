@@ -7,14 +7,14 @@ part of 'devices_create_name_error_component.dart';
 // **************************************************************************
 
 const DevicesCreateNameErrorComponentAttrEnum
-    _$devicesCreateNameErrorComponentAttrEnum_name =
-    const DevicesCreateNameErrorComponentAttrEnum._('name');
+    _$devicesCreateNameErrorComponentAttrEnum_nameValue =
+    const DevicesCreateNameErrorComponentAttrEnum._('nameValue');
 
 DevicesCreateNameErrorComponentAttrEnum
     _$devicesCreateNameErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
-    case 'name':
-      return _$devicesCreateNameErrorComponentAttrEnum_name;
+    case 'nameValue':
+      return _$devicesCreateNameErrorComponentAttrEnum_nameValue;
     default:
       throw new ArgumentError(name);
   }
@@ -23,7 +23,7 @@ DevicesCreateNameErrorComponentAttrEnum
 final BuiltSet<DevicesCreateNameErrorComponentAttrEnum>
     _$devicesCreateNameErrorComponentAttrEnumValues = new BuiltSet<
         DevicesCreateNameErrorComponentAttrEnum>(const <DevicesCreateNameErrorComponentAttrEnum>[
-  _$devicesCreateNameErrorComponentAttrEnum_name,
+  _$devicesCreateNameErrorComponentAttrEnum_nameValue,
 ]);
 
 const DevicesCreateNameErrorComponentCodeEnum
@@ -75,10 +75,10 @@ Serializer<DevicesCreateNameErrorComponentCodeEnum>
 class _$DevicesCreateNameErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<DevicesCreateNameErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'name': 'name',
+    'nameValue': 'name',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'name': 'name',
+    'name': 'nameValue',
   };
 
   @override

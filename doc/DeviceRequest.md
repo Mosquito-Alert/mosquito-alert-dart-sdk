@@ -9,7 +9,7 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **deviceId** | **String** | Unique device identifier | 
-**name** | **String** |  | [optional] 
+**nameValue** | **String** |  | [optional] 
 **fcmToken** | **String** |  | 
 **type** | **String** |  | 
 **manufacturer** | **String** | The manufacturer of the device. | [optional] 

@@ -4,7 +4,6 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:time_machine/time_machine.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -31,7 +30,7 @@ abstract class User implements Built<User, UserBuilder> {
 
   /// The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
   @BuiltValueField(wireName: r'registration_time')
-  OffsetDateTime get registrationTime;
+  DateTime get registrationTime;
 
   /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
   @BuiltValueField(wireName: r'locale')
@@ -51,7 +50,7 @@ abstract class User implements Built<User, UserBuilder> {
 
   /// Last time score was updated
   @BuiltValueField(wireName: r'last_score_update')
-  OffsetDateTime get lastScoreUpdate;
+  DateTime get lastScoreUpdate;
 
   User._();
 
@@ -89,7 +88,7 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
     yield r'registration_time';
     yield serializers.serialize(
       object.registrationTime,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     if (object.locale != null) {
       yield r'locale';
@@ -116,7 +115,7 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
     yield r'last_score_update';
     yield serializers.serialize(
       object.lastScoreUpdate,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
   }
 
@@ -158,8 +157,8 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
         case r'registration_time':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.registrationTime = valueDes;
           break;
         case r'locale':
@@ -193,8 +192,8 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
         case r'last_score_update':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.lastScoreUpdate = valueDes;
           break;
         default:

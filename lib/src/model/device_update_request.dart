@@ -13,14 +13,14 @@ part 'device_update_request.g.dart';
 /// DeviceUpdateRequest
 ///
 /// Properties:
-/// * [name] 
+/// * [nameValue] 
 /// * [fcmToken] 
 /// * [os] 
 /// * [mobileApp] 
 @BuiltValue()
 abstract class DeviceUpdateRequest implements Built<DeviceUpdateRequest, DeviceUpdateRequestBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get nameValue;
 
   @BuiltValueField(wireName: r'fcm_token')
   String get fcmToken;
@@ -54,10 +54,10 @@ class _$DeviceUpdateRequestSerializer implements PrimitiveSerializer<DeviceUpdat
     DeviceUpdateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
+    if (object.nameValue != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.nameValue,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -107,7 +107,7 @@ class _$DeviceUpdateRequestSerializer implements PrimitiveSerializer<DeviceUpdat
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.name = valueDes;
+          result.nameValue = valueDes;
           break;
         case r'fcm_token':
           final valueDes = serializers.deserialize(

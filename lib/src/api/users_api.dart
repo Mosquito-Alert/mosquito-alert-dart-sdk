@@ -4,19 +4,13 @@
 
 import 'dart:async';
 
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:mosquito_alert/src/api_util.dart';
-import 'package:mosquito_alert/src/model/error_response401.dart';
-import 'package:mosquito_alert/src/model/error_response403.dart';
-import 'package:mosquito_alert/src/model/error_response404.dart';
 import 'package:mosquito_alert/src/model/patched_user_request.dart';
 import 'package:mosquito_alert/src/model/user.dart';
 import 'package:mosquito_alert/src/model/user_request.dart';
-import 'package:mosquito_alert/src/model/users_partial_update_validation_error.dart';
-import 'package:mosquito_alert/src/model/users_update_validation_error.dart';
 
 class UsersApi {
 

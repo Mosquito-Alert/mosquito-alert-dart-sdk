@@ -7,7 +7,7 @@ void main() {
   final instance = MosquitoAlert().getBreedingSitesApi();
 
   group(BreedingSitesApi, () {
-    //Future<BreedingSite> create(OffsetDateTime createdAt, OffsetDateTime sentAt, LocationRequest location, BuiltList<SimplePhotoRequest> photos, { String note, BuiltList<String> tags, String siteType, bool hasWater, bool inPublicArea, bool hasNearMosquitoes, bool hasLarvae }) async
+    //Future<BreedingSite> create(DateTime createdAt, DateTime sentAt, LocationRequest location, BuiltList<SimplePhotoRequest> photos, { String note, BuiltList<String> tags, String siteType, bool hasWater, bool inPublicArea, bool hasNearMosquitoes, bool hasLarvae }) async
     test('test create', () async {
       // TODO
     });
@@ -17,14 +17,14 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedBreedingSiteList> list({ OffsetDateTime createdAtAfter, OffsetDateTime createdAtBefore, bool hasPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, OffsetDateTime receivedAtAfter, OffsetDateTime receivedAtBefore, String shortId, OffsetDateTime updatedAtAfter, OffsetDateTime updatedAtBefore, String userUuid }) async
+    //Future<PaginatedBreedingSiteList> list({ DateTime createdAtAfter, DateTime createdAtBefore, bool hasPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test list', () async {
       // TODO
     });
 
     // Get Current User's Breeding Sites
     //
-    //Future<PaginatedBreedingSiteList> listMine({ OffsetDateTime createdAtAfter, OffsetDateTime createdAtBefore, bool hasPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, OffsetDateTime receivedAtAfter, OffsetDateTime receivedAtBefore, String shortId, OffsetDateTime updatedAtAfter, OffsetDateTime updatedAtBefore, String userUuid }) async
+    //Future<PaginatedBreedingSiteList> listMine({ DateTime createdAtAfter, DateTime createdAtBefore, bool hasPhotos, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test listMine', () async {
       // TODO
     });

@@ -3,7 +3,6 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:time_machine/time_machine.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -20,7 +19,7 @@ abstract class CreateNotification implements Built<CreateNotification, CreateNot
   int get id;
 
   @BuiltValueField(wireName: r'created_at')
-  OffsetDateTime get createdAt;
+  DateTime get createdAt;
 
   CreateNotification._();
 
@@ -53,7 +52,7 @@ class _$CreateNotificationSerializer implements PrimitiveSerializer<CreateNotifi
     yield r'created_at';
     yield serializers.serialize(
       object.createdAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
   }
 
@@ -88,8 +87,8 @@ class _$CreateNotificationSerializer implements PrimitiveSerializer<CreateNotifi
         case r'created_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.createdAt = valueDes;
           break;
         default:

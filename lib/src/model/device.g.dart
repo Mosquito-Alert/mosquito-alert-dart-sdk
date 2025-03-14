@@ -68,7 +68,7 @@ class _$Device extends Device {
   @override
   final String deviceId;
   @override
-  final String? name;
+  final String? nameValue;
   @override
   final DeviceTypeEnum type;
   @override
@@ -82,18 +82,18 @@ class _$Device extends Device {
   @override
   final String userUuid;
   @override
-  final OffsetDateTime? lastLogin;
+  final DateTime? lastLogin;
   @override
-  final OffsetDateTime createdAt;
+  final DateTime createdAt;
   @override
-  final OffsetDateTime updatedAt;
+  final DateTime updatedAt;
 
   factory _$Device([void Function(DeviceBuilder)? updates]) =>
       (new DeviceBuilder()..update(updates))._build();
 
   _$Device._(
       {required this.deviceId,
-      this.name,
+      this.nameValue,
       required this.type,
       this.manufacturer,
       required this.model,
@@ -125,7 +125,7 @@ class _$Device extends Device {
     if (identical(other, this)) return true;
     return other is Device &&
         deviceId == other.deviceId &&
-        name == other.name &&
+        nameValue == other.nameValue &&
         type == other.type &&
         manufacturer == other.manufacturer &&
         model == other.model &&
@@ -141,7 +141,7 @@ class _$Device extends Device {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, deviceId.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, nameValue.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, manufacturer.hashCode);
     _$hash = $jc(_$hash, model.hashCode);
@@ -159,7 +159,7 @@ class _$Device extends Device {
   String toString() {
     return (newBuiltValueToStringHelper(r'Device')
           ..add('deviceId', deviceId)
-          ..add('name', name)
+          ..add('nameValue', nameValue)
           ..add('type', type)
           ..add('manufacturer', manufacturer)
           ..add('model', model)
@@ -180,9 +180,9 @@ class DeviceBuilder implements Builder<Device, DeviceBuilder> {
   String? get deviceId => _$this._deviceId;
   set deviceId(String? deviceId) => _$this._deviceId = deviceId;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _nameValue;
+  String? get nameValue => _$this._nameValue;
+  set nameValue(String? nameValue) => _$this._nameValue = nameValue;
 
   DeviceTypeEnum? _type;
   DeviceTypeEnum? get type => _$this._type;
@@ -209,17 +209,17 @@ class DeviceBuilder implements Builder<Device, DeviceBuilder> {
   String? get userUuid => _$this._userUuid;
   set userUuid(String? userUuid) => _$this._userUuid = userUuid;
 
-  OffsetDateTime? _lastLogin;
-  OffsetDateTime? get lastLogin => _$this._lastLogin;
-  set lastLogin(OffsetDateTime? lastLogin) => _$this._lastLogin = lastLogin;
+  DateTime? _lastLogin;
+  DateTime? get lastLogin => _$this._lastLogin;
+  set lastLogin(DateTime? lastLogin) => _$this._lastLogin = lastLogin;
 
-  OffsetDateTime? _createdAt;
-  OffsetDateTime? get createdAt => _$this._createdAt;
-  set createdAt(OffsetDateTime? createdAt) => _$this._createdAt = createdAt;
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
 
-  OffsetDateTime? _updatedAt;
-  OffsetDateTime? get updatedAt => _$this._updatedAt;
-  set updatedAt(OffsetDateTime? updatedAt) => _$this._updatedAt = updatedAt;
+  DateTime? _updatedAt;
+  DateTime? get updatedAt => _$this._updatedAt;
+  set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   DeviceBuilder() {
     Device._defaults(this);
@@ -229,7 +229,7 @@ class DeviceBuilder implements Builder<Device, DeviceBuilder> {
     final $v = _$v;
     if ($v != null) {
       _deviceId = $v.deviceId;
-      _name = $v.name;
+      _nameValue = $v.nameValue;
       _type = $v.type;
       _manufacturer = $v.manufacturer;
       _model = $v.model;
@@ -265,7 +265,7 @@ class DeviceBuilder implements Builder<Device, DeviceBuilder> {
           new _$Device._(
               deviceId: BuiltValueNullFieldError.checkNotNull(
                   deviceId, r'Device', 'deviceId'),
-              name: name,
+              nameValue: nameValue,
               type: BuiltValueNullFieldError.checkNotNull(
                   type, r'Device', 'type'),
               manufacturer: manufacturer,

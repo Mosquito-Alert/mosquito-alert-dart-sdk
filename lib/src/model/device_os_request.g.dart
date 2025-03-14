@@ -8,7 +8,7 @@ part of 'device_os_request.dart';
 
 class _$DeviceOsRequest extends DeviceOsRequest {
   @override
-  final String name;
+  final String nameValue;
   @override
   final String version;
   @override
@@ -17,9 +17,11 @@ class _$DeviceOsRequest extends DeviceOsRequest {
   factory _$DeviceOsRequest([void Function(DeviceOsRequestBuilder)? updates]) =>
       (new DeviceOsRequestBuilder()..update(updates))._build();
 
-  _$DeviceOsRequest._({required this.name, required this.version, this.locale})
+  _$DeviceOsRequest._(
+      {required this.nameValue, required this.version, this.locale})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, r'DeviceOsRequest', 'name');
+    BuiltValueNullFieldError.checkNotNull(
+        nameValue, r'DeviceOsRequest', 'nameValue');
     BuiltValueNullFieldError.checkNotNull(
         version, r'DeviceOsRequest', 'version');
   }
@@ -36,7 +38,7 @@ class _$DeviceOsRequest extends DeviceOsRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is DeviceOsRequest &&
-        name == other.name &&
+        nameValue == other.nameValue &&
         version == other.version &&
         locale == other.locale;
   }
@@ -44,7 +46,7 @@ class _$DeviceOsRequest extends DeviceOsRequest {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, nameValue.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, locale.hashCode);
     _$hash = $jf(_$hash);
@@ -54,7 +56,7 @@ class _$DeviceOsRequest extends DeviceOsRequest {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'DeviceOsRequest')
-          ..add('name', name)
+          ..add('nameValue', nameValue)
           ..add('version', version)
           ..add('locale', locale))
         .toString();
@@ -65,9 +67,9 @@ class DeviceOsRequestBuilder
     implements Builder<DeviceOsRequest, DeviceOsRequestBuilder> {
   _$DeviceOsRequest? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _nameValue;
+  String? get nameValue => _$this._nameValue;
+  set nameValue(String? nameValue) => _$this._nameValue = nameValue;
 
   String? _version;
   String? get version => _$this._version;
@@ -84,7 +86,7 @@ class DeviceOsRequestBuilder
   DeviceOsRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _nameValue = $v.nameValue;
       _version = $v.version;
       _locale = $v.locale;
       _$v = null;
@@ -109,8 +111,8 @@ class DeviceOsRequestBuilder
   _$DeviceOsRequest _build() {
     final _$result = _$v ??
         new _$DeviceOsRequest._(
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'DeviceOsRequest', 'name'),
+            nameValue: BuiltValueNullFieldError.checkNotNull(
+                nameValue, r'DeviceOsRequest', 'nameValue'),
             version: BuiltValueNullFieldError.checkNotNull(
                 version, r'DeviceOsRequest', 'version'),
             locale: locale);

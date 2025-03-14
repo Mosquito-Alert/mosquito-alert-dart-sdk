@@ -13,8 +13,8 @@ void main() {
       // TODO
     });
 
-    // String name
-    test('to test the property `name`', () async {
+    // String nameValue
+    test('to test the property `nameValue`', () async {
       // TODO
     });
 
@@ -50,17 +50,17 @@ void main() {
       // TODO
     });
 
-    // OffsetDateTime lastLogin
+    // DateTime lastLogin
     test('to test the property `lastLogin`', () async {
       // TODO
     });
 
-    // OffsetDateTime createdAt
+    // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO
     });
 
-    // OffsetDateTime updatedAt
+    // DateTime updatedAt
     test('to test the property `updatedAt`', () async {
       // TODO
     });

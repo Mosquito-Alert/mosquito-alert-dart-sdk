@@ -12,12 +12,12 @@ void main() {
       // TODO
     });
 
-    // OffsetDateTime createdAt
+    // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO
     });
 
-    // OffsetDateTime sentAt
+    // DateTime sentAt
     test('to test the property `sentAt`', () async {
       // TODO
     });

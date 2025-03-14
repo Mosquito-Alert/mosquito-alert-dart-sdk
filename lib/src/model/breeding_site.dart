@@ -5,7 +5,6 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:time_machine/time_machine.dart';
 import 'package:mosquito_alert/src/model/location.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -45,21 +44,21 @@ abstract class BreedingSite implements Built<BreedingSite, BreedingSiteBuilder> 
   String get userUuid;
 
   @BuiltValueField(wireName: r'created_at')
-  OffsetDateTime get createdAt;
+  DateTime get createdAt;
 
   /// The date and time when the record was created, displayed in the local timezone specified for this entry.
   @BuiltValueField(wireName: r'created_at_local')
-  OffsetDateTime get createdAtLocal;
+  DateTime get createdAtLocal;
 
   @BuiltValueField(wireName: r'sent_at')
-  OffsetDateTime get sentAt;
+  DateTime get sentAt;
 
   @BuiltValueField(wireName: r'received_at')
-  OffsetDateTime get receivedAt;
+  DateTime get receivedAt;
 
   /// Date and time when the report was last modified
   @BuiltValueField(wireName: r'updated_at')
-  OffsetDateTime get updatedAt;
+  DateTime get updatedAt;
 
   @BuiltValueField(wireName: r'location')
   Location get location;
@@ -139,27 +138,27 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
     yield r'created_at';
     yield serializers.serialize(
       object.createdAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'created_at_local';
     yield serializers.serialize(
       object.createdAtLocal,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'sent_at';
     yield serializers.serialize(
       object.sentAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'received_at';
     yield serializers.serialize(
       object.receivedAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'updated_at';
     yield serializers.serialize(
       object.updatedAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'location';
     yield serializers.serialize(
@@ -272,36 +271,36 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
         case r'created_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.createdAt = valueDes;
           break;
         case r'created_at_local':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.createdAtLocal = valueDes;
           break;
         case r'sent_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.sentAt = valueDes;
           break;
         case r'received_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.receivedAt = valueDes;
           break;
         case r'updated_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.updatedAt = valueDes;
           break;
         case r'location':

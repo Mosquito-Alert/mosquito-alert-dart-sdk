@@ -8,7 +8,7 @@ part of 'device_update_request.dart';
 
 class _$DeviceUpdateRequest extends DeviceUpdateRequest {
   @override
-  final String? name;
+  final String? nameValue;
   @override
   final String fcmToken;
   @override
@@ -21,7 +21,10 @@ class _$DeviceUpdateRequest extends DeviceUpdateRequest {
       (new DeviceUpdateRequestBuilder()..update(updates))._build();
 
   _$DeviceUpdateRequest._(
-      {this.name, required this.fcmToken, required this.os, this.mobileApp})
+      {this.nameValue,
+      required this.fcmToken,
+      required this.os,
+      this.mobileApp})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         fcmToken, r'DeviceUpdateRequest', 'fcmToken');
@@ -41,7 +44,7 @@ class _$DeviceUpdateRequest extends DeviceUpdateRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is DeviceUpdateRequest &&
-        name == other.name &&
+        nameValue == other.nameValue &&
         fcmToken == other.fcmToken &&
         os == other.os &&
         mobileApp == other.mobileApp;
@@ -50,7 +53,7 @@ class _$DeviceUpdateRequest extends DeviceUpdateRequest {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, nameValue.hashCode);
     _$hash = $jc(_$hash, fcmToken.hashCode);
     _$hash = $jc(_$hash, os.hashCode);
     _$hash = $jc(_$hash, mobileApp.hashCode);
@@ -61,7 +64,7 @@ class _$DeviceUpdateRequest extends DeviceUpdateRequest {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'DeviceUpdateRequest')
-          ..add('name', name)
+          ..add('nameValue', nameValue)
           ..add('fcmToken', fcmToken)
           ..add('os', os)
           ..add('mobileApp', mobileApp))
@@ -73,9 +76,9 @@ class DeviceUpdateRequestBuilder
     implements Builder<DeviceUpdateRequest, DeviceUpdateRequestBuilder> {
   _$DeviceUpdateRequest? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _nameValue;
+  String? get nameValue => _$this._nameValue;
+  set nameValue(String? nameValue) => _$this._nameValue = nameValue;
 
   String? _fcmToken;
   String? get fcmToken => _$this._fcmToken;
@@ -98,7 +101,7 @@ class DeviceUpdateRequestBuilder
   DeviceUpdateRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _nameValue = $v.nameValue;
       _fcmToken = $v.fcmToken;
       _os = $v.os.toBuilder();
       _mobileApp = $v.mobileApp?.toBuilder();
@@ -126,7 +129,7 @@ class DeviceUpdateRequestBuilder
     try {
       _$result = _$v ??
           new _$DeviceUpdateRequest._(
-              name: name,
+              nameValue: nameValue,
               fcmToken: BuiltValueNullFieldError.checkNotNull(
                   fcmToken, r'DeviceUpdateRequest', 'fcmToken'),
               os: os.build(),

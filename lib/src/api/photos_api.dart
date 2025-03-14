@@ -4,14 +4,10 @@
 
 import 'dart:async';
 
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:mosquito_alert/src/api_util.dart';
-import 'package:mosquito_alert/src/model/error_response401.dart';
-import 'package:mosquito_alert/src/model/error_response403.dart';
-import 'package:mosquito_alert/src/model/error_response404.dart';
 import 'package:mosquito_alert/src/model/photo.dart';
 
 class PhotosApi {

@@ -142,7 +142,7 @@ class _$DevicesPartialUpdateNameErrorComponentSerializer implements PrimitiveSer
 class DevicesPartialUpdateNameErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'name')
-  static const DevicesPartialUpdateNameErrorComponentAttrEnum name = _$devicesPartialUpdateNameErrorComponentAttrEnum_name;
+  static const DevicesPartialUpdateNameErrorComponentAttrEnum nameValue = _$devicesPartialUpdateNameErrorComponentAttrEnum_nameValue;
 
   static Serializer<DevicesPartialUpdateNameErrorComponentAttrEnum> get serializer => _$devicesPartialUpdateNameErrorComponentAttrEnumSerializer;
 

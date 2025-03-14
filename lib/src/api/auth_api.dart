@@ -4,20 +4,11 @@
 
 import 'dart:async';
 
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
-import 'package:mosquito_alert/src/model/auth_change_password_validation_error.dart';
-import 'package:mosquito_alert/src/model/auth_obtain_token_validation_error.dart';
-import 'package:mosquito_alert/src/model/auth_refresh_token_validation_error.dart';
-import 'package:mosquito_alert/src/model/auth_signup_guest_validation_error.dart';
-import 'package:mosquito_alert/src/model/auth_verify_token_validation_error.dart';
-import 'package:mosquito_alert/src/model/error_response401.dart';
-import 'package:mosquito_alert/src/model/error_response403.dart';
-import 'package:mosquito_alert/src/model/error_response404.dart';
 import 'package:mosquito_alert/src/model/guest_registration.dart';
 import 'package:mosquito_alert/src/model/guest_registration_request.dart';
 import 'package:mosquito_alert/src/model/password_change_request.dart';

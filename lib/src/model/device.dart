@@ -5,7 +5,6 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/device_os.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:time_machine/time_machine.dart';
 import 'package:mosquito_alert/src/model/mobile_app.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -16,7 +15,7 @@ part 'device.g.dart';
 ///
 /// Properties:
 /// * [deviceId] - Unique device identifier
-/// * [name] 
+/// * [nameValue] 
 /// * [type] 
 /// * [manufacturer] - The manufacturer of the device.
 /// * [model] - The end-user-visible name for the end product.
@@ -33,7 +32,7 @@ abstract class Device implements Built<Device, DeviceBuilder> {
   String get deviceId;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get nameValue;
 
   @BuiltValueField(wireName: r'type')
   DeviceTypeEnum get type;
@@ -57,13 +56,13 @@ abstract class Device implements Built<Device, DeviceBuilder> {
   String get userUuid;
 
   @BuiltValueField(wireName: r'last_login')
-  OffsetDateTime? get lastLogin;
+  DateTime? get lastLogin;
 
   @BuiltValueField(wireName: r'created_at')
-  OffsetDateTime get createdAt;
+  DateTime get createdAt;
 
   @BuiltValueField(wireName: r'updated_at')
-  OffsetDateTime get updatedAt;
+  DateTime get updatedAt;
 
   Device._();
 
@@ -93,10 +92,10 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
       object.deviceId,
       specifiedType: const FullType(String),
     );
-    if (object.name != null) {
+    if (object.nameValue != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.nameValue,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -137,17 +136,17 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
     yield r'last_login';
     yield object.lastLogin == null ? null : serializers.serialize(
       object.lastLogin,
-      specifiedType: const FullType.nullable(OffsetDateTime),
+      specifiedType: const FullType.nullable(DateTime),
     );
     yield r'created_at';
     yield serializers.serialize(
       object.createdAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'updated_at';
     yield serializers.serialize(
       object.updatedAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
   }
 
@@ -185,7 +184,7 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.name = valueDes;
+          result.nameValue = valueDes;
           break;
         case r'type':
           final valueDes = serializers.deserialize(
@@ -233,23 +232,23 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
         case r'last_login':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(OffsetDateTime),
-          ) as OffsetDateTime?;
+            specifiedType: const FullType.nullable(DateTime),
+          ) as DateTime?;
           if (valueDes == null) continue;
           result.lastLogin = valueDes;
           break;
         case r'created_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.createdAt = valueDes;
           break;
         case r'updated_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.updatedAt = valueDes;
           break;
         default:

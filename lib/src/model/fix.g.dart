@@ -10,11 +10,11 @@ class _$Fix extends Fix {
   @override
   final String coverageUuid;
   @override
-  final OffsetDateTime createdAt;
+  final DateTime createdAt;
   @override
-  final OffsetDateTime sentAt;
+  final DateTime sentAt;
   @override
-  final OffsetDateTime receivedAt;
+  final DateTime receivedAt;
   @override
   final FixLocation point;
   @override
@@ -90,17 +90,17 @@ class FixBuilder implements Builder<Fix, FixBuilder> {
   String? get coverageUuid => _$this._coverageUuid;
   set coverageUuid(String? coverageUuid) => _$this._coverageUuid = coverageUuid;
 
-  OffsetDateTime? _createdAt;
-  OffsetDateTime? get createdAt => _$this._createdAt;
-  set createdAt(OffsetDateTime? createdAt) => _$this._createdAt = createdAt;
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
 
-  OffsetDateTime? _sentAt;
-  OffsetDateTime? get sentAt => _$this._sentAt;
-  set sentAt(OffsetDateTime? sentAt) => _$this._sentAt = sentAt;
+  DateTime? _sentAt;
+  DateTime? get sentAt => _$this._sentAt;
+  set sentAt(DateTime? sentAt) => _$this._sentAt = sentAt;
 
-  OffsetDateTime? _receivedAt;
-  OffsetDateTime? get receivedAt => _$this._receivedAt;
-  set receivedAt(OffsetDateTime? receivedAt) => _$this._receivedAt = receivedAt;
+  DateTime? _receivedAt;
+  DateTime? get receivedAt => _$this._receivedAt;
+  set receivedAt(DateTime? receivedAt) => _$this._receivedAt = receivedAt;
 
   FixLocationBuilder? _point;
   FixLocationBuilder get point => _$this._point ??= new FixLocationBuilder();

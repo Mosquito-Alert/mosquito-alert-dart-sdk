@@ -13,8 +13,8 @@ void main() {
       // TODO
     });
 
-    // String name
-    test('to test the property `name`', () async {
+    // String nameValue
+    test('to test the property `nameValue`', () async {
       // TODO
     });
 

@@ -8,7 +8,7 @@ part of 'patched_device_update_request.dart';
 
 class _$PatchedDeviceUpdateRequest extends PatchedDeviceUpdateRequest {
   @override
-  final String? name;
+  final String? nameValue;
   @override
   final String? fcmToken;
   @override
@@ -21,7 +21,7 @@ class _$PatchedDeviceUpdateRequest extends PatchedDeviceUpdateRequest {
       (new PatchedDeviceUpdateRequestBuilder()..update(updates))._build();
 
   _$PatchedDeviceUpdateRequest._(
-      {this.name, this.fcmToken, this.os, this.mobileApp})
+      {this.nameValue, this.fcmToken, this.os, this.mobileApp})
       : super._();
 
   @override
@@ -37,7 +37,7 @@ class _$PatchedDeviceUpdateRequest extends PatchedDeviceUpdateRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is PatchedDeviceUpdateRequest &&
-        name == other.name &&
+        nameValue == other.nameValue &&
         fcmToken == other.fcmToken &&
         os == other.os &&
         mobileApp == other.mobileApp;
@@ -46,7 +46,7 @@ class _$PatchedDeviceUpdateRequest extends PatchedDeviceUpdateRequest {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, nameValue.hashCode);
     _$hash = $jc(_$hash, fcmToken.hashCode);
     _$hash = $jc(_$hash, os.hashCode);
     _$hash = $jc(_$hash, mobileApp.hashCode);
@@ -57,7 +57,7 @@ class _$PatchedDeviceUpdateRequest extends PatchedDeviceUpdateRequest {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'PatchedDeviceUpdateRequest')
-          ..add('name', name)
+          ..add('nameValue', nameValue)
           ..add('fcmToken', fcmToken)
           ..add('os', os)
           ..add('mobileApp', mobileApp))
@@ -70,9 +70,9 @@ class PatchedDeviceUpdateRequestBuilder
         Builder<PatchedDeviceUpdateRequest, PatchedDeviceUpdateRequestBuilder> {
   _$PatchedDeviceUpdateRequest? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _nameValue;
+  String? get nameValue => _$this._nameValue;
+  set nameValue(String? nameValue) => _$this._nameValue = nameValue;
 
   String? _fcmToken;
   String? get fcmToken => _$this._fcmToken;
@@ -95,7 +95,7 @@ class PatchedDeviceUpdateRequestBuilder
   PatchedDeviceUpdateRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _nameValue = $v.nameValue;
       _fcmToken = $v.fcmToken;
       _os = $v.os?.toBuilder();
       _mobileApp = $v.mobileApp?.toBuilder();
@@ -123,7 +123,7 @@ class PatchedDeviceUpdateRequestBuilder
     try {
       _$result = _$v ??
           new _$PatchedDeviceUpdateRequest._(
-              name: name,
+              nameValue: nameValue,
               fcmToken: fcmToken,
               os: _os?.build(),
               mobileApp: _mobileApp?.build());

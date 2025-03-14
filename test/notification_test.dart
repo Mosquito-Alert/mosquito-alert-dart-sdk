@@ -22,7 +22,7 @@ void main() {
       // TODO
     });
 
-    // OffsetDateTime createdAt
+    // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO
     });

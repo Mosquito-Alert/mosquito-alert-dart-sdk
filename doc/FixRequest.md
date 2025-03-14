@@ -9,8 +9,8 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **coverageUuid** | **String** |  | 
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**sentAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**createdAt** | [**DateTime**](DateTime.md) |  | 
+**sentAt** | [**DateTime**](DateTime.md) |  | 
 **point** | [**FixLocationRequest**](FixLocationRequest.md) |  | 
 **power** | **double** | Power level of phone at time fix recorded, expressed as proportion of full charge. Range: 0-1. | [optional] 
 

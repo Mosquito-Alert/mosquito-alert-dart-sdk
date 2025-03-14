@@ -8,8 +8,8 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**sentAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
+**createdAt** | [**DateTime**](DateTime.md) |  | 
+**sentAt** | [**DateTime**](DateTime.md) |  | 
 **location** | [**LocationRequest**](LocationRequest.md) |  | 
 **note** | **String** | Note user attached to report. | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 

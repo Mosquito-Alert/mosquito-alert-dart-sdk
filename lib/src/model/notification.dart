@@ -4,7 +4,6 @@
 
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/notification_message.dart';
-import 'package:time_machine/time_machine.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -29,7 +28,7 @@ abstract class Notification implements Built<Notification, NotificationBuilder> 
   bool get isRead;
 
   @BuiltValueField(wireName: r'created_at')
-  OffsetDateTime get createdAt;
+  DateTime get createdAt;
 
   Notification._();
 
@@ -72,7 +71,7 @@ class _$NotificationSerializer implements PrimitiveSerializer<Notification> {
     yield r'created_at';
     yield serializers.serialize(
       object.createdAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
   }
 
@@ -121,8 +120,8 @@ class _$NotificationSerializer implements PrimitiveSerializer<Notification> {
         case r'created_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.createdAt = valueDes;
           break;
         default:

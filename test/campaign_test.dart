@@ -25,13 +25,13 @@ void main() {
     });
 
     // Date when the campaign starts. No samples should be collected BEFORE this date.
-    // OffsetDateTime startDate
+    // DateTime startDate
     test('to test the property `startDate`', () async {
       // TODO
     });
 
     // Date when the campaign ends. No samples should be collected AFTER this date.
-    // OffsetDateTime endDate
+    // DateTime endDate
     test('to test the property `endDate`', () async {
       // TODO
     });

@@ -70,7 +70,7 @@ class _$DeviceRequest extends DeviceRequest {
   @override
   final String deviceId;
   @override
-  final String? name;
+  final String? nameValue;
   @override
   final String fcmToken;
   @override
@@ -89,7 +89,7 @@ class _$DeviceRequest extends DeviceRequest {
 
   _$DeviceRequest._(
       {required this.deviceId,
-      this.name,
+      this.nameValue,
       required this.fcmToken,
       required this.type,
       this.manufacturer,
@@ -118,7 +118,7 @@ class _$DeviceRequest extends DeviceRequest {
     if (identical(other, this)) return true;
     return other is DeviceRequest &&
         deviceId == other.deviceId &&
-        name == other.name &&
+        nameValue == other.nameValue &&
         fcmToken == other.fcmToken &&
         type == other.type &&
         manufacturer == other.manufacturer &&
@@ -131,7 +131,7 @@ class _$DeviceRequest extends DeviceRequest {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, deviceId.hashCode);
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, nameValue.hashCode);
     _$hash = $jc(_$hash, fcmToken.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, manufacturer.hashCode);
@@ -146,7 +146,7 @@ class _$DeviceRequest extends DeviceRequest {
   String toString() {
     return (newBuiltValueToStringHelper(r'DeviceRequest')
           ..add('deviceId', deviceId)
-          ..add('name', name)
+          ..add('nameValue', nameValue)
           ..add('fcmToken', fcmToken)
           ..add('type', type)
           ..add('manufacturer', manufacturer)
@@ -165,9 +165,9 @@ class DeviceRequestBuilder
   String? get deviceId => _$this._deviceId;
   set deviceId(String? deviceId) => _$this._deviceId = deviceId;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _nameValue;
+  String? get nameValue => _$this._nameValue;
+  set nameValue(String? nameValue) => _$this._nameValue = nameValue;
 
   String? _fcmToken;
   String? get fcmToken => _$this._fcmToken;
@@ -203,7 +203,7 @@ class DeviceRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _deviceId = $v.deviceId;
-      _name = $v.name;
+      _nameValue = $v.nameValue;
       _fcmToken = $v.fcmToken;
       _type = $v.type;
       _manufacturer = $v.manufacturer;
@@ -236,7 +236,7 @@ class DeviceRequestBuilder
           new _$DeviceRequest._(
               deviceId: BuiltValueNullFieldError.checkNotNull(
                   deviceId, r'DeviceRequest', 'deviceId'),
-              name: name,
+              nameValue: nameValue,
               fcmToken: BuiltValueNullFieldError.checkNotNull(
                   fcmToken, r'DeviceRequest', 'fcmToken'),
               type: BuiltValueNullFieldError.checkNotNull(

@@ -131,19 +131,19 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getBitesApi();
-final OffsetDateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Created at
-final OffsetDateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Created at
+final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
+final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final int locationCountryId = 56; // int | 
 final String locationNuts2 = locationNuts2_example; // String | 
 final String locationNuts3 = locationNuts3_example; // String | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
-final OffsetDateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Received at
-final OffsetDateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Received at
+final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Received at
+final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final String shortId = shortId_example; // String | Short ID
-final OffsetDateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Update at
-final OffsetDateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Update at
+final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
+final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -158,19 +158,19 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createdAtAfter** | **OffsetDateTime**| Created at | [optional] 
- **createdAtBefore** | **OffsetDateTime**| Created at | [optional] 
+ **createdAtAfter** | **DateTime**| Created at | [optional] 
+ **createdAtBefore** | **DateTime**| Created at | [optional] 
  **locationCountryId** | **int**|  | [optional] 
  **locationNuts2** | **String**|  | [optional] 
  **locationNuts3** | **String**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
- **receivedAtAfter** | **OffsetDateTime**| Received at | [optional] 
- **receivedAtBefore** | **OffsetDateTime**| Received at | [optional] 
+ **receivedAtAfter** | **DateTime**| Received at | [optional] 
+ **receivedAtBefore** | **DateTime**| Received at | [optional] 
  **shortId** | **String**| Short ID | [optional] 
- **updatedAtAfter** | **OffsetDateTime**| Update at | [optional] 
- **updatedAtBefore** | **OffsetDateTime**| Update at | [optional] 
+ **updatedAtAfter** | **DateTime**| Update at | [optional] 
+ **updatedAtBefore** | **DateTime**| Update at | [optional] 
  **userUuid** | **String**|  | [optional] 
 
 ### Return type
@@ -200,19 +200,19 @@ Get Current User's Bites
 import 'package:mosquito_alert/api.dart';
 
 final api = MosquitoAlert().getBitesApi();
-final OffsetDateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Created at
-final OffsetDateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Created at
+final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
+final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final int locationCountryId = 56; // int | 
 final String locationNuts2 = locationNuts2_example; // String | 
 final String locationNuts3 = locationNuts3_example; // String | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
-final OffsetDateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Received at
-final OffsetDateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Received at
+final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Received at
+final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final String shortId = shortId_example; // String | Short ID
-final OffsetDateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Update at
-final OffsetDateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // OffsetDateTime | Update at
+final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
+final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
@@ -227,19 +227,19 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createdAtAfter** | **OffsetDateTime**| Created at | [optional] 
- **createdAtBefore** | **OffsetDateTime**| Created at | [optional] 
+ **createdAtAfter** | **DateTime**| Created at | [optional] 
+ **createdAtBefore** | **DateTime**| Created at | [optional] 
  **locationCountryId** | **int**|  | [optional] 
  **locationNuts2** | **String**|  | [optional] 
  **locationNuts3** | **String**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
- **receivedAtAfter** | **OffsetDateTime**| Received at | [optional] 
- **receivedAtBefore** | **OffsetDateTime**| Received at | [optional] 
+ **receivedAtAfter** | **DateTime**| Received at | [optional] 
+ **receivedAtBefore** | **DateTime**| Received at | [optional] 
  **shortId** | **String**| Short ID | [optional] 
- **updatedAtAfter** | **OffsetDateTime**| Update at | [optional] 
- **updatedAtBefore** | **OffsetDateTime**| Update at | [optional] 
+ **updatedAtAfter** | **DateTime**| Update at | [optional] 
+ **updatedAtBefore** | **DateTime**| Update at | [optional] 
  **userUuid** | **String**|  | [optional] 
 
 ### Return type

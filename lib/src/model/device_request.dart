@@ -15,7 +15,7 @@ part 'device_request.g.dart';
 ///
 /// Properties:
 /// * [deviceId] - Unique device identifier
-/// * [name] 
+/// * [nameValue] 
 /// * [fcmToken] 
 /// * [type] 
 /// * [manufacturer] - The manufacturer of the device.
@@ -29,7 +29,7 @@ abstract class DeviceRequest implements Built<DeviceRequest, DeviceRequestBuilde
   String get deviceId;
 
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get nameValue;
 
   @BuiltValueField(wireName: r'fcm_token')
   String get fcmToken;
@@ -80,10 +80,10 @@ class _$DeviceRequestSerializer implements PrimitiveSerializer<DeviceRequest> {
       object.deviceId,
       specifiedType: const FullType(String),
     );
-    if (object.name != null) {
+    if (object.nameValue != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.nameValue,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -157,7 +157,7 @@ class _$DeviceRequestSerializer implements PrimitiveSerializer<DeviceRequest> {
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.name = valueDes;
+          result.nameValue = valueDes;
           break;
         case r'fcm_token':
           final valueDes = serializers.deserialize(

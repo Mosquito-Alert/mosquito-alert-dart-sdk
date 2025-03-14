@@ -4,23 +4,15 @@
 
 import 'dart:async';
 
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/breeding_site.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_mine_validation_error.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/error_response401.dart';
-import 'package:mosquito_alert/src/model/error_response403.dart';
-import 'package:mosquito_alert/src/model/error_response404.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/paginated_breeding_site_list.dart';
 import 'package:mosquito_alert/src/model/simple_photo_request.dart';
-import 'package:time_machine/time_machine.dart';
 
 class BreedingSitesApi {
 
@@ -55,8 +47,8 @@ class BreedingSitesApi {
   /// Returns a [Future] containing a [Response] with a [BreedingSite] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<BreedingSite>> create({ 
-    required OffsetDateTime createdAt,
-    required OffsetDateTime sentAt,
+    required DateTime createdAt,
+    required DateTime sentAt,
     required LocationRequest location,
     required BuiltList<SimplePhotoRequest> photos,
     String? note,
@@ -107,8 +99,8 @@ class BreedingSitesApi {
 
     try {
       _bodyData = FormData.fromMap(<String, dynamic>{
-        r'created_at': encodeFormParameter(_serializers, createdAt, const FullType(OffsetDateTime)),
-        r'sent_at': encodeFormParameter(_serializers, sentAt, const FullType(OffsetDateTime)),
+        r'created_at': encodeFormParameter(_serializers, createdAt, const FullType(DateTime)),
+        r'sent_at': encodeFormParameter(_serializers, sentAt, const FullType(DateTime)),
         r'location': encodeFormParameter(_serializers, location, const FullType(LocationRequest)),
         r'note': encodeFormParameter(_serializers, note, const FullType(String)),
         if (tags != null) r'tags': encodeFormParameter(_serializers, tags, const FullType(BuiltList, [FullType(String)])),
@@ -264,8 +256,8 @@ class BreedingSitesApi {
   /// Returns a [Future] containing a [Response] with a [PaginatedBreedingSiteList] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<PaginatedBreedingSiteList>> list({ 
-    OffsetDateTime? createdAtAfter,
-    OffsetDateTime? createdAtBefore,
+    DateTime? createdAtAfter,
+    DateTime? createdAtBefore,
     bool? hasPhotos,
     int? locationCountryId,
     String? locationNuts2,
@@ -273,11 +265,11 @@ class BreedingSitesApi {
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
-    OffsetDateTime? receivedAtAfter,
-    OffsetDateTime? receivedAtBefore,
+    DateTime? receivedAtAfter,
+    DateTime? receivedAtBefore,
     String? shortId,
-    OffsetDateTime? updatedAtAfter,
-    OffsetDateTime? updatedAtBefore,
+    DateTime? updatedAtAfter,
+    DateTime? updatedAtBefore,
     String? userUuid,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -316,8 +308,8 @@ class BreedingSitesApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(OffsetDateTime)),
-      if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(OffsetDateTime)),
+      if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
+      if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (hasPhotos != null) r'has_photos': encodeQueryParameter(_serializers, hasPhotos, const FullType(bool)),
       r'location_country_id': encodeQueryParameter(_serializers, locationCountryId, const FullType(int)),
       if (locationNuts2 != null) r'location_nuts_2': encodeQueryParameter(_serializers, locationNuts2, const FullType(String)),
@@ -325,11 +317,11 @@ class BreedingSitesApi {
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
-      if (receivedAtAfter != null) r'received_at_after': encodeQueryParameter(_serializers, receivedAtAfter, const FullType(OffsetDateTime)),
-      if (receivedAtBefore != null) r'received_at_before': encodeQueryParameter(_serializers, receivedAtBefore, const FullType(OffsetDateTime)),
+      if (receivedAtAfter != null) r'received_at_after': encodeQueryParameter(_serializers, receivedAtAfter, const FullType(DateTime)),
+      if (receivedAtBefore != null) r'received_at_before': encodeQueryParameter(_serializers, receivedAtBefore, const FullType(DateTime)),
       if (shortId != null) r'short_id': encodeQueryParameter(_serializers, shortId, const FullType(String)),
-      if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(OffsetDateTime)),
-      if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(OffsetDateTime)),
+      if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
+      if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
       if (userUuid != null) r'user_uuid': encodeQueryParameter(_serializers, userUuid, const FullType(String)),
     };
 
@@ -402,8 +394,8 @@ class BreedingSitesApi {
   /// Returns a [Future] containing a [Response] with a [PaginatedBreedingSiteList] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<PaginatedBreedingSiteList>> listMine({ 
-    OffsetDateTime? createdAtAfter,
-    OffsetDateTime? createdAtBefore,
+    DateTime? createdAtAfter,
+    DateTime? createdAtBefore,
     bool? hasPhotos,
     int? locationCountryId,
     String? locationNuts2,
@@ -411,11 +403,11 @@ class BreedingSitesApi {
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
-    OffsetDateTime? receivedAtAfter,
-    OffsetDateTime? receivedAtBefore,
+    DateTime? receivedAtAfter,
+    DateTime? receivedAtBefore,
     String? shortId,
-    OffsetDateTime? updatedAtAfter,
-    OffsetDateTime? updatedAtBefore,
+    DateTime? updatedAtAfter,
+    DateTime? updatedAtBefore,
     String? userUuid,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -444,8 +436,8 @@ class BreedingSitesApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(OffsetDateTime)),
-      if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(OffsetDateTime)),
+      if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
+      if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (hasPhotos != null) r'has_photos': encodeQueryParameter(_serializers, hasPhotos, const FullType(bool)),
       r'location_country_id': encodeQueryParameter(_serializers, locationCountryId, const FullType(int)),
       if (locationNuts2 != null) r'location_nuts_2': encodeQueryParameter(_serializers, locationNuts2, const FullType(String)),
@@ -453,11 +445,11 @@ class BreedingSitesApi {
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
-      if (receivedAtAfter != null) r'received_at_after': encodeQueryParameter(_serializers, receivedAtAfter, const FullType(OffsetDateTime)),
-      if (receivedAtBefore != null) r'received_at_before': encodeQueryParameter(_serializers, receivedAtBefore, const FullType(OffsetDateTime)),
+      if (receivedAtAfter != null) r'received_at_after': encodeQueryParameter(_serializers, receivedAtAfter, const FullType(DateTime)),
+      if (receivedAtBefore != null) r'received_at_before': encodeQueryParameter(_serializers, receivedAtBefore, const FullType(DateTime)),
       if (shortId != null) r'short_id': encodeQueryParameter(_serializers, shortId, const FullType(String)),
-      if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(OffsetDateTime)),
-      if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(OffsetDateTime)),
+      if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
+      if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
       if (userUuid != null) r'user_uuid': encodeQueryParameter(_serializers, userUuid, const FullType(String)),
     };
 

@@ -3,7 +3,6 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:time_machine/time_machine.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -32,11 +31,11 @@ abstract class Campaign implements Built<Campaign, CampaignBuilder> {
 
   /// Date when the campaign starts. No samples should be collected BEFORE this date.
   @BuiltValueField(wireName: r'start_date')
-  OffsetDateTime get startDate;
+  DateTime get startDate;
 
   /// Date when the campaign ends. No samples should be collected AFTER this date.
   @BuiltValueField(wireName: r'end_date')
-  OffsetDateTime get endDate;
+  DateTime get endDate;
 
   Campaign._();
 
@@ -79,12 +78,12 @@ class _$CampaignSerializer implements PrimitiveSerializer<Campaign> {
     yield r'start_date';
     yield serializers.serialize(
       object.startDate,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'end_date';
     yield serializers.serialize(
       object.endDate,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
   }
 
@@ -133,15 +132,15 @@ class _$CampaignSerializer implements PrimitiveSerializer<Campaign> {
         case r'start_date':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.startDate = valueDes;
           break;
         case r'end_date':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.endDate = valueDes;
           break;
         default:

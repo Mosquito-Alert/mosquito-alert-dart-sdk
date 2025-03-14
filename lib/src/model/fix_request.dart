@@ -3,7 +3,6 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:time_machine/time_machine.dart';
 import 'package:mosquito_alert/src/model/fix_location_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -24,10 +23,10 @@ abstract class FixRequest implements Built<FixRequest, FixRequestBuilder> {
   String get coverageUuid;
 
   @BuiltValueField(wireName: r'created_at')
-  OffsetDateTime get createdAt;
+  DateTime get createdAt;
 
   @BuiltValueField(wireName: r'sent_at')
-  OffsetDateTime get sentAt;
+  DateTime get sentAt;
 
   @BuiltValueField(wireName: r'point')
   FixLocationRequest get point;
@@ -67,12 +66,12 @@ class _$FixRequestSerializer implements PrimitiveSerializer<FixRequest> {
     yield r'created_at';
     yield serializers.serialize(
       object.createdAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'sent_at';
     yield serializers.serialize(
       object.sentAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'point';
     yield serializers.serialize(
@@ -119,15 +118,15 @@ class _$FixRequestSerializer implements PrimitiveSerializer<FixRequest> {
         case r'created_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.createdAt = valueDes;
           break;
         case r'sent_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.sentAt = valueDes;
           break;
         case r'point':

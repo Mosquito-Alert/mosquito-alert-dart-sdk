@@ -195,7 +195,7 @@ class _$User extends User {
   @override
   final String username;
   @override
-  final OffsetDateTime registrationTime;
+  final DateTime registrationTime;
   @override
   final UserLocaleEnum? locale;
   @override
@@ -205,7 +205,7 @@ class _$User extends User {
   @override
   final int score;
   @override
-  final OffsetDateTime lastScoreUpdate;
+  final DateTime lastScoreUpdate;
 
   factory _$User([void Function(UserBuilder)? updates]) =>
       (new UserBuilder()..update(updates))._build();
@@ -293,9 +293,9 @@ class UserBuilder implements Builder<User, UserBuilder> {
   String? get username => _$this._username;
   set username(String? username) => _$this._username = username;
 
-  OffsetDateTime? _registrationTime;
-  OffsetDateTime? get registrationTime => _$this._registrationTime;
-  set registrationTime(OffsetDateTime? registrationTime) =>
+  DateTime? _registrationTime;
+  DateTime? get registrationTime => _$this._registrationTime;
+  set registrationTime(DateTime? registrationTime) =>
       _$this._registrationTime = registrationTime;
 
   UserLocaleEnum? _locale;
@@ -314,9 +314,9 @@ class UserBuilder implements Builder<User, UserBuilder> {
   int? get score => _$this._score;
   set score(int? score) => _$this._score = score;
 
-  OffsetDateTime? _lastScoreUpdate;
-  OffsetDateTime? get lastScoreUpdate => _$this._lastScoreUpdate;
-  set lastScoreUpdate(OffsetDateTime? lastScoreUpdate) =>
+  DateTime? _lastScoreUpdate;
+  DateTime? get lastScoreUpdate => _$this._lastScoreUpdate;
+  set lastScoreUpdate(DateTime? lastScoreUpdate) =>
       _$this._lastScoreUpdate = lastScoreUpdate;
 
   UserBuilder() {

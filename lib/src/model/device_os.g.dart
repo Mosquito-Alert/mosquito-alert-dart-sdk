@@ -8,7 +8,7 @@ part of 'device_os.dart';
 
 class _$DeviceOs extends DeviceOs {
   @override
-  final String name;
+  final String nameValue;
   @override
   final String version;
   @override
@@ -17,9 +17,9 @@ class _$DeviceOs extends DeviceOs {
   factory _$DeviceOs([void Function(DeviceOsBuilder)? updates]) =>
       (new DeviceOsBuilder()..update(updates))._build();
 
-  _$DeviceOs._({required this.name, required this.version, this.locale})
+  _$DeviceOs._({required this.nameValue, required this.version, this.locale})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(name, r'DeviceOs', 'name');
+    BuiltValueNullFieldError.checkNotNull(nameValue, r'DeviceOs', 'nameValue');
     BuiltValueNullFieldError.checkNotNull(version, r'DeviceOs', 'version');
   }
 
@@ -34,7 +34,7 @@ class _$DeviceOs extends DeviceOs {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is DeviceOs &&
-        name == other.name &&
+        nameValue == other.nameValue &&
         version == other.version &&
         locale == other.locale;
   }
@@ -42,7 +42,7 @@ class _$DeviceOs extends DeviceOs {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, name.hashCode);
+    _$hash = $jc(_$hash, nameValue.hashCode);
     _$hash = $jc(_$hash, version.hashCode);
     _$hash = $jc(_$hash, locale.hashCode);
     _$hash = $jf(_$hash);
@@ -52,7 +52,7 @@ class _$DeviceOs extends DeviceOs {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'DeviceOs')
-          ..add('name', name)
+          ..add('nameValue', nameValue)
           ..add('version', version)
           ..add('locale', locale))
         .toString();
@@ -62,9 +62,9 @@ class _$DeviceOs extends DeviceOs {
 class DeviceOsBuilder implements Builder<DeviceOs, DeviceOsBuilder> {
   _$DeviceOs? _$v;
 
-  String? _name;
-  String? get name => _$this._name;
-  set name(String? name) => _$this._name = name;
+  String? _nameValue;
+  String? get nameValue => _$this._nameValue;
+  set nameValue(String? nameValue) => _$this._nameValue = nameValue;
 
   String? _version;
   String? get version => _$this._version;
@@ -81,7 +81,7 @@ class DeviceOsBuilder implements Builder<DeviceOs, DeviceOsBuilder> {
   DeviceOsBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _name = $v.name;
+      _nameValue = $v.nameValue;
       _version = $v.version;
       _locale = $v.locale;
       _$v = null;
@@ -106,8 +106,8 @@ class DeviceOsBuilder implements Builder<DeviceOs, DeviceOsBuilder> {
   _$DeviceOs _build() {
     final _$result = _$v ??
         new _$DeviceOs._(
-            name: BuiltValueNullFieldError.checkNotNull(
-                name, r'DeviceOs', 'name'),
+            nameValue: BuiltValueNullFieldError.checkNotNull(
+                nameValue, r'DeviceOs', 'nameValue'),
             version: BuiltValueNullFieldError.checkNotNull(
                 version, r'DeviceOs', 'version'),
             locale: locale);

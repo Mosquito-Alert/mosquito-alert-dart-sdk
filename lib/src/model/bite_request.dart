@@ -4,7 +4,6 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:time_machine/time_machine.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -30,10 +29,10 @@ part 'bite_request.g.dart';
 @BuiltValue()
 abstract class BiteRequest implements Built<BiteRequest, BiteRequestBuilder> {
   @BuiltValueField(wireName: r'created_at')
-  OffsetDateTime get createdAt;
+  DateTime get createdAt;
 
   @BuiltValueField(wireName: r'sent_at')
-  OffsetDateTime get sentAt;
+  DateTime get sentAt;
 
   @BuiltValueField(wireName: r'location')
   LocationRequest get location;
@@ -111,12 +110,12 @@ class _$BiteRequestSerializer implements PrimitiveSerializer<BiteRequest> {
     yield r'created_at';
     yield serializers.serialize(
       object.createdAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'sent_at';
     yield serializers.serialize(
       object.sentAt,
-      specifiedType: const FullType(OffsetDateTime),
+      specifiedType: const FullType(DateTime),
     );
     yield r'location';
     yield serializers.serialize(
@@ -219,15 +218,15 @@ class _$BiteRequestSerializer implements PrimitiveSerializer<BiteRequest> {
         case r'created_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.createdAt = valueDes;
           break;
         case r'sent_at':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(OffsetDateTime),
-          ) as OffsetDateTime;
+            specifiedType: const FullType(DateTime),
+          ) as DateTime;
           result.sentAt = valueDes;
           break;
         case r'location':

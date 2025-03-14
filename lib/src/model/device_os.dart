@@ -11,14 +11,14 @@ part 'device_os.g.dart';
 /// DeviceOs
 ///
 /// Properties:
-/// * [name] - Operating system of device from which this report was submitted.
+/// * [nameValue] - Operating system of device from which this report was submitted.
 /// * [version] - Operating system version of device from which this report was submitted.
 /// * [locale] - The locale configured in the device following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
 @BuiltValue()
 abstract class DeviceOs implements Built<DeviceOs, DeviceOsBuilder> {
   /// Operating system of device from which this report was submitted.
   @BuiltValueField(wireName: r'name')
-  String get name;
+  String get nameValue;
 
   /// Operating system version of device from which this report was submitted.
   @BuiltValueField(wireName: r'version')
@@ -53,7 +53,7 @@ class _$DeviceOsSerializer implements PrimitiveSerializer<DeviceOs> {
   }) sync* {
     yield r'name';
     yield serializers.serialize(
-      object.name,
+      object.nameValue,
       specifiedType: const FullType(String),
     );
     yield r'version';
@@ -96,7 +96,7 @@ class _$DeviceOsSerializer implements PrimitiveSerializer<DeviceOs> {
             value,
             specifiedType: const FullType(String),
           ) as String;
-          result.name = valueDes;
+          result.nameValue = valueDes;
           break;
         case r'version':
           final valueDes = serializers.deserialize(

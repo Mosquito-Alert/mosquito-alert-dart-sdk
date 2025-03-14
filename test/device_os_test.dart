@@ -8,8 +8,8 @@ void main() {
 
   group(DeviceOs, () {
     // Operating system of device from which this report was submitted.
-    // String name
-    test('to test the property `name`', () async {
+    // String nameValue
+    test('to test the property `nameValue`', () async {
       // TODO
     });
 

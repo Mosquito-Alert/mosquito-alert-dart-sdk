@@ -8,7 +8,7 @@ export 'package:mosquito_alert/src/auth/basic_auth.dart';
 export 'package:mosquito_alert/src/auth/bearer_auth.dart';
 export 'package:mosquito_alert/src/auth/oauth.dart';
 export 'package:mosquito_alert/src/serializers.dart';
-
+export 'package:mosquito_alert/src/model/date.dart';
 
 export 'package:mosquito_alert/src/api/auth_api.dart';
 export 'package:mosquito_alert/src/api/bites_api.dart';

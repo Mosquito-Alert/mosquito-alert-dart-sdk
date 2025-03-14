@@ -4,7 +4,6 @@
 
 import 'dart:async';
 
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
@@ -13,12 +12,6 @@ import 'package:mosquito_alert/src/model/device.dart';
 import 'package:mosquito_alert/src/model/device_request.dart';
 import 'package:mosquito_alert/src/model/device_update.dart';
 import 'package:mosquito_alert/src/model/device_update_request.dart';
-import 'package:mosquito_alert/src/model/devices_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/devices_partial_update_validation_error.dart';
-import 'package:mosquito_alert/src/model/devices_update_validation_error.dart';
-import 'package:mosquito_alert/src/model/error_response401.dart';
-import 'package:mosquito_alert/src/model/error_response403.dart';
-import 'package:mosquito_alert/src/model/error_response404.dart';
 import 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 
 class DevicesApi {

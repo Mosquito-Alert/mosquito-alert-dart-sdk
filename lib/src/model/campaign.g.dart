@@ -14,9 +14,9 @@ class _$Campaign extends Campaign {
   @override
   final String postingAddress;
   @override
-  final OffsetDateTime startDate;
+  final DateTime startDate;
   @override
-  final OffsetDateTime endDate;
+  final DateTime endDate;
 
   factory _$Campaign([void Function(CampaignBuilder)? updates]) =>
       (new CampaignBuilder()..update(updates))._build();
@@ -94,13 +94,13 @@ class CampaignBuilder implements Builder<Campaign, CampaignBuilder> {
   set postingAddress(String? postingAddress) =>
       _$this._postingAddress = postingAddress;
 
-  OffsetDateTime? _startDate;
-  OffsetDateTime? get startDate => _$this._startDate;
-  set startDate(OffsetDateTime? startDate) => _$this._startDate = startDate;
+  DateTime? _startDate;
+  DateTime? get startDate => _$this._startDate;
+  set startDate(DateTime? startDate) => _$this._startDate = startDate;
 
-  OffsetDateTime? _endDate;
-  OffsetDateTime? get endDate => _$this._endDate;
-  set endDate(OffsetDateTime? endDate) => _$this._endDate = endDate;
+  DateTime? _endDate;
+  DateTime? get endDate => _$this._endDate;
+  set endDate(DateTime? endDate) => _$this._endDate = endDate;
 
   CampaignBuilder() {
     Campaign._defaults(this);

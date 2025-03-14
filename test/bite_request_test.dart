@@ -7,12 +7,12 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(BiteRequest, () {
-    // OffsetDateTime createdAt
+    // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO
     });
 
-    // OffsetDateTime sentAt
+    // DateTime sentAt
     test('to test the property `sentAt`', () async {
       // TODO
     });

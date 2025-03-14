@@ -13,14 +13,14 @@ part 'patched_device_update_request.g.dart';
 /// PatchedDeviceUpdateRequest
 ///
 /// Properties:
-/// * [name] 
+/// * [nameValue] 
 /// * [fcmToken] 
 /// * [os] 
 /// * [mobileApp] 
 @BuiltValue()
 abstract class PatchedDeviceUpdateRequest implements Built<PatchedDeviceUpdateRequest, PatchedDeviceUpdateRequestBuilder> {
   @BuiltValueField(wireName: r'name')
-  String? get name;
+  String? get nameValue;
 
   @BuiltValueField(wireName: r'fcm_token')
   String? get fcmToken;
@@ -54,10 +54,10 @@ class _$PatchedDeviceUpdateRequestSerializer implements PrimitiveSerializer<Patc
     PatchedDeviceUpdateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.name != null) {
+    if (object.nameValue != null) {
       yield r'name';
       yield serializers.serialize(
-        object.name,
+        object.nameValue,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -111,7 +111,7 @@ class _$PatchedDeviceUpdateRequestSerializer implements PrimitiveSerializer<Patc
             specifiedType: const FullType.nullable(String),
           ) as String?;
           if (valueDes == null) continue;
-          result.name = valueDes;
+          result.nameValue = valueDes;
           break;
         case r'fcm_token':
           final valueDes = serializers.deserialize(

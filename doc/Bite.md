@@ -11,11 +11,11 @@ Name | Type | Description | Notes
 **uuid** | **String** |  | 
 **shortId** | **String** |  | 
 **userUuid** | **String** |  | 
-**createdAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**createdAtLocal** | [**OffsetDateTime**](OffsetDateTime.md) | The date and time when the record was created, displayed in the local timezone specified for this entry. | 
-**sentAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**receivedAt** | [**OffsetDateTime**](OffsetDateTime.md) |  | 
-**updatedAt** | [**OffsetDateTime**](OffsetDateTime.md) | Date and time when the report was last modified | 
+**createdAt** | [**DateTime**](DateTime.md) |  | 
+**createdAtLocal** | [**DateTime**](DateTime.md) | The date and time when the record was created, displayed in the local timezone specified for this entry. | 
+**sentAt** | [**DateTime**](DateTime.md) |  | 
+**receivedAt** | [**DateTime**](DateTime.md) |  | 
+**updatedAt** | [**DateTime**](DateTime.md) | Date and time when the report was last modified | 
 **location** | [**Location**](Location.md) |  | 
 **note** | **String** | Note user attached to report. | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 

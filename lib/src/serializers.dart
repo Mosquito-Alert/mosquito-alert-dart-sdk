@@ -10,9 +10,10 @@ import 'package:built_collection/built_collection.dart';
 import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:built_value/standard_json_plugin.dart';
+import 'package:built_value/iso_8601_date_time_serializer.dart';
+import 'package:mosquito_alert/src/date_serializer.dart';
+import 'package:mosquito_alert/src/model/date.dart';
 
-import 'package:time_machine/time_machine.dart';
-import 'package:mosquito_alert/src/offset_date_serializer.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
 import 'package:mosquito_alert/src/model/auth_change_password_error.dart';
@@ -718,10 +719,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<String>(),
       )
       ..add(const OneOfSerializer())
-      ..add(const AnyOfSerializer())      
-      ..add(const OffsetDateSerializer())
-      ..add(const OffsetDateTimeSerializer())
-    .build());
+      ..add(const AnyOfSerializer())
+      ..add(const DateSerializer())
+      ..add(Iso8601DateTimeSerializer()))
+    .build();
 
 Serializers standardSerializers =
     (serializers.toBuilder()..addPlugin(StandardJsonPlugin())).build();

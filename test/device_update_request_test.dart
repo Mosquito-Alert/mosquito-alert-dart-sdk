@@ -7,8 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(DeviceUpdateRequest, () {
-    // String name
-    test('to test the property `name`', () async {
+    // String nameValue
+    test('to test the property `nameValue`', () async {
       // TODO
     });
 

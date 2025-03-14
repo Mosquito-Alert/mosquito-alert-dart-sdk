@@ -4,24 +4,15 @@
 
 import 'dart:async';
 
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/create_notification.dart';
-import 'package:mosquito_alert/src/model/error_response401.dart';
-import 'package:mosquito_alert/src/model/error_response403.dart';
-import 'package:mosquito_alert/src/model/error_response404.dart';
 import 'package:mosquito_alert/src/model/meta_notification_request.dart';
 import 'package:mosquito_alert/src/model/notification.dart';
 import 'package:mosquito_alert/src/model/notification_request.dart';
-import 'package:mosquito_alert/src/model/notifications_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/notifications_list_mine_validation_error.dart';
-import 'package:mosquito_alert/src/model/notifications_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/notifications_partial_update_validation_error.dart';
-import 'package:mosquito_alert/src/model/notifications_update_validation_error.dart';
 import 'package:mosquito_alert/src/model/paginated_notification_list.dart';
 import 'package:mosquito_alert/src/model/patched_notification_request.dart';
 

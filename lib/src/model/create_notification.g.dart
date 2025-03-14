@@ -10,7 +10,7 @@ class _$CreateNotification extends CreateNotification {
   @override
   final int id;
   @override
-  final OffsetDateTime createdAt;
+  final DateTime createdAt;
 
   factory _$CreateNotification(
           [void Function(CreateNotificationBuilder)? updates]) =>
@@ -66,9 +66,9 @@ class CreateNotificationBuilder
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  OffsetDateTime? _createdAt;
-  OffsetDateTime? get createdAt => _$this._createdAt;
-  set createdAt(OffsetDateTime? createdAt) => _$this._createdAt = createdAt;
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
 
   CreateNotificationBuilder() {
     CreateNotification._defaults(this);

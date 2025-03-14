@@ -10,9 +10,9 @@ class _$FixRequest extends FixRequest {
   @override
   final String coverageUuid;
   @override
-  final OffsetDateTime createdAt;
+  final DateTime createdAt;
   @override
-  final OffsetDateTime sentAt;
+  final DateTime sentAt;
   @override
   final FixLocationRequest point;
   @override
@@ -85,13 +85,13 @@ class FixRequestBuilder implements Builder<FixRequest, FixRequestBuilder> {
   String? get coverageUuid => _$this._coverageUuid;
   set coverageUuid(String? coverageUuid) => _$this._coverageUuid = coverageUuid;
 
-  OffsetDateTime? _createdAt;
-  OffsetDateTime? get createdAt => _$this._createdAt;
-  set createdAt(OffsetDateTime? createdAt) => _$this._createdAt = createdAt;
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
 
-  OffsetDateTime? _sentAt;
-  OffsetDateTime? get sentAt => _$this._sentAt;
-  set sentAt(OffsetDateTime? sentAt) => _$this._sentAt = sentAt;
+  DateTime? _sentAt;
+  DateTime? get sentAt => _$this._sentAt;
+  set sentAt(DateTime? sentAt) => _$this._sentAt = sentAt;
 
   FixLocationRequestBuilder? _point;
   FixLocationRequestBuilder get point =>

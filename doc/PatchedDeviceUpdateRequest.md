@@ -8,7 +8,7 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** |  | [optional] 
+**nameValue** | **String** |  | [optional] 
 **fcmToken** | **String** |  | [optional] 
 **os** | [**DeviceOsRequest**](DeviceOsRequest.md) |  | [optional] 
 **mobileApp** | [**MobileAppRequest**](MobileAppRequest.md) |  | [optional] 

@@ -110,15 +110,15 @@ class _$BreedingSite extends BreedingSite {
   @override
   final String userUuid;
   @override
-  final OffsetDateTime createdAt;
+  final DateTime createdAt;
   @override
-  final OffsetDateTime createdAtLocal;
+  final DateTime createdAtLocal;
   @override
-  final OffsetDateTime sentAt;
+  final DateTime sentAt;
   @override
-  final OffsetDateTime receivedAt;
+  final DateTime receivedAt;
   @override
-  final OffsetDateTime updatedAt;
+  final DateTime updatedAt;
   @override
   final Location location;
   @override
@@ -280,26 +280,26 @@ class BreedingSiteBuilder
   String? get userUuid => _$this._userUuid;
   set userUuid(String? userUuid) => _$this._userUuid = userUuid;
 
-  OffsetDateTime? _createdAt;
-  OffsetDateTime? get createdAt => _$this._createdAt;
-  set createdAt(OffsetDateTime? createdAt) => _$this._createdAt = createdAt;
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
 
-  OffsetDateTime? _createdAtLocal;
-  OffsetDateTime? get createdAtLocal => _$this._createdAtLocal;
-  set createdAtLocal(OffsetDateTime? createdAtLocal) =>
+  DateTime? _createdAtLocal;
+  DateTime? get createdAtLocal => _$this._createdAtLocal;
+  set createdAtLocal(DateTime? createdAtLocal) =>
       _$this._createdAtLocal = createdAtLocal;
 
-  OffsetDateTime? _sentAt;
-  OffsetDateTime? get sentAt => _$this._sentAt;
-  set sentAt(OffsetDateTime? sentAt) => _$this._sentAt = sentAt;
+  DateTime? _sentAt;
+  DateTime? get sentAt => _$this._sentAt;
+  set sentAt(DateTime? sentAt) => _$this._sentAt = sentAt;
 
-  OffsetDateTime? _receivedAt;
-  OffsetDateTime? get receivedAt => _$this._receivedAt;
-  set receivedAt(OffsetDateTime? receivedAt) => _$this._receivedAt = receivedAt;
+  DateTime? _receivedAt;
+  DateTime? get receivedAt => _$this._receivedAt;
+  set receivedAt(DateTime? receivedAt) => _$this._receivedAt = receivedAt;
 
-  OffsetDateTime? _updatedAt;
-  OffsetDateTime? get updatedAt => _$this._updatedAt;
-  set updatedAt(OffsetDateTime? updatedAt) => _$this._updatedAt = updatedAt;
+  DateTime? _updatedAt;
+  DateTime? get updatedAt => _$this._updatedAt;
+  set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   LocationBuilder? _location;
   LocationBuilder get location => _$this._location ??= new LocationBuilder();

@@ -18,7 +18,7 @@ void main() {
     });
 
     // The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
-    // OffsetDateTime registrationTime
+    // DateTime registrationTime
     test('to test the property `registrationTime`', () async {
       // TODO
     });
@@ -47,7 +47,7 @@ void main() {
     });
 
     // Last time score was updated
-    // OffsetDateTime lastScoreUpdate
+    // DateTime lastScoreUpdate
     test('to test the property `lastScoreUpdate`', () async {
       // TODO
     });

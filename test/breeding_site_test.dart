@@ -22,29 +22,29 @@ void main() {
       // TODO
     });
 
-    // OffsetDateTime createdAt
+    // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO
     });
 
     // The date and time when the record was created, displayed in the local timezone specified for this entry.
-    // OffsetDateTime createdAtLocal
+    // DateTime createdAtLocal
     test('to test the property `createdAtLocal`', () async {
       // TODO
     });
 
-    // OffsetDateTime sentAt
+    // DateTime sentAt
     test('to test the property `sentAt`', () async {
       // TODO
     });
 
-    // OffsetDateTime receivedAt
+    // DateTime receivedAt
     test('to test the property `receivedAt`', () async {
       // TODO
     });
 
     // Date and time when the report was last modified
-    // OffsetDateTime updatedAt
+    // DateTime updatedAt
     test('to test the property `updatedAt`', () async {
       // TODO
     });

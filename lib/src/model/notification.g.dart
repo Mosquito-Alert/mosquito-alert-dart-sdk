@@ -14,7 +14,7 @@ class _$Notification extends Notification {
   @override
   final bool isRead;
   @override
-  final OffsetDateTime createdAt;
+  final DateTime createdAt;
 
   factory _$Notification([void Function(NotificationBuilder)? updates]) =>
       (new NotificationBuilder()..update(updates))._build();
@@ -88,9 +88,9 @@ class NotificationBuilder
   bool? get isRead => _$this._isRead;
   set isRead(bool? isRead) => _$this._isRead = isRead;
 
-  OffsetDateTime? _createdAt;
-  OffsetDateTime? get createdAt => _$this._createdAt;
-  set createdAt(OffsetDateTime? createdAt) => _$this._createdAt = createdAt;
+  DateTime? _createdAt;
+  DateTime? get createdAt => _$this._createdAt;
+  set createdAt(DateTime? createdAt) => _$this._createdAt = createdAt;
 
   NotificationBuilder() {
     Notification._defaults(this);
