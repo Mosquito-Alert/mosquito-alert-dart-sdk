@@ -10,14 +10,20 @@ const BitesCreateLeftArmBiteCountErrorComponentAttrEnum
     _$bitesCreateLeftArmBiteCountErrorComponentAttrEnum_leftArmBiteCount =
     const BitesCreateLeftArmBiteCountErrorComponentAttrEnum._(
         'leftArmBiteCount');
+const BitesCreateLeftArmBiteCountErrorComponentAttrEnum
+    _$bitesCreateLeftArmBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateLeftArmBiteCountErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateLeftArmBiteCountErrorComponentAttrEnum
     _$bitesCreateLeftArmBiteCountErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'leftArmBiteCount':
       return _$bitesCreateLeftArmBiteCountErrorComponentAttrEnum_leftArmBiteCount;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateLeftArmBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateLeftArmBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<BitesCreateLeftArmBiteCountErrorComponentAttrEnum>
     _$bitesCreateLeftArmBiteCountErrorComponentAttrEnumValues = new BuiltSet<
         BitesCreateLeftArmBiteCountErrorComponentAttrEnum>(const <BitesCreateLeftArmBiteCountErrorComponentAttrEnum>[
   _$bitesCreateLeftArmBiteCountErrorComponentAttrEnum_leftArmBiteCount,
+  _$bitesCreateLeftArmBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateLeftArmBiteCountErrorComponentCodeEnum
@@ -34,6 +41,10 @@ const BitesCreateLeftArmBiteCountErrorComponentCodeEnum
     _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_maxStringLength =
     const BitesCreateLeftArmBiteCountErrorComponentCodeEnum._(
         'maxStringLength');
+const BitesCreateLeftArmBiteCountErrorComponentCodeEnum
+    _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateLeftArmBiteCountErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateLeftArmBiteCountErrorComponentCodeEnum
     _$bitesCreateLeftArmBiteCountErrorComponentCodeEnumValueOf(String name) {
@@ -42,8 +53,10 @@ BitesCreateLeftArmBiteCountErrorComponentCodeEnum
       return _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_invalid;
     case 'maxStringLength':
       return _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_maxStringLength;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -52,6 +65,7 @@ final BuiltSet<BitesCreateLeftArmBiteCountErrorComponentCodeEnum>
         BitesCreateLeftArmBiteCountErrorComponentCodeEnum>(const <BitesCreateLeftArmBiteCountErrorComponentCodeEnum>[
   _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_invalid,
   _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_maxStringLength,
+  _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateLeftArmBiteCountErrorComponentAttrEnum>
@@ -66,9 +80,11 @@ class _$BitesCreateLeftArmBiteCountErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesCreateLeftArmBiteCountErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'leftArmBiteCount': 'left_arm_bite_count',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'left_arm_bite_count': 'leftArmBiteCount',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -98,10 +114,12 @@ class _$BitesCreateLeftArmBiteCountErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'maxStringLength': 'max_string_length',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

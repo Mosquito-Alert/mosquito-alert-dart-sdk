@@ -9,14 +9,19 @@ part of 'bites_create_tags_index_error_component.dart';
 const BitesCreateTagsINDEXErrorComponentAttrEnum
     _$bitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX =
     const BitesCreateTagsINDEXErrorComponentAttrEnum._('tagsPeriodINDEX');
+const BitesCreateTagsINDEXErrorComponentAttrEnum
+    _$bitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateTagsINDEXErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 BitesCreateTagsINDEXErrorComponentAttrEnum
     _$bitesCreateTagsINDEXErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'tagsPeriodINDEX':
       return _$bitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<BitesCreateTagsINDEXErrorComponentAttrEnum>
     _$bitesCreateTagsINDEXErrorComponentAttrEnumValues = new BuiltSet<
         BitesCreateTagsINDEXErrorComponentAttrEnum>(const <BitesCreateTagsINDEXErrorComponentAttrEnum>[
   _$bitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX,
+  _$bitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateTagsINDEXErrorComponentCodeEnum
@@ -46,6 +52,9 @@ const BitesCreateTagsINDEXErrorComponentCodeEnum
     _$bitesCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const BitesCreateTagsINDEXErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const BitesCreateTagsINDEXErrorComponentCodeEnum
+    _$bitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateTagsINDEXErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 BitesCreateTagsINDEXErrorComponentCodeEnum
     _$bitesCreateTagsINDEXErrorComponentCodeEnumValueOf(String name) {
@@ -62,8 +71,10 @@ BitesCreateTagsINDEXErrorComponentCodeEnum
       return _$bitesCreateTagsINDEXErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$bitesCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -76,6 +87,7 @@ final BuiltSet<BitesCreateTagsINDEXErrorComponentCodeEnum>
   _$bitesCreateTagsINDEXErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$bitesCreateTagsINDEXErrorComponentCodeEnum_required_,
   _$bitesCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$bitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateTagsINDEXErrorComponentAttrEnum>
@@ -89,9 +101,11 @@ class _$BitesCreateTagsINDEXErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesCreateTagsINDEXErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'tagsPeriodINDEX': 'tags.INDEX',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'tags.INDEX': 'tagsPeriodINDEX',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -124,6 +138,7 @@ class _$BitesCreateTagsINDEXErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -132,6 +147,7 @@ class _$BitesCreateTagsINDEXErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

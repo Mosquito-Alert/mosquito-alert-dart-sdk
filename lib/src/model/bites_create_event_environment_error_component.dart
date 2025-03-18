@@ -143,6 +143,8 @@ class BitesCreateEventEnvironmentErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'event_environment')
   static const BitesCreateEventEnvironmentErrorComponentAttrEnum eventEnvironment = _$bitesCreateEventEnvironmentErrorComponentAttrEnum_eventEnvironment;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateEventEnvironmentErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateEventEnvironmentErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateEventEnvironmentErrorComponentAttrEnum> get serializer => _$bitesCreateEventEnvironmentErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BitesCreateEventEnvironmentErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const BitesCreateEventEnvironmentErrorComponentCodeEnum invalidChoice = _$bitesCreateEventEnvironmentErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateEventEnvironmentErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateEventEnvironmentErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateEventEnvironmentErrorComponentCodeEnum> get serializer => _$bitesCreateEventEnvironmentErrorComponentCodeEnumSerializer;
 

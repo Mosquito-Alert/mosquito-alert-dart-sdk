@@ -143,6 +143,8 @@ class ObservationsListUserUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuid')
   static const ObservationsListUserUuidErrorComponentAttrEnum userUuid = _$observationsListUserUuidErrorComponentAttrEnum_userUuid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListUserUuidErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsListUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListUserUuidErrorComponentAttrEnum> get serializer => _$observationsListUserUuidErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class ObservationsListUserUuidErrorComponentCodeEnum extends EnumClass {
   static const ObservationsListUserUuidErrorComponentCodeEnum invalid = _$observationsListUserUuidErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const ObservationsListUserUuidErrorComponentCodeEnum nullCharactersNotAllowed = _$observationsListUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListUserUuidErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsListUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListUserUuidErrorComponentCodeEnum> get serializer => _$observationsListUserUuidErrorComponentCodeEnumSerializer;
 

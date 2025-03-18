@@ -143,6 +143,8 @@ class BitesListUserUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuid')
   static const BitesListUserUuidErrorComponentAttrEnum userUuid = _$bitesListUserUuidErrorComponentAttrEnum_userUuid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListUserUuidErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesListUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListUserUuidErrorComponentAttrEnum> get serializer => _$bitesListUserUuidErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class BitesListUserUuidErrorComponentCodeEnum extends EnumClass {
   static const BitesListUserUuidErrorComponentCodeEnum invalid = _$bitesListUserUuidErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const BitesListUserUuidErrorComponentCodeEnum nullCharactersNotAllowed = _$bitesListUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListUserUuidErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesListUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListUserUuidErrorComponentCodeEnum> get serializer => _$bitesListUserUuidErrorComponentCodeEnumSerializer;
 

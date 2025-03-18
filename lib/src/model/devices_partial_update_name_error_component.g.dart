@@ -9,14 +9,20 @@ part of 'devices_partial_update_name_error_component.dart';
 const DevicesPartialUpdateNameErrorComponentAttrEnum
     _$devicesPartialUpdateNameErrorComponentAttrEnum_nameValue =
     const DevicesPartialUpdateNameErrorComponentAttrEnum._('nameValue');
+const DevicesPartialUpdateNameErrorComponentAttrEnum
+    _$devicesPartialUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateNameErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateNameErrorComponentAttrEnum
     _$devicesPartialUpdateNameErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'nameValue':
       return _$devicesPartialUpdateNameErrorComponentAttrEnum_nameValue;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<DevicesPartialUpdateNameErrorComponentAttrEnum>
     _$devicesPartialUpdateNameErrorComponentAttrEnumValues = new BuiltSet<
         DevicesPartialUpdateNameErrorComponentAttrEnum>(const <DevicesPartialUpdateNameErrorComponentAttrEnum>[
   _$devicesPartialUpdateNameErrorComponentAttrEnum_nameValue,
+  _$devicesPartialUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesPartialUpdateNameErrorComponentCodeEnum
@@ -40,6 +47,10 @@ const DevicesPartialUpdateNameErrorComponentCodeEnum
     _$devicesPartialUpdateNameErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesPartialUpdateNameErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesPartialUpdateNameErrorComponentCodeEnum
+    _$devicesPartialUpdateNameErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateNameErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateNameErrorComponentCodeEnum
     _$devicesPartialUpdateNameErrorComponentCodeEnumValueOf(String name) {
@@ -52,8 +63,10 @@ DevicesPartialUpdateNameErrorComponentCodeEnum
       return _$devicesPartialUpdateNameErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$devicesPartialUpdateNameErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateNameErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateNameErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -64,6 +77,7 @@ final BuiltSet<DevicesPartialUpdateNameErrorComponentCodeEnum>
   _$devicesPartialUpdateNameErrorComponentCodeEnum_maxLength,
   _$devicesPartialUpdateNameErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesPartialUpdateNameErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesPartialUpdateNameErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesPartialUpdateNameErrorComponentAttrEnum>
@@ -78,9 +92,11 @@ class _$DevicesPartialUpdateNameErrorComponentAttrEnumSerializer
         PrimitiveSerializer<DevicesPartialUpdateNameErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nameValue': 'name',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'name': 'nameValue',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -112,12 +128,14 @@ class _$DevicesPartialUpdateNameErrorComponentCodeEnumSerializer
     'maxLength': 'max_length',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_length': 'maxLength',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

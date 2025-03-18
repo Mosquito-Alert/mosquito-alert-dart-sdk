@@ -9,14 +9,20 @@ part of 'bites_create_location_type_error_component.dart';
 const BitesCreateLocationTypeErrorComponentAttrEnum
     _$bitesCreateLocationTypeErrorComponentAttrEnum_locationPeriodType =
     const BitesCreateLocationTypeErrorComponentAttrEnum._('locationPeriodType');
+const BitesCreateLocationTypeErrorComponentAttrEnum
+    _$bitesCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateLocationTypeErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateLocationTypeErrorComponentAttrEnum
     _$bitesCreateLocationTypeErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'locationPeriodType':
       return _$bitesCreateLocationTypeErrorComponentAttrEnum_locationPeriodType;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BitesCreateLocationTypeErrorComponentAttrEnum>
     _$bitesCreateLocationTypeErrorComponentAttrEnumValues = new BuiltSet<
         BitesCreateLocationTypeErrorComponentAttrEnum>(const <BitesCreateLocationTypeErrorComponentAttrEnum>[
   _$bitesCreateLocationTypeErrorComponentAttrEnum_locationPeriodType,
+  _$bitesCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateLocationTypeErrorComponentCodeEnum
@@ -35,6 +42,10 @@ const BitesCreateLocationTypeErrorComponentCodeEnum
 const BitesCreateLocationTypeErrorComponentCodeEnum
     _$bitesCreateLocationTypeErrorComponentCodeEnum_required_ =
     const BitesCreateLocationTypeErrorComponentCodeEnum._('required_');
+const BitesCreateLocationTypeErrorComponentCodeEnum
+    _$bitesCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateLocationTypeErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateLocationTypeErrorComponentCodeEnum
     _$bitesCreateLocationTypeErrorComponentCodeEnumValueOf(String name) {
@@ -45,8 +56,10 @@ BitesCreateLocationTypeErrorComponentCodeEnum
       return _$bitesCreateLocationTypeErrorComponentCodeEnum_null_;
     case 'required_':
       return _$bitesCreateLocationTypeErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -56,6 +69,7 @@ final BuiltSet<BitesCreateLocationTypeErrorComponentCodeEnum>
   _$bitesCreateLocationTypeErrorComponentCodeEnum_invalidChoice,
   _$bitesCreateLocationTypeErrorComponentCodeEnum_null_,
   _$bitesCreateLocationTypeErrorComponentCodeEnum_required_,
+  _$bitesCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateLocationTypeErrorComponentAttrEnum>
@@ -70,9 +84,11 @@ class _$BitesCreateLocationTypeErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesCreateLocationTypeErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationPeriodType': 'location.type',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location.type': 'locationPeriodType',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -103,11 +119,13 @@ class _$BitesCreateLocationTypeErrorComponentCodeEnumSerializer
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

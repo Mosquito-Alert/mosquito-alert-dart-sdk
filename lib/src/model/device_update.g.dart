@@ -12,6 +12,8 @@ const DeviceUpdateTypeEnum _$deviceUpdateTypeEnum_android =
     const DeviceUpdateTypeEnum._('android');
 const DeviceUpdateTypeEnum _$deviceUpdateTypeEnum_web =
     const DeviceUpdateTypeEnum._('web');
+const DeviceUpdateTypeEnum _$deviceUpdateTypeEnum_unknownDefaultOpenApi =
+    const DeviceUpdateTypeEnum._('unknownDefaultOpenApi');
 
 DeviceUpdateTypeEnum _$deviceUpdateTypeEnumValueOf(String name) {
   switch (name) {
@@ -21,8 +23,10 @@ DeviceUpdateTypeEnum _$deviceUpdateTypeEnumValueOf(String name) {
       return _$deviceUpdateTypeEnum_android;
     case 'web':
       return _$deviceUpdateTypeEnum_web;
+    case 'unknownDefaultOpenApi':
+      return _$deviceUpdateTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$deviceUpdateTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -31,6 +35,7 @@ final BuiltSet<DeviceUpdateTypeEnum> _$deviceUpdateTypeEnumValues =
   _$deviceUpdateTypeEnum_ios,
   _$deviceUpdateTypeEnum_android,
   _$deviceUpdateTypeEnum_web,
+  _$deviceUpdateTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DeviceUpdateTypeEnum> _$deviceUpdateTypeEnumSerializer =
@@ -42,11 +47,13 @@ class _$DeviceUpdateTypeEnumSerializer
     'ios': 'ios',
     'android': 'android',
     'web': 'web',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'ios': 'ios',
     'android': 'android',
     'web': 'web',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

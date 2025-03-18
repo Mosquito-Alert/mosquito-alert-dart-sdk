@@ -17,6 +17,9 @@ const ObservationEventEnvironmentEnum
     const ObservationEventEnvironmentEnum._('vehicle');
 const ObservationEventEnvironmentEnum _$observationEventEnvironmentEnum_empty =
     const ObservationEventEnvironmentEnum._('empty');
+const ObservationEventEnvironmentEnum
+    _$observationEventEnvironmentEnum_unknownDefaultOpenApi =
+    const ObservationEventEnvironmentEnum._('unknownDefaultOpenApi');
 
 ObservationEventEnvironmentEnum _$observationEventEnvironmentEnumValueOf(
     String name) {
@@ -29,8 +32,10 @@ ObservationEventEnvironmentEnum _$observationEventEnvironmentEnumValueOf(
       return _$observationEventEnvironmentEnum_vehicle;
     case 'empty':
       return _$observationEventEnvironmentEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$observationEventEnvironmentEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationEventEnvironmentEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -41,6 +46,7 @@ final BuiltSet<ObservationEventEnvironmentEnum>
   _$observationEventEnvironmentEnum_outdoors,
   _$observationEventEnvironmentEnum_vehicle,
   _$observationEventEnvironmentEnum_empty,
+  _$observationEventEnvironmentEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationEventMomentEnum _$observationEventMomentEnum_now =
@@ -55,6 +61,9 @@ const ObservationEventMomentEnum _$observationEventMomentEnum_lastNight =
     const ObservationEventMomentEnum._('lastNight');
 const ObservationEventMomentEnum _$observationEventMomentEnum_empty =
     const ObservationEventMomentEnum._('empty');
+const ObservationEventMomentEnum
+    _$observationEventMomentEnum_unknownDefaultOpenApi =
+    const ObservationEventMomentEnum._('unknownDefaultOpenApi');
 
 ObservationEventMomentEnum _$observationEventMomentEnumValueOf(String name) {
   switch (name) {
@@ -70,8 +79,10 @@ ObservationEventMomentEnum _$observationEventMomentEnumValueOf(String name) {
       return _$observationEventMomentEnum_lastNight;
     case 'empty':
       return _$observationEventMomentEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$observationEventMomentEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationEventMomentEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -83,6 +94,7 @@ final BuiltSet<ObservationEventMomentEnum> _$observationEventMomentEnumValues =
   _$observationEventMomentEnum_lastAfternoon,
   _$observationEventMomentEnum_lastNight,
   _$observationEventMomentEnum_empty,
+  _$observationEventMomentEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationUserPerceivedMosquitoSpecieEnum
@@ -106,6 +118,9 @@ const ObservationUserPerceivedMosquitoSpecieEnum
 const ObservationUserPerceivedMosquitoSpecieEnum
     _$observationUserPerceivedMosquitoSpecieEnum_empty =
     const ObservationUserPerceivedMosquitoSpecieEnum._('empty');
+const ObservationUserPerceivedMosquitoSpecieEnum
+    _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi =
+    const ObservationUserPerceivedMosquitoSpecieEnum._('unknownDefaultOpenApi');
 
 ObservationUserPerceivedMosquitoSpecieEnum
     _$observationUserPerceivedMosquitoSpecieEnumValueOf(String name) {
@@ -124,8 +139,10 @@ ObservationUserPerceivedMosquitoSpecieEnum
       return _$observationUserPerceivedMosquitoSpecieEnum_other;
     case 'empty':
       return _$observationUserPerceivedMosquitoSpecieEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -139,6 +156,7 @@ final BuiltSet<ObservationUserPerceivedMosquitoSpecieEnum>
   _$observationUserPerceivedMosquitoSpecieEnum_culex,
   _$observationUserPerceivedMosquitoSpecieEnum_other,
   _$observationUserPerceivedMosquitoSpecieEnum_empty,
+  _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationUserPerceivedMosquitoThoraxEnum
@@ -162,6 +180,9 @@ const ObservationUserPerceivedMosquitoThoraxEnum
 const ObservationUserPerceivedMosquitoThoraxEnum
     _$observationUserPerceivedMosquitoThoraxEnum_empty =
     const ObservationUserPerceivedMosquitoThoraxEnum._('empty');
+const ObservationUserPerceivedMosquitoThoraxEnum
+    _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi =
+    const ObservationUserPerceivedMosquitoThoraxEnum._('unknownDefaultOpenApi');
 
 ObservationUserPerceivedMosquitoThoraxEnum
     _$observationUserPerceivedMosquitoThoraxEnumValueOf(String name) {
@@ -180,8 +201,10 @@ ObservationUserPerceivedMosquitoThoraxEnum
       return _$observationUserPerceivedMosquitoThoraxEnum_other;
     case 'empty':
       return _$observationUserPerceivedMosquitoThoraxEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -195,6 +218,7 @@ final BuiltSet<ObservationUserPerceivedMosquitoThoraxEnum>
   _$observationUserPerceivedMosquitoThoraxEnum_culex,
   _$observationUserPerceivedMosquitoThoraxEnum_other,
   _$observationUserPerceivedMosquitoThoraxEnum_empty,
+  _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationUserPerceivedMosquitoAbdomenEnum
@@ -218,6 +242,10 @@ const ObservationUserPerceivedMosquitoAbdomenEnum
 const ObservationUserPerceivedMosquitoAbdomenEnum
     _$observationUserPerceivedMosquitoAbdomenEnum_empty =
     const ObservationUserPerceivedMosquitoAbdomenEnum._('empty');
+const ObservationUserPerceivedMosquitoAbdomenEnum
+    _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi =
+    const ObservationUserPerceivedMosquitoAbdomenEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationUserPerceivedMosquitoAbdomenEnum
     _$observationUserPerceivedMosquitoAbdomenEnumValueOf(String name) {
@@ -236,8 +264,10 @@ ObservationUserPerceivedMosquitoAbdomenEnum
       return _$observationUserPerceivedMosquitoAbdomenEnum_other;
     case 'empty':
       return _$observationUserPerceivedMosquitoAbdomenEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -251,6 +281,7 @@ final BuiltSet<ObservationUserPerceivedMosquitoAbdomenEnum>
   _$observationUserPerceivedMosquitoAbdomenEnum_culex,
   _$observationUserPerceivedMosquitoAbdomenEnum_other,
   _$observationUserPerceivedMosquitoAbdomenEnum_empty,
+  _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationUserPerceivedMosquitoLegsEnum
@@ -274,6 +305,9 @@ const ObservationUserPerceivedMosquitoLegsEnum
 const ObservationUserPerceivedMosquitoLegsEnum
     _$observationUserPerceivedMosquitoLegsEnum_empty =
     const ObservationUserPerceivedMosquitoLegsEnum._('empty');
+const ObservationUserPerceivedMosquitoLegsEnum
+    _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi =
+    const ObservationUserPerceivedMosquitoLegsEnum._('unknownDefaultOpenApi');
 
 ObservationUserPerceivedMosquitoLegsEnum
     _$observationUserPerceivedMosquitoLegsEnumValueOf(String name) {
@@ -292,8 +326,10 @@ ObservationUserPerceivedMosquitoLegsEnum
       return _$observationUserPerceivedMosquitoLegsEnum_other;
     case 'empty':
       return _$observationUserPerceivedMosquitoLegsEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -307,6 +343,7 @@ final BuiltSet<ObservationUserPerceivedMosquitoLegsEnum>
   _$observationUserPerceivedMosquitoLegsEnum_culex,
   _$observationUserPerceivedMosquitoLegsEnum_other,
   _$observationUserPerceivedMosquitoLegsEnum_empty,
+  _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationEventEnvironmentEnum>
@@ -334,12 +371,14 @@ class _$ObservationEventEnvironmentEnumSerializer
     'outdoors': 'outdoors',
     'vehicle': 'vehicle',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'indoors': 'indoors',
     'outdoors': 'outdoors',
     'vehicle': 'vehicle',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -370,6 +409,7 @@ class _$ObservationEventMomentEnumSerializer
     'lastAfternoon': 'last_afternoon',
     'lastNight': 'last_night',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'now': 'now',
@@ -378,6 +418,7 @@ class _$ObservationEventMomentEnumSerializer
     'last_afternoon': 'lastAfternoon',
     'last_night': 'lastNight',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -408,6 +449,7 @@ class _$ObservationUserPerceivedMosquitoSpecieEnumSerializer
     'culex': 'culex',
     'other': 'other',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'albopictus': 'albopictus',
@@ -417,6 +459,7 @@ class _$ObservationUserPerceivedMosquitoSpecieEnumSerializer
     'culex': 'culex',
     'other': 'other',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -450,6 +493,7 @@ class _$ObservationUserPerceivedMosquitoThoraxEnumSerializer
     'culex': 'culex',
     'other': 'other',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'albopictus': 'albopictus',
@@ -459,6 +503,7 @@ class _$ObservationUserPerceivedMosquitoThoraxEnumSerializer
     'culex': 'culex',
     'other': 'other',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -493,6 +538,7 @@ class _$ObservationUserPerceivedMosquitoAbdomenEnumSerializer
     'culex': 'culex',
     'other': 'other',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'albopictus': 'albopictus',
@@ -502,6 +548,7 @@ class _$ObservationUserPerceivedMosquitoAbdomenEnumSerializer
     'culex': 'culex',
     'other': 'other',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -535,6 +582,7 @@ class _$ObservationUserPerceivedMosquitoLegsEnumSerializer
     'culex': 'culex',
     'other': 'other',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'albopictus': 'albopictus',
@@ -544,6 +592,7 @@ class _$ObservationUserPerceivedMosquitoLegsEnumSerializer
     'culex': 'culex',
     'other': 'other',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

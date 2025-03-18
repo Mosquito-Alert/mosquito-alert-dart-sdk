@@ -10,6 +10,10 @@ const BreedingsitesCreateLocationPointErrorComponentAttrEnum
     _$breedingsitesCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint =
     const BreedingsitesCreateLocationPointErrorComponentAttrEnum._(
         'locationPeriodPoint');
+const BreedingsitesCreateLocationPointErrorComponentAttrEnum
+    _$breedingsitesCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateLocationPointErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateLocationPointErrorComponentAttrEnum
     _$breedingsitesCreateLocationPointErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ BreedingsitesCreateLocationPointErrorComponentAttrEnum
   switch (name) {
     case 'locationPeriodPoint':
       return _$breedingsitesCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<BreedingsitesCreateLocationPointErrorComponentAttrEnum>
     new BuiltSet<
         BreedingsitesCreateLocationPointErrorComponentAttrEnum>(const <BreedingsitesCreateLocationPointErrorComponentAttrEnum>[
   _$breedingsitesCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint,
+  _$breedingsitesCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateLocationPointErrorComponentCodeEnum
@@ -35,6 +42,10 @@ const BreedingsitesCreateLocationPointErrorComponentCodeEnum
 const BreedingsitesCreateLocationPointErrorComponentCodeEnum
     _$breedingsitesCreateLocationPointErrorComponentCodeEnum_required_ =
     const BreedingsitesCreateLocationPointErrorComponentCodeEnum._('required_');
+const BreedingsitesCreateLocationPointErrorComponentCodeEnum
+    _$breedingsitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateLocationPointErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateLocationPointErrorComponentCodeEnum
     _$breedingsitesCreateLocationPointErrorComponentCodeEnumValueOf(
@@ -44,8 +55,10 @@ BreedingsitesCreateLocationPointErrorComponentCodeEnum
       return _$breedingsitesCreateLocationPointErrorComponentCodeEnum_invalid;
     case 'required_':
       return _$breedingsitesCreateLocationPointErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -55,6 +68,7 @@ final BuiltSet<BreedingsitesCreateLocationPointErrorComponentCodeEnum>
         BreedingsitesCreateLocationPointErrorComponentCodeEnum>(const <BreedingsitesCreateLocationPointErrorComponentCodeEnum>[
   _$breedingsitesCreateLocationPointErrorComponentCodeEnum_invalid,
   _$breedingsitesCreateLocationPointErrorComponentCodeEnum_required_,
+  _$breedingsitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateLocationPointErrorComponentAttrEnum>
@@ -70,9 +84,11 @@ class _$BreedingsitesCreateLocationPointErrorComponentAttrEnumSerializer
             BreedingsitesCreateLocationPointErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationPeriodPoint': 'location.point',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location.point': 'locationPeriodPoint',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -104,10 +120,12 @@ class _$BreedingsitesCreateLocationPointErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

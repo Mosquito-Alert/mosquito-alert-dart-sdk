@@ -143,6 +143,8 @@ class BreedingsitesCreateHasLarvaeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'has_larvae')
   static const BreedingsitesCreateHasLarvaeErrorComponentAttrEnum hasLarvae = _$breedingsitesCreateHasLarvaeErrorComponentAttrEnum_hasLarvae;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateHasLarvaeErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreateHasLarvaeErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateHasLarvaeErrorComponentAttrEnum> get serializer => _$breedingsitesCreateHasLarvaeErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BreedingsitesCreateHasLarvaeErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const BreedingsitesCreateHasLarvaeErrorComponentCodeEnum invalid = _$breedingsitesCreateHasLarvaeErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateHasLarvaeErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreateHasLarvaeErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateHasLarvaeErrorComponentCodeEnum> get serializer => _$breedingsitesCreateHasLarvaeErrorComponentCodeEnumSerializer;
 

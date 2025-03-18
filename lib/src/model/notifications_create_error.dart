@@ -955,6 +955,8 @@ class NotificationsCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'topic_codes.INDEX')
   static const NotificationsCreateErrorAttrEnum topicCodesPeriodINDEX = _$notificationsCreateErrorAttrEnum_topicCodesPeriodINDEX;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateErrorAttrEnum unknownDefaultOpenApi = _$notificationsCreateErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateErrorAttrEnum> get serializer => _$notificationsCreateErrorAttrEnumSerializer;
 
@@ -978,6 +980,8 @@ class NotificationsCreateErrorCodeEnum extends EnumClass {
   static const NotificationsCreateErrorCodeEnum required_ = _$notificationsCreateErrorCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const NotificationsCreateErrorCodeEnum surrogateCharactersNotAllowed = _$notificationsCreateErrorCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateErrorCodeEnum unknownDefaultOpenApi = _$notificationsCreateErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateErrorCodeEnum> get serializer => _$notificationsCreateErrorCodeEnumSerializer;
 

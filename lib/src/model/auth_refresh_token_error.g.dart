@@ -8,14 +8,19 @@ part of 'auth_refresh_token_error.dart';
 
 const AuthRefreshTokenErrorAttrEnum _$authRefreshTokenErrorAttrEnum_refresh =
     const AuthRefreshTokenErrorAttrEnum._('refresh');
+const AuthRefreshTokenErrorAttrEnum
+    _$authRefreshTokenErrorAttrEnum_unknownDefaultOpenApi =
+    const AuthRefreshTokenErrorAttrEnum._('unknownDefaultOpenApi');
 
 AuthRefreshTokenErrorAttrEnum _$authRefreshTokenErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'refresh':
       return _$authRefreshTokenErrorAttrEnum_refresh;
+    case 'unknownDefaultOpenApi':
+      return _$authRefreshTokenErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authRefreshTokenErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -23,6 +28,7 @@ final BuiltSet<AuthRefreshTokenErrorAttrEnum>
     _$authRefreshTokenErrorAttrEnumValues = new BuiltSet<
         AuthRefreshTokenErrorAttrEnum>(const <AuthRefreshTokenErrorAttrEnum>[
   _$authRefreshTokenErrorAttrEnum_refresh,
+  _$authRefreshTokenErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthRefreshTokenErrorCodeEnum _$authRefreshTokenErrorCodeEnum_blank =
@@ -39,6 +45,9 @@ const AuthRefreshTokenErrorCodeEnum _$authRefreshTokenErrorCodeEnum_required_ =
 const AuthRefreshTokenErrorCodeEnum
     _$authRefreshTokenErrorCodeEnum_surrogateCharactersNotAllowed =
     const AuthRefreshTokenErrorCodeEnum._('surrogateCharactersNotAllowed');
+const AuthRefreshTokenErrorCodeEnum
+    _$authRefreshTokenErrorCodeEnum_unknownDefaultOpenApi =
+    const AuthRefreshTokenErrorCodeEnum._('unknownDefaultOpenApi');
 
 AuthRefreshTokenErrorCodeEnum _$authRefreshTokenErrorCodeEnumValueOf(
     String name) {
@@ -55,8 +64,10 @@ AuthRefreshTokenErrorCodeEnum _$authRefreshTokenErrorCodeEnumValueOf(
       return _$authRefreshTokenErrorCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$authRefreshTokenErrorCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$authRefreshTokenErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authRefreshTokenErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -69,6 +80,7 @@ final BuiltSet<AuthRefreshTokenErrorCodeEnum>
   _$authRefreshTokenErrorCodeEnum_nullCharactersNotAllowed,
   _$authRefreshTokenErrorCodeEnum_required_,
   _$authRefreshTokenErrorCodeEnum_surrogateCharactersNotAllowed,
+  _$authRefreshTokenErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthRefreshTokenErrorAttrEnum>
@@ -82,9 +94,11 @@ class _$AuthRefreshTokenErrorAttrEnumSerializer
     implements PrimitiveSerializer<AuthRefreshTokenErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'refresh': 'refresh',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'refresh': 'refresh',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -115,6 +129,7 @@ class _$AuthRefreshTokenErrorCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -123,6 +138,7 @@ class _$AuthRefreshTokenErrorCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

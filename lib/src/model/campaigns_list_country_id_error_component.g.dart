@@ -9,14 +9,20 @@ part of 'campaigns_list_country_id_error_component.dart';
 const CampaignsListCountryIdErrorComponentAttrEnum
     _$campaignsListCountryIdErrorComponentAttrEnum_countryId =
     const CampaignsListCountryIdErrorComponentAttrEnum._('countryId');
+const CampaignsListCountryIdErrorComponentAttrEnum
+    _$campaignsListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const CampaignsListCountryIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 CampaignsListCountryIdErrorComponentAttrEnum
     _$campaignsListCountryIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'countryId':
       return _$campaignsListCountryIdErrorComponentAttrEnum_countryId;
+    case 'unknownDefaultOpenApi':
+      return _$campaignsListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$campaignsListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<CampaignsListCountryIdErrorComponentAttrEnum>
     _$campaignsListCountryIdErrorComponentAttrEnumValues = new BuiltSet<
         CampaignsListCountryIdErrorComponentAttrEnum>(const <CampaignsListCountryIdErrorComponentAttrEnum>[
   _$campaignsListCountryIdErrorComponentAttrEnum_countryId,
+  _$campaignsListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const CampaignsListCountryIdErrorComponentCodeEnum
     _$campaignsListCountryIdErrorComponentCodeEnum_invalidChoice =
     const CampaignsListCountryIdErrorComponentCodeEnum._('invalidChoice');
+const CampaignsListCountryIdErrorComponentCodeEnum
+    _$campaignsListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const CampaignsListCountryIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 CampaignsListCountryIdErrorComponentCodeEnum
     _$campaignsListCountryIdErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$campaignsListCountryIdErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$campaignsListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$campaignsListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<CampaignsListCountryIdErrorComponentCodeEnum>
     _$campaignsListCountryIdErrorComponentCodeEnumValues = new BuiltSet<
         CampaignsListCountryIdErrorComponentCodeEnum>(const <CampaignsListCountryIdErrorComponentCodeEnum>[
   _$campaignsListCountryIdErrorComponentCodeEnum_invalidChoice,
+  _$campaignsListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<CampaignsListCountryIdErrorComponentAttrEnum>
@@ -58,9 +72,11 @@ class _$CampaignsListCountryIdErrorComponentAttrEnumSerializer
         PrimitiveSerializer<CampaignsListCountryIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'countryId': 'country_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'country_id': 'countryId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -89,9 +105,11 @@ class _$CampaignsListCountryIdErrorComponentCodeEnumSerializer
         PrimitiveSerializer<CampaignsListCountryIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

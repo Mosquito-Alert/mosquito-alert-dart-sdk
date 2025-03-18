@@ -54,6 +54,8 @@ const UserRequestLocaleEnum _$userRequestLocaleEnum_tr =
     const UserRequestLocaleEnum._('tr');
 const UserRequestLocaleEnum _$userRequestLocaleEnum_zhCN =
     const UserRequestLocaleEnum._('zhCN');
+const UserRequestLocaleEnum _$userRequestLocaleEnum_unknownDefaultOpenApi =
+    const UserRequestLocaleEnum._('unknownDefaultOpenApi');
 
 UserRequestLocaleEnum _$userRequestLocaleEnumValueOf(String name) {
   switch (name) {
@@ -105,8 +107,10 @@ UserRequestLocaleEnum _$userRequestLocaleEnumValueOf(String name) {
       return _$userRequestLocaleEnum_tr;
     case 'zhCN':
       return _$userRequestLocaleEnum_zhCN;
+    case 'unknownDefaultOpenApi':
+      return _$userRequestLocaleEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$userRequestLocaleEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -136,6 +140,7 @@ final BuiltSet<UserRequestLocaleEnum> _$userRequestLocaleEnumValues =
   _$userRequestLocaleEnum_nl,
   _$userRequestLocaleEnum_tr,
   _$userRequestLocaleEnum_zhCN,
+  _$userRequestLocaleEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<UserRequestLocaleEnum> _$userRequestLocaleEnumSerializer =
@@ -168,6 +173,7 @@ class _$UserRequestLocaleEnumSerializer
     'nl': 'nl',
     'tr': 'tr',
     'zhCN': 'zh-CN',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'es': 'es',
@@ -194,6 +200,7 @@ class _$UserRequestLocaleEnumSerializer
     'nl': 'nl',
     'tr': 'tr',
     'zh-CN': 'zhCN',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

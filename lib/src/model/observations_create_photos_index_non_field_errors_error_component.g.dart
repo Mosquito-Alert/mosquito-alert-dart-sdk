@@ -10,6 +10,10 @@ const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum
     _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_photosPeriodINDEXPeriodNonFieldErrors =
     const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum._(
         'photosPeriodINDEXPeriodNonFieldErrors');
+const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum
+    _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum
     _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'photosPeriodINDEXPeriodNonFieldErrors':
       return _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_photosPeriodINDEXPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -28,6 +34,7 @@ final BuiltSet<
     new BuiltSet<
         ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum>(const <ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum>[
   _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_photosPeriodINDEXPeriodNonFieldErrors,
+  _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
@@ -42,6 +49,10 @@ const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
     _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_required_ =
     const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum._(
         'required_');
+const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
+    _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
     _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -53,8 +64,10 @@ ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
       return _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -66,6 +79,7 @@ final BuiltSet<
   _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_null_,
   _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_required_,
+  _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum>
@@ -81,9 +95,11 @@ class _$ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnumSeriali
             ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'photosPeriodINDEXPeriodNonFieldErrors': 'photos.INDEX.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'photos.INDEX.non_field_errors': 'photosPeriodINDEXPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -118,11 +134,13 @@ class _$ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnumSeriali
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -143,6 +143,8 @@ class BitesCreateChestBiteCountErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'chest_bite_count')
   static const BitesCreateChestBiteCountErrorComponentAttrEnum chestBiteCount = _$bitesCreateChestBiteCountErrorComponentAttrEnum_chestBiteCount;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateChestBiteCountErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateChestBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateChestBiteCountErrorComponentAttrEnum> get serializer => _$bitesCreateChestBiteCountErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class BitesCreateChestBiteCountErrorComponentCodeEnum extends EnumClass {
   static const BitesCreateChestBiteCountErrorComponentCodeEnum invalid = _$bitesCreateChestBiteCountErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'max_string_length')
   static const BitesCreateChestBiteCountErrorComponentCodeEnum maxStringLength = _$bitesCreateChestBiteCountErrorComponentCodeEnum_maxStringLength;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateChestBiteCountErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateChestBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateChestBiteCountErrorComponentCodeEnum> get serializer => _$bitesCreateChestBiteCountErrorComponentCodeEnumSerializer;
 

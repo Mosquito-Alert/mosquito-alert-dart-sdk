@@ -14,6 +14,9 @@ const BiteEventEnvironmentEnum _$biteEventEnvironmentEnum_vehicle =
     const BiteEventEnvironmentEnum._('vehicle');
 const BiteEventEnvironmentEnum _$biteEventEnvironmentEnum_empty =
     const BiteEventEnvironmentEnum._('empty');
+const BiteEventEnvironmentEnum
+    _$biteEventEnvironmentEnum_unknownDefaultOpenApi =
+    const BiteEventEnvironmentEnum._('unknownDefaultOpenApi');
 
 BiteEventEnvironmentEnum _$biteEventEnvironmentEnumValueOf(String name) {
   switch (name) {
@@ -25,8 +28,10 @@ BiteEventEnvironmentEnum _$biteEventEnvironmentEnumValueOf(String name) {
       return _$biteEventEnvironmentEnum_vehicle;
     case 'empty':
       return _$biteEventEnvironmentEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$biteEventEnvironmentEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$biteEventEnvironmentEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -36,6 +41,7 @@ final BuiltSet<BiteEventEnvironmentEnum> _$biteEventEnvironmentEnumValues =
   _$biteEventEnvironmentEnum_outdoors,
   _$biteEventEnvironmentEnum_vehicle,
   _$biteEventEnvironmentEnum_empty,
+  _$biteEventEnvironmentEnum_unknownDefaultOpenApi,
 ]);
 
 const BiteEventMomentEnum _$biteEventMomentEnum_now =
@@ -50,6 +56,8 @@ const BiteEventMomentEnum _$biteEventMomentEnum_lastNight =
     const BiteEventMomentEnum._('lastNight');
 const BiteEventMomentEnum _$biteEventMomentEnum_empty =
     const BiteEventMomentEnum._('empty');
+const BiteEventMomentEnum _$biteEventMomentEnum_unknownDefaultOpenApi =
+    const BiteEventMomentEnum._('unknownDefaultOpenApi');
 
 BiteEventMomentEnum _$biteEventMomentEnumValueOf(String name) {
   switch (name) {
@@ -65,8 +73,10 @@ BiteEventMomentEnum _$biteEventMomentEnumValueOf(String name) {
       return _$biteEventMomentEnum_lastNight;
     case 'empty':
       return _$biteEventMomentEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$biteEventMomentEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$biteEventMomentEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -78,6 +88,7 @@ final BuiltSet<BiteEventMomentEnum> _$biteEventMomentEnumValues =
   _$biteEventMomentEnum_lastAfternoon,
   _$biteEventMomentEnum_lastNight,
   _$biteEventMomentEnum_empty,
+  _$biteEventMomentEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BiteEventEnvironmentEnum> _$biteEventEnvironmentEnumSerializer =
@@ -92,12 +103,14 @@ class _$BiteEventEnvironmentEnumSerializer
     'outdoors': 'outdoors',
     'vehicle': 'vehicle',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'indoors': 'indoors',
     'outdoors': 'outdoors',
     'vehicle': 'vehicle',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -127,6 +140,7 @@ class _$BiteEventMomentEnumSerializer
     'lastAfternoon': 'last_afternoon',
     'lastNight': 'last_night',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'now': 'now',
@@ -135,6 +149,7 @@ class _$BiteEventMomentEnumSerializer
     'last_afternoon': 'lastAfternoon',
     'last_night': 'lastNight',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

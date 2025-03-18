@@ -9,14 +9,20 @@ part of 'observations_list_mine_short_id_error_component.dart';
 const ObservationsListMineShortIdErrorComponentAttrEnum
     _$observationsListMineShortIdErrorComponentAttrEnum_shortId =
     const ObservationsListMineShortIdErrorComponentAttrEnum._('shortId');
+const ObservationsListMineShortIdErrorComponentAttrEnum
+    _$observationsListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsListMineShortIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineShortIdErrorComponentAttrEnum
     _$observationsListMineShortIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'shortId':
       return _$observationsListMineShortIdErrorComponentAttrEnum_shortId;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,20 +30,27 @@ final BuiltSet<ObservationsListMineShortIdErrorComponentAttrEnum>
     _$observationsListMineShortIdErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsListMineShortIdErrorComponentAttrEnum>(const <ObservationsListMineShortIdErrorComponentAttrEnum>[
   _$observationsListMineShortIdErrorComponentAttrEnum_shortId,
+  _$observationsListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListMineShortIdErrorComponentCodeEnum
     _$observationsListMineShortIdErrorComponentCodeEnum_nullCharactersNotAllowed =
     const ObservationsListMineShortIdErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const ObservationsListMineShortIdErrorComponentCodeEnum
+    _$observationsListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsListMineShortIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineShortIdErrorComponentCodeEnum
     _$observationsListMineShortIdErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'nullCharactersNotAllowed':
       return _$observationsListMineShortIdErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -45,6 +58,7 @@ final BuiltSet<ObservationsListMineShortIdErrorComponentCodeEnum>
     _$observationsListMineShortIdErrorComponentCodeEnumValues = new BuiltSet<
         ObservationsListMineShortIdErrorComponentCodeEnum>(const <ObservationsListMineShortIdErrorComponentCodeEnum>[
   _$observationsListMineShortIdErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$observationsListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsListMineShortIdErrorComponentAttrEnum>
@@ -59,9 +73,11 @@ class _$ObservationsListMineShortIdErrorComponentAttrEnumSerializer
         PrimitiveSerializer<ObservationsListMineShortIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'shortId': 'short_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'short_id': 'shortId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -90,9 +106,11 @@ class _$ObservationsListMineShortIdErrorComponentCodeEnumSerializer
         PrimitiveSerializer<ObservationsListMineShortIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

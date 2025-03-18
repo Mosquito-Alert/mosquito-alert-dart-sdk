@@ -9,14 +9,20 @@ part of 'breedingsites_list_mine_short_id_error_component.dart';
 const BreedingsitesListMineShortIdErrorComponentAttrEnum
     _$breedingsitesListMineShortIdErrorComponentAttrEnum_shortId =
     const BreedingsitesListMineShortIdErrorComponentAttrEnum._('shortId');
+const BreedingsitesListMineShortIdErrorComponentAttrEnum
+    _$breedingsitesListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesListMineShortIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListMineShortIdErrorComponentAttrEnum
     _$breedingsitesListMineShortIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'shortId':
       return _$breedingsitesListMineShortIdErrorComponentAttrEnum_shortId;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,20 +30,27 @@ final BuiltSet<BreedingsitesListMineShortIdErrorComponentAttrEnum>
     _$breedingsitesListMineShortIdErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesListMineShortIdErrorComponentAttrEnum>(const <BreedingsitesListMineShortIdErrorComponentAttrEnum>[
   _$breedingsitesListMineShortIdErrorComponentAttrEnum_shortId,
+  _$breedingsitesListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesListMineShortIdErrorComponentCodeEnum
     _$breedingsitesListMineShortIdErrorComponentCodeEnum_nullCharactersNotAllowed =
     const BreedingsitesListMineShortIdErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const BreedingsitesListMineShortIdErrorComponentCodeEnum
+    _$breedingsitesListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesListMineShortIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListMineShortIdErrorComponentCodeEnum
     _$breedingsitesListMineShortIdErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'nullCharactersNotAllowed':
       return _$breedingsitesListMineShortIdErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -45,6 +58,7 @@ final BuiltSet<BreedingsitesListMineShortIdErrorComponentCodeEnum>
     _$breedingsitesListMineShortIdErrorComponentCodeEnumValues = new BuiltSet<
         BreedingsitesListMineShortIdErrorComponentCodeEnum>(const <BreedingsitesListMineShortIdErrorComponentCodeEnum>[
   _$breedingsitesListMineShortIdErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$breedingsitesListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesListMineShortIdErrorComponentAttrEnum>
@@ -60,9 +74,11 @@ class _$BreedingsitesListMineShortIdErrorComponentAttrEnumSerializer
             BreedingsitesListMineShortIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'shortId': 'short_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'short_id': 'shortId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -92,9 +108,11 @@ class _$BreedingsitesListMineShortIdErrorComponentCodeEnumSerializer
             BreedingsitesListMineShortIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

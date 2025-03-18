@@ -183,6 +183,9 @@ class UserRequestLocaleEnum extends EnumClass {
   /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
   @BuiltValueEnumConst(wireName: r'zh-CN')
   static const UserRequestLocaleEnum zhCN = _$userRequestLocaleEnum_zhCN;
+  /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const UserRequestLocaleEnum unknownDefaultOpenApi = _$userRequestLocaleEnum_unknownDefaultOpenApi;
 
   static Serializer<UserRequestLocaleEnum> get serializer => _$userRequestLocaleEnumSerializer;
 

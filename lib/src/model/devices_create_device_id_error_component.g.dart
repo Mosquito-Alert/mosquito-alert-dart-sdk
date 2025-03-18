@@ -9,14 +9,20 @@ part of 'devices_create_device_id_error_component.dart';
 const DevicesCreateDeviceIdErrorComponentAttrEnum
     _$devicesCreateDeviceIdErrorComponentAttrEnum_deviceId =
     const DevicesCreateDeviceIdErrorComponentAttrEnum._('deviceId');
+const DevicesCreateDeviceIdErrorComponentAttrEnum
+    _$devicesCreateDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesCreateDeviceIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesCreateDeviceIdErrorComponentAttrEnum
     _$devicesCreateDeviceIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'deviceId':
       return _$devicesCreateDeviceIdErrorComponentAttrEnum_deviceId;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<DevicesCreateDeviceIdErrorComponentAttrEnum>
     _$devicesCreateDeviceIdErrorComponentAttrEnumValues = new BuiltSet<
         DevicesCreateDeviceIdErrorComponentAttrEnum>(const <DevicesCreateDeviceIdErrorComponentAttrEnum>[
   _$devicesCreateDeviceIdErrorComponentAttrEnum_deviceId,
+  _$devicesCreateDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesCreateDeviceIdErrorComponentCodeEnum
@@ -46,6 +53,10 @@ const DevicesCreateDeviceIdErrorComponentCodeEnum
     _$devicesCreateDeviceIdErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesCreateDeviceIdErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesCreateDeviceIdErrorComponentCodeEnum
+    _$devicesCreateDeviceIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesCreateDeviceIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesCreateDeviceIdErrorComponentCodeEnum
     _$devicesCreateDeviceIdErrorComponentCodeEnumValueOf(String name) {
@@ -62,8 +73,10 @@ DevicesCreateDeviceIdErrorComponentCodeEnum
       return _$devicesCreateDeviceIdErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$devicesCreateDeviceIdErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateDeviceIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateDeviceIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -76,6 +89,7 @@ final BuiltSet<DevicesCreateDeviceIdErrorComponentCodeEnum>
   _$devicesCreateDeviceIdErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesCreateDeviceIdErrorComponentCodeEnum_required_,
   _$devicesCreateDeviceIdErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesCreateDeviceIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesCreateDeviceIdErrorComponentAttrEnum>
@@ -90,9 +104,11 @@ class _$DevicesCreateDeviceIdErrorComponentAttrEnumSerializer
         PrimitiveSerializer<DevicesCreateDeviceIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'deviceId': 'device_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'device_id': 'deviceId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -126,6 +142,7 @@ class _$DevicesCreateDeviceIdErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
@@ -134,6 +151,7 @@ class _$DevicesCreateDeviceIdErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

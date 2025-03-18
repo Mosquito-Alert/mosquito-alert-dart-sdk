@@ -10,6 +10,10 @@ const NotificationsCreateReceiverTypeErrorComponentAttrEnum
     _$notificationsCreateReceiverTypeErrorComponentAttrEnum_receiverType =
     const NotificationsCreateReceiverTypeErrorComponentAttrEnum._(
         'receiverType');
+const NotificationsCreateReceiverTypeErrorComponentAttrEnum
+    _$notificationsCreateReceiverTypeErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsCreateReceiverTypeErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateReceiverTypeErrorComponentAttrEnum
     _$notificationsCreateReceiverTypeErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ NotificationsCreateReceiverTypeErrorComponentAttrEnum
   switch (name) {
     case 'receiverType':
       return _$notificationsCreateReceiverTypeErrorComponentAttrEnum_receiverType;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateReceiverTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateReceiverTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<NotificationsCreateReceiverTypeErrorComponentAttrEnum>
     new BuiltSet<
         NotificationsCreateReceiverTypeErrorComponentAttrEnum>(const <NotificationsCreateReceiverTypeErrorComponentAttrEnum>[
   _$notificationsCreateReceiverTypeErrorComponentAttrEnum_receiverType,
+  _$notificationsCreateReceiverTypeErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsCreateReceiverTypeErrorComponentCodeEnum
@@ -39,6 +46,10 @@ const NotificationsCreateReceiverTypeErrorComponentCodeEnum
 const NotificationsCreateReceiverTypeErrorComponentCodeEnum
     _$notificationsCreateReceiverTypeErrorComponentCodeEnum_required_ =
     const NotificationsCreateReceiverTypeErrorComponentCodeEnum._('required_');
+const NotificationsCreateReceiverTypeErrorComponentCodeEnum
+    _$notificationsCreateReceiverTypeErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsCreateReceiverTypeErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateReceiverTypeErrorComponentCodeEnum
     _$notificationsCreateReceiverTypeErrorComponentCodeEnumValueOf(
@@ -50,8 +61,10 @@ NotificationsCreateReceiverTypeErrorComponentCodeEnum
       return _$notificationsCreateReceiverTypeErrorComponentCodeEnum_null_;
     case 'required_':
       return _$notificationsCreateReceiverTypeErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateReceiverTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateReceiverTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -62,6 +75,7 @@ final BuiltSet<NotificationsCreateReceiverTypeErrorComponentCodeEnum>
   _$notificationsCreateReceiverTypeErrorComponentCodeEnum_invalidChoice,
   _$notificationsCreateReceiverTypeErrorComponentCodeEnum_null_,
   _$notificationsCreateReceiverTypeErrorComponentCodeEnum_required_,
+  _$notificationsCreateReceiverTypeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsCreateReceiverTypeErrorComponentAttrEnum>
@@ -77,9 +91,11 @@ class _$NotificationsCreateReceiverTypeErrorComponentAttrEnumSerializer
             NotificationsCreateReceiverTypeErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'receiverType': 'receiver_type',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'receiver_type': 'receiverType',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -112,11 +128,13 @@ class _$NotificationsCreateReceiverTypeErrorComponentCodeEnumSerializer
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

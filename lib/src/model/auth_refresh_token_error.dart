@@ -130,6 +130,8 @@ class AuthRefreshTokenErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'refresh')
   static const AuthRefreshTokenErrorAttrEnum refresh = _$authRefreshTokenErrorAttrEnum_refresh;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthRefreshTokenErrorAttrEnum unknownDefaultOpenApi = _$authRefreshTokenErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthRefreshTokenErrorAttrEnum> get serializer => _$authRefreshTokenErrorAttrEnumSerializer;
 
@@ -153,6 +155,8 @@ class AuthRefreshTokenErrorCodeEnum extends EnumClass {
   static const AuthRefreshTokenErrorCodeEnum required_ = _$authRefreshTokenErrorCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const AuthRefreshTokenErrorCodeEnum surrogateCharactersNotAllowed = _$authRefreshTokenErrorCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthRefreshTokenErrorCodeEnum unknownDefaultOpenApi = _$authRefreshTokenErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthRefreshTokenErrorCodeEnum> get serializer => _$authRefreshTokenErrorCodeEnumSerializer;
 

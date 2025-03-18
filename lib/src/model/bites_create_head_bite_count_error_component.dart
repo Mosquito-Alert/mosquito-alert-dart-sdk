@@ -143,6 +143,8 @@ class BitesCreateHeadBiteCountErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'head_bite_count')
   static const BitesCreateHeadBiteCountErrorComponentAttrEnum headBiteCount = _$bitesCreateHeadBiteCountErrorComponentAttrEnum_headBiteCount;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateHeadBiteCountErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateHeadBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateHeadBiteCountErrorComponentAttrEnum> get serializer => _$bitesCreateHeadBiteCountErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class BitesCreateHeadBiteCountErrorComponentCodeEnum extends EnumClass {
   static const BitesCreateHeadBiteCountErrorComponentCodeEnum invalid = _$bitesCreateHeadBiteCountErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'max_string_length')
   static const BitesCreateHeadBiteCountErrorComponentCodeEnum maxStringLength = _$bitesCreateHeadBiteCountErrorComponentCodeEnum_maxStringLength;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateHeadBiteCountErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateHeadBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateHeadBiteCountErrorComponentCodeEnum> get serializer => _$bitesCreateHeadBiteCountErrorComponentCodeEnumSerializer;
 

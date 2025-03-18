@@ -9,14 +9,20 @@ part of 'observations_create_created_at_error_component.dart';
 const ObservationsCreateCreatedAtErrorComponentAttrEnum
     _$observationsCreateCreatedAtErrorComponentAttrEnum_createdAt =
     const ObservationsCreateCreatedAtErrorComponentAttrEnum._('createdAt');
+const ObservationsCreateCreatedAtErrorComponentAttrEnum
+    _$observationsCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateCreatedAtErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateCreatedAtErrorComponentAttrEnum
     _$observationsCreateCreatedAtErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'createdAt':
       return _$observationsCreateCreatedAtErrorComponentAttrEnum_createdAt;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<ObservationsCreateCreatedAtErrorComponentAttrEnum>
     _$observationsCreateCreatedAtErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsCreateCreatedAtErrorComponentAttrEnum>(const <ObservationsCreateCreatedAtErrorComponentAttrEnum>[
   _$observationsCreateCreatedAtErrorComponentAttrEnum_createdAt,
+  _$observationsCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateCreatedAtErrorComponentCodeEnum
@@ -44,6 +51,10 @@ const ObservationsCreateCreatedAtErrorComponentCodeEnum
 const ObservationsCreateCreatedAtErrorComponentCodeEnum
     _$observationsCreateCreatedAtErrorComponentCodeEnum_required_ =
     const ObservationsCreateCreatedAtErrorComponentCodeEnum._('required_');
+const ObservationsCreateCreatedAtErrorComponentCodeEnum
+    _$observationsCreateCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateCreatedAtErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateCreatedAtErrorComponentCodeEnum
     _$observationsCreateCreatedAtErrorComponentCodeEnumValueOf(String name) {
@@ -60,8 +71,10 @@ ObservationsCreateCreatedAtErrorComponentCodeEnum
       return _$observationsCreateCreatedAtErrorComponentCodeEnum_overflow;
     case 'required_':
       return _$observationsCreateCreatedAtErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -74,6 +87,7 @@ final BuiltSet<ObservationsCreateCreatedAtErrorComponentCodeEnum>
   _$observationsCreateCreatedAtErrorComponentCodeEnum_null_,
   _$observationsCreateCreatedAtErrorComponentCodeEnum_overflow,
   _$observationsCreateCreatedAtErrorComponentCodeEnum_required_,
+  _$observationsCreateCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateCreatedAtErrorComponentAttrEnum>
@@ -88,9 +102,11 @@ class _$ObservationsCreateCreatedAtErrorComponentAttrEnumSerializer
         PrimitiveSerializer<ObservationsCreateCreatedAtErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'createdAt': 'created_at',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'created_at': 'createdAt',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -124,6 +140,7 @@ class _$ObservationsCreateCreatedAtErrorComponentCodeEnumSerializer
     'null_': 'null',
     'overflow': 'overflow',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'date': 'date',
@@ -132,6 +149,7 @@ class _$ObservationsCreateCreatedAtErrorComponentCodeEnumSerializer
     'null': 'null_',
     'overflow': 'overflow',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

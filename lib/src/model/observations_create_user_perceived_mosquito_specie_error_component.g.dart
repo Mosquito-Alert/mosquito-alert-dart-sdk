@@ -10,6 +10,10 @@ const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum
     _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum_userPerceivedMosquitoSpecie =
     const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum._(
         'userPerceivedMosquitoSpecie');
+const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum
+    _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum
     _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum
   switch (name) {
     case 'userPerceivedMosquitoSpecie':
       return _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum_userPerceivedMosquitoSpecie;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -28,12 +34,17 @@ final BuiltSet<
     new BuiltSet<
         ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum>(const <ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum>[
   _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum_userPerceivedMosquitoSpecie,
+  _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum
     _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum_invalidChoice =
     const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum._(
         'invalidChoice');
+const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum
+    _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum
     _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnumValueOf(
@@ -41,8 +52,10 @@ ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum
   switch (name) {
     case 'invalidChoice':
       return _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -52,6 +65,7 @@ final BuiltSet<
     new BuiltSet<
         ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum>(const <ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum>[
   _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum_invalidChoice,
+  _$observationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum>
@@ -67,9 +81,11 @@ class _$ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnumSeria
             ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'userPerceivedMosquitoSpecie': 'user_perceived_mosquito_specie',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user_perceived_mosquito_specie': 'userPerceivedMosquitoSpecie',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -103,9 +119,11 @@ class _$ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnumSeria
             ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

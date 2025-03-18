@@ -9,14 +9,20 @@ part of 'auth_refresh_token_refresh_error_component.dart';
 const AuthRefreshTokenRefreshErrorComponentAttrEnum
     _$authRefreshTokenRefreshErrorComponentAttrEnum_refresh =
     const AuthRefreshTokenRefreshErrorComponentAttrEnum._('refresh');
+const AuthRefreshTokenRefreshErrorComponentAttrEnum
+    _$authRefreshTokenRefreshErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const AuthRefreshTokenRefreshErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 AuthRefreshTokenRefreshErrorComponentAttrEnum
     _$authRefreshTokenRefreshErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'refresh':
       return _$authRefreshTokenRefreshErrorComponentAttrEnum_refresh;
+    case 'unknownDefaultOpenApi':
+      return _$authRefreshTokenRefreshErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authRefreshTokenRefreshErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<AuthRefreshTokenRefreshErrorComponentAttrEnum>
     _$authRefreshTokenRefreshErrorComponentAttrEnumValues = new BuiltSet<
         AuthRefreshTokenRefreshErrorComponentAttrEnum>(const <AuthRefreshTokenRefreshErrorComponentAttrEnum>[
   _$authRefreshTokenRefreshErrorComponentAttrEnum_refresh,
+  _$authRefreshTokenRefreshErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthRefreshTokenRefreshErrorComponentCodeEnum
@@ -46,6 +53,10 @@ const AuthRefreshTokenRefreshErrorComponentCodeEnum
     _$authRefreshTokenRefreshErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const AuthRefreshTokenRefreshErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const AuthRefreshTokenRefreshErrorComponentCodeEnum
+    _$authRefreshTokenRefreshErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const AuthRefreshTokenRefreshErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 AuthRefreshTokenRefreshErrorComponentCodeEnum
     _$authRefreshTokenRefreshErrorComponentCodeEnumValueOf(String name) {
@@ -62,8 +73,10 @@ AuthRefreshTokenRefreshErrorComponentCodeEnum
       return _$authRefreshTokenRefreshErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$authRefreshTokenRefreshErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$authRefreshTokenRefreshErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authRefreshTokenRefreshErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -76,6 +89,7 @@ final BuiltSet<AuthRefreshTokenRefreshErrorComponentCodeEnum>
   _$authRefreshTokenRefreshErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$authRefreshTokenRefreshErrorComponentCodeEnum_required_,
   _$authRefreshTokenRefreshErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$authRefreshTokenRefreshErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthRefreshTokenRefreshErrorComponentAttrEnum>
@@ -90,9 +104,11 @@ class _$AuthRefreshTokenRefreshErrorComponentAttrEnumSerializer
         PrimitiveSerializer<AuthRefreshTokenRefreshErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'refresh': 'refresh',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'refresh': 'refresh',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -126,6 +142,7 @@ class _$AuthRefreshTokenRefreshErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -134,6 +151,7 @@ class _$AuthRefreshTokenRefreshErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

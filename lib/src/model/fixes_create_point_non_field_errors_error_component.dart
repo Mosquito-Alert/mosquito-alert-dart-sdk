@@ -143,6 +143,8 @@ class FixesCreatePointNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'point.non_field_errors')
   static const FixesCreatePointNonFieldErrorsErrorComponentAttrEnum pointPeriodNonFieldErrors = _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_pointPeriodNonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const FixesCreatePointNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<FixesCreatePointNonFieldErrorsErrorComponentAttrEnum> get serializer => _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class FixesCreatePointNonFieldErrorsErrorComponentCodeEnum extends EnumClass {
   static const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum null_ = _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum required_ = _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<FixesCreatePointNonFieldErrorsErrorComponentCodeEnum> get serializer => _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnumSerializer;
 

@@ -235,6 +235,8 @@ class BreedingsitesListErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')
   static const BreedingsitesListErrorAttrEnum orderBy = _$breedingsitesListErrorAttrEnum_orderBy;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListErrorAttrEnum unknownDefaultOpenApi = _$breedingsitesListErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListErrorAttrEnum> get serializer => _$breedingsitesListErrorAttrEnumSerializer;
 
@@ -248,6 +250,8 @@ class BreedingsitesListErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const BreedingsitesListErrorCodeEnum invalidChoice = _$breedingsitesListErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListErrorCodeEnum unknownDefaultOpenApi = _$breedingsitesListErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListErrorCodeEnum> get serializer => _$breedingsitesListErrorCodeEnumSerializer;
 

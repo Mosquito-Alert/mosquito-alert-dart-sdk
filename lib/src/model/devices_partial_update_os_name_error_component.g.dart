@@ -9,14 +9,20 @@ part of 'devices_partial_update_os_name_error_component.dart';
 const DevicesPartialUpdateOsNameErrorComponentAttrEnum
     _$devicesPartialUpdateOsNameErrorComponentAttrEnum_osPeriodName =
     const DevicesPartialUpdateOsNameErrorComponentAttrEnum._('osPeriodName');
+const DevicesPartialUpdateOsNameErrorComponentAttrEnum
+    _$devicesPartialUpdateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateOsNameErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateOsNameErrorComponentAttrEnum
     _$devicesPartialUpdateOsNameErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'osPeriodName':
       return _$devicesPartialUpdateOsNameErrorComponentAttrEnum_osPeriodName;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<DevicesPartialUpdateOsNameErrorComponentAttrEnum>
     _$devicesPartialUpdateOsNameErrorComponentAttrEnumValues = new BuiltSet<
         DevicesPartialUpdateOsNameErrorComponentAttrEnum>(const <DevicesPartialUpdateOsNameErrorComponentAttrEnum>[
   _$devicesPartialUpdateOsNameErrorComponentAttrEnum_osPeriodName,
+  _$devicesPartialUpdateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesPartialUpdateOsNameErrorComponentCodeEnum
@@ -46,6 +53,10 @@ const DevicesPartialUpdateOsNameErrorComponentCodeEnum
     _$devicesPartialUpdateOsNameErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesPartialUpdateOsNameErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesPartialUpdateOsNameErrorComponentCodeEnum
+    _$devicesPartialUpdateOsNameErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateOsNameErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateOsNameErrorComponentCodeEnum
     _$devicesPartialUpdateOsNameErrorComponentCodeEnumValueOf(String name) {
@@ -62,8 +73,10 @@ DevicesPartialUpdateOsNameErrorComponentCodeEnum
       return _$devicesPartialUpdateOsNameErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$devicesPartialUpdateOsNameErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateOsNameErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateOsNameErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -76,6 +89,7 @@ final BuiltSet<DevicesPartialUpdateOsNameErrorComponentCodeEnum>
   _$devicesPartialUpdateOsNameErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesPartialUpdateOsNameErrorComponentCodeEnum_required_,
   _$devicesPartialUpdateOsNameErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesPartialUpdateOsNameErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesPartialUpdateOsNameErrorComponentAttrEnum>
@@ -90,9 +104,11 @@ class _$DevicesPartialUpdateOsNameErrorComponentAttrEnumSerializer
         PrimitiveSerializer<DevicesPartialUpdateOsNameErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'osPeriodName': 'os.name',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'os.name': 'osPeriodName',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -126,6 +142,7 @@ class _$DevicesPartialUpdateOsNameErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
@@ -134,6 +151,7 @@ class _$DevicesPartialUpdateOsNameErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

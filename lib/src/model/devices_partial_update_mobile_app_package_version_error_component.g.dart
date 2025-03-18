@@ -10,6 +10,10 @@ const DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum
     _$devicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum_mobileAppPeriodPackageVersion =
     const DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum._(
         'mobileAppPeriodPackageVersion');
+const DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum
+    _$devicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum
     _$devicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum
   switch (name) {
     case 'mobileAppPeriodPackageVersion':
       return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum_mobileAppPeriodPackageVersion;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -28,6 +34,7 @@ final BuiltSet<
     new BuiltSet<
         DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum>(const <DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum>[
   _$devicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum_mobileAppPeriodPackageVersion,
+  _$devicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum
@@ -58,6 +65,10 @@ const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum
     _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum
+    _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum
     _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnumValueOf(
@@ -77,8 +88,10 @@ DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum
       return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -94,6 +107,7 @@ final BuiltSet<
   _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_required_,
   _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum>
@@ -109,9 +123,11 @@ class _$DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnumSeriali
             DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'mobileAppPeriodPackageVersion': 'mobile_app.package_version',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'mobile_app.package_version': 'mobileAppPeriodPackageVersion',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -150,6 +166,7 @@ class _$DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnumSeriali
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -159,6 +176,7 @@ class _$DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnumSeriali
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

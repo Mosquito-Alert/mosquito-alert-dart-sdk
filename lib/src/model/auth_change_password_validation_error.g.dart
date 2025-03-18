@@ -9,14 +9,19 @@ part of 'auth_change_password_validation_error.dart';
 const AuthChangePasswordValidationErrorTypeEnum
     _$authChangePasswordValidationErrorTypeEnum_validationError =
     const AuthChangePasswordValidationErrorTypeEnum._('validationError');
+const AuthChangePasswordValidationErrorTypeEnum
+    _$authChangePasswordValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const AuthChangePasswordValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 AuthChangePasswordValidationErrorTypeEnum
     _$authChangePasswordValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$authChangePasswordValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$authChangePasswordValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authChangePasswordValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<AuthChangePasswordValidationErrorTypeEnum>
     _$authChangePasswordValidationErrorTypeEnumValues = new BuiltSet<
         AuthChangePasswordValidationErrorTypeEnum>(const <AuthChangePasswordValidationErrorTypeEnum>[
   _$authChangePasswordValidationErrorTypeEnum_validationError,
+  _$authChangePasswordValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthChangePasswordValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$AuthChangePasswordValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<AuthChangePasswordValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

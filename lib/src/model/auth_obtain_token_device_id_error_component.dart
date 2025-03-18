@@ -143,6 +143,8 @@ class AuthObtainTokenDeviceIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'device_id')
   static const AuthObtainTokenDeviceIdErrorComponentAttrEnum deviceId = _$authObtainTokenDeviceIdErrorComponentAttrEnum_deviceId;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthObtainTokenDeviceIdErrorComponentAttrEnum unknownDefaultOpenApi = _$authObtainTokenDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthObtainTokenDeviceIdErrorComponentAttrEnum> get serializer => _$authObtainTokenDeviceIdErrorComponentAttrEnumSerializer;
 
@@ -164,6 +166,8 @@ class AuthObtainTokenDeviceIdErrorComponentCodeEnum extends EnumClass {
   static const AuthObtainTokenDeviceIdErrorComponentCodeEnum nullCharactersNotAllowed = _$authObtainTokenDeviceIdErrorComponentCodeEnum_nullCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const AuthObtainTokenDeviceIdErrorComponentCodeEnum surrogateCharactersNotAllowed = _$authObtainTokenDeviceIdErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthObtainTokenDeviceIdErrorComponentCodeEnum unknownDefaultOpenApi = _$authObtainTokenDeviceIdErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthObtainTokenDeviceIdErrorComponentCodeEnum> get serializer => _$authObtainTokenDeviceIdErrorComponentCodeEnumSerializer;
 

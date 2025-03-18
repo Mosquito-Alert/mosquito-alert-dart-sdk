@@ -10,14 +10,20 @@ const DevicesPartialUpdateOsVersionErrorComponentAttrEnum
     _$devicesPartialUpdateOsVersionErrorComponentAttrEnum_osPeriodVersion =
     const DevicesPartialUpdateOsVersionErrorComponentAttrEnum._(
         'osPeriodVersion');
+const DevicesPartialUpdateOsVersionErrorComponentAttrEnum
+    _$devicesPartialUpdateOsVersionErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateOsVersionErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateOsVersionErrorComponentAttrEnum
     _$devicesPartialUpdateOsVersionErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'osPeriodVersion':
       return _$devicesPartialUpdateOsVersionErrorComponentAttrEnum_osPeriodVersion;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateOsVersionErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateOsVersionErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<DevicesPartialUpdateOsVersionErrorComponentAttrEnum>
     _$devicesPartialUpdateOsVersionErrorComponentAttrEnumValues = new BuiltSet<
         DevicesPartialUpdateOsVersionErrorComponentAttrEnum>(const <DevicesPartialUpdateOsVersionErrorComponentAttrEnum>[
   _$devicesPartialUpdateOsVersionErrorComponentAttrEnum_osPeriodVersion,
+  _$devicesPartialUpdateOsVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesPartialUpdateOsVersionErrorComponentCodeEnum
@@ -47,6 +54,10 @@ const DevicesPartialUpdateOsVersionErrorComponentCodeEnum
     _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesPartialUpdateOsVersionErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesPartialUpdateOsVersionErrorComponentCodeEnum
+    _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateOsVersionErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateOsVersionErrorComponentCodeEnum
     _$devicesPartialUpdateOsVersionErrorComponentCodeEnumValueOf(String name) {
@@ -63,8 +74,10 @@ DevicesPartialUpdateOsVersionErrorComponentCodeEnum
       return _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -77,6 +90,7 @@ final BuiltSet<DevicesPartialUpdateOsVersionErrorComponentCodeEnum>
   _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_required_,
   _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesPartialUpdateOsVersionErrorComponentAttrEnum>
@@ -92,9 +106,11 @@ class _$DevicesPartialUpdateOsVersionErrorComponentAttrEnumSerializer
             DevicesPartialUpdateOsVersionErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'osPeriodVersion': 'os.version',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'os.version': 'osPeriodVersion',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -129,6 +145,7 @@ class _$DevicesPartialUpdateOsVersionErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
@@ -137,6 +154,7 @@ class _$DevicesPartialUpdateOsVersionErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

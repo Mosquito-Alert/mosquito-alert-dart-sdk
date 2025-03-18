@@ -10,6 +10,10 @@ const NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum
     _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnum_userUuidsPeriodINDEX =
     const NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum._(
         'userUuidsPeriodINDEX');
+const NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum
+    _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum
     _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum
   switch (name) {
     case 'userUuidsPeriodINDEX':
       return _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnum_userUuidsPeriodINDEX;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum>
     new BuiltSet<
         NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum>(const <NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum>[
   _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnum_userUuidsPeriodINDEX,
+  _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum
@@ -39,6 +46,10 @@ const NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum
     _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_required_ =
     const NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum._(
         'required_');
+const NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum
+    _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum
     _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnumValueOf(
@@ -50,8 +61,10 @@ NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum
       return _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_null_;
     case 'required_':
       return _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -62,6 +75,7 @@ final BuiltSet<NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum>
   _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_invalid,
   _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_null_,
   _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_required_,
+  _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum>
@@ -77,9 +91,11 @@ class _$NotificationsCreateUserUuidsINDEXErrorComponentAttrEnumSerializer
             NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'userUuidsPeriodINDEX': 'user_uuids.INDEX',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user_uuids.INDEX': 'userUuidsPeriodINDEX',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -112,11 +128,13 @@ class _$NotificationsCreateUserUuidsINDEXErrorComponentCodeEnumSerializer
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

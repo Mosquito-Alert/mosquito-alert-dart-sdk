@@ -358,6 +358,9 @@ class BiteRequestEventEnvironmentEnum extends EnumClass {
   /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'')
   static const BiteRequestEventEnvironmentEnum empty = _$biteRequestEventEnvironmentEnum_empty;
+  /// The environment where the event took place.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BiteRequestEventEnvironmentEnum unknownDefaultOpenApi = _$biteRequestEventEnvironmentEnum_unknownDefaultOpenApi;
 
   static Serializer<BiteRequestEventEnvironmentEnum> get serializer => _$biteRequestEventEnvironmentEnumSerializer;
 
@@ -387,6 +390,9 @@ class BiteRequestEventMomentEnum extends EnumClass {
   /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'')
   static const BiteRequestEventMomentEnum empty = _$biteRequestEventMomentEnum_empty;
+  /// The moment of the day when the event took place.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BiteRequestEventMomentEnum unknownDefaultOpenApi = _$biteRequestEventMomentEnum_unknownDefaultOpenApi;
 
   static Serializer<BiteRequestEventMomentEnum> get serializer => _$biteRequestEventMomentEnumSerializer;
 

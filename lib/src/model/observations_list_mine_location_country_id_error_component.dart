@@ -143,6 +143,8 @@ class ObservationsListMineLocationCountryIdErrorComponentAttrEnum extends EnumCl
 
   @BuiltValueEnumConst(wireName: r'location_country_id')
   static const ObservationsListMineLocationCountryIdErrorComponentAttrEnum locationCountryId = _$observationsListMineLocationCountryIdErrorComponentAttrEnum_locationCountryId;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListMineLocationCountryIdErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsListMineLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListMineLocationCountryIdErrorComponentAttrEnum> get serializer => _$observationsListMineLocationCountryIdErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class ObservationsListMineLocationCountryIdErrorComponentCodeEnum extends EnumCl
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const ObservationsListMineLocationCountryIdErrorComponentCodeEnum invalidChoice = _$observationsListMineLocationCountryIdErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListMineLocationCountryIdErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsListMineLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListMineLocationCountryIdErrorComponentCodeEnum> get serializer => _$observationsListMineLocationCountryIdErrorComponentCodeEnumSerializer;
 

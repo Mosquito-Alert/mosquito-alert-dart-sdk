@@ -10,6 +10,10 @@ const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum
     _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum_mobileAppPeriodNonFieldErrors =
     const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum._(
         'mobileAppPeriodNonFieldErrors');
+const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum
+    _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum
     _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'mobileAppPeriodNonFieldErrors':
       return _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum_mobileAppPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -28,6 +34,7 @@ final BuiltSet<
     new BuiltSet<
         DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum>(const <DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum>[
   _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum_mobileAppPeriodNonFieldErrors,
+  _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum
@@ -38,6 +45,10 @@ const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum
     _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_null_ =
     const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum._(
         'null_');
+const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum
+    _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum
     _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -47,8 +58,10 @@ DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum
       return _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -59,6 +72,7 @@ final BuiltSet<
         DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum>(const <DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum>[
   _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$devicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum>
@@ -74,9 +88,11 @@ class _$DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnumSeriali
             DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'mobileAppPeriodNonFieldErrors': 'mobile_app.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'mobile_app.non_field_errors': 'mobileAppPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -110,10 +126,12 @@ class _$DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentCodeEnumSeriali
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

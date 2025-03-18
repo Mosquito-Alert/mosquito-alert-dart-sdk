@@ -9,14 +9,20 @@ part of 'observations_list_created_at_error_component.dart';
 const ObservationsListCreatedAtErrorComponentAttrEnum
     _$observationsListCreatedAtErrorComponentAttrEnum_createdAt =
     const ObservationsListCreatedAtErrorComponentAttrEnum._('createdAt');
+const ObservationsListCreatedAtErrorComponentAttrEnum
+    _$observationsListCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsListCreatedAtErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListCreatedAtErrorComponentAttrEnum
     _$observationsListCreatedAtErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'createdAt':
       return _$observationsListCreatedAtErrorComponentAttrEnum_createdAt;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<ObservationsListCreatedAtErrorComponentAttrEnum>
     _$observationsListCreatedAtErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsListCreatedAtErrorComponentAttrEnum>(const <ObservationsListCreatedAtErrorComponentAttrEnum>[
   _$observationsListCreatedAtErrorComponentAttrEnum_createdAt,
+  _$observationsListCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListCreatedAtErrorComponentCodeEnum
     _$observationsListCreatedAtErrorComponentCodeEnum_invalid =
     const ObservationsListCreatedAtErrorComponentCodeEnum._('invalid');
+const ObservationsListCreatedAtErrorComponentCodeEnum
+    _$observationsListCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsListCreatedAtErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListCreatedAtErrorComponentCodeEnum
     _$observationsListCreatedAtErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalid':
       return _$observationsListCreatedAtErrorComponentCodeEnum_invalid;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<ObservationsListCreatedAtErrorComponentCodeEnum>
     _$observationsListCreatedAtErrorComponentCodeEnumValues = new BuiltSet<
         ObservationsListCreatedAtErrorComponentCodeEnum>(const <ObservationsListCreatedAtErrorComponentCodeEnum>[
   _$observationsListCreatedAtErrorComponentCodeEnum_invalid,
+  _$observationsListCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsListCreatedAtErrorComponentAttrEnum>
@@ -58,9 +72,11 @@ class _$ObservationsListCreatedAtErrorComponentAttrEnumSerializer
         PrimitiveSerializer<ObservationsListCreatedAtErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'createdAt': 'created_at',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'created_at': 'createdAt',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -89,9 +105,11 @@ class _$ObservationsListCreatedAtErrorComponentCodeEnumSerializer
         PrimitiveSerializer<ObservationsListCreatedAtErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

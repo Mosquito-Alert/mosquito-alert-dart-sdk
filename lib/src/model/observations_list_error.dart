@@ -235,6 +235,8 @@ class ObservationsListErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')
   static const ObservationsListErrorAttrEnum orderBy = _$observationsListErrorAttrEnum_orderBy;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListErrorAttrEnum unknownDefaultOpenApi = _$observationsListErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListErrorAttrEnum> get serializer => _$observationsListErrorAttrEnumSerializer;
 
@@ -248,6 +250,8 @@ class ObservationsListErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const ObservationsListErrorCodeEnum invalidChoice = _$observationsListErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListErrorCodeEnum unknownDefaultOpenApi = _$observationsListErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListErrorCodeEnum> get serializer => _$observationsListErrorCodeEnumSerializer;
 

@@ -10,14 +10,20 @@ const FixesCreatePointLongitudeErrorComponentAttrEnum
     _$fixesCreatePointLongitudeErrorComponentAttrEnum_pointPeriodLongitude =
     const FixesCreatePointLongitudeErrorComponentAttrEnum._(
         'pointPeriodLongitude');
+const FixesCreatePointLongitudeErrorComponentAttrEnum
+    _$fixesCreatePointLongitudeErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const FixesCreatePointLongitudeErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 FixesCreatePointLongitudeErrorComponentAttrEnum
     _$fixesCreatePointLongitudeErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'pointPeriodLongitude':
       return _$fixesCreatePointLongitudeErrorComponentAttrEnum_pointPeriodLongitude;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreatePointLongitudeErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreatePointLongitudeErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<FixesCreatePointLongitudeErrorComponentAttrEnum>
     _$fixesCreatePointLongitudeErrorComponentAttrEnumValues = new BuiltSet<
         FixesCreatePointLongitudeErrorComponentAttrEnum>(const <FixesCreatePointLongitudeErrorComponentAttrEnum>[
   _$fixesCreatePointLongitudeErrorComponentAttrEnum_pointPeriodLongitude,
+  _$fixesCreatePointLongitudeErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const FixesCreatePointLongitudeErrorComponentCodeEnum
@@ -39,6 +46,10 @@ const FixesCreatePointLongitudeErrorComponentCodeEnum
 const FixesCreatePointLongitudeErrorComponentCodeEnum
     _$fixesCreatePointLongitudeErrorComponentCodeEnum_required_ =
     const FixesCreatePointLongitudeErrorComponentCodeEnum._('required_');
+const FixesCreatePointLongitudeErrorComponentCodeEnum
+    _$fixesCreatePointLongitudeErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const FixesCreatePointLongitudeErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 FixesCreatePointLongitudeErrorComponentCodeEnum
     _$fixesCreatePointLongitudeErrorComponentCodeEnumValueOf(String name) {
@@ -51,8 +62,10 @@ FixesCreatePointLongitudeErrorComponentCodeEnum
       return _$fixesCreatePointLongitudeErrorComponentCodeEnum_null_;
     case 'required_':
       return _$fixesCreatePointLongitudeErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreatePointLongitudeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreatePointLongitudeErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -63,6 +76,7 @@ final BuiltSet<FixesCreatePointLongitudeErrorComponentCodeEnum>
   _$fixesCreatePointLongitudeErrorComponentCodeEnum_maxStringLength,
   _$fixesCreatePointLongitudeErrorComponentCodeEnum_null_,
   _$fixesCreatePointLongitudeErrorComponentCodeEnum_required_,
+  _$fixesCreatePointLongitudeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<FixesCreatePointLongitudeErrorComponentAttrEnum>
@@ -77,9 +91,11 @@ class _$FixesCreatePointLongitudeErrorComponentAttrEnumSerializer
         PrimitiveSerializer<FixesCreatePointLongitudeErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'pointPeriodLongitude': 'point.longitude',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'point.longitude': 'pointPeriodLongitude',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -111,12 +127,14 @@ class _$FixesCreatePointLongitudeErrorComponentCodeEnumSerializer
     'maxStringLength': 'max_string_length',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

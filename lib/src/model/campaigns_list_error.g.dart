@@ -8,36 +8,48 @@ part of 'campaigns_list_error.dart';
 
 const CampaignsListErrorAttrEnum _$campaignsListErrorAttrEnum_orderBy =
     const CampaignsListErrorAttrEnum._('orderBy');
+const CampaignsListErrorAttrEnum
+    _$campaignsListErrorAttrEnum_unknownDefaultOpenApi =
+    const CampaignsListErrorAttrEnum._('unknownDefaultOpenApi');
 
 CampaignsListErrorAttrEnum _$campaignsListErrorAttrEnumValueOf(String name) {
   switch (name) {
     case 'orderBy':
       return _$campaignsListErrorAttrEnum_orderBy;
+    case 'unknownDefaultOpenApi':
+      return _$campaignsListErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$campaignsListErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<CampaignsListErrorAttrEnum> _$campaignsListErrorAttrEnumValues =
     new BuiltSet<CampaignsListErrorAttrEnum>(const <CampaignsListErrorAttrEnum>[
   _$campaignsListErrorAttrEnum_orderBy,
+  _$campaignsListErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const CampaignsListErrorCodeEnum _$campaignsListErrorCodeEnum_invalidChoice =
     const CampaignsListErrorCodeEnum._('invalidChoice');
+const CampaignsListErrorCodeEnum
+    _$campaignsListErrorCodeEnum_unknownDefaultOpenApi =
+    const CampaignsListErrorCodeEnum._('unknownDefaultOpenApi');
 
 CampaignsListErrorCodeEnum _$campaignsListErrorCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$campaignsListErrorCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$campaignsListErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$campaignsListErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<CampaignsListErrorCodeEnum> _$campaignsListErrorCodeEnumValues =
     new BuiltSet<CampaignsListErrorCodeEnum>(const <CampaignsListErrorCodeEnum>[
   _$campaignsListErrorCodeEnum_invalidChoice,
+  _$campaignsListErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<CampaignsListErrorAttrEnum> _$campaignsListErrorAttrEnumSerializer =
@@ -49,9 +61,11 @@ class _$CampaignsListErrorAttrEnumSerializer
     implements PrimitiveSerializer<CampaignsListErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'orderBy': 'order_by',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'order_by': 'orderBy',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -76,9 +90,11 @@ class _$CampaignsListErrorCodeEnumSerializer
     implements PrimitiveSerializer<CampaignsListErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

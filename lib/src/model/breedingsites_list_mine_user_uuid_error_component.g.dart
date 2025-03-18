@@ -9,14 +9,20 @@ part of 'breedingsites_list_mine_user_uuid_error_component.dart';
 const BreedingsitesListMineUserUuidErrorComponentAttrEnum
     _$breedingsitesListMineUserUuidErrorComponentAttrEnum_userUuid =
     const BreedingsitesListMineUserUuidErrorComponentAttrEnum._('userUuid');
+const BreedingsitesListMineUserUuidErrorComponentAttrEnum
+    _$breedingsitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesListMineUserUuidErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListMineUserUuidErrorComponentAttrEnum
     _$breedingsitesListMineUserUuidErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'userUuid':
       return _$breedingsitesListMineUserUuidErrorComponentAttrEnum_userUuid;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BreedingsitesListMineUserUuidErrorComponentAttrEnum>
     _$breedingsitesListMineUserUuidErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesListMineUserUuidErrorComponentAttrEnum>(const <BreedingsitesListMineUserUuidErrorComponentAttrEnum>[
   _$breedingsitesListMineUserUuidErrorComponentAttrEnum_userUuid,
+  _$breedingsitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesListMineUserUuidErrorComponentCodeEnum
@@ -33,6 +40,10 @@ const BreedingsitesListMineUserUuidErrorComponentCodeEnum
     _$breedingsitesListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed =
     const BreedingsitesListMineUserUuidErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const BreedingsitesListMineUserUuidErrorComponentCodeEnum
+    _$breedingsitesListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesListMineUserUuidErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListMineUserUuidErrorComponentCodeEnum
     _$breedingsitesListMineUserUuidErrorComponentCodeEnumValueOf(String name) {
@@ -41,8 +52,10 @@ BreedingsitesListMineUserUuidErrorComponentCodeEnum
       return _$breedingsitesListMineUserUuidErrorComponentCodeEnum_invalid;
     case 'nullCharactersNotAllowed':
       return _$breedingsitesListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -51,6 +64,7 @@ final BuiltSet<BreedingsitesListMineUserUuidErrorComponentCodeEnum>
         BreedingsitesListMineUserUuidErrorComponentCodeEnum>(const <BreedingsitesListMineUserUuidErrorComponentCodeEnum>[
   _$breedingsitesListMineUserUuidErrorComponentCodeEnum_invalid,
   _$breedingsitesListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$breedingsitesListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesListMineUserUuidErrorComponentAttrEnum>
@@ -66,9 +80,11 @@ class _$BreedingsitesListMineUserUuidErrorComponentAttrEnumSerializer
             BreedingsitesListMineUserUuidErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'userUuid': 'user_uuid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user_uuid': 'userUuid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -99,10 +115,12 @@ class _$BreedingsitesListMineUserUuidErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

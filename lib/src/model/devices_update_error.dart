@@ -250,6 +250,8 @@ class DevicesUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mobile_app.package_version')
   static const DevicesUpdateErrorAttrEnum mobileAppPeriodPackageVersion = _$devicesUpdateErrorAttrEnum_mobileAppPeriodPackageVersion;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesUpdateErrorAttrEnum unknownDefaultOpenApi = _$devicesUpdateErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesUpdateErrorAttrEnum> get serializer => _$devicesUpdateErrorAttrEnumSerializer;
 
@@ -275,6 +277,8 @@ class DevicesUpdateErrorCodeEnum extends EnumClass {
   static const DevicesUpdateErrorCodeEnum required_ = _$devicesUpdateErrorCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const DevicesUpdateErrorCodeEnum surrogateCharactersNotAllowed = _$devicesUpdateErrorCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesUpdateErrorCodeEnum unknownDefaultOpenApi = _$devicesUpdateErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesUpdateErrorCodeEnum> get serializer => _$devicesUpdateErrorCodeEnumSerializer;
 

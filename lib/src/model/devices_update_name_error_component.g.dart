@@ -9,14 +9,19 @@ part of 'devices_update_name_error_component.dart';
 const DevicesUpdateNameErrorComponentAttrEnum
     _$devicesUpdateNameErrorComponentAttrEnum_nameValue =
     const DevicesUpdateNameErrorComponentAttrEnum._('nameValue');
+const DevicesUpdateNameErrorComponentAttrEnum
+    _$devicesUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesUpdateNameErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 DevicesUpdateNameErrorComponentAttrEnum
     _$devicesUpdateNameErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'nameValue':
       return _$devicesUpdateNameErrorComponentAttrEnum_nameValue;
+    case 'unknownDefaultOpenApi':
+      return _$devicesUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<DevicesUpdateNameErrorComponentAttrEnum>
     _$devicesUpdateNameErrorComponentAttrEnumValues = new BuiltSet<
         DevicesUpdateNameErrorComponentAttrEnum>(const <DevicesUpdateNameErrorComponentAttrEnum>[
   _$devicesUpdateNameErrorComponentAttrEnum_nameValue,
+  _$devicesUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesUpdateNameErrorComponentCodeEnum
@@ -39,6 +45,9 @@ const DevicesUpdateNameErrorComponentCodeEnum
     _$devicesUpdateNameErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesUpdateNameErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesUpdateNameErrorComponentCodeEnum
+    _$devicesUpdateNameErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesUpdateNameErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 DevicesUpdateNameErrorComponentCodeEnum
     _$devicesUpdateNameErrorComponentCodeEnumValueOf(String name) {
@@ -51,8 +60,10 @@ DevicesUpdateNameErrorComponentCodeEnum
       return _$devicesUpdateNameErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$devicesUpdateNameErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesUpdateNameErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesUpdateNameErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -63,6 +74,7 @@ final BuiltSet<DevicesUpdateNameErrorComponentCodeEnum>
   _$devicesUpdateNameErrorComponentCodeEnum_maxLength,
   _$devicesUpdateNameErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesUpdateNameErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesUpdateNameErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesUpdateNameErrorComponentAttrEnum>
@@ -76,9 +88,11 @@ class _$DevicesUpdateNameErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<DevicesUpdateNameErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nameValue': 'name',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'name': 'nameValue',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -109,12 +123,14 @@ class _$DevicesUpdateNameErrorComponentCodeEnumSerializer
     'maxLength': 'max_length',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_length': 'maxLength',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

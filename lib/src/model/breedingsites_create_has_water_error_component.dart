@@ -143,6 +143,8 @@ class BreedingsitesCreateHasWaterErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'has_water')
   static const BreedingsitesCreateHasWaterErrorComponentAttrEnum hasWater = _$breedingsitesCreateHasWaterErrorComponentAttrEnum_hasWater;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateHasWaterErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreateHasWaterErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateHasWaterErrorComponentAttrEnum> get serializer => _$breedingsitesCreateHasWaterErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BreedingsitesCreateHasWaterErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const BreedingsitesCreateHasWaterErrorComponentCodeEnum invalid = _$breedingsitesCreateHasWaterErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateHasWaterErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreateHasWaterErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateHasWaterErrorComponentCodeEnum> get serializer => _$breedingsitesCreateHasWaterErrorComponentCodeEnumSerializer;
 

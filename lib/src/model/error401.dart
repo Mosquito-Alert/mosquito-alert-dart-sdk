@@ -147,6 +147,8 @@ class Error401CodeEnum extends EnumClass {
   static const Error401CodeEnum authenticationFailed = _$error401CodeEnum_authenticationFailed;
   @BuiltValueEnumConst(wireName: r'not_authenticated')
   static const Error401CodeEnum notAuthenticated = _$error401CodeEnum_notAuthenticated;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const Error401CodeEnum unknownDefaultOpenApi = _$error401CodeEnum_unknownDefaultOpenApi;
 
   static Serializer<Error401CodeEnum> get serializer => _$error401CodeEnumSerializer;
 

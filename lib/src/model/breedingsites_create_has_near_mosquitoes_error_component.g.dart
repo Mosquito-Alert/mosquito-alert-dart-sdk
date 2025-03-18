@@ -10,6 +10,10 @@ const BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum
     _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_hasNearMosquitoes =
     const BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum._(
         'hasNearMosquitoes');
+const BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum
+    _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum
     _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum
   switch (name) {
     case 'hasNearMosquitoes':
       return _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_hasNearMosquitoes;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,12 +33,17 @@ final BuiltSet<BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum>
     new BuiltSet<
         BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum>(const <BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum>[
   _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_hasNearMosquitoes,
+  _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum
     _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_invalid =
     const BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum._(
         'invalid');
+const BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum
+    _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum
     _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnumValueOf(
@@ -40,8 +51,10 @@ BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum
   switch (name) {
     case 'invalid':
       return _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_invalid;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +63,7 @@ final BuiltSet<BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum>
     new BuiltSet<
         BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum>(const <BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum>[
   _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_invalid,
+  _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum>
@@ -65,9 +79,11 @@ class _$BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnumSerializer
             BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'hasNearMosquitoes': 'has_near_mosquitoes',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'has_near_mosquitoes': 'hasNearMosquitoes',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -98,9 +114,11 @@ class _$BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnumSerializer
             BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

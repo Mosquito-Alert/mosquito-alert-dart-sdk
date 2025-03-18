@@ -9,14 +9,19 @@ part of 'users_update_validation_error.dart';
 const UsersUpdateValidationErrorTypeEnum
     _$usersUpdateValidationErrorTypeEnum_validationError =
     const UsersUpdateValidationErrorTypeEnum._('validationError');
+const UsersUpdateValidationErrorTypeEnum
+    _$usersUpdateValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const UsersUpdateValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 UsersUpdateValidationErrorTypeEnum _$usersUpdateValidationErrorTypeEnumValueOf(
     String name) {
   switch (name) {
     case 'validationError':
       return _$usersUpdateValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$usersUpdateValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$usersUpdateValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<UsersUpdateValidationErrorTypeEnum>
     _$usersUpdateValidationErrorTypeEnumValues = new BuiltSet<
         UsersUpdateValidationErrorTypeEnum>(const <UsersUpdateValidationErrorTypeEnum>[
   _$usersUpdateValidationErrorTypeEnum_validationError,
+  _$usersUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<UsersUpdateValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$UsersUpdateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<UsersUpdateValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -127,6 +127,8 @@ class AuthChangePasswordValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')
   static const AuthChangePasswordValidationErrorTypeEnum validationError = _$authChangePasswordValidationErrorTypeEnum_validationError;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthChangePasswordValidationErrorTypeEnum unknownDefaultOpenApi = _$authChangePasswordValidationErrorTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthChangePasswordValidationErrorTypeEnum> get serializer => _$authChangePasswordValidationErrorTypeEnumSerializer;
 

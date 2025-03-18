@@ -9,14 +9,20 @@ part of 'bites_create_event_moment_error_component.dart';
 const BitesCreateEventMomentErrorComponentAttrEnum
     _$bitesCreateEventMomentErrorComponentAttrEnum_eventMoment =
     const BitesCreateEventMomentErrorComponentAttrEnum._('eventMoment');
+const BitesCreateEventMomentErrorComponentAttrEnum
+    _$bitesCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateEventMomentErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateEventMomentErrorComponentAttrEnum
     _$bitesCreateEventMomentErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'eventMoment':
       return _$bitesCreateEventMomentErrorComponentAttrEnum_eventMoment;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<BitesCreateEventMomentErrorComponentAttrEnum>
     _$bitesCreateEventMomentErrorComponentAttrEnumValues = new BuiltSet<
         BitesCreateEventMomentErrorComponentAttrEnum>(const <BitesCreateEventMomentErrorComponentAttrEnum>[
   _$bitesCreateEventMomentErrorComponentAttrEnum_eventMoment,
+  _$bitesCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateEventMomentErrorComponentCodeEnum
     _$bitesCreateEventMomentErrorComponentCodeEnum_invalidChoice =
     const BitesCreateEventMomentErrorComponentCodeEnum._('invalidChoice');
+const BitesCreateEventMomentErrorComponentCodeEnum
+    _$bitesCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateEventMomentErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateEventMomentErrorComponentCodeEnum
     _$bitesCreateEventMomentErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$bitesCreateEventMomentErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<BitesCreateEventMomentErrorComponentCodeEnum>
     _$bitesCreateEventMomentErrorComponentCodeEnumValues = new BuiltSet<
         BitesCreateEventMomentErrorComponentCodeEnum>(const <BitesCreateEventMomentErrorComponentCodeEnum>[
   _$bitesCreateEventMomentErrorComponentCodeEnum_invalidChoice,
+  _$bitesCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateEventMomentErrorComponentAttrEnum>
@@ -58,9 +72,11 @@ class _$BitesCreateEventMomentErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesCreateEventMomentErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'eventMoment': 'event_moment',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'event_moment': 'eventMoment',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -89,9 +105,11 @@ class _$BitesCreateEventMomentErrorComponentCodeEnumSerializer
         PrimitiveSerializer<BitesCreateEventMomentErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

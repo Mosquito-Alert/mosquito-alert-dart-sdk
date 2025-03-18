@@ -10,6 +10,10 @@ const NotificationsCreateMessageBodyHuErrorComponentAttrEnum
     _$notificationsCreateMessageBodyHuErrorComponentAttrEnum_messagePeriodBodyPeriodHu =
     const NotificationsCreateMessageBodyHuErrorComponentAttrEnum._(
         'messagePeriodBodyPeriodHu');
+const NotificationsCreateMessageBodyHuErrorComponentAttrEnum
+    _$notificationsCreateMessageBodyHuErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsCreateMessageBodyHuErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateMessageBodyHuErrorComponentAttrEnum
     _$notificationsCreateMessageBodyHuErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ NotificationsCreateMessageBodyHuErrorComponentAttrEnum
   switch (name) {
     case 'messagePeriodBodyPeriodHu':
       return _$notificationsCreateMessageBodyHuErrorComponentAttrEnum_messagePeriodBodyPeriodHu;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateMessageBodyHuErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateMessageBodyHuErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<NotificationsCreateMessageBodyHuErrorComponentAttrEnum>
     new BuiltSet<
         NotificationsCreateMessageBodyHuErrorComponentAttrEnum>(const <NotificationsCreateMessageBodyHuErrorComponentAttrEnum>[
   _$notificationsCreateMessageBodyHuErrorComponentAttrEnum_messagePeriodBodyPeriodHu,
+  _$notificationsCreateMessageBodyHuErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsCreateMessageBodyHuErrorComponentCodeEnum
@@ -46,6 +53,10 @@ const NotificationsCreateMessageBodyHuErrorComponentCodeEnum
     _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const NotificationsCreateMessageBodyHuErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const NotificationsCreateMessageBodyHuErrorComponentCodeEnum
+    _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsCreateMessageBodyHuErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateMessageBodyHuErrorComponentCodeEnum
     _$notificationsCreateMessageBodyHuErrorComponentCodeEnumValueOf(
@@ -61,8 +72,10 @@ NotificationsCreateMessageBodyHuErrorComponentCodeEnum
       return _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -75,6 +88,7 @@ final BuiltSet<NotificationsCreateMessageBodyHuErrorComponentCodeEnum>
   _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_null_,
   _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$notificationsCreateMessageBodyHuErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsCreateMessageBodyHuErrorComponentAttrEnum>
@@ -90,9 +104,11 @@ class _$NotificationsCreateMessageBodyHuErrorComponentAttrEnumSerializer
             NotificationsCreateMessageBodyHuErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'messagePeriodBodyPeriodHu': 'message.body.hu',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'message.body.hu': 'messagePeriodBodyPeriodHu',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -127,6 +143,7 @@ class _$NotificationsCreateMessageBodyHuErrorComponentCodeEnumSerializer
     'null_': 'null',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -134,6 +151,7 @@ class _$NotificationsCreateMessageBodyHuErrorComponentCodeEnumSerializer
     'null': 'null_',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

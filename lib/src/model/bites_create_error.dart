@@ -355,6 +355,8 @@ class BitesCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'right_leg_bite_count')
   static const BitesCreateErrorAttrEnum rightLegBiteCount = _$bitesCreateErrorAttrEnum_rightLegBiteCount;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateErrorAttrEnum unknownDefaultOpenApi = _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateErrorAttrEnum> get serializer => _$bitesCreateErrorAttrEnumSerializer;
 
@@ -370,6 +372,8 @@ class BitesCreateErrorCodeEnum extends EnumClass {
   static const BitesCreateErrorCodeEnum invalid = _$bitesCreateErrorCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'max_string_length')
   static const BitesCreateErrorCodeEnum maxStringLength = _$bitesCreateErrorCodeEnum_maxStringLength;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateErrorCodeEnum unknownDefaultOpenApi = _$bitesCreateErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateErrorCodeEnum> get serializer => _$bitesCreateErrorCodeEnumSerializer;
 

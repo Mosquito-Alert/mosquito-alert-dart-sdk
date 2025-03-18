@@ -9,14 +9,20 @@ part of 'auth_obtain_token_device_id_error_component.dart';
 const AuthObtainTokenDeviceIdErrorComponentAttrEnum
     _$authObtainTokenDeviceIdErrorComponentAttrEnum_deviceId =
     const AuthObtainTokenDeviceIdErrorComponentAttrEnum._('deviceId');
+const AuthObtainTokenDeviceIdErrorComponentAttrEnum
+    _$authObtainTokenDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const AuthObtainTokenDeviceIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 AuthObtainTokenDeviceIdErrorComponentAttrEnum
     _$authObtainTokenDeviceIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'deviceId':
       return _$authObtainTokenDeviceIdErrorComponentAttrEnum_deviceId;
+    case 'unknownDefaultOpenApi':
+      return _$authObtainTokenDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authObtainTokenDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<AuthObtainTokenDeviceIdErrorComponentAttrEnum>
     _$authObtainTokenDeviceIdErrorComponentAttrEnumValues = new BuiltSet<
         AuthObtainTokenDeviceIdErrorComponentAttrEnum>(const <AuthObtainTokenDeviceIdErrorComponentAttrEnum>[
   _$authObtainTokenDeviceIdErrorComponentAttrEnum_deviceId,
+  _$authObtainTokenDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthObtainTokenDeviceIdErrorComponentCodeEnum
@@ -43,6 +50,10 @@ const AuthObtainTokenDeviceIdErrorComponentCodeEnum
     _$authObtainTokenDeviceIdErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const AuthObtainTokenDeviceIdErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const AuthObtainTokenDeviceIdErrorComponentCodeEnum
+    _$authObtainTokenDeviceIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const AuthObtainTokenDeviceIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 AuthObtainTokenDeviceIdErrorComponentCodeEnum
     _$authObtainTokenDeviceIdErrorComponentCodeEnumValueOf(String name) {
@@ -57,8 +68,10 @@ AuthObtainTokenDeviceIdErrorComponentCodeEnum
       return _$authObtainTokenDeviceIdErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$authObtainTokenDeviceIdErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$authObtainTokenDeviceIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authObtainTokenDeviceIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -70,6 +83,7 @@ final BuiltSet<AuthObtainTokenDeviceIdErrorComponentCodeEnum>
   _$authObtainTokenDeviceIdErrorComponentCodeEnum_null_,
   _$authObtainTokenDeviceIdErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$authObtainTokenDeviceIdErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$authObtainTokenDeviceIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthObtainTokenDeviceIdErrorComponentAttrEnum>
@@ -84,9 +98,11 @@ class _$AuthObtainTokenDeviceIdErrorComponentAttrEnumSerializer
         PrimitiveSerializer<AuthObtainTokenDeviceIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'deviceId': 'device_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'device_id': 'deviceId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -119,6 +135,7 @@ class _$AuthObtainTokenDeviceIdErrorComponentCodeEnumSerializer
     'null_': 'null',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -126,6 +143,7 @@ class _$AuthObtainTokenDeviceIdErrorComponentCodeEnumSerializer
     'null': 'null_',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -143,6 +143,8 @@ class FixesCreateCoverageUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'coverage_uuid')
   static const FixesCreateCoverageUuidErrorComponentAttrEnum coverageUuid = _$fixesCreateCoverageUuidErrorComponentAttrEnum_coverageUuid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const FixesCreateCoverageUuidErrorComponentAttrEnum unknownDefaultOpenApi = _$fixesCreateCoverageUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<FixesCreateCoverageUuidErrorComponentAttrEnum> get serializer => _$fixesCreateCoverageUuidErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class FixesCreateCoverageUuidErrorComponentCodeEnum extends EnumClass {
   static const FixesCreateCoverageUuidErrorComponentCodeEnum null_ = _$fixesCreateCoverageUuidErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const FixesCreateCoverageUuidErrorComponentCodeEnum required_ = _$fixesCreateCoverageUuidErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const FixesCreateCoverageUuidErrorComponentCodeEnum unknownDefaultOpenApi = _$fixesCreateCoverageUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<FixesCreateCoverageUuidErrorComponentCodeEnum> get serializer => _$fixesCreateCoverageUuidErrorComponentCodeEnumSerializer;
 

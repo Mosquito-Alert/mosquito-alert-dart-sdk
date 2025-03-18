@@ -143,6 +143,8 @@ class NotificationsCreateTopicCodesErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'topic_codes')
   static const NotificationsCreateTopicCodesErrorComponentAttrEnum topicCodes = _$notificationsCreateTopicCodesErrorComponentAttrEnum_topicCodes;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateTopicCodesErrorComponentAttrEnum unknownDefaultOpenApi = _$notificationsCreateTopicCodesErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateTopicCodesErrorComponentAttrEnum> get serializer => _$notificationsCreateTopicCodesErrorComponentAttrEnumSerializer;
 
@@ -162,6 +164,8 @@ class NotificationsCreateTopicCodesErrorComponentCodeEnum extends EnumClass {
   static const NotificationsCreateTopicCodesErrorComponentCodeEnum null_ = _$notificationsCreateTopicCodesErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const NotificationsCreateTopicCodesErrorComponentCodeEnum required_ = _$notificationsCreateTopicCodesErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateTopicCodesErrorComponentCodeEnum unknownDefaultOpenApi = _$notificationsCreateTopicCodesErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateTopicCodesErrorComponentCodeEnum> get serializer => _$notificationsCreateTopicCodesErrorComponentCodeEnumSerializer;
 

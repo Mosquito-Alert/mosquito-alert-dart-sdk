@@ -9,14 +9,20 @@ part of 'observations_list_mine_user_uuid_error_component.dart';
 const ObservationsListMineUserUuidErrorComponentAttrEnum
     _$observationsListMineUserUuidErrorComponentAttrEnum_userUuid =
     const ObservationsListMineUserUuidErrorComponentAttrEnum._('userUuid');
+const ObservationsListMineUserUuidErrorComponentAttrEnum
+    _$observationsListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsListMineUserUuidErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineUserUuidErrorComponentAttrEnum
     _$observationsListMineUserUuidErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'userUuid':
       return _$observationsListMineUserUuidErrorComponentAttrEnum_userUuid;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<ObservationsListMineUserUuidErrorComponentAttrEnum>
     _$observationsListMineUserUuidErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsListMineUserUuidErrorComponentAttrEnum>(const <ObservationsListMineUserUuidErrorComponentAttrEnum>[
   _$observationsListMineUserUuidErrorComponentAttrEnum_userUuid,
+  _$observationsListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListMineUserUuidErrorComponentCodeEnum
@@ -33,6 +40,10 @@ const ObservationsListMineUserUuidErrorComponentCodeEnum
     _$observationsListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed =
     const ObservationsListMineUserUuidErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const ObservationsListMineUserUuidErrorComponentCodeEnum
+    _$observationsListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsListMineUserUuidErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineUserUuidErrorComponentCodeEnum
     _$observationsListMineUserUuidErrorComponentCodeEnumValueOf(String name) {
@@ -41,8 +52,10 @@ ObservationsListMineUserUuidErrorComponentCodeEnum
       return _$observationsListMineUserUuidErrorComponentCodeEnum_invalid;
     case 'nullCharactersNotAllowed':
       return _$observationsListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -51,6 +64,7 @@ final BuiltSet<ObservationsListMineUserUuidErrorComponentCodeEnum>
         ObservationsListMineUserUuidErrorComponentCodeEnum>(const <ObservationsListMineUserUuidErrorComponentCodeEnum>[
   _$observationsListMineUserUuidErrorComponentCodeEnum_invalid,
   _$observationsListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$observationsListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsListMineUserUuidErrorComponentAttrEnum>
@@ -66,9 +80,11 @@ class _$ObservationsListMineUserUuidErrorComponentAttrEnumSerializer
             ObservationsListMineUserUuidErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'userUuid': 'user_uuid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user_uuid': 'userUuid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -99,10 +115,12 @@ class _$ObservationsListMineUserUuidErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

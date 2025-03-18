@@ -130,6 +130,8 @@ class UsersPartialUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'locale')
   static const UsersPartialUpdateErrorAttrEnum locale = _$usersPartialUpdateErrorAttrEnum_locale;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const UsersPartialUpdateErrorAttrEnum unknownDefaultOpenApi = _$usersPartialUpdateErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<UsersPartialUpdateErrorAttrEnum> get serializer => _$usersPartialUpdateErrorAttrEnumSerializer;
 
@@ -145,6 +147,8 @@ class UsersPartialUpdateErrorCodeEnum extends EnumClass {
   static const UsersPartialUpdateErrorCodeEnum invalidChoice = _$usersPartialUpdateErrorCodeEnum_invalidChoice;
   @BuiltValueEnumConst(wireName: r'null')
   static const UsersPartialUpdateErrorCodeEnum null_ = _$usersPartialUpdateErrorCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const UsersPartialUpdateErrorCodeEnum unknownDefaultOpenApi = _$usersPartialUpdateErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<UsersPartialUpdateErrorCodeEnum> get serializer => _$usersPartialUpdateErrorCodeEnumSerializer;
 

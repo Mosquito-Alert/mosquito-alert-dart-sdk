@@ -8,14 +8,19 @@ part of 'breedingsites_list_error.dart';
 
 const BreedingsitesListErrorAttrEnum _$breedingsitesListErrorAttrEnum_orderBy =
     const BreedingsitesListErrorAttrEnum._('orderBy');
+const BreedingsitesListErrorAttrEnum
+    _$breedingsitesListErrorAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesListErrorAttrEnum._('unknownDefaultOpenApi');
 
 BreedingsitesListErrorAttrEnum _$breedingsitesListErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'orderBy':
       return _$breedingsitesListErrorAttrEnum_orderBy;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -23,19 +28,25 @@ final BuiltSet<BreedingsitesListErrorAttrEnum>
     _$breedingsitesListErrorAttrEnumValues = new BuiltSet<
         BreedingsitesListErrorAttrEnum>(const <BreedingsitesListErrorAttrEnum>[
   _$breedingsitesListErrorAttrEnum_orderBy,
+  _$breedingsitesListErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesListErrorCodeEnum
     _$breedingsitesListErrorCodeEnum_invalidChoice =
     const BreedingsitesListErrorCodeEnum._('invalidChoice');
+const BreedingsitesListErrorCodeEnum
+    _$breedingsitesListErrorCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesListErrorCodeEnum._('unknownDefaultOpenApi');
 
 BreedingsitesListErrorCodeEnum _$breedingsitesListErrorCodeEnumValueOf(
     String name) {
   switch (name) {
     case 'invalidChoice':
       return _$breedingsitesListErrorCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -43,6 +54,7 @@ final BuiltSet<BreedingsitesListErrorCodeEnum>
     _$breedingsitesListErrorCodeEnumValues = new BuiltSet<
         BreedingsitesListErrorCodeEnum>(const <BreedingsitesListErrorCodeEnum>[
   _$breedingsitesListErrorCodeEnum_invalidChoice,
+  _$breedingsitesListErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesListErrorAttrEnum>
@@ -56,9 +68,11 @@ class _$BreedingsitesListErrorAttrEnumSerializer
     implements PrimitiveSerializer<BreedingsitesListErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'orderBy': 'order_by',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'order_by': 'orderBy',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -84,9 +98,11 @@ class _$BreedingsitesListErrorCodeEnumSerializer
     implements PrimitiveSerializer<BreedingsitesListErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

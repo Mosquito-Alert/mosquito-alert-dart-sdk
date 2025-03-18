@@ -146,6 +146,8 @@ class UserNotificationCreateRequestReceiverTypeEnum extends EnumClass {
   static const UserNotificationCreateRequestReceiverTypeEnum user = _$userNotificationCreateRequestReceiverTypeEnum_user;
   @BuiltValueEnumConst(wireName: r'topic')
   static const UserNotificationCreateRequestReceiverTypeEnum topic = _$userNotificationCreateRequestReceiverTypeEnum_topic;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const UserNotificationCreateRequestReceiverTypeEnum unknownDefaultOpenApi = _$userNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<UserNotificationCreateRequestReceiverTypeEnum> get serializer => _$userNotificationCreateRequestReceiverTypeEnumSerializer;
 

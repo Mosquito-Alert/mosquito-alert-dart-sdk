@@ -10,14 +10,20 @@ const BitesCreateLocationPointErrorComponentAttrEnum
     _$bitesCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint =
     const BitesCreateLocationPointErrorComponentAttrEnum._(
         'locationPeriodPoint');
+const BitesCreateLocationPointErrorComponentAttrEnum
+    _$bitesCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateLocationPointErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateLocationPointErrorComponentAttrEnum
     _$bitesCreateLocationPointErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'locationPeriodPoint':
       return _$bitesCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<BitesCreateLocationPointErrorComponentAttrEnum>
     _$bitesCreateLocationPointErrorComponentAttrEnumValues = new BuiltSet<
         BitesCreateLocationPointErrorComponentAttrEnum>(const <BitesCreateLocationPointErrorComponentAttrEnum>[
   _$bitesCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint,
+  _$bitesCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateLocationPointErrorComponentCodeEnum
@@ -33,6 +40,10 @@ const BitesCreateLocationPointErrorComponentCodeEnum
 const BitesCreateLocationPointErrorComponentCodeEnum
     _$bitesCreateLocationPointErrorComponentCodeEnum_required_ =
     const BitesCreateLocationPointErrorComponentCodeEnum._('required_');
+const BitesCreateLocationPointErrorComponentCodeEnum
+    _$bitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateLocationPointErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateLocationPointErrorComponentCodeEnum
     _$bitesCreateLocationPointErrorComponentCodeEnumValueOf(String name) {
@@ -41,8 +52,10 @@ BitesCreateLocationPointErrorComponentCodeEnum
       return _$bitesCreateLocationPointErrorComponentCodeEnum_invalid;
     case 'required_':
       return _$bitesCreateLocationPointErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -51,6 +64,7 @@ final BuiltSet<BitesCreateLocationPointErrorComponentCodeEnum>
         BitesCreateLocationPointErrorComponentCodeEnum>(const <BitesCreateLocationPointErrorComponentCodeEnum>[
   _$bitesCreateLocationPointErrorComponentCodeEnum_invalid,
   _$bitesCreateLocationPointErrorComponentCodeEnum_required_,
+  _$bitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateLocationPointErrorComponentAttrEnum>
@@ -65,9 +79,11 @@ class _$BitesCreateLocationPointErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesCreateLocationPointErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationPeriodPoint': 'location.point',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location.point': 'locationPeriodPoint',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -97,10 +113,12 @@ class _$BitesCreateLocationPointErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

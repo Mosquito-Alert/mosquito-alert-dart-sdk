@@ -9,14 +9,19 @@ part of 'breedingsites_create_validation_error.dart';
 const BreedingsitesCreateValidationErrorTypeEnum
     _$breedingsitesCreateValidationErrorTypeEnum_validationError =
     const BreedingsitesCreateValidationErrorTypeEnum._('validationError');
+const BreedingsitesCreateValidationErrorTypeEnum
+    _$breedingsitesCreateValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 BreedingsitesCreateValidationErrorTypeEnum
     _$breedingsitesCreateValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$breedingsitesCreateValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<BreedingsitesCreateValidationErrorTypeEnum>
     _$breedingsitesCreateValidationErrorTypeEnumValues = new BuiltSet<
         BreedingsitesCreateValidationErrorTypeEnum>(const <BreedingsitesCreateValidationErrorTypeEnum>[
   _$breedingsitesCreateValidationErrorTypeEnum_validationError,
+  _$breedingsitesCreateValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$BreedingsitesCreateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<BreedingsitesCreateValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

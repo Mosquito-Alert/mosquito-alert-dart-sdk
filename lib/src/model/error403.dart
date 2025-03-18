@@ -143,6 +143,8 @@ class Error403CodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'permission_denied')
   static const Error403CodeEnum permissionDenied = _$error403CodeEnum_permissionDenied;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const Error403CodeEnum unknownDefaultOpenApi = _$error403CodeEnum_unknownDefaultOpenApi;
 
   static Serializer<Error403CodeEnum> get serializer => _$error403CodeEnumSerializer;
 

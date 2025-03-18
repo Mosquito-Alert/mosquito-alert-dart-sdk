@@ -9,14 +9,19 @@ part of 'notifications_partial_update_error.dart';
 const NotificationsPartialUpdateErrorAttrEnum
     _$notificationsPartialUpdateErrorAttrEnum_isRead =
     const NotificationsPartialUpdateErrorAttrEnum._('isRead');
+const NotificationsPartialUpdateErrorAttrEnum
+    _$notificationsPartialUpdateErrorAttrEnum_unknownDefaultOpenApi =
+    const NotificationsPartialUpdateErrorAttrEnum._('unknownDefaultOpenApi');
 
 NotificationsPartialUpdateErrorAttrEnum
     _$notificationsPartialUpdateErrorAttrEnumValueOf(String name) {
   switch (name) {
     case 'isRead':
       return _$notificationsPartialUpdateErrorAttrEnum_isRead;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsPartialUpdateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsPartialUpdateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<NotificationsPartialUpdateErrorAttrEnum>
     _$notificationsPartialUpdateErrorAttrEnumValues = new BuiltSet<
         NotificationsPartialUpdateErrorAttrEnum>(const <NotificationsPartialUpdateErrorAttrEnum>[
   _$notificationsPartialUpdateErrorAttrEnum_isRead,
+  _$notificationsPartialUpdateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsPartialUpdateErrorCodeEnum
@@ -32,6 +38,9 @@ const NotificationsPartialUpdateErrorCodeEnum
 const NotificationsPartialUpdateErrorCodeEnum
     _$notificationsPartialUpdateErrorCodeEnum_required_ =
     const NotificationsPartialUpdateErrorCodeEnum._('required_');
+const NotificationsPartialUpdateErrorCodeEnum
+    _$notificationsPartialUpdateErrorCodeEnum_unknownDefaultOpenApi =
+    const NotificationsPartialUpdateErrorCodeEnum._('unknownDefaultOpenApi');
 
 NotificationsPartialUpdateErrorCodeEnum
     _$notificationsPartialUpdateErrorCodeEnumValueOf(String name) {
@@ -40,8 +49,10 @@ NotificationsPartialUpdateErrorCodeEnum
       return _$notificationsPartialUpdateErrorCodeEnum_null_;
     case 'required_':
       return _$notificationsPartialUpdateErrorCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsPartialUpdateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsPartialUpdateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +61,7 @@ final BuiltSet<NotificationsPartialUpdateErrorCodeEnum>
         NotificationsPartialUpdateErrorCodeEnum>(const <NotificationsPartialUpdateErrorCodeEnum>[
   _$notificationsPartialUpdateErrorCodeEnum_null_,
   _$notificationsPartialUpdateErrorCodeEnum_required_,
+  _$notificationsPartialUpdateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsPartialUpdateErrorAttrEnum>
@@ -63,9 +75,11 @@ class _$NotificationsPartialUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<NotificationsPartialUpdateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'isRead': 'is_read',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'is_read': 'isRead',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -94,10 +108,12 @@ class _$NotificationsPartialUpdateErrorCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

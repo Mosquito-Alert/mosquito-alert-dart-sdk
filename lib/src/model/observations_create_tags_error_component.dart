@@ -143,6 +143,8 @@ class ObservationsCreateTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')
   static const ObservationsCreateTagsErrorComponentAttrEnum tags = _$observationsCreateTagsErrorComponentAttrEnum_tags;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateTagsErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateTagsErrorComponentAttrEnum> get serializer => _$observationsCreateTagsErrorComponentAttrEnumSerializer;
 
@@ -162,6 +164,8 @@ class ObservationsCreateTagsErrorComponentCodeEnum extends EnumClass {
   static const ObservationsCreateTagsErrorComponentCodeEnum notAStr = _$observationsCreateTagsErrorComponentCodeEnum_notAStr;
   @BuiltValueEnumConst(wireName: r'null')
   static const ObservationsCreateTagsErrorComponentCodeEnum null_ = _$observationsCreateTagsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateTagsErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateTagsErrorComponentCodeEnum> get serializer => _$observationsCreateTagsErrorComponentCodeEnumSerializer;
 

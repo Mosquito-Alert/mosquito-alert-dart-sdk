@@ -143,6 +143,8 @@ class AuthVerifyTokenTokenErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'token')
   static const AuthVerifyTokenTokenErrorComponentAttrEnum token = _$authVerifyTokenTokenErrorComponentAttrEnum_token;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthVerifyTokenTokenErrorComponentAttrEnum unknownDefaultOpenApi = _$authVerifyTokenTokenErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthVerifyTokenTokenErrorComponentAttrEnum> get serializer => _$authVerifyTokenTokenErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class AuthVerifyTokenTokenErrorComponentCodeEnum extends EnumClass {
   static const AuthVerifyTokenTokenErrorComponentCodeEnum required_ = _$authVerifyTokenTokenErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const AuthVerifyTokenTokenErrorComponentCodeEnum surrogateCharactersNotAllowed = _$authVerifyTokenTokenErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthVerifyTokenTokenErrorComponentCodeEnum unknownDefaultOpenApi = _$authVerifyTokenTokenErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthVerifyTokenTokenErrorComponentCodeEnum> get serializer => _$authVerifyTokenTokenErrorComponentCodeEnumSerializer;
 

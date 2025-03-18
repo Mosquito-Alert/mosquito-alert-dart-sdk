@@ -9,14 +9,19 @@ part of 'users_update_locale_error_component.dart';
 const UsersUpdateLocaleErrorComponentAttrEnum
     _$usersUpdateLocaleErrorComponentAttrEnum_locale =
     const UsersUpdateLocaleErrorComponentAttrEnum._('locale');
+const UsersUpdateLocaleErrorComponentAttrEnum
+    _$usersUpdateLocaleErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const UsersUpdateLocaleErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 UsersUpdateLocaleErrorComponentAttrEnum
     _$usersUpdateLocaleErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'locale':
       return _$usersUpdateLocaleErrorComponentAttrEnum_locale;
+    case 'unknownDefaultOpenApi':
+      return _$usersUpdateLocaleErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$usersUpdateLocaleErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<UsersUpdateLocaleErrorComponentAttrEnum>
     _$usersUpdateLocaleErrorComponentAttrEnumValues = new BuiltSet<
         UsersUpdateLocaleErrorComponentAttrEnum>(const <UsersUpdateLocaleErrorComponentAttrEnum>[
   _$usersUpdateLocaleErrorComponentAttrEnum_locale,
+  _$usersUpdateLocaleErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const UsersUpdateLocaleErrorComponentCodeEnum
@@ -32,6 +38,9 @@ const UsersUpdateLocaleErrorComponentCodeEnum
 const UsersUpdateLocaleErrorComponentCodeEnum
     _$usersUpdateLocaleErrorComponentCodeEnum_null_ =
     const UsersUpdateLocaleErrorComponentCodeEnum._('null_');
+const UsersUpdateLocaleErrorComponentCodeEnum
+    _$usersUpdateLocaleErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const UsersUpdateLocaleErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 UsersUpdateLocaleErrorComponentCodeEnum
     _$usersUpdateLocaleErrorComponentCodeEnumValueOf(String name) {
@@ -40,8 +49,10 @@ UsersUpdateLocaleErrorComponentCodeEnum
       return _$usersUpdateLocaleErrorComponentCodeEnum_invalidChoice;
     case 'null_':
       return _$usersUpdateLocaleErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$usersUpdateLocaleErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$usersUpdateLocaleErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +61,7 @@ final BuiltSet<UsersUpdateLocaleErrorComponentCodeEnum>
         UsersUpdateLocaleErrorComponentCodeEnum>(const <UsersUpdateLocaleErrorComponentCodeEnum>[
   _$usersUpdateLocaleErrorComponentCodeEnum_invalidChoice,
   _$usersUpdateLocaleErrorComponentCodeEnum_null_,
+  _$usersUpdateLocaleErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<UsersUpdateLocaleErrorComponentAttrEnum>
@@ -63,9 +75,11 @@ class _$UsersUpdateLocaleErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<UsersUpdateLocaleErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locale': 'locale',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'locale': 'locale',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -94,10 +108,12 @@ class _$UsersUpdateLocaleErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -9,14 +9,20 @@ part of 'bites_list_mine_received_at_error_component.dart';
 const BitesListMineReceivedAtErrorComponentAttrEnum
     _$bitesListMineReceivedAtErrorComponentAttrEnum_receivedAt =
     const BitesListMineReceivedAtErrorComponentAttrEnum._('receivedAt');
+const BitesListMineReceivedAtErrorComponentAttrEnum
+    _$bitesListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesListMineReceivedAtErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListMineReceivedAtErrorComponentAttrEnum
     _$bitesListMineReceivedAtErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'receivedAt':
       return _$bitesListMineReceivedAtErrorComponentAttrEnum_receivedAt;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<BitesListMineReceivedAtErrorComponentAttrEnum>
     _$bitesListMineReceivedAtErrorComponentAttrEnumValues = new BuiltSet<
         BitesListMineReceivedAtErrorComponentAttrEnum>(const <BitesListMineReceivedAtErrorComponentAttrEnum>[
   _$bitesListMineReceivedAtErrorComponentAttrEnum_receivedAt,
+  _$bitesListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesListMineReceivedAtErrorComponentCodeEnum
     _$bitesListMineReceivedAtErrorComponentCodeEnum_invalid =
     const BitesListMineReceivedAtErrorComponentCodeEnum._('invalid');
+const BitesListMineReceivedAtErrorComponentCodeEnum
+    _$bitesListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesListMineReceivedAtErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListMineReceivedAtErrorComponentCodeEnum
     _$bitesListMineReceivedAtErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalid':
       return _$bitesListMineReceivedAtErrorComponentCodeEnum_invalid;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<BitesListMineReceivedAtErrorComponentCodeEnum>
     _$bitesListMineReceivedAtErrorComponentCodeEnumValues = new BuiltSet<
         BitesListMineReceivedAtErrorComponentCodeEnum>(const <BitesListMineReceivedAtErrorComponentCodeEnum>[
   _$bitesListMineReceivedAtErrorComponentCodeEnum_invalid,
+  _$bitesListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListMineReceivedAtErrorComponentAttrEnum>
@@ -58,9 +72,11 @@ class _$BitesListMineReceivedAtErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesListMineReceivedAtErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'receivedAt': 'received_at',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'received_at': 'receivedAt',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -89,9 +105,11 @@ class _$BitesListMineReceivedAtErrorComponentCodeEnumSerializer
         PrimitiveSerializer<BitesListMineReceivedAtErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

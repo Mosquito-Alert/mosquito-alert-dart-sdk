@@ -10,6 +10,10 @@ const NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum
     _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnum_topicCodesPeriodINDEX =
     const NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum._(
         'topicCodesPeriodINDEX');
+const NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum
+    _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum
     _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum
   switch (name) {
     case 'topicCodesPeriodINDEX':
       return _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnum_topicCodesPeriodINDEX;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum>
     new BuiltSet<
         NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum>(const <NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum>[
   _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnum_topicCodesPeriodINDEX,
+  _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum
@@ -50,6 +57,10 @@ const NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum
     _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum
+    _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum
     _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnumValueOf(
@@ -67,8 +78,10 @@ NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum
       return _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -82,6 +95,7 @@ final BuiltSet<NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum>
   _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_required_,
   _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum>
@@ -97,9 +111,11 @@ class _$NotificationsCreateTopicCodesINDEXErrorComponentAttrEnumSerializer
             NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'topicCodesPeriodINDEX': 'topic_codes.INDEX',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'topic_codes.INDEX': 'topicCodesPeriodINDEX',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -135,6 +151,7 @@ class _$NotificationsCreateTopicCodesINDEXErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -143,6 +160,7 @@ class _$NotificationsCreateTopicCodesINDEXErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -143,6 +143,8 @@ class FixesCreatePointLongitudeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'point.longitude')
   static const FixesCreatePointLongitudeErrorComponentAttrEnum pointPeriodLongitude = _$fixesCreatePointLongitudeErrorComponentAttrEnum_pointPeriodLongitude;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const FixesCreatePointLongitudeErrorComponentAttrEnum unknownDefaultOpenApi = _$fixesCreatePointLongitudeErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<FixesCreatePointLongitudeErrorComponentAttrEnum> get serializer => _$fixesCreatePointLongitudeErrorComponentAttrEnumSerializer;
 
@@ -162,6 +164,8 @@ class FixesCreatePointLongitudeErrorComponentCodeEnum extends EnumClass {
   static const FixesCreatePointLongitudeErrorComponentCodeEnum null_ = _$fixesCreatePointLongitudeErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const FixesCreatePointLongitudeErrorComponentCodeEnum required_ = _$fixesCreatePointLongitudeErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const FixesCreatePointLongitudeErrorComponentCodeEnum unknownDefaultOpenApi = _$fixesCreatePointLongitudeErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<FixesCreatePointLongitudeErrorComponentCodeEnum> get serializer => _$fixesCreatePointLongitudeErrorComponentCodeEnumSerializer;
 

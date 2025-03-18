@@ -10,6 +10,10 @@ const DevicesCreateMobileAppPackageNameErrorComponentAttrEnum
     _$devicesCreateMobileAppPackageNameErrorComponentAttrEnum_mobileAppPeriodPackageName =
     const DevicesCreateMobileAppPackageNameErrorComponentAttrEnum._(
         'mobileAppPeriodPackageName');
+const DevicesCreateMobileAppPackageNameErrorComponentAttrEnum
+    _$devicesCreateMobileAppPackageNameErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesCreateMobileAppPackageNameErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesCreateMobileAppPackageNameErrorComponentAttrEnum
     _$devicesCreateMobileAppPackageNameErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ DevicesCreateMobileAppPackageNameErrorComponentAttrEnum
   switch (name) {
     case 'mobileAppPeriodPackageName':
       return _$devicesCreateMobileAppPackageNameErrorComponentAttrEnum_mobileAppPeriodPackageName;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateMobileAppPackageNameErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateMobileAppPackageNameErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<DevicesCreateMobileAppPackageNameErrorComponentAttrEnum>
     new BuiltSet<
         DevicesCreateMobileAppPackageNameErrorComponentAttrEnum>(const <DevicesCreateMobileAppPackageNameErrorComponentAttrEnum>[
   _$devicesCreateMobileAppPackageNameErrorComponentAttrEnum_mobileAppPeriodPackageName,
+  _$devicesCreateMobileAppPackageNameErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesCreateMobileAppPackageNameErrorComponentCodeEnum
@@ -54,6 +61,10 @@ const DevicesCreateMobileAppPackageNameErrorComponentCodeEnum
     _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesCreateMobileAppPackageNameErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesCreateMobileAppPackageNameErrorComponentCodeEnum
+    _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesCreateMobileAppPackageNameErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesCreateMobileAppPackageNameErrorComponentCodeEnum
     _$devicesCreateMobileAppPackageNameErrorComponentCodeEnumValueOf(
@@ -73,8 +84,10 @@ DevicesCreateMobileAppPackageNameErrorComponentCodeEnum
       return _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -89,6 +102,7 @@ final BuiltSet<DevicesCreateMobileAppPackageNameErrorComponentCodeEnum>
   _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_required_,
   _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesCreateMobileAppPackageNameErrorComponentAttrEnum>
@@ -104,9 +118,11 @@ class _$DevicesCreateMobileAppPackageNameErrorComponentAttrEnumSerializer
             DevicesCreateMobileAppPackageNameErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'mobileAppPeriodPackageName': 'mobile_app.package_name',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'mobile_app.package_name': 'mobileAppPeriodPackageName',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -143,6 +159,7 @@ class _$DevicesCreateMobileAppPackageNameErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -152,6 +169,7 @@ class _$DevicesCreateMobileAppPackageNameErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

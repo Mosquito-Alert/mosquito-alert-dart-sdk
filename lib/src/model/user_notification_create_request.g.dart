@@ -12,6 +12,10 @@ const UserNotificationCreateRequestReceiverTypeEnum
 const UserNotificationCreateRequestReceiverTypeEnum
     _$userNotificationCreateRequestReceiverTypeEnum_topic =
     const UserNotificationCreateRequestReceiverTypeEnum._('topic');
+const UserNotificationCreateRequestReceiverTypeEnum
+    _$userNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi =
+    const UserNotificationCreateRequestReceiverTypeEnum._(
+        'unknownDefaultOpenApi');
 
 UserNotificationCreateRequestReceiverTypeEnum
     _$userNotificationCreateRequestReceiverTypeEnumValueOf(String name) {
@@ -20,8 +24,10 @@ UserNotificationCreateRequestReceiverTypeEnum
       return _$userNotificationCreateRequestReceiverTypeEnum_user;
     case 'topic':
       return _$userNotificationCreateRequestReceiverTypeEnum_topic;
+    case 'unknownDefaultOpenApi':
+      return _$userNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$userNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -30,6 +36,7 @@ final BuiltSet<UserNotificationCreateRequestReceiverTypeEnum>
         UserNotificationCreateRequestReceiverTypeEnum>(const <UserNotificationCreateRequestReceiverTypeEnum>[
   _$userNotificationCreateRequestReceiverTypeEnum_user,
   _$userNotificationCreateRequestReceiverTypeEnum_topic,
+  _$userNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<UserNotificationCreateRequestReceiverTypeEnum>
@@ -42,10 +49,12 @@ class _$UserNotificationCreateRequestReceiverTypeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'user': 'user',
     'topic': 'topic',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user': 'user',
     'topic': 'topic',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

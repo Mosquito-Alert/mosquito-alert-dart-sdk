@@ -9,14 +9,19 @@ part of 'observations_create_validation_error.dart';
 const ObservationsCreateValidationErrorTypeEnum
     _$observationsCreateValidationErrorTypeEnum_validationError =
     const ObservationsCreateValidationErrorTypeEnum._('validationError');
+const ObservationsCreateValidationErrorTypeEnum
+    _$observationsCreateValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 ObservationsCreateValidationErrorTypeEnum
     _$observationsCreateValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$observationsCreateValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<ObservationsCreateValidationErrorTypeEnum>
     _$observationsCreateValidationErrorTypeEnumValues = new BuiltSet<
         ObservationsCreateValidationErrorTypeEnum>(const <ObservationsCreateValidationErrorTypeEnum>[
   _$observationsCreateValidationErrorTypeEnum_validationError,
+  _$observationsCreateValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$ObservationsCreateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<ObservationsCreateValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

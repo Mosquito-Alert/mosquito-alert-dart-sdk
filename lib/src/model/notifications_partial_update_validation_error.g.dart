@@ -10,14 +10,20 @@ const NotificationsPartialUpdateValidationErrorTypeEnum
     _$notificationsPartialUpdateValidationErrorTypeEnum_validationError =
     const NotificationsPartialUpdateValidationErrorTypeEnum._(
         'validationError');
+const NotificationsPartialUpdateValidationErrorTypeEnum
+    _$notificationsPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const NotificationsPartialUpdateValidationErrorTypeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsPartialUpdateValidationErrorTypeEnum
     _$notificationsPartialUpdateValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$notificationsPartialUpdateValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<NotificationsPartialUpdateValidationErrorTypeEnum>
     _$notificationsPartialUpdateValidationErrorTypeEnumValues = new BuiltSet<
         NotificationsPartialUpdateValidationErrorTypeEnum>(const <NotificationsPartialUpdateValidationErrorTypeEnum>[
   _$notificationsPartialUpdateValidationErrorTypeEnum_validationError,
+  _$notificationsPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsPartialUpdateValidationErrorTypeEnum>
@@ -36,9 +43,11 @@ class _$NotificationsPartialUpdateValidationErrorTypeEnumSerializer
         PrimitiveSerializer<NotificationsPartialUpdateValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

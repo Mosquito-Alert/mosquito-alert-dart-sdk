@@ -143,6 +143,8 @@ class BreedingsitesListMineShortIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short_id')
   static const BreedingsitesListMineShortIdErrorComponentAttrEnum shortId = _$breedingsitesListMineShortIdErrorComponentAttrEnum_shortId;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListMineShortIdErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListMineShortIdErrorComponentAttrEnum> get serializer => _$breedingsitesListMineShortIdErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BreedingsitesListMineShortIdErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const BreedingsitesListMineShortIdErrorComponentCodeEnum nullCharactersNotAllowed = _$breedingsitesListMineShortIdErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListMineShortIdErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListMineShortIdErrorComponentCodeEnum> get serializer => _$breedingsitesListMineShortIdErrorComponentCodeEnumSerializer;
 

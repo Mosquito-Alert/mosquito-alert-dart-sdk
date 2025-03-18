@@ -143,6 +143,8 @@ class Error404CodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'not_found')
   static const Error404CodeEnum notFound = _$error404CodeEnum_notFound;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const Error404CodeEnum unknownDefaultOpenApi = _$error404CodeEnum_unknownDefaultOpenApi;
 
   static Serializer<Error404CodeEnum> get serializer => _$error404CodeEnumSerializer;
 

@@ -143,6 +143,8 @@ class DevicesCreateOsLocaleErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'os.locale')
   static const DevicesCreateOsLocaleErrorComponentAttrEnum osPeriodLocale = _$devicesCreateOsLocaleErrorComponentAttrEnum_osPeriodLocale;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateOsLocaleErrorComponentAttrEnum unknownDefaultOpenApi = _$devicesCreateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateOsLocaleErrorComponentAttrEnum> get serializer => _$devicesCreateOsLocaleErrorComponentAttrEnumSerializer;
 
@@ -162,6 +164,8 @@ class DevicesCreateOsLocaleErrorComponentCodeEnum extends EnumClass {
   static const DevicesCreateOsLocaleErrorComponentCodeEnum nullCharactersNotAllowed = _$devicesCreateOsLocaleErrorComponentCodeEnum_nullCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const DevicesCreateOsLocaleErrorComponentCodeEnum surrogateCharactersNotAllowed = _$devicesCreateOsLocaleErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateOsLocaleErrorComponentCodeEnum unknownDefaultOpenApi = _$devicesCreateOsLocaleErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateOsLocaleErrorComponentCodeEnum> get serializer => _$devicesCreateOsLocaleErrorComponentCodeEnumSerializer;
 

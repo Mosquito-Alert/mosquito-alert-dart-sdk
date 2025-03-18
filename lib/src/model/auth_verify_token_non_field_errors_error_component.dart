@@ -143,6 +143,8 @@ class AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')
   static const AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum nonFieldErrors = _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum> get serializer => _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum extends EnumClass {
   static const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum invalid = _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum null_ = _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum> get serializer => _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnumSerializer;
 

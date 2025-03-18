@@ -143,6 +143,8 @@ class ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum extends 
 
   @BuiltValueEnumConst(wireName: r'photos.INDEX.non_field_errors')
   static const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum photosPeriodINDEXPeriodNonFieldErrors = _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_photosPeriodINDEXPeriodNonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum> get serializer => _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum extends 
   static const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum null_ = _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum required_ = _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum> get serializer => _$observationsCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnumSerializer;
 

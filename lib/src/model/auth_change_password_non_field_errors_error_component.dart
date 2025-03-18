@@ -143,6 +143,8 @@ class AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')
   static const AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum nonFieldErrors = _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum> get serializer => _$authChangePasswordNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum extends EnumClass {
   static const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum invalid = _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum null_ = _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum> get serializer => _$authChangePasswordNonFieldErrorsErrorComponentCodeEnumSerializer;
 

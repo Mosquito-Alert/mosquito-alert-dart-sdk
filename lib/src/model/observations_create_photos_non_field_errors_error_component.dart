@@ -143,6 +143,8 @@ class ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum extends EnumC
 
   @BuiltValueEnumConst(wireName: r'photos.non_field_errors')
   static const ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum photosPeriodNonFieldErrors = _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum_photosPeriodNonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum> get serializer => _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum extends EnumC
   static const ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum null_ = _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum required_ = _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum> get serializer => _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnumSerializer;
 

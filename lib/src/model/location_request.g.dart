@@ -12,6 +12,8 @@ const LocationRequestTypeEnum _$locationRequestTypeEnum_selected =
     const LocationRequestTypeEnum._('selected');
 const LocationRequestTypeEnum _$locationRequestTypeEnum_missing =
     const LocationRequestTypeEnum._('missing');
+const LocationRequestTypeEnum _$locationRequestTypeEnum_unknownDefaultOpenApi =
+    const LocationRequestTypeEnum._('unknownDefaultOpenApi');
 
 LocationRequestTypeEnum _$locationRequestTypeEnumValueOf(String name) {
   switch (name) {
@@ -21,8 +23,10 @@ LocationRequestTypeEnum _$locationRequestTypeEnumValueOf(String name) {
       return _$locationRequestTypeEnum_selected;
     case 'missing':
       return _$locationRequestTypeEnum_missing;
+    case 'unknownDefaultOpenApi':
+      return _$locationRequestTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$locationRequestTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -31,6 +35,7 @@ final BuiltSet<LocationRequestTypeEnum> _$locationRequestTypeEnumValues =
   _$locationRequestTypeEnum_current,
   _$locationRequestTypeEnum_selected,
   _$locationRequestTypeEnum_missing,
+  _$locationRequestTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<LocationRequestTypeEnum> _$locationRequestTypeEnumSerializer =
@@ -42,11 +47,13 @@ class _$LocationRequestTypeEnumSerializer
     'current': 'current',
     'selected': 'selected',
     'missing': 'missing',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'current': 'current',
     'selected': 'selected',
     'missing': 'missing',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

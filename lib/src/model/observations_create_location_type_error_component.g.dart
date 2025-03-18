@@ -10,14 +10,20 @@ const ObservationsCreateLocationTypeErrorComponentAttrEnum
     _$observationsCreateLocationTypeErrorComponentAttrEnum_locationPeriodType =
     const ObservationsCreateLocationTypeErrorComponentAttrEnum._(
         'locationPeriodType');
+const ObservationsCreateLocationTypeErrorComponentAttrEnum
+    _$observationsCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateLocationTypeErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateLocationTypeErrorComponentAttrEnum
     _$observationsCreateLocationTypeErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'locationPeriodType':
       return _$observationsCreateLocationTypeErrorComponentAttrEnum_locationPeriodType;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<ObservationsCreateLocationTypeErrorComponentAttrEnum>
     _$observationsCreateLocationTypeErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsCreateLocationTypeErrorComponentAttrEnum>(const <ObservationsCreateLocationTypeErrorComponentAttrEnum>[
   _$observationsCreateLocationTypeErrorComponentAttrEnum_locationPeriodType,
+  _$observationsCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateLocationTypeErrorComponentCodeEnum
@@ -37,6 +44,10 @@ const ObservationsCreateLocationTypeErrorComponentCodeEnum
 const ObservationsCreateLocationTypeErrorComponentCodeEnum
     _$observationsCreateLocationTypeErrorComponentCodeEnum_required_ =
     const ObservationsCreateLocationTypeErrorComponentCodeEnum._('required_');
+const ObservationsCreateLocationTypeErrorComponentCodeEnum
+    _$observationsCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateLocationTypeErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateLocationTypeErrorComponentCodeEnum
     _$observationsCreateLocationTypeErrorComponentCodeEnumValueOf(String name) {
@@ -47,8 +58,10 @@ ObservationsCreateLocationTypeErrorComponentCodeEnum
       return _$observationsCreateLocationTypeErrorComponentCodeEnum_null_;
     case 'required_':
       return _$observationsCreateLocationTypeErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -58,6 +71,7 @@ final BuiltSet<ObservationsCreateLocationTypeErrorComponentCodeEnum>
   _$observationsCreateLocationTypeErrorComponentCodeEnum_invalidChoice,
   _$observationsCreateLocationTypeErrorComponentCodeEnum_null_,
   _$observationsCreateLocationTypeErrorComponentCodeEnum_required_,
+  _$observationsCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateLocationTypeErrorComponentAttrEnum>
@@ -73,9 +87,11 @@ class _$ObservationsCreateLocationTypeErrorComponentAttrEnumSerializer
             ObservationsCreateLocationTypeErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationPeriodType': 'location.type',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location.type': 'locationPeriodType',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -108,11 +124,13 @@ class _$ObservationsCreateLocationTypeErrorComponentCodeEnumSerializer
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

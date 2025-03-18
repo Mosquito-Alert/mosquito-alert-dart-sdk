@@ -10,14 +10,20 @@ const AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum
     _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors =
     const AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum._(
         'nonFieldErrors');
+const AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum
+    _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum
     _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'nonFieldErrors':
       return _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum>
     _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
         AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum>(const <AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum>[
   _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
+  _$authVerifyTokenNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum
@@ -33,6 +40,10 @@ const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum
 const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum
     _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_null_ =
     const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum._('null_');
+const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum
+    _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum
     _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnumValueOf(String name) {
@@ -41,8 +52,10 @@ AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum
       return _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -51,6 +64,7 @@ final BuiltSet<AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum>
         AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum>(const <AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnum>[
   _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$authVerifyTokenNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum>
@@ -66,9 +80,11 @@ class _$AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnumSerializer
             AuthVerifyTokenNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nonFieldErrors': 'non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'non_field_errors': 'nonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -99,10 +115,12 @@ class _$AuthVerifyTokenNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

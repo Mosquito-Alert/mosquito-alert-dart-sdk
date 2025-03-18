@@ -143,6 +143,8 @@ class BitesListMineLocationNuts2ErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location_nuts_2')
   static const BitesListMineLocationNuts2ErrorComponentAttrEnum locationNuts2 = _$bitesListMineLocationNuts2ErrorComponentAttrEnum_locationNuts2;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListMineLocationNuts2ErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesListMineLocationNuts2ErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListMineLocationNuts2ErrorComponentAttrEnum> get serializer => _$bitesListMineLocationNuts2ErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BitesListMineLocationNuts2ErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const BitesListMineLocationNuts2ErrorComponentCodeEnum nullCharactersNotAllowed = _$bitesListMineLocationNuts2ErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListMineLocationNuts2ErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesListMineLocationNuts2ErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListMineLocationNuts2ErrorComponentCodeEnum> get serializer => _$bitesListMineLocationNuts2ErrorComponentCodeEnumSerializer;
 

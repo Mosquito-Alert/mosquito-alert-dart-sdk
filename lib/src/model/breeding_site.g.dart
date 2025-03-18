@@ -22,6 +22,9 @@ const BreedingSiteSiteTypeEnum _$breedingSiteSiteTypeEnum_other =
     const BreedingSiteSiteTypeEnum._('other');
 const BreedingSiteSiteTypeEnum _$breedingSiteSiteTypeEnum_empty =
     const BreedingSiteSiteTypeEnum._('empty');
+const BreedingSiteSiteTypeEnum
+    _$breedingSiteSiteTypeEnum_unknownDefaultOpenApi =
+    const BreedingSiteSiteTypeEnum._('unknownDefaultOpenApi');
 
 BreedingSiteSiteTypeEnum _$breedingSiteSiteTypeEnumValueOf(String name) {
   switch (name) {
@@ -41,8 +44,10 @@ BreedingSiteSiteTypeEnum _$breedingSiteSiteTypeEnumValueOf(String name) {
       return _$breedingSiteSiteTypeEnum_other;
     case 'empty':
       return _$breedingSiteSiteTypeEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$breedingSiteSiteTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingSiteSiteTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -56,6 +61,7 @@ final BuiltSet<BreedingSiteSiteTypeEnum> _$breedingSiteSiteTypeEnumValues =
   _$breedingSiteSiteTypeEnum_well,
   _$breedingSiteSiteTypeEnum_other,
   _$breedingSiteSiteTypeEnum_empty,
+  _$breedingSiteSiteTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingSiteSiteTypeEnum> _$breedingSiteSiteTypeEnumSerializer =
@@ -72,6 +78,7 @@ class _$BreedingSiteSiteTypeEnumSerializer
     'well': 'well',
     'other': 'other',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'basin': 'basin',
@@ -82,6 +89,7 @@ class _$BreedingSiteSiteTypeEnumSerializer
     'well': 'well',
     'other': 'other',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

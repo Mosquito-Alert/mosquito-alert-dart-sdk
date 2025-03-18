@@ -9,14 +9,19 @@ part of 'fixes_create_sent_at_error_component.dart';
 const FixesCreateSentAtErrorComponentAttrEnum
     _$fixesCreateSentAtErrorComponentAttrEnum_sentAt =
     const FixesCreateSentAtErrorComponentAttrEnum._('sentAt');
+const FixesCreateSentAtErrorComponentAttrEnum
+    _$fixesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const FixesCreateSentAtErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 FixesCreateSentAtErrorComponentAttrEnum
     _$fixesCreateSentAtErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'sentAt':
       return _$fixesCreateSentAtErrorComponentAttrEnum_sentAt;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<FixesCreateSentAtErrorComponentAttrEnum>
     _$fixesCreateSentAtErrorComponentAttrEnumValues = new BuiltSet<
         FixesCreateSentAtErrorComponentAttrEnum>(const <FixesCreateSentAtErrorComponentAttrEnum>[
   _$fixesCreateSentAtErrorComponentAttrEnum_sentAt,
+  _$fixesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const FixesCreateSentAtErrorComponentCodeEnum
@@ -44,6 +50,9 @@ const FixesCreateSentAtErrorComponentCodeEnum
 const FixesCreateSentAtErrorComponentCodeEnum
     _$fixesCreateSentAtErrorComponentCodeEnum_required_ =
     const FixesCreateSentAtErrorComponentCodeEnum._('required_');
+const FixesCreateSentAtErrorComponentCodeEnum
+    _$fixesCreateSentAtErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const FixesCreateSentAtErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 FixesCreateSentAtErrorComponentCodeEnum
     _$fixesCreateSentAtErrorComponentCodeEnumValueOf(String name) {
@@ -60,8 +69,10 @@ FixesCreateSentAtErrorComponentCodeEnum
       return _$fixesCreateSentAtErrorComponentCodeEnum_overflow;
     case 'required_':
       return _$fixesCreateSentAtErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreateSentAtErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreateSentAtErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -74,6 +85,7 @@ final BuiltSet<FixesCreateSentAtErrorComponentCodeEnum>
   _$fixesCreateSentAtErrorComponentCodeEnum_null_,
   _$fixesCreateSentAtErrorComponentCodeEnum_overflow,
   _$fixesCreateSentAtErrorComponentCodeEnum_required_,
+  _$fixesCreateSentAtErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<FixesCreateSentAtErrorComponentAttrEnum>
@@ -87,9 +99,11 @@ class _$FixesCreateSentAtErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<FixesCreateSentAtErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'sentAt': 'sent_at',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'sent_at': 'sentAt',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -122,6 +136,7 @@ class _$FixesCreateSentAtErrorComponentCodeEnumSerializer
     'null_': 'null',
     'overflow': 'overflow',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'date': 'date',
@@ -130,6 +145,7 @@ class _$FixesCreateSentAtErrorComponentCodeEnumSerializer
     'null': 'null_',
     'overflow': 'overflow',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

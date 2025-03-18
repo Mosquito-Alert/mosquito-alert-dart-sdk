@@ -433,6 +433,9 @@ class BreedingSiteSiteTypeEnum extends EnumClass {
   /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'')
   static const BreedingSiteSiteTypeEnum empty = _$breedingSiteSiteTypeEnum_empty;
+  /// Breeding site type.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingSiteSiteTypeEnum unknownDefaultOpenApi = _$breedingSiteSiteTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingSiteSiteTypeEnum> get serializer => _$breedingSiteSiteTypeEnumSerializer;
 

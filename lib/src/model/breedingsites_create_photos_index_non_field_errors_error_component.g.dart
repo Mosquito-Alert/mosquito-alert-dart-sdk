@@ -10,6 +10,10 @@ const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum
     _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_photosPeriodINDEXPeriodNonFieldErrors =
     const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum._(
         'photosPeriodINDEXPeriodNonFieldErrors');
+const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum
+    _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum
     _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'photosPeriodINDEXPeriodNonFieldErrors':
       return _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_photosPeriodINDEXPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -28,6 +34,7 @@ final BuiltSet<
     new BuiltSet<
         BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum>(const <BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum>[
   _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_photosPeriodINDEXPeriodNonFieldErrors,
+  _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
@@ -42,6 +49,10 @@ const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
     _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_required_ =
     const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum._(
         'required_');
+const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
+    _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
     _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -53,8 +64,10 @@ BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum
       return _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -66,6 +79,7 @@ final BuiltSet<
   _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_null_,
   _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_required_,
+  _$breedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum>
@@ -81,9 +95,11 @@ class _$BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnumSerial
             BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'photosPeriodINDEXPeriodNonFieldErrors': 'photos.INDEX.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'photos.INDEX.non_field_errors': 'photosPeriodINDEXPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -119,11 +135,13 @@ class _$BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentCodeEnumSerial
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

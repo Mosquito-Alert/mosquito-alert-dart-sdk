@@ -143,6 +143,8 @@ class DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum extends EnumClass
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')
   static const DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum nonFieldErrors = _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum> get serializer => _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum extends EnumClass
   static const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum invalid = _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum null_ = _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum> get serializer => _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer;
 

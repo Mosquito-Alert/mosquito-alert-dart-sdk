@@ -9,14 +9,20 @@ part of 'devices_create_manufacturer_error_component.dart';
 const DevicesCreateManufacturerErrorComponentAttrEnum
     _$devicesCreateManufacturerErrorComponentAttrEnum_manufacturer =
     const DevicesCreateManufacturerErrorComponentAttrEnum._('manufacturer');
+const DevicesCreateManufacturerErrorComponentAttrEnum
+    _$devicesCreateManufacturerErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesCreateManufacturerErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesCreateManufacturerErrorComponentAttrEnum
     _$devicesCreateManufacturerErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'manufacturer':
       return _$devicesCreateManufacturerErrorComponentAttrEnum_manufacturer;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateManufacturerErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateManufacturerErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<DevicesCreateManufacturerErrorComponentAttrEnum>
     _$devicesCreateManufacturerErrorComponentAttrEnumValues = new BuiltSet<
         DevicesCreateManufacturerErrorComponentAttrEnum>(const <DevicesCreateManufacturerErrorComponentAttrEnum>[
   _$devicesCreateManufacturerErrorComponentAttrEnum_manufacturer,
+  _$devicesCreateManufacturerErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesCreateManufacturerErrorComponentCodeEnum
@@ -40,6 +47,10 @@ const DevicesCreateManufacturerErrorComponentCodeEnum
     _$devicesCreateManufacturerErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesCreateManufacturerErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesCreateManufacturerErrorComponentCodeEnum
+    _$devicesCreateManufacturerErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesCreateManufacturerErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesCreateManufacturerErrorComponentCodeEnum
     _$devicesCreateManufacturerErrorComponentCodeEnumValueOf(String name) {
@@ -52,8 +63,10 @@ DevicesCreateManufacturerErrorComponentCodeEnum
       return _$devicesCreateManufacturerErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$devicesCreateManufacturerErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateManufacturerErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateManufacturerErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -64,6 +77,7 @@ final BuiltSet<DevicesCreateManufacturerErrorComponentCodeEnum>
   _$devicesCreateManufacturerErrorComponentCodeEnum_maxLength,
   _$devicesCreateManufacturerErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesCreateManufacturerErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesCreateManufacturerErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesCreateManufacturerErrorComponentAttrEnum>
@@ -78,9 +92,11 @@ class _$DevicesCreateManufacturerErrorComponentAttrEnumSerializer
         PrimitiveSerializer<DevicesCreateManufacturerErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'manufacturer': 'manufacturer',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'manufacturer': 'manufacturer',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -112,12 +128,14 @@ class _$DevicesCreateManufacturerErrorComponentCodeEnumSerializer
     'maxLength': 'max_length',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_length': 'maxLength',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

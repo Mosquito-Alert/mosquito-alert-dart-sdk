@@ -9,14 +9,20 @@ part of 'breedingsites_create_has_water_error_component.dart';
 const BreedingsitesCreateHasWaterErrorComponentAttrEnum
     _$breedingsitesCreateHasWaterErrorComponentAttrEnum_hasWater =
     const BreedingsitesCreateHasWaterErrorComponentAttrEnum._('hasWater');
+const BreedingsitesCreateHasWaterErrorComponentAttrEnum
+    _$breedingsitesCreateHasWaterErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateHasWaterErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateHasWaterErrorComponentAttrEnum
     _$breedingsitesCreateHasWaterErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'hasWater':
       return _$breedingsitesCreateHasWaterErrorComponentAttrEnum_hasWater;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateHasWaterErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateHasWaterErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<BreedingsitesCreateHasWaterErrorComponentAttrEnum>
     _$breedingsitesCreateHasWaterErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesCreateHasWaterErrorComponentAttrEnum>(const <BreedingsitesCreateHasWaterErrorComponentAttrEnum>[
   _$breedingsitesCreateHasWaterErrorComponentAttrEnum_hasWater,
+  _$breedingsitesCreateHasWaterErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateHasWaterErrorComponentCodeEnum
     _$breedingsitesCreateHasWaterErrorComponentCodeEnum_invalid =
     const BreedingsitesCreateHasWaterErrorComponentCodeEnum._('invalid');
+const BreedingsitesCreateHasWaterErrorComponentCodeEnum
+    _$breedingsitesCreateHasWaterErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateHasWaterErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateHasWaterErrorComponentCodeEnum
     _$breedingsitesCreateHasWaterErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalid':
       return _$breedingsitesCreateHasWaterErrorComponentCodeEnum_invalid;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateHasWaterErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateHasWaterErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<BreedingsitesCreateHasWaterErrorComponentCodeEnum>
     _$breedingsitesCreateHasWaterErrorComponentCodeEnumValues = new BuiltSet<
         BreedingsitesCreateHasWaterErrorComponentCodeEnum>(const <BreedingsitesCreateHasWaterErrorComponentCodeEnum>[
   _$breedingsitesCreateHasWaterErrorComponentCodeEnum_invalid,
+  _$breedingsitesCreateHasWaterErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateHasWaterErrorComponentAttrEnum>
@@ -58,9 +72,11 @@ class _$BreedingsitesCreateHasWaterErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BreedingsitesCreateHasWaterErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'hasWater': 'has_water',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'has_water': 'hasWater',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -89,9 +105,11 @@ class _$BreedingsitesCreateHasWaterErrorComponentCodeEnumSerializer
         PrimitiveSerializer<BreedingsitesCreateHasWaterErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

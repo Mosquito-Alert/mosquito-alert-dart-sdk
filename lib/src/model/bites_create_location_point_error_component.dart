@@ -143,6 +143,8 @@ class BitesCreateLocationPointErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.point')
   static const BitesCreateLocationPointErrorComponentAttrEnum locationPeriodPoint = _$bitesCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateLocationPointErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateLocationPointErrorComponentAttrEnum> get serializer => _$bitesCreateLocationPointErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class BitesCreateLocationPointErrorComponentCodeEnum extends EnumClass {
   static const BitesCreateLocationPointErrorComponentCodeEnum invalid = _$bitesCreateLocationPointErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'required')
   static const BitesCreateLocationPointErrorComponentCodeEnum required_ = _$bitesCreateLocationPointErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateLocationPointErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateLocationPointErrorComponentCodeEnum> get serializer => _$bitesCreateLocationPointErrorComponentCodeEnumSerializer;
 

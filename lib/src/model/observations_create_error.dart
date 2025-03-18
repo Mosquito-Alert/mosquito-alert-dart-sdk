@@ -370,6 +370,8 @@ class ObservationsCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_perceived_mosquito_legs')
   static const ObservationsCreateErrorAttrEnum userPerceivedMosquitoLegs = _$observationsCreateErrorAttrEnum_userPerceivedMosquitoLegs;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateErrorAttrEnum unknownDefaultOpenApi = _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateErrorAttrEnum> get serializer => _$observationsCreateErrorAttrEnumSerializer;
 
@@ -383,6 +385,8 @@ class ObservationsCreateErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const ObservationsCreateErrorCodeEnum invalidChoice = _$observationsCreateErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateErrorCodeEnum unknownDefaultOpenApi = _$observationsCreateErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateErrorCodeEnum> get serializer => _$observationsCreateErrorCodeEnumSerializer;
 

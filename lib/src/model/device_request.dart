@@ -239,6 +239,8 @@ class DeviceRequestTypeEnum extends EnumClass {
   static const DeviceRequestTypeEnum android = _$deviceRequestTypeEnum_android;
   @BuiltValueEnumConst(wireName: r'web')
   static const DeviceRequestTypeEnum web = _$deviceRequestTypeEnum_web;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DeviceRequestTypeEnum unknownDefaultOpenApi = _$deviceRequestTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<DeviceRequestTypeEnum> get serializer => _$deviceRequestTypeEnumSerializer;
 

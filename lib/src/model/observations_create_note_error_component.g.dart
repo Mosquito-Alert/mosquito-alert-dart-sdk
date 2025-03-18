@@ -9,14 +9,20 @@ part of 'observations_create_note_error_component.dart';
 const ObservationsCreateNoteErrorComponentAttrEnum
     _$observationsCreateNoteErrorComponentAttrEnum_note =
     const ObservationsCreateNoteErrorComponentAttrEnum._('note');
+const ObservationsCreateNoteErrorComponentAttrEnum
+    _$observationsCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateNoteErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateNoteErrorComponentAttrEnum
     _$observationsCreateNoteErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'note':
       return _$observationsCreateNoteErrorComponentAttrEnum_note;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<ObservationsCreateNoteErrorComponentAttrEnum>
     _$observationsCreateNoteErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsCreateNoteErrorComponentAttrEnum>(const <ObservationsCreateNoteErrorComponentAttrEnum>[
   _$observationsCreateNoteErrorComponentAttrEnum_note,
+  _$observationsCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateNoteErrorComponentCodeEnum
@@ -37,6 +44,10 @@ const ObservationsCreateNoteErrorComponentCodeEnum
     _$observationsCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const ObservationsCreateNoteErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const ObservationsCreateNoteErrorComponentCodeEnum
+    _$observationsCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateNoteErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateNoteErrorComponentCodeEnum
     _$observationsCreateNoteErrorComponentCodeEnumValueOf(String name) {
@@ -47,8 +58,10 @@ ObservationsCreateNoteErrorComponentCodeEnum
       return _$observationsCreateNoteErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$observationsCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -58,6 +71,7 @@ final BuiltSet<ObservationsCreateNoteErrorComponentCodeEnum>
   _$observationsCreateNoteErrorComponentCodeEnum_invalid,
   _$observationsCreateNoteErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$observationsCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$observationsCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateNoteErrorComponentAttrEnum>
@@ -72,9 +86,11 @@ class _$ObservationsCreateNoteErrorComponentAttrEnumSerializer
         PrimitiveSerializer<ObservationsCreateNoteErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'note': 'note',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'note': 'note',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -105,11 +121,13 @@ class _$ObservationsCreateNoteErrorComponentCodeEnumSerializer
     'invalid': 'invalid',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

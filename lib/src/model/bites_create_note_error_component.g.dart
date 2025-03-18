@@ -9,14 +9,19 @@ part of 'bites_create_note_error_component.dart';
 const BitesCreateNoteErrorComponentAttrEnum
     _$bitesCreateNoteErrorComponentAttrEnum_note =
     const BitesCreateNoteErrorComponentAttrEnum._('note');
+const BitesCreateNoteErrorComponentAttrEnum
+    _$bitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateNoteErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 BitesCreateNoteErrorComponentAttrEnum
     _$bitesCreateNoteErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'note':
       return _$bitesCreateNoteErrorComponentAttrEnum_note;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<BitesCreateNoteErrorComponentAttrEnum>
     _$bitesCreateNoteErrorComponentAttrEnumValues = new BuiltSet<
         BitesCreateNoteErrorComponentAttrEnum>(const <BitesCreateNoteErrorComponentAttrEnum>[
   _$bitesCreateNoteErrorComponentAttrEnum_note,
+  _$bitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateNoteErrorComponentCodeEnum
@@ -36,6 +42,9 @@ const BitesCreateNoteErrorComponentCodeEnum
     _$bitesCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const BitesCreateNoteErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const BitesCreateNoteErrorComponentCodeEnum
+    _$bitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateNoteErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 BitesCreateNoteErrorComponentCodeEnum
     _$bitesCreateNoteErrorComponentCodeEnumValueOf(String name) {
@@ -46,8 +55,10 @@ BitesCreateNoteErrorComponentCodeEnum
       return _$bitesCreateNoteErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$bitesCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -57,6 +68,7 @@ final BuiltSet<BitesCreateNoteErrorComponentCodeEnum>
   _$bitesCreateNoteErrorComponentCodeEnum_invalid,
   _$bitesCreateNoteErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$bitesCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$bitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateNoteErrorComponentAttrEnum>
@@ -70,9 +82,11 @@ class _$BitesCreateNoteErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesCreateNoteErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'note': 'note',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'note': 'note',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -102,11 +116,13 @@ class _$BitesCreateNoteErrorComponentCodeEnumSerializer
     'invalid': 'invalid',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

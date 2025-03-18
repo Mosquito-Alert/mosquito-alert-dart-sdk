@@ -9,14 +9,19 @@ part of 'notifications_create_error.dart';
 const NotificationsCreateErrorAttrEnum
     _$notificationsCreateErrorAttrEnum_topicCodesPeriodINDEX =
     const NotificationsCreateErrorAttrEnum._('topicCodesPeriodINDEX');
+const NotificationsCreateErrorAttrEnum
+    _$notificationsCreateErrorAttrEnum_unknownDefaultOpenApi =
+    const NotificationsCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 NotificationsCreateErrorAttrEnum _$notificationsCreateErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'topicCodesPeriodINDEX':
       return _$notificationsCreateErrorAttrEnum_topicCodesPeriodINDEX;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<NotificationsCreateErrorAttrEnum>
     _$notificationsCreateErrorAttrEnumValues = new BuiltSet<
         NotificationsCreateErrorAttrEnum>(const <NotificationsCreateErrorAttrEnum>[
   _$notificationsCreateErrorAttrEnum_topicCodesPeriodINDEX,
+  _$notificationsCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsCreateErrorCodeEnum
@@ -44,6 +50,9 @@ const NotificationsCreateErrorCodeEnum
 const NotificationsCreateErrorCodeEnum
     _$notificationsCreateErrorCodeEnum_surrogateCharactersNotAllowed =
     const NotificationsCreateErrorCodeEnum._('surrogateCharactersNotAllowed');
+const NotificationsCreateErrorCodeEnum
+    _$notificationsCreateErrorCodeEnum_unknownDefaultOpenApi =
+    const NotificationsCreateErrorCodeEnum._('unknownDefaultOpenApi');
 
 NotificationsCreateErrorCodeEnum _$notificationsCreateErrorCodeEnumValueOf(
     String name) {
@@ -60,8 +69,10 @@ NotificationsCreateErrorCodeEnum _$notificationsCreateErrorCodeEnumValueOf(
       return _$notificationsCreateErrorCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$notificationsCreateErrorCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -74,6 +85,7 @@ final BuiltSet<NotificationsCreateErrorCodeEnum>
   _$notificationsCreateErrorCodeEnum_nullCharactersNotAllowed,
   _$notificationsCreateErrorCodeEnum_required_,
   _$notificationsCreateErrorCodeEnum_surrogateCharactersNotAllowed,
+  _$notificationsCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsCreateErrorAttrEnum>
@@ -87,9 +99,11 @@ class _$NotificationsCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<NotificationsCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'topicCodesPeriodINDEX': 'topic_codes.INDEX',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'topic_codes.INDEX': 'topicCodesPeriodINDEX',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -120,6 +134,7 @@ class _$NotificationsCreateErrorCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -128,6 +143,7 @@ class _$NotificationsCreateErrorCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

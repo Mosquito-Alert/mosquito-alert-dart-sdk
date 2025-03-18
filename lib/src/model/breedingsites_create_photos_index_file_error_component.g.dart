@@ -10,6 +10,10 @@ const BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum
     _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum_photosPeriodINDEXPeriodFile =
     const BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum._(
         'photosPeriodINDEXPeriodFile');
+const BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum
+    _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum
     _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum
   switch (name) {
     case 'photosPeriodINDEXPeriodFile':
       return _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum_photosPeriodINDEXPeriodFile;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum>
     new BuiltSet<
         BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum>(const <BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum>[
   _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum_photosPeriodINDEXPeriodFile,
+  _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum
@@ -49,6 +56,10 @@ const BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum
     _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_required_ =
     const BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum._(
         'required_');
+const BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum
+    _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum
     _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnumValueOf(
@@ -66,8 +77,10 @@ BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum
       return _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_null_;
     case 'required_':
       return _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -81,6 +94,7 @@ final BuiltSet<BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum>
   _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_noName,
   _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_null_,
   _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_required_,
+  _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum>
@@ -96,9 +110,11 @@ class _$BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnumSerializer
             BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'photosPeriodINDEXPeriodFile': 'photos.INDEX.file',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'photos.INDEX.file': 'photosPeriodINDEXPeriodFile',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -134,6 +150,7 @@ class _$BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnumSerializer
     'noName': 'no_name',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'empty': 'empty',
@@ -142,6 +159,7 @@ class _$BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnumSerializer
     'no_name': 'noName',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

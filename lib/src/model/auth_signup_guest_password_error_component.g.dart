@@ -9,14 +9,20 @@ part of 'auth_signup_guest_password_error_component.dart';
 const AuthSignupGuestPasswordErrorComponentAttrEnum
     _$authSignupGuestPasswordErrorComponentAttrEnum_password =
     const AuthSignupGuestPasswordErrorComponentAttrEnum._('password');
+const AuthSignupGuestPasswordErrorComponentAttrEnum
+    _$authSignupGuestPasswordErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const AuthSignupGuestPasswordErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 AuthSignupGuestPasswordErrorComponentAttrEnum
     _$authSignupGuestPasswordErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'password':
       return _$authSignupGuestPasswordErrorComponentAttrEnum_password;
+    case 'unknownDefaultOpenApi':
+      return _$authSignupGuestPasswordErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authSignupGuestPasswordErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<AuthSignupGuestPasswordErrorComponentAttrEnum>
     _$authSignupGuestPasswordErrorComponentAttrEnumValues = new BuiltSet<
         AuthSignupGuestPasswordErrorComponentAttrEnum>(const <AuthSignupGuestPasswordErrorComponentAttrEnum>[
   _$authSignupGuestPasswordErrorComponentAttrEnum_password,
+  _$authSignupGuestPasswordErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthSignupGuestPasswordErrorComponentCodeEnum
@@ -49,6 +56,10 @@ const AuthSignupGuestPasswordErrorComponentCodeEnum
     _$authSignupGuestPasswordErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const AuthSignupGuestPasswordErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const AuthSignupGuestPasswordErrorComponentCodeEnum
+    _$authSignupGuestPasswordErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const AuthSignupGuestPasswordErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 AuthSignupGuestPasswordErrorComponentCodeEnum
     _$authSignupGuestPasswordErrorComponentCodeEnumValueOf(String name) {
@@ -67,8 +78,10 @@ AuthSignupGuestPasswordErrorComponentCodeEnum
       return _$authSignupGuestPasswordErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$authSignupGuestPasswordErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$authSignupGuestPasswordErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authSignupGuestPasswordErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -82,6 +95,7 @@ final BuiltSet<AuthSignupGuestPasswordErrorComponentCodeEnum>
   _$authSignupGuestPasswordErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$authSignupGuestPasswordErrorComponentCodeEnum_required_,
   _$authSignupGuestPasswordErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$authSignupGuestPasswordErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthSignupGuestPasswordErrorComponentAttrEnum>
@@ -96,9 +110,11 @@ class _$AuthSignupGuestPasswordErrorComponentAttrEnumSerializer
         PrimitiveSerializer<AuthSignupGuestPasswordErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'password': 'password',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'password': 'password',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -133,6 +149,7 @@ class _$AuthSignupGuestPasswordErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -142,6 +159,7 @@ class _$AuthSignupGuestPasswordErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

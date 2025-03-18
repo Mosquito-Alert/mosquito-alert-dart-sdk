@@ -10,6 +10,10 @@ const ObservationsCreateNonFieldErrorsErrorComponentAttrEnum
     _$observationsCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors =
     const ObservationsCreateNonFieldErrorsErrorComponentAttrEnum._(
         'nonFieldErrors');
+const ObservationsCreateNonFieldErrorsErrorComponentAttrEnum
+    _$observationsCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateNonFieldErrorsErrorComponentAttrEnum
     _$observationsCreateNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsCreateNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'nonFieldErrors':
       return _$observationsCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<ObservationsCreateNonFieldErrorsErrorComponentAttrEnum>
     new BuiltSet<
         ObservationsCreateNonFieldErrorsErrorComponentAttrEnum>(const <ObservationsCreateNonFieldErrorsErrorComponentAttrEnum>[
   _$observationsCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
+  _$observationsCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateNonFieldErrorsErrorComponentCodeEnum
@@ -35,6 +42,10 @@ const ObservationsCreateNonFieldErrorsErrorComponentCodeEnum
 const ObservationsCreateNonFieldErrorsErrorComponentCodeEnum
     _$observationsCreateNonFieldErrorsErrorComponentCodeEnum_null_ =
     const ObservationsCreateNonFieldErrorsErrorComponentCodeEnum._('null_');
+const ObservationsCreateNonFieldErrorsErrorComponentCodeEnum
+    _$observationsCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateNonFieldErrorsErrorComponentCodeEnum
     _$observationsCreateNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -44,8 +55,10 @@ ObservationsCreateNonFieldErrorsErrorComponentCodeEnum
       return _$observationsCreateNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$observationsCreateNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -55,6 +68,7 @@ final BuiltSet<ObservationsCreateNonFieldErrorsErrorComponentCodeEnum>
         ObservationsCreateNonFieldErrorsErrorComponentCodeEnum>(const <ObservationsCreateNonFieldErrorsErrorComponentCodeEnum>[
   _$observationsCreateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$observationsCreateNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$observationsCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateNonFieldErrorsErrorComponentAttrEnum>
@@ -70,9 +84,11 @@ class _$ObservationsCreateNonFieldErrorsErrorComponentAttrEnumSerializer
             ObservationsCreateNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nonFieldErrors': 'non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'non_field_errors': 'nonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -104,10 +120,12 @@ class _$ObservationsCreateNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

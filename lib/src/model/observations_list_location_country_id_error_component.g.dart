@@ -10,6 +10,10 @@ const ObservationsListLocationCountryIdErrorComponentAttrEnum
     _$observationsListLocationCountryIdErrorComponentAttrEnum_locationCountryId =
     const ObservationsListLocationCountryIdErrorComponentAttrEnum._(
         'locationCountryId');
+const ObservationsListLocationCountryIdErrorComponentAttrEnum
+    _$observationsListLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsListLocationCountryIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListLocationCountryIdErrorComponentAttrEnum
     _$observationsListLocationCountryIdErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsListLocationCountryIdErrorComponentAttrEnum
   switch (name) {
     case 'locationCountryId':
       return _$observationsListLocationCountryIdErrorComponentAttrEnum_locationCountryId;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,12 +33,17 @@ final BuiltSet<ObservationsListLocationCountryIdErrorComponentAttrEnum>
     new BuiltSet<
         ObservationsListLocationCountryIdErrorComponentAttrEnum>(const <ObservationsListLocationCountryIdErrorComponentAttrEnum>[
   _$observationsListLocationCountryIdErrorComponentAttrEnum_locationCountryId,
+  _$observationsListLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListLocationCountryIdErrorComponentCodeEnum
     _$observationsListLocationCountryIdErrorComponentCodeEnum_invalidChoice =
     const ObservationsListLocationCountryIdErrorComponentCodeEnum._(
         'invalidChoice');
+const ObservationsListLocationCountryIdErrorComponentCodeEnum
+    _$observationsListLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsListLocationCountryIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListLocationCountryIdErrorComponentCodeEnum
     _$observationsListLocationCountryIdErrorComponentCodeEnumValueOf(
@@ -40,8 +51,10 @@ ObservationsListLocationCountryIdErrorComponentCodeEnum
   switch (name) {
     case 'invalidChoice':
       return _$observationsListLocationCountryIdErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +63,7 @@ final BuiltSet<ObservationsListLocationCountryIdErrorComponentCodeEnum>
     new BuiltSet<
         ObservationsListLocationCountryIdErrorComponentCodeEnum>(const <ObservationsListLocationCountryIdErrorComponentCodeEnum>[
   _$observationsListLocationCountryIdErrorComponentCodeEnum_invalidChoice,
+  _$observationsListLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsListLocationCountryIdErrorComponentAttrEnum>
@@ -65,9 +79,11 @@ class _$ObservationsListLocationCountryIdErrorComponentAttrEnumSerializer
             ObservationsListLocationCountryIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationCountryId': 'location_country_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location_country_id': 'locationCountryId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -98,9 +114,11 @@ class _$ObservationsListLocationCountryIdErrorComponentCodeEnumSerializer
             ObservationsListLocationCountryIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

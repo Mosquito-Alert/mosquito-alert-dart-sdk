@@ -143,6 +143,8 @@ class BitesCreateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')
   static const BitesCreateNonFieldErrorsErrorComponentAttrEnum nonFieldErrors = _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateNonFieldErrorsErrorComponentAttrEnum> get serializer => _$bitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class BitesCreateNonFieldErrorsErrorComponentCodeEnum extends EnumClass {
   static const BitesCreateNonFieldErrorsErrorComponentCodeEnum invalid = _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const BitesCreateNonFieldErrorsErrorComponentCodeEnum null_ = _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateNonFieldErrorsErrorComponentCodeEnum> get serializer => _$bitesCreateNonFieldErrorsErrorComponentCodeEnumSerializer;
 

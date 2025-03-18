@@ -143,6 +143,8 @@ class NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum extends EnumClass 
 
   @BuiltValueEnumConst(wireName: r'user_uuids.INDEX')
   static const NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum userUuidsPeriodINDEX = _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnum_userUuidsPeriodINDEX;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum unknownDefaultOpenApi = _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateUserUuidsINDEXErrorComponentAttrEnum> get serializer => _$notificationsCreateUserUuidsINDEXErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum extends EnumClass 
   static const NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum null_ = _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum required_ = _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum unknownDefaultOpenApi = _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum> get serializer => _$notificationsCreateUserUuidsINDEXErrorComponentCodeEnumSerializer;
 

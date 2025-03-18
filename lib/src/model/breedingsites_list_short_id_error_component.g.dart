@@ -9,14 +9,20 @@ part of 'breedingsites_list_short_id_error_component.dart';
 const BreedingsitesListShortIdErrorComponentAttrEnum
     _$breedingsitesListShortIdErrorComponentAttrEnum_shortId =
     const BreedingsitesListShortIdErrorComponentAttrEnum._('shortId');
+const BreedingsitesListShortIdErrorComponentAttrEnum
+    _$breedingsitesListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesListShortIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListShortIdErrorComponentAttrEnum
     _$breedingsitesListShortIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'shortId':
       return _$breedingsitesListShortIdErrorComponentAttrEnum_shortId;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,20 +30,27 @@ final BuiltSet<BreedingsitesListShortIdErrorComponentAttrEnum>
     _$breedingsitesListShortIdErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesListShortIdErrorComponentAttrEnum>(const <BreedingsitesListShortIdErrorComponentAttrEnum>[
   _$breedingsitesListShortIdErrorComponentAttrEnum_shortId,
+  _$breedingsitesListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesListShortIdErrorComponentCodeEnum
     _$breedingsitesListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed =
     const BreedingsitesListShortIdErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const BreedingsitesListShortIdErrorComponentCodeEnum
+    _$breedingsitesListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesListShortIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListShortIdErrorComponentCodeEnum
     _$breedingsitesListShortIdErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'nullCharactersNotAllowed':
       return _$breedingsitesListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -45,6 +58,7 @@ final BuiltSet<BreedingsitesListShortIdErrorComponentCodeEnum>
     _$breedingsitesListShortIdErrorComponentCodeEnumValues = new BuiltSet<
         BreedingsitesListShortIdErrorComponentCodeEnum>(const <BreedingsitesListShortIdErrorComponentCodeEnum>[
   _$breedingsitesListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$breedingsitesListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesListShortIdErrorComponentAttrEnum>
@@ -59,9 +73,11 @@ class _$BreedingsitesListShortIdErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BreedingsitesListShortIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'shortId': 'short_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'short_id': 'shortId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -90,9 +106,11 @@ class _$BreedingsitesListShortIdErrorComponentCodeEnumSerializer
         PrimitiveSerializer<BreedingsitesListShortIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

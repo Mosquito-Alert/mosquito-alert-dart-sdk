@@ -10,14 +10,20 @@ const BitesListMineLocationCountryIdErrorComponentAttrEnum
     _$bitesListMineLocationCountryIdErrorComponentAttrEnum_locationCountryId =
     const BitesListMineLocationCountryIdErrorComponentAttrEnum._(
         'locationCountryId');
+const BitesListMineLocationCountryIdErrorComponentAttrEnum
+    _$bitesListMineLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesListMineLocationCountryIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListMineLocationCountryIdErrorComponentAttrEnum
     _$bitesListMineLocationCountryIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'locationCountryId':
       return _$bitesListMineLocationCountryIdErrorComponentAttrEnum_locationCountryId;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,20 +31,27 @@ final BuiltSet<BitesListMineLocationCountryIdErrorComponentAttrEnum>
     _$bitesListMineLocationCountryIdErrorComponentAttrEnumValues = new BuiltSet<
         BitesListMineLocationCountryIdErrorComponentAttrEnum>(const <BitesListMineLocationCountryIdErrorComponentAttrEnum>[
   _$bitesListMineLocationCountryIdErrorComponentAttrEnum_locationCountryId,
+  _$bitesListMineLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesListMineLocationCountryIdErrorComponentCodeEnum
     _$bitesListMineLocationCountryIdErrorComponentCodeEnum_invalidChoice =
     const BitesListMineLocationCountryIdErrorComponentCodeEnum._(
         'invalidChoice');
+const BitesListMineLocationCountryIdErrorComponentCodeEnum
+    _$bitesListMineLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesListMineLocationCountryIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListMineLocationCountryIdErrorComponentCodeEnum
     _$bitesListMineLocationCountryIdErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$bitesListMineLocationCountryIdErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -46,6 +59,7 @@ final BuiltSet<BitesListMineLocationCountryIdErrorComponentCodeEnum>
     _$bitesListMineLocationCountryIdErrorComponentCodeEnumValues = new BuiltSet<
         BitesListMineLocationCountryIdErrorComponentCodeEnum>(const <BitesListMineLocationCountryIdErrorComponentCodeEnum>[
   _$bitesListMineLocationCountryIdErrorComponentCodeEnum_invalidChoice,
+  _$bitesListMineLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListMineLocationCountryIdErrorComponentAttrEnum>
@@ -61,9 +75,11 @@ class _$BitesListMineLocationCountryIdErrorComponentAttrEnumSerializer
             BitesListMineLocationCountryIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationCountryId': 'location_country_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location_country_id': 'locationCountryId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -94,9 +110,11 @@ class _$BitesListMineLocationCountryIdErrorComponentCodeEnumSerializer
             BitesListMineLocationCountryIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

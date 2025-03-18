@@ -9,14 +9,20 @@ part of 'devices_partial_update_fcm_token_error_component.dart';
 const DevicesPartialUpdateFcmTokenErrorComponentAttrEnum
     _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_fcmToken =
     const DevicesPartialUpdateFcmTokenErrorComponentAttrEnum._('fcmToken');
+const DevicesPartialUpdateFcmTokenErrorComponentAttrEnum
+    _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateFcmTokenErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateFcmTokenErrorComponentAttrEnum
     _$devicesPartialUpdateFcmTokenErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'fcmToken':
       return _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_fcmToken;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<DevicesPartialUpdateFcmTokenErrorComponentAttrEnum>
     _$devicesPartialUpdateFcmTokenErrorComponentAttrEnumValues = new BuiltSet<
         DevicesPartialUpdateFcmTokenErrorComponentAttrEnum>(const <DevicesPartialUpdateFcmTokenErrorComponentAttrEnum>[
   _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_fcmToken,
+  _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesPartialUpdateFcmTokenErrorComponentCodeEnum
@@ -46,6 +53,10 @@ const DevicesPartialUpdateFcmTokenErrorComponentCodeEnum
     _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesPartialUpdateFcmTokenErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesPartialUpdateFcmTokenErrorComponentCodeEnum
+    _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateFcmTokenErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateFcmTokenErrorComponentCodeEnum
     _$devicesPartialUpdateFcmTokenErrorComponentCodeEnumValueOf(String name) {
@@ -62,8 +73,10 @@ DevicesPartialUpdateFcmTokenErrorComponentCodeEnum
       return _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -76,6 +89,7 @@ final BuiltSet<DevicesPartialUpdateFcmTokenErrorComponentCodeEnum>
   _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_required_,
   _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesPartialUpdateFcmTokenErrorComponentAttrEnum>
@@ -91,9 +105,11 @@ class _$DevicesPartialUpdateFcmTokenErrorComponentAttrEnumSerializer
             DevicesPartialUpdateFcmTokenErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'fcmToken': 'fcm_token',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'fcm_token': 'fcmToken',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -128,6 +144,7 @@ class _$DevicesPartialUpdateFcmTokenErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -136,6 +153,7 @@ class _$DevicesPartialUpdateFcmTokenErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

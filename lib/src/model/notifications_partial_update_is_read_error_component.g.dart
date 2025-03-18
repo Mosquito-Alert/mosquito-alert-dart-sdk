@@ -9,6 +9,10 @@ part of 'notifications_partial_update_is_read_error_component.dart';
 const NotificationsPartialUpdateIsReadErrorComponentAttrEnum
     _$notificationsPartialUpdateIsReadErrorComponentAttrEnum_isRead =
     const NotificationsPartialUpdateIsReadErrorComponentAttrEnum._('isRead');
+const NotificationsPartialUpdateIsReadErrorComponentAttrEnum
+    _$notificationsPartialUpdateIsReadErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsPartialUpdateIsReadErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsPartialUpdateIsReadErrorComponentAttrEnum
     _$notificationsPartialUpdateIsReadErrorComponentAttrEnumValueOf(
@@ -16,8 +20,10 @@ NotificationsPartialUpdateIsReadErrorComponentAttrEnum
   switch (name) {
     case 'isRead':
       return _$notificationsPartialUpdateIsReadErrorComponentAttrEnum_isRead;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsPartialUpdateIsReadErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsPartialUpdateIsReadErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -26,6 +32,7 @@ final BuiltSet<NotificationsPartialUpdateIsReadErrorComponentAttrEnum>
     new BuiltSet<
         NotificationsPartialUpdateIsReadErrorComponentAttrEnum>(const <NotificationsPartialUpdateIsReadErrorComponentAttrEnum>[
   _$notificationsPartialUpdateIsReadErrorComponentAttrEnum_isRead,
+  _$notificationsPartialUpdateIsReadErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsPartialUpdateIsReadErrorComponentCodeEnum
@@ -34,6 +41,10 @@ const NotificationsPartialUpdateIsReadErrorComponentCodeEnum
 const NotificationsPartialUpdateIsReadErrorComponentCodeEnum
     _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_required_ =
     const NotificationsPartialUpdateIsReadErrorComponentCodeEnum._('required_');
+const NotificationsPartialUpdateIsReadErrorComponentCodeEnum
+    _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsPartialUpdateIsReadErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsPartialUpdateIsReadErrorComponentCodeEnum
     _$notificationsPartialUpdateIsReadErrorComponentCodeEnumValueOf(
@@ -43,8 +54,10 @@ NotificationsPartialUpdateIsReadErrorComponentCodeEnum
       return _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_null_;
     case 'required_':
       return _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -54,6 +67,7 @@ final BuiltSet<NotificationsPartialUpdateIsReadErrorComponentCodeEnum>
         NotificationsPartialUpdateIsReadErrorComponentCodeEnum>(const <NotificationsPartialUpdateIsReadErrorComponentCodeEnum>[
   _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_null_,
   _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_required_,
+  _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsPartialUpdateIsReadErrorComponentAttrEnum>
@@ -69,9 +83,11 @@ class _$NotificationsPartialUpdateIsReadErrorComponentAttrEnumSerializer
             NotificationsPartialUpdateIsReadErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'isRead': 'is_read',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'is_read': 'isRead',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -103,10 +119,12 @@ class _$NotificationsPartialUpdateIsReadErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

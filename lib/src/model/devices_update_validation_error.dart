@@ -127,6 +127,8 @@ class DevicesUpdateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')
   static const DevicesUpdateValidationErrorTypeEnum validationError = _$devicesUpdateValidationErrorTypeEnum_validationError;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesUpdateValidationErrorTypeEnum unknownDefaultOpenApi = _$devicesUpdateValidationErrorTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesUpdateValidationErrorTypeEnum> get serializer => _$devicesUpdateValidationErrorTypeEnumSerializer;
 

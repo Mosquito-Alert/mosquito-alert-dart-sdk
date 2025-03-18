@@ -143,6 +143,8 @@ class BreedingsitesListReceivedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'received_at')
   static const BreedingsitesListReceivedAtErrorComponentAttrEnum receivedAt = _$breedingsitesListReceivedAtErrorComponentAttrEnum_receivedAt;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListReceivedAtErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesListReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListReceivedAtErrorComponentAttrEnum> get serializer => _$breedingsitesListReceivedAtErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BreedingsitesListReceivedAtErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const BreedingsitesListReceivedAtErrorComponentCodeEnum invalid = _$breedingsitesListReceivedAtErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListReceivedAtErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesListReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListReceivedAtErrorComponentCodeEnum> get serializer => _$breedingsitesListReceivedAtErrorComponentCodeEnumSerializer;
 

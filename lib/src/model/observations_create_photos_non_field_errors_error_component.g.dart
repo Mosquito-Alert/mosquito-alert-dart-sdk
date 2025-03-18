@@ -10,6 +10,10 @@ const ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum
     _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum_photosPeriodNonFieldErrors =
     const ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum._(
         'photosPeriodNonFieldErrors');
+const ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum
+    _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum
     _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'photosPeriodNonFieldErrors':
       return _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum_photosPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum>
     new BuiltSet<
         ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum>(const <ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum>[
   _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum_photosPeriodNonFieldErrors,
+  _$observationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum
@@ -41,6 +48,10 @@ const ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum
     _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_required_ =
     const ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum._(
         'required_');
+const ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum
+    _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum
     _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -52,8 +63,10 @@ ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum
       return _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -64,6 +77,7 @@ final BuiltSet<ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum>
   _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_notAList,
   _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_null_,
   _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_required_,
+  _$observationsCreatePhotosNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum>
@@ -79,9 +93,11 @@ class _$ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnumSerializer
             ObservationsCreatePhotosNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'photosPeriodNonFieldErrors': 'photos.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'photos.non_field_errors': 'photosPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -114,11 +130,13 @@ class _$ObservationsCreatePhotosNonFieldErrorsErrorComponentCodeEnumSerializer
     'notAList': 'not_a_list',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'not_a_list': 'notAList',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

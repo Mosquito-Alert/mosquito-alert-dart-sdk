@@ -10,14 +10,20 @@ const DevicesPartialUpdateOsLocaleErrorComponentAttrEnum
     _$devicesPartialUpdateOsLocaleErrorComponentAttrEnum_osPeriodLocale =
     const DevicesPartialUpdateOsLocaleErrorComponentAttrEnum._(
         'osPeriodLocale');
+const DevicesPartialUpdateOsLocaleErrorComponentAttrEnum
+    _$devicesPartialUpdateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateOsLocaleErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateOsLocaleErrorComponentAttrEnum
     _$devicesPartialUpdateOsLocaleErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'osPeriodLocale':
       return _$devicesPartialUpdateOsLocaleErrorComponentAttrEnum_osPeriodLocale;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<DevicesPartialUpdateOsLocaleErrorComponentAttrEnum>
     _$devicesPartialUpdateOsLocaleErrorComponentAttrEnumValues = new BuiltSet<
         DevicesPartialUpdateOsLocaleErrorComponentAttrEnum>(const <DevicesPartialUpdateOsLocaleErrorComponentAttrEnum>[
   _$devicesPartialUpdateOsLocaleErrorComponentAttrEnum_osPeriodLocale,
+  _$devicesPartialUpdateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesPartialUpdateOsLocaleErrorComponentCodeEnum
@@ -41,6 +48,10 @@ const DevicesPartialUpdateOsLocaleErrorComponentCodeEnum
     _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesPartialUpdateOsLocaleErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesPartialUpdateOsLocaleErrorComponentCodeEnum
+    _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateOsLocaleErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateOsLocaleErrorComponentCodeEnum
     _$devicesPartialUpdateOsLocaleErrorComponentCodeEnumValueOf(String name) {
@@ -53,8 +64,10 @@ DevicesPartialUpdateOsLocaleErrorComponentCodeEnum
       return _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -65,6 +78,7 @@ final BuiltSet<DevicesPartialUpdateOsLocaleErrorComponentCodeEnum>
   _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_maxLength,
   _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesPartialUpdateOsLocaleErrorComponentAttrEnum>
@@ -80,9 +94,11 @@ class _$DevicesPartialUpdateOsLocaleErrorComponentAttrEnumSerializer
             DevicesPartialUpdateOsLocaleErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'osPeriodLocale': 'os.locale',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'os.locale': 'osPeriodLocale',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -115,12 +131,14 @@ class _$DevicesPartialUpdateOsLocaleErrorComponentCodeEnumSerializer
     'maxLength': 'max_length',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_length': 'maxLength',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

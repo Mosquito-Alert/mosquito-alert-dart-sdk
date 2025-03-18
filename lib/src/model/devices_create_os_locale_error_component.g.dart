@@ -9,14 +9,20 @@ part of 'devices_create_os_locale_error_component.dart';
 const DevicesCreateOsLocaleErrorComponentAttrEnum
     _$devicesCreateOsLocaleErrorComponentAttrEnum_osPeriodLocale =
     const DevicesCreateOsLocaleErrorComponentAttrEnum._('osPeriodLocale');
+const DevicesCreateOsLocaleErrorComponentAttrEnum
+    _$devicesCreateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesCreateOsLocaleErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesCreateOsLocaleErrorComponentAttrEnum
     _$devicesCreateOsLocaleErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'osPeriodLocale':
       return _$devicesCreateOsLocaleErrorComponentAttrEnum_osPeriodLocale;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<DevicesCreateOsLocaleErrorComponentAttrEnum>
     _$devicesCreateOsLocaleErrorComponentAttrEnumValues = new BuiltSet<
         DevicesCreateOsLocaleErrorComponentAttrEnum>(const <DevicesCreateOsLocaleErrorComponentAttrEnum>[
   _$devicesCreateOsLocaleErrorComponentAttrEnum_osPeriodLocale,
+  _$devicesCreateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesCreateOsLocaleErrorComponentCodeEnum
@@ -40,6 +47,10 @@ const DevicesCreateOsLocaleErrorComponentCodeEnum
     _$devicesCreateOsLocaleErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesCreateOsLocaleErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesCreateOsLocaleErrorComponentCodeEnum
+    _$devicesCreateOsLocaleErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesCreateOsLocaleErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesCreateOsLocaleErrorComponentCodeEnum
     _$devicesCreateOsLocaleErrorComponentCodeEnumValueOf(String name) {
@@ -52,8 +63,10 @@ DevicesCreateOsLocaleErrorComponentCodeEnum
       return _$devicesCreateOsLocaleErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$devicesCreateOsLocaleErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateOsLocaleErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateOsLocaleErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -64,6 +77,7 @@ final BuiltSet<DevicesCreateOsLocaleErrorComponentCodeEnum>
   _$devicesCreateOsLocaleErrorComponentCodeEnum_maxLength,
   _$devicesCreateOsLocaleErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesCreateOsLocaleErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesCreateOsLocaleErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesCreateOsLocaleErrorComponentAttrEnum>
@@ -78,9 +92,11 @@ class _$DevicesCreateOsLocaleErrorComponentAttrEnumSerializer
         PrimitiveSerializer<DevicesCreateOsLocaleErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'osPeriodLocale': 'os.locale',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'os.locale': 'osPeriodLocale',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -112,12 +128,14 @@ class _$DevicesCreateOsLocaleErrorComponentCodeEnumSerializer
     'maxLength': 'max_length',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_length': 'maxLength',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

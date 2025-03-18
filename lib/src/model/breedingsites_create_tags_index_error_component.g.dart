@@ -10,14 +10,20 @@ const BreedingsitesCreateTagsINDEXErrorComponentAttrEnum
     _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX =
     const BreedingsitesCreateTagsINDEXErrorComponentAttrEnum._(
         'tagsPeriodINDEX');
+const BreedingsitesCreateTagsINDEXErrorComponentAttrEnum
+    _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateTagsINDEXErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateTagsINDEXErrorComponentAttrEnum
     _$breedingsitesCreateTagsINDEXErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'tagsPeriodINDEX':
       return _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<BreedingsitesCreateTagsINDEXErrorComponentAttrEnum>
     _$breedingsitesCreateTagsINDEXErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesCreateTagsINDEXErrorComponentAttrEnum>(const <BreedingsitesCreateTagsINDEXErrorComponentAttrEnum>[
   _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX,
+  _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateTagsINDEXErrorComponentCodeEnum
@@ -47,6 +54,10 @@ const BreedingsitesCreateTagsINDEXErrorComponentCodeEnum
     _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const BreedingsitesCreateTagsINDEXErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const BreedingsitesCreateTagsINDEXErrorComponentCodeEnum
+    _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateTagsINDEXErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateTagsINDEXErrorComponentCodeEnum
     _$breedingsitesCreateTagsINDEXErrorComponentCodeEnumValueOf(String name) {
@@ -63,8 +74,10 @@ BreedingsitesCreateTagsINDEXErrorComponentCodeEnum
       return _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -77,6 +90,7 @@ final BuiltSet<BreedingsitesCreateTagsINDEXErrorComponentCodeEnum>
   _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_required_,
   _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateTagsINDEXErrorComponentAttrEnum>
@@ -92,9 +106,11 @@ class _$BreedingsitesCreateTagsINDEXErrorComponentAttrEnumSerializer
             BreedingsitesCreateTagsINDEXErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'tagsPeriodINDEX': 'tags.INDEX',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'tags.INDEX': 'tagsPeriodINDEX',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -129,6 +145,7 @@ class _$BreedingsitesCreateTagsINDEXErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -137,6 +154,7 @@ class _$BreedingsitesCreateTagsINDEXErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -143,6 +143,8 @@ class ObservationsCreateEventEnvironmentErrorComponentAttrEnum extends EnumClass
 
   @BuiltValueEnumConst(wireName: r'event_environment')
   static const ObservationsCreateEventEnvironmentErrorComponentAttrEnum eventEnvironment = _$observationsCreateEventEnvironmentErrorComponentAttrEnum_eventEnvironment;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateEventEnvironmentErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreateEventEnvironmentErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateEventEnvironmentErrorComponentAttrEnum> get serializer => _$observationsCreateEventEnvironmentErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class ObservationsCreateEventEnvironmentErrorComponentCodeEnum extends EnumClass
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const ObservationsCreateEventEnvironmentErrorComponentCodeEnum invalidChoice = _$observationsCreateEventEnvironmentErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateEventEnvironmentErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreateEventEnvironmentErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateEventEnvironmentErrorComponentCodeEnum> get serializer => _$observationsCreateEventEnvironmentErrorComponentCodeEnumSerializer;
 

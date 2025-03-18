@@ -8,19 +8,25 @@ part of 'error_response403.dart';
 
 const ErrorResponse403TypeEnum _$errorResponse403TypeEnum_clientError =
     const ErrorResponse403TypeEnum._('clientError');
+const ErrorResponse403TypeEnum
+    _$errorResponse403TypeEnum_unknownDefaultOpenApi =
+    const ErrorResponse403TypeEnum._('unknownDefaultOpenApi');
 
 ErrorResponse403TypeEnum _$errorResponse403TypeEnumValueOf(String name) {
   switch (name) {
     case 'clientError':
       return _$errorResponse403TypeEnum_clientError;
+    case 'unknownDefaultOpenApi':
+      return _$errorResponse403TypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$errorResponse403TypeEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<ErrorResponse403TypeEnum> _$errorResponse403TypeEnumValues =
     new BuiltSet<ErrorResponse403TypeEnum>(const <ErrorResponse403TypeEnum>[
   _$errorResponse403TypeEnum_clientError,
+  _$errorResponse403TypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ErrorResponse403TypeEnum> _$errorResponse403TypeEnumSerializer =
@@ -30,9 +36,11 @@ class _$ErrorResponse403TypeEnumSerializer
     implements PrimitiveSerializer<ErrorResponse403TypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'clientError': 'client_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'client_error': 'clientError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

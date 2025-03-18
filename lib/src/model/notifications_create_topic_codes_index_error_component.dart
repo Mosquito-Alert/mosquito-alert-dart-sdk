@@ -143,6 +143,8 @@ class NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum extends EnumClass
 
   @BuiltValueEnumConst(wireName: r'topic_codes.INDEX')
   static const NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum topicCodesPeriodINDEX = _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnum_topicCodesPeriodINDEX;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum unknownDefaultOpenApi = _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateTopicCodesINDEXErrorComponentAttrEnum> get serializer => _$notificationsCreateTopicCodesINDEXErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum extends EnumClass
   static const NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum required_ = _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum surrogateCharactersNotAllowed = _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum unknownDefaultOpenApi = _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateTopicCodesINDEXErrorComponentCodeEnum> get serializer => _$notificationsCreateTopicCodesINDEXErrorComponentCodeEnumSerializer;
 

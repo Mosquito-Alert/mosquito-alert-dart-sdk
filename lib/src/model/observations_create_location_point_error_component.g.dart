@@ -10,6 +10,10 @@ const ObservationsCreateLocationPointErrorComponentAttrEnum
     _$observationsCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint =
     const ObservationsCreateLocationPointErrorComponentAttrEnum._(
         'locationPeriodPoint');
+const ObservationsCreateLocationPointErrorComponentAttrEnum
+    _$observationsCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateLocationPointErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateLocationPointErrorComponentAttrEnum
     _$observationsCreateLocationPointErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsCreateLocationPointErrorComponentAttrEnum
   switch (name) {
     case 'locationPeriodPoint':
       return _$observationsCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<ObservationsCreateLocationPointErrorComponentAttrEnum>
     new BuiltSet<
         ObservationsCreateLocationPointErrorComponentAttrEnum>(const <ObservationsCreateLocationPointErrorComponentAttrEnum>[
   _$observationsCreateLocationPointErrorComponentAttrEnum_locationPeriodPoint,
+  _$observationsCreateLocationPointErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateLocationPointErrorComponentCodeEnum
@@ -35,6 +42,10 @@ const ObservationsCreateLocationPointErrorComponentCodeEnum
 const ObservationsCreateLocationPointErrorComponentCodeEnum
     _$observationsCreateLocationPointErrorComponentCodeEnum_required_ =
     const ObservationsCreateLocationPointErrorComponentCodeEnum._('required_');
+const ObservationsCreateLocationPointErrorComponentCodeEnum
+    _$observationsCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateLocationPointErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateLocationPointErrorComponentCodeEnum
     _$observationsCreateLocationPointErrorComponentCodeEnumValueOf(
@@ -44,8 +55,10 @@ ObservationsCreateLocationPointErrorComponentCodeEnum
       return _$observationsCreateLocationPointErrorComponentCodeEnum_invalid;
     case 'required_':
       return _$observationsCreateLocationPointErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -55,6 +68,7 @@ final BuiltSet<ObservationsCreateLocationPointErrorComponentCodeEnum>
         ObservationsCreateLocationPointErrorComponentCodeEnum>(const <ObservationsCreateLocationPointErrorComponentCodeEnum>[
   _$observationsCreateLocationPointErrorComponentCodeEnum_invalid,
   _$observationsCreateLocationPointErrorComponentCodeEnum_required_,
+  _$observationsCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateLocationPointErrorComponentAttrEnum>
@@ -70,9 +84,11 @@ class _$ObservationsCreateLocationPointErrorComponentAttrEnumSerializer
             ObservationsCreateLocationPointErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationPeriodPoint': 'location.point',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location.point': 'locationPeriodPoint',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -104,10 +120,12 @@ class _$ObservationsCreateLocationPointErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -143,6 +143,8 @@ class BreedingsitesCreateTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')
   static const BreedingsitesCreateTagsErrorComponentAttrEnum tags = _$breedingsitesCreateTagsErrorComponentAttrEnum_tags;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateTagsErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateTagsErrorComponentAttrEnum> get serializer => _$breedingsitesCreateTagsErrorComponentAttrEnumSerializer;
 
@@ -162,6 +164,8 @@ class BreedingsitesCreateTagsErrorComponentCodeEnum extends EnumClass {
   static const BreedingsitesCreateTagsErrorComponentCodeEnum notAStr = _$breedingsitesCreateTagsErrorComponentCodeEnum_notAStr;
   @BuiltValueEnumConst(wireName: r'null')
   static const BreedingsitesCreateTagsErrorComponentCodeEnum null_ = _$breedingsitesCreateTagsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateTagsErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateTagsErrorComponentCodeEnum> get serializer => _$breedingsitesCreateTagsErrorComponentCodeEnumSerializer;
 

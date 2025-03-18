@@ -54,6 +54,9 @@ const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_tr =
     const PatchedUserRequestLocaleEnum._('tr');
 const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_zhCN =
     const PatchedUserRequestLocaleEnum._('zhCN');
+const PatchedUserRequestLocaleEnum
+    _$patchedUserRequestLocaleEnum_unknownDefaultOpenApi =
+    const PatchedUserRequestLocaleEnum._('unknownDefaultOpenApi');
 
 PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnumValueOf(
     String name) {
@@ -106,8 +109,10 @@ PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnumValueOf(
       return _$patchedUserRequestLocaleEnum_tr;
     case 'zhCN':
       return _$patchedUserRequestLocaleEnum_zhCN;
+    case 'unknownDefaultOpenApi':
+      return _$patchedUserRequestLocaleEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$patchedUserRequestLocaleEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -138,6 +143,7 @@ final BuiltSet<PatchedUserRequestLocaleEnum>
   _$patchedUserRequestLocaleEnum_nl,
   _$patchedUserRequestLocaleEnum_tr,
   _$patchedUserRequestLocaleEnum_zhCN,
+  _$patchedUserRequestLocaleEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<PatchedUserRequestLocaleEnum>
@@ -171,6 +177,7 @@ class _$PatchedUserRequestLocaleEnumSerializer
     'nl': 'nl',
     'tr': 'tr',
     'zhCN': 'zh-CN',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'es': 'es',
@@ -197,6 +204,7 @@ class _$PatchedUserRequestLocaleEnumSerializer
     'nl': 'nl',
     'tr': 'tr',
     'zh-CN': 'zhCN',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

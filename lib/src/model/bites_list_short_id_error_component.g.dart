@@ -9,14 +9,19 @@ part of 'bites_list_short_id_error_component.dart';
 const BitesListShortIdErrorComponentAttrEnum
     _$bitesListShortIdErrorComponentAttrEnum_shortId =
     const BitesListShortIdErrorComponentAttrEnum._('shortId');
+const BitesListShortIdErrorComponentAttrEnum
+    _$bitesListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesListShortIdErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 BitesListShortIdErrorComponentAttrEnum
     _$bitesListShortIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'shortId':
       return _$bitesListShortIdErrorComponentAttrEnum_shortId;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +29,25 @@ final BuiltSet<BitesListShortIdErrorComponentAttrEnum>
     _$bitesListShortIdErrorComponentAttrEnumValues = new BuiltSet<
         BitesListShortIdErrorComponentAttrEnum>(const <BitesListShortIdErrorComponentAttrEnum>[
   _$bitesListShortIdErrorComponentAttrEnum_shortId,
+  _$bitesListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesListShortIdErrorComponentCodeEnum
     _$bitesListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed =
     const BitesListShortIdErrorComponentCodeEnum._('nullCharactersNotAllowed');
+const BitesListShortIdErrorComponentCodeEnum
+    _$bitesListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesListShortIdErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 BitesListShortIdErrorComponentCodeEnum
     _$bitesListShortIdErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'nullCharactersNotAllowed':
       return _$bitesListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +55,7 @@ final BuiltSet<BitesListShortIdErrorComponentCodeEnum>
     _$bitesListShortIdErrorComponentCodeEnumValues = new BuiltSet<
         BitesListShortIdErrorComponentCodeEnum>(const <BitesListShortIdErrorComponentCodeEnum>[
   _$bitesListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$bitesListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListShortIdErrorComponentAttrEnum>
@@ -57,9 +69,11 @@ class _$BitesListShortIdErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesListShortIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'shortId': 'short_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'short_id': 'shortId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -87,9 +101,11 @@ class _$BitesListShortIdErrorComponentCodeEnumSerializer
     implements PrimitiveSerializer<BitesListShortIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

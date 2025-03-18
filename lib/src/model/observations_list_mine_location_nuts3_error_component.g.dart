@@ -10,6 +10,10 @@ const ObservationsListMineLocationNuts3ErrorComponentAttrEnum
     _$observationsListMineLocationNuts3ErrorComponentAttrEnum_locationNuts3 =
     const ObservationsListMineLocationNuts3ErrorComponentAttrEnum._(
         'locationNuts3');
+const ObservationsListMineLocationNuts3ErrorComponentAttrEnum
+    _$observationsListMineLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsListMineLocationNuts3ErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineLocationNuts3ErrorComponentAttrEnum
     _$observationsListMineLocationNuts3ErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsListMineLocationNuts3ErrorComponentAttrEnum
   switch (name) {
     case 'locationNuts3':
       return _$observationsListMineLocationNuts3ErrorComponentAttrEnum_locationNuts3;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,12 +33,17 @@ final BuiltSet<ObservationsListMineLocationNuts3ErrorComponentAttrEnum>
     new BuiltSet<
         ObservationsListMineLocationNuts3ErrorComponentAttrEnum>(const <ObservationsListMineLocationNuts3ErrorComponentAttrEnum>[
   _$observationsListMineLocationNuts3ErrorComponentAttrEnum_locationNuts3,
+  _$observationsListMineLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListMineLocationNuts3ErrorComponentCodeEnum
     _$observationsListMineLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed =
     const ObservationsListMineLocationNuts3ErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const ObservationsListMineLocationNuts3ErrorComponentCodeEnum
+    _$observationsListMineLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsListMineLocationNuts3ErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineLocationNuts3ErrorComponentCodeEnum
     _$observationsListMineLocationNuts3ErrorComponentCodeEnumValueOf(
@@ -40,8 +51,10 @@ ObservationsListMineLocationNuts3ErrorComponentCodeEnum
   switch (name) {
     case 'nullCharactersNotAllowed':
       return _$observationsListMineLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +63,7 @@ final BuiltSet<ObservationsListMineLocationNuts3ErrorComponentCodeEnum>
     new BuiltSet<
         ObservationsListMineLocationNuts3ErrorComponentCodeEnum>(const <ObservationsListMineLocationNuts3ErrorComponentCodeEnum>[
   _$observationsListMineLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$observationsListMineLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsListMineLocationNuts3ErrorComponentAttrEnum>
@@ -65,9 +79,11 @@ class _$ObservationsListMineLocationNuts3ErrorComponentAttrEnumSerializer
             ObservationsListMineLocationNuts3ErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationNuts3': 'location_nuts_3',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location_nuts_3': 'locationNuts3',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -98,9 +114,11 @@ class _$ObservationsListMineLocationNuts3ErrorComponentCodeEnumSerializer
             ObservationsListMineLocationNuts3ErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

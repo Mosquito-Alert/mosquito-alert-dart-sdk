@@ -143,6 +143,8 @@ class ObservationsListMineCreatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'created_at')
   static const ObservationsListMineCreatedAtErrorComponentAttrEnum createdAt = _$observationsListMineCreatedAtErrorComponentAttrEnum_createdAt;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListMineCreatedAtErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsListMineCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListMineCreatedAtErrorComponentAttrEnum> get serializer => _$observationsListMineCreatedAtErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class ObservationsListMineCreatedAtErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const ObservationsListMineCreatedAtErrorComponentCodeEnum invalid = _$observationsListMineCreatedAtErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListMineCreatedAtErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsListMineCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListMineCreatedAtErrorComponentCodeEnum> get serializer => _$observationsListMineCreatedAtErrorComponentCodeEnumSerializer;
 

@@ -12,6 +12,8 @@ const Error401CodeEnum _$error401CodeEnum_authenticationFailed =
     const Error401CodeEnum._('authenticationFailed');
 const Error401CodeEnum _$error401CodeEnum_notAuthenticated =
     const Error401CodeEnum._('notAuthenticated');
+const Error401CodeEnum _$error401CodeEnum_unknownDefaultOpenApi =
+    const Error401CodeEnum._('unknownDefaultOpenApi');
 
 Error401CodeEnum _$error401CodeEnumValueOf(String name) {
   switch (name) {
@@ -21,8 +23,10 @@ Error401CodeEnum _$error401CodeEnumValueOf(String name) {
       return _$error401CodeEnum_authenticationFailed;
     case 'notAuthenticated':
       return _$error401CodeEnum_notAuthenticated;
+    case 'unknownDefaultOpenApi':
+      return _$error401CodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$error401CodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -31,6 +35,7 @@ final BuiltSet<Error401CodeEnum> _$error401CodeEnumValues =
   _$error401CodeEnum_tokenNotValid,
   _$error401CodeEnum_authenticationFailed,
   _$error401CodeEnum_notAuthenticated,
+  _$error401CodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<Error401CodeEnum> _$error401CodeEnumSerializer =
@@ -42,11 +47,13 @@ class _$Error401CodeEnumSerializer
     'tokenNotValid': 'token_not_valid',
     'authenticationFailed': 'authentication_failed',
     'notAuthenticated': 'not_authenticated',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'token_not_valid': 'tokenNotValid',
     'authentication_failed': 'authenticationFailed',
     'not_authenticated': 'notAuthenticated',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

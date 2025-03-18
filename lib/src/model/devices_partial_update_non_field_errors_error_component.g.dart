@@ -10,6 +10,10 @@ const DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum
     _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors =
     const DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum._(
         'nonFieldErrors');
+const DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum
+    _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum
     _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'nonFieldErrors':
       return _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum>
     new BuiltSet<
         DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum>(const <DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum>[
   _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
+  _$devicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
@@ -35,6 +42,10 @@ const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
 const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
     _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_ =
     const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum._('null_');
+const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
+    _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
     _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -44,8 +55,10 @@ DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
       return _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -55,6 +68,7 @@ final BuiltSet<DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum>
         DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum>(const <DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum>
@@ -70,9 +84,11 @@ class _$DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer
             DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nonFieldErrors': 'non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'non_field_errors': 'nonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -104,10 +120,12 @@ class _$DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

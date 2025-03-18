@@ -10,14 +10,20 @@ const FixesCreatePointNonFieldErrorsErrorComponentAttrEnum
     _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_pointPeriodNonFieldErrors =
     const FixesCreatePointNonFieldErrorsErrorComponentAttrEnum._(
         'pointPeriodNonFieldErrors');
+const FixesCreatePointNonFieldErrorsErrorComponentAttrEnum
+    _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const FixesCreatePointNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 FixesCreatePointNonFieldErrorsErrorComponentAttrEnum
     _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'pointPeriodNonFieldErrors':
       return _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_pointPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<FixesCreatePointNonFieldErrorsErrorComponentAttrEnum>
     _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
         FixesCreatePointNonFieldErrorsErrorComponentAttrEnum>(const <FixesCreatePointNonFieldErrorsErrorComponentAttrEnum>[
   _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_pointPeriodNonFieldErrors,
+  _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum
@@ -36,6 +43,10 @@ const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum
 const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum
     _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_required_ =
     const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum._('required_');
+const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum
+    _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const FixesCreatePointNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 FixesCreatePointNonFieldErrorsErrorComponentCodeEnum
     _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnumValueOf(String name) {
@@ -46,8 +57,10 @@ FixesCreatePointNonFieldErrorsErrorComponentCodeEnum
       return _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -57,6 +70,7 @@ final BuiltSet<FixesCreatePointNonFieldErrorsErrorComponentCodeEnum>
   _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_null_,
   _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_required_,
+  _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<FixesCreatePointNonFieldErrorsErrorComponentAttrEnum>
@@ -72,9 +86,11 @@ class _$FixesCreatePointNonFieldErrorsErrorComponentAttrEnumSerializer
             FixesCreatePointNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'pointPeriodNonFieldErrors': 'point.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'point.non_field_errors': 'pointPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -107,11 +123,13 @@ class _$FixesCreatePointNonFieldErrorsErrorComponentCodeEnumSerializer
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

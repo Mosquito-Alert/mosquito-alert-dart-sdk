@@ -12,6 +12,8 @@ const LocationTypeEnum _$locationTypeEnum_selected =
     const LocationTypeEnum._('selected');
 const LocationTypeEnum _$locationTypeEnum_missing =
     const LocationTypeEnum._('missing');
+const LocationTypeEnum _$locationTypeEnum_unknownDefaultOpenApi =
+    const LocationTypeEnum._('unknownDefaultOpenApi');
 
 LocationTypeEnum _$locationTypeEnumValueOf(String name) {
   switch (name) {
@@ -21,8 +23,10 @@ LocationTypeEnum _$locationTypeEnumValueOf(String name) {
       return _$locationTypeEnum_selected;
     case 'missing':
       return _$locationTypeEnum_missing;
+    case 'unknownDefaultOpenApi':
+      return _$locationTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$locationTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -31,6 +35,7 @@ final BuiltSet<LocationTypeEnum> _$locationTypeEnumValues =
   _$locationTypeEnum_current,
   _$locationTypeEnum_selected,
   _$locationTypeEnum_missing,
+  _$locationTypeEnum_unknownDefaultOpenApi,
 ]);
 
 const LocationTimezoneEnum _$locationTimezoneEnum_africaSlashAbidjan =
@@ -1251,6 +1256,8 @@ const LocationTimezoneEnum _$locationTimezoneEnum_WET =
     const LocationTimezoneEnum._('WET');
 const LocationTimezoneEnum _$locationTimezoneEnum_zulu =
     const LocationTimezoneEnum._('zulu');
+const LocationTimezoneEnum _$locationTimezoneEnum_unknownDefaultOpenApi =
+    const LocationTimezoneEnum._('unknownDefaultOpenApi');
 
 LocationTimezoneEnum _$locationTimezoneEnumValueOf(String name) {
   switch (name) {
@@ -2446,8 +2453,10 @@ LocationTimezoneEnum _$locationTimezoneEnumValueOf(String name) {
       return _$locationTimezoneEnum_WET;
     case 'zulu':
       return _$locationTimezoneEnum_zulu;
+    case 'unknownDefaultOpenApi':
+      return _$locationTimezoneEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$locationTimezoneEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -3049,6 +3058,7 @@ final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
   _$locationTimezoneEnum_W_SU,
   _$locationTimezoneEnum_WET,
   _$locationTimezoneEnum_zulu,
+  _$locationTimezoneEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<LocationTypeEnum> _$locationTypeEnumSerializer =
@@ -3062,11 +3072,13 @@ class _$LocationTypeEnumSerializer
     'current': 'current',
     'selected': 'selected',
     'missing': 'missing',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'current': 'current',
     'selected': 'selected',
     'missing': 'missing',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -3686,6 +3698,7 @@ class _$LocationTimezoneEnumSerializer
     'W_SU': 'W-SU',
     'WET': 'WET',
     'zulu': 'Zulu',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'Africa/Abidjan': 'africaSlashAbidjan',
@@ -4285,6 +4298,7 @@ class _$LocationTimezoneEnumSerializer
     'W-SU': 'W_SU',
     'WET': 'WET',
     'Zulu': 'zulu',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

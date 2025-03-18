@@ -9,14 +9,20 @@ part of 'bites_list_mine_location_nuts3_error_component.dart';
 const BitesListMineLocationNuts3ErrorComponentAttrEnum
     _$bitesListMineLocationNuts3ErrorComponentAttrEnum_locationNuts3 =
     const BitesListMineLocationNuts3ErrorComponentAttrEnum._('locationNuts3');
+const BitesListMineLocationNuts3ErrorComponentAttrEnum
+    _$bitesListMineLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesListMineLocationNuts3ErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListMineLocationNuts3ErrorComponentAttrEnum
     _$bitesListMineLocationNuts3ErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'locationNuts3':
       return _$bitesListMineLocationNuts3ErrorComponentAttrEnum_locationNuts3;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,20 +30,27 @@ final BuiltSet<BitesListMineLocationNuts3ErrorComponentAttrEnum>
     _$bitesListMineLocationNuts3ErrorComponentAttrEnumValues = new BuiltSet<
         BitesListMineLocationNuts3ErrorComponentAttrEnum>(const <BitesListMineLocationNuts3ErrorComponentAttrEnum>[
   _$bitesListMineLocationNuts3ErrorComponentAttrEnum_locationNuts3,
+  _$bitesListMineLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesListMineLocationNuts3ErrorComponentCodeEnum
     _$bitesListMineLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed =
     const BitesListMineLocationNuts3ErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const BitesListMineLocationNuts3ErrorComponentCodeEnum
+    _$bitesListMineLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesListMineLocationNuts3ErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListMineLocationNuts3ErrorComponentCodeEnum
     _$bitesListMineLocationNuts3ErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'nullCharactersNotAllowed':
       return _$bitesListMineLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -45,6 +58,7 @@ final BuiltSet<BitesListMineLocationNuts3ErrorComponentCodeEnum>
     _$bitesListMineLocationNuts3ErrorComponentCodeEnumValues = new BuiltSet<
         BitesListMineLocationNuts3ErrorComponentCodeEnum>(const <BitesListMineLocationNuts3ErrorComponentCodeEnum>[
   _$bitesListMineLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$bitesListMineLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListMineLocationNuts3ErrorComponentAttrEnum>
@@ -59,9 +73,11 @@ class _$BitesListMineLocationNuts3ErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesListMineLocationNuts3ErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationNuts3': 'location_nuts_3',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location_nuts_3': 'locationNuts3',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -90,9 +106,11 @@ class _$BitesListMineLocationNuts3ErrorComponentCodeEnumSerializer
         PrimitiveSerializer<BitesListMineLocationNuts3ErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

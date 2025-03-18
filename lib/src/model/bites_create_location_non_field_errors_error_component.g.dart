@@ -10,6 +10,10 @@ const BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum
     _$bitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors =
     const BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum._(
         'locationPeriodNonFieldErrors');
+const BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum
+    _$bitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum
     _$bitesCreateLocationNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'locationPeriodNonFieldErrors':
       return _$bitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum>
     new BuiltSet<
         BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum>(const <BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum>[
   _$bitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors,
+  _$bitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
@@ -39,6 +46,10 @@ const BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
     _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_ =
     const BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum._(
         'required_');
+const BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
+    _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
     _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -50,8 +61,10 @@ BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
       return _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -62,6 +75,7 @@ final BuiltSet<BitesCreateLocationNonFieldErrorsErrorComponentCodeEnum>
   _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_null_,
   _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_,
+  _$bitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum>
@@ -77,9 +91,11 @@ class _$BitesCreateLocationNonFieldErrorsErrorComponentAttrEnumSerializer
             BitesCreateLocationNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationPeriodNonFieldErrors': 'location.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location.non_field_errors': 'locationPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -112,11 +128,13 @@ class _$BitesCreateLocationNonFieldErrorsErrorComponentCodeEnumSerializer
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

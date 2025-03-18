@@ -143,6 +143,8 @@ class BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum extends EnumCla
 
   @BuiltValueEnumConst(wireName: r'has_near_mosquitoes')
   static const BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum hasNearMosquitoes = _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_hasNearMosquitoes;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum> get serializer => _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum extends EnumCla
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum invalid = _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum> get serializer => _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnumSerializer;
 

@@ -9,14 +9,20 @@ part of 'bites_list_mine_user_uuid_error_component.dart';
 const BitesListMineUserUuidErrorComponentAttrEnum
     _$bitesListMineUserUuidErrorComponentAttrEnum_userUuid =
     const BitesListMineUserUuidErrorComponentAttrEnum._('userUuid');
+const BitesListMineUserUuidErrorComponentAttrEnum
+    _$bitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesListMineUserUuidErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListMineUserUuidErrorComponentAttrEnum
     _$bitesListMineUserUuidErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'userUuid':
       return _$bitesListMineUserUuidErrorComponentAttrEnum_userUuid;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BitesListMineUserUuidErrorComponentAttrEnum>
     _$bitesListMineUserUuidErrorComponentAttrEnumValues = new BuiltSet<
         BitesListMineUserUuidErrorComponentAttrEnum>(const <BitesListMineUserUuidErrorComponentAttrEnum>[
   _$bitesListMineUserUuidErrorComponentAttrEnum_userUuid,
+  _$bitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesListMineUserUuidErrorComponentCodeEnum
@@ -33,6 +40,10 @@ const BitesListMineUserUuidErrorComponentCodeEnum
     _$bitesListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed =
     const BitesListMineUserUuidErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const BitesListMineUserUuidErrorComponentCodeEnum
+    _$bitesListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesListMineUserUuidErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListMineUserUuidErrorComponentCodeEnum
     _$bitesListMineUserUuidErrorComponentCodeEnumValueOf(String name) {
@@ -41,8 +52,10 @@ BitesListMineUserUuidErrorComponentCodeEnum
       return _$bitesListMineUserUuidErrorComponentCodeEnum_invalid;
     case 'nullCharactersNotAllowed':
       return _$bitesListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -51,6 +64,7 @@ final BuiltSet<BitesListMineUserUuidErrorComponentCodeEnum>
         BitesListMineUserUuidErrorComponentCodeEnum>(const <BitesListMineUserUuidErrorComponentCodeEnum>[
   _$bitesListMineUserUuidErrorComponentCodeEnum_invalid,
   _$bitesListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$bitesListMineUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListMineUserUuidErrorComponentAttrEnum>
@@ -65,9 +79,11 @@ class _$BitesListMineUserUuidErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesListMineUserUuidErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'userUuid': 'user_uuid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user_uuid': 'userUuid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -97,10 +113,12 @@ class _$BitesListMineUserUuidErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

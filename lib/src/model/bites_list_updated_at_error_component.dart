@@ -143,6 +143,8 @@ class BitesListUpdatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'updated_at')
   static const BitesListUpdatedAtErrorComponentAttrEnum updatedAt = _$bitesListUpdatedAtErrorComponentAttrEnum_updatedAt;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListUpdatedAtErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesListUpdatedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListUpdatedAtErrorComponentAttrEnum> get serializer => _$bitesListUpdatedAtErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BitesListUpdatedAtErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const BitesListUpdatedAtErrorComponentCodeEnum invalid = _$bitesListUpdatedAtErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListUpdatedAtErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesListUpdatedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListUpdatedAtErrorComponentCodeEnum> get serializer => _$bitesListUpdatedAtErrorComponentCodeEnumSerializer;
 

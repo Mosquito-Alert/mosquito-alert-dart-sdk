@@ -10,14 +10,20 @@ const BitesListLocationCountryIdErrorComponentAttrEnum
     _$bitesListLocationCountryIdErrorComponentAttrEnum_locationCountryId =
     const BitesListLocationCountryIdErrorComponentAttrEnum._(
         'locationCountryId');
+const BitesListLocationCountryIdErrorComponentAttrEnum
+    _$bitesListLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesListLocationCountryIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListLocationCountryIdErrorComponentAttrEnum
     _$bitesListLocationCountryIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'locationCountryId':
       return _$bitesListLocationCountryIdErrorComponentAttrEnum_locationCountryId;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,19 +31,26 @@ final BuiltSet<BitesListLocationCountryIdErrorComponentAttrEnum>
     _$bitesListLocationCountryIdErrorComponentAttrEnumValues = new BuiltSet<
         BitesListLocationCountryIdErrorComponentAttrEnum>(const <BitesListLocationCountryIdErrorComponentAttrEnum>[
   _$bitesListLocationCountryIdErrorComponentAttrEnum_locationCountryId,
+  _$bitesListLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesListLocationCountryIdErrorComponentCodeEnum
     _$bitesListLocationCountryIdErrorComponentCodeEnum_invalidChoice =
     const BitesListLocationCountryIdErrorComponentCodeEnum._('invalidChoice');
+const BitesListLocationCountryIdErrorComponentCodeEnum
+    _$bitesListLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesListLocationCountryIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListLocationCountryIdErrorComponentCodeEnum
     _$bitesListLocationCountryIdErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$bitesListLocationCountryIdErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -45,6 +58,7 @@ final BuiltSet<BitesListLocationCountryIdErrorComponentCodeEnum>
     _$bitesListLocationCountryIdErrorComponentCodeEnumValues = new BuiltSet<
         BitesListLocationCountryIdErrorComponentCodeEnum>(const <BitesListLocationCountryIdErrorComponentCodeEnum>[
   _$bitesListLocationCountryIdErrorComponentCodeEnum_invalidChoice,
+  _$bitesListLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListLocationCountryIdErrorComponentAttrEnum>
@@ -59,9 +73,11 @@ class _$BitesListLocationCountryIdErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesListLocationCountryIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationCountryId': 'location_country_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location_country_id': 'locationCountryId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -90,9 +106,11 @@ class _$BitesListLocationCountryIdErrorComponentCodeEnumSerializer
         PrimitiveSerializer<BitesListLocationCountryIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

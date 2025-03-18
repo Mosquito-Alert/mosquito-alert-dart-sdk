@@ -9,14 +9,20 @@ part of 'breedingsites_create_created_at_error_component.dart';
 const BreedingsitesCreateCreatedAtErrorComponentAttrEnum
     _$breedingsitesCreateCreatedAtErrorComponentAttrEnum_createdAt =
     const BreedingsitesCreateCreatedAtErrorComponentAttrEnum._('createdAt');
+const BreedingsitesCreateCreatedAtErrorComponentAttrEnum
+    _$breedingsitesCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateCreatedAtErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateCreatedAtErrorComponentAttrEnum
     _$breedingsitesCreateCreatedAtErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'createdAt':
       return _$breedingsitesCreateCreatedAtErrorComponentAttrEnum_createdAt;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BreedingsitesCreateCreatedAtErrorComponentAttrEnum>
     _$breedingsitesCreateCreatedAtErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesCreateCreatedAtErrorComponentAttrEnum>(const <BreedingsitesCreateCreatedAtErrorComponentAttrEnum>[
   _$breedingsitesCreateCreatedAtErrorComponentAttrEnum_createdAt,
+  _$breedingsitesCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateCreatedAtErrorComponentCodeEnum
@@ -44,6 +51,10 @@ const BreedingsitesCreateCreatedAtErrorComponentCodeEnum
 const BreedingsitesCreateCreatedAtErrorComponentCodeEnum
     _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_required_ =
     const BreedingsitesCreateCreatedAtErrorComponentCodeEnum._('required_');
+const BreedingsitesCreateCreatedAtErrorComponentCodeEnum
+    _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateCreatedAtErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateCreatedAtErrorComponentCodeEnum
     _$breedingsitesCreateCreatedAtErrorComponentCodeEnumValueOf(String name) {
@@ -60,8 +71,10 @@ BreedingsitesCreateCreatedAtErrorComponentCodeEnum
       return _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_overflow;
     case 'required_':
       return _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -74,6 +87,7 @@ final BuiltSet<BreedingsitesCreateCreatedAtErrorComponentCodeEnum>
   _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_null_,
   _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_overflow,
   _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_required_,
+  _$breedingsitesCreateCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateCreatedAtErrorComponentAttrEnum>
@@ -89,9 +103,11 @@ class _$BreedingsitesCreateCreatedAtErrorComponentAttrEnumSerializer
             BreedingsitesCreateCreatedAtErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'createdAt': 'created_at',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'created_at': 'createdAt',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -126,6 +142,7 @@ class _$BreedingsitesCreateCreatedAtErrorComponentCodeEnumSerializer
     'null_': 'null',
     'overflow': 'overflow',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'date': 'date',
@@ -134,6 +151,7 @@ class _$BreedingsitesCreateCreatedAtErrorComponentCodeEnumSerializer
     'null': 'null_',
     'overflow': 'overflow',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -143,6 +143,8 @@ class DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum extends EnumCla
 
   @BuiltValueEnumConst(wireName: r'mobile_app.non_field_errors')
   static const DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum mobileAppPeriodNonFieldErrors = _$devicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum_mobileAppPeriodNonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$devicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum> get serializer => _$devicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum extends EnumCla
   static const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum invalid = _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum null_ = _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum> get serializer => _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnumSerializer;
 

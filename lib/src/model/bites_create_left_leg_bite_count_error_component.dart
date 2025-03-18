@@ -143,6 +143,8 @@ class BitesCreateLeftLegBiteCountErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'left_leg_bite_count')
   static const BitesCreateLeftLegBiteCountErrorComponentAttrEnum leftLegBiteCount = _$bitesCreateLeftLegBiteCountErrorComponentAttrEnum_leftLegBiteCount;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateLeftLegBiteCountErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateLeftLegBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateLeftLegBiteCountErrorComponentAttrEnum> get serializer => _$bitesCreateLeftLegBiteCountErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class BitesCreateLeftLegBiteCountErrorComponentCodeEnum extends EnumClass {
   static const BitesCreateLeftLegBiteCountErrorComponentCodeEnum invalid = _$bitesCreateLeftLegBiteCountErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'max_string_length')
   static const BitesCreateLeftLegBiteCountErrorComponentCodeEnum maxStringLength = _$bitesCreateLeftLegBiteCountErrorComponentCodeEnum_maxStringLength;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateLeftLegBiteCountErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateLeftLegBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateLeftLegBiteCountErrorComponentCodeEnum> get serializer => _$bitesCreateLeftLegBiteCountErrorComponentCodeEnumSerializer;
 

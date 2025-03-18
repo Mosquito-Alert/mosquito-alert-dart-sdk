@@ -143,6 +143,8 @@ class BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum extends En
 
   @BuiltValueEnumConst(wireName: r'location.non_field_errors')
   static const BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum locationPeriodNonFieldErrors = _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum> get serializer => _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum extends En
   static const BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum null_ = _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum required_ = _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum> get serializer => _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnumSerializer;
 

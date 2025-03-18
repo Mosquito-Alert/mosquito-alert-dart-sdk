@@ -143,6 +143,8 @@ class DevicesCreateOsNameErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'os.name')
   static const DevicesCreateOsNameErrorComponentAttrEnum osPeriodName = _$devicesCreateOsNameErrorComponentAttrEnum_osPeriodName;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateOsNameErrorComponentAttrEnum unknownDefaultOpenApi = _$devicesCreateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateOsNameErrorComponentAttrEnum> get serializer => _$devicesCreateOsNameErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class DevicesCreateOsNameErrorComponentCodeEnum extends EnumClass {
   static const DevicesCreateOsNameErrorComponentCodeEnum required_ = _$devicesCreateOsNameErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const DevicesCreateOsNameErrorComponentCodeEnum surrogateCharactersNotAllowed = _$devicesCreateOsNameErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateOsNameErrorComponentCodeEnum unknownDefaultOpenApi = _$devicesCreateOsNameErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateOsNameErrorComponentCodeEnum> get serializer => _$devicesCreateOsNameErrorComponentCodeEnumSerializer;
 

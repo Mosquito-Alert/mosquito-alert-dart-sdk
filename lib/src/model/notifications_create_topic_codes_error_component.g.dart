@@ -9,14 +9,20 @@ part of 'notifications_create_topic_codes_error_component.dart';
 const NotificationsCreateTopicCodesErrorComponentAttrEnum
     _$notificationsCreateTopicCodesErrorComponentAttrEnum_topicCodes =
     const NotificationsCreateTopicCodesErrorComponentAttrEnum._('topicCodes');
+const NotificationsCreateTopicCodesErrorComponentAttrEnum
+    _$notificationsCreateTopicCodesErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsCreateTopicCodesErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateTopicCodesErrorComponentAttrEnum
     _$notificationsCreateTopicCodesErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'topicCodes':
       return _$notificationsCreateTopicCodesErrorComponentAttrEnum_topicCodes;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateTopicCodesErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateTopicCodesErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<NotificationsCreateTopicCodesErrorComponentAttrEnum>
     _$notificationsCreateTopicCodesErrorComponentAttrEnumValues = new BuiltSet<
         NotificationsCreateTopicCodesErrorComponentAttrEnum>(const <NotificationsCreateTopicCodesErrorComponentAttrEnum>[
   _$notificationsCreateTopicCodesErrorComponentAttrEnum_topicCodes,
+  _$notificationsCreateTopicCodesErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsCreateTopicCodesErrorComponentCodeEnum
@@ -38,6 +45,10 @@ const NotificationsCreateTopicCodesErrorComponentCodeEnum
 const NotificationsCreateTopicCodesErrorComponentCodeEnum
     _$notificationsCreateTopicCodesErrorComponentCodeEnum_required_ =
     const NotificationsCreateTopicCodesErrorComponentCodeEnum._('required_');
+const NotificationsCreateTopicCodesErrorComponentCodeEnum
+    _$notificationsCreateTopicCodesErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsCreateTopicCodesErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateTopicCodesErrorComponentCodeEnum
     _$notificationsCreateTopicCodesErrorComponentCodeEnumValueOf(String name) {
@@ -50,8 +61,10 @@ NotificationsCreateTopicCodesErrorComponentCodeEnum
       return _$notificationsCreateTopicCodesErrorComponentCodeEnum_null_;
     case 'required_':
       return _$notificationsCreateTopicCodesErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateTopicCodesErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateTopicCodesErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -62,6 +75,7 @@ final BuiltSet<NotificationsCreateTopicCodesErrorComponentCodeEnum>
   _$notificationsCreateTopicCodesErrorComponentCodeEnum_notAList,
   _$notificationsCreateTopicCodesErrorComponentCodeEnum_null_,
   _$notificationsCreateTopicCodesErrorComponentCodeEnum_required_,
+  _$notificationsCreateTopicCodesErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsCreateTopicCodesErrorComponentAttrEnum>
@@ -77,9 +91,11 @@ class _$NotificationsCreateTopicCodesErrorComponentAttrEnumSerializer
             NotificationsCreateTopicCodesErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'topicCodes': 'topic_codes',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'topic_codes': 'topicCodes',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -112,12 +128,14 @@ class _$NotificationsCreateTopicCodesErrorComponentCodeEnumSerializer
     'notAList': 'not_a_list',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'min_length': 'minLength',
     'not_a_list': 'notAList',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

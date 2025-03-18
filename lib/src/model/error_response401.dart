@@ -127,6 +127,8 @@ class ErrorResponse401TypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'client_error')
   static const ErrorResponse401TypeEnum clientError = _$errorResponse401TypeEnum_clientError;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ErrorResponse401TypeEnum unknownDefaultOpenApi = _$errorResponse401TypeEnum_unknownDefaultOpenApi;
 
   static Serializer<ErrorResponse401TypeEnum> get serializer => _$errorResponse401TypeEnumSerializer;
 

@@ -143,6 +143,8 @@ class BitesListOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')
   static const BitesListOrderByErrorComponentAttrEnum orderBy = _$bitesListOrderByErrorComponentAttrEnum_orderBy;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListOrderByErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListOrderByErrorComponentAttrEnum> get serializer => _$bitesListOrderByErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BitesListOrderByErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const BitesListOrderByErrorComponentCodeEnum invalidChoice = _$bitesListOrderByErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListOrderByErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListOrderByErrorComponentCodeEnum> get serializer => _$bitesListOrderByErrorComponentCodeEnumSerializer;
 

@@ -9,14 +9,19 @@ part of 'bites_create_tags_error_component.dart';
 const BitesCreateTagsErrorComponentAttrEnum
     _$bitesCreateTagsErrorComponentAttrEnum_tags =
     const BitesCreateTagsErrorComponentAttrEnum._('tags');
+const BitesCreateTagsErrorComponentAttrEnum
+    _$bitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateTagsErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 BitesCreateTagsErrorComponentAttrEnum
     _$bitesCreateTagsErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'tags':
       return _$bitesCreateTagsErrorComponentAttrEnum_tags;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<BitesCreateTagsErrorComponentAttrEnum>
     _$bitesCreateTagsErrorComponentAttrEnumValues = new BuiltSet<
         BitesCreateTagsErrorComponentAttrEnum>(const <BitesCreateTagsErrorComponentAttrEnum>[
   _$bitesCreateTagsErrorComponentAttrEnum_tags,
+  _$bitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateTagsErrorComponentCodeEnum
@@ -38,6 +44,9 @@ const BitesCreateTagsErrorComponentCodeEnum
 const BitesCreateTagsErrorComponentCodeEnum
     _$bitesCreateTagsErrorComponentCodeEnum_null_ =
     const BitesCreateTagsErrorComponentCodeEnum._('null_');
+const BitesCreateTagsErrorComponentCodeEnum
+    _$bitesCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateTagsErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 BitesCreateTagsErrorComponentCodeEnum
     _$bitesCreateTagsErrorComponentCodeEnumValueOf(String name) {
@@ -50,8 +59,10 @@ BitesCreateTagsErrorComponentCodeEnum
       return _$bitesCreateTagsErrorComponentCodeEnum_notAStr;
     case 'null_':
       return _$bitesCreateTagsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -62,6 +73,7 @@ final BuiltSet<BitesCreateTagsErrorComponentCodeEnum>
   _$bitesCreateTagsErrorComponentCodeEnum_notAList,
   _$bitesCreateTagsErrorComponentCodeEnum_notAStr,
   _$bitesCreateTagsErrorComponentCodeEnum_null_,
+  _$bitesCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateTagsErrorComponentAttrEnum>
@@ -75,9 +87,11 @@ class _$BitesCreateTagsErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesCreateTagsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'tags': 'tags',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'tags': 'tags',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -108,12 +122,14 @@ class _$BitesCreateTagsErrorComponentCodeEnumSerializer
     'notAList': 'not_a_list',
     'notAStr': 'not_a_str',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_json': 'invalidJson',
     'not_a_list': 'notAList',
     'not_a_str': 'notAStr',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

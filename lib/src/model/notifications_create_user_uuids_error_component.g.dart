@@ -9,14 +9,20 @@ part of 'notifications_create_user_uuids_error_component.dart';
 const NotificationsCreateUserUuidsErrorComponentAttrEnum
     _$notificationsCreateUserUuidsErrorComponentAttrEnum_userUuids =
     const NotificationsCreateUserUuidsErrorComponentAttrEnum._('userUuids');
+const NotificationsCreateUserUuidsErrorComponentAttrEnum
+    _$notificationsCreateUserUuidsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsCreateUserUuidsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateUserUuidsErrorComponentAttrEnum
     _$notificationsCreateUserUuidsErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'userUuids':
       return _$notificationsCreateUserUuidsErrorComponentAttrEnum_userUuids;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateUserUuidsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateUserUuidsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<NotificationsCreateUserUuidsErrorComponentAttrEnum>
     _$notificationsCreateUserUuidsErrorComponentAttrEnumValues = new BuiltSet<
         NotificationsCreateUserUuidsErrorComponentAttrEnum>(const <NotificationsCreateUserUuidsErrorComponentAttrEnum>[
   _$notificationsCreateUserUuidsErrorComponentAttrEnum_userUuids,
+  _$notificationsCreateUserUuidsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsCreateUserUuidsErrorComponentCodeEnum
@@ -38,6 +45,10 @@ const NotificationsCreateUserUuidsErrorComponentCodeEnum
 const NotificationsCreateUserUuidsErrorComponentCodeEnum
     _$notificationsCreateUserUuidsErrorComponentCodeEnum_required_ =
     const NotificationsCreateUserUuidsErrorComponentCodeEnum._('required_');
+const NotificationsCreateUserUuidsErrorComponentCodeEnum
+    _$notificationsCreateUserUuidsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsCreateUserUuidsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateUserUuidsErrorComponentCodeEnum
     _$notificationsCreateUserUuidsErrorComponentCodeEnumValueOf(String name) {
@@ -50,8 +61,10 @@ NotificationsCreateUserUuidsErrorComponentCodeEnum
       return _$notificationsCreateUserUuidsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$notificationsCreateUserUuidsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateUserUuidsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateUserUuidsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -62,6 +75,7 @@ final BuiltSet<NotificationsCreateUserUuidsErrorComponentCodeEnum>
   _$notificationsCreateUserUuidsErrorComponentCodeEnum_notAList,
   _$notificationsCreateUserUuidsErrorComponentCodeEnum_null_,
   _$notificationsCreateUserUuidsErrorComponentCodeEnum_required_,
+  _$notificationsCreateUserUuidsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsCreateUserUuidsErrorComponentAttrEnum>
@@ -77,9 +91,11 @@ class _$NotificationsCreateUserUuidsErrorComponentAttrEnumSerializer
             NotificationsCreateUserUuidsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'userUuids': 'user_uuids',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user_uuids': 'userUuids',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -112,12 +128,14 @@ class _$NotificationsCreateUserUuidsErrorComponentCodeEnumSerializer
     'notAList': 'not_a_list',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'min_length': 'minLength',
     'not_a_list': 'notAList',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

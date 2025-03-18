@@ -143,6 +143,8 @@ class BitesListMineLocationCountryIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location_country_id')
   static const BitesListMineLocationCountryIdErrorComponentAttrEnum locationCountryId = _$bitesListMineLocationCountryIdErrorComponentAttrEnum_locationCountryId;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListMineLocationCountryIdErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesListMineLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListMineLocationCountryIdErrorComponentAttrEnum> get serializer => _$bitesListMineLocationCountryIdErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BitesListMineLocationCountryIdErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const BitesListMineLocationCountryIdErrorComponentCodeEnum invalidChoice = _$bitesListMineLocationCountryIdErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListMineLocationCountryIdErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesListMineLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListMineLocationCountryIdErrorComponentCodeEnum> get serializer => _$bitesListMineLocationCountryIdErrorComponentCodeEnumSerializer;
 

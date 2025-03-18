@@ -143,6 +143,8 @@ class CampaignsListCountryIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'country_id')
   static const CampaignsListCountryIdErrorComponentAttrEnum countryId = _$campaignsListCountryIdErrorComponentAttrEnum_countryId;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const CampaignsListCountryIdErrorComponentAttrEnum unknownDefaultOpenApi = _$campaignsListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<CampaignsListCountryIdErrorComponentAttrEnum> get serializer => _$campaignsListCountryIdErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class CampaignsListCountryIdErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const CampaignsListCountryIdErrorComponentCodeEnum invalidChoice = _$campaignsListCountryIdErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const CampaignsListCountryIdErrorComponentCodeEnum unknownDefaultOpenApi = _$campaignsListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<CampaignsListCountryIdErrorComponentCodeEnum> get serializer => _$campaignsListCountryIdErrorComponentCodeEnumSerializer;
 

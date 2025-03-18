@@ -9,14 +9,19 @@ part of 'campaigns_list_validation_error.dart';
 const CampaignsListValidationErrorTypeEnum
     _$campaignsListValidationErrorTypeEnum_validationError =
     const CampaignsListValidationErrorTypeEnum._('validationError');
+const CampaignsListValidationErrorTypeEnum
+    _$campaignsListValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const CampaignsListValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 CampaignsListValidationErrorTypeEnum
     _$campaignsListValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$campaignsListValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$campaignsListValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$campaignsListValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<CampaignsListValidationErrorTypeEnum>
     _$campaignsListValidationErrorTypeEnumValues = new BuiltSet<
         CampaignsListValidationErrorTypeEnum>(const <CampaignsListValidationErrorTypeEnum>[
   _$campaignsListValidationErrorTypeEnum_validationError,
+  _$campaignsListValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<CampaignsListValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$CampaignsListValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<CampaignsListValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

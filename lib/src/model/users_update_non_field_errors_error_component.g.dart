@@ -9,14 +9,20 @@ part of 'users_update_non_field_errors_error_component.dart';
 const UsersUpdateNonFieldErrorsErrorComponentAttrEnum
     _$usersUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors =
     const UsersUpdateNonFieldErrorsErrorComponentAttrEnum._('nonFieldErrors');
+const UsersUpdateNonFieldErrorsErrorComponentAttrEnum
+    _$usersUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const UsersUpdateNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 UsersUpdateNonFieldErrorsErrorComponentAttrEnum
     _$usersUpdateNonFieldErrorsErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'nonFieldErrors':
       return _$usersUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$usersUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$usersUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<UsersUpdateNonFieldErrorsErrorComponentAttrEnum>
     _$usersUpdateNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
         UsersUpdateNonFieldErrorsErrorComponentAttrEnum>(const <UsersUpdateNonFieldErrorsErrorComponentAttrEnum>[
   _$usersUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
+  _$usersUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const UsersUpdateNonFieldErrorsErrorComponentCodeEnum
@@ -32,6 +39,10 @@ const UsersUpdateNonFieldErrorsErrorComponentCodeEnum
 const UsersUpdateNonFieldErrorsErrorComponentCodeEnum
     _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_null_ =
     const UsersUpdateNonFieldErrorsErrorComponentCodeEnum._('null_');
+const UsersUpdateNonFieldErrorsErrorComponentCodeEnum
+    _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const UsersUpdateNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 UsersUpdateNonFieldErrorsErrorComponentCodeEnum
     _$usersUpdateNonFieldErrorsErrorComponentCodeEnumValueOf(String name) {
@@ -40,8 +51,10 @@ UsersUpdateNonFieldErrorsErrorComponentCodeEnum
       return _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +63,7 @@ final BuiltSet<UsersUpdateNonFieldErrorsErrorComponentCodeEnum>
         UsersUpdateNonFieldErrorsErrorComponentCodeEnum>(const <UsersUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<UsersUpdateNonFieldErrorsErrorComponentAttrEnum>
@@ -64,9 +78,11 @@ class _$UsersUpdateNonFieldErrorsErrorComponentAttrEnumSerializer
         PrimitiveSerializer<UsersUpdateNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nonFieldErrors': 'non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'non_field_errors': 'nonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -96,10 +112,12 @@ class _$UsersUpdateNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

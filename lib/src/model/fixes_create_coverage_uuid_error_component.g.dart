@@ -9,14 +9,20 @@ part of 'fixes_create_coverage_uuid_error_component.dart';
 const FixesCreateCoverageUuidErrorComponentAttrEnum
     _$fixesCreateCoverageUuidErrorComponentAttrEnum_coverageUuid =
     const FixesCreateCoverageUuidErrorComponentAttrEnum._('coverageUuid');
+const FixesCreateCoverageUuidErrorComponentAttrEnum
+    _$fixesCreateCoverageUuidErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const FixesCreateCoverageUuidErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 FixesCreateCoverageUuidErrorComponentAttrEnum
     _$fixesCreateCoverageUuidErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'coverageUuid':
       return _$fixesCreateCoverageUuidErrorComponentAttrEnum_coverageUuid;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreateCoverageUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreateCoverageUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<FixesCreateCoverageUuidErrorComponentAttrEnum>
     _$fixesCreateCoverageUuidErrorComponentAttrEnumValues = new BuiltSet<
         FixesCreateCoverageUuidErrorComponentAttrEnum>(const <FixesCreateCoverageUuidErrorComponentAttrEnum>[
   _$fixesCreateCoverageUuidErrorComponentAttrEnum_coverageUuid,
+  _$fixesCreateCoverageUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const FixesCreateCoverageUuidErrorComponentCodeEnum
@@ -35,6 +42,10 @@ const FixesCreateCoverageUuidErrorComponentCodeEnum
 const FixesCreateCoverageUuidErrorComponentCodeEnum
     _$fixesCreateCoverageUuidErrorComponentCodeEnum_required_ =
     const FixesCreateCoverageUuidErrorComponentCodeEnum._('required_');
+const FixesCreateCoverageUuidErrorComponentCodeEnum
+    _$fixesCreateCoverageUuidErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const FixesCreateCoverageUuidErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 FixesCreateCoverageUuidErrorComponentCodeEnum
     _$fixesCreateCoverageUuidErrorComponentCodeEnumValueOf(String name) {
@@ -45,8 +56,10 @@ FixesCreateCoverageUuidErrorComponentCodeEnum
       return _$fixesCreateCoverageUuidErrorComponentCodeEnum_null_;
     case 'required_':
       return _$fixesCreateCoverageUuidErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreateCoverageUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreateCoverageUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -56,6 +69,7 @@ final BuiltSet<FixesCreateCoverageUuidErrorComponentCodeEnum>
   _$fixesCreateCoverageUuidErrorComponentCodeEnum_invalid,
   _$fixesCreateCoverageUuidErrorComponentCodeEnum_null_,
   _$fixesCreateCoverageUuidErrorComponentCodeEnum_required_,
+  _$fixesCreateCoverageUuidErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<FixesCreateCoverageUuidErrorComponentAttrEnum>
@@ -70,9 +84,11 @@ class _$FixesCreateCoverageUuidErrorComponentAttrEnumSerializer
         PrimitiveSerializer<FixesCreateCoverageUuidErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'coverageUuid': 'coverage_uuid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'coverage_uuid': 'coverageUuid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -103,11 +119,13 @@ class _$FixesCreateCoverageUuidErrorComponentCodeEnumSerializer
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

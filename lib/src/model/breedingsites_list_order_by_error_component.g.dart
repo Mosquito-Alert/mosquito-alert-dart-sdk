@@ -9,14 +9,20 @@ part of 'breedingsites_list_order_by_error_component.dart';
 const BreedingsitesListOrderByErrorComponentAttrEnum
     _$breedingsitesListOrderByErrorComponentAttrEnum_orderBy =
     const BreedingsitesListOrderByErrorComponentAttrEnum._('orderBy');
+const BreedingsitesListOrderByErrorComponentAttrEnum
+    _$breedingsitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesListOrderByErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListOrderByErrorComponentAttrEnum
     _$breedingsitesListOrderByErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'orderBy':
       return _$breedingsitesListOrderByErrorComponentAttrEnum_orderBy;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<BreedingsitesListOrderByErrorComponentAttrEnum>
     _$breedingsitesListOrderByErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesListOrderByErrorComponentAttrEnum>(const <BreedingsitesListOrderByErrorComponentAttrEnum>[
   _$breedingsitesListOrderByErrorComponentAttrEnum_orderBy,
+  _$breedingsitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesListOrderByErrorComponentCodeEnum
     _$breedingsitesListOrderByErrorComponentCodeEnum_invalidChoice =
     const BreedingsitesListOrderByErrorComponentCodeEnum._('invalidChoice');
+const BreedingsitesListOrderByErrorComponentCodeEnum
+    _$breedingsitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesListOrderByErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListOrderByErrorComponentCodeEnum
     _$breedingsitesListOrderByErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$breedingsitesListOrderByErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<BreedingsitesListOrderByErrorComponentCodeEnum>
     _$breedingsitesListOrderByErrorComponentCodeEnumValues = new BuiltSet<
         BreedingsitesListOrderByErrorComponentCodeEnum>(const <BreedingsitesListOrderByErrorComponentCodeEnum>[
   _$breedingsitesListOrderByErrorComponentCodeEnum_invalidChoice,
+  _$breedingsitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesListOrderByErrorComponentAttrEnum>
@@ -58,9 +72,11 @@ class _$BreedingsitesListOrderByErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BreedingsitesListOrderByErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'orderBy': 'order_by',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'order_by': 'orderBy',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -89,9 +105,11 @@ class _$BreedingsitesListOrderByErrorComponentCodeEnumSerializer
         PrimitiveSerializer<BreedingsitesListOrderByErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

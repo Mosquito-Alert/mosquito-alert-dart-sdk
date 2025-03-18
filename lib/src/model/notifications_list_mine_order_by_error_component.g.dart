@@ -9,14 +9,20 @@ part of 'notifications_list_mine_order_by_error_component.dart';
 const NotificationsListMineOrderByErrorComponentAttrEnum
     _$notificationsListMineOrderByErrorComponentAttrEnum_orderBy =
     const NotificationsListMineOrderByErrorComponentAttrEnum._('orderBy');
+const NotificationsListMineOrderByErrorComponentAttrEnum
+    _$notificationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsListMineOrderByErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsListMineOrderByErrorComponentAttrEnum
     _$notificationsListMineOrderByErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'orderBy':
       return _$notificationsListMineOrderByErrorComponentAttrEnum_orderBy;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<NotificationsListMineOrderByErrorComponentAttrEnum>
     _$notificationsListMineOrderByErrorComponentAttrEnumValues = new BuiltSet<
         NotificationsListMineOrderByErrorComponentAttrEnum>(const <NotificationsListMineOrderByErrorComponentAttrEnum>[
   _$notificationsListMineOrderByErrorComponentAttrEnum_orderBy,
+  _$notificationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsListMineOrderByErrorComponentCodeEnum
     _$notificationsListMineOrderByErrorComponentCodeEnum_invalidChoice =
     const NotificationsListMineOrderByErrorComponentCodeEnum._('invalidChoice');
+const NotificationsListMineOrderByErrorComponentCodeEnum
+    _$notificationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsListMineOrderByErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsListMineOrderByErrorComponentCodeEnum
     _$notificationsListMineOrderByErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$notificationsListMineOrderByErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<NotificationsListMineOrderByErrorComponentCodeEnum>
     _$notificationsListMineOrderByErrorComponentCodeEnumValues = new BuiltSet<
         NotificationsListMineOrderByErrorComponentCodeEnum>(const <NotificationsListMineOrderByErrorComponentCodeEnum>[
   _$notificationsListMineOrderByErrorComponentCodeEnum_invalidChoice,
+  _$notificationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsListMineOrderByErrorComponentAttrEnum>
@@ -59,9 +73,11 @@ class _$NotificationsListMineOrderByErrorComponentAttrEnumSerializer
             NotificationsListMineOrderByErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'orderBy': 'order_by',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'order_by': 'orderBy',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -91,9 +107,11 @@ class _$NotificationsListMineOrderByErrorComponentCodeEnumSerializer
             NotificationsListMineOrderByErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

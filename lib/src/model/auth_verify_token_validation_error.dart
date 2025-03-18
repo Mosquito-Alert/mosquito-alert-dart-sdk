@@ -127,6 +127,8 @@ class AuthVerifyTokenValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')
   static const AuthVerifyTokenValidationErrorTypeEnum validationError = _$authVerifyTokenValidationErrorTypeEnum_validationError;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthVerifyTokenValidationErrorTypeEnum unknownDefaultOpenApi = _$authVerifyTokenValidationErrorTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthVerifyTokenValidationErrorTypeEnum> get serializer => _$authVerifyTokenValidationErrorTypeEnumSerializer;
 

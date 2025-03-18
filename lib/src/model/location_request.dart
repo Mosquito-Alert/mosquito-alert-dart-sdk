@@ -136,6 +136,9 @@ class LocationRequestTypeEnum extends EnumClass {
   /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
   @BuiltValueEnumConst(wireName: r'missing')
   static const LocationRequestTypeEnum missing = _$locationRequestTypeEnum_missing;
+  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const LocationRequestTypeEnum unknownDefaultOpenApi = _$locationRequestTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<LocationRequestTypeEnum> get serializer => _$locationRequestTypeEnumSerializer;
 

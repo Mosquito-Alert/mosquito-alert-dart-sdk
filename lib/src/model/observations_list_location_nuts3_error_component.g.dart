@@ -10,14 +10,20 @@ const ObservationsListLocationNuts3ErrorComponentAttrEnum
     _$observationsListLocationNuts3ErrorComponentAttrEnum_locationNuts3 =
     const ObservationsListLocationNuts3ErrorComponentAttrEnum._(
         'locationNuts3');
+const ObservationsListLocationNuts3ErrorComponentAttrEnum
+    _$observationsListLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsListLocationNuts3ErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListLocationNuts3ErrorComponentAttrEnum
     _$observationsListLocationNuts3ErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'locationNuts3':
       return _$observationsListLocationNuts3ErrorComponentAttrEnum_locationNuts3;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,20 +31,27 @@ final BuiltSet<ObservationsListLocationNuts3ErrorComponentAttrEnum>
     _$observationsListLocationNuts3ErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsListLocationNuts3ErrorComponentAttrEnum>(const <ObservationsListLocationNuts3ErrorComponentAttrEnum>[
   _$observationsListLocationNuts3ErrorComponentAttrEnum_locationNuts3,
+  _$observationsListLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListLocationNuts3ErrorComponentCodeEnum
     _$observationsListLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed =
     const ObservationsListLocationNuts3ErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const ObservationsListLocationNuts3ErrorComponentCodeEnum
+    _$observationsListLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsListLocationNuts3ErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListLocationNuts3ErrorComponentCodeEnum
     _$observationsListLocationNuts3ErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'nullCharactersNotAllowed':
       return _$observationsListLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -46,6 +59,7 @@ final BuiltSet<ObservationsListLocationNuts3ErrorComponentCodeEnum>
     _$observationsListLocationNuts3ErrorComponentCodeEnumValues = new BuiltSet<
         ObservationsListLocationNuts3ErrorComponentCodeEnum>(const <ObservationsListLocationNuts3ErrorComponentCodeEnum>[
   _$observationsListLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$observationsListLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsListLocationNuts3ErrorComponentAttrEnum>
@@ -61,9 +75,11 @@ class _$ObservationsListLocationNuts3ErrorComponentAttrEnumSerializer
             ObservationsListLocationNuts3ErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationNuts3': 'location_nuts_3',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location_nuts_3': 'locationNuts3',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -93,9 +109,11 @@ class _$ObservationsListLocationNuts3ErrorComponentCodeEnumSerializer
             ObservationsListLocationNuts3ErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

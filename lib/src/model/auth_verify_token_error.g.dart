@@ -8,14 +8,19 @@ part of 'auth_verify_token_error.dart';
 
 const AuthVerifyTokenErrorAttrEnum _$authVerifyTokenErrorAttrEnum_token =
     const AuthVerifyTokenErrorAttrEnum._('token');
+const AuthVerifyTokenErrorAttrEnum
+    _$authVerifyTokenErrorAttrEnum_unknownDefaultOpenApi =
+    const AuthVerifyTokenErrorAttrEnum._('unknownDefaultOpenApi');
 
 AuthVerifyTokenErrorAttrEnum _$authVerifyTokenErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'token':
       return _$authVerifyTokenErrorAttrEnum_token;
+    case 'unknownDefaultOpenApi':
+      return _$authVerifyTokenErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authVerifyTokenErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -23,6 +28,7 @@ final BuiltSet<AuthVerifyTokenErrorAttrEnum>
     _$authVerifyTokenErrorAttrEnumValues = new BuiltSet<
         AuthVerifyTokenErrorAttrEnum>(const <AuthVerifyTokenErrorAttrEnum>[
   _$authVerifyTokenErrorAttrEnum_token,
+  _$authVerifyTokenErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthVerifyTokenErrorCodeEnum _$authVerifyTokenErrorCodeEnum_blank =
@@ -39,6 +45,9 @@ const AuthVerifyTokenErrorCodeEnum _$authVerifyTokenErrorCodeEnum_required_ =
 const AuthVerifyTokenErrorCodeEnum
     _$authVerifyTokenErrorCodeEnum_surrogateCharactersNotAllowed =
     const AuthVerifyTokenErrorCodeEnum._('surrogateCharactersNotAllowed');
+const AuthVerifyTokenErrorCodeEnum
+    _$authVerifyTokenErrorCodeEnum_unknownDefaultOpenApi =
+    const AuthVerifyTokenErrorCodeEnum._('unknownDefaultOpenApi');
 
 AuthVerifyTokenErrorCodeEnum _$authVerifyTokenErrorCodeEnumValueOf(
     String name) {
@@ -55,8 +64,10 @@ AuthVerifyTokenErrorCodeEnum _$authVerifyTokenErrorCodeEnumValueOf(
       return _$authVerifyTokenErrorCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$authVerifyTokenErrorCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$authVerifyTokenErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authVerifyTokenErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -69,6 +80,7 @@ final BuiltSet<AuthVerifyTokenErrorCodeEnum>
   _$authVerifyTokenErrorCodeEnum_nullCharactersNotAllowed,
   _$authVerifyTokenErrorCodeEnum_required_,
   _$authVerifyTokenErrorCodeEnum_surrogateCharactersNotAllowed,
+  _$authVerifyTokenErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthVerifyTokenErrorAttrEnum>
@@ -82,9 +94,11 @@ class _$AuthVerifyTokenErrorAttrEnumSerializer
     implements PrimitiveSerializer<AuthVerifyTokenErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'token': 'token',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'token': 'token',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -114,6 +128,7 @@ class _$AuthVerifyTokenErrorCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -122,6 +137,7 @@ class _$AuthVerifyTokenErrorCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

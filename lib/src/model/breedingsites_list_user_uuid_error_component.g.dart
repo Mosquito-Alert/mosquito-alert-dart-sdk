@@ -9,14 +9,20 @@ part of 'breedingsites_list_user_uuid_error_component.dart';
 const BreedingsitesListUserUuidErrorComponentAttrEnum
     _$breedingsitesListUserUuidErrorComponentAttrEnum_userUuid =
     const BreedingsitesListUserUuidErrorComponentAttrEnum._('userUuid');
+const BreedingsitesListUserUuidErrorComponentAttrEnum
+    _$breedingsitesListUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesListUserUuidErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListUserUuidErrorComponentAttrEnum
     _$breedingsitesListUserUuidErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'userUuid':
       return _$breedingsitesListUserUuidErrorComponentAttrEnum_userUuid;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BreedingsitesListUserUuidErrorComponentAttrEnum>
     _$breedingsitesListUserUuidErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesListUserUuidErrorComponentAttrEnum>(const <BreedingsitesListUserUuidErrorComponentAttrEnum>[
   _$breedingsitesListUserUuidErrorComponentAttrEnum_userUuid,
+  _$breedingsitesListUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesListUserUuidErrorComponentCodeEnum
@@ -33,6 +40,10 @@ const BreedingsitesListUserUuidErrorComponentCodeEnum
     _$breedingsitesListUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed =
     const BreedingsitesListUserUuidErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const BreedingsitesListUserUuidErrorComponentCodeEnum
+    _$breedingsitesListUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesListUserUuidErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListUserUuidErrorComponentCodeEnum
     _$breedingsitesListUserUuidErrorComponentCodeEnumValueOf(String name) {
@@ -41,8 +52,10 @@ BreedingsitesListUserUuidErrorComponentCodeEnum
       return _$breedingsitesListUserUuidErrorComponentCodeEnum_invalid;
     case 'nullCharactersNotAllowed':
       return _$breedingsitesListUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -51,6 +64,7 @@ final BuiltSet<BreedingsitesListUserUuidErrorComponentCodeEnum>
         BreedingsitesListUserUuidErrorComponentCodeEnum>(const <BreedingsitesListUserUuidErrorComponentCodeEnum>[
   _$breedingsitesListUserUuidErrorComponentCodeEnum_invalid,
   _$breedingsitesListUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$breedingsitesListUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesListUserUuidErrorComponentAttrEnum>
@@ -65,9 +79,11 @@ class _$BreedingsitesListUserUuidErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BreedingsitesListUserUuidErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'userUuid': 'user_uuid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user_uuid': 'userUuid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -97,10 +113,12 @@ class _$BreedingsitesListUserUuidErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

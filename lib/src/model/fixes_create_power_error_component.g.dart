@@ -9,14 +9,19 @@ part of 'fixes_create_power_error_component.dart';
 const FixesCreatePowerErrorComponentAttrEnum
     _$fixesCreatePowerErrorComponentAttrEnum_power =
     const FixesCreatePowerErrorComponentAttrEnum._('power');
+const FixesCreatePowerErrorComponentAttrEnum
+    _$fixesCreatePowerErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const FixesCreatePowerErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 FixesCreatePowerErrorComponentAttrEnum
     _$fixesCreatePowerErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'power':
       return _$fixesCreatePowerErrorComponentAttrEnum_power;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreatePowerErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreatePowerErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<FixesCreatePowerErrorComponentAttrEnum>
     _$fixesCreatePowerErrorComponentAttrEnumValues = new BuiltSet<
         FixesCreatePowerErrorComponentAttrEnum>(const <FixesCreatePowerErrorComponentAttrEnum>[
   _$fixesCreatePowerErrorComponentAttrEnum_power,
+  _$fixesCreatePowerErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const FixesCreatePowerErrorComponentCodeEnum
@@ -32,6 +38,9 @@ const FixesCreatePowerErrorComponentCodeEnum
 const FixesCreatePowerErrorComponentCodeEnum
     _$fixesCreatePowerErrorComponentCodeEnum_maxStringLength =
     const FixesCreatePowerErrorComponentCodeEnum._('maxStringLength');
+const FixesCreatePowerErrorComponentCodeEnum
+    _$fixesCreatePowerErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const FixesCreatePowerErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 FixesCreatePowerErrorComponentCodeEnum
     _$fixesCreatePowerErrorComponentCodeEnumValueOf(String name) {
@@ -40,8 +49,10 @@ FixesCreatePowerErrorComponentCodeEnum
       return _$fixesCreatePowerErrorComponentCodeEnum_invalid;
     case 'maxStringLength':
       return _$fixesCreatePowerErrorComponentCodeEnum_maxStringLength;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreatePowerErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreatePowerErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +61,7 @@ final BuiltSet<FixesCreatePowerErrorComponentCodeEnum>
         FixesCreatePowerErrorComponentCodeEnum>(const <FixesCreatePowerErrorComponentCodeEnum>[
   _$fixesCreatePowerErrorComponentCodeEnum_invalid,
   _$fixesCreatePowerErrorComponentCodeEnum_maxStringLength,
+  _$fixesCreatePowerErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<FixesCreatePowerErrorComponentAttrEnum>
@@ -63,9 +75,11 @@ class _$FixesCreatePowerErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<FixesCreatePowerErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'power': 'power',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'power': 'power',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -94,10 +108,12 @@ class _$FixesCreatePowerErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'maxStringLength': 'max_string_length',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

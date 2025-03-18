@@ -133,6 +133,8 @@ class MetaNotificationRequestReceiverTypeEnum extends EnumClass {
   static const MetaNotificationRequestReceiverTypeEnum user = _$metaNotificationRequestReceiverTypeEnum_user;
   @BuiltValueEnumConst(wireName: r'topic')
   static const MetaNotificationRequestReceiverTypeEnum topic = _$metaNotificationRequestReceiverTypeEnum_topic;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const MetaNotificationRequestReceiverTypeEnum unknownDefaultOpenApi = _$metaNotificationRequestReceiverTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<MetaNotificationRequestReceiverTypeEnum> get serializer => _$metaNotificationRequestReceiverTypeEnumSerializer;
 

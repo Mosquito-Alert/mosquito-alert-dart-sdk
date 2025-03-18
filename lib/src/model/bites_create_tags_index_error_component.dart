@@ -143,6 +143,8 @@ class BitesCreateTagsINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags.INDEX')
   static const BitesCreateTagsINDEXErrorComponentAttrEnum tagsPeriodINDEX = _$bitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateTagsINDEXErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateTagsINDEXErrorComponentAttrEnum> get serializer => _$bitesCreateTagsINDEXErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class BitesCreateTagsINDEXErrorComponentCodeEnum extends EnumClass {
   static const BitesCreateTagsINDEXErrorComponentCodeEnum required_ = _$bitesCreateTagsINDEXErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const BitesCreateTagsINDEXErrorComponentCodeEnum surrogateCharactersNotAllowed = _$bitesCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateTagsINDEXErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateTagsINDEXErrorComponentCodeEnum> get serializer => _$bitesCreateTagsINDEXErrorComponentCodeEnumSerializer;
 

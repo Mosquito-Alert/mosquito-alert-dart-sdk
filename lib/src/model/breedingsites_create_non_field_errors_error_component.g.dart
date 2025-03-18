@@ -10,6 +10,10 @@ const BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum
     _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors =
     const BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum._(
         'nonFieldErrors');
+const BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum
+    _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum
     _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'nonFieldErrors':
       return _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum>
     new BuiltSet<
         BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum>(const <BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum>[
   _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
+  _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum
@@ -35,6 +42,10 @@ const BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum
 const BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum
     _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_null_ =
     const BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum._('null_');
+const BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum
+    _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum
     _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -44,8 +55,10 @@ BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum
       return _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -55,6 +68,7 @@ final BuiltSet<BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum>
         BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum>(const <BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum>[
   _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum>
@@ -70,9 +84,11 @@ class _$BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer
             BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nonFieldErrors': 'non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'non_field_errors': 'nonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -104,10 +120,12 @@ class _$BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

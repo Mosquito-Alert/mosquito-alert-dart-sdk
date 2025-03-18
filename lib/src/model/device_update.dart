@@ -285,6 +285,8 @@ class DeviceUpdateTypeEnum extends EnumClass {
   static const DeviceUpdateTypeEnum android = _$deviceUpdateTypeEnum_android;
   @BuiltValueEnumConst(wireName: r'web')
   static const DeviceUpdateTypeEnum web = _$deviceUpdateTypeEnum_web;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DeviceUpdateTypeEnum unknownDefaultOpenApi = _$deviceUpdateTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<DeviceUpdateTypeEnum> get serializer => _$deviceUpdateTypeEnumSerializer;
 

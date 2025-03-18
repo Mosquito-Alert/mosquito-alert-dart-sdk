@@ -9,14 +9,19 @@ part of 'breedingsites_create_error.dart';
 const BreedingsitesCreateErrorAttrEnum
     _$breedingsitesCreateErrorAttrEnum_hasLarvae =
     const BreedingsitesCreateErrorAttrEnum._('hasLarvae');
+const BreedingsitesCreateErrorAttrEnum
+    _$breedingsitesCreateErrorAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 BreedingsitesCreateErrorAttrEnum _$breedingsitesCreateErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'hasLarvae':
       return _$breedingsitesCreateErrorAttrEnum_hasLarvae;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +29,25 @@ final BuiltSet<BreedingsitesCreateErrorAttrEnum>
     _$breedingsitesCreateErrorAttrEnumValues = new BuiltSet<
         BreedingsitesCreateErrorAttrEnum>(const <BreedingsitesCreateErrorAttrEnum>[
   _$breedingsitesCreateErrorAttrEnum_hasLarvae,
+  _$breedingsitesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateErrorCodeEnum
     _$breedingsitesCreateErrorCodeEnum_invalid =
     const BreedingsitesCreateErrorCodeEnum._('invalid');
+const BreedingsitesCreateErrorCodeEnum
+    _$breedingsitesCreateErrorCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateErrorCodeEnum._('unknownDefaultOpenApi');
 
 BreedingsitesCreateErrorCodeEnum _$breedingsitesCreateErrorCodeEnumValueOf(
     String name) {
   switch (name) {
     case 'invalid':
       return _$breedingsitesCreateErrorCodeEnum_invalid;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +55,7 @@ final BuiltSet<BreedingsitesCreateErrorCodeEnum>
     _$breedingsitesCreateErrorCodeEnumValues = new BuiltSet<
         BreedingsitesCreateErrorCodeEnum>(const <BreedingsitesCreateErrorCodeEnum>[
   _$breedingsitesCreateErrorCodeEnum_invalid,
+  _$breedingsitesCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateErrorAttrEnum>
@@ -57,9 +69,11 @@ class _$BreedingsitesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<BreedingsitesCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'hasLarvae': 'has_larvae',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'has_larvae': 'hasLarvae',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -85,9 +99,11 @@ class _$BreedingsitesCreateErrorCodeEnumSerializer
     implements PrimitiveSerializer<BreedingsitesCreateErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

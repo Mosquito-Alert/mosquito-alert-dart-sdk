@@ -9,14 +9,20 @@ part of 'breedingsites_create_sent_at_error_component.dart';
 const BreedingsitesCreateSentAtErrorComponentAttrEnum
     _$breedingsitesCreateSentAtErrorComponentAttrEnum_sentAt =
     const BreedingsitesCreateSentAtErrorComponentAttrEnum._('sentAt');
+const BreedingsitesCreateSentAtErrorComponentAttrEnum
+    _$breedingsitesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateSentAtErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateSentAtErrorComponentAttrEnum
     _$breedingsitesCreateSentAtErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'sentAt':
       return _$breedingsitesCreateSentAtErrorComponentAttrEnum_sentAt;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BreedingsitesCreateSentAtErrorComponentAttrEnum>
     _$breedingsitesCreateSentAtErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesCreateSentAtErrorComponentAttrEnum>(const <BreedingsitesCreateSentAtErrorComponentAttrEnum>[
   _$breedingsitesCreateSentAtErrorComponentAttrEnum_sentAt,
+  _$breedingsitesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateSentAtErrorComponentCodeEnum
@@ -44,6 +51,10 @@ const BreedingsitesCreateSentAtErrorComponentCodeEnum
 const BreedingsitesCreateSentAtErrorComponentCodeEnum
     _$breedingsitesCreateSentAtErrorComponentCodeEnum_required_ =
     const BreedingsitesCreateSentAtErrorComponentCodeEnum._('required_');
+const BreedingsitesCreateSentAtErrorComponentCodeEnum
+    _$breedingsitesCreateSentAtErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateSentAtErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateSentAtErrorComponentCodeEnum
     _$breedingsitesCreateSentAtErrorComponentCodeEnumValueOf(String name) {
@@ -60,8 +71,10 @@ BreedingsitesCreateSentAtErrorComponentCodeEnum
       return _$breedingsitesCreateSentAtErrorComponentCodeEnum_overflow;
     case 'required_':
       return _$breedingsitesCreateSentAtErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateSentAtErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateSentAtErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -74,6 +87,7 @@ final BuiltSet<BreedingsitesCreateSentAtErrorComponentCodeEnum>
   _$breedingsitesCreateSentAtErrorComponentCodeEnum_null_,
   _$breedingsitesCreateSentAtErrorComponentCodeEnum_overflow,
   _$breedingsitesCreateSentAtErrorComponentCodeEnum_required_,
+  _$breedingsitesCreateSentAtErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateSentAtErrorComponentAttrEnum>
@@ -88,9 +102,11 @@ class _$BreedingsitesCreateSentAtErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BreedingsitesCreateSentAtErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'sentAt': 'sent_at',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'sent_at': 'sentAt',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -124,6 +140,7 @@ class _$BreedingsitesCreateSentAtErrorComponentCodeEnumSerializer
     'null_': 'null',
     'overflow': 'overflow',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'date': 'date',
@@ -132,6 +149,7 @@ class _$BreedingsitesCreateSentAtErrorComponentCodeEnumSerializer
     'null': 'null_',
     'overflow': 'overflow',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

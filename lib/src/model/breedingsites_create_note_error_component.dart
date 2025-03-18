@@ -143,6 +143,8 @@ class BreedingsitesCreateNoteErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'note')
   static const BreedingsitesCreateNoteErrorComponentAttrEnum note = _$breedingsitesCreateNoteErrorComponentAttrEnum_note;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateNoteErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateNoteErrorComponentAttrEnum> get serializer => _$breedingsitesCreateNoteErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class BreedingsitesCreateNoteErrorComponentCodeEnum extends EnumClass {
   static const BreedingsitesCreateNoteErrorComponentCodeEnum nullCharactersNotAllowed = _$breedingsitesCreateNoteErrorComponentCodeEnum_nullCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const BreedingsitesCreateNoteErrorComponentCodeEnum surrogateCharactersNotAllowed = _$breedingsitesCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateNoteErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateNoteErrorComponentCodeEnum> get serializer => _$breedingsitesCreateNoteErrorComponentCodeEnumSerializer;
 

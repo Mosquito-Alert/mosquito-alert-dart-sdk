@@ -9,14 +9,20 @@ part of 'observations_list_short_id_error_component.dart';
 const ObservationsListShortIdErrorComponentAttrEnum
     _$observationsListShortIdErrorComponentAttrEnum_shortId =
     const ObservationsListShortIdErrorComponentAttrEnum._('shortId');
+const ObservationsListShortIdErrorComponentAttrEnum
+    _$observationsListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsListShortIdErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListShortIdErrorComponentAttrEnum
     _$observationsListShortIdErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'shortId':
       return _$observationsListShortIdErrorComponentAttrEnum_shortId;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,20 +30,27 @@ final BuiltSet<ObservationsListShortIdErrorComponentAttrEnum>
     _$observationsListShortIdErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsListShortIdErrorComponentAttrEnum>(const <ObservationsListShortIdErrorComponentAttrEnum>[
   _$observationsListShortIdErrorComponentAttrEnum_shortId,
+  _$observationsListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListShortIdErrorComponentCodeEnum
     _$observationsListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed =
     const ObservationsListShortIdErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const ObservationsListShortIdErrorComponentCodeEnum
+    _$observationsListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsListShortIdErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListShortIdErrorComponentCodeEnum
     _$observationsListShortIdErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'nullCharactersNotAllowed':
       return _$observationsListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -45,6 +58,7 @@ final BuiltSet<ObservationsListShortIdErrorComponentCodeEnum>
     _$observationsListShortIdErrorComponentCodeEnumValues = new BuiltSet<
         ObservationsListShortIdErrorComponentCodeEnum>(const <ObservationsListShortIdErrorComponentCodeEnum>[
   _$observationsListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$observationsListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsListShortIdErrorComponentAttrEnum>
@@ -59,9 +73,11 @@ class _$ObservationsListShortIdErrorComponentAttrEnumSerializer
         PrimitiveSerializer<ObservationsListShortIdErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'shortId': 'short_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'short_id': 'shortId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -90,9 +106,11 @@ class _$ObservationsListShortIdErrorComponentCodeEnumSerializer
         PrimitiveSerializer<ObservationsListShortIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

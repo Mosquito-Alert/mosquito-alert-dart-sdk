@@ -9,14 +9,19 @@ part of 'auth_verify_token_validation_error.dart';
 const AuthVerifyTokenValidationErrorTypeEnum
     _$authVerifyTokenValidationErrorTypeEnum_validationError =
     const AuthVerifyTokenValidationErrorTypeEnum._('validationError');
+const AuthVerifyTokenValidationErrorTypeEnum
+    _$authVerifyTokenValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const AuthVerifyTokenValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 AuthVerifyTokenValidationErrorTypeEnum
     _$authVerifyTokenValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$authVerifyTokenValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$authVerifyTokenValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authVerifyTokenValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<AuthVerifyTokenValidationErrorTypeEnum>
     _$authVerifyTokenValidationErrorTypeEnumValues = new BuiltSet<
         AuthVerifyTokenValidationErrorTypeEnum>(const <AuthVerifyTokenValidationErrorTypeEnum>[
   _$authVerifyTokenValidationErrorTypeEnum_validationError,
+  _$authVerifyTokenValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthVerifyTokenValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$AuthVerifyTokenValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<AuthVerifyTokenValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

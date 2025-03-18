@@ -10,6 +10,10 @@ const ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum
     _$observationsCreatePhotosINDEXFileErrorComponentAttrEnum_photosPeriodINDEXPeriodFile =
     const ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum._(
         'photosPeriodINDEXPeriodFile');
+const ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum
+    _$observationsCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum
     _$observationsCreatePhotosINDEXFileErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum
   switch (name) {
     case 'photosPeriodINDEXPeriodFile':
       return _$observationsCreatePhotosINDEXFileErrorComponentAttrEnum_photosPeriodINDEXPeriodFile;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum>
     new BuiltSet<
         ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum>(const <ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum>[
   _$observationsCreatePhotosINDEXFileErrorComponentAttrEnum_photosPeriodINDEXPeriodFile,
+  _$observationsCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum
@@ -49,6 +56,10 @@ const ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum
     _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_required_ =
     const ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum._(
         'required_');
+const ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum
+    _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum
     _$observationsCreatePhotosINDEXFileErrorComponentCodeEnumValueOf(
@@ -66,8 +77,10 @@ ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum
       return _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_null_;
     case 'required_':
       return _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -81,6 +94,7 @@ final BuiltSet<ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum>
   _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_noName,
   _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_null_,
   _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_required_,
+  _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum>
@@ -96,9 +110,11 @@ class _$ObservationsCreatePhotosINDEXFileErrorComponentAttrEnumSerializer
             ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'photosPeriodINDEXPeriodFile': 'photos.INDEX.file',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'photos.INDEX.file': 'photosPeriodINDEXPeriodFile',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -134,6 +150,7 @@ class _$ObservationsCreatePhotosINDEXFileErrorComponentCodeEnumSerializer
     'noName': 'no_name',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'empty': 'empty',
@@ -142,6 +159,7 @@ class _$ObservationsCreatePhotosINDEXFileErrorComponentCodeEnumSerializer
     'no_name': 'noName',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

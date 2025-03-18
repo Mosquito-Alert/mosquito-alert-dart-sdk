@@ -143,6 +143,8 @@ class BreedingsitesListUserUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuid')
   static const BreedingsitesListUserUuidErrorComponentAttrEnum userUuid = _$breedingsitesListUserUuidErrorComponentAttrEnum_userUuid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListUserUuidErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesListUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListUserUuidErrorComponentAttrEnum> get serializer => _$breedingsitesListUserUuidErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class BreedingsitesListUserUuidErrorComponentCodeEnum extends EnumClass {
   static const BreedingsitesListUserUuidErrorComponentCodeEnum invalid = _$breedingsitesListUserUuidErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const BreedingsitesListUserUuidErrorComponentCodeEnum nullCharactersNotAllowed = _$breedingsitesListUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListUserUuidErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesListUserUuidErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListUserUuidErrorComponentCodeEnum> get serializer => _$breedingsitesListUserUuidErrorComponentCodeEnumSerializer;
 

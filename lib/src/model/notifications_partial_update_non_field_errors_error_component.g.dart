@@ -10,6 +10,10 @@ const NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum
     _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors =
     const NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum._(
         'nonFieldErrors');
+const NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum
+    _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum
     _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'nonFieldErrors':
       return _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum>
     new BuiltSet<
         NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum>(const <NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum>[
   _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
+  _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum
@@ -37,6 +44,10 @@ const NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum
     _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_ =
     const NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum._(
         'null_');
+const NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum
+    _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum
     _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -46,8 +57,10 @@ NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum
       return _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -57,6 +70,7 @@ final BuiltSet<NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum>
         NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum>(const <NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum>
@@ -72,9 +86,11 @@ class _$NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer
             NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nonFieldErrors': 'non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'non_field_errors': 'nonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -106,10 +122,12 @@ class _$NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

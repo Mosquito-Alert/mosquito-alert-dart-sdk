@@ -143,6 +143,8 @@ class BreedingsitesCreateLocationTypeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.type')
   static const BreedingsitesCreateLocationTypeErrorComponentAttrEnum locationPeriodType = _$breedingsitesCreateLocationTypeErrorComponentAttrEnum_locationPeriodType;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateLocationTypeErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateLocationTypeErrorComponentAttrEnum> get serializer => _$breedingsitesCreateLocationTypeErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class BreedingsitesCreateLocationTypeErrorComponentCodeEnum extends EnumClass {
   static const BreedingsitesCreateLocationTypeErrorComponentCodeEnum null_ = _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const BreedingsitesCreateLocationTypeErrorComponentCodeEnum required_ = _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateLocationTypeErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateLocationTypeErrorComponentCodeEnum> get serializer => _$breedingsitesCreateLocationTypeErrorComponentCodeEnumSerializer;
 

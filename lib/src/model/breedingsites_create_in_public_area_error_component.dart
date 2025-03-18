@@ -143,6 +143,8 @@ class BreedingsitesCreateInPublicAreaErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'in_public_area')
   static const BreedingsitesCreateInPublicAreaErrorComponentAttrEnum inPublicArea = _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_inPublicArea;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateInPublicAreaErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateInPublicAreaErrorComponentAttrEnum> get serializer => _$breedingsitesCreateInPublicAreaErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BreedingsitesCreateInPublicAreaErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const BreedingsitesCreateInPublicAreaErrorComponentCodeEnum invalid = _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateInPublicAreaErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateInPublicAreaErrorComponentCodeEnum> get serializer => _$breedingsitesCreateInPublicAreaErrorComponentCodeEnumSerializer;
 

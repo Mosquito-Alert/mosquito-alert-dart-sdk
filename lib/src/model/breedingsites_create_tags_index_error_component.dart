@@ -143,6 +143,8 @@ class BreedingsitesCreateTagsINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags.INDEX')
   static const BreedingsitesCreateTagsINDEXErrorComponentAttrEnum tagsPeriodINDEX = _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateTagsINDEXErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateTagsINDEXErrorComponentAttrEnum> get serializer => _$breedingsitesCreateTagsINDEXErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class BreedingsitesCreateTagsINDEXErrorComponentCodeEnum extends EnumClass {
   static const BreedingsitesCreateTagsINDEXErrorComponentCodeEnum required_ = _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const BreedingsitesCreateTagsINDEXErrorComponentCodeEnum surrogateCharactersNotAllowed = _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateTagsINDEXErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateTagsINDEXErrorComponentCodeEnum> get serializer => _$breedingsitesCreateTagsINDEXErrorComponentCodeEnumSerializer;
 

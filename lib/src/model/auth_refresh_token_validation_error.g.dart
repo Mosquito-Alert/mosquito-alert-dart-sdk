@@ -9,14 +9,19 @@ part of 'auth_refresh_token_validation_error.dart';
 const AuthRefreshTokenValidationErrorTypeEnum
     _$authRefreshTokenValidationErrorTypeEnum_validationError =
     const AuthRefreshTokenValidationErrorTypeEnum._('validationError');
+const AuthRefreshTokenValidationErrorTypeEnum
+    _$authRefreshTokenValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const AuthRefreshTokenValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 AuthRefreshTokenValidationErrorTypeEnum
     _$authRefreshTokenValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$authRefreshTokenValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$authRefreshTokenValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authRefreshTokenValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<AuthRefreshTokenValidationErrorTypeEnum>
     _$authRefreshTokenValidationErrorTypeEnumValues = new BuiltSet<
         AuthRefreshTokenValidationErrorTypeEnum>(const <AuthRefreshTokenValidationErrorTypeEnum>[
   _$authRefreshTokenValidationErrorTypeEnum_validationError,
+  _$authRefreshTokenValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthRefreshTokenValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$AuthRefreshTokenValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<AuthRefreshTokenValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

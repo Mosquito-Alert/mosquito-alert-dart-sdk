@@ -17,6 +17,9 @@ const BiteRequestEventEnvironmentEnum
     const BiteRequestEventEnvironmentEnum._('vehicle');
 const BiteRequestEventEnvironmentEnum _$biteRequestEventEnvironmentEnum_empty =
     const BiteRequestEventEnvironmentEnum._('empty');
+const BiteRequestEventEnvironmentEnum
+    _$biteRequestEventEnvironmentEnum_unknownDefaultOpenApi =
+    const BiteRequestEventEnvironmentEnum._('unknownDefaultOpenApi');
 
 BiteRequestEventEnvironmentEnum _$biteRequestEventEnvironmentEnumValueOf(
     String name) {
@@ -29,8 +32,10 @@ BiteRequestEventEnvironmentEnum _$biteRequestEventEnvironmentEnumValueOf(
       return _$biteRequestEventEnvironmentEnum_vehicle;
     case 'empty':
       return _$biteRequestEventEnvironmentEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$biteRequestEventEnvironmentEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$biteRequestEventEnvironmentEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -41,6 +46,7 @@ final BuiltSet<BiteRequestEventEnvironmentEnum>
   _$biteRequestEventEnvironmentEnum_outdoors,
   _$biteRequestEventEnvironmentEnum_vehicle,
   _$biteRequestEventEnvironmentEnum_empty,
+  _$biteRequestEventEnvironmentEnum_unknownDefaultOpenApi,
 ]);
 
 const BiteRequestEventMomentEnum _$biteRequestEventMomentEnum_now =
@@ -55,6 +61,9 @@ const BiteRequestEventMomentEnum _$biteRequestEventMomentEnum_lastNight =
     const BiteRequestEventMomentEnum._('lastNight');
 const BiteRequestEventMomentEnum _$biteRequestEventMomentEnum_empty =
     const BiteRequestEventMomentEnum._('empty');
+const BiteRequestEventMomentEnum
+    _$biteRequestEventMomentEnum_unknownDefaultOpenApi =
+    const BiteRequestEventMomentEnum._('unknownDefaultOpenApi');
 
 BiteRequestEventMomentEnum _$biteRequestEventMomentEnumValueOf(String name) {
   switch (name) {
@@ -70,8 +79,10 @@ BiteRequestEventMomentEnum _$biteRequestEventMomentEnumValueOf(String name) {
       return _$biteRequestEventMomentEnum_lastNight;
     case 'empty':
       return _$biteRequestEventMomentEnum_empty;
+    case 'unknownDefaultOpenApi':
+      return _$biteRequestEventMomentEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$biteRequestEventMomentEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -83,6 +94,7 @@ final BuiltSet<BiteRequestEventMomentEnum> _$biteRequestEventMomentEnumValues =
   _$biteRequestEventMomentEnum_lastAfternoon,
   _$biteRequestEventMomentEnum_lastNight,
   _$biteRequestEventMomentEnum_empty,
+  _$biteRequestEventMomentEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BiteRequestEventEnvironmentEnum>
@@ -98,12 +110,14 @@ class _$BiteRequestEventEnvironmentEnumSerializer
     'outdoors': 'outdoors',
     'vehicle': 'vehicle',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'indoors': 'indoors',
     'outdoors': 'outdoors',
     'vehicle': 'vehicle',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -134,6 +148,7 @@ class _$BiteRequestEventMomentEnumSerializer
     'lastAfternoon': 'last_afternoon',
     'lastNight': 'last_night',
     'empty': '',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'now': 'now',
@@ -142,6 +157,7 @@ class _$BiteRequestEventMomentEnumSerializer
     'last_afternoon': 'lastAfternoon',
     'last_night': 'lastNight',
     '': 'empty',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

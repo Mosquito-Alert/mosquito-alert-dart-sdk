@@ -8,19 +8,24 @@ part of 'error404.dart';
 
 const Error404CodeEnum _$error404CodeEnum_notFound =
     const Error404CodeEnum._('notFound');
+const Error404CodeEnum _$error404CodeEnum_unknownDefaultOpenApi =
+    const Error404CodeEnum._('unknownDefaultOpenApi');
 
 Error404CodeEnum _$error404CodeEnumValueOf(String name) {
   switch (name) {
     case 'notFound':
       return _$error404CodeEnum_notFound;
+    case 'unknownDefaultOpenApi':
+      return _$error404CodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$error404CodeEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<Error404CodeEnum> _$error404CodeEnumValues =
     new BuiltSet<Error404CodeEnum>(const <Error404CodeEnum>[
   _$error404CodeEnum_notFound,
+  _$error404CodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<Error404CodeEnum> _$error404CodeEnumSerializer =
@@ -30,9 +35,11 @@ class _$Error404CodeEnumSerializer
     implements PrimitiveSerializer<Error404CodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'notFound': 'not_found',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'not_found': 'notFound',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

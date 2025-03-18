@@ -143,6 +143,8 @@ class BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum extends Enum
 
   @BuiltValueEnumConst(wireName: r'photos.non_field_errors')
   static const BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum photosPeriodNonFieldErrors = _$breedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum_photosPeriodNonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnum> get serializer => _$breedingsitesCreatePhotosNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum extends Enum
   static const BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum null_ = _$breedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum required_ = _$breedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnum> get serializer => _$breedingsitesCreatePhotosNonFieldErrorsErrorComponentCodeEnumSerializer;
 

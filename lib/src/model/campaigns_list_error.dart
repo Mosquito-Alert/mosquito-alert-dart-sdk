@@ -130,6 +130,8 @@ class CampaignsListErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')
   static const CampaignsListErrorAttrEnum orderBy = _$campaignsListErrorAttrEnum_orderBy;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const CampaignsListErrorAttrEnum unknownDefaultOpenApi = _$campaignsListErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<CampaignsListErrorAttrEnum> get serializer => _$campaignsListErrorAttrEnumSerializer;
 
@@ -143,6 +145,8 @@ class CampaignsListErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const CampaignsListErrorCodeEnum invalidChoice = _$campaignsListErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const CampaignsListErrorCodeEnum unknownDefaultOpenApi = _$campaignsListErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<CampaignsListErrorCodeEnum> get serializer => _$campaignsListErrorCodeEnumSerializer;
 

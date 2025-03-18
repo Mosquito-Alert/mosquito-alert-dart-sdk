@@ -9,14 +9,19 @@ part of 'devices_create_os_name_error_component.dart';
 const DevicesCreateOsNameErrorComponentAttrEnum
     _$devicesCreateOsNameErrorComponentAttrEnum_osPeriodName =
     const DevicesCreateOsNameErrorComponentAttrEnum._('osPeriodName');
+const DevicesCreateOsNameErrorComponentAttrEnum
+    _$devicesCreateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesCreateOsNameErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 DevicesCreateOsNameErrorComponentAttrEnum
     _$devicesCreateOsNameErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'osPeriodName':
       return _$devicesCreateOsNameErrorComponentAttrEnum_osPeriodName;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<DevicesCreateOsNameErrorComponentAttrEnum>
     _$devicesCreateOsNameErrorComponentAttrEnumValues = new BuiltSet<
         DevicesCreateOsNameErrorComponentAttrEnum>(const <DevicesCreateOsNameErrorComponentAttrEnum>[
   _$devicesCreateOsNameErrorComponentAttrEnum_osPeriodName,
+  _$devicesCreateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesCreateOsNameErrorComponentCodeEnum
@@ -46,6 +52,9 @@ const DevicesCreateOsNameErrorComponentCodeEnum
     _$devicesCreateOsNameErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const DevicesCreateOsNameErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const DevicesCreateOsNameErrorComponentCodeEnum
+    _$devicesCreateOsNameErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesCreateOsNameErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 DevicesCreateOsNameErrorComponentCodeEnum
     _$devicesCreateOsNameErrorComponentCodeEnumValueOf(String name) {
@@ -62,8 +71,10 @@ DevicesCreateOsNameErrorComponentCodeEnum
       return _$devicesCreateOsNameErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$devicesCreateOsNameErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateOsNameErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateOsNameErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -76,6 +87,7 @@ final BuiltSet<DevicesCreateOsNameErrorComponentCodeEnum>
   _$devicesCreateOsNameErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$devicesCreateOsNameErrorComponentCodeEnum_required_,
   _$devicesCreateOsNameErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesCreateOsNameErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesCreateOsNameErrorComponentAttrEnum>
@@ -89,9 +101,11 @@ class _$DevicesCreateOsNameErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<DevicesCreateOsNameErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'osPeriodName': 'os.name',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'os.name': 'osPeriodName',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -124,6 +138,7 @@ class _$DevicesCreateOsNameErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
@@ -132,6 +147,7 @@ class _$DevicesCreateOsNameErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

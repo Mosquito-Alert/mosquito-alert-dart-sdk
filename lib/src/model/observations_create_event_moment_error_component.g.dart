@@ -9,14 +9,20 @@ part of 'observations_create_event_moment_error_component.dart';
 const ObservationsCreateEventMomentErrorComponentAttrEnum
     _$observationsCreateEventMomentErrorComponentAttrEnum_eventMoment =
     const ObservationsCreateEventMomentErrorComponentAttrEnum._('eventMoment');
+const ObservationsCreateEventMomentErrorComponentAttrEnum
+    _$observationsCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateEventMomentErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateEventMomentErrorComponentAttrEnum
     _$observationsCreateEventMomentErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'eventMoment':
       return _$observationsCreateEventMomentErrorComponentAttrEnum_eventMoment;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,20 +30,27 @@ final BuiltSet<ObservationsCreateEventMomentErrorComponentAttrEnum>
     _$observationsCreateEventMomentErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsCreateEventMomentErrorComponentAttrEnum>(const <ObservationsCreateEventMomentErrorComponentAttrEnum>[
   _$observationsCreateEventMomentErrorComponentAttrEnum_eventMoment,
+  _$observationsCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateEventMomentErrorComponentCodeEnum
     _$observationsCreateEventMomentErrorComponentCodeEnum_invalidChoice =
     const ObservationsCreateEventMomentErrorComponentCodeEnum._(
         'invalidChoice');
+const ObservationsCreateEventMomentErrorComponentCodeEnum
+    _$observationsCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateEventMomentErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateEventMomentErrorComponentCodeEnum
     _$observationsCreateEventMomentErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$observationsCreateEventMomentErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -45,6 +58,7 @@ final BuiltSet<ObservationsCreateEventMomentErrorComponentCodeEnum>
     _$observationsCreateEventMomentErrorComponentCodeEnumValues = new BuiltSet<
         ObservationsCreateEventMomentErrorComponentCodeEnum>(const <ObservationsCreateEventMomentErrorComponentCodeEnum>[
   _$observationsCreateEventMomentErrorComponentCodeEnum_invalidChoice,
+  _$observationsCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateEventMomentErrorComponentAttrEnum>
@@ -60,9 +74,11 @@ class _$ObservationsCreateEventMomentErrorComponentAttrEnumSerializer
             ObservationsCreateEventMomentErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'eventMoment': 'event_moment',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'event_moment': 'eventMoment',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -92,9 +108,11 @@ class _$ObservationsCreateEventMomentErrorComponentCodeEnumSerializer
             ObservationsCreateEventMomentErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

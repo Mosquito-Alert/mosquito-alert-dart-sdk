@@ -9,14 +9,19 @@ part of 'bites_list_validation_error.dart';
 const BitesListValidationErrorTypeEnum
     _$bitesListValidationErrorTypeEnum_validationError =
     const BitesListValidationErrorTypeEnum._('validationError');
+const BitesListValidationErrorTypeEnum
+    _$bitesListValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const BitesListValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 BitesListValidationErrorTypeEnum _$bitesListValidationErrorTypeEnumValueOf(
     String name) {
   switch (name) {
     case 'validationError':
       return _$bitesListValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<BitesListValidationErrorTypeEnum>
     _$bitesListValidationErrorTypeEnumValues = new BuiltSet<
         BitesListValidationErrorTypeEnum>(const <BitesListValidationErrorTypeEnum>[
   _$bitesListValidationErrorTypeEnum_validationError,
+  _$bitesListValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$BitesListValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<BitesListValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

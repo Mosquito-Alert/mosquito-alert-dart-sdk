@@ -130,6 +130,8 @@ class NotificationsUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_read')
   static const NotificationsUpdateErrorAttrEnum isRead = _$notificationsUpdateErrorAttrEnum_isRead;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsUpdateErrorAttrEnum unknownDefaultOpenApi = _$notificationsUpdateErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsUpdateErrorAttrEnum> get serializer => _$notificationsUpdateErrorAttrEnumSerializer;
 
@@ -145,6 +147,8 @@ class NotificationsUpdateErrorCodeEnum extends EnumClass {
   static const NotificationsUpdateErrorCodeEnum null_ = _$notificationsUpdateErrorCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const NotificationsUpdateErrorCodeEnum required_ = _$notificationsUpdateErrorCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsUpdateErrorCodeEnum unknownDefaultOpenApi = _$notificationsUpdateErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsUpdateErrorCodeEnum> get serializer => _$notificationsUpdateErrorCodeEnumSerializer;
 

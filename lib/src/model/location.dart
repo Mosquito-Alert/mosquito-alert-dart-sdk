@@ -205,6 +205,9 @@ class LocationTypeEnum extends EnumClass {
   /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
   @BuiltValueEnumConst(wireName: r'missing')
   static const LocationTypeEnum missing = _$locationTypeEnum_missing;
+  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const LocationTypeEnum unknownDefaultOpenApi = _$locationTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<LocationTypeEnum> get serializer => _$locationTypeEnumSerializer;
 
@@ -1408,6 +1411,8 @@ class LocationTimezoneEnum extends EnumClass {
   static const LocationTimezoneEnum WET = _$locationTimezoneEnum_WET;
   @BuiltValueEnumConst(wireName: r'Zulu')
   static const LocationTimezoneEnum zulu = _$locationTimezoneEnum_zulu;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const LocationTimezoneEnum unknownDefaultOpenApi = _$locationTimezoneEnum_unknownDefaultOpenApi;
 
   static Serializer<LocationTimezoneEnum> get serializer => _$locationTimezoneEnumSerializer;
 

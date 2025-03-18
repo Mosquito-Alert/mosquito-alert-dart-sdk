@@ -127,6 +127,8 @@ class CampaignsListValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')
   static const CampaignsListValidationErrorTypeEnum validationError = _$campaignsListValidationErrorTypeEnum_validationError;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const CampaignsListValidationErrorTypeEnum unknownDefaultOpenApi = _$campaignsListValidationErrorTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<CampaignsListValidationErrorTypeEnum> get serializer => _$campaignsListValidationErrorTypeEnumSerializer;
 

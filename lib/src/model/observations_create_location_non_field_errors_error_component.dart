@@ -143,6 +143,8 @@ class ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum extends Enu
 
   @BuiltValueEnumConst(wireName: r'location.non_field_errors')
   static const ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum locationPeriodNonFieldErrors = _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum> get serializer => _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum extends Enu
   static const ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum null_ = _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum required_ = _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum> get serializer => _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnumSerializer;
 

@@ -9,14 +9,20 @@ part of 'breedingsites_create_tags_error_component.dart';
 const BreedingsitesCreateTagsErrorComponentAttrEnum
     _$breedingsitesCreateTagsErrorComponentAttrEnum_tags =
     const BreedingsitesCreateTagsErrorComponentAttrEnum._('tags');
+const BreedingsitesCreateTagsErrorComponentAttrEnum
+    _$breedingsitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateTagsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateTagsErrorComponentAttrEnum
     _$breedingsitesCreateTagsErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'tags':
       return _$breedingsitesCreateTagsErrorComponentAttrEnum_tags;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BreedingsitesCreateTagsErrorComponentAttrEnum>
     _$breedingsitesCreateTagsErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesCreateTagsErrorComponentAttrEnum>(const <BreedingsitesCreateTagsErrorComponentAttrEnum>[
   _$breedingsitesCreateTagsErrorComponentAttrEnum_tags,
+  _$breedingsitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateTagsErrorComponentCodeEnum
@@ -38,6 +45,10 @@ const BreedingsitesCreateTagsErrorComponentCodeEnum
 const BreedingsitesCreateTagsErrorComponentCodeEnum
     _$breedingsitesCreateTagsErrorComponentCodeEnum_null_ =
     const BreedingsitesCreateTagsErrorComponentCodeEnum._('null_');
+const BreedingsitesCreateTagsErrorComponentCodeEnum
+    _$breedingsitesCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateTagsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateTagsErrorComponentCodeEnum
     _$breedingsitesCreateTagsErrorComponentCodeEnumValueOf(String name) {
@@ -50,8 +61,10 @@ BreedingsitesCreateTagsErrorComponentCodeEnum
       return _$breedingsitesCreateTagsErrorComponentCodeEnum_notAStr;
     case 'null_':
       return _$breedingsitesCreateTagsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -62,6 +75,7 @@ final BuiltSet<BreedingsitesCreateTagsErrorComponentCodeEnum>
   _$breedingsitesCreateTagsErrorComponentCodeEnum_notAList,
   _$breedingsitesCreateTagsErrorComponentCodeEnum_notAStr,
   _$breedingsitesCreateTagsErrorComponentCodeEnum_null_,
+  _$breedingsitesCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateTagsErrorComponentAttrEnum>
@@ -76,9 +90,11 @@ class _$BreedingsitesCreateTagsErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BreedingsitesCreateTagsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'tags': 'tags',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'tags': 'tags',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -110,12 +126,14 @@ class _$BreedingsitesCreateTagsErrorComponentCodeEnumSerializer
     'notAList': 'not_a_list',
     'notAStr': 'not_a_str',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_json': 'invalidJson',
     'not_a_list': 'notAList',
     'not_a_str': 'notAStr',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

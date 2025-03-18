@@ -143,6 +143,8 @@ class BitesCreateEventMomentErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'event_moment')
   static const BitesCreateEventMomentErrorComponentAttrEnum eventMoment = _$bitesCreateEventMomentErrorComponentAttrEnum_eventMoment;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateEventMomentErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateEventMomentErrorComponentAttrEnum> get serializer => _$bitesCreateEventMomentErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BitesCreateEventMomentErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const BitesCreateEventMomentErrorComponentCodeEnum invalidChoice = _$bitesCreateEventMomentErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateEventMomentErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateEventMomentErrorComponentCodeEnum> get serializer => _$bitesCreateEventMomentErrorComponentCodeEnumSerializer;
 

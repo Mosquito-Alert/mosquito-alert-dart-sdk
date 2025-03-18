@@ -8,25 +8,34 @@ part of 'users_update_error.dart';
 
 const UsersUpdateErrorAttrEnum _$usersUpdateErrorAttrEnum_locale =
     const UsersUpdateErrorAttrEnum._('locale');
+const UsersUpdateErrorAttrEnum
+    _$usersUpdateErrorAttrEnum_unknownDefaultOpenApi =
+    const UsersUpdateErrorAttrEnum._('unknownDefaultOpenApi');
 
 UsersUpdateErrorAttrEnum _$usersUpdateErrorAttrEnumValueOf(String name) {
   switch (name) {
     case 'locale':
       return _$usersUpdateErrorAttrEnum_locale;
+    case 'unknownDefaultOpenApi':
+      return _$usersUpdateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$usersUpdateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<UsersUpdateErrorAttrEnum> _$usersUpdateErrorAttrEnumValues =
     new BuiltSet<UsersUpdateErrorAttrEnum>(const <UsersUpdateErrorAttrEnum>[
   _$usersUpdateErrorAttrEnum_locale,
+  _$usersUpdateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnum_invalidChoice =
     const UsersUpdateErrorCodeEnum._('invalidChoice');
 const UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnum_null_ =
     const UsersUpdateErrorCodeEnum._('null_');
+const UsersUpdateErrorCodeEnum
+    _$usersUpdateErrorCodeEnum_unknownDefaultOpenApi =
+    const UsersUpdateErrorCodeEnum._('unknownDefaultOpenApi');
 
 UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnumValueOf(String name) {
   switch (name) {
@@ -34,8 +43,10 @@ UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnumValueOf(String name) {
       return _$usersUpdateErrorCodeEnum_invalidChoice;
     case 'null_':
       return _$usersUpdateErrorCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$usersUpdateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$usersUpdateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -43,6 +54,7 @@ final BuiltSet<UsersUpdateErrorCodeEnum> _$usersUpdateErrorCodeEnumValues =
     new BuiltSet<UsersUpdateErrorCodeEnum>(const <UsersUpdateErrorCodeEnum>[
   _$usersUpdateErrorCodeEnum_invalidChoice,
   _$usersUpdateErrorCodeEnum_null_,
+  _$usersUpdateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<UsersUpdateErrorAttrEnum> _$usersUpdateErrorAttrEnumSerializer =
@@ -54,9 +66,11 @@ class _$UsersUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<UsersUpdateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locale': 'locale',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'locale': 'locale',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -82,10 +96,12 @@ class _$UsersUpdateErrorCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

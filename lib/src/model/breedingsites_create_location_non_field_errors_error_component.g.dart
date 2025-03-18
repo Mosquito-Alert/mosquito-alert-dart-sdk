@@ -10,6 +10,10 @@ const BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum
     _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors =
     const BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum._(
         'locationPeriodNonFieldErrors');
+const BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum
+    _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum
     _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'locationPeriodNonFieldErrors':
       return _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum>
     new BuiltSet<
         BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum>(const <BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum>[
   _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors,
+  _$breedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
@@ -41,6 +48,10 @@ const BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
     _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_ =
     const BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum._(
         'required_');
+const BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
+    _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
     _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -52,8 +63,10 @@ BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum
       return _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -64,6 +77,7 @@ final BuiltSet<BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum>
   _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_null_,
   _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_,
+  _$breedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum>
@@ -79,9 +93,11 @@ class _$BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnumSerialize
             BreedingsitesCreateLocationNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationPeriodNonFieldErrors': 'location.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location.non_field_errors': 'locationPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -116,11 +132,13 @@ class _$BreedingsitesCreateLocationNonFieldErrorsErrorComponentCodeEnumSerialize
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

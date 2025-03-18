@@ -143,6 +143,8 @@ class BitesCreateCreatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'created_at')
   static const BitesCreateCreatedAtErrorComponentAttrEnum createdAt = _$bitesCreateCreatedAtErrorComponentAttrEnum_createdAt;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateCreatedAtErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateCreatedAtErrorComponentAttrEnum> get serializer => _$bitesCreateCreatedAtErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class BitesCreateCreatedAtErrorComponentCodeEnum extends EnumClass {
   static const BitesCreateCreatedAtErrorComponentCodeEnum overflow = _$bitesCreateCreatedAtErrorComponentCodeEnum_overflow;
   @BuiltValueEnumConst(wireName: r'required')
   static const BitesCreateCreatedAtErrorComponentCodeEnum required_ = _$bitesCreateCreatedAtErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateCreatedAtErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateCreatedAtErrorComponentCodeEnum> get serializer => _$bitesCreateCreatedAtErrorComponentCodeEnumSerializer;
 

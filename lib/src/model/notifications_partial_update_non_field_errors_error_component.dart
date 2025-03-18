@@ -143,6 +143,8 @@ class NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum extends Enu
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')
   static const NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum nonFieldErrors = _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum> get serializer => _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum extends Enu
   static const NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum invalid = _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum null_ = _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum> get serializer => _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer;
 

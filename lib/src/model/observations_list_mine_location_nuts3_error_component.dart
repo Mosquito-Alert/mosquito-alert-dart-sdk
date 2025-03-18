@@ -143,6 +143,8 @@ class ObservationsListMineLocationNuts3ErrorComponentAttrEnum extends EnumClass 
 
   @BuiltValueEnumConst(wireName: r'location_nuts_3')
   static const ObservationsListMineLocationNuts3ErrorComponentAttrEnum locationNuts3 = _$observationsListMineLocationNuts3ErrorComponentAttrEnum_locationNuts3;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListMineLocationNuts3ErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsListMineLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListMineLocationNuts3ErrorComponentAttrEnum> get serializer => _$observationsListMineLocationNuts3ErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class ObservationsListMineLocationNuts3ErrorComponentCodeEnum extends EnumClass 
 
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const ObservationsListMineLocationNuts3ErrorComponentCodeEnum nullCharactersNotAllowed = _$observationsListMineLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListMineLocationNuts3ErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsListMineLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListMineLocationNuts3ErrorComponentCodeEnum> get serializer => _$observationsListMineLocationNuts3ErrorComponentCodeEnumSerializer;
 

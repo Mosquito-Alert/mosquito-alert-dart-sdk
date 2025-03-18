@@ -9,14 +9,20 @@ part of 'breedingsites_create_has_larvae_error_component.dart';
 const BreedingsitesCreateHasLarvaeErrorComponentAttrEnum
     _$breedingsitesCreateHasLarvaeErrorComponentAttrEnum_hasLarvae =
     const BreedingsitesCreateHasLarvaeErrorComponentAttrEnum._('hasLarvae');
+const BreedingsitesCreateHasLarvaeErrorComponentAttrEnum
+    _$breedingsitesCreateHasLarvaeErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateHasLarvaeErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateHasLarvaeErrorComponentAttrEnum
     _$breedingsitesCreateHasLarvaeErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'hasLarvae':
       return _$breedingsitesCreateHasLarvaeErrorComponentAttrEnum_hasLarvae;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateHasLarvaeErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateHasLarvaeErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<BreedingsitesCreateHasLarvaeErrorComponentAttrEnum>
     _$breedingsitesCreateHasLarvaeErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesCreateHasLarvaeErrorComponentAttrEnum>(const <BreedingsitesCreateHasLarvaeErrorComponentAttrEnum>[
   _$breedingsitesCreateHasLarvaeErrorComponentAttrEnum_hasLarvae,
+  _$breedingsitesCreateHasLarvaeErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateHasLarvaeErrorComponentCodeEnum
     _$breedingsitesCreateHasLarvaeErrorComponentCodeEnum_invalid =
     const BreedingsitesCreateHasLarvaeErrorComponentCodeEnum._('invalid');
+const BreedingsitesCreateHasLarvaeErrorComponentCodeEnum
+    _$breedingsitesCreateHasLarvaeErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateHasLarvaeErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateHasLarvaeErrorComponentCodeEnum
     _$breedingsitesCreateHasLarvaeErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalid':
       return _$breedingsitesCreateHasLarvaeErrorComponentCodeEnum_invalid;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateHasLarvaeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateHasLarvaeErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<BreedingsitesCreateHasLarvaeErrorComponentCodeEnum>
     _$breedingsitesCreateHasLarvaeErrorComponentCodeEnumValues = new BuiltSet<
         BreedingsitesCreateHasLarvaeErrorComponentCodeEnum>(const <BreedingsitesCreateHasLarvaeErrorComponentCodeEnum>[
   _$breedingsitesCreateHasLarvaeErrorComponentCodeEnum_invalid,
+  _$breedingsitesCreateHasLarvaeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateHasLarvaeErrorComponentAttrEnum>
@@ -59,9 +73,11 @@ class _$BreedingsitesCreateHasLarvaeErrorComponentAttrEnumSerializer
             BreedingsitesCreateHasLarvaeErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'hasLarvae': 'has_larvae',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'has_larvae': 'hasLarvae',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -91,9 +107,11 @@ class _$BreedingsitesCreateHasLarvaeErrorComponentCodeEnumSerializer
             BreedingsitesCreateHasLarvaeErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

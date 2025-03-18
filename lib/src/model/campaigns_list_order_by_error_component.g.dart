@@ -9,14 +9,19 @@ part of 'campaigns_list_order_by_error_component.dart';
 const CampaignsListOrderByErrorComponentAttrEnum
     _$campaignsListOrderByErrorComponentAttrEnum_orderBy =
     const CampaignsListOrderByErrorComponentAttrEnum._('orderBy');
+const CampaignsListOrderByErrorComponentAttrEnum
+    _$campaignsListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const CampaignsListOrderByErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 CampaignsListOrderByErrorComponentAttrEnum
     _$campaignsListOrderByErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'orderBy':
       return _$campaignsListOrderByErrorComponentAttrEnum_orderBy;
+    case 'unknownDefaultOpenApi':
+      return _$campaignsListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$campaignsListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +29,25 @@ final BuiltSet<CampaignsListOrderByErrorComponentAttrEnum>
     _$campaignsListOrderByErrorComponentAttrEnumValues = new BuiltSet<
         CampaignsListOrderByErrorComponentAttrEnum>(const <CampaignsListOrderByErrorComponentAttrEnum>[
   _$campaignsListOrderByErrorComponentAttrEnum_orderBy,
+  _$campaignsListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const CampaignsListOrderByErrorComponentCodeEnum
     _$campaignsListOrderByErrorComponentCodeEnum_invalidChoice =
     const CampaignsListOrderByErrorComponentCodeEnum._('invalidChoice');
+const CampaignsListOrderByErrorComponentCodeEnum
+    _$campaignsListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const CampaignsListOrderByErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 CampaignsListOrderByErrorComponentCodeEnum
     _$campaignsListOrderByErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$campaignsListOrderByErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$campaignsListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$campaignsListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +55,7 @@ final BuiltSet<CampaignsListOrderByErrorComponentCodeEnum>
     _$campaignsListOrderByErrorComponentCodeEnumValues = new BuiltSet<
         CampaignsListOrderByErrorComponentCodeEnum>(const <CampaignsListOrderByErrorComponentCodeEnum>[
   _$campaignsListOrderByErrorComponentCodeEnum_invalidChoice,
+  _$campaignsListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<CampaignsListOrderByErrorComponentAttrEnum>
@@ -57,9 +69,11 @@ class _$CampaignsListOrderByErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<CampaignsListOrderByErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'orderBy': 'order_by',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'order_by': 'orderBy',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -87,9 +101,11 @@ class _$CampaignsListOrderByErrorComponentCodeEnumSerializer
     implements PrimitiveSerializer<CampaignsListOrderByErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -143,6 +143,8 @@ class ObservationsListMineShortIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short_id')
   static const ObservationsListMineShortIdErrorComponentAttrEnum shortId = _$observationsListMineShortIdErrorComponentAttrEnum_shortId;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListMineShortIdErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListMineShortIdErrorComponentAttrEnum> get serializer => _$observationsListMineShortIdErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class ObservationsListMineShortIdErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const ObservationsListMineShortIdErrorComponentCodeEnum nullCharactersNotAllowed = _$observationsListMineShortIdErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListMineShortIdErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListMineShortIdErrorComponentCodeEnum> get serializer => _$observationsListMineShortIdErrorComponentCodeEnumSerializer;
 

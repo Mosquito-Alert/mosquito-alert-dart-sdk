@@ -8,25 +8,34 @@ part of 'bites_create_error.dart';
 
 const BitesCreateErrorAttrEnum _$bitesCreateErrorAttrEnum_rightLegBiteCount =
     const BitesCreateErrorAttrEnum._('rightLegBiteCount');
+const BitesCreateErrorAttrEnum
+    _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 BitesCreateErrorAttrEnum _$bitesCreateErrorAttrEnumValueOf(String name) {
   switch (name) {
     case 'rightLegBiteCount':
       return _$bitesCreateErrorAttrEnum_rightLegBiteCount;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<BitesCreateErrorAttrEnum> _$bitesCreateErrorAttrEnumValues =
     new BuiltSet<BitesCreateErrorAttrEnum>(const <BitesCreateErrorAttrEnum>[
   _$bitesCreateErrorAttrEnum_rightLegBiteCount,
+  _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateErrorCodeEnum _$bitesCreateErrorCodeEnum_invalid =
     const BitesCreateErrorCodeEnum._('invalid');
 const BitesCreateErrorCodeEnum _$bitesCreateErrorCodeEnum_maxStringLength =
     const BitesCreateErrorCodeEnum._('maxStringLength');
+const BitesCreateErrorCodeEnum
+    _$bitesCreateErrorCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateErrorCodeEnum._('unknownDefaultOpenApi');
 
 BitesCreateErrorCodeEnum _$bitesCreateErrorCodeEnumValueOf(String name) {
   switch (name) {
@@ -34,8 +43,10 @@ BitesCreateErrorCodeEnum _$bitesCreateErrorCodeEnumValueOf(String name) {
       return _$bitesCreateErrorCodeEnum_invalid;
     case 'maxStringLength':
       return _$bitesCreateErrorCodeEnum_maxStringLength;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -43,6 +54,7 @@ final BuiltSet<BitesCreateErrorCodeEnum> _$bitesCreateErrorCodeEnumValues =
     new BuiltSet<BitesCreateErrorCodeEnum>(const <BitesCreateErrorCodeEnum>[
   _$bitesCreateErrorCodeEnum_invalid,
   _$bitesCreateErrorCodeEnum_maxStringLength,
+  _$bitesCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateErrorAttrEnum> _$bitesCreateErrorAttrEnumSerializer =
@@ -54,9 +66,11 @@ class _$BitesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<BitesCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'rightLegBiteCount': 'right_leg_bite_count',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'right_leg_bite_count': 'rightLegBiteCount',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -82,10 +96,12 @@ class _$BitesCreateErrorCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'maxStringLength': 'max_string_length',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

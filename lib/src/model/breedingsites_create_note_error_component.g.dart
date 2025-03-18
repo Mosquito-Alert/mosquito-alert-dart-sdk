@@ -9,14 +9,20 @@ part of 'breedingsites_create_note_error_component.dart';
 const BreedingsitesCreateNoteErrorComponentAttrEnum
     _$breedingsitesCreateNoteErrorComponentAttrEnum_note =
     const BreedingsitesCreateNoteErrorComponentAttrEnum._('note');
+const BreedingsitesCreateNoteErrorComponentAttrEnum
+    _$breedingsitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateNoteErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateNoteErrorComponentAttrEnum
     _$breedingsitesCreateNoteErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'note':
       return _$breedingsitesCreateNoteErrorComponentAttrEnum_note;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BreedingsitesCreateNoteErrorComponentAttrEnum>
     _$breedingsitesCreateNoteErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesCreateNoteErrorComponentAttrEnum>(const <BreedingsitesCreateNoteErrorComponentAttrEnum>[
   _$breedingsitesCreateNoteErrorComponentAttrEnum_note,
+  _$breedingsitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateNoteErrorComponentCodeEnum
@@ -37,6 +44,10 @@ const BreedingsitesCreateNoteErrorComponentCodeEnum
     _$breedingsitesCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const BreedingsitesCreateNoteErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const BreedingsitesCreateNoteErrorComponentCodeEnum
+    _$breedingsitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateNoteErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateNoteErrorComponentCodeEnum
     _$breedingsitesCreateNoteErrorComponentCodeEnumValueOf(String name) {
@@ -47,8 +58,10 @@ BreedingsitesCreateNoteErrorComponentCodeEnum
       return _$breedingsitesCreateNoteErrorComponentCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$breedingsitesCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -58,6 +71,7 @@ final BuiltSet<BreedingsitesCreateNoteErrorComponentCodeEnum>
   _$breedingsitesCreateNoteErrorComponentCodeEnum_invalid,
   _$breedingsitesCreateNoteErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$breedingsitesCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$breedingsitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateNoteErrorComponentAttrEnum>
@@ -72,9 +86,11 @@ class _$BreedingsitesCreateNoteErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BreedingsitesCreateNoteErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'note': 'note',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'note': 'note',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -105,11 +121,13 @@ class _$BreedingsitesCreateNoteErrorComponentCodeEnumSerializer
     'invalid': 'invalid',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

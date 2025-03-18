@@ -8,36 +8,48 @@ part of 'bites_list_mine_error.dart';
 
 const BitesListMineErrorAttrEnum _$bitesListMineErrorAttrEnum_orderBy =
     const BitesListMineErrorAttrEnum._('orderBy');
+const BitesListMineErrorAttrEnum
+    _$bitesListMineErrorAttrEnum_unknownDefaultOpenApi =
+    const BitesListMineErrorAttrEnum._('unknownDefaultOpenApi');
 
 BitesListMineErrorAttrEnum _$bitesListMineErrorAttrEnumValueOf(String name) {
   switch (name) {
     case 'orderBy':
       return _$bitesListMineErrorAttrEnum_orderBy;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<BitesListMineErrorAttrEnum> _$bitesListMineErrorAttrEnumValues =
     new BuiltSet<BitesListMineErrorAttrEnum>(const <BitesListMineErrorAttrEnum>[
   _$bitesListMineErrorAttrEnum_orderBy,
+  _$bitesListMineErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesListMineErrorCodeEnum _$bitesListMineErrorCodeEnum_invalidChoice =
     const BitesListMineErrorCodeEnum._('invalidChoice');
+const BitesListMineErrorCodeEnum
+    _$bitesListMineErrorCodeEnum_unknownDefaultOpenApi =
+    const BitesListMineErrorCodeEnum._('unknownDefaultOpenApi');
 
 BitesListMineErrorCodeEnum _$bitesListMineErrorCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$bitesListMineErrorCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListMineErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListMineErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<BitesListMineErrorCodeEnum> _$bitesListMineErrorCodeEnumValues =
     new BuiltSet<BitesListMineErrorCodeEnum>(const <BitesListMineErrorCodeEnum>[
   _$bitesListMineErrorCodeEnum_invalidChoice,
+  _$bitesListMineErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListMineErrorAttrEnum> _$bitesListMineErrorAttrEnumSerializer =
@@ -49,9 +61,11 @@ class _$BitesListMineErrorAttrEnumSerializer
     implements PrimitiveSerializer<BitesListMineErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'orderBy': 'order_by',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'order_by': 'orderBy',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -76,9 +90,11 @@ class _$BitesListMineErrorCodeEnumSerializer
     implements PrimitiveSerializer<BitesListMineErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

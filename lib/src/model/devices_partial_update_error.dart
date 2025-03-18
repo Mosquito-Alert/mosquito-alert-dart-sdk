@@ -250,6 +250,8 @@ class DevicesPartialUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mobile_app.package_version')
   static const DevicesPartialUpdateErrorAttrEnum mobileAppPeriodPackageVersion = _$devicesPartialUpdateErrorAttrEnum_mobileAppPeriodPackageVersion;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesPartialUpdateErrorAttrEnum unknownDefaultOpenApi = _$devicesPartialUpdateErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesPartialUpdateErrorAttrEnum> get serializer => _$devicesPartialUpdateErrorAttrEnumSerializer;
 
@@ -275,6 +277,8 @@ class DevicesPartialUpdateErrorCodeEnum extends EnumClass {
   static const DevicesPartialUpdateErrorCodeEnum required_ = _$devicesPartialUpdateErrorCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const DevicesPartialUpdateErrorCodeEnum surrogateCharactersNotAllowed = _$devicesPartialUpdateErrorCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesPartialUpdateErrorCodeEnum unknownDefaultOpenApi = _$devicesPartialUpdateErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesPartialUpdateErrorCodeEnum> get serializer => _$devicesPartialUpdateErrorCodeEnumSerializer;
 

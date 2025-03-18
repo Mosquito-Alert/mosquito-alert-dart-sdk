@@ -9,19 +9,25 @@ part of 'devices_create_error.dart';
 const DevicesCreateErrorAttrEnum
     _$devicesCreateErrorAttrEnum_mobileAppPeriodPackageVersion =
     const DevicesCreateErrorAttrEnum._('mobileAppPeriodPackageVersion');
+const DevicesCreateErrorAttrEnum
+    _$devicesCreateErrorAttrEnum_unknownDefaultOpenApi =
+    const DevicesCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 DevicesCreateErrorAttrEnum _$devicesCreateErrorAttrEnumValueOf(String name) {
   switch (name) {
     case 'mobileAppPeriodPackageVersion':
       return _$devicesCreateErrorAttrEnum_mobileAppPeriodPackageVersion;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<DevicesCreateErrorAttrEnum> _$devicesCreateErrorAttrEnumValues =
     new BuiltSet<DevicesCreateErrorAttrEnum>(const <DevicesCreateErrorAttrEnum>[
   _$devicesCreateErrorAttrEnum_mobileAppPeriodPackageVersion,
+  _$devicesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnum_blank =
@@ -40,6 +46,9 @@ const DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnum_required_ =
 const DevicesCreateErrorCodeEnum
     _$devicesCreateErrorCodeEnum_surrogateCharactersNotAllowed =
     const DevicesCreateErrorCodeEnum._('surrogateCharactersNotAllowed');
+const DevicesCreateErrorCodeEnum
+    _$devicesCreateErrorCodeEnum_unknownDefaultOpenApi =
+    const DevicesCreateErrorCodeEnum._('unknownDefaultOpenApi');
 
 DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnumValueOf(String name) {
   switch (name) {
@@ -57,8 +66,10 @@ DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnumValueOf(String name) {
       return _$devicesCreateErrorCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$devicesCreateErrorCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -71,6 +82,7 @@ final BuiltSet<DevicesCreateErrorCodeEnum> _$devicesCreateErrorCodeEnumValues =
   _$devicesCreateErrorCodeEnum_nullCharactersNotAllowed,
   _$devicesCreateErrorCodeEnum_required_,
   _$devicesCreateErrorCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesCreateErrorAttrEnum> _$devicesCreateErrorAttrEnumSerializer =
@@ -82,9 +94,11 @@ class _$DevicesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<DevicesCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'mobileAppPeriodPackageVersion': 'mobile_app.package_version',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'mobile_app.package_version': 'mobileAppPeriodPackageVersion',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -115,6 +129,7 @@ class _$DevicesCreateErrorCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -124,6 +139,7 @@ class _$DevicesCreateErrorCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

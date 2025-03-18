@@ -8,14 +8,19 @@ part of 'auth_obtain_token_error.dart';
 
 const AuthObtainTokenErrorAttrEnum _$authObtainTokenErrorAttrEnum_deviceId =
     const AuthObtainTokenErrorAttrEnum._('deviceId');
+const AuthObtainTokenErrorAttrEnum
+    _$authObtainTokenErrorAttrEnum_unknownDefaultOpenApi =
+    const AuthObtainTokenErrorAttrEnum._('unknownDefaultOpenApi');
 
 AuthObtainTokenErrorAttrEnum _$authObtainTokenErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'deviceId':
       return _$authObtainTokenErrorAttrEnum_deviceId;
+    case 'unknownDefaultOpenApi':
+      return _$authObtainTokenErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authObtainTokenErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -23,6 +28,7 @@ final BuiltSet<AuthObtainTokenErrorAttrEnum>
     _$authObtainTokenErrorAttrEnumValues = new BuiltSet<
         AuthObtainTokenErrorAttrEnum>(const <AuthObtainTokenErrorAttrEnum>[
   _$authObtainTokenErrorAttrEnum_deviceId,
+  _$authObtainTokenErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthObtainTokenErrorCodeEnum _$authObtainTokenErrorCodeEnum_blank =
@@ -37,6 +43,9 @@ const AuthObtainTokenErrorCodeEnum
 const AuthObtainTokenErrorCodeEnum
     _$authObtainTokenErrorCodeEnum_surrogateCharactersNotAllowed =
     const AuthObtainTokenErrorCodeEnum._('surrogateCharactersNotAllowed');
+const AuthObtainTokenErrorCodeEnum
+    _$authObtainTokenErrorCodeEnum_unknownDefaultOpenApi =
+    const AuthObtainTokenErrorCodeEnum._('unknownDefaultOpenApi');
 
 AuthObtainTokenErrorCodeEnum _$authObtainTokenErrorCodeEnumValueOf(
     String name) {
@@ -51,8 +60,10 @@ AuthObtainTokenErrorCodeEnum _$authObtainTokenErrorCodeEnumValueOf(
       return _$authObtainTokenErrorCodeEnum_nullCharactersNotAllowed;
     case 'surrogateCharactersNotAllowed':
       return _$authObtainTokenErrorCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$authObtainTokenErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authObtainTokenErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -64,6 +75,7 @@ final BuiltSet<AuthObtainTokenErrorCodeEnum>
   _$authObtainTokenErrorCodeEnum_null_,
   _$authObtainTokenErrorCodeEnum_nullCharactersNotAllowed,
   _$authObtainTokenErrorCodeEnum_surrogateCharactersNotAllowed,
+  _$authObtainTokenErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthObtainTokenErrorAttrEnum>
@@ -77,9 +89,11 @@ class _$AuthObtainTokenErrorAttrEnumSerializer
     implements PrimitiveSerializer<AuthObtainTokenErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'deviceId': 'device_id',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'device_id': 'deviceId',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -108,6 +122,7 @@ class _$AuthObtainTokenErrorCodeEnumSerializer
     'null_': 'null',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -115,6 +130,7 @@ class _$AuthObtainTokenErrorCodeEnumSerializer
     'null': 'null_',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

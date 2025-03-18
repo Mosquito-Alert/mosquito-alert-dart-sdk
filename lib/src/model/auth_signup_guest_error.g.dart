@@ -8,14 +8,19 @@ part of 'auth_signup_guest_error.dart';
 
 const AuthSignupGuestErrorAttrEnum _$authSignupGuestErrorAttrEnum_password =
     const AuthSignupGuestErrorAttrEnum._('password');
+const AuthSignupGuestErrorAttrEnum
+    _$authSignupGuestErrorAttrEnum_unknownDefaultOpenApi =
+    const AuthSignupGuestErrorAttrEnum._('unknownDefaultOpenApi');
 
 AuthSignupGuestErrorAttrEnum _$authSignupGuestErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'password':
       return _$authSignupGuestErrorAttrEnum_password;
+    case 'unknownDefaultOpenApi':
+      return _$authSignupGuestErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authSignupGuestErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -23,6 +28,7 @@ final BuiltSet<AuthSignupGuestErrorAttrEnum>
     _$authSignupGuestErrorAttrEnumValues = new BuiltSet<
         AuthSignupGuestErrorAttrEnum>(const <AuthSignupGuestErrorAttrEnum>[
   _$authSignupGuestErrorAttrEnum_password,
+  _$authSignupGuestErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthSignupGuestErrorCodeEnum _$authSignupGuestErrorCodeEnum_blank =
@@ -41,6 +47,9 @@ const AuthSignupGuestErrorCodeEnum _$authSignupGuestErrorCodeEnum_required_ =
 const AuthSignupGuestErrorCodeEnum
     _$authSignupGuestErrorCodeEnum_surrogateCharactersNotAllowed =
     const AuthSignupGuestErrorCodeEnum._('surrogateCharactersNotAllowed');
+const AuthSignupGuestErrorCodeEnum
+    _$authSignupGuestErrorCodeEnum_unknownDefaultOpenApi =
+    const AuthSignupGuestErrorCodeEnum._('unknownDefaultOpenApi');
 
 AuthSignupGuestErrorCodeEnum _$authSignupGuestErrorCodeEnumValueOf(
     String name) {
@@ -59,8 +68,10 @@ AuthSignupGuestErrorCodeEnum _$authSignupGuestErrorCodeEnumValueOf(
       return _$authSignupGuestErrorCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$authSignupGuestErrorCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$authSignupGuestErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authSignupGuestErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -74,6 +85,7 @@ final BuiltSet<AuthSignupGuestErrorCodeEnum>
   _$authSignupGuestErrorCodeEnum_nullCharactersNotAllowed,
   _$authSignupGuestErrorCodeEnum_required_,
   _$authSignupGuestErrorCodeEnum_surrogateCharactersNotAllowed,
+  _$authSignupGuestErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthSignupGuestErrorAttrEnum>
@@ -87,9 +99,11 @@ class _$AuthSignupGuestErrorAttrEnumSerializer
     implements PrimitiveSerializer<AuthSignupGuestErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'password': 'password',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'password': 'password',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -120,6 +134,7 @@ class _$AuthSignupGuestErrorCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -129,6 +144,7 @@ class _$AuthSignupGuestErrorCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -143,6 +143,8 @@ class ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum exten
 
   @BuiltValueEnumConst(wireName: r'user_perceived_mosquito_abdomen')
   static const ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum userPerceivedMosquitoAbdomen = _$observationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum_userPerceivedMosquitoAbdomen;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnum> get serializer => _$observationsCreateUserPerceivedMosquitoAbdomenErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum exten
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum invalidChoice = _$observationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnum> get serializer => _$observationsCreateUserPerceivedMosquitoAbdomenErrorComponentCodeEnumSerializer;
 

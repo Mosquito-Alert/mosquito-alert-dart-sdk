@@ -130,6 +130,8 @@ class AuthChangePasswordErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'password')
   static const AuthChangePasswordErrorAttrEnum password = _$authChangePasswordErrorAttrEnum_password;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthChangePasswordErrorAttrEnum unknownDefaultOpenApi = _$authChangePasswordErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthChangePasswordErrorAttrEnum> get serializer => _$authChangePasswordErrorAttrEnumSerializer;
 
@@ -155,6 +157,8 @@ class AuthChangePasswordErrorCodeEnum extends EnumClass {
   static const AuthChangePasswordErrorCodeEnum required_ = _$authChangePasswordErrorCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const AuthChangePasswordErrorCodeEnum surrogateCharactersNotAllowed = _$authChangePasswordErrorCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthChangePasswordErrorCodeEnum unknownDefaultOpenApi = _$authChangePasswordErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthChangePasswordErrorCodeEnum> get serializer => _$authChangePasswordErrorCodeEnumSerializer;
 

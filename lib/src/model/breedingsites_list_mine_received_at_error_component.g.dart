@@ -9,6 +9,10 @@ part of 'breedingsites_list_mine_received_at_error_component.dart';
 const BreedingsitesListMineReceivedAtErrorComponentAttrEnum
     _$breedingsitesListMineReceivedAtErrorComponentAttrEnum_receivedAt =
     const BreedingsitesListMineReceivedAtErrorComponentAttrEnum._('receivedAt');
+const BreedingsitesListMineReceivedAtErrorComponentAttrEnum
+    _$breedingsitesListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesListMineReceivedAtErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListMineReceivedAtErrorComponentAttrEnum
     _$breedingsitesListMineReceivedAtErrorComponentAttrEnumValueOf(
@@ -16,8 +20,10 @@ BreedingsitesListMineReceivedAtErrorComponentAttrEnum
   switch (name) {
     case 'receivedAt':
       return _$breedingsitesListMineReceivedAtErrorComponentAttrEnum_receivedAt;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -26,11 +32,16 @@ final BuiltSet<BreedingsitesListMineReceivedAtErrorComponentAttrEnum>
     new BuiltSet<
         BreedingsitesListMineReceivedAtErrorComponentAttrEnum>(const <BreedingsitesListMineReceivedAtErrorComponentAttrEnum>[
   _$breedingsitesListMineReceivedAtErrorComponentAttrEnum_receivedAt,
+  _$breedingsitesListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesListMineReceivedAtErrorComponentCodeEnum
     _$breedingsitesListMineReceivedAtErrorComponentCodeEnum_invalid =
     const BreedingsitesListMineReceivedAtErrorComponentCodeEnum._('invalid');
+const BreedingsitesListMineReceivedAtErrorComponentCodeEnum
+    _$breedingsitesListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesListMineReceivedAtErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesListMineReceivedAtErrorComponentCodeEnum
     _$breedingsitesListMineReceivedAtErrorComponentCodeEnumValueOf(
@@ -38,8 +49,10 @@ BreedingsitesListMineReceivedAtErrorComponentCodeEnum
   switch (name) {
     case 'invalid':
       return _$breedingsitesListMineReceivedAtErrorComponentCodeEnum_invalid;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -48,6 +61,7 @@ final BuiltSet<BreedingsitesListMineReceivedAtErrorComponentCodeEnum>
     new BuiltSet<
         BreedingsitesListMineReceivedAtErrorComponentCodeEnum>(const <BreedingsitesListMineReceivedAtErrorComponentCodeEnum>[
   _$breedingsitesListMineReceivedAtErrorComponentCodeEnum_invalid,
+  _$breedingsitesListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesListMineReceivedAtErrorComponentAttrEnum>
@@ -63,9 +77,11 @@ class _$BreedingsitesListMineReceivedAtErrorComponentAttrEnumSerializer
             BreedingsitesListMineReceivedAtErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'receivedAt': 'received_at',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'received_at': 'receivedAt',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -96,9 +112,11 @@ class _$BreedingsitesListMineReceivedAtErrorComponentCodeEnumSerializer
             BreedingsitesListMineReceivedAtErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

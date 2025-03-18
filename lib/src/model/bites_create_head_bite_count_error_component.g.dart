@@ -9,14 +9,20 @@ part of 'bites_create_head_bite_count_error_component.dart';
 const BitesCreateHeadBiteCountErrorComponentAttrEnum
     _$bitesCreateHeadBiteCountErrorComponentAttrEnum_headBiteCount =
     const BitesCreateHeadBiteCountErrorComponentAttrEnum._('headBiteCount');
+const BitesCreateHeadBiteCountErrorComponentAttrEnum
+    _$bitesCreateHeadBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateHeadBiteCountErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateHeadBiteCountErrorComponentAttrEnum
     _$bitesCreateHeadBiteCountErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'headBiteCount':
       return _$bitesCreateHeadBiteCountErrorComponentAttrEnum_headBiteCount;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateHeadBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateHeadBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BitesCreateHeadBiteCountErrorComponentAttrEnum>
     _$bitesCreateHeadBiteCountErrorComponentAttrEnumValues = new BuiltSet<
         BitesCreateHeadBiteCountErrorComponentAttrEnum>(const <BitesCreateHeadBiteCountErrorComponentAttrEnum>[
   _$bitesCreateHeadBiteCountErrorComponentAttrEnum_headBiteCount,
+  _$bitesCreateHeadBiteCountErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateHeadBiteCountErrorComponentCodeEnum
@@ -32,6 +39,10 @@ const BitesCreateHeadBiteCountErrorComponentCodeEnum
 const BitesCreateHeadBiteCountErrorComponentCodeEnum
     _$bitesCreateHeadBiteCountErrorComponentCodeEnum_maxStringLength =
     const BitesCreateHeadBiteCountErrorComponentCodeEnum._('maxStringLength');
+const BitesCreateHeadBiteCountErrorComponentCodeEnum
+    _$bitesCreateHeadBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateHeadBiteCountErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateHeadBiteCountErrorComponentCodeEnum
     _$bitesCreateHeadBiteCountErrorComponentCodeEnumValueOf(String name) {
@@ -40,8 +51,10 @@ BitesCreateHeadBiteCountErrorComponentCodeEnum
       return _$bitesCreateHeadBiteCountErrorComponentCodeEnum_invalid;
     case 'maxStringLength':
       return _$bitesCreateHeadBiteCountErrorComponentCodeEnum_maxStringLength;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateHeadBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateHeadBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +63,7 @@ final BuiltSet<BitesCreateHeadBiteCountErrorComponentCodeEnum>
         BitesCreateHeadBiteCountErrorComponentCodeEnum>(const <BitesCreateHeadBiteCountErrorComponentCodeEnum>[
   _$bitesCreateHeadBiteCountErrorComponentCodeEnum_invalid,
   _$bitesCreateHeadBiteCountErrorComponentCodeEnum_maxStringLength,
+  _$bitesCreateHeadBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateHeadBiteCountErrorComponentAttrEnum>
@@ -64,9 +78,11 @@ class _$BitesCreateHeadBiteCountErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesCreateHeadBiteCountErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'headBiteCount': 'head_bite_count',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'head_bite_count': 'headBiteCount',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -96,10 +112,12 @@ class _$BitesCreateHeadBiteCountErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'maxStringLength': 'max_string_length',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

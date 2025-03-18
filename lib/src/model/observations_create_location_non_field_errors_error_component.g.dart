@@ -10,6 +10,10 @@ const ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum
     _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors =
     const ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum._(
         'locationPeriodNonFieldErrors');
+const ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum
+    _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum
     _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'locationPeriodNonFieldErrors':
       return _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum>
     new BuiltSet<
         ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum>(const <ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum>[
   _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors,
+  _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum
@@ -41,6 +48,10 @@ const ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum
     _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_ =
     const ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum._(
         'required_');
+const ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum
+    _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum
     _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -52,8 +63,10 @@ ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum
       return _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -64,6 +77,7 @@ final BuiltSet<ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum>
   _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_null_,
   _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_required_,
+  _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum>
@@ -79,9 +93,11 @@ class _$ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnumSerializer
             ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationPeriodNonFieldErrors': 'location.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location.non_field_errors': 'locationPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -114,11 +130,13 @@ class _$ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnumSerializer
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

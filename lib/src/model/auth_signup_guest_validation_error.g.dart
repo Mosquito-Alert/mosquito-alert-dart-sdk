@@ -9,14 +9,19 @@ part of 'auth_signup_guest_validation_error.dart';
 const AuthSignupGuestValidationErrorTypeEnum
     _$authSignupGuestValidationErrorTypeEnum_validationError =
     const AuthSignupGuestValidationErrorTypeEnum._('validationError');
+const AuthSignupGuestValidationErrorTypeEnum
+    _$authSignupGuestValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const AuthSignupGuestValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 AuthSignupGuestValidationErrorTypeEnum
     _$authSignupGuestValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$authSignupGuestValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$authSignupGuestValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authSignupGuestValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<AuthSignupGuestValidationErrorTypeEnum>
     _$authSignupGuestValidationErrorTypeEnumValues = new BuiltSet<
         AuthSignupGuestValidationErrorTypeEnum>(const <AuthSignupGuestValidationErrorTypeEnum>[
   _$authSignupGuestValidationErrorTypeEnum_validationError,
+  _$authSignupGuestValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthSignupGuestValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$AuthSignupGuestValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<AuthSignupGuestValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

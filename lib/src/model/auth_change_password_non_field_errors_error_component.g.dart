@@ -10,6 +10,10 @@ const AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum
     _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors =
     const AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum._(
         'nonFieldErrors');
+const AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum
+    _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum
     _$authChangePasswordNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'nonFieldErrors':
       return _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum>
     new BuiltSet<
         AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum>(const <AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum>[
   _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
+  _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum
@@ -35,6 +42,10 @@ const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum
 const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum
     _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_null_ =
     const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum._('null_');
+const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum
+    _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum
     _$authChangePasswordNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -44,8 +55,10 @@ AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum
       return _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -55,6 +68,7 @@ final BuiltSet<AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum>
         AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum>(const <AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum>[
   _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum>
@@ -70,9 +84,11 @@ class _$AuthChangePasswordNonFieldErrorsErrorComponentAttrEnumSerializer
             AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nonFieldErrors': 'non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'non_field_errors': 'nonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -104,10 +120,12 @@ class _$AuthChangePasswordNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

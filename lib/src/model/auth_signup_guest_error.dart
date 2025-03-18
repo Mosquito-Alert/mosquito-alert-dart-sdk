@@ -130,6 +130,8 @@ class AuthSignupGuestErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'password')
   static const AuthSignupGuestErrorAttrEnum password = _$authSignupGuestErrorAttrEnum_password;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthSignupGuestErrorAttrEnum unknownDefaultOpenApi = _$authSignupGuestErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthSignupGuestErrorAttrEnum> get serializer => _$authSignupGuestErrorAttrEnumSerializer;
 
@@ -155,6 +157,8 @@ class AuthSignupGuestErrorCodeEnum extends EnumClass {
   static const AuthSignupGuestErrorCodeEnum required_ = _$authSignupGuestErrorCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const AuthSignupGuestErrorCodeEnum surrogateCharactersNotAllowed = _$authSignupGuestErrorCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthSignupGuestErrorCodeEnum unknownDefaultOpenApi = _$authSignupGuestErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthSignupGuestErrorCodeEnum> get serializer => _$authSignupGuestErrorCodeEnumSerializer;
 

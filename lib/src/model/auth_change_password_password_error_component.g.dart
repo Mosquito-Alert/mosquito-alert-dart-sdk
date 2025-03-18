@@ -9,14 +9,20 @@ part of 'auth_change_password_password_error_component.dart';
 const AuthChangePasswordPasswordErrorComponentAttrEnum
     _$authChangePasswordPasswordErrorComponentAttrEnum_password =
     const AuthChangePasswordPasswordErrorComponentAttrEnum._('password');
+const AuthChangePasswordPasswordErrorComponentAttrEnum
+    _$authChangePasswordPasswordErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const AuthChangePasswordPasswordErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 AuthChangePasswordPasswordErrorComponentAttrEnum
     _$authChangePasswordPasswordErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'password':
       return _$authChangePasswordPasswordErrorComponentAttrEnum_password;
+    case 'unknownDefaultOpenApi':
+      return _$authChangePasswordPasswordErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authChangePasswordPasswordErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<AuthChangePasswordPasswordErrorComponentAttrEnum>
     _$authChangePasswordPasswordErrorComponentAttrEnumValues = new BuiltSet<
         AuthChangePasswordPasswordErrorComponentAttrEnum>(const <AuthChangePasswordPasswordErrorComponentAttrEnum>[
   _$authChangePasswordPasswordErrorComponentAttrEnum_password,
+  _$authChangePasswordPasswordErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthChangePasswordPasswordErrorComponentCodeEnum
@@ -49,6 +56,10 @@ const AuthChangePasswordPasswordErrorComponentCodeEnum
     _$authChangePasswordPasswordErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const AuthChangePasswordPasswordErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const AuthChangePasswordPasswordErrorComponentCodeEnum
+    _$authChangePasswordPasswordErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const AuthChangePasswordPasswordErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 AuthChangePasswordPasswordErrorComponentCodeEnum
     _$authChangePasswordPasswordErrorComponentCodeEnumValueOf(String name) {
@@ -67,8 +78,10 @@ AuthChangePasswordPasswordErrorComponentCodeEnum
       return _$authChangePasswordPasswordErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$authChangePasswordPasswordErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$authChangePasswordPasswordErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authChangePasswordPasswordErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -82,6 +95,7 @@ final BuiltSet<AuthChangePasswordPasswordErrorComponentCodeEnum>
   _$authChangePasswordPasswordErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$authChangePasswordPasswordErrorComponentCodeEnum_required_,
   _$authChangePasswordPasswordErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$authChangePasswordPasswordErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthChangePasswordPasswordErrorComponentAttrEnum>
@@ -96,9 +110,11 @@ class _$AuthChangePasswordPasswordErrorComponentAttrEnumSerializer
         PrimitiveSerializer<AuthChangePasswordPasswordErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'password': 'password',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'password': 'password',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -133,6 +149,7 @@ class _$AuthChangePasswordPasswordErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -142,6 +159,7 @@ class _$AuthChangePasswordPasswordErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

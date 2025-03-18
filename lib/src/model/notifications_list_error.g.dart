@@ -8,14 +8,19 @@ part of 'notifications_list_error.dart';
 
 const NotificationsListErrorAttrEnum _$notificationsListErrorAttrEnum_orderBy =
     const NotificationsListErrorAttrEnum._('orderBy');
+const NotificationsListErrorAttrEnum
+    _$notificationsListErrorAttrEnum_unknownDefaultOpenApi =
+    const NotificationsListErrorAttrEnum._('unknownDefaultOpenApi');
 
 NotificationsListErrorAttrEnum _$notificationsListErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'orderBy':
       return _$notificationsListErrorAttrEnum_orderBy;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsListErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsListErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -23,19 +28,25 @@ final BuiltSet<NotificationsListErrorAttrEnum>
     _$notificationsListErrorAttrEnumValues = new BuiltSet<
         NotificationsListErrorAttrEnum>(const <NotificationsListErrorAttrEnum>[
   _$notificationsListErrorAttrEnum_orderBy,
+  _$notificationsListErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsListErrorCodeEnum
     _$notificationsListErrorCodeEnum_invalidChoice =
     const NotificationsListErrorCodeEnum._('invalidChoice');
+const NotificationsListErrorCodeEnum
+    _$notificationsListErrorCodeEnum_unknownDefaultOpenApi =
+    const NotificationsListErrorCodeEnum._('unknownDefaultOpenApi');
 
 NotificationsListErrorCodeEnum _$notificationsListErrorCodeEnumValueOf(
     String name) {
   switch (name) {
     case 'invalidChoice':
       return _$notificationsListErrorCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsListErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsListErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -43,6 +54,7 @@ final BuiltSet<NotificationsListErrorCodeEnum>
     _$notificationsListErrorCodeEnumValues = new BuiltSet<
         NotificationsListErrorCodeEnum>(const <NotificationsListErrorCodeEnum>[
   _$notificationsListErrorCodeEnum_invalidChoice,
+  _$notificationsListErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsListErrorAttrEnum>
@@ -56,9 +68,11 @@ class _$NotificationsListErrorAttrEnumSerializer
     implements PrimitiveSerializer<NotificationsListErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'orderBy': 'order_by',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'order_by': 'orderBy',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -84,9 +98,11 @@ class _$NotificationsListErrorCodeEnumSerializer
     implements PrimitiveSerializer<NotificationsListErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

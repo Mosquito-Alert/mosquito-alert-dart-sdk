@@ -127,6 +127,8 @@ class BitesListMineValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')
   static const BitesListMineValidationErrorTypeEnum validationError = _$bitesListMineValidationErrorTypeEnum_validationError;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListMineValidationErrorTypeEnum unknownDefaultOpenApi = _$bitesListMineValidationErrorTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListMineValidationErrorTypeEnum> get serializer => _$bitesListMineValidationErrorTypeEnumSerializer;
 

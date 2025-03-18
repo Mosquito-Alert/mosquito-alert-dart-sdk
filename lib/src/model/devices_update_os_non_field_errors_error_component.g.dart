@@ -10,14 +10,20 @@ const DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum
     _$devicesUpdateOsNonFieldErrorsErrorComponentAttrEnum_osPeriodNonFieldErrors =
     const DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum._(
         'osPeriodNonFieldErrors');
+const DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum
+    _$devicesUpdateOsNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum
     _$devicesUpdateOsNonFieldErrorsErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'osPeriodNonFieldErrors':
       return _$devicesUpdateOsNonFieldErrorsErrorComponentAttrEnum_osPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$devicesUpdateOsNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesUpdateOsNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum>
     _$devicesUpdateOsNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
         DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum>(const <DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum>[
   _$devicesUpdateOsNonFieldErrorsErrorComponentAttrEnum_osPeriodNonFieldErrors,
+  _$devicesUpdateOsNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum
@@ -36,6 +43,10 @@ const DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum
 const DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum
     _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_required_ =
     const DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum._('required_');
+const DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum
+    _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum
     _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnumValueOf(String name) {
@@ -46,8 +57,10 @@ DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum
       return _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -57,6 +70,7 @@ final BuiltSet<DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnum>
   _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_null_,
   _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_required_,
+  _$devicesUpdateOsNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum>
@@ -72,9 +86,11 @@ class _$DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnumSerializer
             DevicesUpdateOsNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'osPeriodNonFieldErrors': 'os.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'os.non_field_errors': 'osPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -106,11 +122,13 @@ class _$DevicesUpdateOsNonFieldErrorsErrorComponentCodeEnumSerializer
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

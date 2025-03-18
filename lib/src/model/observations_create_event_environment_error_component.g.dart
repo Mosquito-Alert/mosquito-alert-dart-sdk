@@ -10,6 +10,10 @@ const ObservationsCreateEventEnvironmentErrorComponentAttrEnum
     _$observationsCreateEventEnvironmentErrorComponentAttrEnum_eventEnvironment =
     const ObservationsCreateEventEnvironmentErrorComponentAttrEnum._(
         'eventEnvironment');
+const ObservationsCreateEventEnvironmentErrorComponentAttrEnum
+    _$observationsCreateEventEnvironmentErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateEventEnvironmentErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateEventEnvironmentErrorComponentAttrEnum
     _$observationsCreateEventEnvironmentErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ ObservationsCreateEventEnvironmentErrorComponentAttrEnum
   switch (name) {
     case 'eventEnvironment':
       return _$observationsCreateEventEnvironmentErrorComponentAttrEnum_eventEnvironment;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateEventEnvironmentErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateEventEnvironmentErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,12 +33,17 @@ final BuiltSet<ObservationsCreateEventEnvironmentErrorComponentAttrEnum>
     new BuiltSet<
         ObservationsCreateEventEnvironmentErrorComponentAttrEnum>(const <ObservationsCreateEventEnvironmentErrorComponentAttrEnum>[
   _$observationsCreateEventEnvironmentErrorComponentAttrEnum_eventEnvironment,
+  _$observationsCreateEventEnvironmentErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateEventEnvironmentErrorComponentCodeEnum
     _$observationsCreateEventEnvironmentErrorComponentCodeEnum_invalidChoice =
     const ObservationsCreateEventEnvironmentErrorComponentCodeEnum._(
         'invalidChoice');
+const ObservationsCreateEventEnvironmentErrorComponentCodeEnum
+    _$observationsCreateEventEnvironmentErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateEventEnvironmentErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateEventEnvironmentErrorComponentCodeEnum
     _$observationsCreateEventEnvironmentErrorComponentCodeEnumValueOf(
@@ -40,8 +51,10 @@ ObservationsCreateEventEnvironmentErrorComponentCodeEnum
   switch (name) {
     case 'invalidChoice':
       return _$observationsCreateEventEnvironmentErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateEventEnvironmentErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateEventEnvironmentErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +63,7 @@ final BuiltSet<ObservationsCreateEventEnvironmentErrorComponentCodeEnum>
     new BuiltSet<
         ObservationsCreateEventEnvironmentErrorComponentCodeEnum>(const <ObservationsCreateEventEnvironmentErrorComponentCodeEnum>[
   _$observationsCreateEventEnvironmentErrorComponentCodeEnum_invalidChoice,
+  _$observationsCreateEventEnvironmentErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateEventEnvironmentErrorComponentAttrEnum>
@@ -65,9 +79,11 @@ class _$ObservationsCreateEventEnvironmentErrorComponentAttrEnumSerializer
             ObservationsCreateEventEnvironmentErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'eventEnvironment': 'event_environment',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'event_environment': 'eventEnvironment',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -98,9 +114,11 @@ class _$ObservationsCreateEventEnvironmentErrorComponentCodeEnumSerializer
             ObservationsCreateEventEnvironmentErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

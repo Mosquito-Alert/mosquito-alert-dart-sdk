@@ -9,14 +9,19 @@ part of 'auth_verify_token_token_error_component.dart';
 const AuthVerifyTokenTokenErrorComponentAttrEnum
     _$authVerifyTokenTokenErrorComponentAttrEnum_token =
     const AuthVerifyTokenTokenErrorComponentAttrEnum._('token');
+const AuthVerifyTokenTokenErrorComponentAttrEnum
+    _$authVerifyTokenTokenErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const AuthVerifyTokenTokenErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 AuthVerifyTokenTokenErrorComponentAttrEnum
     _$authVerifyTokenTokenErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'token':
       return _$authVerifyTokenTokenErrorComponentAttrEnum_token;
+    case 'unknownDefaultOpenApi':
+      return _$authVerifyTokenTokenErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authVerifyTokenTokenErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<AuthVerifyTokenTokenErrorComponentAttrEnum>
     _$authVerifyTokenTokenErrorComponentAttrEnumValues = new BuiltSet<
         AuthVerifyTokenTokenErrorComponentAttrEnum>(const <AuthVerifyTokenTokenErrorComponentAttrEnum>[
   _$authVerifyTokenTokenErrorComponentAttrEnum_token,
+  _$authVerifyTokenTokenErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const AuthVerifyTokenTokenErrorComponentCodeEnum
@@ -46,6 +52,9 @@ const AuthVerifyTokenTokenErrorComponentCodeEnum
     _$authVerifyTokenTokenErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const AuthVerifyTokenTokenErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const AuthVerifyTokenTokenErrorComponentCodeEnum
+    _$authVerifyTokenTokenErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const AuthVerifyTokenTokenErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 AuthVerifyTokenTokenErrorComponentCodeEnum
     _$authVerifyTokenTokenErrorComponentCodeEnumValueOf(String name) {
@@ -62,8 +71,10 @@ AuthVerifyTokenTokenErrorComponentCodeEnum
       return _$authVerifyTokenTokenErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$authVerifyTokenTokenErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$authVerifyTokenTokenErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$authVerifyTokenTokenErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -76,6 +87,7 @@ final BuiltSet<AuthVerifyTokenTokenErrorComponentCodeEnum>
   _$authVerifyTokenTokenErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$authVerifyTokenTokenErrorComponentCodeEnum_required_,
   _$authVerifyTokenTokenErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$authVerifyTokenTokenErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<AuthVerifyTokenTokenErrorComponentAttrEnum>
@@ -89,9 +101,11 @@ class _$AuthVerifyTokenTokenErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<AuthVerifyTokenTokenErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'token': 'token',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'token': 'token',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -124,6 +138,7 @@ class _$AuthVerifyTokenTokenErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -132,6 +147,7 @@ class _$AuthVerifyTokenTokenErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

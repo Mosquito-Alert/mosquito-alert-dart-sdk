@@ -143,6 +143,8 @@ class ObservationsCreateTagsINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags.INDEX')
   static const ObservationsCreateTagsINDEXErrorComponentAttrEnum tagsPeriodINDEX = _$observationsCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateTagsINDEXErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateTagsINDEXErrorComponentAttrEnum> get serializer => _$observationsCreateTagsINDEXErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class ObservationsCreateTagsINDEXErrorComponentCodeEnum extends EnumClass {
   static const ObservationsCreateTagsINDEXErrorComponentCodeEnum required_ = _$observationsCreateTagsINDEXErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const ObservationsCreateTagsINDEXErrorComponentCodeEnum surrogateCharactersNotAllowed = _$observationsCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateTagsINDEXErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateTagsINDEXErrorComponentCodeEnum> get serializer => _$observationsCreateTagsINDEXErrorComponentCodeEnumSerializer;
 

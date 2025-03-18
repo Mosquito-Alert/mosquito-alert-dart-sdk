@@ -8,19 +8,24 @@ part of 'error403.dart';
 
 const Error403CodeEnum _$error403CodeEnum_permissionDenied =
     const Error403CodeEnum._('permissionDenied');
+const Error403CodeEnum _$error403CodeEnum_unknownDefaultOpenApi =
+    const Error403CodeEnum._('unknownDefaultOpenApi');
 
 Error403CodeEnum _$error403CodeEnumValueOf(String name) {
   switch (name) {
     case 'permissionDenied':
       return _$error403CodeEnum_permissionDenied;
+    case 'unknownDefaultOpenApi':
+      return _$error403CodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$error403CodeEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<Error403CodeEnum> _$error403CodeEnumValues =
     new BuiltSet<Error403CodeEnum>(const <Error403CodeEnum>[
   _$error403CodeEnum_permissionDenied,
+  _$error403CodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<Error403CodeEnum> _$error403CodeEnumSerializer =
@@ -30,9 +35,11 @@ class _$Error403CodeEnumSerializer
     implements PrimitiveSerializer<Error403CodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'permissionDenied': 'permission_denied',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'permission_denied': 'permissionDenied',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

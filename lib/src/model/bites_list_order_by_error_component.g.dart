@@ -9,14 +9,19 @@ part of 'bites_list_order_by_error_component.dart';
 const BitesListOrderByErrorComponentAttrEnum
     _$bitesListOrderByErrorComponentAttrEnum_orderBy =
     const BitesListOrderByErrorComponentAttrEnum._('orderBy');
+const BitesListOrderByErrorComponentAttrEnum
+    _$bitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesListOrderByErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 BitesListOrderByErrorComponentAttrEnum
     _$bitesListOrderByErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'orderBy':
       return _$bitesListOrderByErrorComponentAttrEnum_orderBy;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +29,25 @@ final BuiltSet<BitesListOrderByErrorComponentAttrEnum>
     _$bitesListOrderByErrorComponentAttrEnumValues = new BuiltSet<
         BitesListOrderByErrorComponentAttrEnum>(const <BitesListOrderByErrorComponentAttrEnum>[
   _$bitesListOrderByErrorComponentAttrEnum_orderBy,
+  _$bitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesListOrderByErrorComponentCodeEnum
     _$bitesListOrderByErrorComponentCodeEnum_invalidChoice =
     const BitesListOrderByErrorComponentCodeEnum._('invalidChoice');
+const BitesListOrderByErrorComponentCodeEnum
+    _$bitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesListOrderByErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 BitesListOrderByErrorComponentCodeEnum
     _$bitesListOrderByErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$bitesListOrderByErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +55,7 @@ final BuiltSet<BitesListOrderByErrorComponentCodeEnum>
     _$bitesListOrderByErrorComponentCodeEnumValues = new BuiltSet<
         BitesListOrderByErrorComponentCodeEnum>(const <BitesListOrderByErrorComponentCodeEnum>[
   _$bitesListOrderByErrorComponentCodeEnum_invalidChoice,
+  _$bitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListOrderByErrorComponentAttrEnum>
@@ -57,9 +69,11 @@ class _$BitesListOrderByErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesListOrderByErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'orderBy': 'order_by',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'order_by': 'orderBy',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -87,9 +101,11 @@ class _$BitesListOrderByErrorComponentCodeEnumSerializer
     implements PrimitiveSerializer<BitesListOrderByErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

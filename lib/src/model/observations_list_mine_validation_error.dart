@@ -127,6 +127,8 @@ class ObservationsListMineValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')
   static const ObservationsListMineValidationErrorTypeEnum validationError = _$observationsListMineValidationErrorTypeEnum_validationError;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListMineValidationErrorTypeEnum unknownDefaultOpenApi = _$observationsListMineValidationErrorTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListMineValidationErrorTypeEnum> get serializer => _$observationsListMineValidationErrorTypeEnumSerializer;
 

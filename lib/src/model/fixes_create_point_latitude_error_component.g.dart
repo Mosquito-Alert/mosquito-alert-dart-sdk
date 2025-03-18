@@ -10,14 +10,20 @@ const FixesCreatePointLatitudeErrorComponentAttrEnum
     _$fixesCreatePointLatitudeErrorComponentAttrEnum_pointPeriodLatitude =
     const FixesCreatePointLatitudeErrorComponentAttrEnum._(
         'pointPeriodLatitude');
+const FixesCreatePointLatitudeErrorComponentAttrEnum
+    _$fixesCreatePointLatitudeErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const FixesCreatePointLatitudeErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 FixesCreatePointLatitudeErrorComponentAttrEnum
     _$fixesCreatePointLatitudeErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'pointPeriodLatitude':
       return _$fixesCreatePointLatitudeErrorComponentAttrEnum_pointPeriodLatitude;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreatePointLatitudeErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreatePointLatitudeErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<FixesCreatePointLatitudeErrorComponentAttrEnum>
     _$fixesCreatePointLatitudeErrorComponentAttrEnumValues = new BuiltSet<
         FixesCreatePointLatitudeErrorComponentAttrEnum>(const <FixesCreatePointLatitudeErrorComponentAttrEnum>[
   _$fixesCreatePointLatitudeErrorComponentAttrEnum_pointPeriodLatitude,
+  _$fixesCreatePointLatitudeErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const FixesCreatePointLatitudeErrorComponentCodeEnum
@@ -39,6 +46,10 @@ const FixesCreatePointLatitudeErrorComponentCodeEnum
 const FixesCreatePointLatitudeErrorComponentCodeEnum
     _$fixesCreatePointLatitudeErrorComponentCodeEnum_required_ =
     const FixesCreatePointLatitudeErrorComponentCodeEnum._('required_');
+const FixesCreatePointLatitudeErrorComponentCodeEnum
+    _$fixesCreatePointLatitudeErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const FixesCreatePointLatitudeErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 FixesCreatePointLatitudeErrorComponentCodeEnum
     _$fixesCreatePointLatitudeErrorComponentCodeEnumValueOf(String name) {
@@ -51,8 +62,10 @@ FixesCreatePointLatitudeErrorComponentCodeEnum
       return _$fixesCreatePointLatitudeErrorComponentCodeEnum_null_;
     case 'required_':
       return _$fixesCreatePointLatitudeErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreatePointLatitudeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreatePointLatitudeErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -63,6 +76,7 @@ final BuiltSet<FixesCreatePointLatitudeErrorComponentCodeEnum>
   _$fixesCreatePointLatitudeErrorComponentCodeEnum_maxStringLength,
   _$fixesCreatePointLatitudeErrorComponentCodeEnum_null_,
   _$fixesCreatePointLatitudeErrorComponentCodeEnum_required_,
+  _$fixesCreatePointLatitudeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<FixesCreatePointLatitudeErrorComponentAttrEnum>
@@ -77,9 +91,11 @@ class _$FixesCreatePointLatitudeErrorComponentAttrEnumSerializer
         PrimitiveSerializer<FixesCreatePointLatitudeErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'pointPeriodLatitude': 'point.latitude',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'point.latitude': 'pointPeriodLatitude',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -111,12 +127,14 @@ class _$FixesCreatePointLatitudeErrorComponentCodeEnumSerializer
     'maxStringLength': 'max_string_length',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

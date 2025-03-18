@@ -9,14 +9,19 @@ part of 'devices_partial_update_error.dart';
 const DevicesPartialUpdateErrorAttrEnum
     _$devicesPartialUpdateErrorAttrEnum_mobileAppPeriodPackageVersion =
     const DevicesPartialUpdateErrorAttrEnum._('mobileAppPeriodPackageVersion');
+const DevicesPartialUpdateErrorAttrEnum
+    _$devicesPartialUpdateErrorAttrEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateErrorAttrEnum._('unknownDefaultOpenApi');
 
 DevicesPartialUpdateErrorAttrEnum _$devicesPartialUpdateErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'mobileAppPeriodPackageVersion':
       return _$devicesPartialUpdateErrorAttrEnum_mobileAppPeriodPackageVersion;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<DevicesPartialUpdateErrorAttrEnum>
     _$devicesPartialUpdateErrorAttrEnumValues = new BuiltSet<
         DevicesPartialUpdateErrorAttrEnum>(const <DevicesPartialUpdateErrorAttrEnum>[
   _$devicesPartialUpdateErrorAttrEnum_mobileAppPeriodPackageVersion,
+  _$devicesPartialUpdateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesPartialUpdateErrorCodeEnum
@@ -47,6 +53,9 @@ const DevicesPartialUpdateErrorCodeEnum
 const DevicesPartialUpdateErrorCodeEnum
     _$devicesPartialUpdateErrorCodeEnum_surrogateCharactersNotAllowed =
     const DevicesPartialUpdateErrorCodeEnum._('surrogateCharactersNotAllowed');
+const DevicesPartialUpdateErrorCodeEnum
+    _$devicesPartialUpdateErrorCodeEnum_unknownDefaultOpenApi =
+    const DevicesPartialUpdateErrorCodeEnum._('unknownDefaultOpenApi');
 
 DevicesPartialUpdateErrorCodeEnum _$devicesPartialUpdateErrorCodeEnumValueOf(
     String name) {
@@ -65,8 +74,10 @@ DevicesPartialUpdateErrorCodeEnum _$devicesPartialUpdateErrorCodeEnumValueOf(
       return _$devicesPartialUpdateErrorCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$devicesPartialUpdateErrorCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$devicesPartialUpdateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesPartialUpdateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -80,6 +91,7 @@ final BuiltSet<DevicesPartialUpdateErrorCodeEnum>
   _$devicesPartialUpdateErrorCodeEnum_nullCharactersNotAllowed,
   _$devicesPartialUpdateErrorCodeEnum_required_,
   _$devicesPartialUpdateErrorCodeEnum_surrogateCharactersNotAllowed,
+  _$devicesPartialUpdateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesPartialUpdateErrorAttrEnum>
@@ -93,9 +105,11 @@ class _$DevicesPartialUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<DevicesPartialUpdateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'mobileAppPeriodPackageVersion': 'mobile_app.package_version',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'mobile_app.package_version': 'mobileAppPeriodPackageVersion',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -127,6 +141,7 @@ class _$DevicesPartialUpdateErrorCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -136,6 +151,7 @@ class _$DevicesPartialUpdateErrorCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

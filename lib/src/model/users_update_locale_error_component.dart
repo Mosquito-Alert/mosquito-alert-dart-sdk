@@ -143,6 +143,8 @@ class UsersUpdateLocaleErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'locale')
   static const UsersUpdateLocaleErrorComponentAttrEnum locale = _$usersUpdateLocaleErrorComponentAttrEnum_locale;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const UsersUpdateLocaleErrorComponentAttrEnum unknownDefaultOpenApi = _$usersUpdateLocaleErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<UsersUpdateLocaleErrorComponentAttrEnum> get serializer => _$usersUpdateLocaleErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class UsersUpdateLocaleErrorComponentCodeEnum extends EnumClass {
   static const UsersUpdateLocaleErrorComponentCodeEnum invalidChoice = _$usersUpdateLocaleErrorComponentCodeEnum_invalidChoice;
   @BuiltValueEnumConst(wireName: r'null')
   static const UsersUpdateLocaleErrorComponentCodeEnum null_ = _$usersUpdateLocaleErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const UsersUpdateLocaleErrorComponentCodeEnum unknownDefaultOpenApi = _$usersUpdateLocaleErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<UsersUpdateLocaleErrorComponentCodeEnum> get serializer => _$usersUpdateLocaleErrorComponentCodeEnumSerializer;
 

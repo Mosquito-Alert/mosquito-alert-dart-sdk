@@ -9,14 +9,19 @@ part of 'observations_create_error.dart';
 const ObservationsCreateErrorAttrEnum
     _$observationsCreateErrorAttrEnum_userPerceivedMosquitoLegs =
     const ObservationsCreateErrorAttrEnum._('userPerceivedMosquitoLegs');
+const ObservationsCreateErrorAttrEnum
+    _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 ObservationsCreateErrorAttrEnum _$observationsCreateErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'userPerceivedMosquitoLegs':
       return _$observationsCreateErrorAttrEnum_userPerceivedMosquitoLegs;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +29,25 @@ final BuiltSet<ObservationsCreateErrorAttrEnum>
     _$observationsCreateErrorAttrEnumValues = new BuiltSet<
         ObservationsCreateErrorAttrEnum>(const <ObservationsCreateErrorAttrEnum>[
   _$observationsCreateErrorAttrEnum_userPerceivedMosquitoLegs,
+  _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateErrorCodeEnum
     _$observationsCreateErrorCodeEnum_invalidChoice =
     const ObservationsCreateErrorCodeEnum._('invalidChoice');
+const ObservationsCreateErrorCodeEnum
+    _$observationsCreateErrorCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateErrorCodeEnum._('unknownDefaultOpenApi');
 
 ObservationsCreateErrorCodeEnum _$observationsCreateErrorCodeEnumValueOf(
     String name) {
   switch (name) {
     case 'invalidChoice':
       return _$observationsCreateErrorCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +55,7 @@ final BuiltSet<ObservationsCreateErrorCodeEnum>
     _$observationsCreateErrorCodeEnumValues = new BuiltSet<
         ObservationsCreateErrorCodeEnum>(const <ObservationsCreateErrorCodeEnum>[
   _$observationsCreateErrorCodeEnum_invalidChoice,
+  _$observationsCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateErrorAttrEnum>
@@ -57,9 +69,11 @@ class _$ObservationsCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<ObservationsCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'userPerceivedMosquitoLegs': 'user_perceived_mosquito_legs',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user_perceived_mosquito_legs': 'userPerceivedMosquitoLegs',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -85,9 +99,11 @@ class _$ObservationsCreateErrorCodeEnumSerializer
     implements PrimitiveSerializer<ObservationsCreateErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

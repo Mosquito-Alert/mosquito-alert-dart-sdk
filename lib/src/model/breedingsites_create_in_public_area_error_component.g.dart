@@ -10,6 +10,10 @@ const BreedingsitesCreateInPublicAreaErrorComponentAttrEnum
     _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_inPublicArea =
     const BreedingsitesCreateInPublicAreaErrorComponentAttrEnum._(
         'inPublicArea');
+const BreedingsitesCreateInPublicAreaErrorComponentAttrEnum
+    _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateInPublicAreaErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateInPublicAreaErrorComponentAttrEnum
     _$breedingsitesCreateInPublicAreaErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ BreedingsitesCreateInPublicAreaErrorComponentAttrEnum
   switch (name) {
     case 'inPublicArea':
       return _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_inPublicArea;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,11 +33,16 @@ final BuiltSet<BreedingsitesCreateInPublicAreaErrorComponentAttrEnum>
     new BuiltSet<
         BreedingsitesCreateInPublicAreaErrorComponentAttrEnum>(const <BreedingsitesCreateInPublicAreaErrorComponentAttrEnum>[
   _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_inPublicArea,
+  _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateInPublicAreaErrorComponentCodeEnum
     _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_invalid =
     const BreedingsitesCreateInPublicAreaErrorComponentCodeEnum._('invalid');
+const BreedingsitesCreateInPublicAreaErrorComponentCodeEnum
+    _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateInPublicAreaErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateInPublicAreaErrorComponentCodeEnum
     _$breedingsitesCreateInPublicAreaErrorComponentCodeEnumValueOf(
@@ -39,8 +50,10 @@ BreedingsitesCreateInPublicAreaErrorComponentCodeEnum
   switch (name) {
     case 'invalid':
       return _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_invalid;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -49,6 +62,7 @@ final BuiltSet<BreedingsitesCreateInPublicAreaErrorComponentCodeEnum>
     new BuiltSet<
         BreedingsitesCreateInPublicAreaErrorComponentCodeEnum>(const <BreedingsitesCreateInPublicAreaErrorComponentCodeEnum>[
   _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_invalid,
+  _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateInPublicAreaErrorComponentAttrEnum>
@@ -64,9 +78,11 @@ class _$BreedingsitesCreateInPublicAreaErrorComponentAttrEnumSerializer
             BreedingsitesCreateInPublicAreaErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'inPublicArea': 'in_public_area',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'in_public_area': 'inPublicArea',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -97,9 +113,11 @@ class _$BreedingsitesCreateInPublicAreaErrorComponentCodeEnumSerializer
             BreedingsitesCreateInPublicAreaErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

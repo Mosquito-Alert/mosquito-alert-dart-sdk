@@ -143,6 +143,8 @@ class NotificationsCreateReceiverTypeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'receiver_type')
   static const NotificationsCreateReceiverTypeErrorComponentAttrEnum receiverType = _$notificationsCreateReceiverTypeErrorComponentAttrEnum_receiverType;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateReceiverTypeErrorComponentAttrEnum unknownDefaultOpenApi = _$notificationsCreateReceiverTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateReceiverTypeErrorComponentAttrEnum> get serializer => _$notificationsCreateReceiverTypeErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class NotificationsCreateReceiverTypeErrorComponentCodeEnum extends EnumClass {
   static const NotificationsCreateReceiverTypeErrorComponentCodeEnum null_ = _$notificationsCreateReceiverTypeErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const NotificationsCreateReceiverTypeErrorComponentCodeEnum required_ = _$notificationsCreateReceiverTypeErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateReceiverTypeErrorComponentCodeEnum unknownDefaultOpenApi = _$notificationsCreateReceiverTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateReceiverTypeErrorComponentCodeEnum> get serializer => _$notificationsCreateReceiverTypeErrorComponentCodeEnumSerializer;
 

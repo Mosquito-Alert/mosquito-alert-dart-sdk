@@ -143,6 +143,8 @@ class DevicesCreateMobileAppPackageNameErrorComponentAttrEnum extends EnumClass 
 
   @BuiltValueEnumConst(wireName: r'mobile_app.package_name')
   static const DevicesCreateMobileAppPackageNameErrorComponentAttrEnum mobileAppPeriodPackageName = _$devicesCreateMobileAppPackageNameErrorComponentAttrEnum_mobileAppPeriodPackageName;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateMobileAppPackageNameErrorComponentAttrEnum unknownDefaultOpenApi = _$devicesCreateMobileAppPackageNameErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateMobileAppPackageNameErrorComponentAttrEnum> get serializer => _$devicesCreateMobileAppPackageNameErrorComponentAttrEnumSerializer;
 
@@ -168,6 +170,8 @@ class DevicesCreateMobileAppPackageNameErrorComponentCodeEnum extends EnumClass 
   static const DevicesCreateMobileAppPackageNameErrorComponentCodeEnum required_ = _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const DevicesCreateMobileAppPackageNameErrorComponentCodeEnum surrogateCharactersNotAllowed = _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateMobileAppPackageNameErrorComponentCodeEnum unknownDefaultOpenApi = _$devicesCreateMobileAppPackageNameErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateMobileAppPackageNameErrorComponentCodeEnum> get serializer => _$devicesCreateMobileAppPackageNameErrorComponentCodeEnumSerializer;
 

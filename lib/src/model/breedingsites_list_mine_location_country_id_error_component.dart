@@ -143,6 +143,8 @@ class BreedingsitesListMineLocationCountryIdErrorComponentAttrEnum extends EnumC
 
   @BuiltValueEnumConst(wireName: r'location_country_id')
   static const BreedingsitesListMineLocationCountryIdErrorComponentAttrEnum locationCountryId = _$breedingsitesListMineLocationCountryIdErrorComponentAttrEnum_locationCountryId;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListMineLocationCountryIdErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesListMineLocationCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListMineLocationCountryIdErrorComponentAttrEnum> get serializer => _$breedingsitesListMineLocationCountryIdErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum extends EnumC
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum invalidChoice = _$breedingsitesListMineLocationCountryIdErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesListMineLocationCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListMineLocationCountryIdErrorComponentCodeEnum> get serializer => _$breedingsitesListMineLocationCountryIdErrorComponentCodeEnumSerializer;
 

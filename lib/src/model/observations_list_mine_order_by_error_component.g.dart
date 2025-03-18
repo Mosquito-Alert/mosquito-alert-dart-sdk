@@ -9,14 +9,20 @@ part of 'observations_list_mine_order_by_error_component.dart';
 const ObservationsListMineOrderByErrorComponentAttrEnum
     _$observationsListMineOrderByErrorComponentAttrEnum_orderBy =
     const ObservationsListMineOrderByErrorComponentAttrEnum._('orderBy');
+const ObservationsListMineOrderByErrorComponentAttrEnum
+    _$observationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsListMineOrderByErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineOrderByErrorComponentAttrEnum
     _$observationsListMineOrderByErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'orderBy':
       return _$observationsListMineOrderByErrorComponentAttrEnum_orderBy;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<ObservationsListMineOrderByErrorComponentAttrEnum>
     _$observationsListMineOrderByErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsListMineOrderByErrorComponentAttrEnum>(const <ObservationsListMineOrderByErrorComponentAttrEnum>[
   _$observationsListMineOrderByErrorComponentAttrEnum_orderBy,
+  _$observationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListMineOrderByErrorComponentCodeEnum
     _$observationsListMineOrderByErrorComponentCodeEnum_invalidChoice =
     const ObservationsListMineOrderByErrorComponentCodeEnum._('invalidChoice');
+const ObservationsListMineOrderByErrorComponentCodeEnum
+    _$observationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsListMineOrderByErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineOrderByErrorComponentCodeEnum
     _$observationsListMineOrderByErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalidChoice':
       return _$observationsListMineOrderByErrorComponentCodeEnum_invalidChoice;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<ObservationsListMineOrderByErrorComponentCodeEnum>
     _$observationsListMineOrderByErrorComponentCodeEnumValues = new BuiltSet<
         ObservationsListMineOrderByErrorComponentCodeEnum>(const <ObservationsListMineOrderByErrorComponentCodeEnum>[
   _$observationsListMineOrderByErrorComponentCodeEnum_invalidChoice,
+  _$observationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsListMineOrderByErrorComponentAttrEnum>
@@ -58,9 +72,11 @@ class _$ObservationsListMineOrderByErrorComponentAttrEnumSerializer
         PrimitiveSerializer<ObservationsListMineOrderByErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'orderBy': 'order_by',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'order_by': 'orderBy',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -89,9 +105,11 @@ class _$ObservationsListMineOrderByErrorComponentCodeEnumSerializer
         PrimitiveSerializer<ObservationsListMineOrderByErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

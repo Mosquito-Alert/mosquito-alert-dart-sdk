@@ -143,6 +143,8 @@ class ObservationsListLocationNuts2ErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location_nuts_2')
   static const ObservationsListLocationNuts2ErrorComponentAttrEnum locationNuts2 = _$observationsListLocationNuts2ErrorComponentAttrEnum_locationNuts2;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListLocationNuts2ErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsListLocationNuts2ErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListLocationNuts2ErrorComponentAttrEnum> get serializer => _$observationsListLocationNuts2ErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class ObservationsListLocationNuts2ErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const ObservationsListLocationNuts2ErrorComponentCodeEnum nullCharactersNotAllowed = _$observationsListLocationNuts2ErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsListLocationNuts2ErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsListLocationNuts2ErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsListLocationNuts2ErrorComponentCodeEnum> get serializer => _$observationsListLocationNuts2ErrorComponentCodeEnumSerializer;
 

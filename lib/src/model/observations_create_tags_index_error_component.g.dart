@@ -10,14 +10,20 @@ const ObservationsCreateTagsINDEXErrorComponentAttrEnum
     _$observationsCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX =
     const ObservationsCreateTagsINDEXErrorComponentAttrEnum._(
         'tagsPeriodINDEX');
+const ObservationsCreateTagsINDEXErrorComponentAttrEnum
+    _$observationsCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateTagsINDEXErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateTagsINDEXErrorComponentAttrEnum
     _$observationsCreateTagsINDEXErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'tagsPeriodINDEX':
       return _$observationsCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -25,6 +31,7 @@ final BuiltSet<ObservationsCreateTagsINDEXErrorComponentAttrEnum>
     _$observationsCreateTagsINDEXErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsCreateTagsINDEXErrorComponentAttrEnum>(const <ObservationsCreateTagsINDEXErrorComponentAttrEnum>[
   _$observationsCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX,
+  _$observationsCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateTagsINDEXErrorComponentCodeEnum
@@ -47,6 +54,10 @@ const ObservationsCreateTagsINDEXErrorComponentCodeEnum
     _$observationsCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const ObservationsCreateTagsINDEXErrorComponentCodeEnum._(
         'surrogateCharactersNotAllowed');
+const ObservationsCreateTagsINDEXErrorComponentCodeEnum
+    _$observationsCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateTagsINDEXErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateTagsINDEXErrorComponentCodeEnum
     _$observationsCreateTagsINDEXErrorComponentCodeEnumValueOf(String name) {
@@ -63,8 +74,10 @@ ObservationsCreateTagsINDEXErrorComponentCodeEnum
       return _$observationsCreateTagsINDEXErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$observationsCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -77,6 +90,7 @@ final BuiltSet<ObservationsCreateTagsINDEXErrorComponentCodeEnum>
   _$observationsCreateTagsINDEXErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$observationsCreateTagsINDEXErrorComponentCodeEnum_required_,
   _$observationsCreateTagsINDEXErrorComponentCodeEnum_surrogateCharactersNotAllowed,
+  _$observationsCreateTagsINDEXErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateTagsINDEXErrorComponentAttrEnum>
@@ -91,9 +105,11 @@ class _$ObservationsCreateTagsINDEXErrorComponentAttrEnumSerializer
         PrimitiveSerializer<ObservationsCreateTagsINDEXErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'tagsPeriodINDEX': 'tags.INDEX',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'tags.INDEX': 'tagsPeriodINDEX',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -127,6 +143,7 @@ class _$ObservationsCreateTagsINDEXErrorComponentCodeEnumSerializer
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
@@ -135,6 +152,7 @@ class _$ObservationsCreateTagsINDEXErrorComponentCodeEnumSerializer
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

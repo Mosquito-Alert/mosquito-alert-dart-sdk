@@ -143,6 +143,8 @@ class DevicesCreateFcmTokenErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'fcm_token')
   static const DevicesCreateFcmTokenErrorComponentAttrEnum fcmToken = _$devicesCreateFcmTokenErrorComponentAttrEnum_fcmToken;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateFcmTokenErrorComponentAttrEnum unknownDefaultOpenApi = _$devicesCreateFcmTokenErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateFcmTokenErrorComponentAttrEnum> get serializer => _$devicesCreateFcmTokenErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class DevicesCreateFcmTokenErrorComponentCodeEnum extends EnumClass {
   static const DevicesCreateFcmTokenErrorComponentCodeEnum required_ = _$devicesCreateFcmTokenErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const DevicesCreateFcmTokenErrorComponentCodeEnum surrogateCharactersNotAllowed = _$devicesCreateFcmTokenErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateFcmTokenErrorComponentCodeEnum unknownDefaultOpenApi = _$devicesCreateFcmTokenErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateFcmTokenErrorComponentCodeEnum> get serializer => _$devicesCreateFcmTokenErrorComponentCodeEnumSerializer;
 

@@ -143,6 +143,8 @@ class BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum extends EnumClass
 
   @BuiltValueEnumConst(wireName: r'photos.INDEX.file')
   static const BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum photosPeriodINDEXPeriodFile = _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum_photosPeriodINDEXPeriodFile;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreatePhotosINDEXFileErrorComponentAttrEnum> get serializer => _$breedingsitesCreatePhotosINDEXFileErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum extends EnumClass
   static const BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum null_ = _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum required_ = _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreatePhotosINDEXFileErrorComponentCodeEnum> get serializer => _$breedingsitesCreatePhotosINDEXFileErrorComponentCodeEnumSerializer;
 

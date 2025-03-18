@@ -143,6 +143,8 @@ class DevicesCreateModelErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'model')
   static const DevicesCreateModelErrorComponentAttrEnum model = _$devicesCreateModelErrorComponentAttrEnum_model;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateModelErrorComponentAttrEnum unknownDefaultOpenApi = _$devicesCreateModelErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateModelErrorComponentAttrEnum> get serializer => _$devicesCreateModelErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class DevicesCreateModelErrorComponentCodeEnum extends EnumClass {
   static const DevicesCreateModelErrorComponentCodeEnum required_ = _$devicesCreateModelErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const DevicesCreateModelErrorComponentCodeEnum surrogateCharactersNotAllowed = _$devicesCreateModelErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesCreateModelErrorComponentCodeEnum unknownDefaultOpenApi = _$devicesCreateModelErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesCreateModelErrorComponentCodeEnum> get serializer => _$devicesCreateModelErrorComponentCodeEnumSerializer;
 

@@ -220,6 +220,8 @@ class FixesCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'power')
   static const FixesCreateErrorAttrEnum power = _$fixesCreateErrorAttrEnum_power;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const FixesCreateErrorAttrEnum unknownDefaultOpenApi = _$fixesCreateErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<FixesCreateErrorAttrEnum> get serializer => _$fixesCreateErrorAttrEnumSerializer;
 
@@ -235,6 +237,8 @@ class FixesCreateErrorCodeEnum extends EnumClass {
   static const FixesCreateErrorCodeEnum invalid = _$fixesCreateErrorCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'max_string_length')
   static const FixesCreateErrorCodeEnum maxStringLength = _$fixesCreateErrorCodeEnum_maxStringLength;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const FixesCreateErrorCodeEnum unknownDefaultOpenApi = _$fixesCreateErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<FixesCreateErrorCodeEnum> get serializer => _$fixesCreateErrorCodeEnumSerializer;
 

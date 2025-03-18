@@ -127,6 +127,8 @@ class UsersPartialUpdateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')
   static const UsersPartialUpdateValidationErrorTypeEnum validationError = _$usersPartialUpdateValidationErrorTypeEnum_validationError;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const UsersPartialUpdateValidationErrorTypeEnum unknownDefaultOpenApi = _$usersPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<UsersPartialUpdateValidationErrorTypeEnum> get serializer => _$usersPartialUpdateValidationErrorTypeEnumSerializer;
 

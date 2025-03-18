@@ -9,14 +9,20 @@ part of 'breedingsites_create_site_type_error_component.dart';
 const BreedingsitesCreateSiteTypeErrorComponentAttrEnum
     _$breedingsitesCreateSiteTypeErrorComponentAttrEnum_siteType =
     const BreedingsitesCreateSiteTypeErrorComponentAttrEnum._('siteType');
+const BreedingsitesCreateSiteTypeErrorComponentAttrEnum
+    _$breedingsitesCreateSiteTypeErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateSiteTypeErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateSiteTypeErrorComponentAttrEnum
     _$breedingsitesCreateSiteTypeErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'siteType':
       return _$breedingsitesCreateSiteTypeErrorComponentAttrEnum_siteType;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateSiteTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateSiteTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BreedingsitesCreateSiteTypeErrorComponentAttrEnum>
     _$breedingsitesCreateSiteTypeErrorComponentAttrEnumValues = new BuiltSet<
         BreedingsitesCreateSiteTypeErrorComponentAttrEnum>(const <BreedingsitesCreateSiteTypeErrorComponentAttrEnum>[
   _$breedingsitesCreateSiteTypeErrorComponentAttrEnum_siteType,
+  _$breedingsitesCreateSiteTypeErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
@@ -32,6 +39,10 @@ const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
 const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
     _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_ =
     const BreedingsitesCreateSiteTypeErrorComponentCodeEnum._('null_');
+const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
+    _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateSiteTypeErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateSiteTypeErrorComponentCodeEnum
     _$breedingsitesCreateSiteTypeErrorComponentCodeEnumValueOf(String name) {
@@ -40,8 +51,10 @@ BreedingsitesCreateSiteTypeErrorComponentCodeEnum
       return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_invalidChoice;
     case 'null_':
       return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +63,7 @@ final BuiltSet<BreedingsitesCreateSiteTypeErrorComponentCodeEnum>
         BreedingsitesCreateSiteTypeErrorComponentCodeEnum>(const <BreedingsitesCreateSiteTypeErrorComponentCodeEnum>[
   _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_invalidChoice,
   _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_,
+  _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateSiteTypeErrorComponentAttrEnum>
@@ -64,9 +78,11 @@ class _$BreedingsitesCreateSiteTypeErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BreedingsitesCreateSiteTypeErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'siteType': 'site_type',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'site_type': 'siteType',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -96,10 +112,12 @@ class _$BreedingsitesCreateSiteTypeErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

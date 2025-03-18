@@ -143,6 +143,8 @@ class ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum extends EnumClass 
 
   @BuiltValueEnumConst(wireName: r'photos.INDEX.file')
   static const ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum photosPeriodINDEXPeriodFile = _$observationsCreatePhotosINDEXFileErrorComponentAttrEnum_photosPeriodINDEXPeriodFile;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreatePhotosINDEXFileErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreatePhotosINDEXFileErrorComponentAttrEnum> get serializer => _$observationsCreatePhotosINDEXFileErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum extends EnumClass 
   static const ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum null_ = _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum required_ = _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreatePhotosINDEXFileErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreatePhotosINDEXFileErrorComponentCodeEnum> get serializer => _$observationsCreatePhotosINDEXFileErrorComponentCodeEnumSerializer;
 

@@ -143,6 +143,8 @@ class ObservationsCreateLocationTypeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.type')
   static const ObservationsCreateLocationTypeErrorComponentAttrEnum locationPeriodType = _$observationsCreateLocationTypeErrorComponentAttrEnum_locationPeriodType;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateLocationTypeErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateLocationTypeErrorComponentAttrEnum> get serializer => _$observationsCreateLocationTypeErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class ObservationsCreateLocationTypeErrorComponentCodeEnum extends EnumClass {
   static const ObservationsCreateLocationTypeErrorComponentCodeEnum null_ = _$observationsCreateLocationTypeErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const ObservationsCreateLocationTypeErrorComponentCodeEnum required_ = _$observationsCreateLocationTypeErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateLocationTypeErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateLocationTypeErrorComponentCodeEnum> get serializer => _$observationsCreateLocationTypeErrorComponentCodeEnumSerializer;
 

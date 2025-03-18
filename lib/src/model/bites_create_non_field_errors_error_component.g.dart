@@ -9,14 +9,20 @@ part of 'bites_create_non_field_errors_error_component.dart';
 const BitesCreateNonFieldErrorsErrorComponentAttrEnum
     _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors =
     const BitesCreateNonFieldErrorsErrorComponentAttrEnum._('nonFieldErrors');
+const BitesCreateNonFieldErrorsErrorComponentAttrEnum
+    _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesCreateNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateNonFieldErrorsErrorComponentAttrEnum
     _$bitesCreateNonFieldErrorsErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'nonFieldErrors':
       return _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<BitesCreateNonFieldErrorsErrorComponentAttrEnum>
     _$bitesCreateNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
         BitesCreateNonFieldErrorsErrorComponentAttrEnum>(const <BitesCreateNonFieldErrorsErrorComponentAttrEnum>[
   _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
+  _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesCreateNonFieldErrorsErrorComponentCodeEnum
@@ -32,6 +39,10 @@ const BitesCreateNonFieldErrorsErrorComponentCodeEnum
 const BitesCreateNonFieldErrorsErrorComponentCodeEnum
     _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_null_ =
     const BitesCreateNonFieldErrorsErrorComponentCodeEnum._('null_');
+const BitesCreateNonFieldErrorsErrorComponentCodeEnum
+    _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesCreateNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesCreateNonFieldErrorsErrorComponentCodeEnum
     _$bitesCreateNonFieldErrorsErrorComponentCodeEnumValueOf(String name) {
@@ -40,8 +51,10 @@ BitesCreateNonFieldErrorsErrorComponentCodeEnum
       return _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +63,7 @@ final BuiltSet<BitesCreateNonFieldErrorsErrorComponentCodeEnum>
         BitesCreateNonFieldErrorsErrorComponentCodeEnum>(const <BitesCreateNonFieldErrorsErrorComponentCodeEnum>[
   _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesCreateNonFieldErrorsErrorComponentAttrEnum>
@@ -64,9 +78,11 @@ class _$BitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesCreateNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nonFieldErrors': 'non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'non_field_errors': 'nonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -96,10 +112,12 @@ class _$BitesCreateNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

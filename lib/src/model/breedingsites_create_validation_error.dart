@@ -127,6 +127,8 @@ class BreedingsitesCreateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')
   static const BreedingsitesCreateValidationErrorTypeEnum validationError = _$breedingsitesCreateValidationErrorTypeEnum_validationError;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesCreateValidationErrorTypeEnum unknownDefaultOpenApi = _$breedingsitesCreateValidationErrorTypeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesCreateValidationErrorTypeEnum> get serializer => _$breedingsitesCreateValidationErrorTypeEnumSerializer;
 

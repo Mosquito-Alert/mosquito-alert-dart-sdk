@@ -10,6 +10,10 @@ const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum
     _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum_messagePeriodBodyPeriodNonFieldErrors =
     const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum._(
         'messagePeriodBodyPeriodNonFieldErrors');
+const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum
+    _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum
     _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum
   switch (name) {
     case 'messagePeriodBodyPeriodNonFieldErrors':
       return _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum_messagePeriodBodyPeriodNonFieldErrors;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -28,6 +34,7 @@ final BuiltSet<
     new BuiltSet<
         NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum>(const <NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum>[
   _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum_messagePeriodBodyPeriodNonFieldErrors,
+  _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum
@@ -42,6 +49,10 @@ const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum
     _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_required_ =
     const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum._(
         'required_');
+const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum
+    _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum
     _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnumValueOf(
@@ -53,8 +64,10 @@ NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum
       return _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'required_':
       return _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -66,6 +79,7 @@ final BuiltSet<
   _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_null_,
   _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_required_,
+  _$notificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum>
@@ -81,9 +95,11 @@ class _$NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnumSerial
             NotificationsCreateMessageBodyNonFieldErrorsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'messagePeriodBodyPeriodNonFieldErrors': 'message.body.non_field_errors',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'message.body.non_field_errors': 'messagePeriodBodyPeriodNonFieldErrors',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -119,11 +135,13 @@ class _$NotificationsCreateMessageBodyNonFieldErrorsErrorComponentCodeEnumSerial
     'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

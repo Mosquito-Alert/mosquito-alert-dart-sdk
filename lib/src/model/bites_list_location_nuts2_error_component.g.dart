@@ -9,14 +9,20 @@ part of 'bites_list_location_nuts2_error_component.dart';
 const BitesListLocationNuts2ErrorComponentAttrEnum
     _$bitesListLocationNuts2ErrorComponentAttrEnum_locationNuts2 =
     const BitesListLocationNuts2ErrorComponentAttrEnum._('locationNuts2');
+const BitesListLocationNuts2ErrorComponentAttrEnum
+    _$bitesListLocationNuts2ErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BitesListLocationNuts2ErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListLocationNuts2ErrorComponentAttrEnum
     _$bitesListLocationNuts2ErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'locationNuts2':
       return _$bitesListLocationNuts2ErrorComponentAttrEnum_locationNuts2;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListLocationNuts2ErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListLocationNuts2ErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,20 +30,27 @@ final BuiltSet<BitesListLocationNuts2ErrorComponentAttrEnum>
     _$bitesListLocationNuts2ErrorComponentAttrEnumValues = new BuiltSet<
         BitesListLocationNuts2ErrorComponentAttrEnum>(const <BitesListLocationNuts2ErrorComponentAttrEnum>[
   _$bitesListLocationNuts2ErrorComponentAttrEnum_locationNuts2,
+  _$bitesListLocationNuts2ErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BitesListLocationNuts2ErrorComponentCodeEnum
     _$bitesListLocationNuts2ErrorComponentCodeEnum_nullCharactersNotAllowed =
     const BitesListLocationNuts2ErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const BitesListLocationNuts2ErrorComponentCodeEnum
+    _$bitesListLocationNuts2ErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BitesListLocationNuts2ErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BitesListLocationNuts2ErrorComponentCodeEnum
     _$bitesListLocationNuts2ErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'nullCharactersNotAllowed':
       return _$bitesListLocationNuts2ErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'unknownDefaultOpenApi':
+      return _$bitesListLocationNuts2ErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$bitesListLocationNuts2ErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -45,6 +58,7 @@ final BuiltSet<BitesListLocationNuts2ErrorComponentCodeEnum>
     _$bitesListLocationNuts2ErrorComponentCodeEnumValues = new BuiltSet<
         BitesListLocationNuts2ErrorComponentCodeEnum>(const <BitesListLocationNuts2ErrorComponentCodeEnum>[
   _$bitesListLocationNuts2ErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$bitesListLocationNuts2ErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListLocationNuts2ErrorComponentAttrEnum>
@@ -59,9 +73,11 @@ class _$BitesListLocationNuts2ErrorComponentAttrEnumSerializer
         PrimitiveSerializer<BitesListLocationNuts2ErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationNuts2': 'location_nuts_2',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location_nuts_2': 'locationNuts2',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -90,9 +106,11 @@ class _$BitesListLocationNuts2ErrorComponentCodeEnumSerializer
         PrimitiveSerializer<BitesListLocationNuts2ErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

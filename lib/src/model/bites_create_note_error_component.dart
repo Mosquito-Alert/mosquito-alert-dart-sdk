@@ -143,6 +143,8 @@ class BitesCreateNoteErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'note')
   static const BitesCreateNoteErrorComponentAttrEnum note = _$bitesCreateNoteErrorComponentAttrEnum_note;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateNoteErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateNoteErrorComponentAttrEnum> get serializer => _$bitesCreateNoteErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class BitesCreateNoteErrorComponentCodeEnum extends EnumClass {
   static const BitesCreateNoteErrorComponentCodeEnum nullCharactersNotAllowed = _$bitesCreateNoteErrorComponentCodeEnum_nullCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const BitesCreateNoteErrorComponentCodeEnum surrogateCharactersNotAllowed = _$bitesCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesCreateNoteErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesCreateNoteErrorComponentCodeEnum> get serializer => _$bitesCreateNoteErrorComponentCodeEnumSerializer;
 

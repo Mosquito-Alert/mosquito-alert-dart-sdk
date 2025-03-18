@@ -143,6 +143,8 @@ class BitesListMineShortIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short_id')
   static const BitesListMineShortIdErrorComponentAttrEnum shortId = _$bitesListMineShortIdErrorComponentAttrEnum_shortId;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListMineShortIdErrorComponentAttrEnum unknownDefaultOpenApi = _$bitesListMineShortIdErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListMineShortIdErrorComponentAttrEnum> get serializer => _$bitesListMineShortIdErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BitesListMineShortIdErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const BitesListMineShortIdErrorComponentCodeEnum nullCharactersNotAllowed = _$bitesListMineShortIdErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BitesListMineShortIdErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesListMineShortIdErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BitesListMineShortIdErrorComponentCodeEnum> get serializer => _$bitesListMineShortIdErrorComponentCodeEnumSerializer;
 

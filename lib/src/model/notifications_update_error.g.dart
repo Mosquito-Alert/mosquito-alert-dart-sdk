@@ -9,14 +9,19 @@ part of 'notifications_update_error.dart';
 const NotificationsUpdateErrorAttrEnum
     _$notificationsUpdateErrorAttrEnum_isRead =
     const NotificationsUpdateErrorAttrEnum._('isRead');
+const NotificationsUpdateErrorAttrEnum
+    _$notificationsUpdateErrorAttrEnum_unknownDefaultOpenApi =
+    const NotificationsUpdateErrorAttrEnum._('unknownDefaultOpenApi');
 
 NotificationsUpdateErrorAttrEnum _$notificationsUpdateErrorAttrEnumValueOf(
     String name) {
   switch (name) {
     case 'isRead':
       return _$notificationsUpdateErrorAttrEnum_isRead;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsUpdateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsUpdateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<NotificationsUpdateErrorAttrEnum>
     _$notificationsUpdateErrorAttrEnumValues = new BuiltSet<
         NotificationsUpdateErrorAttrEnum>(const <NotificationsUpdateErrorAttrEnum>[
   _$notificationsUpdateErrorAttrEnum_isRead,
+  _$notificationsUpdateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const NotificationsUpdateErrorCodeEnum
@@ -32,6 +38,9 @@ const NotificationsUpdateErrorCodeEnum
 const NotificationsUpdateErrorCodeEnum
     _$notificationsUpdateErrorCodeEnum_required_ =
     const NotificationsUpdateErrorCodeEnum._('required_');
+const NotificationsUpdateErrorCodeEnum
+    _$notificationsUpdateErrorCodeEnum_unknownDefaultOpenApi =
+    const NotificationsUpdateErrorCodeEnum._('unknownDefaultOpenApi');
 
 NotificationsUpdateErrorCodeEnum _$notificationsUpdateErrorCodeEnumValueOf(
     String name) {
@@ -40,8 +49,10 @@ NotificationsUpdateErrorCodeEnum _$notificationsUpdateErrorCodeEnumValueOf(
       return _$notificationsUpdateErrorCodeEnum_null_;
     case 'required_':
       return _$notificationsUpdateErrorCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsUpdateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsUpdateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -50,6 +61,7 @@ final BuiltSet<NotificationsUpdateErrorCodeEnum>
         NotificationsUpdateErrorCodeEnum>(const <NotificationsUpdateErrorCodeEnum>[
   _$notificationsUpdateErrorCodeEnum_null_,
   _$notificationsUpdateErrorCodeEnum_required_,
+  _$notificationsUpdateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsUpdateErrorAttrEnum>
@@ -63,9 +75,11 @@ class _$NotificationsUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<NotificationsUpdateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'isRead': 'is_read',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'is_read': 'isRead',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -92,10 +106,12 @@ class _$NotificationsUpdateErrorCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -143,6 +143,8 @@ class ObservationsCreateNoteErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'note')
   static const ObservationsCreateNoteErrorComponentAttrEnum note = _$observationsCreateNoteErrorComponentAttrEnum_note;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateNoteErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreateNoteErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateNoteErrorComponentAttrEnum> get serializer => _$observationsCreateNoteErrorComponentAttrEnumSerializer;
 
@@ -160,6 +162,8 @@ class ObservationsCreateNoteErrorComponentCodeEnum extends EnumClass {
   static const ObservationsCreateNoteErrorComponentCodeEnum nullCharactersNotAllowed = _$observationsCreateNoteErrorComponentCodeEnum_nullCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const ObservationsCreateNoteErrorComponentCodeEnum surrogateCharactersNotAllowed = _$observationsCreateNoteErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateNoteErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreateNoteErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateNoteErrorComponentCodeEnum> get serializer => _$observationsCreateNoteErrorComponentCodeEnumSerializer;
 

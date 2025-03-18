@@ -9,14 +9,19 @@ part of 'notifications_create_validation_error.dart';
 const NotificationsCreateValidationErrorTypeEnum
     _$notificationsCreateValidationErrorTypeEnum_validationError =
     const NotificationsCreateValidationErrorTypeEnum._('validationError');
+const NotificationsCreateValidationErrorTypeEnum
+    _$notificationsCreateValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const NotificationsCreateValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 NotificationsCreateValidationErrorTypeEnum
     _$notificationsCreateValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$notificationsCreateValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$notificationsCreateValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$notificationsCreateValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<NotificationsCreateValidationErrorTypeEnum>
     _$notificationsCreateValidationErrorTypeEnumValues = new BuiltSet<
         NotificationsCreateValidationErrorTypeEnum>(const <NotificationsCreateValidationErrorTypeEnum>[
   _$notificationsCreateValidationErrorTypeEnum_validationError,
+  _$notificationsCreateValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<NotificationsCreateValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$NotificationsCreateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<NotificationsCreateValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

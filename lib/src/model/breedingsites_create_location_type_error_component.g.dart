@@ -10,6 +10,10 @@ const BreedingsitesCreateLocationTypeErrorComponentAttrEnum
     _$breedingsitesCreateLocationTypeErrorComponentAttrEnum_locationPeriodType =
     const BreedingsitesCreateLocationTypeErrorComponentAttrEnum._(
         'locationPeriodType');
+const BreedingsitesCreateLocationTypeErrorComponentAttrEnum
+    _$breedingsitesCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateLocationTypeErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateLocationTypeErrorComponentAttrEnum
     _$breedingsitesCreateLocationTypeErrorComponentAttrEnumValueOf(
@@ -17,8 +21,10 @@ BreedingsitesCreateLocationTypeErrorComponentAttrEnum
   switch (name) {
     case 'locationPeriodType':
       return _$breedingsitesCreateLocationTypeErrorComponentAttrEnum_locationPeriodType;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -27,6 +33,7 @@ final BuiltSet<BreedingsitesCreateLocationTypeErrorComponentAttrEnum>
     new BuiltSet<
         BreedingsitesCreateLocationTypeErrorComponentAttrEnum>(const <BreedingsitesCreateLocationTypeErrorComponentAttrEnum>[
   _$breedingsitesCreateLocationTypeErrorComponentAttrEnum_locationPeriodType,
+  _$breedingsitesCreateLocationTypeErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const BreedingsitesCreateLocationTypeErrorComponentCodeEnum
@@ -39,6 +46,10 @@ const BreedingsitesCreateLocationTypeErrorComponentCodeEnum
 const BreedingsitesCreateLocationTypeErrorComponentCodeEnum
     _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_required_ =
     const BreedingsitesCreateLocationTypeErrorComponentCodeEnum._('required_');
+const BreedingsitesCreateLocationTypeErrorComponentCodeEnum
+    _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const BreedingsitesCreateLocationTypeErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 BreedingsitesCreateLocationTypeErrorComponentCodeEnum
     _$breedingsitesCreateLocationTypeErrorComponentCodeEnumValueOf(
@@ -50,8 +61,10 @@ BreedingsitesCreateLocationTypeErrorComponentCodeEnum
       return _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_null_;
     case 'required_':
       return _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -62,6 +75,7 @@ final BuiltSet<BreedingsitesCreateLocationTypeErrorComponentCodeEnum>
   _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_invalidChoice,
   _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_null_,
   _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_required_,
+  _$breedingsitesCreateLocationTypeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesCreateLocationTypeErrorComponentAttrEnum>
@@ -77,9 +91,11 @@ class _$BreedingsitesCreateLocationTypeErrorComponentAttrEnumSerializer
             BreedingsitesCreateLocationTypeErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'locationPeriodType': 'location.type',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'location.type': 'locationPeriodType',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -112,11 +128,13 @@ class _$BreedingsitesCreateLocationTypeErrorComponentCodeEnumSerializer
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

@@ -9,14 +9,19 @@ part of 'breedingsites_list_validation_error.dart';
 const BreedingsitesListValidationErrorTypeEnum
     _$breedingsitesListValidationErrorTypeEnum_validationError =
     const BreedingsitesListValidationErrorTypeEnum._('validationError');
+const BreedingsitesListValidationErrorTypeEnum
+    _$breedingsitesListValidationErrorTypeEnum_unknownDefaultOpenApi =
+    const BreedingsitesListValidationErrorTypeEnum._('unknownDefaultOpenApi');
 
 BreedingsitesListValidationErrorTypeEnum
     _$breedingsitesListValidationErrorTypeEnumValueOf(String name) {
   switch (name) {
     case 'validationError':
       return _$breedingsitesListValidationErrorTypeEnum_validationError;
+    case 'unknownDefaultOpenApi':
+      return _$breedingsitesListValidationErrorTypeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$breedingsitesListValidationErrorTypeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<BreedingsitesListValidationErrorTypeEnum>
     _$breedingsitesListValidationErrorTypeEnumValues = new BuiltSet<
         BreedingsitesListValidationErrorTypeEnum>(const <BreedingsitesListValidationErrorTypeEnum>[
   _$breedingsitesListValidationErrorTypeEnum_validationError,
+  _$breedingsitesListValidationErrorTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BreedingsitesListValidationErrorTypeEnum>
@@ -34,9 +40,11 @@ class _$BreedingsitesListValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<BreedingsitesListValidationErrorTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'validationError': 'validation_error',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'validation_error': 'validationError',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

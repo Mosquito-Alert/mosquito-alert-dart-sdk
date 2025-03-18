@@ -447,6 +447,9 @@ class ObservationEventEnvironmentEnum extends EnumClass {
   /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'')
   static const ObservationEventEnvironmentEnum empty = _$observationEventEnvironmentEnum_empty;
+  /// The environment where the event took place.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationEventEnvironmentEnum unknownDefaultOpenApi = _$observationEventEnvironmentEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationEventEnvironmentEnum> get serializer => _$observationEventEnvironmentEnumSerializer;
 
@@ -476,6 +479,9 @@ class ObservationEventMomentEnum extends EnumClass {
   /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'')
   static const ObservationEventMomentEnum empty = _$observationEventMomentEnum_empty;
+  /// The moment of the day when the event took place.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationEventMomentEnum unknownDefaultOpenApi = _$observationEventMomentEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationEventMomentEnum> get serializer => _$observationEventMomentEnumSerializer;
 
@@ -508,6 +514,9 @@ class ObservationUserPerceivedMosquitoSpecieEnum extends EnumClass {
   /// The mosquito specie perceived by the user.
   @BuiltValueEnumConst(wireName: r'')
   static const ObservationUserPerceivedMosquitoSpecieEnum empty = _$observationUserPerceivedMosquitoSpecieEnum_empty;
+  /// The mosquito specie perceived by the user.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationUserPerceivedMosquitoSpecieEnum unknownDefaultOpenApi = _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationUserPerceivedMosquitoSpecieEnum> get serializer => _$observationUserPerceivedMosquitoSpecieEnumSerializer;
 
@@ -540,6 +549,9 @@ class ObservationUserPerceivedMosquitoThoraxEnum extends EnumClass {
   /// The species of mosquito that the thorax resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'')
   static const ObservationUserPerceivedMosquitoThoraxEnum empty = _$observationUserPerceivedMosquitoThoraxEnum_empty;
+  /// The species of mosquito that the thorax resembles, according to the user.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationUserPerceivedMosquitoThoraxEnum unknownDefaultOpenApi = _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationUserPerceivedMosquitoThoraxEnum> get serializer => _$observationUserPerceivedMosquitoThoraxEnumSerializer;
 
@@ -572,6 +584,9 @@ class ObservationUserPerceivedMosquitoAbdomenEnum extends EnumClass {
   /// The species of mosquito that the abdomen resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'')
   static const ObservationUserPerceivedMosquitoAbdomenEnum empty = _$observationUserPerceivedMosquitoAbdomenEnum_empty;
+  /// The species of mosquito that the abdomen resembles, according to the user.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationUserPerceivedMosquitoAbdomenEnum unknownDefaultOpenApi = _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationUserPerceivedMosquitoAbdomenEnum> get serializer => _$observationUserPerceivedMosquitoAbdomenEnumSerializer;
 
@@ -604,6 +619,9 @@ class ObservationUserPerceivedMosquitoLegsEnum extends EnumClass {
   /// The species of mosquito that the leg resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'')
   static const ObservationUserPerceivedMosquitoLegsEnum empty = _$observationUserPerceivedMosquitoLegsEnum_empty;
+  /// The species of mosquito that the leg resembles, according to the user.
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationUserPerceivedMosquitoLegsEnum unknownDefaultOpenApi = _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationUserPerceivedMosquitoLegsEnum> get serializer => _$observationUserPerceivedMosquitoLegsEnumSerializer;
 

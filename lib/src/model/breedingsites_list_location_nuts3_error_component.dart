@@ -143,6 +143,8 @@ class BreedingsitesListLocationNuts3ErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location_nuts_3')
   static const BreedingsitesListLocationNuts3ErrorComponentAttrEnum locationNuts3 = _$breedingsitesListLocationNuts3ErrorComponentAttrEnum_locationNuts3;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListLocationNuts3ErrorComponentAttrEnum unknownDefaultOpenApi = _$breedingsitesListLocationNuts3ErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListLocationNuts3ErrorComponentAttrEnum> get serializer => _$breedingsitesListLocationNuts3ErrorComponentAttrEnumSerializer;
 
@@ -156,6 +158,8 @@ class BreedingsitesListLocationNuts3ErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const BreedingsitesListLocationNuts3ErrorComponentCodeEnum nullCharactersNotAllowed = _$breedingsitesListLocationNuts3ErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const BreedingsitesListLocationNuts3ErrorComponentCodeEnum unknownDefaultOpenApi = _$breedingsitesListLocationNuts3ErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<BreedingsitesListLocationNuts3ErrorComponentCodeEnum> get serializer => _$breedingsitesListLocationNuts3ErrorComponentCodeEnumSerializer;
 

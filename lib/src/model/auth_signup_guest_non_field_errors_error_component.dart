@@ -143,6 +143,8 @@ class AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')
   static const AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum nonFieldErrors = _$authSignupGuestNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum unknownDefaultOpenApi = _$authSignupGuestNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum> get serializer => _$authSignupGuestNonFieldErrorsErrorComponentAttrEnumSerializer;
 
@@ -158,6 +160,8 @@ class AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum extends EnumClass {
   static const AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum invalid = _$authSignupGuestNonFieldErrorsErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum null_ = _$authSignupGuestNonFieldErrorsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$authSignupGuestNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum> get serializer => _$authSignupGuestNonFieldErrorsErrorComponentCodeEnumSerializer;
 

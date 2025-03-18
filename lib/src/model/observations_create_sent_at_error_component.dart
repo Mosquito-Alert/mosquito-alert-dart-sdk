@@ -143,6 +143,8 @@ class ObservationsCreateSentAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'sent_at')
   static const ObservationsCreateSentAtErrorComponentAttrEnum sentAt = _$observationsCreateSentAtErrorComponentAttrEnum_sentAt;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateSentAtErrorComponentAttrEnum unknownDefaultOpenApi = _$observationsCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateSentAtErrorComponentAttrEnum> get serializer => _$observationsCreateSentAtErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class ObservationsCreateSentAtErrorComponentCodeEnum extends EnumClass {
   static const ObservationsCreateSentAtErrorComponentCodeEnum overflow = _$observationsCreateSentAtErrorComponentCodeEnum_overflow;
   @BuiltValueEnumConst(wireName: r'required')
   static const ObservationsCreateSentAtErrorComponentCodeEnum required_ = _$observationsCreateSentAtErrorComponentCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const ObservationsCreateSentAtErrorComponentCodeEnum unknownDefaultOpenApi = _$observationsCreateSentAtErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<ObservationsCreateSentAtErrorComponentCodeEnum> get serializer => _$observationsCreateSentAtErrorComponentCodeEnumSerializer;
 

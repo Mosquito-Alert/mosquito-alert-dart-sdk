@@ -9,14 +9,20 @@ part of 'observations_create_tags_error_component.dart';
 const ObservationsCreateTagsErrorComponentAttrEnum
     _$observationsCreateTagsErrorComponentAttrEnum_tags =
     const ObservationsCreateTagsErrorComponentAttrEnum._('tags');
+const ObservationsCreateTagsErrorComponentAttrEnum
+    _$observationsCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsCreateTagsErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateTagsErrorComponentAttrEnum
     _$observationsCreateTagsErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'tags':
       return _$observationsCreateTagsErrorComponentAttrEnum_tags;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +30,7 @@ final BuiltSet<ObservationsCreateTagsErrorComponentAttrEnum>
     _$observationsCreateTagsErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsCreateTagsErrorComponentAttrEnum>(const <ObservationsCreateTagsErrorComponentAttrEnum>[
   _$observationsCreateTagsErrorComponentAttrEnum_tags,
+  _$observationsCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsCreateTagsErrorComponentCodeEnum
@@ -38,6 +45,10 @@ const ObservationsCreateTagsErrorComponentCodeEnum
 const ObservationsCreateTagsErrorComponentCodeEnum
     _$observationsCreateTagsErrorComponentCodeEnum_null_ =
     const ObservationsCreateTagsErrorComponentCodeEnum._('null_');
+const ObservationsCreateTagsErrorComponentCodeEnum
+    _$observationsCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsCreateTagsErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsCreateTagsErrorComponentCodeEnum
     _$observationsCreateTagsErrorComponentCodeEnumValueOf(String name) {
@@ -50,8 +61,10 @@ ObservationsCreateTagsErrorComponentCodeEnum
       return _$observationsCreateTagsErrorComponentCodeEnum_notAStr;
     case 'null_':
       return _$observationsCreateTagsErrorComponentCodeEnum_null_;
+    case 'unknownDefaultOpenApi':
+      return _$observationsCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -62,6 +75,7 @@ final BuiltSet<ObservationsCreateTagsErrorComponentCodeEnum>
   _$observationsCreateTagsErrorComponentCodeEnum_notAList,
   _$observationsCreateTagsErrorComponentCodeEnum_notAStr,
   _$observationsCreateTagsErrorComponentCodeEnum_null_,
+  _$observationsCreateTagsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsCreateTagsErrorComponentAttrEnum>
@@ -76,9 +90,11 @@ class _$ObservationsCreateTagsErrorComponentAttrEnumSerializer
         PrimitiveSerializer<ObservationsCreateTagsErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'tags': 'tags',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'tags': 'tags',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -110,12 +126,14 @@ class _$ObservationsCreateTagsErrorComponentCodeEnumSerializer
     'notAList': 'not_a_list',
     'notAStr': 'not_a_str',
     'null_': 'null',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_json': 'invalidJson',
     'not_a_list': 'notAList',
     'not_a_str': 'notAStr',
     'null': 'null_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

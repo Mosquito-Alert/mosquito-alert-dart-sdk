@@ -143,6 +143,8 @@ class NotificationsCreateMessageBodySqErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'message.body.sq')
   static const NotificationsCreateMessageBodySqErrorComponentAttrEnum messagePeriodBodyPeriodSq = _$notificationsCreateMessageBodySqErrorComponentAttrEnum_messagePeriodBodyPeriodSq;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateMessageBodySqErrorComponentAttrEnum unknownDefaultOpenApi = _$notificationsCreateMessageBodySqErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateMessageBodySqErrorComponentAttrEnum> get serializer => _$notificationsCreateMessageBodySqErrorComponentAttrEnumSerializer;
 
@@ -164,6 +166,8 @@ class NotificationsCreateMessageBodySqErrorComponentCodeEnum extends EnumClass {
   static const NotificationsCreateMessageBodySqErrorComponentCodeEnum nullCharactersNotAllowed = _$notificationsCreateMessageBodySqErrorComponentCodeEnum_nullCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const NotificationsCreateMessageBodySqErrorComponentCodeEnum surrogateCharactersNotAllowed = _$notificationsCreateMessageBodySqErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsCreateMessageBodySqErrorComponentCodeEnum unknownDefaultOpenApi = _$notificationsCreateMessageBodySqErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsCreateMessageBodySqErrorComponentCodeEnum> get serializer => _$notificationsCreateMessageBodySqErrorComponentCodeEnumSerializer;
 

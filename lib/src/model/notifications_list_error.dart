@@ -115,6 +115,8 @@ class NotificationsListErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')
   static const NotificationsListErrorAttrEnum orderBy = _$notificationsListErrorAttrEnum_orderBy;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsListErrorAttrEnum unknownDefaultOpenApi = _$notificationsListErrorAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsListErrorAttrEnum> get serializer => _$notificationsListErrorAttrEnumSerializer;
 
@@ -128,6 +130,8 @@ class NotificationsListErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const NotificationsListErrorCodeEnum invalidChoice = _$notificationsListErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const NotificationsListErrorCodeEnum unknownDefaultOpenApi = _$notificationsListErrorCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<NotificationsListErrorCodeEnum> get serializer => _$notificationsListErrorCodeEnumSerializer;
 

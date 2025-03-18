@@ -143,6 +143,8 @@ class DevicesPartialUpdateFcmTokenErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'fcm_token')
   static const DevicesPartialUpdateFcmTokenErrorComponentAttrEnum fcmToken = _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_fcmToken;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesPartialUpdateFcmTokenErrorComponentAttrEnum unknownDefaultOpenApi = _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesPartialUpdateFcmTokenErrorComponentAttrEnum> get serializer => _$devicesPartialUpdateFcmTokenErrorComponentAttrEnumSerializer;
 
@@ -166,6 +168,8 @@ class DevicesPartialUpdateFcmTokenErrorComponentCodeEnum extends EnumClass {
   static const DevicesPartialUpdateFcmTokenErrorComponentCodeEnum required_ = _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const DevicesPartialUpdateFcmTokenErrorComponentCodeEnum surrogateCharactersNotAllowed = _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const DevicesPartialUpdateFcmTokenErrorComponentCodeEnum unknownDefaultOpenApi = _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_unknownDefaultOpenApi;
 
   static Serializer<DevicesPartialUpdateFcmTokenErrorComponentCodeEnum> get serializer => _$devicesPartialUpdateFcmTokenErrorComponentCodeEnumSerializer;
 

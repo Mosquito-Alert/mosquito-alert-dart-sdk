@@ -9,14 +9,19 @@ part of 'devices_create_type_error_component.dart';
 const DevicesCreateTypeErrorComponentAttrEnum
     _$devicesCreateTypeErrorComponentAttrEnum_type =
     const DevicesCreateTypeErrorComponentAttrEnum._('type');
+const DevicesCreateTypeErrorComponentAttrEnum
+    _$devicesCreateTypeErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const DevicesCreateTypeErrorComponentAttrEnum._('unknownDefaultOpenApi');
 
 DevicesCreateTypeErrorComponentAttrEnum
     _$devicesCreateTypeErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'type':
       return _$devicesCreateTypeErrorComponentAttrEnum_type;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateTypeErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,6 +29,7 @@ final BuiltSet<DevicesCreateTypeErrorComponentAttrEnum>
     _$devicesCreateTypeErrorComponentAttrEnumValues = new BuiltSet<
         DevicesCreateTypeErrorComponentAttrEnum>(const <DevicesCreateTypeErrorComponentAttrEnum>[
   _$devicesCreateTypeErrorComponentAttrEnum_type,
+  _$devicesCreateTypeErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const DevicesCreateTypeErrorComponentCodeEnum
@@ -35,6 +41,9 @@ const DevicesCreateTypeErrorComponentCodeEnum
 const DevicesCreateTypeErrorComponentCodeEnum
     _$devicesCreateTypeErrorComponentCodeEnum_required_ =
     const DevicesCreateTypeErrorComponentCodeEnum._('required_');
+const DevicesCreateTypeErrorComponentCodeEnum
+    _$devicesCreateTypeErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const DevicesCreateTypeErrorComponentCodeEnum._('unknownDefaultOpenApi');
 
 DevicesCreateTypeErrorComponentCodeEnum
     _$devicesCreateTypeErrorComponentCodeEnumValueOf(String name) {
@@ -45,8 +54,10 @@ DevicesCreateTypeErrorComponentCodeEnum
       return _$devicesCreateTypeErrorComponentCodeEnum_null_;
     case 'required_':
       return _$devicesCreateTypeErrorComponentCodeEnum_required_;
+    case 'unknownDefaultOpenApi':
+      return _$devicesCreateTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$devicesCreateTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -56,6 +67,7 @@ final BuiltSet<DevicesCreateTypeErrorComponentCodeEnum>
   _$devicesCreateTypeErrorComponentCodeEnum_invalidChoice,
   _$devicesCreateTypeErrorComponentCodeEnum_null_,
   _$devicesCreateTypeErrorComponentCodeEnum_required_,
+  _$devicesCreateTypeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<DevicesCreateTypeErrorComponentAttrEnum>
@@ -69,9 +81,11 @@ class _$DevicesCreateTypeErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<DevicesCreateTypeErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'type': 'type',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'type': 'type',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -101,11 +115,13 @@ class _$DevicesCreateTypeErrorComponentCodeEnumSerializer
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
     'required_': 'required',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
     'required': 'required_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

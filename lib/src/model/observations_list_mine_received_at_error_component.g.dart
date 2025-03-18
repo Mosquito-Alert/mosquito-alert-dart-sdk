@@ -9,14 +9,20 @@ part of 'observations_list_mine_received_at_error_component.dart';
 const ObservationsListMineReceivedAtErrorComponentAttrEnum
     _$observationsListMineReceivedAtErrorComponentAttrEnum_receivedAt =
     const ObservationsListMineReceivedAtErrorComponentAttrEnum._('receivedAt');
+const ObservationsListMineReceivedAtErrorComponentAttrEnum
+    _$observationsListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi =
+    const ObservationsListMineReceivedAtErrorComponentAttrEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineReceivedAtErrorComponentAttrEnum
     _$observationsListMineReceivedAtErrorComponentAttrEnumValueOf(String name) {
   switch (name) {
     case 'receivedAt':
       return _$observationsListMineReceivedAtErrorComponentAttrEnum_receivedAt;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -24,19 +30,26 @@ final BuiltSet<ObservationsListMineReceivedAtErrorComponentAttrEnum>
     _$observationsListMineReceivedAtErrorComponentAttrEnumValues = new BuiltSet<
         ObservationsListMineReceivedAtErrorComponentAttrEnum>(const <ObservationsListMineReceivedAtErrorComponentAttrEnum>[
   _$observationsListMineReceivedAtErrorComponentAttrEnum_receivedAt,
+  _$observationsListMineReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListMineReceivedAtErrorComponentCodeEnum
     _$observationsListMineReceivedAtErrorComponentCodeEnum_invalid =
     const ObservationsListMineReceivedAtErrorComponentCodeEnum._('invalid');
+const ObservationsListMineReceivedAtErrorComponentCodeEnum
+    _$observationsListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi =
+    const ObservationsListMineReceivedAtErrorComponentCodeEnum._(
+        'unknownDefaultOpenApi');
 
 ObservationsListMineReceivedAtErrorComponentCodeEnum
     _$observationsListMineReceivedAtErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
     case 'invalid':
       return _$observationsListMineReceivedAtErrorComponentCodeEnum_invalid;
+    case 'unknownDefaultOpenApi':
+      return _$observationsListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$observationsListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -44,6 +57,7 @@ final BuiltSet<ObservationsListMineReceivedAtErrorComponentCodeEnum>
     _$observationsListMineReceivedAtErrorComponentCodeEnumValues = new BuiltSet<
         ObservationsListMineReceivedAtErrorComponentCodeEnum>(const <ObservationsListMineReceivedAtErrorComponentCodeEnum>[
   _$observationsListMineReceivedAtErrorComponentCodeEnum_invalid,
+  _$observationsListMineReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ObservationsListMineReceivedAtErrorComponentAttrEnum>
@@ -59,9 +73,11 @@ class _$ObservationsListMineReceivedAtErrorComponentAttrEnumSerializer
             ObservationsListMineReceivedAtErrorComponentAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'receivedAt': 'received_at',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'received_at': 'receivedAt',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -92,9 +108,11 @@ class _$ObservationsListMineReceivedAtErrorComponentCodeEnumSerializer
             ObservationsListMineReceivedAtErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override

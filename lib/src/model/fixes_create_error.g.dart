@@ -8,25 +8,34 @@ part of 'fixes_create_error.dart';
 
 const FixesCreateErrorAttrEnum _$fixesCreateErrorAttrEnum_power =
     const FixesCreateErrorAttrEnum._('power');
+const FixesCreateErrorAttrEnum
+    _$fixesCreateErrorAttrEnum_unknownDefaultOpenApi =
+    const FixesCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 FixesCreateErrorAttrEnum _$fixesCreateErrorAttrEnumValueOf(String name) {
   switch (name) {
     case 'power':
       return _$fixesCreateErrorAttrEnum_power;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreateErrorAttrEnum_unknownDefaultOpenApi;
   }
 }
 
 final BuiltSet<FixesCreateErrorAttrEnum> _$fixesCreateErrorAttrEnumValues =
     new BuiltSet<FixesCreateErrorAttrEnum>(const <FixesCreateErrorAttrEnum>[
   _$fixesCreateErrorAttrEnum_power,
+  _$fixesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const FixesCreateErrorCodeEnum _$fixesCreateErrorCodeEnum_invalid =
     const FixesCreateErrorCodeEnum._('invalid');
 const FixesCreateErrorCodeEnum _$fixesCreateErrorCodeEnum_maxStringLength =
     const FixesCreateErrorCodeEnum._('maxStringLength');
+const FixesCreateErrorCodeEnum
+    _$fixesCreateErrorCodeEnum_unknownDefaultOpenApi =
+    const FixesCreateErrorCodeEnum._('unknownDefaultOpenApi');
 
 FixesCreateErrorCodeEnum _$fixesCreateErrorCodeEnumValueOf(String name) {
   switch (name) {
@@ -34,8 +43,10 @@ FixesCreateErrorCodeEnum _$fixesCreateErrorCodeEnumValueOf(String name) {
       return _$fixesCreateErrorCodeEnum_invalid;
     case 'maxStringLength':
       return _$fixesCreateErrorCodeEnum_maxStringLength;
+    case 'unknownDefaultOpenApi':
+      return _$fixesCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
-      throw new ArgumentError(name);
+      return _$fixesCreateErrorCodeEnum_unknownDefaultOpenApi;
   }
 }
 
@@ -43,6 +54,7 @@ final BuiltSet<FixesCreateErrorCodeEnum> _$fixesCreateErrorCodeEnumValues =
     new BuiltSet<FixesCreateErrorCodeEnum>(const <FixesCreateErrorCodeEnum>[
   _$fixesCreateErrorCodeEnum_invalid,
   _$fixesCreateErrorCodeEnum_maxStringLength,
+  _$fixesCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<FixesCreateErrorAttrEnum> _$fixesCreateErrorAttrEnumSerializer =
@@ -54,9 +66,11 @@ class _$FixesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<FixesCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'power': 'power',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'power': 'power',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
@@ -82,10 +96,12 @@ class _$FixesCreateErrorCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'maxStringLength': 'max_string_length',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
