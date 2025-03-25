@@ -33,6 +33,8 @@ const BitesCreateErrorCodeEnum _$bitesCreateErrorCodeEnum_invalid =
     const BitesCreateErrorCodeEnum._('invalid');
 const BitesCreateErrorCodeEnum _$bitesCreateErrorCodeEnum_maxStringLength =
     const BitesCreateErrorCodeEnum._('maxStringLength');
+const BitesCreateErrorCodeEnum _$bitesCreateErrorCodeEnum_null_ =
+    const BitesCreateErrorCodeEnum._('null_');
 const BitesCreateErrorCodeEnum
     _$bitesCreateErrorCodeEnum_unknownDefaultOpenApi =
     const BitesCreateErrorCodeEnum._('unknownDefaultOpenApi');
@@ -43,6 +45,8 @@ BitesCreateErrorCodeEnum _$bitesCreateErrorCodeEnumValueOf(String name) {
       return _$bitesCreateErrorCodeEnum_invalid;
     case 'maxStringLength':
       return _$bitesCreateErrorCodeEnum_maxStringLength;
+    case 'null_':
+      return _$bitesCreateErrorCodeEnum_null_;
     case 'unknownDefaultOpenApi':
       return _$bitesCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -54,6 +58,7 @@ final BuiltSet<BitesCreateErrorCodeEnum> _$bitesCreateErrorCodeEnumValues =
     new BuiltSet<BitesCreateErrorCodeEnum>(const <BitesCreateErrorCodeEnum>[
   _$bitesCreateErrorCodeEnum_invalid,
   _$bitesCreateErrorCodeEnum_maxStringLength,
+  _$bitesCreateErrorCodeEnum_null_,
   _$bitesCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -96,11 +101,13 @@ class _$BitesCreateErrorCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'maxStringLength': 'max_string_length',
+    'null_': 'null',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
+    'null': 'null_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

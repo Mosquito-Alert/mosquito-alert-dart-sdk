@@ -136,7 +136,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
-> PaginatedObservationList list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+> PaginatedObservationList list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
 
 
 
@@ -156,9 +156,9 @@ final api = MosquitoAlert().getObservationsApi();
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final bool hasPhotos = true; // bool | Has any photo
+final String locationAdmNuts2 = locationAdmNuts2_example; // String | 
+final String locationAdmNuts3 = locationAdmNuts3_example; // String | 
 final int locationCountryId = 56; // int | 
-final String locationNuts2 = locationNuts2_example; // String | 
-final String locationNuts3 = locationNuts3_example; // String | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
@@ -170,7 +170,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.list(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    final response = api.list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ObservationsApi->list: $e\n');
@@ -184,9 +184,9 @@ Name | Type | Description  | Notes
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
  **hasPhotos** | **bool**| Has any photo | [optional] 
+ **locationAdmNuts2** | **String**|  | [optional] 
+ **locationAdmNuts3** | **String**|  | [optional] 
  **locationCountryId** | **int**|  | [optional] 
- **locationNuts2** | **String**|  | [optional] 
- **locationNuts3** | **String**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listMine**
-> PaginatedObservationList listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+> PaginatedObservationList listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
 
 
 
@@ -227,9 +227,9 @@ final api = MosquitoAlert().getObservationsApi();
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final bool hasPhotos = true; // bool | Has any photo
+final String locationAdmNuts2 = locationAdmNuts2_example; // String | 
+final String locationAdmNuts3 = locationAdmNuts3_example; // String | 
 final int locationCountryId = 56; // int | 
-final String locationNuts2 = locationNuts2_example; // String | 
-final String locationNuts3 = locationNuts3_example; // String | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
@@ -241,7 +241,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationCountryId, locationNuts2, locationNuts3, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    final response = api.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ObservationsApi->listMine: $e\n');
@@ -255,9 +255,9 @@ Name | Type | Description  | Notes
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
  **hasPhotos** | **bool**| Has any photo | [optional] 
+ **locationAdmNuts2** | **String**|  | [optional] 
+ **locationAdmNuts3** | **String**|  | [optional] 
  **locationCountryId** | **int**|  | [optional] 
- **locationNuts2** | **String**|  | [optional] 
- **locationNuts3** | **String**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 

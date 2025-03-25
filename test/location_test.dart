@@ -7,9 +7,9 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(Location, () {
-    // Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
-    // String type
-    test('to test the property `type`', () async {
+    // Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
+    // String source_
+    test('to test the property `source_`', () async {
       // TODO
     });
 
@@ -28,13 +28,8 @@ void main() {
       // TODO
     });
 
-    // String nuts2
-    test('to test the property `nuts2`', () async {
-      // TODO
-    });
-
-    // String nuts3
-    test('to test the property `nuts3`', () async {
+    // AdmBoundaries admBoundaries
+    test('to test the property `admBoundaries`', () async {
       // TODO
     });
 

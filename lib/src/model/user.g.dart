@@ -210,9 +210,7 @@ class _$User extends User {
   @override
   final bool isGuest;
   @override
-  final int score;
-  @override
-  final DateTime lastScoreUpdate;
+  final UserScore score;
 
   factory _$User([void Function(UserBuilder)? updates]) =>
       (new UserBuilder()..update(updates))._build();
@@ -224,8 +222,7 @@ class _$User extends User {
       this.locale,
       required this.languageIso,
       required this.isGuest,
-      required this.score,
-      required this.lastScoreUpdate})
+      required this.score})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(uuid, r'User', 'uuid');
     BuiltValueNullFieldError.checkNotNull(username, r'User', 'username');
@@ -234,8 +231,6 @@ class _$User extends User {
     BuiltValueNullFieldError.checkNotNull(languageIso, r'User', 'languageIso');
     BuiltValueNullFieldError.checkNotNull(isGuest, r'User', 'isGuest');
     BuiltValueNullFieldError.checkNotNull(score, r'User', 'score');
-    BuiltValueNullFieldError.checkNotNull(
-        lastScoreUpdate, r'User', 'lastScoreUpdate');
   }
 
   @override
@@ -255,8 +250,7 @@ class _$User extends User {
         locale == other.locale &&
         languageIso == other.languageIso &&
         isGuest == other.isGuest &&
-        score == other.score &&
-        lastScoreUpdate == other.lastScoreUpdate;
+        score == other.score;
   }
 
   @override
@@ -269,7 +263,6 @@ class _$User extends User {
     _$hash = $jc(_$hash, languageIso.hashCode);
     _$hash = $jc(_$hash, isGuest.hashCode);
     _$hash = $jc(_$hash, score.hashCode);
-    _$hash = $jc(_$hash, lastScoreUpdate.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -283,8 +276,7 @@ class _$User extends User {
           ..add('locale', locale)
           ..add('languageIso', languageIso)
           ..add('isGuest', isGuest)
-          ..add('score', score)
-          ..add('lastScoreUpdate', lastScoreUpdate))
+          ..add('score', score))
         .toString();
   }
 }
@@ -317,14 +309,9 @@ class UserBuilder implements Builder<User, UserBuilder> {
   bool? get isGuest => _$this._isGuest;
   set isGuest(bool? isGuest) => _$this._isGuest = isGuest;
 
-  int? _score;
-  int? get score => _$this._score;
-  set score(int? score) => _$this._score = score;
-
-  DateTime? _lastScoreUpdate;
-  DateTime? get lastScoreUpdate => _$this._lastScoreUpdate;
-  set lastScoreUpdate(DateTime? lastScoreUpdate) =>
-      _$this._lastScoreUpdate = lastScoreUpdate;
+  UserScoreBuilder? _score;
+  UserScoreBuilder get score => _$this._score ??= new UserScoreBuilder();
+  set score(UserScoreBuilder? score) => _$this._score = score;
 
   UserBuilder() {
     User._defaults(this);
@@ -339,8 +326,7 @@ class UserBuilder implements Builder<User, UserBuilder> {
       _locale = $v.locale;
       _languageIso = $v.languageIso;
       _isGuest = $v.isGuest;
-      _score = $v.score;
-      _lastScoreUpdate = $v.lastScoreUpdate;
+      _score = $v.score.toBuilder();
       _$v = null;
     }
     return this;
@@ -361,22 +347,33 @@ class UserBuilder implements Builder<User, UserBuilder> {
   User build() => _build();
 
   _$User _build() {
-    final _$result = _$v ??
-        new _$User._(
-            uuid: BuiltValueNullFieldError.checkNotNull(uuid, r'User', 'uuid'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, r'User', 'username'),
-            registrationTime: BuiltValueNullFieldError.checkNotNull(
-                registrationTime, r'User', 'registrationTime'),
-            locale: locale,
-            languageIso: BuiltValueNullFieldError.checkNotNull(
-                languageIso, r'User', 'languageIso'),
-            isGuest: BuiltValueNullFieldError.checkNotNull(
-                isGuest, r'User', 'isGuest'),
-            score:
-                BuiltValueNullFieldError.checkNotNull(score, r'User', 'score'),
-            lastScoreUpdate: BuiltValueNullFieldError.checkNotNull(
-                lastScoreUpdate, r'User', 'lastScoreUpdate'));
+    _$User _$result;
+    try {
+      _$result = _$v ??
+          new _$User._(
+              uuid:
+                  BuiltValueNullFieldError.checkNotNull(uuid, r'User', 'uuid'),
+              username: BuiltValueNullFieldError.checkNotNull(
+                  username, r'User', 'username'),
+              registrationTime: BuiltValueNullFieldError.checkNotNull(
+                  registrationTime, r'User', 'registrationTime'),
+              locale: locale,
+              languageIso: BuiltValueNullFieldError.checkNotNull(
+                  languageIso, r'User', 'languageIso'),
+              isGuest: BuiltValueNullFieldError.checkNotNull(
+                  isGuest, r'User', 'isGuest'),
+              score: score.build());
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'score';
+        score.build();
+      } catch (e) {
+        throw new BuiltValueNestedFieldError(
+            r'User', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

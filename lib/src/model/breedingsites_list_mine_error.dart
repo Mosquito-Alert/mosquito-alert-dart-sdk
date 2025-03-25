@@ -3,12 +3,12 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_created_at_error_component.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_adm_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_adm_nuts2_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_short_id_error_component.dart';
@@ -27,16 +27,16 @@ part 'breedingsites_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BreedingsitesListMineError implements Built<BreedingsitesListMineError, BreedingsitesListMineErrorBuilder> {
-  /// One Of [BreedingsitesListMineCreatedAtErrorComponent], [BreedingsitesListMineLocationCountryIdErrorComponent], [BreedingsitesListMineLocationNuts2ErrorComponent], [BreedingsitesListMineLocationNuts3ErrorComponent], [BreedingsitesListMineOrderByErrorComponent], [BreedingsitesListMineReceivedAtErrorComponent], [BreedingsitesListMineShortIdErrorComponent], [BreedingsitesListMineUpdatedAtErrorComponent], [BreedingsitesListMineUserUuidErrorComponent]
+  /// One Of [BreedingsitesListMineCreatedAtErrorComponent], [BreedingsitesListMineLocationAdmNuts2ErrorComponent], [BreedingsitesListMineLocationAdmNuts3ErrorComponent], [BreedingsitesListMineLocationCountryIdErrorComponent], [BreedingsitesListMineOrderByErrorComponent], [BreedingsitesListMineReceivedAtErrorComponent], [BreedingsitesListMineShortIdErrorComponent], [BreedingsitesListMineUpdatedAtErrorComponent], [BreedingsitesListMineUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
     r'created_at': BreedingsitesListMineCreatedAtErrorComponent,
+    r'location_adm_nuts2': BreedingsitesListMineLocationAdmNuts2ErrorComponent,
+    r'location_adm_nuts3': BreedingsitesListMineLocationAdmNuts3ErrorComponent,
     r'location_country_id': BreedingsitesListMineLocationCountryIdErrorComponent,
-    r'location_nuts_2': BreedingsitesListMineLocationNuts2ErrorComponent,
-    r'location_nuts_3': BreedingsitesListMineLocationNuts3ErrorComponent,
     r'order_by': BreedingsitesListMineOrderByErrorComponent,
     r'received_at': BreedingsitesListMineReceivedAtErrorComponent,
     r'short_id': BreedingsitesListMineShortIdErrorComponent,
@@ -60,14 +60,14 @@ extension BreedingsitesListMineErrorDiscriminatorExt on BreedingsitesListMineErr
         if (this is BreedingsitesListMineCreatedAtErrorComponent) {
             return r'created_at';
         }
+        if (this is BreedingsitesListMineLocationAdmNuts2ErrorComponent) {
+            return r'location_adm_nuts2';
+        }
+        if (this is BreedingsitesListMineLocationAdmNuts3ErrorComponent) {
+            return r'location_adm_nuts3';
+        }
         if (this is BreedingsitesListMineLocationCountryIdErrorComponent) {
             return r'location_country_id';
-        }
-        if (this is BreedingsitesListMineLocationNuts2ErrorComponent) {
-            return r'location_nuts_2';
-        }
-        if (this is BreedingsitesListMineLocationNuts3ErrorComponent) {
-            return r'location_nuts_3';
         }
         if (this is BreedingsitesListMineOrderByErrorComponent) {
             return r'order_by';
@@ -92,14 +92,14 @@ extension BreedingsitesListMineErrorBuilderDiscriminatorExt on BreedingsitesList
         if (this is BreedingsitesListMineCreatedAtErrorComponentBuilder) {
             return r'created_at';
         }
+        if (this is BreedingsitesListMineLocationAdmNuts2ErrorComponentBuilder) {
+            return r'location_adm_nuts2';
+        }
+        if (this is BreedingsitesListMineLocationAdmNuts3ErrorComponentBuilder) {
+            return r'location_adm_nuts3';
+        }
         if (this is BreedingsitesListMineLocationCountryIdErrorComponentBuilder) {
             return r'location_country_id';
-        }
-        if (this is BreedingsitesListMineLocationNuts2ErrorComponentBuilder) {
-            return r'location_nuts_2';
-        }
-        if (this is BreedingsitesListMineLocationNuts3ErrorComponentBuilder) {
-            return r'location_nuts_3';
         }
         if (this is BreedingsitesListMineOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -156,7 +156,7 @@ class _$BreedingsitesListMineErrorSerializer implements PrimitiveSerializer<Bree
     final discIndex = serializedList.indexOf(BreedingsitesListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BreedingsitesListMineCreatedAtErrorComponent, BreedingsitesListMineLocationCountryIdErrorComponent, BreedingsitesListMineLocationNuts2ErrorComponent, BreedingsitesListMineLocationNuts3ErrorComponent, BreedingsitesListMineOrderByErrorComponent, BreedingsitesListMineReceivedAtErrorComponent, BreedingsitesListMineShortIdErrorComponent, BreedingsitesListMineUpdatedAtErrorComponent, BreedingsitesListMineUserUuidErrorComponent, ];
+    final oneOfTypes = [BreedingsitesListMineCreatedAtErrorComponent, BreedingsitesListMineLocationAdmNuts2ErrorComponent, BreedingsitesListMineLocationAdmNuts3ErrorComponent, BreedingsitesListMineLocationCountryIdErrorComponent, BreedingsitesListMineOrderByErrorComponent, BreedingsitesListMineReceivedAtErrorComponent, BreedingsitesListMineShortIdErrorComponent, BreedingsitesListMineUpdatedAtErrorComponent, BreedingsitesListMineUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -167,26 +167,26 @@ class _$BreedingsitesListMineErrorSerializer implements PrimitiveSerializer<Bree
         ) as BreedingsitesListMineCreatedAtErrorComponent;
         oneOfType = BreedingsitesListMineCreatedAtErrorComponent;
         break;
+      case r'location_adm_nuts2':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BreedingsitesListMineLocationAdmNuts2ErrorComponent),
+        ) as BreedingsitesListMineLocationAdmNuts2ErrorComponent;
+        oneOfType = BreedingsitesListMineLocationAdmNuts2ErrorComponent;
+        break;
+      case r'location_adm_nuts3':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BreedingsitesListMineLocationAdmNuts3ErrorComponent),
+        ) as BreedingsitesListMineLocationAdmNuts3ErrorComponent;
+        oneOfType = BreedingsitesListMineLocationAdmNuts3ErrorComponent;
+        break;
       case r'location_country_id':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
           specifiedType: FullType(BreedingsitesListMineLocationCountryIdErrorComponent),
         ) as BreedingsitesListMineLocationCountryIdErrorComponent;
         oneOfType = BreedingsitesListMineLocationCountryIdErrorComponent;
-        break;
-      case r'location_nuts_2':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BreedingsitesListMineLocationNuts2ErrorComponent),
-        ) as BreedingsitesListMineLocationNuts2ErrorComponent;
-        oneOfType = BreedingsitesListMineLocationNuts2ErrorComponent;
-        break;
-      case r'location_nuts_3':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BreedingsitesListMineLocationNuts3ErrorComponent),
-        ) as BreedingsitesListMineLocationNuts3ErrorComponent;
-        oneOfType = BreedingsitesListMineLocationNuts3ErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(

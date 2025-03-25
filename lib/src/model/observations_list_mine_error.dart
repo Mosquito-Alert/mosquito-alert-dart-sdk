@@ -4,15 +4,15 @@
 
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/observations_list_mine_user_uuid_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_mine_location_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_location_adm_nuts2_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_created_at_error_component.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/observations_list_mine_location_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_short_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_location_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_location_adm_nuts3_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';
@@ -27,16 +27,16 @@ part 'observations_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class ObservationsListMineError implements Built<ObservationsListMineError, ObservationsListMineErrorBuilder> {
-  /// One Of [ObservationsListMineCreatedAtErrorComponent], [ObservationsListMineLocationCountryIdErrorComponent], [ObservationsListMineLocationNuts2ErrorComponent], [ObservationsListMineLocationNuts3ErrorComponent], [ObservationsListMineOrderByErrorComponent], [ObservationsListMineReceivedAtErrorComponent], [ObservationsListMineShortIdErrorComponent], [ObservationsListMineUpdatedAtErrorComponent], [ObservationsListMineUserUuidErrorComponent]
+  /// One Of [ObservationsListMineCreatedAtErrorComponent], [ObservationsListMineLocationAdmNuts2ErrorComponent], [ObservationsListMineLocationAdmNuts3ErrorComponent], [ObservationsListMineLocationCountryIdErrorComponent], [ObservationsListMineOrderByErrorComponent], [ObservationsListMineReceivedAtErrorComponent], [ObservationsListMineShortIdErrorComponent], [ObservationsListMineUpdatedAtErrorComponent], [ObservationsListMineUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
     r'created_at': ObservationsListMineCreatedAtErrorComponent,
+    r'location_adm_nuts2': ObservationsListMineLocationAdmNuts2ErrorComponent,
+    r'location_adm_nuts3': ObservationsListMineLocationAdmNuts3ErrorComponent,
     r'location_country_id': ObservationsListMineLocationCountryIdErrorComponent,
-    r'location_nuts_2': ObservationsListMineLocationNuts2ErrorComponent,
-    r'location_nuts_3': ObservationsListMineLocationNuts3ErrorComponent,
     r'order_by': ObservationsListMineOrderByErrorComponent,
     r'received_at': ObservationsListMineReceivedAtErrorComponent,
     r'short_id': ObservationsListMineShortIdErrorComponent,
@@ -60,14 +60,14 @@ extension ObservationsListMineErrorDiscriminatorExt on ObservationsListMineError
         if (this is ObservationsListMineCreatedAtErrorComponent) {
             return r'created_at';
         }
+        if (this is ObservationsListMineLocationAdmNuts2ErrorComponent) {
+            return r'location_adm_nuts2';
+        }
+        if (this is ObservationsListMineLocationAdmNuts3ErrorComponent) {
+            return r'location_adm_nuts3';
+        }
         if (this is ObservationsListMineLocationCountryIdErrorComponent) {
             return r'location_country_id';
-        }
-        if (this is ObservationsListMineLocationNuts2ErrorComponent) {
-            return r'location_nuts_2';
-        }
-        if (this is ObservationsListMineLocationNuts3ErrorComponent) {
-            return r'location_nuts_3';
         }
         if (this is ObservationsListMineOrderByErrorComponent) {
             return r'order_by';
@@ -92,14 +92,14 @@ extension ObservationsListMineErrorBuilderDiscriminatorExt on ObservationsListMi
         if (this is ObservationsListMineCreatedAtErrorComponentBuilder) {
             return r'created_at';
         }
+        if (this is ObservationsListMineLocationAdmNuts2ErrorComponentBuilder) {
+            return r'location_adm_nuts2';
+        }
+        if (this is ObservationsListMineLocationAdmNuts3ErrorComponentBuilder) {
+            return r'location_adm_nuts3';
+        }
         if (this is ObservationsListMineLocationCountryIdErrorComponentBuilder) {
             return r'location_country_id';
-        }
-        if (this is ObservationsListMineLocationNuts2ErrorComponentBuilder) {
-            return r'location_nuts_2';
-        }
-        if (this is ObservationsListMineLocationNuts3ErrorComponentBuilder) {
-            return r'location_nuts_3';
         }
         if (this is ObservationsListMineOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -156,7 +156,7 @@ class _$ObservationsListMineErrorSerializer implements PrimitiveSerializer<Obser
     final discIndex = serializedList.indexOf(ObservationsListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [ObservationsListMineCreatedAtErrorComponent, ObservationsListMineLocationCountryIdErrorComponent, ObservationsListMineLocationNuts2ErrorComponent, ObservationsListMineLocationNuts3ErrorComponent, ObservationsListMineOrderByErrorComponent, ObservationsListMineReceivedAtErrorComponent, ObservationsListMineShortIdErrorComponent, ObservationsListMineUpdatedAtErrorComponent, ObservationsListMineUserUuidErrorComponent, ];
+    final oneOfTypes = [ObservationsListMineCreatedAtErrorComponent, ObservationsListMineLocationAdmNuts2ErrorComponent, ObservationsListMineLocationAdmNuts3ErrorComponent, ObservationsListMineLocationCountryIdErrorComponent, ObservationsListMineOrderByErrorComponent, ObservationsListMineReceivedAtErrorComponent, ObservationsListMineShortIdErrorComponent, ObservationsListMineUpdatedAtErrorComponent, ObservationsListMineUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -167,26 +167,26 @@ class _$ObservationsListMineErrorSerializer implements PrimitiveSerializer<Obser
         ) as ObservationsListMineCreatedAtErrorComponent;
         oneOfType = ObservationsListMineCreatedAtErrorComponent;
         break;
+      case r'location_adm_nuts2':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsListMineLocationAdmNuts2ErrorComponent),
+        ) as ObservationsListMineLocationAdmNuts2ErrorComponent;
+        oneOfType = ObservationsListMineLocationAdmNuts2ErrorComponent;
+        break;
+      case r'location_adm_nuts3':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsListMineLocationAdmNuts3ErrorComponent),
+        ) as ObservationsListMineLocationAdmNuts3ErrorComponent;
+        oneOfType = ObservationsListMineLocationAdmNuts3ErrorComponent;
+        break;
       case r'location_country_id':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
           specifiedType: FullType(ObservationsListMineLocationCountryIdErrorComponent),
         ) as ObservationsListMineLocationCountryIdErrorComponent;
         oneOfType = ObservationsListMineLocationCountryIdErrorComponent;
-        break;
-      case r'location_nuts_2':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(ObservationsListMineLocationNuts2ErrorComponent),
-        ) as ObservationsListMineLocationNuts2ErrorComponent;
-        oneOfType = ObservationsListMineLocationNuts2ErrorComponent;
-        break;
-      case r'location_nuts_3':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(ObservationsListMineLocationNuts3ErrorComponent),
-        ) as ObservationsListMineLocationNuts3ErrorComponent;
-        oneOfType = ObservationsListMineLocationNuts3ErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(

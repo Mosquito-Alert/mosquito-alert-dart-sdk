@@ -8,7 +8,7 @@ part of 'photo.dart';
 
 class _$Photo extends Photo {
   @override
-  final String? uuid;
+  final String uuid;
   @override
   final String imageUrl;
   @override
@@ -17,8 +17,10 @@ class _$Photo extends Photo {
   factory _$Photo([void Function(PhotoBuilder)? updates]) =>
       (new PhotoBuilder()..update(updates))._build();
 
-  _$Photo._({this.uuid, required this.imageUrl, required this.imagePath})
+  _$Photo._(
+      {required this.uuid, required this.imageUrl, required this.imagePath})
       : super._() {
+    BuiltValueNullFieldError.checkNotNull(uuid, r'Photo', 'uuid');
     BuiltValueNullFieldError.checkNotNull(imageUrl, r'Photo', 'imageUrl');
     BuiltValueNullFieldError.checkNotNull(imagePath, r'Photo', 'imagePath');
   }
@@ -106,7 +108,7 @@ class PhotoBuilder implements Builder<Photo, PhotoBuilder> {
   _$Photo _build() {
     final _$result = _$v ??
         new _$Photo._(
-            uuid: uuid,
+            uuid: BuiltValueNullFieldError.checkNotNull(uuid, r'Photo', 'uuid'),
             imageUrl: BuiltValueNullFieldError.checkNotNull(
                 imageUrl, r'Photo', 'imageUrl'),
             imagePath: BuiltValueNullFieldError.checkNotNull(

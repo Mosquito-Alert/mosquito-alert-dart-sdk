@@ -42,6 +42,9 @@ const BitesCreateRightLegBiteCountErrorComponentCodeEnum
     const BitesCreateRightLegBiteCountErrorComponentCodeEnum._(
         'maxStringLength');
 const BitesCreateRightLegBiteCountErrorComponentCodeEnum
+    _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_null_ =
+    const BitesCreateRightLegBiteCountErrorComponentCodeEnum._('null_');
+const BitesCreateRightLegBiteCountErrorComponentCodeEnum
     _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi =
     const BitesCreateRightLegBiteCountErrorComponentCodeEnum._(
         'unknownDefaultOpenApi');
@@ -53,6 +56,8 @@ BitesCreateRightLegBiteCountErrorComponentCodeEnum
       return _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_invalid;
     case 'maxStringLength':
       return _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_maxStringLength;
+    case 'null_':
+      return _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_null_;
     case 'unknownDefaultOpenApi':
       return _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -65,6 +70,7 @@ final BuiltSet<BitesCreateRightLegBiteCountErrorComponentCodeEnum>
         BitesCreateRightLegBiteCountErrorComponentCodeEnum>(const <BitesCreateRightLegBiteCountErrorComponentCodeEnum>[
   _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_invalid,
   _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_maxStringLength,
+  _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_null_,
   _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -116,11 +122,13 @@ class _$BitesCreateRightLegBiteCountErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'maxStringLength': 'max_string_length',
+    'null_': 'null',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
+    'null': 'null_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

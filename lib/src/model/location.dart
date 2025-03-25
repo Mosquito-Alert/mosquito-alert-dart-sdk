@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/location_point.dart';
+import 'package:mosquito_alert/src/model/adm_boundaries.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -13,18 +14,17 @@ part 'location.g.dart';
 /// Location
 ///
 /// Properties:
-/// * [type] - Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
+/// * [source_] - Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
 /// * [point] 
 /// * [timezone] 
 /// * [countryId] 
-/// * [nuts2] 
-/// * [nuts3] 
+/// * [admBoundaries] 
 @BuiltValue()
 abstract class Location implements Built<Location, LocationBuilder> {
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
-  @BuiltValueField(wireName: r'type')
-  LocationTypeEnum get type;
-  // enum typeEnum {  current,  selected,  missing,  };
+  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
+  @BuiltValueField(wireName: r'source')
+  LocationSource_Enum get source_;
+  // enum source_Enum {  auto,  manual,  };
 
   @BuiltValueField(wireName: r'point')
   LocationPoint? get point;
@@ -36,11 +36,8 @@ abstract class Location implements Built<Location, LocationBuilder> {
   @BuiltValueField(wireName: r'country_id')
   int? get countryId;
 
-  @BuiltValueField(wireName: r'nuts_2')
-  String? get nuts2;
-
-  @BuiltValueField(wireName: r'nuts_3')
-  String? get nuts3;
+  @BuiltValueField(wireName: r'adm_boundaries')
+  AdmBoundaries get admBoundaries;
 
   Location._();
 
@@ -65,10 +62,10 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
     Location object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'type';
+    yield r'source';
     yield serializers.serialize(
-      object.type,
-      specifiedType: const FullType(LocationTypeEnum),
+      object.source_,
+      specifiedType: const FullType(LocationSource_Enum),
     );
     yield r'point';
     yield object.point == null ? null : serializers.serialize(
@@ -85,15 +82,10 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
       object.countryId,
       specifiedType: const FullType.nullable(int),
     );
-    yield r'nuts_2';
-    yield object.nuts2 == null ? null : serializers.serialize(
-      object.nuts2,
-      specifiedType: const FullType.nullable(String),
-    );
-    yield r'nuts_3';
-    yield object.nuts3 == null ? null : serializers.serialize(
-      object.nuts3,
-      specifiedType: const FullType.nullable(String),
+    yield r'adm_boundaries';
+    yield serializers.serialize(
+      object.admBoundaries,
+      specifiedType: const FullType(AdmBoundaries),
     );
   }
 
@@ -118,12 +110,12 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'type':
+        case r'source':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(LocationTypeEnum),
-          ) as LocationTypeEnum;
-          result.type = valueDes;
+            specifiedType: const FullType(LocationSource_Enum),
+          ) as LocationSource_Enum;
+          result.source_ = valueDes;
           break;
         case r'point':
           final valueDes = serializers.deserialize(
@@ -149,21 +141,12 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
           if (valueDes == null) continue;
           result.countryId = valueDes;
           break;
-        case r'nuts_2':
+        case r'adm_boundaries':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.nuts2 = valueDes;
-          break;
-        case r'nuts_3':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(String),
-          ) as String?;
-          if (valueDes == null) continue;
-          result.nuts3 = valueDes;
+            specifiedType: const FullType(AdmBoundaries),
+          ) as AdmBoundaries;
+          result.admBoundaries.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -194,27 +177,24 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
   }
 }
 
-class LocationTypeEnum extends EnumClass {
+class LocationSource_Enum extends EnumClass {
 
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
-  @BuiltValueEnumConst(wireName: r'current')
-  static const LocationTypeEnum current = _$locationTypeEnum_current;
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
-  @BuiltValueEnumConst(wireName: r'selected')
-  static const LocationTypeEnum selected = _$locationTypeEnum_selected;
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
-  @BuiltValueEnumConst(wireName: r'missing')
-  static const LocationTypeEnum missing = _$locationTypeEnum_missing;
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
+  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
+  @BuiltValueEnumConst(wireName: r'auto')
+  static const LocationSource_Enum auto = _$locationSourceEnum_auto;
+  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
+  @BuiltValueEnumConst(wireName: r'manual')
+  static const LocationSource_Enum manual = _$locationSourceEnum_manual;
+  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
-  static const LocationTypeEnum unknownDefaultOpenApi = _$locationTypeEnum_unknownDefaultOpenApi;
+  static const LocationSource_Enum unknownDefaultOpenApi = _$locationSourceEnum_unknownDefaultOpenApi;
 
-  static Serializer<LocationTypeEnum> get serializer => _$locationTypeEnumSerializer;
+  static Serializer<LocationSource_Enum> get serializer => _$locationSourceEnumSerializer;
 
-  const LocationTypeEnum._(String name): super(name);
+  const LocationSource_Enum._(String name): super(name);
 
-  static BuiltSet<LocationTypeEnum> get values => _$locationTypeEnumValues;
-  static LocationTypeEnum valueOf(String name) => _$locationTypeEnumValueOf(name);
+  static BuiltSet<LocationSource_Enum> get values => _$locationSourceEnumValues;
+  static LocationSource_Enum valueOf(String name) => _$locationSourceEnumValueOf(name);
 }
 
 class LocationTimezoneEnum extends EnumClass {

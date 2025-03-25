@@ -14,6 +14,8 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:mosquito_alert/src/date_serializer.dart';
 import 'package:mosquito_alert/src/model/date.dart';
 
+import 'package:mosquito_alert/src/model/adm_boundaries.dart';
+import 'package:mosquito_alert/src/model/adm_boundaries_request.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
 import 'package:mosquito_alert/src/model/auth_change_password_error.dart';
@@ -50,7 +52,7 @@ import 'package:mosquito_alert/src/model/bites_create_left_arm_bite_count_error_
 import 'package:mosquito_alert/src/model/bites_create_left_leg_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_point_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_location_type_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_right_arm_bite_count_error_component.dart';
@@ -61,14 +63,14 @@ import 'package:mosquito_alert/src/model/bites_create_tags_index_error_component
 import 'package:mosquito_alert/src/model/bites_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/bites_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_error.dart';
+import 'package:mosquito_alert/src/model/bites_list_location_adm_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_location_adm_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_location_country_id_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_location_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_location_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_location_adm_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_location_adm_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_location_country_id_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_mine_location_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_mine_location_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_short_id_error_component.dart';
@@ -90,7 +92,7 @@ import 'package:mosquito_alert/src/model/breedingsites_create_has_water_error_co
 import 'package:mosquito_alert/src/model/breedingsites_create_in_public_area_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_location_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_location_point_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_location_type_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_file_error_component.dart';
@@ -103,14 +105,14 @@ import 'package:mosquito_alert/src/model/breedingsites_create_tags_index_error_c
 import 'package:mosquito_alert/src/model/breedingsites_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_location_adm_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_location_adm_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_location_country_id_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_location_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_location_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_adm_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_adm_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_country_id_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_short_id_error_component.dart';
@@ -284,6 +286,8 @@ import 'package:mosquito_alert/src/model/notifications_update_error.dart';
 import 'package:mosquito_alert/src/model/notifications_update_is_read_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_update_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_update_validation_error.dart';
+import 'package:mosquito_alert/src/model/nuts_adm_boundaries.dart';
+import 'package:mosquito_alert/src/model/nuts_adm_boundaries_request.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
 import 'package:mosquito_alert/src/model/observations_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_error.dart';
@@ -291,7 +295,7 @@ import 'package:mosquito_alert/src/model/observations_create_event_environment_e
 import 'package:mosquito_alert/src/model/observations_create_event_moment_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_point_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_location_type_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_photos_index_file_error_component.dart';
@@ -307,14 +311,14 @@ import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosq
 import 'package:mosquito_alert/src/model/observations_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/observations_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_error.dart';
+import 'package:mosquito_alert/src/model/observations_list_location_adm_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_location_adm_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_location_country_id_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_location_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_location_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_location_adm_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_location_adm_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_location_country_id_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_mine_location_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_mine_location_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_short_id_error_component.dart';
@@ -349,6 +353,7 @@ import 'package:mosquito_alert/src/model/topic_notification_create_request.dart'
 import 'package:mosquito_alert/src/model/user.dart';
 import 'package:mosquito_alert/src/model/user_notification_create_request.dart';
 import 'package:mosquito_alert/src/model/user_request.dart';
+import 'package:mosquito_alert/src/model/user_score.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_error.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_non_field_errors_error_component.dart';
@@ -361,6 +366,8 @@ import 'package:mosquito_alert/src/model/users_update_validation_error.dart';
 part 'serializers.g.dart';
 
 @SerializersFor([
+  AdmBoundaries,
+  AdmBoundariesRequest,
   AppUserTokenObtainPair,
   AppUserTokenObtainPairRequest,
   AuthChangePasswordError,
@@ -397,7 +404,7 @@ part 'serializers.g.dart';
   BitesCreateLeftLegBiteCountErrorComponent,
   BitesCreateLocationNonFieldErrorsErrorComponent,
   BitesCreateLocationPointErrorComponent,
-  BitesCreateLocationTypeErrorComponent,
+  BitesCreateLocationSourceErrorComponent,
   BitesCreateNonFieldErrorsErrorComponent,
   BitesCreateNoteErrorComponent,
   BitesCreateRightArmBiteCountErrorComponent,
@@ -408,14 +415,14 @@ part 'serializers.g.dart';
   BitesCreateValidationError,
   BitesListCreatedAtErrorComponent,
   BitesListError,
+  BitesListLocationAdmNuts2ErrorComponent,
+  BitesListLocationAdmNuts3ErrorComponent,
   BitesListLocationCountryIdErrorComponent,
-  BitesListLocationNuts2ErrorComponent,
-  BitesListLocationNuts3ErrorComponent,
   BitesListMineCreatedAtErrorComponent,
   BitesListMineError,
+  BitesListMineLocationAdmNuts2ErrorComponent,
+  BitesListMineLocationAdmNuts3ErrorComponent,
   BitesListMineLocationCountryIdErrorComponent,
-  BitesListMineLocationNuts2ErrorComponent,
-  BitesListMineLocationNuts3ErrorComponent,
   BitesListMineOrderByErrorComponent,
   BitesListMineReceivedAtErrorComponent,
   BitesListMineShortIdErrorComponent,
@@ -437,7 +444,7 @@ part 'serializers.g.dart';
   BreedingsitesCreateInPublicAreaErrorComponent,
   BreedingsitesCreateLocationNonFieldErrorsErrorComponent,
   BreedingsitesCreateLocationPointErrorComponent,
-  BreedingsitesCreateLocationTypeErrorComponent,
+  BreedingsitesCreateLocationSourceErrorComponent,
   BreedingsitesCreateNonFieldErrorsErrorComponent,
   BreedingsitesCreateNoteErrorComponent,
   BreedingsitesCreatePhotosINDEXFileErrorComponent,
@@ -450,14 +457,14 @@ part 'serializers.g.dart';
   BreedingsitesCreateValidationError,
   BreedingsitesListCreatedAtErrorComponent,
   BreedingsitesListError,
+  BreedingsitesListLocationAdmNuts2ErrorComponent,
+  BreedingsitesListLocationAdmNuts3ErrorComponent,
   BreedingsitesListLocationCountryIdErrorComponent,
-  BreedingsitesListLocationNuts2ErrorComponent,
-  BreedingsitesListLocationNuts3ErrorComponent,
   BreedingsitesListMineCreatedAtErrorComponent,
   BreedingsitesListMineError,
+  BreedingsitesListMineLocationAdmNuts2ErrorComponent,
+  BreedingsitesListMineLocationAdmNuts3ErrorComponent,
   BreedingsitesListMineLocationCountryIdErrorComponent,
-  BreedingsitesListMineLocationNuts2ErrorComponent,
-  BreedingsitesListMineLocationNuts3ErrorComponent,
   BreedingsitesListMineOrderByErrorComponent,
   BreedingsitesListMineReceivedAtErrorComponent,
   BreedingsitesListMineShortIdErrorComponent,
@@ -631,6 +638,8 @@ part 'serializers.g.dart';
   NotificationsUpdateIsReadErrorComponent,
   NotificationsUpdateNonFieldErrorsErrorComponent,
   NotificationsUpdateValidationError,
+  NutsAdmBoundaries,
+  NutsAdmBoundariesRequest,
   Observation,
   ObservationsCreateCreatedAtErrorComponent,
   ObservationsCreateError,
@@ -638,7 +647,7 @@ part 'serializers.g.dart';
   ObservationsCreateEventMomentErrorComponent,
   ObservationsCreateLocationNonFieldErrorsErrorComponent,
   ObservationsCreateLocationPointErrorComponent,
-  ObservationsCreateLocationTypeErrorComponent,
+  ObservationsCreateLocationSourceErrorComponent,
   ObservationsCreateNonFieldErrorsErrorComponent,
   ObservationsCreateNoteErrorComponent,
   ObservationsCreatePhotosINDEXFileErrorComponent,
@@ -654,14 +663,14 @@ part 'serializers.g.dart';
   ObservationsCreateValidationError,
   ObservationsListCreatedAtErrorComponent,
   ObservationsListError,
+  ObservationsListLocationAdmNuts2ErrorComponent,
+  ObservationsListLocationAdmNuts3ErrorComponent,
   ObservationsListLocationCountryIdErrorComponent,
-  ObservationsListLocationNuts2ErrorComponent,
-  ObservationsListLocationNuts3ErrorComponent,
   ObservationsListMineCreatedAtErrorComponent,
   ObservationsListMineError,
+  ObservationsListMineLocationAdmNuts2ErrorComponent,
+  ObservationsListMineLocationAdmNuts3ErrorComponent,
   ObservationsListMineLocationCountryIdErrorComponent,
-  ObservationsListMineLocationNuts2ErrorComponent,
-  ObservationsListMineLocationNuts3ErrorComponent,
   ObservationsListMineOrderByErrorComponent,
   ObservationsListMineReceivedAtErrorComponent,
   ObservationsListMineShortIdErrorComponent,
@@ -696,6 +705,7 @@ part 'serializers.g.dart';
   User,
   UserNotificationCreateRequest,
   UserRequest,
+  UserScore,
   UsersPartialUpdateError,
   UsersPartialUpdateLocaleErrorComponent,
   UsersPartialUpdateNonFieldErrorsErrorComponent,

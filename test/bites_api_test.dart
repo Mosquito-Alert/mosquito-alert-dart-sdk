@@ -17,14 +17,14 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedBiteList> list({ DateTime createdAtAfter, DateTime createdAtBefore, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    //Future<PaginatedBiteList> list({ DateTime createdAtAfter, DateTime createdAtBefore, String locationAdmNuts2, String locationAdmNuts3, int locationCountryId, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test list', () async {
       // TODO
     });
 
     // Get Current User's Bites
     //
-    //Future<PaginatedBiteList> listMine({ DateTime createdAtAfter, DateTime createdAtBefore, int locationCountryId, String locationNuts2, String locationNuts3, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    //Future<PaginatedBiteList> listMine({ DateTime createdAtAfter, DateTime createdAtBefore, String locationAdmNuts2, String locationAdmNuts3, int locationCountryId, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test listMine', () async {
       // TODO
     });

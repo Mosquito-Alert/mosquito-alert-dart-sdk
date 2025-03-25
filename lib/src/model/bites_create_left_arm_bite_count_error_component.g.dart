@@ -42,6 +42,9 @@ const BitesCreateLeftArmBiteCountErrorComponentCodeEnum
     const BitesCreateLeftArmBiteCountErrorComponentCodeEnum._(
         'maxStringLength');
 const BitesCreateLeftArmBiteCountErrorComponentCodeEnum
+    _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_null_ =
+    const BitesCreateLeftArmBiteCountErrorComponentCodeEnum._('null_');
+const BitesCreateLeftArmBiteCountErrorComponentCodeEnum
     _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi =
     const BitesCreateLeftArmBiteCountErrorComponentCodeEnum._(
         'unknownDefaultOpenApi');
@@ -53,6 +56,8 @@ BitesCreateLeftArmBiteCountErrorComponentCodeEnum
       return _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_invalid;
     case 'maxStringLength':
       return _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_maxStringLength;
+    case 'null_':
+      return _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_null_;
     case 'unknownDefaultOpenApi':
       return _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -65,6 +70,7 @@ final BuiltSet<BitesCreateLeftArmBiteCountErrorComponentCodeEnum>
         BitesCreateLeftArmBiteCountErrorComponentCodeEnum>(const <BitesCreateLeftArmBiteCountErrorComponentCodeEnum>[
   _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_invalid,
   _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_maxStringLength,
+  _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_null_,
   _$bitesCreateLeftArmBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -114,11 +120,13 @@ class _$BitesCreateLeftArmBiteCountErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'maxStringLength': 'max_string_length',
+    'null_': 'null',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'max_string_length': 'maxStringLength',
+    'null': 'null_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

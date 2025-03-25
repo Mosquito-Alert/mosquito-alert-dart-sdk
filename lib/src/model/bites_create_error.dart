@@ -8,13 +8,13 @@ import 'package:mosquito_alert/src/model/bites_create_tags_index_error_component
 import 'package:mosquito_alert/src/model/bites_create_chest_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_moment_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_right_arm_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_environment_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_left_leg_bite_count_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/bites_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_location_type_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_right_leg_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_point_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_created_at_error_component.dart';
@@ -35,7 +35,7 @@ part 'bites_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BitesCreateError implements Built<BitesCreateError, BitesCreateErrorBuilder> {
-  /// One Of [BitesCreateChestBiteCountErrorComponent], [BitesCreateCreatedAtErrorComponent], [BitesCreateEventEnvironmentErrorComponent], [BitesCreateEventMomentErrorComponent], [BitesCreateHeadBiteCountErrorComponent], [BitesCreateLeftArmBiteCountErrorComponent], [BitesCreateLeftLegBiteCountErrorComponent], [BitesCreateLocationNonFieldErrorsErrorComponent], [BitesCreateLocationPointErrorComponent], [BitesCreateLocationTypeErrorComponent], [BitesCreateNonFieldErrorsErrorComponent], [BitesCreateNoteErrorComponent], [BitesCreateRightArmBiteCountErrorComponent], [BitesCreateRightLegBiteCountErrorComponent], [BitesCreateSentAtErrorComponent], [BitesCreateTagsErrorComponent], [BitesCreateTagsINDEXErrorComponent]
+  /// One Of [BitesCreateChestBiteCountErrorComponent], [BitesCreateCreatedAtErrorComponent], [BitesCreateEventEnvironmentErrorComponent], [BitesCreateEventMomentErrorComponent], [BitesCreateHeadBiteCountErrorComponent], [BitesCreateLeftArmBiteCountErrorComponent], [BitesCreateLeftLegBiteCountErrorComponent], [BitesCreateLocationNonFieldErrorsErrorComponent], [BitesCreateLocationPointErrorComponent], [BitesCreateLocationSourceErrorComponent], [BitesCreateNonFieldErrorsErrorComponent], [BitesCreateNoteErrorComponent], [BitesCreateRightArmBiteCountErrorComponent], [BitesCreateRightLegBiteCountErrorComponent], [BitesCreateSentAtErrorComponent], [BitesCreateTagsErrorComponent], [BitesCreateTagsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -50,7 +50,7 @@ abstract class BitesCreateError implements Built<BitesCreateError, BitesCreateEr
     r'left_leg_bite_count': BitesCreateLeftLegBiteCountErrorComponent,
     r'location.non_field_errors': BitesCreateLocationNonFieldErrorsErrorComponent,
     r'location.point': BitesCreateLocationPointErrorComponent,
-    r'location.type': BitesCreateLocationTypeErrorComponent,
+    r'location.source': BitesCreateLocationSourceErrorComponent,
     r'non_field_errors': BitesCreateNonFieldErrorsErrorComponent,
     r'note': BitesCreateNoteErrorComponent,
     r'right_arm_bite_count': BitesCreateRightArmBiteCountErrorComponent,
@@ -100,8 +100,8 @@ extension BitesCreateErrorDiscriminatorExt on BitesCreateError {
         if (this is BitesCreateLocationPointErrorComponent) {
             return r'location.point';
         }
-        if (this is BitesCreateLocationTypeErrorComponent) {
-            return r'location.type';
+        if (this is BitesCreateLocationSourceErrorComponent) {
+            return r'location.source';
         }
         if (this is BitesCreateNonFieldErrorsErrorComponent) {
             return r'non_field_errors';
@@ -156,8 +156,8 @@ extension BitesCreateErrorBuilderDiscriminatorExt on BitesCreateErrorBuilder {
         if (this is BitesCreateLocationPointErrorComponentBuilder) {
             return r'location.point';
         }
-        if (this is BitesCreateLocationTypeErrorComponentBuilder) {
-            return r'location.type';
+        if (this is BitesCreateLocationSourceErrorComponentBuilder) {
+            return r'location.source';
         }
         if (this is BitesCreateNonFieldErrorsErrorComponentBuilder) {
             return r'non_field_errors';
@@ -220,7 +220,7 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
     final discIndex = serializedList.indexOf(BitesCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BitesCreateChestBiteCountErrorComponent, BitesCreateCreatedAtErrorComponent, BitesCreateEventEnvironmentErrorComponent, BitesCreateEventMomentErrorComponent, BitesCreateHeadBiteCountErrorComponent, BitesCreateLeftArmBiteCountErrorComponent, BitesCreateLeftLegBiteCountErrorComponent, BitesCreateLocationNonFieldErrorsErrorComponent, BitesCreateLocationPointErrorComponent, BitesCreateLocationTypeErrorComponent, BitesCreateNonFieldErrorsErrorComponent, BitesCreateNoteErrorComponent, BitesCreateRightArmBiteCountErrorComponent, BitesCreateRightLegBiteCountErrorComponent, BitesCreateSentAtErrorComponent, BitesCreateTagsErrorComponent, BitesCreateTagsINDEXErrorComponent, ];
+    final oneOfTypes = [BitesCreateChestBiteCountErrorComponent, BitesCreateCreatedAtErrorComponent, BitesCreateEventEnvironmentErrorComponent, BitesCreateEventMomentErrorComponent, BitesCreateHeadBiteCountErrorComponent, BitesCreateLeftArmBiteCountErrorComponent, BitesCreateLeftLegBiteCountErrorComponent, BitesCreateLocationNonFieldErrorsErrorComponent, BitesCreateLocationPointErrorComponent, BitesCreateLocationSourceErrorComponent, BitesCreateNonFieldErrorsErrorComponent, BitesCreateNoteErrorComponent, BitesCreateRightArmBiteCountErrorComponent, BitesCreateRightLegBiteCountErrorComponent, BitesCreateSentAtErrorComponent, BitesCreateTagsErrorComponent, BitesCreateTagsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -287,12 +287,12 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
         ) as BitesCreateLocationPointErrorComponent;
         oneOfType = BitesCreateLocationPointErrorComponent;
         break;
-      case r'location.type':
+      case r'location.source':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
-          specifiedType: FullType(BitesCreateLocationTypeErrorComponent),
-        ) as BitesCreateLocationTypeErrorComponent;
-        oneOfType = BitesCreateLocationTypeErrorComponent;
+          specifiedType: FullType(BitesCreateLocationSourceErrorComponent),
+        ) as BitesCreateLocationSourceErrorComponent;
+        oneOfType = BitesCreateLocationSourceErrorComponent;
         break;
       case r'non_field_errors':
         oneOfResult = serializers.deserialize(
@@ -372,6 +372,8 @@ class BitesCreateErrorCodeEnum extends EnumClass {
   static const BitesCreateErrorCodeEnum invalid = _$bitesCreateErrorCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'max_string_length')
   static const BitesCreateErrorCodeEnum maxStringLength = _$bitesCreateErrorCodeEnum_maxStringLength;
+  @BuiltValueEnumConst(wireName: r'null')
+  static const BitesCreateErrorCodeEnum null_ = _$bitesCreateErrorCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BitesCreateErrorCodeEnum unknownDefaultOpenApi = _$bitesCreateErrorCodeEnum_unknownDefaultOpenApi;
 

@@ -17,7 +17,7 @@ part 'photo.g.dart';
 @BuiltValue()
 abstract class Photo implements Built<Photo, PhotoBuilder> {
   @BuiltValueField(wireName: r'uuid')
-  String? get uuid;
+  String get uuid;
 
   /// Photo uploaded by user.
   @BuiltValueField(wireName: r'image_url')
@@ -50,13 +50,11 @@ class _$PhotoSerializer implements PrimitiveSerializer<Photo> {
     Photo object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.uuid != null) {
-      yield r'uuid';
-      yield serializers.serialize(
-        object.uuid,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'uuid';
+    yield serializers.serialize(
+      object.uuid,
+      specifiedType: const FullType(String),
+    );
     yield r'image_url';
     yield serializers.serialize(
       object.imageUrl,

@@ -6,85 +6,80 @@ part of 'location_request.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const LocationRequestTypeEnum _$locationRequestTypeEnum_current =
-    const LocationRequestTypeEnum._('current');
-const LocationRequestTypeEnum _$locationRequestTypeEnum_selected =
-    const LocationRequestTypeEnum._('selected');
-const LocationRequestTypeEnum _$locationRequestTypeEnum_missing =
-    const LocationRequestTypeEnum._('missing');
-const LocationRequestTypeEnum _$locationRequestTypeEnum_unknownDefaultOpenApi =
-    const LocationRequestTypeEnum._('unknownDefaultOpenApi');
+const LocationRequestSource_Enum _$locationRequestSourceEnum_auto =
+    const LocationRequestSource_Enum._('auto');
+const LocationRequestSource_Enum _$locationRequestSourceEnum_manual =
+    const LocationRequestSource_Enum._('manual');
+const LocationRequestSource_Enum
+    _$locationRequestSourceEnum_unknownDefaultOpenApi =
+    const LocationRequestSource_Enum._('unknownDefaultOpenApi');
 
-LocationRequestTypeEnum _$locationRequestTypeEnumValueOf(String name) {
+LocationRequestSource_Enum _$locationRequestSourceEnumValueOf(String name) {
   switch (name) {
-    case 'current':
-      return _$locationRequestTypeEnum_current;
-    case 'selected':
-      return _$locationRequestTypeEnum_selected;
-    case 'missing':
-      return _$locationRequestTypeEnum_missing;
+    case 'auto':
+      return _$locationRequestSourceEnum_auto;
+    case 'manual':
+      return _$locationRequestSourceEnum_manual;
     case 'unknownDefaultOpenApi':
-      return _$locationRequestTypeEnum_unknownDefaultOpenApi;
+      return _$locationRequestSourceEnum_unknownDefaultOpenApi;
     default:
-      return _$locationRequestTypeEnum_unknownDefaultOpenApi;
+      return _$locationRequestSourceEnum_unknownDefaultOpenApi;
   }
 }
 
-final BuiltSet<LocationRequestTypeEnum> _$locationRequestTypeEnumValues =
-    new BuiltSet<LocationRequestTypeEnum>(const <LocationRequestTypeEnum>[
-  _$locationRequestTypeEnum_current,
-  _$locationRequestTypeEnum_selected,
-  _$locationRequestTypeEnum_missing,
-  _$locationRequestTypeEnum_unknownDefaultOpenApi,
+final BuiltSet<LocationRequestSource_Enum> _$locationRequestSourceEnumValues =
+    new BuiltSet<LocationRequestSource_Enum>(const <LocationRequestSource_Enum>[
+  _$locationRequestSourceEnum_auto,
+  _$locationRequestSourceEnum_manual,
+  _$locationRequestSourceEnum_unknownDefaultOpenApi,
 ]);
 
-Serializer<LocationRequestTypeEnum> _$locationRequestTypeEnumSerializer =
-    new _$LocationRequestTypeEnumSerializer();
+Serializer<LocationRequestSource_Enum> _$locationRequestSourceEnumSerializer =
+    new _$LocationRequestSource_EnumSerializer();
 
-class _$LocationRequestTypeEnumSerializer
-    implements PrimitiveSerializer<LocationRequestTypeEnum> {
+class _$LocationRequestSource_EnumSerializer
+    implements PrimitiveSerializer<LocationRequestSource_Enum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'current': 'current',
-    'selected': 'selected',
-    'missing': 'missing',
+    'auto': 'auto',
+    'manual': 'manual',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'current': 'current',
-    'selected': 'selected',
-    'missing': 'missing',
+    'auto': 'auto',
+    'manual': 'manual',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
-  final Iterable<Type> types = const <Type>[LocationRequestTypeEnum];
+  final Iterable<Type> types = const <Type>[LocationRequestSource_Enum];
   @override
-  final String wireName = 'LocationRequestTypeEnum';
+  final String wireName = 'LocationRequestSource_Enum';
 
   @override
-  Object serialize(Serializers serializers, LocationRequestTypeEnum object,
+  Object serialize(Serializers serializers, LocationRequestSource_Enum object,
           {FullType specifiedType = FullType.unspecified}) =>
       _toWire[object.name] ?? object.name;
 
   @override
-  LocationRequestTypeEnum deserialize(
+  LocationRequestSource_Enum deserialize(
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      LocationRequestTypeEnum.valueOf(
+      LocationRequestSource_Enum.valueOf(
           _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$LocationRequest extends LocationRequest {
   @override
-  final LocationRequestTypeEnum type;
+  final LocationRequestSource_Enum source_;
   @override
   final LocationPoint? point;
 
   factory _$LocationRequest([void Function(LocationRequestBuilder)? updates]) =>
       (new LocationRequestBuilder()..update(updates))._build();
 
-  _$LocationRequest._({required this.type, this.point}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(type, r'LocationRequest', 'type');
+  _$LocationRequest._({required this.source_, this.point}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        source_, r'LocationRequest', 'source_');
   }
 
   @override
@@ -99,14 +94,14 @@ class _$LocationRequest extends LocationRequest {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is LocationRequest &&
-        type == other.type &&
+        source_ == other.source_ &&
         point == other.point;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, type.hashCode);
+    _$hash = $jc(_$hash, source_.hashCode);
     _$hash = $jc(_$hash, point.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -115,7 +110,7 @@ class _$LocationRequest extends LocationRequest {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'LocationRequest')
-          ..add('type', type)
+          ..add('source_', source_)
           ..add('point', point))
         .toString();
   }
@@ -125,9 +120,9 @@ class LocationRequestBuilder
     implements Builder<LocationRequest, LocationRequestBuilder> {
   _$LocationRequest? _$v;
 
-  LocationRequestTypeEnum? _type;
-  LocationRequestTypeEnum? get type => _$this._type;
-  set type(LocationRequestTypeEnum? type) => _$this._type = type;
+  LocationRequestSource_Enum? _source_;
+  LocationRequestSource_Enum? get source_ => _$this._source_;
+  set source_(LocationRequestSource_Enum? source_) => _$this._source_ = source_;
 
   LocationPointBuilder? _point;
   LocationPointBuilder get point =>
@@ -141,7 +136,7 @@ class LocationRequestBuilder
   LocationRequestBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _type = $v.type;
+      _source_ = $v.source_;
       _point = $v.point?.toBuilder();
       _$v = null;
     }
@@ -167,8 +162,8 @@ class LocationRequestBuilder
     try {
       _$result = _$v ??
           new _$LocationRequest._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'LocationRequest', 'type'),
+              source_: BuiltValueNullFieldError.checkNotNull(
+                  source_, r'LocationRequest', 'source_'),
               point: _point?.build());
     } catch (_) {
       late String _$failedField;

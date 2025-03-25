@@ -25,7 +25,8 @@ abstract class PatchedUserRequest implements Built<PatchedUserRequest, PatchedUs
   factory PatchedUserRequest([void updates(PatchedUserRequestBuilder b)]) = _$PatchedUserRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(PatchedUserRequestBuilder b) => b;
+  static void _defaults(PatchedUserRequestBuilder b) => b
+      ..locale = const PatchedUserRequestLocaleEnum._('en');
 
   @BuiltValueSerializer(custom: true)
   static Serializer<PatchedUserRequest> get serializer => _$PatchedUserRequestSerializer();

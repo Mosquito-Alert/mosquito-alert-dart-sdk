@@ -13,14 +13,14 @@ part 'location_request.g.dart';
 /// LocationRequest
 ///
 /// Properties:
-/// * [type] - Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
+/// * [source_] - Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
 /// * [point] 
 @BuiltValue()
 abstract class LocationRequest implements Built<LocationRequest, LocationRequestBuilder> {
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
-  @BuiltValueField(wireName: r'type')
-  LocationRequestTypeEnum get type;
-  // enum typeEnum {  current,  selected,  missing,  };
+  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
+  @BuiltValueField(wireName: r'source')
+  LocationRequestSource_Enum get source_;
+  // enum source_Enum {  auto,  manual,  };
 
   @BuiltValueField(wireName: r'point')
   LocationPoint? get point;
@@ -48,10 +48,10 @@ class _$LocationRequestSerializer implements PrimitiveSerializer<LocationRequest
     LocationRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'type';
+    yield r'source';
     yield serializers.serialize(
-      object.type,
-      specifiedType: const FullType(LocationRequestTypeEnum),
+      object.source_,
+      specifiedType: const FullType(LocationRequestSource_Enum),
     );
     yield r'point';
     yield object.point == null ? null : serializers.serialize(
@@ -81,12 +81,12 @@ class _$LocationRequestSerializer implements PrimitiveSerializer<LocationRequest
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'type':
+        case r'source':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(LocationRequestTypeEnum),
-          ) as LocationRequestTypeEnum;
-          result.type = valueDes;
+            specifiedType: const FullType(LocationRequestSource_Enum),
+          ) as LocationRequestSource_Enum;
+          result.source_ = valueDes;
           break;
         case r'point':
           final valueDes = serializers.deserialize(
@@ -125,26 +125,23 @@ class _$LocationRequestSerializer implements PrimitiveSerializer<LocationRequest
   }
 }
 
-class LocationRequestTypeEnum extends EnumClass {
+class LocationRequestSource_Enum extends EnumClass {
 
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
-  @BuiltValueEnumConst(wireName: r'current')
-  static const LocationRequestTypeEnum current = _$locationRequestTypeEnum_current;
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
-  @BuiltValueEnumConst(wireName: r'selected')
-  static const LocationRequestTypeEnum selected = _$locationRequestTypeEnum_selected;
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
-  @BuiltValueEnumConst(wireName: r'missing')
-  static const LocationRequestTypeEnum missing = _$locationRequestTypeEnum_missing;
-  /// Did user indicate that report relates to current location of phone ('current') or to a location selected manually on the map ('selected')? Or is the choice missing ('missing')
+  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
+  @BuiltValueEnumConst(wireName: r'auto')
+  static const LocationRequestSource_Enum auto = _$locationRequestSourceEnum_auto;
+  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
+  @BuiltValueEnumConst(wireName: r'manual')
+  static const LocationRequestSource_Enum manual = _$locationRequestSourceEnum_manual;
+  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
-  static const LocationRequestTypeEnum unknownDefaultOpenApi = _$locationRequestTypeEnum_unknownDefaultOpenApi;
+  static const LocationRequestSource_Enum unknownDefaultOpenApi = _$locationRequestSourceEnum_unknownDefaultOpenApi;
 
-  static Serializer<LocationRequestTypeEnum> get serializer => _$locationRequestTypeEnumSerializer;
+  static Serializer<LocationRequestSource_Enum> get serializer => _$locationRequestSourceEnumSerializer;
 
-  const LocationRequestTypeEnum._(String name): super(name);
+  const LocationRequestSource_Enum._(String name): super(name);
 
-  static BuiltSet<LocationRequestTypeEnum> get values => _$locationRequestTypeEnumValues;
-  static LocationRequestTypeEnum valueOf(String name) => _$locationRequestTypeEnumValueOf(name);
+  static BuiltSet<LocationRequestSource_Enum> get values => _$locationRequestSourceEnumValues;
+  static LocationRequestSource_Enum valueOf(String name) => _$locationRequestSourceEnumValueOf(name);
 }
 

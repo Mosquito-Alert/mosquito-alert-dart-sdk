@@ -8,7 +8,7 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**uuid** | **String** |  | [optional] 
+**uuid** | **String** |  | 
 **imageUrl** | **String** | Photo uploaded by user. | 
 **imagePath** | **String** | Internal server path of the image. | 
 

@@ -229,42 +229,42 @@ class _$BiteSerializer implements PrimitiveSerializer<Bite> {
       yield r'head_bite_count';
       yield serializers.serialize(
         object.headBiteCount,
-        specifiedType: const FullType.nullable(int),
+        specifiedType: const FullType(int),
       );
     }
     if (object.leftArmBiteCount != null) {
       yield r'left_arm_bite_count';
       yield serializers.serialize(
         object.leftArmBiteCount,
-        specifiedType: const FullType.nullable(int),
+        specifiedType: const FullType(int),
       );
     }
     if (object.rightArmBiteCount != null) {
       yield r'right_arm_bite_count';
       yield serializers.serialize(
         object.rightArmBiteCount,
-        specifiedType: const FullType.nullable(int),
+        specifiedType: const FullType(int),
       );
     }
     if (object.chestBiteCount != null) {
       yield r'chest_bite_count';
       yield serializers.serialize(
         object.chestBiteCount,
-        specifiedType: const FullType.nullable(int),
+        specifiedType: const FullType(int),
       );
     }
     if (object.leftLegBiteCount != null) {
       yield r'left_leg_bite_count';
       yield serializers.serialize(
         object.leftLegBiteCount,
-        specifiedType: const FullType.nullable(int),
+        specifiedType: const FullType(int),
       );
     }
     if (object.rightLegBiteCount != null) {
       yield r'right_leg_bite_count';
       yield serializers.serialize(
         object.rightLegBiteCount,
-        specifiedType: const FullType.nullable(int),
+        specifiedType: const FullType(int),
       );
     }
   }
@@ -401,49 +401,43 @@ class _$BiteSerializer implements PrimitiveSerializer<Bite> {
         case r'head_bite_count':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(int),
+          ) as int;
           result.headBiteCount = valueDes;
           break;
         case r'left_arm_bite_count':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(int),
+          ) as int;
           result.leftArmBiteCount = valueDes;
           break;
         case r'right_arm_bite_count':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(int),
+          ) as int;
           result.rightArmBiteCount = valueDes;
           break;
         case r'chest_bite_count':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(int),
+          ) as int;
           result.chestBiteCount = valueDes;
           break;
         case r'left_leg_bite_count':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(int),
+          ) as int;
           result.leftLegBiteCount = valueDes;
           break;
         case r'right_leg_bite_count':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(int),
+          ) as int;
           result.rightLegBiteCount = valueDes;
           break;
         default:

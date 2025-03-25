@@ -23,7 +23,7 @@ abstract class BitesCreateRightLegBiteCountErrorComponent implements Built<Bites
 
   @BuiltValueField(wireName: r'code')
   BitesCreateRightLegBiteCountErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid,  max_string_length,  };
+  // enum codeEnum {  invalid,  max_string_length,  null,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -160,6 +160,8 @@ class BitesCreateRightLegBiteCountErrorComponentCodeEnum extends EnumClass {
   static const BitesCreateRightLegBiteCountErrorComponentCodeEnum invalid = _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'max_string_length')
   static const BitesCreateRightLegBiteCountErrorComponentCodeEnum maxStringLength = _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_maxStringLength;
+  @BuiltValueEnumConst(wireName: r'null')
+  static const BitesCreateRightLegBiteCountErrorComponentCodeEnum null_ = _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BitesCreateRightLegBiteCountErrorComponentCodeEnum unknownDefaultOpenApi = _$bitesCreateRightLegBiteCountErrorComponentCodeEnum_unknownDefaultOpenApi;
 

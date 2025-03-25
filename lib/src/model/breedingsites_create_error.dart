@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/breedingsites_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_photos_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_has_larvae_error_component.dart';
@@ -13,7 +14,6 @@ import 'package:mosquito_alert/src/model/breedingsites_create_has_near_mosquitoe
 import 'package:mosquito_alert/src/model/breedingsites_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_site_type_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_location_type_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_tags_index_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_has_water_error_component.dart';
@@ -35,7 +35,7 @@ part 'breedingsites_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BreedingsitesCreateError implements Built<BreedingsitesCreateError, BreedingsitesCreateErrorBuilder> {
-  /// One Of [BreedingsitesCreateCreatedAtErrorComponent], [BreedingsitesCreateHasLarvaeErrorComponent], [BreedingsitesCreateHasNearMosquitoesErrorComponent], [BreedingsitesCreateHasWaterErrorComponent], [BreedingsitesCreateInPublicAreaErrorComponent], [BreedingsitesCreateLocationNonFieldErrorsErrorComponent], [BreedingsitesCreateLocationPointErrorComponent], [BreedingsitesCreateLocationTypeErrorComponent], [BreedingsitesCreateNonFieldErrorsErrorComponent], [BreedingsitesCreateNoteErrorComponent], [BreedingsitesCreatePhotosINDEXFileErrorComponent], [BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent], [BreedingsitesCreatePhotosNonFieldErrorsErrorComponent], [BreedingsitesCreateSentAtErrorComponent], [BreedingsitesCreateSiteTypeErrorComponent], [BreedingsitesCreateTagsErrorComponent], [BreedingsitesCreateTagsINDEXErrorComponent]
+  /// One Of [BreedingsitesCreateCreatedAtErrorComponent], [BreedingsitesCreateHasLarvaeErrorComponent], [BreedingsitesCreateHasNearMosquitoesErrorComponent], [BreedingsitesCreateHasWaterErrorComponent], [BreedingsitesCreateInPublicAreaErrorComponent], [BreedingsitesCreateLocationNonFieldErrorsErrorComponent], [BreedingsitesCreateLocationPointErrorComponent], [BreedingsitesCreateLocationSourceErrorComponent], [BreedingsitesCreateNonFieldErrorsErrorComponent], [BreedingsitesCreateNoteErrorComponent], [BreedingsitesCreatePhotosINDEXFileErrorComponent], [BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent], [BreedingsitesCreatePhotosNonFieldErrorsErrorComponent], [BreedingsitesCreateSentAtErrorComponent], [BreedingsitesCreateSiteTypeErrorComponent], [BreedingsitesCreateTagsErrorComponent], [BreedingsitesCreateTagsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -48,7 +48,7 @@ abstract class BreedingsitesCreateError implements Built<BreedingsitesCreateErro
     r'in_public_area': BreedingsitesCreateInPublicAreaErrorComponent,
     r'location.non_field_errors': BreedingsitesCreateLocationNonFieldErrorsErrorComponent,
     r'location.point': BreedingsitesCreateLocationPointErrorComponent,
-    r'location.type': BreedingsitesCreateLocationTypeErrorComponent,
+    r'location.source': BreedingsitesCreateLocationSourceErrorComponent,
     r'non_field_errors': BreedingsitesCreateNonFieldErrorsErrorComponent,
     r'note': BreedingsitesCreateNoteErrorComponent,
     r'photos.INDEX.file': BreedingsitesCreatePhotosINDEXFileErrorComponent,
@@ -94,8 +94,8 @@ extension BreedingsitesCreateErrorDiscriminatorExt on BreedingsitesCreateError {
         if (this is BreedingsitesCreateLocationPointErrorComponent) {
             return r'location.point';
         }
-        if (this is BreedingsitesCreateLocationTypeErrorComponent) {
-            return r'location.type';
+        if (this is BreedingsitesCreateLocationSourceErrorComponent) {
+            return r'location.source';
         }
         if (this is BreedingsitesCreateNonFieldErrorsErrorComponent) {
             return r'non_field_errors';
@@ -150,8 +150,8 @@ extension BreedingsitesCreateErrorBuilderDiscriminatorExt on BreedingsitesCreate
         if (this is BreedingsitesCreateLocationPointErrorComponentBuilder) {
             return r'location.point';
         }
-        if (this is BreedingsitesCreateLocationTypeErrorComponentBuilder) {
-            return r'location.type';
+        if (this is BreedingsitesCreateLocationSourceErrorComponentBuilder) {
+            return r'location.source';
         }
         if (this is BreedingsitesCreateNonFieldErrorsErrorComponentBuilder) {
             return r'non_field_errors';
@@ -220,7 +220,7 @@ class _$BreedingsitesCreateErrorSerializer implements PrimitiveSerializer<Breedi
     final discIndex = serializedList.indexOf(BreedingsitesCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BreedingsitesCreateCreatedAtErrorComponent, BreedingsitesCreateHasLarvaeErrorComponent, BreedingsitesCreateHasNearMosquitoesErrorComponent, BreedingsitesCreateHasWaterErrorComponent, BreedingsitesCreateInPublicAreaErrorComponent, BreedingsitesCreateLocationNonFieldErrorsErrorComponent, BreedingsitesCreateLocationPointErrorComponent, BreedingsitesCreateLocationTypeErrorComponent, BreedingsitesCreateNonFieldErrorsErrorComponent, BreedingsitesCreateNoteErrorComponent, BreedingsitesCreatePhotosINDEXFileErrorComponent, BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent, BreedingsitesCreatePhotosNonFieldErrorsErrorComponent, BreedingsitesCreateSentAtErrorComponent, BreedingsitesCreateSiteTypeErrorComponent, BreedingsitesCreateTagsErrorComponent, BreedingsitesCreateTagsINDEXErrorComponent, ];
+    final oneOfTypes = [BreedingsitesCreateCreatedAtErrorComponent, BreedingsitesCreateHasLarvaeErrorComponent, BreedingsitesCreateHasNearMosquitoesErrorComponent, BreedingsitesCreateHasWaterErrorComponent, BreedingsitesCreateInPublicAreaErrorComponent, BreedingsitesCreateLocationNonFieldErrorsErrorComponent, BreedingsitesCreateLocationPointErrorComponent, BreedingsitesCreateLocationSourceErrorComponent, BreedingsitesCreateNonFieldErrorsErrorComponent, BreedingsitesCreateNoteErrorComponent, BreedingsitesCreatePhotosINDEXFileErrorComponent, BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent, BreedingsitesCreatePhotosNonFieldErrorsErrorComponent, BreedingsitesCreateSentAtErrorComponent, BreedingsitesCreateSiteTypeErrorComponent, BreedingsitesCreateTagsErrorComponent, BreedingsitesCreateTagsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -273,12 +273,12 @@ class _$BreedingsitesCreateErrorSerializer implements PrimitiveSerializer<Breedi
         ) as BreedingsitesCreateLocationPointErrorComponent;
         oneOfType = BreedingsitesCreateLocationPointErrorComponent;
         break;
-      case r'location.type':
+      case r'location.source':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
-          specifiedType: FullType(BreedingsitesCreateLocationTypeErrorComponent),
-        ) as BreedingsitesCreateLocationTypeErrorComponent;
-        oneOfType = BreedingsitesCreateLocationTypeErrorComponent;
+          specifiedType: FullType(BreedingsitesCreateLocationSourceErrorComponent),
+        ) as BreedingsitesCreateLocationSourceErrorComponent;
+        oneOfType = BreedingsitesCreateLocationSourceErrorComponent;
         break;
       case r'non_field_errors':
         oneOfResult = serializers.deserialize(

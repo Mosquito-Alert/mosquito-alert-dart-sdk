@@ -6,36 +6,31 @@ part of 'location.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const LocationTypeEnum _$locationTypeEnum_current =
-    const LocationTypeEnum._('current');
-const LocationTypeEnum _$locationTypeEnum_selected =
-    const LocationTypeEnum._('selected');
-const LocationTypeEnum _$locationTypeEnum_missing =
-    const LocationTypeEnum._('missing');
-const LocationTypeEnum _$locationTypeEnum_unknownDefaultOpenApi =
-    const LocationTypeEnum._('unknownDefaultOpenApi');
+const LocationSource_Enum _$locationSourceEnum_auto =
+    const LocationSource_Enum._('auto');
+const LocationSource_Enum _$locationSourceEnum_manual =
+    const LocationSource_Enum._('manual');
+const LocationSource_Enum _$locationSourceEnum_unknownDefaultOpenApi =
+    const LocationSource_Enum._('unknownDefaultOpenApi');
 
-LocationTypeEnum _$locationTypeEnumValueOf(String name) {
+LocationSource_Enum _$locationSourceEnumValueOf(String name) {
   switch (name) {
-    case 'current':
-      return _$locationTypeEnum_current;
-    case 'selected':
-      return _$locationTypeEnum_selected;
-    case 'missing':
-      return _$locationTypeEnum_missing;
+    case 'auto':
+      return _$locationSourceEnum_auto;
+    case 'manual':
+      return _$locationSourceEnum_manual;
     case 'unknownDefaultOpenApi':
-      return _$locationTypeEnum_unknownDefaultOpenApi;
+      return _$locationSourceEnum_unknownDefaultOpenApi;
     default:
-      return _$locationTypeEnum_unknownDefaultOpenApi;
+      return _$locationSourceEnum_unknownDefaultOpenApi;
   }
 }
 
-final BuiltSet<LocationTypeEnum> _$locationTypeEnumValues =
-    new BuiltSet<LocationTypeEnum>(const <LocationTypeEnum>[
-  _$locationTypeEnum_current,
-  _$locationTypeEnum_selected,
-  _$locationTypeEnum_missing,
-  _$locationTypeEnum_unknownDefaultOpenApi,
+final BuiltSet<LocationSource_Enum> _$locationSourceEnumValues =
+    new BuiltSet<LocationSource_Enum>(const <LocationSource_Enum>[
+  _$locationSourceEnum_auto,
+  _$locationSourceEnum_manual,
+  _$locationSourceEnum_unknownDefaultOpenApi,
 ]);
 
 const LocationTimezoneEnum _$locationTimezoneEnum_africaSlashAbidjan =
@@ -3061,40 +3056,38 @@ final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
   _$locationTimezoneEnum_unknownDefaultOpenApi,
 ]);
 
-Serializer<LocationTypeEnum> _$locationTypeEnumSerializer =
-    new _$LocationTypeEnumSerializer();
+Serializer<LocationSource_Enum> _$locationSourceEnumSerializer =
+    new _$LocationSource_EnumSerializer();
 Serializer<LocationTimezoneEnum> _$locationTimezoneEnumSerializer =
     new _$LocationTimezoneEnumSerializer();
 
-class _$LocationTypeEnumSerializer
-    implements PrimitiveSerializer<LocationTypeEnum> {
+class _$LocationSource_EnumSerializer
+    implements PrimitiveSerializer<LocationSource_Enum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'current': 'current',
-    'selected': 'selected',
-    'missing': 'missing',
+    'auto': 'auto',
+    'manual': 'manual',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'current': 'current',
-    'selected': 'selected',
-    'missing': 'missing',
+    'auto': 'auto',
+    'manual': 'manual',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
   @override
-  final Iterable<Type> types = const <Type>[LocationTypeEnum];
+  final Iterable<Type> types = const <Type>[LocationSource_Enum];
   @override
-  final String wireName = 'LocationTypeEnum';
+  final String wireName = 'LocationSource_Enum';
 
   @override
-  Object serialize(Serializers serializers, LocationTypeEnum object,
+  Object serialize(Serializers serializers, LocationSource_Enum object,
           {FullType specifiedType = FullType.unspecified}) =>
       _toWire[object.name] ?? object.name;
 
   @override
-  LocationTypeEnum deserialize(Serializers serializers, Object serialized,
+  LocationSource_Enum deserialize(Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      LocationTypeEnum.valueOf(
+      LocationSource_Enum.valueOf(
           _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
@@ -4320,7 +4313,7 @@ class _$LocationTimezoneEnumSerializer
 
 class _$Location extends Location {
   @override
-  final LocationTypeEnum type;
+  final LocationSource_Enum source_;
   @override
   final LocationPoint? point;
   @override
@@ -4328,22 +4321,21 @@ class _$Location extends Location {
   @override
   final int? countryId;
   @override
-  final String? nuts2;
-  @override
-  final String? nuts3;
+  final AdmBoundaries admBoundaries;
 
   factory _$Location([void Function(LocationBuilder)? updates]) =>
       (new LocationBuilder()..update(updates))._build();
 
   _$Location._(
-      {required this.type,
+      {required this.source_,
       this.point,
       this.timezone,
       this.countryId,
-      this.nuts2,
-      this.nuts3})
+      required this.admBoundaries})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(type, r'Location', 'type');
+    BuiltValueNullFieldError.checkNotNull(source_, r'Location', 'source_');
+    BuiltValueNullFieldError.checkNotNull(
+        admBoundaries, r'Location', 'admBoundaries');
   }
 
   @override
@@ -4357,23 +4349,21 @@ class _$Location extends Location {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is Location &&
-        type == other.type &&
+        source_ == other.source_ &&
         point == other.point &&
         timezone == other.timezone &&
         countryId == other.countryId &&
-        nuts2 == other.nuts2 &&
-        nuts3 == other.nuts3;
+        admBoundaries == other.admBoundaries;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, type.hashCode);
+    _$hash = $jc(_$hash, source_.hashCode);
     _$hash = $jc(_$hash, point.hashCode);
     _$hash = $jc(_$hash, timezone.hashCode);
     _$hash = $jc(_$hash, countryId.hashCode);
-    _$hash = $jc(_$hash, nuts2.hashCode);
-    _$hash = $jc(_$hash, nuts3.hashCode);
+    _$hash = $jc(_$hash, admBoundaries.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -4381,12 +4371,11 @@ class _$Location extends Location {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'Location')
-          ..add('type', type)
+          ..add('source_', source_)
           ..add('point', point)
           ..add('timezone', timezone)
           ..add('countryId', countryId)
-          ..add('nuts2', nuts2)
-          ..add('nuts3', nuts3))
+          ..add('admBoundaries', admBoundaries))
         .toString();
   }
 }
@@ -4394,9 +4383,9 @@ class _$Location extends Location {
 class LocationBuilder implements Builder<Location, LocationBuilder> {
   _$Location? _$v;
 
-  LocationTypeEnum? _type;
-  LocationTypeEnum? get type => _$this._type;
-  set type(LocationTypeEnum? type) => _$this._type = type;
+  LocationSource_Enum? _source_;
+  LocationSource_Enum? get source_ => _$this._source_;
+  set source_(LocationSource_Enum? source_) => _$this._source_ = source_;
 
   LocationPointBuilder? _point;
   LocationPointBuilder get point =>
@@ -4411,13 +4400,11 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
   int? get countryId => _$this._countryId;
   set countryId(int? countryId) => _$this._countryId = countryId;
 
-  String? _nuts2;
-  String? get nuts2 => _$this._nuts2;
-  set nuts2(String? nuts2) => _$this._nuts2 = nuts2;
-
-  String? _nuts3;
-  String? get nuts3 => _$this._nuts3;
-  set nuts3(String? nuts3) => _$this._nuts3 = nuts3;
+  AdmBoundariesBuilder? _admBoundaries;
+  AdmBoundariesBuilder get admBoundaries =>
+      _$this._admBoundaries ??= new AdmBoundariesBuilder();
+  set admBoundaries(AdmBoundariesBuilder? admBoundaries) =>
+      _$this._admBoundaries = admBoundaries;
 
   LocationBuilder() {
     Location._defaults(this);
@@ -4426,12 +4413,11 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
   LocationBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _type = $v.type;
+      _source_ = $v.source_;
       _point = $v.point?.toBuilder();
       _timezone = $v.timezone;
       _countryId = $v.countryId;
-      _nuts2 = $v.nuts2;
-      _nuts3 = $v.nuts3;
+      _admBoundaries = $v.admBoundaries.toBuilder();
       _$v = null;
     }
     return this;
@@ -4456,18 +4442,20 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
     try {
       _$result = _$v ??
           new _$Location._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'Location', 'type'),
+              source_: BuiltValueNullFieldError.checkNotNull(
+                  source_, r'Location', 'source_'),
               point: _point?.build(),
               timezone: timezone,
               countryId: countryId,
-              nuts2: nuts2,
-              nuts3: nuts3);
+              admBoundaries: admBoundaries.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'point';
         _point?.build();
+
+        _$failedField = 'admBoundaries';
+        admBoundaries.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'Location', _$failedField, e.toString());

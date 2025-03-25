@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/user_score.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -18,8 +19,7 @@ part 'user.g.dart';
 /// * [locale] - The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
 /// * [languageIso] - ISO 639-1 code
 /// * [isGuest] 
-/// * [score] - Global XP Score. This field is updated whenever the user asks for the score, and is only stored here. The content must equal score_v2_adult + score_v2_bite + score_v2_site
-/// * [lastScoreUpdate] - Last time score was updated
+/// * [score] 
 @BuiltValue()
 abstract class User implements Built<User, UserBuilder> {
   @BuiltValueField(wireName: r'uuid')
@@ -44,20 +44,17 @@ abstract class User implements Built<User, UserBuilder> {
   @BuiltValueField(wireName: r'is_guest')
   bool get isGuest;
 
-  /// Global XP Score. This field is updated whenever the user asks for the score, and is only stored here. The content must equal score_v2_adult + score_v2_bite + score_v2_site
   @BuiltValueField(wireName: r'score')
-  int get score;
-
-  /// Last time score was updated
-  @BuiltValueField(wireName: r'last_score_update')
-  DateTime get lastScoreUpdate;
+  UserScore get score;
 
   User._();
 
   factory User([void updates(UserBuilder b)]) = _$User;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(UserBuilder b) => b;
+  static void _defaults(UserBuilder b) => b
+      ..locale = const UserLocaleEnum._('en')
+      ..languageIso = 'en';
 
   @BuiltValueSerializer(custom: true)
   static Serializer<User> get serializer => _$UserSerializer();
@@ -110,12 +107,7 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
     yield r'score';
     yield serializers.serialize(
       object.score,
-      specifiedType: const FullType(int),
-    );
-    yield r'last_score_update';
-    yield serializers.serialize(
-      object.lastScoreUpdate,
-      specifiedType: const FullType(DateTime),
+      specifiedType: const FullType(UserScore),
     );
   }
 
@@ -185,16 +177,9 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
         case r'score':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.score = valueDes;
-          break;
-        case r'last_score_update':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(DateTime),
-          ) as DateTime;
-          result.lastScoreUpdate = valueDes;
+            specifiedType: const FullType(UserScore),
+          ) as UserScore;
+          result.score.replace(valueDes);
           break;
         default:
           unhandled.add(key);

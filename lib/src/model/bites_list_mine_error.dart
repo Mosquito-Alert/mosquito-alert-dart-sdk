@@ -5,13 +5,13 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/bites_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_user_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_location_adm_nuts2_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_location_country_id_error_component.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/bites_list_mine_location_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_short_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_updated_at_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_mine_location_nuts2_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_location_adm_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_order_by_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -27,16 +27,16 @@ part 'bites_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BitesListMineError implements Built<BitesListMineError, BitesListMineErrorBuilder> {
-  /// One Of [BitesListMineCreatedAtErrorComponent], [BitesListMineLocationCountryIdErrorComponent], [BitesListMineLocationNuts2ErrorComponent], [BitesListMineLocationNuts3ErrorComponent], [BitesListMineOrderByErrorComponent], [BitesListMineReceivedAtErrorComponent], [BitesListMineShortIdErrorComponent], [BitesListMineUpdatedAtErrorComponent], [BitesListMineUserUuidErrorComponent]
+  /// One Of [BitesListMineCreatedAtErrorComponent], [BitesListMineLocationAdmNuts2ErrorComponent], [BitesListMineLocationAdmNuts3ErrorComponent], [BitesListMineLocationCountryIdErrorComponent], [BitesListMineOrderByErrorComponent], [BitesListMineReceivedAtErrorComponent], [BitesListMineShortIdErrorComponent], [BitesListMineUpdatedAtErrorComponent], [BitesListMineUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
     r'created_at': BitesListMineCreatedAtErrorComponent,
+    r'location_adm_nuts2': BitesListMineLocationAdmNuts2ErrorComponent,
+    r'location_adm_nuts3': BitesListMineLocationAdmNuts3ErrorComponent,
     r'location_country_id': BitesListMineLocationCountryIdErrorComponent,
-    r'location_nuts_2': BitesListMineLocationNuts2ErrorComponent,
-    r'location_nuts_3': BitesListMineLocationNuts3ErrorComponent,
     r'order_by': BitesListMineOrderByErrorComponent,
     r'received_at': BitesListMineReceivedAtErrorComponent,
     r'short_id': BitesListMineShortIdErrorComponent,
@@ -60,14 +60,14 @@ extension BitesListMineErrorDiscriminatorExt on BitesListMineError {
         if (this is BitesListMineCreatedAtErrorComponent) {
             return r'created_at';
         }
+        if (this is BitesListMineLocationAdmNuts2ErrorComponent) {
+            return r'location_adm_nuts2';
+        }
+        if (this is BitesListMineLocationAdmNuts3ErrorComponent) {
+            return r'location_adm_nuts3';
+        }
         if (this is BitesListMineLocationCountryIdErrorComponent) {
             return r'location_country_id';
-        }
-        if (this is BitesListMineLocationNuts2ErrorComponent) {
-            return r'location_nuts_2';
-        }
-        if (this is BitesListMineLocationNuts3ErrorComponent) {
-            return r'location_nuts_3';
         }
         if (this is BitesListMineOrderByErrorComponent) {
             return r'order_by';
@@ -92,14 +92,14 @@ extension BitesListMineErrorBuilderDiscriminatorExt on BitesListMineErrorBuilder
         if (this is BitesListMineCreatedAtErrorComponentBuilder) {
             return r'created_at';
         }
+        if (this is BitesListMineLocationAdmNuts2ErrorComponentBuilder) {
+            return r'location_adm_nuts2';
+        }
+        if (this is BitesListMineLocationAdmNuts3ErrorComponentBuilder) {
+            return r'location_adm_nuts3';
+        }
         if (this is BitesListMineLocationCountryIdErrorComponentBuilder) {
             return r'location_country_id';
-        }
-        if (this is BitesListMineLocationNuts2ErrorComponentBuilder) {
-            return r'location_nuts_2';
-        }
-        if (this is BitesListMineLocationNuts3ErrorComponentBuilder) {
-            return r'location_nuts_3';
         }
         if (this is BitesListMineOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -156,7 +156,7 @@ class _$BitesListMineErrorSerializer implements PrimitiveSerializer<BitesListMin
     final discIndex = serializedList.indexOf(BitesListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BitesListMineCreatedAtErrorComponent, BitesListMineLocationCountryIdErrorComponent, BitesListMineLocationNuts2ErrorComponent, BitesListMineLocationNuts3ErrorComponent, BitesListMineOrderByErrorComponent, BitesListMineReceivedAtErrorComponent, BitesListMineShortIdErrorComponent, BitesListMineUpdatedAtErrorComponent, BitesListMineUserUuidErrorComponent, ];
+    final oneOfTypes = [BitesListMineCreatedAtErrorComponent, BitesListMineLocationAdmNuts2ErrorComponent, BitesListMineLocationAdmNuts3ErrorComponent, BitesListMineLocationCountryIdErrorComponent, BitesListMineOrderByErrorComponent, BitesListMineReceivedAtErrorComponent, BitesListMineShortIdErrorComponent, BitesListMineUpdatedAtErrorComponent, BitesListMineUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -167,26 +167,26 @@ class _$BitesListMineErrorSerializer implements PrimitiveSerializer<BitesListMin
         ) as BitesListMineCreatedAtErrorComponent;
         oneOfType = BitesListMineCreatedAtErrorComponent;
         break;
+      case r'location_adm_nuts2':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesListMineLocationAdmNuts2ErrorComponent),
+        ) as BitesListMineLocationAdmNuts2ErrorComponent;
+        oneOfType = BitesListMineLocationAdmNuts2ErrorComponent;
+        break;
+      case r'location_adm_nuts3':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesListMineLocationAdmNuts3ErrorComponent),
+        ) as BitesListMineLocationAdmNuts3ErrorComponent;
+        oneOfType = BitesListMineLocationAdmNuts3ErrorComponent;
+        break;
       case r'location_country_id':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
           specifiedType: FullType(BitesListMineLocationCountryIdErrorComponent),
         ) as BitesListMineLocationCountryIdErrorComponent;
         oneOfType = BitesListMineLocationCountryIdErrorComponent;
-        break;
-      case r'location_nuts_2':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesListMineLocationNuts2ErrorComponent),
-        ) as BitesListMineLocationNuts2ErrorComponent;
-        oneOfType = BitesListMineLocationNuts2ErrorComponent;
-        break;
-      case r'location_nuts_3':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesListMineLocationNuts3ErrorComponent),
-        ) as BitesListMineLocationNuts3ErrorComponent;
-        oneOfType = BitesListMineLocationNuts3ErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(
