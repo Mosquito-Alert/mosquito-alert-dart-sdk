@@ -23,7 +23,7 @@ abstract class BitesCreateLocationPointErrorComponent implements Built<BitesCrea
 
   @BuiltValueField(wireName: r'code')
   BitesCreateLocationPointErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid,  required,  };
+  // enum codeEnum {  invalid,  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -158,6 +158,8 @@ class BitesCreateLocationPointErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const BitesCreateLocationPointErrorComponentCodeEnum invalid = _$bitesCreateLocationPointErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'null')
+  static const BitesCreateLocationPointErrorComponentCodeEnum null_ = _$bitesCreateLocationPointErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const BitesCreateLocationPointErrorComponentCodeEnum required_ = _$bitesCreateLocationPointErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)

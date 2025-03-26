@@ -23,7 +23,7 @@ abstract class BreedingsitesCreateLocationPointErrorComponent implements Built<B
 
   @BuiltValueField(wireName: r'code')
   BreedingsitesCreateLocationPointErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid,  required,  };
+  // enum codeEnum {  invalid,  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -158,6 +158,8 @@ class BreedingsitesCreateLocationPointErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const BreedingsitesCreateLocationPointErrorComponentCodeEnum invalid = _$breedingsitesCreateLocationPointErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'null')
+  static const BreedingsitesCreateLocationPointErrorComponentCodeEnum null_ = _$breedingsitesCreateLocationPointErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const BreedingsitesCreateLocationPointErrorComponentCodeEnum required_ = _$breedingsitesCreateLocationPointErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)

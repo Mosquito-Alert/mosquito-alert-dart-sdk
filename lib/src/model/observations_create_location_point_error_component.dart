@@ -23,7 +23,7 @@ abstract class ObservationsCreateLocationPointErrorComponent implements Built<Ob
 
   @BuiltValueField(wireName: r'code')
   ObservationsCreateLocationPointErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid,  required,  };
+  // enum codeEnum {  invalid,  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -158,6 +158,8 @@ class ObservationsCreateLocationPointErrorComponentCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const ObservationsCreateLocationPointErrorComponentCodeEnum invalid = _$observationsCreateLocationPointErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'null')
+  static const ObservationsCreateLocationPointErrorComponentCodeEnum null_ = _$observationsCreateLocationPointErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')
   static const ObservationsCreateLocationPointErrorComponentCodeEnum required_ = _$observationsCreateLocationPointErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)

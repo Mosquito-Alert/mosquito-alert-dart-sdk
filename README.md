@@ -433,7 +433,6 @@ Class | Method | HTTP request | Description
  - [PaginatedObservationList](doc/PaginatedObservationList.md)
  - [PaginatedPartnerList](doc/PaginatedPartnerList.md)
  - [Partner](doc/Partner.md)
- - [PartnerPoint](doc/PartnerPoint.md)
  - [PasswordChangeRequest](doc/PasswordChangeRequest.md)
  - [PatchedDeviceUpdateRequest](doc/PatchedDeviceUpdateRequest.md)
  - [PatchedNotificationRequest](doc/PatchedNotificationRequest.md)

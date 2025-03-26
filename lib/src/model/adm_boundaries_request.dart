@@ -46,7 +46,7 @@ class _$AdmBoundariesRequestSerializer implements PrimitiveSerializer<AdmBoundar
       yield r'nuts';
       yield serializers.serialize(
         object.nuts,
-        specifiedType: const FullType(NutsAdmBoundariesRequest),
+        specifiedType: const FullType.nullable(NutsAdmBoundariesRequest),
       );
     }
   }
@@ -75,8 +75,9 @@ class _$AdmBoundariesRequestSerializer implements PrimitiveSerializer<AdmBoundar
         case r'nuts':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(NutsAdmBoundariesRequest),
-          ) as NutsAdmBoundariesRequest;
+            specifiedType: const FullType.nullable(NutsAdmBoundariesRequest),
+          ) as NutsAdmBoundariesRequest?;
+          if (valueDes == null) continue;
           result.nuts.replace(valueDes);
           break;
         default:

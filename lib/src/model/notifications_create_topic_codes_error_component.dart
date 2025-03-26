@@ -23,7 +23,7 @@ abstract class NotificationsCreateTopicCodesErrorComponent implements Built<Noti
 
   @BuiltValueField(wireName: r'code')
   NotificationsCreateTopicCodesErrorComponentCodeEnum get code;
-  // enum codeEnum {  min_length,  not_a_list,  null,  required,  };
+  // enum codeEnum {  empty,  min_length,  not_a_list,  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -156,6 +156,8 @@ class NotificationsCreateTopicCodesErrorComponentAttrEnum extends EnumClass {
 
 class NotificationsCreateTopicCodesErrorComponentCodeEnum extends EnumClass {
 
+  @BuiltValueEnumConst(wireName: r'empty')
+  static const NotificationsCreateTopicCodesErrorComponentCodeEnum empty = _$notificationsCreateTopicCodesErrorComponentCodeEnum_empty;
   @BuiltValueEnumConst(wireName: r'min_length')
   static const NotificationsCreateTopicCodesErrorComponentCodeEnum minLength = _$notificationsCreateTopicCodesErrorComponentCodeEnum_minLength;
   @BuiltValueEnumConst(wireName: r'not_a_list')

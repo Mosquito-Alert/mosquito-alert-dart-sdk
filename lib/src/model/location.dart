@@ -27,7 +27,7 @@ abstract class Location implements Built<Location, LocationBuilder> {
   // enum source_Enum {  auto,  manual,  };
 
   @BuiltValueField(wireName: r'point')
-  LocationPoint? get point;
+  LocationPoint get point;
 
   @BuiltValueField(wireName: r'timezone')
   LocationTimezoneEnum? get timezone;
@@ -68,9 +68,9 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
       specifiedType: const FullType(LocationSource_Enum),
     );
     yield r'point';
-    yield object.point == null ? null : serializers.serialize(
+    yield serializers.serialize(
       object.point,
-      specifiedType: const FullType.nullable(LocationPoint),
+      specifiedType: const FullType(LocationPoint),
     );
     yield r'timezone';
     yield object.timezone == null ? null : serializers.serialize(
@@ -120,9 +120,8 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
         case r'point':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(LocationPoint),
-          ) as LocationPoint?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(LocationPoint),
+          ) as LocationPoint;
           result.point.replace(valueDes);
           break;
         case r'timezone':

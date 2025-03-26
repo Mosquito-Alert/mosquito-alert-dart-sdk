@@ -72,14 +72,16 @@ class _$LocationRequest extends LocationRequest {
   @override
   final LocationRequestSource_Enum source_;
   @override
-  final LocationPoint? point;
+  final LocationPoint point;
 
   factory _$LocationRequest([void Function(LocationRequestBuilder)? updates]) =>
       (new LocationRequestBuilder()..update(updates))._build();
 
-  _$LocationRequest._({required this.source_, this.point}) : super._() {
+  _$LocationRequest._({required this.source_, required this.point})
+      : super._() {
     BuiltValueNullFieldError.checkNotNull(
         source_, r'LocationRequest', 'source_');
+    BuiltValueNullFieldError.checkNotNull(point, r'LocationRequest', 'point');
   }
 
   @override
@@ -137,7 +139,7 @@ class LocationRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _source_ = $v.source_;
-      _point = $v.point?.toBuilder();
+      _point = $v.point.toBuilder();
       _$v = null;
     }
     return this;
@@ -164,12 +166,12 @@ class LocationRequestBuilder
           new _$LocationRequest._(
               source_: BuiltValueNullFieldError.checkNotNull(
                   source_, r'LocationRequest', 'source_'),
-              point: _point?.build());
+              point: point.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'point';
-        _point?.build();
+        point.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'LocationRequest', _$failedField, e.toString());

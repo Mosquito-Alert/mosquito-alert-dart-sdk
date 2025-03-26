@@ -334,7 +334,6 @@ doc/PaginatedNotificationList.md
 doc/PaginatedObservationList.md
 doc/PaginatedPartnerList.md
 doc/Partner.md
-doc/PartnerPoint.md
 doc/PartnersApi.md
 doc/PasswordChangeRequest.md
 doc/PatchedDeviceUpdateRequest.md
@@ -707,7 +706,6 @@ lib/src/model/paginated_notification_list.dart
 lib/src/model/paginated_observation_list.dart
 lib/src/model/paginated_partner_list.dart
 lib/src/model/partner.dart
-lib/src/model/partner_point.dart
 lib/src/model/password_change_request.dart
 lib/src/model/patched_device_update_request.dart
 lib/src/model/patched_notification_request.dart
@@ -1065,7 +1063,6 @@ test/paginated_campaign_list_test.dart
 test/paginated_notification_list_test.dart
 test/paginated_observation_list_test.dart
 test/paginated_partner_list_test.dart
-test/partner_point_test.dart
 test/partner_test.dart
 test/partners_api_test.dart
 test/password_change_request_test.dart

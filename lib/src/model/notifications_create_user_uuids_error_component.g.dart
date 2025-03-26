@@ -34,6 +34,9 @@ final BuiltSet<NotificationsCreateUserUuidsErrorComponentAttrEnum>
 ]);
 
 const NotificationsCreateUserUuidsErrorComponentCodeEnum
+    _$notificationsCreateUserUuidsErrorComponentCodeEnum_empty =
+    const NotificationsCreateUserUuidsErrorComponentCodeEnum._('empty');
+const NotificationsCreateUserUuidsErrorComponentCodeEnum
     _$notificationsCreateUserUuidsErrorComponentCodeEnum_minLength =
     const NotificationsCreateUserUuidsErrorComponentCodeEnum._('minLength');
 const NotificationsCreateUserUuidsErrorComponentCodeEnum
@@ -53,6 +56,8 @@ const NotificationsCreateUserUuidsErrorComponentCodeEnum
 NotificationsCreateUserUuidsErrorComponentCodeEnum
     _$notificationsCreateUserUuidsErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
+    case 'empty':
+      return _$notificationsCreateUserUuidsErrorComponentCodeEnum_empty;
     case 'minLength':
       return _$notificationsCreateUserUuidsErrorComponentCodeEnum_minLength;
     case 'notAList':
@@ -71,6 +76,7 @@ NotificationsCreateUserUuidsErrorComponentCodeEnum
 final BuiltSet<NotificationsCreateUserUuidsErrorComponentCodeEnum>
     _$notificationsCreateUserUuidsErrorComponentCodeEnumValues = new BuiltSet<
         NotificationsCreateUserUuidsErrorComponentCodeEnum>(const <NotificationsCreateUserUuidsErrorComponentCodeEnum>[
+  _$notificationsCreateUserUuidsErrorComponentCodeEnum_empty,
   _$notificationsCreateUserUuidsErrorComponentCodeEnum_minLength,
   _$notificationsCreateUserUuidsErrorComponentCodeEnum_notAList,
   _$notificationsCreateUserUuidsErrorComponentCodeEnum_null_,
@@ -124,6 +130,7 @@ class _$NotificationsCreateUserUuidsErrorComponentCodeEnumSerializer
         PrimitiveSerializer<
             NotificationsCreateUserUuidsErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'empty': 'empty',
     'minLength': 'min_length',
     'notAList': 'not_a_list',
     'null_': 'null',
@@ -131,6 +138,7 @@ class _$NotificationsCreateUserUuidsErrorComponentCodeEnumSerializer
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'empty': 'empty',
     'min_length': 'minLength',
     'not_a_list': 'notAList',
     'null': 'null_',

@@ -34,6 +34,9 @@ final BuiltSet<NotificationsCreateTopicCodesErrorComponentAttrEnum>
 ]);
 
 const NotificationsCreateTopicCodesErrorComponentCodeEnum
+    _$notificationsCreateTopicCodesErrorComponentCodeEnum_empty =
+    const NotificationsCreateTopicCodesErrorComponentCodeEnum._('empty');
+const NotificationsCreateTopicCodesErrorComponentCodeEnum
     _$notificationsCreateTopicCodesErrorComponentCodeEnum_minLength =
     const NotificationsCreateTopicCodesErrorComponentCodeEnum._('minLength');
 const NotificationsCreateTopicCodesErrorComponentCodeEnum
@@ -53,6 +56,8 @@ const NotificationsCreateTopicCodesErrorComponentCodeEnum
 NotificationsCreateTopicCodesErrorComponentCodeEnum
     _$notificationsCreateTopicCodesErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
+    case 'empty':
+      return _$notificationsCreateTopicCodesErrorComponentCodeEnum_empty;
     case 'minLength':
       return _$notificationsCreateTopicCodesErrorComponentCodeEnum_minLength;
     case 'notAList':
@@ -71,6 +76,7 @@ NotificationsCreateTopicCodesErrorComponentCodeEnum
 final BuiltSet<NotificationsCreateTopicCodesErrorComponentCodeEnum>
     _$notificationsCreateTopicCodesErrorComponentCodeEnumValues = new BuiltSet<
         NotificationsCreateTopicCodesErrorComponentCodeEnum>(const <NotificationsCreateTopicCodesErrorComponentCodeEnum>[
+  _$notificationsCreateTopicCodesErrorComponentCodeEnum_empty,
   _$notificationsCreateTopicCodesErrorComponentCodeEnum_minLength,
   _$notificationsCreateTopicCodesErrorComponentCodeEnum_notAList,
   _$notificationsCreateTopicCodesErrorComponentCodeEnum_null_,
@@ -124,6 +130,7 @@ class _$NotificationsCreateTopicCodesErrorComponentCodeEnumSerializer
         PrimitiveSerializer<
             NotificationsCreateTopicCodesErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'empty': 'empty',
     'minLength': 'min_length',
     'notAList': 'not_a_list',
     'null_': 'null',
@@ -131,6 +138,7 @@ class _$NotificationsCreateTopicCodesErrorComponentCodeEnumSerializer
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'empty': 'empty',
     'min_length': 'minLength',
     'not_a_list': 'notAList',
     'null': 'null_',

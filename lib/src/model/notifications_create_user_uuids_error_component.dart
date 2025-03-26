@@ -23,7 +23,7 @@ abstract class NotificationsCreateUserUuidsErrorComponent implements Built<Notif
 
   @BuiltValueField(wireName: r'code')
   NotificationsCreateUserUuidsErrorComponentCodeEnum get code;
-  // enum codeEnum {  min_length,  not_a_list,  null,  required,  };
+  // enum codeEnum {  empty,  min_length,  not_a_list,  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -156,6 +156,8 @@ class NotificationsCreateUserUuidsErrorComponentAttrEnum extends EnumClass {
 
 class NotificationsCreateUserUuidsErrorComponentCodeEnum extends EnumClass {
 
+  @BuiltValueEnumConst(wireName: r'empty')
+  static const NotificationsCreateUserUuidsErrorComponentCodeEnum empty = _$notificationsCreateUserUuidsErrorComponentCodeEnum_empty;
   @BuiltValueEnumConst(wireName: r'min_length')
   static const NotificationsCreateUserUuidsErrorComponentCodeEnum minLength = _$notificationsCreateUserUuidsErrorComponentCodeEnum_minLength;
   @BuiltValueEnumConst(wireName: r'not_a_list')

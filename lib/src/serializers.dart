@@ -338,7 +338,6 @@ import 'package:mosquito_alert/src/model/paginated_notification_list.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
 import 'package:mosquito_alert/src/model/partner.dart';
-import 'package:mosquito_alert/src/model/partner_point.dart';
 import 'package:mosquito_alert/src/model/password_change_request.dart';
 import 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 import 'package:mosquito_alert/src/model/patched_notification_request.dart';
@@ -690,7 +689,6 @@ part 'serializers.g.dart';
   PaginatedObservationList,
   PaginatedPartnerList,
   Partner,
-  PartnerPoint,
   PasswordChangeRequest,
   PatchedDeviceUpdateRequest,
   PatchedNotificationRequest,

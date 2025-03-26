@@ -23,7 +23,7 @@ abstract class LocationRequest implements Built<LocationRequest, LocationRequest
   // enum source_Enum {  auto,  manual,  };
 
   @BuiltValueField(wireName: r'point')
-  LocationPoint? get point;
+  LocationPoint get point;
 
   LocationRequest._();
 
@@ -54,9 +54,9 @@ class _$LocationRequestSerializer implements PrimitiveSerializer<LocationRequest
       specifiedType: const FullType(LocationRequestSource_Enum),
     );
     yield r'point';
-    yield object.point == null ? null : serializers.serialize(
+    yield serializers.serialize(
       object.point,
-      specifiedType: const FullType.nullable(LocationPoint),
+      specifiedType: const FullType(LocationPoint),
     );
   }
 
@@ -91,9 +91,8 @@ class _$LocationRequestSerializer implements PrimitiveSerializer<LocationRequest
         case r'point':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(LocationPoint),
-          ) as LocationPoint?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(LocationPoint),
+          ) as LocationPoint;
           result.point.replace(valueDes);
           break;
         default:

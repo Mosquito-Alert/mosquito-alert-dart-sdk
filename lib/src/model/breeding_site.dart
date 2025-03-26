@@ -79,7 +79,7 @@ abstract class BreedingSite implements Built<BreedingSite, BreedingSiteBuilder> 
   /// Breeding site type.
   @BuiltValueField(wireName: r'site_type')
   BreedingSiteSiteTypeEnum? get siteType;
-  // enum siteTypeEnum {  basin,  bucket,  fountain,  small_container,  storm_drain,  well,  other,  ,  };
+  // enum siteTypeEnum {  basin,  bucket,  fountain,  small_container,  storm_drain,  well,  other,  };
 
   /// Either if the user perceived water in the breeding site.
   @BuiltValueField(wireName: r'has_water')
@@ -430,9 +430,6 @@ class BreedingSiteSiteTypeEnum extends EnumClass {
   /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'other')
   static const BreedingSiteSiteTypeEnum other = _$breedingSiteSiteTypeEnum_other;
-  /// Breeding site type.
-  @BuiltValueEnumConst(wireName: r'')
-  static const BreedingSiteSiteTypeEnum empty = _$breedingSiteSiteTypeEnum_empty;
   /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BreedingSiteSiteTypeEnum unknownDefaultOpenApi = _$breedingSiteSiteTypeEnum_unknownDefaultOpenApi;

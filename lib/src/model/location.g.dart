@@ -4315,7 +4315,7 @@ class _$Location extends Location {
   @override
   final LocationSource_Enum source_;
   @override
-  final LocationPoint? point;
+  final LocationPoint point;
   @override
   final LocationTimezoneEnum? timezone;
   @override
@@ -4328,12 +4328,13 @@ class _$Location extends Location {
 
   _$Location._(
       {required this.source_,
-      this.point,
+      required this.point,
       this.timezone,
       this.countryId,
       required this.admBoundaries})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(source_, r'Location', 'source_');
+    BuiltValueNullFieldError.checkNotNull(point, r'Location', 'point');
     BuiltValueNullFieldError.checkNotNull(
         admBoundaries, r'Location', 'admBoundaries');
   }
@@ -4414,7 +4415,7 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
     final $v = _$v;
     if ($v != null) {
       _source_ = $v.source_;
-      _point = $v.point?.toBuilder();
+      _point = $v.point.toBuilder();
       _timezone = $v.timezone;
       _countryId = $v.countryId;
       _admBoundaries = $v.admBoundaries.toBuilder();
@@ -4444,7 +4445,7 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
           new _$Location._(
               source_: BuiltValueNullFieldError.checkNotNull(
                   source_, r'Location', 'source_'),
-              point: _point?.build(),
+              point: point.build(),
               timezone: timezone,
               countryId: countryId,
               admBoundaries: admBoundaries.build());
@@ -4452,7 +4453,7 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
       late String _$failedField;
       try {
         _$failedField = 'point';
-        _point?.build();
+        point.build();
 
         _$failedField = 'admBoundaries';
         admBoundaries.build();

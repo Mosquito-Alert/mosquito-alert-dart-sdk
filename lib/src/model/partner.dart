@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/partner_point.dart';
+import 'package:mosquito_alert/src/model/location_point.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -22,7 +22,7 @@ abstract class Partner implements Built<Partner, PartnerBuilder> {
   int get id;
 
   @BuiltValueField(wireName: r'point')
-  PartnerPoint get point;
+  LocationPoint get point;
 
   /// Text desription on the pin. This text is meant to be visualized as the text body of the dialog on the map
   @BuiltValueField(wireName: r'description')
@@ -63,7 +63,7 @@ class _$PartnerSerializer implements PrimitiveSerializer<Partner> {
     yield r'point';
     yield serializers.serialize(
       object.point,
-      specifiedType: const FullType(PartnerPoint),
+      specifiedType: const FullType(LocationPoint),
     );
     yield r'description';
     yield serializers.serialize(
@@ -108,8 +108,8 @@ class _$PartnerSerializer implements PrimitiveSerializer<Partner> {
         case r'point':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(PartnerPoint),
-          ) as PartnerPoint;
+            specifiedType: const FullType(LocationPoint),
+          ) as LocationPoint;
           result.point.replace(valueDes);
           break;
         case r'description':

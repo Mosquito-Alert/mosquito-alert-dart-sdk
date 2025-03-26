@@ -40,6 +40,9 @@ const ObservationsCreateLocationPointErrorComponentCodeEnum
     _$observationsCreateLocationPointErrorComponentCodeEnum_invalid =
     const ObservationsCreateLocationPointErrorComponentCodeEnum._('invalid');
 const ObservationsCreateLocationPointErrorComponentCodeEnum
+    _$observationsCreateLocationPointErrorComponentCodeEnum_null_ =
+    const ObservationsCreateLocationPointErrorComponentCodeEnum._('null_');
+const ObservationsCreateLocationPointErrorComponentCodeEnum
     _$observationsCreateLocationPointErrorComponentCodeEnum_required_ =
     const ObservationsCreateLocationPointErrorComponentCodeEnum._('required_');
 const ObservationsCreateLocationPointErrorComponentCodeEnum
@@ -53,6 +56,8 @@ ObservationsCreateLocationPointErrorComponentCodeEnum
   switch (name) {
     case 'invalid':
       return _$observationsCreateLocationPointErrorComponentCodeEnum_invalid;
+    case 'null_':
+      return _$observationsCreateLocationPointErrorComponentCodeEnum_null_;
     case 'required_':
       return _$observationsCreateLocationPointErrorComponentCodeEnum_required_;
     case 'unknownDefaultOpenApi':
@@ -67,6 +72,7 @@ final BuiltSet<ObservationsCreateLocationPointErrorComponentCodeEnum>
     new BuiltSet<
         ObservationsCreateLocationPointErrorComponentCodeEnum>(const <ObservationsCreateLocationPointErrorComponentCodeEnum>[
   _$observationsCreateLocationPointErrorComponentCodeEnum_invalid,
+  _$observationsCreateLocationPointErrorComponentCodeEnum_null_,
   _$observationsCreateLocationPointErrorComponentCodeEnum_required_,
   _$observationsCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
@@ -119,11 +125,13 @@ class _$ObservationsCreateLocationPointErrorComponentCodeEnumSerializer
             ObservationsCreateLocationPointErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'null_': 'null',
     'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'null': 'null_',
     'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };

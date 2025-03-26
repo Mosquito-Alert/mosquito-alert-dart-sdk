@@ -9,7 +9,7 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | 
-**point** | [**PartnerPoint**](PartnerPoint.md) |  | 
+**point** | [**LocationPoint**](LocationPoint.md) |  | 
 **description** | **String** | Text desription on the pin. This text is meant to be visualized as the text body of the dialog on the map | 
 **url** | **String** | URL link to the organization page | 
 

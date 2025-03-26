@@ -38,6 +38,9 @@ const BitesCreateLocationPointErrorComponentCodeEnum
     _$bitesCreateLocationPointErrorComponentCodeEnum_invalid =
     const BitesCreateLocationPointErrorComponentCodeEnum._('invalid');
 const BitesCreateLocationPointErrorComponentCodeEnum
+    _$bitesCreateLocationPointErrorComponentCodeEnum_null_ =
+    const BitesCreateLocationPointErrorComponentCodeEnum._('null_');
+const BitesCreateLocationPointErrorComponentCodeEnum
     _$bitesCreateLocationPointErrorComponentCodeEnum_required_ =
     const BitesCreateLocationPointErrorComponentCodeEnum._('required_');
 const BitesCreateLocationPointErrorComponentCodeEnum
@@ -50,6 +53,8 @@ BitesCreateLocationPointErrorComponentCodeEnum
   switch (name) {
     case 'invalid':
       return _$bitesCreateLocationPointErrorComponentCodeEnum_invalid;
+    case 'null_':
+      return _$bitesCreateLocationPointErrorComponentCodeEnum_null_;
     case 'required_':
       return _$bitesCreateLocationPointErrorComponentCodeEnum_required_;
     case 'unknownDefaultOpenApi':
@@ -63,6 +68,7 @@ final BuiltSet<BitesCreateLocationPointErrorComponentCodeEnum>
     _$bitesCreateLocationPointErrorComponentCodeEnumValues = new BuiltSet<
         BitesCreateLocationPointErrorComponentCodeEnum>(const <BitesCreateLocationPointErrorComponentCodeEnum>[
   _$bitesCreateLocationPointErrorComponentCodeEnum_invalid,
+  _$bitesCreateLocationPointErrorComponentCodeEnum_null_,
   _$bitesCreateLocationPointErrorComponentCodeEnum_required_,
   _$bitesCreateLocationPointErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
@@ -112,11 +118,13 @@ class _$BitesCreateLocationPointErrorComponentCodeEnumSerializer
         PrimitiveSerializer<BitesCreateLocationPointErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
+    'null_': 'null',
     'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
+    'null': 'null_',
     'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };

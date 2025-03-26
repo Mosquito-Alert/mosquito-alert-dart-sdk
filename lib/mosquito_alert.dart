@@ -347,7 +347,6 @@ export 'package:mosquito_alert/src/model/paginated_notification_list.dart';
 export 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 export 'package:mosquito_alert/src/model/paginated_partner_list.dart';
 export 'package:mosquito_alert/src/model/partner.dart';
-export 'package:mosquito_alert/src/model/partner_point.dart';
 export 'package:mosquito_alert/src/model/password_change_request.dart';
 export 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 export 'package:mosquito_alert/src/model/patched_notification_request.dart';
