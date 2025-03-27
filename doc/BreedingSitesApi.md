@@ -134,7 +134,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
-> PaginatedBreedingSiteList list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+> PaginatedBreedingSiteList list(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
 
 
 
@@ -151,12 +151,10 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getBreedingSitesApi();
+final int countryId = 56; // int | 
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final bool hasPhotos = true; // bool | Has any photo
-final String locationAdmNuts2 = locationAdmNuts2_example; // String | 
-final String locationAdmNuts3 = locationAdmNuts3_example; // String | 
-final int locationCountryId = 56; // int | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
@@ -168,7 +166,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.list(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    final response = api.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling BreedingSitesApi->list: $e\n');
@@ -179,12 +177,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **countryId** | **int**|  | [optional] 
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
  **hasPhotos** | **bool**| Has any photo | [optional] 
- **locationAdmNuts2** | **String**|  | [optional] 
- **locationAdmNuts3** | **String**|  | [optional] 
- **locationCountryId** | **int**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
@@ -211,7 +207,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listMine**
-> PaginatedBreedingSiteList listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+> PaginatedBreedingSiteList listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
 
 
 
@@ -222,12 +218,10 @@ Get Current User's Breeding Sites
 import 'package:mosquito_alert/api.dart';
 
 final api = MosquitoAlert().getBreedingSitesApi();
+final int countryId = 56; // int | 
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final bool hasPhotos = true; // bool | Has any photo
-final String locationAdmNuts2 = locationAdmNuts2_example; // String | 
-final String locationAdmNuts3 = locationAdmNuts3_example; // String | 
-final int locationCountryId = 56; // int | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
@@ -239,7 +233,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.listMine(createdAtAfter, createdAtBefore, hasPhotos, locationAdmNuts2, locationAdmNuts3, locationCountryId, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    final response = api.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling BreedingSitesApi->listMine: $e\n');
@@ -250,12 +244,10 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **countryId** | **int**|  | [optional] 
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
  **hasPhotos** | **bool**| Has any photo | [optional] 
- **locationAdmNuts2** | **String**|  | [optional] 
- **locationAdmNuts3** | **String**|  | [optional] 
- **locationCountryId** | **int**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 

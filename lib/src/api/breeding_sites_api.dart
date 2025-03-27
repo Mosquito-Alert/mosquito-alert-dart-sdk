@@ -231,12 +231,10 @@ class BreedingSitesApi {
   /// 
   ///
   /// Parameters:
+  /// * [countryId] 
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [hasPhotos] - Has any photo
-  /// * [locationAdmNuts2] 
-  /// * [locationAdmNuts3] 
-  /// * [locationCountryId] 
   /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
@@ -256,12 +254,10 @@ class BreedingSitesApi {
   /// Returns a [Future] containing a [Response] with a [PaginatedBreedingSiteList] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<PaginatedBreedingSiteList>> list({ 
+    int? countryId,
     DateTime? createdAtAfter,
     DateTime? createdAtBefore,
     bool? hasPhotos,
-    String? locationAdmNuts2,
-    String? locationAdmNuts3,
-    int? locationCountryId,
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
@@ -308,12 +304,10 @@ class BreedingSitesApi {
     );
 
     final _queryParameters = <String, dynamic>{
+      r'country_id': encodeQueryParameter(_serializers, countryId, const FullType(int)),
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (hasPhotos != null) r'has_photos': encodeQueryParameter(_serializers, hasPhotos, const FullType(bool)),
-      if (locationAdmNuts2 != null) r'location_adm_nuts2': encodeQueryParameter(_serializers, locationAdmNuts2, const FullType(String)),
-      if (locationAdmNuts3 != null) r'location_adm_nuts3': encodeQueryParameter(_serializers, locationAdmNuts3, const FullType(String)),
-      r'location_country_id': encodeQueryParameter(_serializers, locationCountryId, const FullType(int)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
@@ -369,12 +363,10 @@ class BreedingSitesApi {
   /// Get Current User&#39;s Breeding Sites
   ///
   /// Parameters:
+  /// * [countryId] 
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [hasPhotos] - Has any photo
-  /// * [locationAdmNuts2] 
-  /// * [locationAdmNuts3] 
-  /// * [locationCountryId] 
   /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
@@ -394,12 +386,10 @@ class BreedingSitesApi {
   /// Returns a [Future] containing a [Response] with a [PaginatedBreedingSiteList] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<PaginatedBreedingSiteList>> listMine({ 
+    int? countryId,
     DateTime? createdAtAfter,
     DateTime? createdAtBefore,
     bool? hasPhotos,
-    String? locationAdmNuts2,
-    String? locationAdmNuts3,
-    int? locationCountryId,
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
@@ -436,12 +426,10 @@ class BreedingSitesApi {
     );
 
     final _queryParameters = <String, dynamic>{
+      r'country_id': encodeQueryParameter(_serializers, countryId, const FullType(int)),
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (hasPhotos != null) r'has_photos': encodeQueryParameter(_serializers, hasPhotos, const FullType(bool)),
-      if (locationAdmNuts2 != null) r'location_adm_nuts2': encodeQueryParameter(_serializers, locationAdmNuts2, const FullType(String)),
-      if (locationAdmNuts3 != null) r'location_adm_nuts3': encodeQueryParameter(_serializers, locationAdmNuts3, const FullType(String)),
-      r'location_country_id': encodeQueryParameter(_serializers, locationCountryId, const FullType(int)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),

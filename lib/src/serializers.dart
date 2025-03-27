@@ -14,8 +14,8 @@ import 'package:built_value/iso_8601_date_time_serializer.dart';
 import 'package:mosquito_alert/src/date_serializer.dart';
 import 'package:mosquito_alert/src/model/date.dart';
 
-import 'package:mosquito_alert/src/model/adm_boundaries.dart';
-import 'package:mosquito_alert/src/model/adm_boundaries_request.dart';
+import 'package:mosquito_alert/src/model/adm_boundary.dart';
+import 'package:mosquito_alert/src/model/adm_boundary_request.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
 import 'package:mosquito_alert/src/model/auth_change_password_error.dart';
@@ -61,16 +61,12 @@ import 'package:mosquito_alert/src/model/bites_create_sent_at_error_component.da
 import 'package:mosquito_alert/src/model/bites_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/bites_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_error.dart';
-import 'package:mosquito_alert/src/model/bites_list_location_adm_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_location_adm_nuts3_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_location_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_error.dart';
-import 'package:mosquito_alert/src/model/bites_list_mine_location_adm_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_mine_location_adm_nuts3_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_mine_location_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_short_id_error_component.dart';
@@ -103,16 +99,12 @@ import 'package:mosquito_alert/src/model/breedingsites_create_site_type_error_co
 import 'package:mosquito_alert/src/model/breedingsites_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_error.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_location_adm_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_location_adm_nuts3_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_location_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_error.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_adm_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_adm_nuts3_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_mine_location_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_short_id_error_component.dart';
@@ -286,8 +278,6 @@ import 'package:mosquito_alert/src/model/notifications_update_error.dart';
 import 'package:mosquito_alert/src/model/notifications_update_is_read_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_update_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_update_validation_error.dart';
-import 'package:mosquito_alert/src/model/nuts_adm_boundaries.dart';
-import 'package:mosquito_alert/src/model/nuts_adm_boundaries_request.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
 import 'package:mosquito_alert/src/model/observations_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_error.dart';
@@ -309,16 +299,12 @@ import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosq
 import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_specie_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_thorax_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/observations_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_error.dart';
-import 'package:mosquito_alert/src/model/observations_list_location_adm_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_location_adm_nuts3_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_location_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_error.dart';
-import 'package:mosquito_alert/src/model/observations_list_mine_location_adm_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_mine_location_adm_nuts3_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_mine_location_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_short_id_error_component.dart';
@@ -365,8 +351,8 @@ import 'package:mosquito_alert/src/model/users_update_validation_error.dart';
 part 'serializers.g.dart';
 
 @SerializersFor([
-  AdmBoundaries,
-  AdmBoundariesRequest,
+  AdmBoundary,
+  AdmBoundaryRequest,
   AppUserTokenObtainPair,
   AppUserTokenObtainPairRequest,
   AuthChangePasswordError,
@@ -412,16 +398,12 @@ part 'serializers.g.dart';
   BitesCreateTagsErrorComponent,
   BitesCreateTagsINDEXErrorComponent,
   BitesCreateValidationError,
+  BitesListCountryIdErrorComponent,
   BitesListCreatedAtErrorComponent,
   BitesListError,
-  BitesListLocationAdmNuts2ErrorComponent,
-  BitesListLocationAdmNuts3ErrorComponent,
-  BitesListLocationCountryIdErrorComponent,
+  BitesListMineCountryIdErrorComponent,
   BitesListMineCreatedAtErrorComponent,
   BitesListMineError,
-  BitesListMineLocationAdmNuts2ErrorComponent,
-  BitesListMineLocationAdmNuts3ErrorComponent,
-  BitesListMineLocationCountryIdErrorComponent,
   BitesListMineOrderByErrorComponent,
   BitesListMineReceivedAtErrorComponent,
   BitesListMineShortIdErrorComponent,
@@ -454,16 +436,12 @@ part 'serializers.g.dart';
   BreedingsitesCreateTagsErrorComponent,
   BreedingsitesCreateTagsINDEXErrorComponent,
   BreedingsitesCreateValidationError,
+  BreedingsitesListCountryIdErrorComponent,
   BreedingsitesListCreatedAtErrorComponent,
   BreedingsitesListError,
-  BreedingsitesListLocationAdmNuts2ErrorComponent,
-  BreedingsitesListLocationAdmNuts3ErrorComponent,
-  BreedingsitesListLocationCountryIdErrorComponent,
+  BreedingsitesListMineCountryIdErrorComponent,
   BreedingsitesListMineCreatedAtErrorComponent,
   BreedingsitesListMineError,
-  BreedingsitesListMineLocationAdmNuts2ErrorComponent,
-  BreedingsitesListMineLocationAdmNuts3ErrorComponent,
-  BreedingsitesListMineLocationCountryIdErrorComponent,
   BreedingsitesListMineOrderByErrorComponent,
   BreedingsitesListMineReceivedAtErrorComponent,
   BreedingsitesListMineShortIdErrorComponent,
@@ -637,8 +615,6 @@ part 'serializers.g.dart';
   NotificationsUpdateIsReadErrorComponent,
   NotificationsUpdateNonFieldErrorsErrorComponent,
   NotificationsUpdateValidationError,
-  NutsAdmBoundaries,
-  NutsAdmBoundariesRequest,
   Observation,
   ObservationsCreateCreatedAtErrorComponent,
   ObservationsCreateError,
@@ -660,16 +636,12 @@ part 'serializers.g.dart';
   ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent,
   ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent,
   ObservationsCreateValidationError,
+  ObservationsListCountryIdErrorComponent,
   ObservationsListCreatedAtErrorComponent,
   ObservationsListError,
-  ObservationsListLocationAdmNuts2ErrorComponent,
-  ObservationsListLocationAdmNuts3ErrorComponent,
-  ObservationsListLocationCountryIdErrorComponent,
+  ObservationsListMineCountryIdErrorComponent,
   ObservationsListMineCreatedAtErrorComponent,
   ObservationsListMineError,
-  ObservationsListMineLocationAdmNuts2ErrorComponent,
-  ObservationsListMineLocationAdmNuts3ErrorComponent,
-  ObservationsListMineLocationCountryIdErrorComponent,
   ObservationsListMineOrderByErrorComponent,
   ObservationsListMineReceivedAtErrorComponent,
   ObservationsListMineShortIdErrorComponent,

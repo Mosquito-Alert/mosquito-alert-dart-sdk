@@ -23,12 +23,17 @@ void main() {
       // TODO
     });
 
+    // String displayName
+    test('to test the property `displayName`', () async {
+      // TODO
+    });
+
     // int countryId
     test('to test the property `countryId`', () async {
       // TODO
     });
 
-    // AdmBoundaries admBoundaries
+    // BuiltList<AdmBoundary> admBoundaries
     test('to test the property `admBoundaries`', () async {
       // TODO
     });

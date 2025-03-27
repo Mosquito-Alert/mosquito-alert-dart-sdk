@@ -4319,9 +4319,11 @@ class _$Location extends Location {
   @override
   final LocationTimezoneEnum? timezone;
   @override
+  final String? displayName;
+  @override
   final int? countryId;
   @override
-  final AdmBoundaries admBoundaries;
+  final BuiltList<AdmBoundary> admBoundaries;
 
   factory _$Location([void Function(LocationBuilder)? updates]) =>
       (new LocationBuilder()..update(updates))._build();
@@ -4330,6 +4332,7 @@ class _$Location extends Location {
       {required this.source_,
       required this.point,
       this.timezone,
+      this.displayName,
       this.countryId,
       required this.admBoundaries})
       : super._() {
@@ -4353,6 +4356,7 @@ class _$Location extends Location {
         source_ == other.source_ &&
         point == other.point &&
         timezone == other.timezone &&
+        displayName == other.displayName &&
         countryId == other.countryId &&
         admBoundaries == other.admBoundaries;
   }
@@ -4363,6 +4367,7 @@ class _$Location extends Location {
     _$hash = $jc(_$hash, source_.hashCode);
     _$hash = $jc(_$hash, point.hashCode);
     _$hash = $jc(_$hash, timezone.hashCode);
+    _$hash = $jc(_$hash, displayName.hashCode);
     _$hash = $jc(_$hash, countryId.hashCode);
     _$hash = $jc(_$hash, admBoundaries.hashCode);
     _$hash = $jf(_$hash);
@@ -4375,6 +4380,7 @@ class _$Location extends Location {
           ..add('source_', source_)
           ..add('point', point)
           ..add('timezone', timezone)
+          ..add('displayName', displayName)
           ..add('countryId', countryId)
           ..add('admBoundaries', admBoundaries))
         .toString();
@@ -4397,14 +4403,18 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
   LocationTimezoneEnum? get timezone => _$this._timezone;
   set timezone(LocationTimezoneEnum? timezone) => _$this._timezone = timezone;
 
+  String? _displayName;
+  String? get displayName => _$this._displayName;
+  set displayName(String? displayName) => _$this._displayName = displayName;
+
   int? _countryId;
   int? get countryId => _$this._countryId;
   set countryId(int? countryId) => _$this._countryId = countryId;
 
-  AdmBoundariesBuilder? _admBoundaries;
-  AdmBoundariesBuilder get admBoundaries =>
-      _$this._admBoundaries ??= new AdmBoundariesBuilder();
-  set admBoundaries(AdmBoundariesBuilder? admBoundaries) =>
+  ListBuilder<AdmBoundary>? _admBoundaries;
+  ListBuilder<AdmBoundary> get admBoundaries =>
+      _$this._admBoundaries ??= new ListBuilder<AdmBoundary>();
+  set admBoundaries(ListBuilder<AdmBoundary>? admBoundaries) =>
       _$this._admBoundaries = admBoundaries;
 
   LocationBuilder() {
@@ -4417,6 +4427,7 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
       _source_ = $v.source_;
       _point = $v.point.toBuilder();
       _timezone = $v.timezone;
+      _displayName = $v.displayName;
       _countryId = $v.countryId;
       _admBoundaries = $v.admBoundaries.toBuilder();
       _$v = null;
@@ -4447,6 +4458,7 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
                   source_, r'Location', 'source_'),
               point: point.build(),
               timezone: timezone,
+              displayName: displayName,
               countryId: countryId,
               admBoundaries: admBoundaries.build());
     } catch (_) {

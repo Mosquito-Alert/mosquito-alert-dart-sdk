@@ -3,13 +3,11 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/observations_list_location_adm_nuts3_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_short_id_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/observations_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_updated_at_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_location_adm_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_location_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_created_at_error_component.dart';
@@ -27,16 +25,14 @@ part 'observations_list_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class ObservationsListError implements Built<ObservationsListError, ObservationsListErrorBuilder> {
-  /// One Of [ObservationsListCreatedAtErrorComponent], [ObservationsListLocationAdmNuts2ErrorComponent], [ObservationsListLocationAdmNuts3ErrorComponent], [ObservationsListLocationCountryIdErrorComponent], [ObservationsListOrderByErrorComponent], [ObservationsListReceivedAtErrorComponent], [ObservationsListShortIdErrorComponent], [ObservationsListUpdatedAtErrorComponent], [ObservationsListUserUuidErrorComponent]
+  /// One Of [ObservationsListCountryIdErrorComponent], [ObservationsListCreatedAtErrorComponent], [ObservationsListOrderByErrorComponent], [ObservationsListReceivedAtErrorComponent], [ObservationsListShortIdErrorComponent], [ObservationsListUpdatedAtErrorComponent], [ObservationsListUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
+    r'country_id': ObservationsListCountryIdErrorComponent,
     r'created_at': ObservationsListCreatedAtErrorComponent,
-    r'location_adm_nuts2': ObservationsListLocationAdmNuts2ErrorComponent,
-    r'location_adm_nuts3': ObservationsListLocationAdmNuts3ErrorComponent,
-    r'location_country_id': ObservationsListLocationCountryIdErrorComponent,
     r'order_by': ObservationsListOrderByErrorComponent,
     r'received_at': ObservationsListReceivedAtErrorComponent,
     r'short_id': ObservationsListShortIdErrorComponent,
@@ -57,17 +53,11 @@ abstract class ObservationsListError implements Built<ObservationsListError, Obs
 
 extension ObservationsListErrorDiscriminatorExt on ObservationsListError {
     String? get discriminatorValue {
+        if (this is ObservationsListCountryIdErrorComponent) {
+            return r'country_id';
+        }
         if (this is ObservationsListCreatedAtErrorComponent) {
             return r'created_at';
-        }
-        if (this is ObservationsListLocationAdmNuts2ErrorComponent) {
-            return r'location_adm_nuts2';
-        }
-        if (this is ObservationsListLocationAdmNuts3ErrorComponent) {
-            return r'location_adm_nuts3';
-        }
-        if (this is ObservationsListLocationCountryIdErrorComponent) {
-            return r'location_country_id';
         }
         if (this is ObservationsListOrderByErrorComponent) {
             return r'order_by';
@@ -89,17 +79,11 @@ extension ObservationsListErrorDiscriminatorExt on ObservationsListError {
 }
 extension ObservationsListErrorBuilderDiscriminatorExt on ObservationsListErrorBuilder {
     String? get discriminatorValue {
+        if (this is ObservationsListCountryIdErrorComponentBuilder) {
+            return r'country_id';
+        }
         if (this is ObservationsListCreatedAtErrorComponentBuilder) {
             return r'created_at';
-        }
-        if (this is ObservationsListLocationAdmNuts2ErrorComponentBuilder) {
-            return r'location_adm_nuts2';
-        }
-        if (this is ObservationsListLocationAdmNuts3ErrorComponentBuilder) {
-            return r'location_adm_nuts3';
-        }
-        if (this is ObservationsListLocationCountryIdErrorComponentBuilder) {
-            return r'location_country_id';
         }
         if (this is ObservationsListOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -156,37 +140,23 @@ class _$ObservationsListErrorSerializer implements PrimitiveSerializer<Observati
     final discIndex = serializedList.indexOf(ObservationsListError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [ObservationsListCreatedAtErrorComponent, ObservationsListLocationAdmNuts2ErrorComponent, ObservationsListLocationAdmNuts3ErrorComponent, ObservationsListLocationCountryIdErrorComponent, ObservationsListOrderByErrorComponent, ObservationsListReceivedAtErrorComponent, ObservationsListShortIdErrorComponent, ObservationsListUpdatedAtErrorComponent, ObservationsListUserUuidErrorComponent, ];
+    final oneOfTypes = [ObservationsListCountryIdErrorComponent, ObservationsListCreatedAtErrorComponent, ObservationsListOrderByErrorComponent, ObservationsListReceivedAtErrorComponent, ObservationsListShortIdErrorComponent, ObservationsListUpdatedAtErrorComponent, ObservationsListUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
+      case r'country_id':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsListCountryIdErrorComponent),
+        ) as ObservationsListCountryIdErrorComponent;
+        oneOfType = ObservationsListCountryIdErrorComponent;
+        break;
       case r'created_at':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
           specifiedType: FullType(ObservationsListCreatedAtErrorComponent),
         ) as ObservationsListCreatedAtErrorComponent;
         oneOfType = ObservationsListCreatedAtErrorComponent;
-        break;
-      case r'location_adm_nuts2':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(ObservationsListLocationAdmNuts2ErrorComponent),
-        ) as ObservationsListLocationAdmNuts2ErrorComponent;
-        oneOfType = ObservationsListLocationAdmNuts2ErrorComponent;
-        break;
-      case r'location_adm_nuts3':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(ObservationsListLocationAdmNuts3ErrorComponent),
-        ) as ObservationsListLocationAdmNuts3ErrorComponent;
-        oneOfType = ObservationsListLocationAdmNuts3ErrorComponent;
-        break;
-      case r'location_country_id':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(ObservationsListLocationCountryIdErrorComponent),
-        ) as ObservationsListLocationCountryIdErrorComponent;
-        oneOfType = ObservationsListLocationCountryIdErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(

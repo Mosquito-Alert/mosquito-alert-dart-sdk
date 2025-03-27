@@ -4,15 +4,13 @@
 
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/breedingsites_list_order_by_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_location_adm_nuts2_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_short_id_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_user_uuid_error_component.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_location_adm_nuts3_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_created_at_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_list_location_country_id_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';
@@ -27,16 +25,14 @@ part 'breedingsites_list_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BreedingsitesListError implements Built<BreedingsitesListError, BreedingsitesListErrorBuilder> {
-  /// One Of [BreedingsitesListCreatedAtErrorComponent], [BreedingsitesListLocationAdmNuts2ErrorComponent], [BreedingsitesListLocationAdmNuts3ErrorComponent], [BreedingsitesListLocationCountryIdErrorComponent], [BreedingsitesListOrderByErrorComponent], [BreedingsitesListReceivedAtErrorComponent], [BreedingsitesListShortIdErrorComponent], [BreedingsitesListUpdatedAtErrorComponent], [BreedingsitesListUserUuidErrorComponent]
+  /// One Of [BreedingsitesListCountryIdErrorComponent], [BreedingsitesListCreatedAtErrorComponent], [BreedingsitesListOrderByErrorComponent], [BreedingsitesListReceivedAtErrorComponent], [BreedingsitesListShortIdErrorComponent], [BreedingsitesListUpdatedAtErrorComponent], [BreedingsitesListUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
+    r'country_id': BreedingsitesListCountryIdErrorComponent,
     r'created_at': BreedingsitesListCreatedAtErrorComponent,
-    r'location_adm_nuts2': BreedingsitesListLocationAdmNuts2ErrorComponent,
-    r'location_adm_nuts3': BreedingsitesListLocationAdmNuts3ErrorComponent,
-    r'location_country_id': BreedingsitesListLocationCountryIdErrorComponent,
     r'order_by': BreedingsitesListOrderByErrorComponent,
     r'received_at': BreedingsitesListReceivedAtErrorComponent,
     r'short_id': BreedingsitesListShortIdErrorComponent,
@@ -57,17 +53,11 @@ abstract class BreedingsitesListError implements Built<BreedingsitesListError, B
 
 extension BreedingsitesListErrorDiscriminatorExt on BreedingsitesListError {
     String? get discriminatorValue {
+        if (this is BreedingsitesListCountryIdErrorComponent) {
+            return r'country_id';
+        }
         if (this is BreedingsitesListCreatedAtErrorComponent) {
             return r'created_at';
-        }
-        if (this is BreedingsitesListLocationAdmNuts2ErrorComponent) {
-            return r'location_adm_nuts2';
-        }
-        if (this is BreedingsitesListLocationAdmNuts3ErrorComponent) {
-            return r'location_adm_nuts3';
-        }
-        if (this is BreedingsitesListLocationCountryIdErrorComponent) {
-            return r'location_country_id';
         }
         if (this is BreedingsitesListOrderByErrorComponent) {
             return r'order_by';
@@ -89,17 +79,11 @@ extension BreedingsitesListErrorDiscriminatorExt on BreedingsitesListError {
 }
 extension BreedingsitesListErrorBuilderDiscriminatorExt on BreedingsitesListErrorBuilder {
     String? get discriminatorValue {
+        if (this is BreedingsitesListCountryIdErrorComponentBuilder) {
+            return r'country_id';
+        }
         if (this is BreedingsitesListCreatedAtErrorComponentBuilder) {
             return r'created_at';
-        }
-        if (this is BreedingsitesListLocationAdmNuts2ErrorComponentBuilder) {
-            return r'location_adm_nuts2';
-        }
-        if (this is BreedingsitesListLocationAdmNuts3ErrorComponentBuilder) {
-            return r'location_adm_nuts3';
-        }
-        if (this is BreedingsitesListLocationCountryIdErrorComponentBuilder) {
-            return r'location_country_id';
         }
         if (this is BreedingsitesListOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -156,37 +140,23 @@ class _$BreedingsitesListErrorSerializer implements PrimitiveSerializer<Breeding
     final discIndex = serializedList.indexOf(BreedingsitesListError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BreedingsitesListCreatedAtErrorComponent, BreedingsitesListLocationAdmNuts2ErrorComponent, BreedingsitesListLocationAdmNuts3ErrorComponent, BreedingsitesListLocationCountryIdErrorComponent, BreedingsitesListOrderByErrorComponent, BreedingsitesListReceivedAtErrorComponent, BreedingsitesListShortIdErrorComponent, BreedingsitesListUpdatedAtErrorComponent, BreedingsitesListUserUuidErrorComponent, ];
+    final oneOfTypes = [BreedingsitesListCountryIdErrorComponent, BreedingsitesListCreatedAtErrorComponent, BreedingsitesListOrderByErrorComponent, BreedingsitesListReceivedAtErrorComponent, BreedingsitesListShortIdErrorComponent, BreedingsitesListUpdatedAtErrorComponent, BreedingsitesListUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
+      case r'country_id':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BreedingsitesListCountryIdErrorComponent),
+        ) as BreedingsitesListCountryIdErrorComponent;
+        oneOfType = BreedingsitesListCountryIdErrorComponent;
+        break;
       case r'created_at':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
           specifiedType: FullType(BreedingsitesListCreatedAtErrorComponent),
         ) as BreedingsitesListCreatedAtErrorComponent;
         oneOfType = BreedingsitesListCreatedAtErrorComponent;
-        break;
-      case r'location_adm_nuts2':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BreedingsitesListLocationAdmNuts2ErrorComponent),
-        ) as BreedingsitesListLocationAdmNuts2ErrorComponent;
-        oneOfType = BreedingsitesListLocationAdmNuts2ErrorComponent;
-        break;
-      case r'location_adm_nuts3':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BreedingsitesListLocationAdmNuts3ErrorComponent),
-        ) as BreedingsitesListLocationAdmNuts3ErrorComponent;
-        oneOfType = BreedingsitesListLocationAdmNuts3ErrorComponent;
-        break;
-      case r'location_country_id':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BreedingsitesListLocationCountryIdErrorComponent),
-        ) as BreedingsitesListLocationCountryIdErrorComponent;
-        oneOfType = BreedingsitesListLocationCountryIdErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(

@@ -3,13 +3,11 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/bites_list_location_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_received_at_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/bites_list_created_at_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_location_adm_nuts2_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_list_location_adm_nuts3_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_short_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_updated_at_error_component.dart';
@@ -27,16 +25,14 @@ part 'bites_list_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BitesListError implements Built<BitesListError, BitesListErrorBuilder> {
-  /// One Of [BitesListCreatedAtErrorComponent], [BitesListLocationAdmNuts2ErrorComponent], [BitesListLocationAdmNuts3ErrorComponent], [BitesListLocationCountryIdErrorComponent], [BitesListOrderByErrorComponent], [BitesListReceivedAtErrorComponent], [BitesListShortIdErrorComponent], [BitesListUpdatedAtErrorComponent], [BitesListUserUuidErrorComponent]
+  /// One Of [BitesListCountryIdErrorComponent], [BitesListCreatedAtErrorComponent], [BitesListOrderByErrorComponent], [BitesListReceivedAtErrorComponent], [BitesListShortIdErrorComponent], [BitesListUpdatedAtErrorComponent], [BitesListUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
+    r'country_id': BitesListCountryIdErrorComponent,
     r'created_at': BitesListCreatedAtErrorComponent,
-    r'location_adm_nuts2': BitesListLocationAdmNuts2ErrorComponent,
-    r'location_adm_nuts3': BitesListLocationAdmNuts3ErrorComponent,
-    r'location_country_id': BitesListLocationCountryIdErrorComponent,
     r'order_by': BitesListOrderByErrorComponent,
     r'received_at': BitesListReceivedAtErrorComponent,
     r'short_id': BitesListShortIdErrorComponent,
@@ -57,17 +53,11 @@ abstract class BitesListError implements Built<BitesListError, BitesListErrorBui
 
 extension BitesListErrorDiscriminatorExt on BitesListError {
     String? get discriminatorValue {
+        if (this is BitesListCountryIdErrorComponent) {
+            return r'country_id';
+        }
         if (this is BitesListCreatedAtErrorComponent) {
             return r'created_at';
-        }
-        if (this is BitesListLocationAdmNuts2ErrorComponent) {
-            return r'location_adm_nuts2';
-        }
-        if (this is BitesListLocationAdmNuts3ErrorComponent) {
-            return r'location_adm_nuts3';
-        }
-        if (this is BitesListLocationCountryIdErrorComponent) {
-            return r'location_country_id';
         }
         if (this is BitesListOrderByErrorComponent) {
             return r'order_by';
@@ -89,17 +79,11 @@ extension BitesListErrorDiscriminatorExt on BitesListError {
 }
 extension BitesListErrorBuilderDiscriminatorExt on BitesListErrorBuilder {
     String? get discriminatorValue {
+        if (this is BitesListCountryIdErrorComponentBuilder) {
+            return r'country_id';
+        }
         if (this is BitesListCreatedAtErrorComponentBuilder) {
             return r'created_at';
-        }
-        if (this is BitesListLocationAdmNuts2ErrorComponentBuilder) {
-            return r'location_adm_nuts2';
-        }
-        if (this is BitesListLocationAdmNuts3ErrorComponentBuilder) {
-            return r'location_adm_nuts3';
-        }
-        if (this is BitesListLocationCountryIdErrorComponentBuilder) {
-            return r'location_country_id';
         }
         if (this is BitesListOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -156,37 +140,23 @@ class _$BitesListErrorSerializer implements PrimitiveSerializer<BitesListError> 
     final discIndex = serializedList.indexOf(BitesListError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BitesListCreatedAtErrorComponent, BitesListLocationAdmNuts2ErrorComponent, BitesListLocationAdmNuts3ErrorComponent, BitesListLocationCountryIdErrorComponent, BitesListOrderByErrorComponent, BitesListReceivedAtErrorComponent, BitesListShortIdErrorComponent, BitesListUpdatedAtErrorComponent, BitesListUserUuidErrorComponent, ];
+    final oneOfTypes = [BitesListCountryIdErrorComponent, BitesListCreatedAtErrorComponent, BitesListOrderByErrorComponent, BitesListReceivedAtErrorComponent, BitesListShortIdErrorComponent, BitesListUpdatedAtErrorComponent, BitesListUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
+      case r'country_id':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesListCountryIdErrorComponent),
+        ) as BitesListCountryIdErrorComponent;
+        oneOfType = BitesListCountryIdErrorComponent;
+        break;
       case r'created_at':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
           specifiedType: FullType(BitesListCreatedAtErrorComponent),
         ) as BitesListCreatedAtErrorComponent;
         oneOfType = BitesListCreatedAtErrorComponent;
-        break;
-      case r'location_adm_nuts2':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesListLocationAdmNuts2ErrorComponent),
-        ) as BitesListLocationAdmNuts2ErrorComponent;
-        oneOfType = BitesListLocationAdmNuts2ErrorComponent;
-        break;
-      case r'location_adm_nuts3':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesListLocationAdmNuts3ErrorComponent),
-        ) as BitesListLocationAdmNuts3ErrorComponent;
-        oneOfType = BitesListLocationAdmNuts3ErrorComponent;
-        break;
-      case r'location_country_id':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesListLocationCountryIdErrorComponent),
-        ) as BitesListLocationCountryIdErrorComponent;
-        oneOfType = BitesListLocationCountryIdErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(
