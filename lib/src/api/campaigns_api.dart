@@ -61,14 +61,14 @@ class CampaignsApi {
         'secure': <Map<String, String>>[
           {
             'type': 'apiKey',
-            'name': 'cookieAuth',
-            'keyName': 'sessionid',
-            'where': '',
-          },{
-            'type': 'apiKey',
             'name': 'tokenAuth',
             'keyName': 'Authorization',
             'where': 'header',
+          },{
+            'type': 'apiKey',
+            'name': 'cookieAuth',
+            'keyName': 'sessionid',
+            'where': '',
           },{
             'type': 'http',
             'scheme': 'bearer',
@@ -161,14 +161,14 @@ class CampaignsApi {
         'secure': <Map<String, String>>[
           {
             'type': 'apiKey',
-            'name': 'cookieAuth',
-            'keyName': 'sessionid',
-            'where': '',
-          },{
-            'type': 'apiKey',
             'name': 'tokenAuth',
             'keyName': 'Authorization',
             'where': 'header',
+          },{
+            'type': 'apiKey',
+            'name': 'cookieAuth',
+            'keyName': 'sessionid',
+            'where': '',
           },{
             'type': 'http',
             'scheme': 'bearer',
