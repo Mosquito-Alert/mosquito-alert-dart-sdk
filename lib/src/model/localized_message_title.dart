@@ -6,7 +6,7 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'localized_field.g.dart';
+part 'localized_message_title.g.dart';
 
 /// A custom serializer field that supports localization for a dynamic field name. Allows calling with arguments such as 'title', 'message', max_length, help_text, etc.
 ///
@@ -36,7 +36,7 @@ part 'localized_field.g.dart';
 /// * [tr] - Türkçe
 /// * [zhCN] - 中文（中国）
 @BuiltValue()
-abstract class LocalizedField implements Built<LocalizedField, LocalizedFieldBuilder> {
+abstract class LocalizedMessageTitle implements Built<LocalizedMessageTitle, LocalizedMessageTitleBuilder> {
   /// Български
   @BuiltValueField(wireName: r'bg')
   String? get bg;
@@ -133,27 +133,27 @@ abstract class LocalizedField implements Built<LocalizedField, LocalizedFieldBui
   @BuiltValueField(wireName: r'zh-CN')
   String? get zhCN;
 
-  LocalizedField._();
+  LocalizedMessageTitle._();
 
-  factory LocalizedField([void updates(LocalizedFieldBuilder b)]) = _$LocalizedField;
+  factory LocalizedMessageTitle([void updates(LocalizedMessageTitleBuilder b)]) = _$LocalizedMessageTitle;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(LocalizedFieldBuilder b) => b;
+  static void _defaults(LocalizedMessageTitleBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<LocalizedField> get serializer => _$LocalizedFieldSerializer();
+  static Serializer<LocalizedMessageTitle> get serializer => _$LocalizedMessageTitleSerializer();
 }
 
-class _$LocalizedFieldSerializer implements PrimitiveSerializer<LocalizedField> {
+class _$LocalizedMessageTitleSerializer implements PrimitiveSerializer<LocalizedMessageTitle> {
   @override
-  final Iterable<Type> types = const [LocalizedField, _$LocalizedField];
+  final Iterable<Type> types = const [LocalizedMessageTitle, _$LocalizedMessageTitle];
 
   @override
-  final String wireName = r'LocalizedField';
+  final String wireName = r'LocalizedMessageTitle';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    LocalizedField object, {
+    LocalizedMessageTitle object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     if (object.bg != null) {
@@ -327,7 +327,7 @@ class _$LocalizedFieldSerializer implements PrimitiveSerializer<LocalizedField> 
   @override
   Object serialize(
     Serializers serializers,
-    LocalizedField object, {
+    LocalizedMessageTitle object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -338,7 +338,7 @@ class _$LocalizedFieldSerializer implements PrimitiveSerializer<LocalizedField> 
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required LocalizedFieldBuilder result,
+    required LocalizedMessageTitleBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -522,12 +522,12 @@ class _$LocalizedFieldSerializer implements PrimitiveSerializer<LocalizedField> 
   }
 
   @override
-  LocalizedField deserialize(
+  LocalizedMessageTitle deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = LocalizedFieldBuilder();
+    final result = LocalizedMessageTitleBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

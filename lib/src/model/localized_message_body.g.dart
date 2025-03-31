@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'localized_field_request.dart';
+part of 'localized_message_body.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$LocalizedFieldRequest extends LocalizedFieldRequest {
+class _$LocalizedMessageBody extends LocalizedMessageBody {
   @override
   final String? bg;
   @override
@@ -56,11 +56,11 @@ class _$LocalizedFieldRequest extends LocalizedFieldRequest {
   @override
   final String? zhCN;
 
-  factory _$LocalizedFieldRequest(
-          [void Function(LocalizedFieldRequestBuilder)? updates]) =>
-      (new LocalizedFieldRequestBuilder()..update(updates))._build();
+  factory _$LocalizedMessageBody(
+          [void Function(LocalizedMessageBodyBuilder)? updates]) =>
+      (new LocalizedMessageBodyBuilder()..update(updates))._build();
 
-  _$LocalizedFieldRequest._(
+  _$LocalizedMessageBody._(
       {this.bg,
       this.bn,
       this.ca,
@@ -86,22 +86,22 @@ class _$LocalizedFieldRequest extends LocalizedFieldRequest {
       this.tr,
       this.zhCN})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(en, r'LocalizedFieldRequest', 'en');
+    BuiltValueNullFieldError.checkNotNull(en, r'LocalizedMessageBody', 'en');
   }
 
   @override
-  LocalizedFieldRequest rebuild(
-          void Function(LocalizedFieldRequestBuilder) updates) =>
+  LocalizedMessageBody rebuild(
+          void Function(LocalizedMessageBodyBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  LocalizedFieldRequestBuilder toBuilder() =>
-      new LocalizedFieldRequestBuilder()..replace(this);
+  LocalizedMessageBodyBuilder toBuilder() =>
+      new LocalizedMessageBodyBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is LocalizedFieldRequest &&
+    return other is LocalizedMessageBody &&
         bg == other.bg &&
         bn == other.bn &&
         ca == other.ca &&
@@ -161,7 +161,7 @@ class _$LocalizedFieldRequest extends LocalizedFieldRequest {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'LocalizedFieldRequest')
+    return (newBuiltValueToStringHelper(r'LocalizedMessageBody')
           ..add('bg', bg)
           ..add('bn', bn)
           ..add('ca', ca)
@@ -190,9 +190,9 @@ class _$LocalizedFieldRequest extends LocalizedFieldRequest {
   }
 }
 
-class LocalizedFieldRequestBuilder
-    implements Builder<LocalizedFieldRequest, LocalizedFieldRequestBuilder> {
-  _$LocalizedFieldRequest? _$v;
+class LocalizedMessageBodyBuilder
+    implements Builder<LocalizedMessageBody, LocalizedMessageBodyBuilder> {
+  _$LocalizedMessageBody? _$v;
 
   String? _bg;
   String? get bg => _$this._bg;
@@ -290,11 +290,11 @@ class LocalizedFieldRequestBuilder
   String? get zhCN => _$this._zhCN;
   set zhCN(String? zhCN) => _$this._zhCN = zhCN;
 
-  LocalizedFieldRequestBuilder() {
-    LocalizedFieldRequest._defaults(this);
+  LocalizedMessageBodyBuilder() {
+    LocalizedMessageBody._defaults(this);
   }
 
-  LocalizedFieldRequestBuilder get _$this {
+  LocalizedMessageBodyBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _bg = $v.bg;
@@ -327,29 +327,29 @@ class LocalizedFieldRequestBuilder
   }
 
   @override
-  void replace(LocalizedFieldRequest other) {
+  void replace(LocalizedMessageBody other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$LocalizedFieldRequest;
+    _$v = other as _$LocalizedMessageBody;
   }
 
   @override
-  void update(void Function(LocalizedFieldRequestBuilder)? updates) {
+  void update(void Function(LocalizedMessageBodyBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  LocalizedFieldRequest build() => _build();
+  LocalizedMessageBody build() => _build();
 
-  _$LocalizedFieldRequest _build() {
+  _$LocalizedMessageBody _build() {
     final _$result = _$v ??
-        new _$LocalizedFieldRequest._(
+        new _$LocalizedMessageBody._(
             bg: bg,
             bn: bn,
             ca: ca,
             de: de,
             el: el,
             en: BuiltValueNullFieldError.checkNotNull(
-                en, r'LocalizedFieldRequest', 'en'),
+                en, r'LocalizedMessageBody', 'en'),
             es: es,
             eu: eu,
             fr: fr,

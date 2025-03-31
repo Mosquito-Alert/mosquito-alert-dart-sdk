@@ -9,9 +9,9 @@ part of 'create_notification_message_request.dart';
 class _$CreateNotificationMessageRequest
     extends CreateNotificationMessageRequest {
   @override
-  final LocalizedFieldRequest title;
+  final LocalizedMessageTitleRequest title;
   @override
-  final LocalizedFieldRequest body;
+  final LocalizedMessageBodyRequest body;
 
   factory _$CreateNotificationMessageRequest(
           [void Function(CreateNotificationMessageRequestBuilder)? updates]) =>
@@ -67,15 +67,16 @@ class CreateNotificationMessageRequestBuilder
             CreateNotificationMessageRequestBuilder> {
   _$CreateNotificationMessageRequest? _$v;
 
-  LocalizedFieldRequestBuilder? _title;
-  LocalizedFieldRequestBuilder get title =>
-      _$this._title ??= new LocalizedFieldRequestBuilder();
-  set title(LocalizedFieldRequestBuilder? title) => _$this._title = title;
+  LocalizedMessageTitleRequestBuilder? _title;
+  LocalizedMessageTitleRequestBuilder get title =>
+      _$this._title ??= new LocalizedMessageTitleRequestBuilder();
+  set title(LocalizedMessageTitleRequestBuilder? title) =>
+      _$this._title = title;
 
-  LocalizedFieldRequestBuilder? _body;
-  LocalizedFieldRequestBuilder get body =>
-      _$this._body ??= new LocalizedFieldRequestBuilder();
-  set body(LocalizedFieldRequestBuilder? body) => _$this._body = body;
+  LocalizedMessageBodyRequestBuilder? _body;
+  LocalizedMessageBodyRequestBuilder get body =>
+      _$this._body ??= new LocalizedMessageBodyRequestBuilder();
+  set body(LocalizedMessageBodyRequestBuilder? body) => _$this._body = body;
 
   CreateNotificationMessageRequestBuilder() {
     CreateNotificationMessageRequest._defaults(this);

@@ -1,4 +1,4 @@
-# mosquito_alert.model.LocalizedField
+# mosquito_alert.model.LocalizedMessageTitleRequest
 
 ## Load the model package
 ```dart

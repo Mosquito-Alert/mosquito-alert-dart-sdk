@@ -3,7 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/localized_field_request.dart';
+import 'package:mosquito_alert/src/model/localized_message_title_request.dart';
+import 'package:mosquito_alert/src/model/localized_message_body_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,11 +19,11 @@ part 'create_notification_message_request.g.dart';
 abstract class CreateNotificationMessageRequest implements Built<CreateNotificationMessageRequest, CreateNotificationMessageRequestBuilder> {
   /// Provide the message's title in all supported languages
   @BuiltValueField(wireName: r'title')
-  LocalizedFieldRequest get title;
+  LocalizedMessageTitleRequest get title;
 
   /// Provide the message's body in all supported languages
   @BuiltValueField(wireName: r'body')
-  LocalizedFieldRequest get body;
+  LocalizedMessageBodyRequest get body;
 
   CreateNotificationMessageRequest._();
 
@@ -50,12 +51,12 @@ class _$CreateNotificationMessageRequestSerializer implements PrimitiveSerialize
     yield r'title';
     yield serializers.serialize(
       object.title,
-      specifiedType: const FullType(LocalizedFieldRequest),
+      specifiedType: const FullType(LocalizedMessageTitleRequest),
     );
     yield r'body';
     yield serializers.serialize(
       object.body,
-      specifiedType: const FullType(LocalizedFieldRequest),
+      specifiedType: const FullType(LocalizedMessageBodyRequest),
     );
   }
 
@@ -83,15 +84,15 @@ class _$CreateNotificationMessageRequestSerializer implements PrimitiveSerialize
         case r'title':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(LocalizedFieldRequest),
-          ) as LocalizedFieldRequest;
+            specifiedType: const FullType(LocalizedMessageTitleRequest),
+          ) as LocalizedMessageTitleRequest;
           result.title.replace(valueDes);
           break;
         case r'body':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(LocalizedFieldRequest),
-          ) as LocalizedFieldRequest;
+            specifiedType: const FullType(LocalizedMessageBodyRequest),
+          ) as LocalizedMessageBodyRequest;
           result.body.replace(valueDes);
           break;
         default:

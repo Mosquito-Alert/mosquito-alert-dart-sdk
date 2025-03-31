@@ -194,8 +194,10 @@ import 'package:mosquito_alert/src/model/fixes_create_sent_at_error_component.da
 import 'package:mosquito_alert/src/model/fixes_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/guest_registration.dart';
 import 'package:mosquito_alert/src/model/guest_registration_request.dart';
-import 'package:mosquito_alert/src/model/localized_field.dart';
-import 'package:mosquito_alert/src/model/localized_field_request.dart';
+import 'package:mosquito_alert/src/model/localized_message_body.dart';
+import 'package:mosquito_alert/src/model/localized_message_body_request.dart';
+import 'package:mosquito_alert/src/model/localized_message_title.dart';
+import 'package:mosquito_alert/src/model/localized_message_title_request.dart';
 import 'package:mosquito_alert/src/model/location.dart';
 import 'package:mosquito_alert/src/model/location_point.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
@@ -531,8 +533,10 @@ part 'serializers.g.dart';
   FixesCreateValidationError,
   GuestRegistration,
   GuestRegistrationRequest,
-  LocalizedField,
-  LocalizedFieldRequest,
+  LocalizedMessageBody,
+  LocalizedMessageBodyRequest,
+  LocalizedMessageTitle,
+  LocalizedMessageTitleRequest,
   Location,
   LocationPoint,
   LocationRequest,

@@ -8,9 +8,9 @@ part of 'create_notification_message.dart';
 
 class _$CreateNotificationMessage extends CreateNotificationMessage {
   @override
-  final LocalizedField title;
+  final LocalizedMessageTitle title;
   @override
-  final LocalizedField body;
+  final LocalizedMessageBody body;
 
   factory _$CreateNotificationMessage(
           [void Function(CreateNotificationMessageBuilder)? updates]) =>
@@ -64,15 +64,15 @@ class CreateNotificationMessageBuilder
         Builder<CreateNotificationMessage, CreateNotificationMessageBuilder> {
   _$CreateNotificationMessage? _$v;
 
-  LocalizedFieldBuilder? _title;
-  LocalizedFieldBuilder get title =>
-      _$this._title ??= new LocalizedFieldBuilder();
-  set title(LocalizedFieldBuilder? title) => _$this._title = title;
+  LocalizedMessageTitleBuilder? _title;
+  LocalizedMessageTitleBuilder get title =>
+      _$this._title ??= new LocalizedMessageTitleBuilder();
+  set title(LocalizedMessageTitleBuilder? title) => _$this._title = title;
 
-  LocalizedFieldBuilder? _body;
-  LocalizedFieldBuilder get body =>
-      _$this._body ??= new LocalizedFieldBuilder();
-  set body(LocalizedFieldBuilder? body) => _$this._body = body;
+  LocalizedMessageBodyBuilder? _body;
+  LocalizedMessageBodyBuilder get body =>
+      _$this._body ??= new LocalizedMessageBodyBuilder();
+  set body(LocalizedMessageBodyBuilder? body) => _$this._body = body;
 
   CreateNotificationMessageBuilder() {
     CreateNotificationMessage._defaults(this);

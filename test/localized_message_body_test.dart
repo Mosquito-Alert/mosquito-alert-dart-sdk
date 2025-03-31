@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for LocalizedField
+// tests for LocalizedMessageBody
 void main() {
-  final instance = LocalizedFieldBuilder();
+  final instance = LocalizedMessageBodyBuilder();
   // TODO add properties to the builder and call build()
 
-  group(LocalizedField, () {
+  group(LocalizedMessageBody, () {
     // Български
     // String bg
     test('to test the property `bg`', () async {

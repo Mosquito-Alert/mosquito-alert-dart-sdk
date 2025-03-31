@@ -8,13 +8,13 @@ void main() {
 
   group(CreateNotificationMessageRequest, () {
     // Provide the message's title in all supported languages
-    // LocalizedFieldRequest title
+    // LocalizedMessageTitleRequest title
     test('to test the property `title`', () async {
       // TODO
     });
 
     // Provide the message's body in all supported languages
-    // LocalizedFieldRequest body
+    // LocalizedMessageBodyRequest body
     test('to test the property `body`', () async {
       // TODO
     });

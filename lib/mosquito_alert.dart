@@ -203,8 +203,10 @@ export 'package:mosquito_alert/src/model/fixes_create_sent_at_error_component.da
 export 'package:mosquito_alert/src/model/fixes_create_validation_error.dart';
 export 'package:mosquito_alert/src/model/guest_registration.dart';
 export 'package:mosquito_alert/src/model/guest_registration_request.dart';
-export 'package:mosquito_alert/src/model/localized_field.dart';
-export 'package:mosquito_alert/src/model/localized_field_request.dart';
+export 'package:mosquito_alert/src/model/localized_message_body.dart';
+export 'package:mosquito_alert/src/model/localized_message_body_request.dart';
+export 'package:mosquito_alert/src/model/localized_message_title.dart';
+export 'package:mosquito_alert/src/model/localized_message_title_request.dart';
 export 'package:mosquito_alert/src/model/location.dart';
 export 'package:mosquito_alert/src/model/location_point.dart';
 export 'package:mosquito_alert/src/model/location_request.dart';

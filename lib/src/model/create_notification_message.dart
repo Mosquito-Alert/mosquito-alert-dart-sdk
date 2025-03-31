@@ -3,7 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/localized_field.dart';
+import 'package:mosquito_alert/src/model/localized_message_body.dart';
+import 'package:mosquito_alert/src/model/localized_message_title.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,11 +19,11 @@ part 'create_notification_message.g.dart';
 abstract class CreateNotificationMessage implements Built<CreateNotificationMessage, CreateNotificationMessageBuilder> {
   /// Provide the message's title in all supported languages
   @BuiltValueField(wireName: r'title')
-  LocalizedField get title;
+  LocalizedMessageTitle get title;
 
   /// Provide the message's body in all supported languages
   @BuiltValueField(wireName: r'body')
-  LocalizedField get body;
+  LocalizedMessageBody get body;
 
   CreateNotificationMessage._();
 
@@ -50,12 +51,12 @@ class _$CreateNotificationMessageSerializer implements PrimitiveSerializer<Creat
     yield r'title';
     yield serializers.serialize(
       object.title,
-      specifiedType: const FullType(LocalizedField),
+      specifiedType: const FullType(LocalizedMessageTitle),
     );
     yield r'body';
     yield serializers.serialize(
       object.body,
-      specifiedType: const FullType(LocalizedField),
+      specifiedType: const FullType(LocalizedMessageBody),
     );
   }
 
@@ -83,15 +84,15 @@ class _$CreateNotificationMessageSerializer implements PrimitiveSerializer<Creat
         case r'title':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(LocalizedField),
-          ) as LocalizedField;
+            specifiedType: const FullType(LocalizedMessageTitle),
+          ) as LocalizedMessageTitle;
           result.title.replace(valueDes);
           break;
         case r'body':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(LocalizedField),
-          ) as LocalizedField;
+            specifiedType: const FullType(LocalizedMessageBody),
+          ) as LocalizedMessageBody;
           result.body.replace(valueDes);
           break;
         default:
