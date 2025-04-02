@@ -97,272 +97,11 @@ final BuiltSet<ObservationEventMomentEnum> _$observationEventMomentEnumValues =
   _$observationEventMomentEnum_unknownDefaultOpenApi,
 ]);
 
-const ObservationUserPerceivedMosquitoSpecieEnum
-    _$observationUserPerceivedMosquitoSpecieEnum_albopictus =
-    const ObservationUserPerceivedMosquitoSpecieEnum._('albopictus');
-const ObservationUserPerceivedMosquitoSpecieEnum
-    _$observationUserPerceivedMosquitoSpecieEnum_aegypti =
-    const ObservationUserPerceivedMosquitoSpecieEnum._('aegypti');
-const ObservationUserPerceivedMosquitoSpecieEnum
-    _$observationUserPerceivedMosquitoSpecieEnum_japonicus =
-    const ObservationUserPerceivedMosquitoSpecieEnum._('japonicus');
-const ObservationUserPerceivedMosquitoSpecieEnum
-    _$observationUserPerceivedMosquitoSpecieEnum_koreicus =
-    const ObservationUserPerceivedMosquitoSpecieEnum._('koreicus');
-const ObservationUserPerceivedMosquitoSpecieEnum
-    _$observationUserPerceivedMosquitoSpecieEnum_culex =
-    const ObservationUserPerceivedMosquitoSpecieEnum._('culex');
-const ObservationUserPerceivedMosquitoSpecieEnum
-    _$observationUserPerceivedMosquitoSpecieEnum_other =
-    const ObservationUserPerceivedMosquitoSpecieEnum._('other');
-const ObservationUserPerceivedMosquitoSpecieEnum
-    _$observationUserPerceivedMosquitoSpecieEnum_empty =
-    const ObservationUserPerceivedMosquitoSpecieEnum._('empty');
-const ObservationUserPerceivedMosquitoSpecieEnum
-    _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi =
-    const ObservationUserPerceivedMosquitoSpecieEnum._('unknownDefaultOpenApi');
-
-ObservationUserPerceivedMosquitoSpecieEnum
-    _$observationUserPerceivedMosquitoSpecieEnumValueOf(String name) {
-  switch (name) {
-    case 'albopictus':
-      return _$observationUserPerceivedMosquitoSpecieEnum_albopictus;
-    case 'aegypti':
-      return _$observationUserPerceivedMosquitoSpecieEnum_aegypti;
-    case 'japonicus':
-      return _$observationUserPerceivedMosquitoSpecieEnum_japonicus;
-    case 'koreicus':
-      return _$observationUserPerceivedMosquitoSpecieEnum_koreicus;
-    case 'culex':
-      return _$observationUserPerceivedMosquitoSpecieEnum_culex;
-    case 'other':
-      return _$observationUserPerceivedMosquitoSpecieEnum_other;
-    case 'empty':
-      return _$observationUserPerceivedMosquitoSpecieEnum_empty;
-    case 'unknownDefaultOpenApi':
-      return _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi;
-    default:
-      return _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi;
-  }
-}
-
-final BuiltSet<ObservationUserPerceivedMosquitoSpecieEnum>
-    _$observationUserPerceivedMosquitoSpecieEnumValues = new BuiltSet<
-        ObservationUserPerceivedMosquitoSpecieEnum>(const <ObservationUserPerceivedMosquitoSpecieEnum>[
-  _$observationUserPerceivedMosquitoSpecieEnum_albopictus,
-  _$observationUserPerceivedMosquitoSpecieEnum_aegypti,
-  _$observationUserPerceivedMosquitoSpecieEnum_japonicus,
-  _$observationUserPerceivedMosquitoSpecieEnum_koreicus,
-  _$observationUserPerceivedMosquitoSpecieEnum_culex,
-  _$observationUserPerceivedMosquitoSpecieEnum_other,
-  _$observationUserPerceivedMosquitoSpecieEnum_empty,
-  _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi,
-]);
-
-const ObservationUserPerceivedMosquitoThoraxEnum
-    _$observationUserPerceivedMosquitoThoraxEnum_albopictus =
-    const ObservationUserPerceivedMosquitoThoraxEnum._('albopictus');
-const ObservationUserPerceivedMosquitoThoraxEnum
-    _$observationUserPerceivedMosquitoThoraxEnum_aegypti =
-    const ObservationUserPerceivedMosquitoThoraxEnum._('aegypti');
-const ObservationUserPerceivedMosquitoThoraxEnum
-    _$observationUserPerceivedMosquitoThoraxEnum_japonicus =
-    const ObservationUserPerceivedMosquitoThoraxEnum._('japonicus');
-const ObservationUserPerceivedMosquitoThoraxEnum
-    _$observationUserPerceivedMosquitoThoraxEnum_koreicus =
-    const ObservationUserPerceivedMosquitoThoraxEnum._('koreicus');
-const ObservationUserPerceivedMosquitoThoraxEnum
-    _$observationUserPerceivedMosquitoThoraxEnum_culex =
-    const ObservationUserPerceivedMosquitoThoraxEnum._('culex');
-const ObservationUserPerceivedMosquitoThoraxEnum
-    _$observationUserPerceivedMosquitoThoraxEnum_other =
-    const ObservationUserPerceivedMosquitoThoraxEnum._('other');
-const ObservationUserPerceivedMosquitoThoraxEnum
-    _$observationUserPerceivedMosquitoThoraxEnum_empty =
-    const ObservationUserPerceivedMosquitoThoraxEnum._('empty');
-const ObservationUserPerceivedMosquitoThoraxEnum
-    _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi =
-    const ObservationUserPerceivedMosquitoThoraxEnum._('unknownDefaultOpenApi');
-
-ObservationUserPerceivedMosquitoThoraxEnum
-    _$observationUserPerceivedMosquitoThoraxEnumValueOf(String name) {
-  switch (name) {
-    case 'albopictus':
-      return _$observationUserPerceivedMosquitoThoraxEnum_albopictus;
-    case 'aegypti':
-      return _$observationUserPerceivedMosquitoThoraxEnum_aegypti;
-    case 'japonicus':
-      return _$observationUserPerceivedMosquitoThoraxEnum_japonicus;
-    case 'koreicus':
-      return _$observationUserPerceivedMosquitoThoraxEnum_koreicus;
-    case 'culex':
-      return _$observationUserPerceivedMosquitoThoraxEnum_culex;
-    case 'other':
-      return _$observationUserPerceivedMosquitoThoraxEnum_other;
-    case 'empty':
-      return _$observationUserPerceivedMosquitoThoraxEnum_empty;
-    case 'unknownDefaultOpenApi':
-      return _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi;
-    default:
-      return _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi;
-  }
-}
-
-final BuiltSet<ObservationUserPerceivedMosquitoThoraxEnum>
-    _$observationUserPerceivedMosquitoThoraxEnumValues = new BuiltSet<
-        ObservationUserPerceivedMosquitoThoraxEnum>(const <ObservationUserPerceivedMosquitoThoraxEnum>[
-  _$observationUserPerceivedMosquitoThoraxEnum_albopictus,
-  _$observationUserPerceivedMosquitoThoraxEnum_aegypti,
-  _$observationUserPerceivedMosquitoThoraxEnum_japonicus,
-  _$observationUserPerceivedMosquitoThoraxEnum_koreicus,
-  _$observationUserPerceivedMosquitoThoraxEnum_culex,
-  _$observationUserPerceivedMosquitoThoraxEnum_other,
-  _$observationUserPerceivedMosquitoThoraxEnum_empty,
-  _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi,
-]);
-
-const ObservationUserPerceivedMosquitoAbdomenEnum
-    _$observationUserPerceivedMosquitoAbdomenEnum_albopictus =
-    const ObservationUserPerceivedMosquitoAbdomenEnum._('albopictus');
-const ObservationUserPerceivedMosquitoAbdomenEnum
-    _$observationUserPerceivedMosquitoAbdomenEnum_aegypti =
-    const ObservationUserPerceivedMosquitoAbdomenEnum._('aegypti');
-const ObservationUserPerceivedMosquitoAbdomenEnum
-    _$observationUserPerceivedMosquitoAbdomenEnum_japonicus =
-    const ObservationUserPerceivedMosquitoAbdomenEnum._('japonicus');
-const ObservationUserPerceivedMosquitoAbdomenEnum
-    _$observationUserPerceivedMosquitoAbdomenEnum_koreicus =
-    const ObservationUserPerceivedMosquitoAbdomenEnum._('koreicus');
-const ObservationUserPerceivedMosquitoAbdomenEnum
-    _$observationUserPerceivedMosquitoAbdomenEnum_culex =
-    const ObservationUserPerceivedMosquitoAbdomenEnum._('culex');
-const ObservationUserPerceivedMosquitoAbdomenEnum
-    _$observationUserPerceivedMosquitoAbdomenEnum_other =
-    const ObservationUserPerceivedMosquitoAbdomenEnum._('other');
-const ObservationUserPerceivedMosquitoAbdomenEnum
-    _$observationUserPerceivedMosquitoAbdomenEnum_empty =
-    const ObservationUserPerceivedMosquitoAbdomenEnum._('empty');
-const ObservationUserPerceivedMosquitoAbdomenEnum
-    _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi =
-    const ObservationUserPerceivedMosquitoAbdomenEnum._(
-        'unknownDefaultOpenApi');
-
-ObservationUserPerceivedMosquitoAbdomenEnum
-    _$observationUserPerceivedMosquitoAbdomenEnumValueOf(String name) {
-  switch (name) {
-    case 'albopictus':
-      return _$observationUserPerceivedMosquitoAbdomenEnum_albopictus;
-    case 'aegypti':
-      return _$observationUserPerceivedMosquitoAbdomenEnum_aegypti;
-    case 'japonicus':
-      return _$observationUserPerceivedMosquitoAbdomenEnum_japonicus;
-    case 'koreicus':
-      return _$observationUserPerceivedMosquitoAbdomenEnum_koreicus;
-    case 'culex':
-      return _$observationUserPerceivedMosquitoAbdomenEnum_culex;
-    case 'other':
-      return _$observationUserPerceivedMosquitoAbdomenEnum_other;
-    case 'empty':
-      return _$observationUserPerceivedMosquitoAbdomenEnum_empty;
-    case 'unknownDefaultOpenApi':
-      return _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi;
-    default:
-      return _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi;
-  }
-}
-
-final BuiltSet<ObservationUserPerceivedMosquitoAbdomenEnum>
-    _$observationUserPerceivedMosquitoAbdomenEnumValues = new BuiltSet<
-        ObservationUserPerceivedMosquitoAbdomenEnum>(const <ObservationUserPerceivedMosquitoAbdomenEnum>[
-  _$observationUserPerceivedMosquitoAbdomenEnum_albopictus,
-  _$observationUserPerceivedMosquitoAbdomenEnum_aegypti,
-  _$observationUserPerceivedMosquitoAbdomenEnum_japonicus,
-  _$observationUserPerceivedMosquitoAbdomenEnum_koreicus,
-  _$observationUserPerceivedMosquitoAbdomenEnum_culex,
-  _$observationUserPerceivedMosquitoAbdomenEnum_other,
-  _$observationUserPerceivedMosquitoAbdomenEnum_empty,
-  _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi,
-]);
-
-const ObservationUserPerceivedMosquitoLegsEnum
-    _$observationUserPerceivedMosquitoLegsEnum_albopictus =
-    const ObservationUserPerceivedMosquitoLegsEnum._('albopictus');
-const ObservationUserPerceivedMosquitoLegsEnum
-    _$observationUserPerceivedMosquitoLegsEnum_aegypti =
-    const ObservationUserPerceivedMosquitoLegsEnum._('aegypti');
-const ObservationUserPerceivedMosquitoLegsEnum
-    _$observationUserPerceivedMosquitoLegsEnum_japonicus =
-    const ObservationUserPerceivedMosquitoLegsEnum._('japonicus');
-const ObservationUserPerceivedMosquitoLegsEnum
-    _$observationUserPerceivedMosquitoLegsEnum_koreicus =
-    const ObservationUserPerceivedMosquitoLegsEnum._('koreicus');
-const ObservationUserPerceivedMosquitoLegsEnum
-    _$observationUserPerceivedMosquitoLegsEnum_culex =
-    const ObservationUserPerceivedMosquitoLegsEnum._('culex');
-const ObservationUserPerceivedMosquitoLegsEnum
-    _$observationUserPerceivedMosquitoLegsEnum_other =
-    const ObservationUserPerceivedMosquitoLegsEnum._('other');
-const ObservationUserPerceivedMosquitoLegsEnum
-    _$observationUserPerceivedMosquitoLegsEnum_empty =
-    const ObservationUserPerceivedMosquitoLegsEnum._('empty');
-const ObservationUserPerceivedMosquitoLegsEnum
-    _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi =
-    const ObservationUserPerceivedMosquitoLegsEnum._('unknownDefaultOpenApi');
-
-ObservationUserPerceivedMosquitoLegsEnum
-    _$observationUserPerceivedMosquitoLegsEnumValueOf(String name) {
-  switch (name) {
-    case 'albopictus':
-      return _$observationUserPerceivedMosquitoLegsEnum_albopictus;
-    case 'aegypti':
-      return _$observationUserPerceivedMosquitoLegsEnum_aegypti;
-    case 'japonicus':
-      return _$observationUserPerceivedMosquitoLegsEnum_japonicus;
-    case 'koreicus':
-      return _$observationUserPerceivedMosquitoLegsEnum_koreicus;
-    case 'culex':
-      return _$observationUserPerceivedMosquitoLegsEnum_culex;
-    case 'other':
-      return _$observationUserPerceivedMosquitoLegsEnum_other;
-    case 'empty':
-      return _$observationUserPerceivedMosquitoLegsEnum_empty;
-    case 'unknownDefaultOpenApi':
-      return _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi;
-    default:
-      return _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi;
-  }
-}
-
-final BuiltSet<ObservationUserPerceivedMosquitoLegsEnum>
-    _$observationUserPerceivedMosquitoLegsEnumValues = new BuiltSet<
-        ObservationUserPerceivedMosquitoLegsEnum>(const <ObservationUserPerceivedMosquitoLegsEnum>[
-  _$observationUserPerceivedMosquitoLegsEnum_albopictus,
-  _$observationUserPerceivedMosquitoLegsEnum_aegypti,
-  _$observationUserPerceivedMosquitoLegsEnum_japonicus,
-  _$observationUserPerceivedMosquitoLegsEnum_koreicus,
-  _$observationUserPerceivedMosquitoLegsEnum_culex,
-  _$observationUserPerceivedMosquitoLegsEnum_other,
-  _$observationUserPerceivedMosquitoLegsEnum_empty,
-  _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi,
-]);
-
 Serializer<ObservationEventEnvironmentEnum>
     _$observationEventEnvironmentEnumSerializer =
     new _$ObservationEventEnvironmentEnumSerializer();
 Serializer<ObservationEventMomentEnum> _$observationEventMomentEnumSerializer =
     new _$ObservationEventMomentEnumSerializer();
-Serializer<ObservationUserPerceivedMosquitoSpecieEnum>
-    _$observationUserPerceivedMosquitoSpecieEnumSerializer =
-    new _$ObservationUserPerceivedMosquitoSpecieEnumSerializer();
-Serializer<ObservationUserPerceivedMosquitoThoraxEnum>
-    _$observationUserPerceivedMosquitoThoraxEnumSerializer =
-    new _$ObservationUserPerceivedMosquitoThoraxEnumSerializer();
-Serializer<ObservationUserPerceivedMosquitoAbdomenEnum>
-    _$observationUserPerceivedMosquitoAbdomenEnumSerializer =
-    new _$ObservationUserPerceivedMosquitoAbdomenEnumSerializer();
-Serializer<ObservationUserPerceivedMosquitoLegsEnum>
-    _$observationUserPerceivedMosquitoLegsEnumSerializer =
-    new _$ObservationUserPerceivedMosquitoLegsEnumSerializer();
 
 class _$ObservationEventEnvironmentEnumSerializer
     implements PrimitiveSerializer<ObservationEventEnvironmentEnum> {
@@ -439,183 +178,6 @@ class _$ObservationEventMomentEnumSerializer
           _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
-class _$ObservationUserPerceivedMosquitoSpecieEnumSerializer
-    implements PrimitiveSerializer<ObservationUserPerceivedMosquitoSpecieEnum> {
-  static const Map<String, Object> _toWire = const <String, Object>{
-    'albopictus': 'albopictus',
-    'aegypti': 'aegypti',
-    'japonicus': 'japonicus',
-    'koreicus': 'koreicus',
-    'culex': 'culex',
-    'other': 'other',
-    'empty': '',
-    'unknownDefaultOpenApi': 'unknown_default_open_api',
-  };
-  static const Map<Object, String> _fromWire = const <Object, String>{
-    'albopictus': 'albopictus',
-    'aegypti': 'aegypti',
-    'japonicus': 'japonicus',
-    'koreicus': 'koreicus',
-    'culex': 'culex',
-    'other': 'other',
-    '': 'empty',
-    'unknown_default_open_api': 'unknownDefaultOpenApi',
-  };
-
-  @override
-  final Iterable<Type> types = const <Type>[
-    ObservationUserPerceivedMosquitoSpecieEnum
-  ];
-  @override
-  final String wireName = 'ObservationUserPerceivedMosquitoSpecieEnum';
-
-  @override
-  Object serialize(Serializers serializers,
-          ObservationUserPerceivedMosquitoSpecieEnum object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      _toWire[object.name] ?? object.name;
-
-  @override
-  ObservationUserPerceivedMosquitoSpecieEnum deserialize(
-          Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      ObservationUserPerceivedMosquitoSpecieEnum.valueOf(
-          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
-}
-
-class _$ObservationUserPerceivedMosquitoThoraxEnumSerializer
-    implements PrimitiveSerializer<ObservationUserPerceivedMosquitoThoraxEnum> {
-  static const Map<String, Object> _toWire = const <String, Object>{
-    'albopictus': 'albopictus',
-    'aegypti': 'aegypti',
-    'japonicus': 'japonicus',
-    'koreicus': 'koreicus',
-    'culex': 'culex',
-    'other': 'other',
-    'empty': '',
-    'unknownDefaultOpenApi': 'unknown_default_open_api',
-  };
-  static const Map<Object, String> _fromWire = const <Object, String>{
-    'albopictus': 'albopictus',
-    'aegypti': 'aegypti',
-    'japonicus': 'japonicus',
-    'koreicus': 'koreicus',
-    'culex': 'culex',
-    'other': 'other',
-    '': 'empty',
-    'unknown_default_open_api': 'unknownDefaultOpenApi',
-  };
-
-  @override
-  final Iterable<Type> types = const <Type>[
-    ObservationUserPerceivedMosquitoThoraxEnum
-  ];
-  @override
-  final String wireName = 'ObservationUserPerceivedMosquitoThoraxEnum';
-
-  @override
-  Object serialize(Serializers serializers,
-          ObservationUserPerceivedMosquitoThoraxEnum object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      _toWire[object.name] ?? object.name;
-
-  @override
-  ObservationUserPerceivedMosquitoThoraxEnum deserialize(
-          Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      ObservationUserPerceivedMosquitoThoraxEnum.valueOf(
-          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
-}
-
-class _$ObservationUserPerceivedMosquitoAbdomenEnumSerializer
-    implements
-        PrimitiveSerializer<ObservationUserPerceivedMosquitoAbdomenEnum> {
-  static const Map<String, Object> _toWire = const <String, Object>{
-    'albopictus': 'albopictus',
-    'aegypti': 'aegypti',
-    'japonicus': 'japonicus',
-    'koreicus': 'koreicus',
-    'culex': 'culex',
-    'other': 'other',
-    'empty': '',
-    'unknownDefaultOpenApi': 'unknown_default_open_api',
-  };
-  static const Map<Object, String> _fromWire = const <Object, String>{
-    'albopictus': 'albopictus',
-    'aegypti': 'aegypti',
-    'japonicus': 'japonicus',
-    'koreicus': 'koreicus',
-    'culex': 'culex',
-    'other': 'other',
-    '': 'empty',
-    'unknown_default_open_api': 'unknownDefaultOpenApi',
-  };
-
-  @override
-  final Iterable<Type> types = const <Type>[
-    ObservationUserPerceivedMosquitoAbdomenEnum
-  ];
-  @override
-  final String wireName = 'ObservationUserPerceivedMosquitoAbdomenEnum';
-
-  @override
-  Object serialize(Serializers serializers,
-          ObservationUserPerceivedMosquitoAbdomenEnum object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      _toWire[object.name] ?? object.name;
-
-  @override
-  ObservationUserPerceivedMosquitoAbdomenEnum deserialize(
-          Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      ObservationUserPerceivedMosquitoAbdomenEnum.valueOf(
-          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
-}
-
-class _$ObservationUserPerceivedMosquitoLegsEnumSerializer
-    implements PrimitiveSerializer<ObservationUserPerceivedMosquitoLegsEnum> {
-  static const Map<String, Object> _toWire = const <String, Object>{
-    'albopictus': 'albopictus',
-    'aegypti': 'aegypti',
-    'japonicus': 'japonicus',
-    'koreicus': 'koreicus',
-    'culex': 'culex',
-    'other': 'other',
-    'empty': '',
-    'unknownDefaultOpenApi': 'unknown_default_open_api',
-  };
-  static const Map<Object, String> _fromWire = const <Object, String>{
-    'albopictus': 'albopictus',
-    'aegypti': 'aegypti',
-    'japonicus': 'japonicus',
-    'koreicus': 'koreicus',
-    'culex': 'culex',
-    'other': 'other',
-    '': 'empty',
-    'unknown_default_open_api': 'unknownDefaultOpenApi',
-  };
-
-  @override
-  final Iterable<Type> types = const <Type>[
-    ObservationUserPerceivedMosquitoLegsEnum
-  ];
-  @override
-  final String wireName = 'ObservationUserPerceivedMosquitoLegsEnum';
-
-  @override
-  Object serialize(Serializers serializers,
-          ObservationUserPerceivedMosquitoLegsEnum object,
-          {FullType specifiedType = FullType.unspecified}) =>
-      _toWire[object.name] ?? object.name;
-
-  @override
-  ObservationUserPerceivedMosquitoLegsEnum deserialize(
-          Serializers serializers, Object serialized,
-          {FullType specifiedType = FullType.unspecified}) =>
-      ObservationUserPerceivedMosquitoLegsEnum.valueOf(
-          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
-}
-
 class _$Observation extends Observation {
   @override
   final String uuid;
@@ -648,14 +210,7 @@ class _$Observation extends Observation {
   @override
   final ObservationEventMomentEnum? eventMoment;
   @override
-  final ObservationUserPerceivedMosquitoSpecieEnum? userPerceivedMosquitoSpecie;
-  @override
-  final ObservationUserPerceivedMosquitoThoraxEnum? userPerceivedMosquitoThorax;
-  @override
-  final ObservationUserPerceivedMosquitoAbdomenEnum?
-      userPerceivedMosquitoAbdomen;
-  @override
-  final ObservationUserPerceivedMosquitoLegsEnum? userPerceivedMosquitoLegs;
+  final MosquitoAppearance? mosquitoAppearance;
 
   factory _$Observation([void Function(ObservationBuilder)? updates]) =>
       (new ObservationBuilder()..update(updates))._build();
@@ -676,10 +231,7 @@ class _$Observation extends Observation {
       required this.photos,
       this.eventEnvironment,
       this.eventMoment,
-      this.userPerceivedMosquitoSpecie,
-      this.userPerceivedMosquitoThorax,
-      this.userPerceivedMosquitoAbdomen,
-      this.userPerceivedMosquitoLegs})
+      this.mosquitoAppearance})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(uuid, r'Observation', 'uuid');
     BuiltValueNullFieldError.checkNotNull(shortId, r'Observation', 'shortId');
@@ -725,10 +277,7 @@ class _$Observation extends Observation {
         photos == other.photos &&
         eventEnvironment == other.eventEnvironment &&
         eventMoment == other.eventMoment &&
-        userPerceivedMosquitoSpecie == other.userPerceivedMosquitoSpecie &&
-        userPerceivedMosquitoThorax == other.userPerceivedMosquitoThorax &&
-        userPerceivedMosquitoAbdomen == other.userPerceivedMosquitoAbdomen &&
-        userPerceivedMosquitoLegs == other.userPerceivedMosquitoLegs;
+        mosquitoAppearance == other.mosquitoAppearance;
   }
 
   @override
@@ -749,10 +298,7 @@ class _$Observation extends Observation {
     _$hash = $jc(_$hash, photos.hashCode);
     _$hash = $jc(_$hash, eventEnvironment.hashCode);
     _$hash = $jc(_$hash, eventMoment.hashCode);
-    _$hash = $jc(_$hash, userPerceivedMosquitoSpecie.hashCode);
-    _$hash = $jc(_$hash, userPerceivedMosquitoThorax.hashCode);
-    _$hash = $jc(_$hash, userPerceivedMosquitoAbdomen.hashCode);
-    _$hash = $jc(_$hash, userPerceivedMosquitoLegs.hashCode);
+    _$hash = $jc(_$hash, mosquitoAppearance.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -775,10 +321,7 @@ class _$Observation extends Observation {
           ..add('photos', photos)
           ..add('eventEnvironment', eventEnvironment)
           ..add('eventMoment', eventMoment)
-          ..add('userPerceivedMosquitoSpecie', userPerceivedMosquitoSpecie)
-          ..add('userPerceivedMosquitoThorax', userPerceivedMosquitoThorax)
-          ..add('userPerceivedMosquitoAbdomen', userPerceivedMosquitoAbdomen)
-          ..add('userPerceivedMosquitoLegs', userPerceivedMosquitoLegs))
+          ..add('mosquitoAppearance', mosquitoAppearance))
         .toString();
   }
 }
@@ -851,37 +394,11 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
   set eventMoment(ObservationEventMomentEnum? eventMoment) =>
       _$this._eventMoment = eventMoment;
 
-  ObservationUserPerceivedMosquitoSpecieEnum? _userPerceivedMosquitoSpecie;
-  ObservationUserPerceivedMosquitoSpecieEnum? get userPerceivedMosquitoSpecie =>
-      _$this._userPerceivedMosquitoSpecie;
-  set userPerceivedMosquitoSpecie(
-          ObservationUserPerceivedMosquitoSpecieEnum?
-              userPerceivedMosquitoSpecie) =>
-      _$this._userPerceivedMosquitoSpecie = userPerceivedMosquitoSpecie;
-
-  ObservationUserPerceivedMosquitoThoraxEnum? _userPerceivedMosquitoThorax;
-  ObservationUserPerceivedMosquitoThoraxEnum? get userPerceivedMosquitoThorax =>
-      _$this._userPerceivedMosquitoThorax;
-  set userPerceivedMosquitoThorax(
-          ObservationUserPerceivedMosquitoThoraxEnum?
-              userPerceivedMosquitoThorax) =>
-      _$this._userPerceivedMosquitoThorax = userPerceivedMosquitoThorax;
-
-  ObservationUserPerceivedMosquitoAbdomenEnum? _userPerceivedMosquitoAbdomen;
-  ObservationUserPerceivedMosquitoAbdomenEnum?
-      get userPerceivedMosquitoAbdomen => _$this._userPerceivedMosquitoAbdomen;
-  set userPerceivedMosquitoAbdomen(
-          ObservationUserPerceivedMosquitoAbdomenEnum?
-              userPerceivedMosquitoAbdomen) =>
-      _$this._userPerceivedMosquitoAbdomen = userPerceivedMosquitoAbdomen;
-
-  ObservationUserPerceivedMosquitoLegsEnum? _userPerceivedMosquitoLegs;
-  ObservationUserPerceivedMosquitoLegsEnum? get userPerceivedMosquitoLegs =>
-      _$this._userPerceivedMosquitoLegs;
-  set userPerceivedMosquitoLegs(
-          ObservationUserPerceivedMosquitoLegsEnum?
-              userPerceivedMosquitoLegs) =>
-      _$this._userPerceivedMosquitoLegs = userPerceivedMosquitoLegs;
+  MosquitoAppearanceBuilder? _mosquitoAppearance;
+  MosquitoAppearanceBuilder get mosquitoAppearance =>
+      _$this._mosquitoAppearance ??= new MosquitoAppearanceBuilder();
+  set mosquitoAppearance(MosquitoAppearanceBuilder? mosquitoAppearance) =>
+      _$this._mosquitoAppearance = mosquitoAppearance;
 
   ObservationBuilder() {
     Observation._defaults(this);
@@ -905,10 +422,7 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
       _photos = $v.photos.toBuilder();
       _eventEnvironment = $v.eventEnvironment;
       _eventMoment = $v.eventMoment;
-      _userPerceivedMosquitoSpecie = $v.userPerceivedMosquitoSpecie;
-      _userPerceivedMosquitoThorax = $v.userPerceivedMosquitoThorax;
-      _userPerceivedMosquitoAbdomen = $v.userPerceivedMosquitoAbdomen;
-      _userPerceivedMosquitoLegs = $v.userPerceivedMosquitoLegs;
+      _mosquitoAppearance = $v.mosquitoAppearance?.toBuilder();
       _$v = null;
     }
     return this;
@@ -957,10 +471,7 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
               photos: photos.build(),
               eventEnvironment: eventEnvironment,
               eventMoment: eventMoment,
-              userPerceivedMosquitoSpecie: userPerceivedMosquitoSpecie,
-              userPerceivedMosquitoThorax: userPerceivedMosquitoThorax,
-              userPerceivedMosquitoAbdomen: userPerceivedMosquitoAbdomen,
-              userPerceivedMosquitoLegs: userPerceivedMosquitoLegs);
+              mosquitoAppearance: _mosquitoAppearance?.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -972,6 +483,9 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
 
         _$failedField = 'photos';
         photos.build();
+
+        _$failedField = 'mosquitoAppearance';
+        _mosquitoAppearance?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'Observation', _$failedField, e.toString());

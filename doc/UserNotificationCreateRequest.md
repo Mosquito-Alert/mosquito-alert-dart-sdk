@@ -8,7 +8,7 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**receiverType** | **String** |  | 
+**receiverType** | **String** |  | [optional] [default to 'user']
 **message** | [**CreateNotificationMessageRequest**](CreateNotificationMessageRequest.md) | The message of the notification | 
 **userUuids** | **BuiltList&lt;String&gt;** |  | 
 

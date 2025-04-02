@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/bite_counts.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/location.dart';
 import 'package:built_value/built_value.dart';
@@ -27,13 +28,7 @@ part 'bite.g.dart';
 /// * [published] 
 /// * [eventEnvironment] - The environment where the event took place.
 /// * [eventMoment] - The moment of the day when the event took place.
-/// * [biteCount] - Total number of bites reported.
-/// * [headBiteCount] - Number of bites reported in the head.
-/// * [leftArmBiteCount] - Number of bites reported in the left arm.
-/// * [rightArmBiteCount] - Number of bites reported in the right arm.
-/// * [chestBiteCount] - Number of bites reported in the chest.
-/// * [leftLegBiteCount] - Number of bites reported in the left leg.
-/// * [rightLegBiteCount] - Number of bites reported in the right leg.
+/// * [counts] 
 @BuiltValue()
 abstract class Bite implements Built<Bite, BiteBuilder> {
   @BuiltValueField(wireName: r'uuid')
@@ -85,46 +80,15 @@ abstract class Bite implements Built<Bite, BiteBuilder> {
   BiteEventMomentEnum? get eventMoment;
   // enum eventMomentEnum {  now,  last_morning,  last_midday,  last_afternoon,  last_night,  ,  ,  };
 
-  /// Total number of bites reported.
-  @BuiltValueField(wireName: r'bite_count')
-  int get biteCount;
-
-  /// Number of bites reported in the head.
-  @BuiltValueField(wireName: r'head_bite_count')
-  int? get headBiteCount;
-
-  /// Number of bites reported in the left arm.
-  @BuiltValueField(wireName: r'left_arm_bite_count')
-  int? get leftArmBiteCount;
-
-  /// Number of bites reported in the right arm.
-  @BuiltValueField(wireName: r'right_arm_bite_count')
-  int? get rightArmBiteCount;
-
-  /// Number of bites reported in the chest.
-  @BuiltValueField(wireName: r'chest_bite_count')
-  int? get chestBiteCount;
-
-  /// Number of bites reported in the left leg.
-  @BuiltValueField(wireName: r'left_leg_bite_count')
-  int? get leftLegBiteCount;
-
-  /// Number of bites reported in the right leg.
-  @BuiltValueField(wireName: r'right_leg_bite_count')
-  int? get rightLegBiteCount;
+  @BuiltValueField(wireName: r'counts')
+  BiteCounts get counts;
 
   Bite._();
 
   factory Bite([void updates(BiteBuilder b)]) = _$Bite;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(BiteBuilder b) => b
-      ..headBiteCount = 0
-      ..leftArmBiteCount = 0
-      ..rightArmBiteCount = 0
-      ..chestBiteCount = 0
-      ..leftLegBiteCount = 0
-      ..rightLegBiteCount = 0;
+  static void _defaults(BiteBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<Bite> get serializer => _$BiteSerializer();
@@ -220,53 +184,11 @@ class _$BiteSerializer implements PrimitiveSerializer<Bite> {
         specifiedType: const FullType.nullable(BiteEventMomentEnum),
       );
     }
-    yield r'bite_count';
+    yield r'counts';
     yield serializers.serialize(
-      object.biteCount,
-      specifiedType: const FullType(int),
+      object.counts,
+      specifiedType: const FullType(BiteCounts),
     );
-    if (object.headBiteCount != null) {
-      yield r'head_bite_count';
-      yield serializers.serialize(
-        object.headBiteCount,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.leftArmBiteCount != null) {
-      yield r'left_arm_bite_count';
-      yield serializers.serialize(
-        object.leftArmBiteCount,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.rightArmBiteCount != null) {
-      yield r'right_arm_bite_count';
-      yield serializers.serialize(
-        object.rightArmBiteCount,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.chestBiteCount != null) {
-      yield r'chest_bite_count';
-      yield serializers.serialize(
-        object.chestBiteCount,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.leftLegBiteCount != null) {
-      yield r'left_leg_bite_count';
-      yield serializers.serialize(
-        object.leftLegBiteCount,
-        specifiedType: const FullType(int),
-      );
-    }
-    if (object.rightLegBiteCount != null) {
-      yield r'right_leg_bite_count';
-      yield serializers.serialize(
-        object.rightLegBiteCount,
-        specifiedType: const FullType(int),
-      );
-    }
   }
 
   @override
@@ -391,54 +313,12 @@ class _$BiteSerializer implements PrimitiveSerializer<Bite> {
           if (valueDes == null) continue;
           result.eventMoment = valueDes;
           break;
-        case r'bite_count':
+        case r'counts':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.biteCount = valueDes;
-          break;
-        case r'head_bite_count':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.headBiteCount = valueDes;
-          break;
-        case r'left_arm_bite_count':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.leftArmBiteCount = valueDes;
-          break;
-        case r'right_arm_bite_count':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.rightArmBiteCount = valueDes;
-          break;
-        case r'chest_bite_count':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.chestBiteCount = valueDes;
-          break;
-        case r'left_leg_bite_count':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.leftLegBiteCount = valueDes;
-          break;
-        case r'right_leg_bite_count':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.rightLegBiteCount = valueDes;
+            specifiedType: const FullType(BiteCounts),
+          ) as BiteCounts;
+          result.counts.replace(valueDes);
           break;
         default:
           unhandled.add(key);

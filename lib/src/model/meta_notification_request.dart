@@ -129,8 +129,6 @@ class _$MetaNotificationRequestSerializer implements PrimitiveSerializer<MetaNot
 
 class MetaNotificationRequestReceiverTypeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'user')
-  static const MetaNotificationRequestReceiverTypeEnum user = _$metaNotificationRequestReceiverTypeEnum_user;
   @BuiltValueEnumConst(wireName: r'topic')
   static const MetaNotificationRequestReceiverTypeEnum topic = _$metaNotificationRequestReceiverTypeEnum_topic;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)

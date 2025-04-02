@@ -23,7 +23,7 @@ abstract class NotificationsCreateReceiverTypeErrorComponent implements Built<No
 
   @BuiltValueField(wireName: r'code')
   NotificationsCreateReceiverTypeErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid_choice,  null,  required,  };
+  // enum codeEnum {  invalid_choice,  null,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -160,8 +160,6 @@ class NotificationsCreateReceiverTypeErrorComponentCodeEnum extends EnumClass {
   static const NotificationsCreateReceiverTypeErrorComponentCodeEnum invalidChoice = _$notificationsCreateReceiverTypeErrorComponentCodeEnum_invalidChoice;
   @BuiltValueEnumConst(wireName: r'null')
   static const NotificationsCreateReceiverTypeErrorComponentCodeEnum null_ = _$notificationsCreateReceiverTypeErrorComponentCodeEnum_null_;
-  @BuiltValueEnumConst(wireName: r'required')
-  static const NotificationsCreateReceiverTypeErrorComponentCodeEnum required_ = _$notificationsCreateReceiverTypeErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const NotificationsCreateReceiverTypeErrorComponentCodeEnum unknownDefaultOpenApi = _$notificationsCreateReceiverTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
 

@@ -199,19 +199,7 @@ class _$Bite extends Bite {
   @override
   final BiteEventMomentEnum? eventMoment;
   @override
-  final int biteCount;
-  @override
-  final int? headBiteCount;
-  @override
-  final int? leftArmBiteCount;
-  @override
-  final int? rightArmBiteCount;
-  @override
-  final int? chestBiteCount;
-  @override
-  final int? leftLegBiteCount;
-  @override
-  final int? rightLegBiteCount;
+  final BiteCounts counts;
 
   factory _$Bite([void Function(BiteBuilder)? updates]) =>
       (new BiteBuilder()..update(updates))._build();
@@ -231,13 +219,7 @@ class _$Bite extends Bite {
       required this.published,
       this.eventEnvironment,
       this.eventMoment,
-      required this.biteCount,
-      this.headBiteCount,
-      this.leftArmBiteCount,
-      this.rightArmBiteCount,
-      this.chestBiteCount,
-      this.leftLegBiteCount,
-      this.rightLegBiteCount})
+      required this.counts})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(uuid, r'Bite', 'uuid');
     BuiltValueNullFieldError.checkNotNull(shortId, r'Bite', 'shortId');
@@ -250,7 +232,7 @@ class _$Bite extends Bite {
     BuiltValueNullFieldError.checkNotNull(updatedAt, r'Bite', 'updatedAt');
     BuiltValueNullFieldError.checkNotNull(location, r'Bite', 'location');
     BuiltValueNullFieldError.checkNotNull(published, r'Bite', 'published');
-    BuiltValueNullFieldError.checkNotNull(biteCount, r'Bite', 'biteCount');
+    BuiltValueNullFieldError.checkNotNull(counts, r'Bite', 'counts');
   }
 
   @override
@@ -278,13 +260,7 @@ class _$Bite extends Bite {
         published == other.published &&
         eventEnvironment == other.eventEnvironment &&
         eventMoment == other.eventMoment &&
-        biteCount == other.biteCount &&
-        headBiteCount == other.headBiteCount &&
-        leftArmBiteCount == other.leftArmBiteCount &&
-        rightArmBiteCount == other.rightArmBiteCount &&
-        chestBiteCount == other.chestBiteCount &&
-        leftLegBiteCount == other.leftLegBiteCount &&
-        rightLegBiteCount == other.rightLegBiteCount;
+        counts == other.counts;
   }
 
   @override
@@ -304,13 +280,7 @@ class _$Bite extends Bite {
     _$hash = $jc(_$hash, published.hashCode);
     _$hash = $jc(_$hash, eventEnvironment.hashCode);
     _$hash = $jc(_$hash, eventMoment.hashCode);
-    _$hash = $jc(_$hash, biteCount.hashCode);
-    _$hash = $jc(_$hash, headBiteCount.hashCode);
-    _$hash = $jc(_$hash, leftArmBiteCount.hashCode);
-    _$hash = $jc(_$hash, rightArmBiteCount.hashCode);
-    _$hash = $jc(_$hash, chestBiteCount.hashCode);
-    _$hash = $jc(_$hash, leftLegBiteCount.hashCode);
-    _$hash = $jc(_$hash, rightLegBiteCount.hashCode);
+    _$hash = $jc(_$hash, counts.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -332,13 +302,7 @@ class _$Bite extends Bite {
           ..add('published', published)
           ..add('eventEnvironment', eventEnvironment)
           ..add('eventMoment', eventMoment)
-          ..add('biteCount', biteCount)
-          ..add('headBiteCount', headBiteCount)
-          ..add('leftArmBiteCount', leftArmBiteCount)
-          ..add('rightArmBiteCount', rightArmBiteCount)
-          ..add('chestBiteCount', chestBiteCount)
-          ..add('leftLegBiteCount', leftLegBiteCount)
-          ..add('rightLegBiteCount', rightLegBiteCount))
+          ..add('counts', counts))
         .toString();
   }
 }
@@ -405,39 +369,9 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
   set eventMoment(BiteEventMomentEnum? eventMoment) =>
       _$this._eventMoment = eventMoment;
 
-  int? _biteCount;
-  int? get biteCount => _$this._biteCount;
-  set biteCount(int? biteCount) => _$this._biteCount = biteCount;
-
-  int? _headBiteCount;
-  int? get headBiteCount => _$this._headBiteCount;
-  set headBiteCount(int? headBiteCount) =>
-      _$this._headBiteCount = headBiteCount;
-
-  int? _leftArmBiteCount;
-  int? get leftArmBiteCount => _$this._leftArmBiteCount;
-  set leftArmBiteCount(int? leftArmBiteCount) =>
-      _$this._leftArmBiteCount = leftArmBiteCount;
-
-  int? _rightArmBiteCount;
-  int? get rightArmBiteCount => _$this._rightArmBiteCount;
-  set rightArmBiteCount(int? rightArmBiteCount) =>
-      _$this._rightArmBiteCount = rightArmBiteCount;
-
-  int? _chestBiteCount;
-  int? get chestBiteCount => _$this._chestBiteCount;
-  set chestBiteCount(int? chestBiteCount) =>
-      _$this._chestBiteCount = chestBiteCount;
-
-  int? _leftLegBiteCount;
-  int? get leftLegBiteCount => _$this._leftLegBiteCount;
-  set leftLegBiteCount(int? leftLegBiteCount) =>
-      _$this._leftLegBiteCount = leftLegBiteCount;
-
-  int? _rightLegBiteCount;
-  int? get rightLegBiteCount => _$this._rightLegBiteCount;
-  set rightLegBiteCount(int? rightLegBiteCount) =>
-      _$this._rightLegBiteCount = rightLegBiteCount;
+  BiteCountsBuilder? _counts;
+  BiteCountsBuilder get counts => _$this._counts ??= new BiteCountsBuilder();
+  set counts(BiteCountsBuilder? counts) => _$this._counts = counts;
 
   BiteBuilder() {
     Bite._defaults(this);
@@ -460,13 +394,7 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
       _published = $v.published;
       _eventEnvironment = $v.eventEnvironment;
       _eventMoment = $v.eventMoment;
-      _biteCount = $v.biteCount;
-      _headBiteCount = $v.headBiteCount;
-      _leftArmBiteCount = $v.leftArmBiteCount;
-      _rightArmBiteCount = $v.rightArmBiteCount;
-      _chestBiteCount = $v.chestBiteCount;
-      _leftLegBiteCount = $v.leftLegBiteCount;
-      _rightLegBiteCount = $v.rightLegBiteCount;
+      _counts = $v.counts.toBuilder();
       _$v = null;
     }
     return this;
@@ -514,14 +442,7 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
                   published, r'Bite', 'published'),
               eventEnvironment: eventEnvironment,
               eventMoment: eventMoment,
-              biteCount: BuiltValueNullFieldError.checkNotNull(
-                  biteCount, r'Bite', 'biteCount'),
-              headBiteCount: headBiteCount,
-              leftArmBiteCount: leftArmBiteCount,
-              rightArmBiteCount: rightArmBiteCount,
-              chestBiteCount: chestBiteCount,
-              leftLegBiteCount: leftLegBiteCount,
-              rightLegBiteCount: rightLegBiteCount);
+              counts: counts.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -530,6 +451,9 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
 
         _$failedField = 'tags';
         _tags?.build();
+
+        _$failedField = 'counts';
+        counts.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'Bite', _$failedField, e.toString());

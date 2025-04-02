@@ -10,6 +10,7 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
+import 'package:mosquito_alert/src/model/mosquito_appearance_request.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 import 'package:mosquito_alert/src/model/simple_photo_request.dart';
@@ -34,10 +35,7 @@ class ObservationsApi {
   /// * [tags] 
   /// * [eventEnvironment] - The environment where the event took place.
   /// * [eventMoment] - The moment of the day when the event took place.
-  /// * [userPerceivedMosquitoSpecie] - The mosquito specie perceived by the user.
-  /// * [userPerceivedMosquitoThorax] - The species of mosquito that the thorax resembles, according to the user.
-  /// * [userPerceivedMosquitoAbdomen] - The species of mosquito that the abdomen resembles, according to the user.
-  /// * [userPerceivedMosquitoLegs] - The species of mosquito that the leg resembles, according to the user.
+  /// * [mosquitoAppearance] - User-provided description of the mosquito's appearance
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -56,10 +54,7 @@ class ObservationsApi {
     BuiltList<String>? tags,
     String? eventEnvironment,
     String? eventMoment,
-    String? userPerceivedMosquitoSpecie,
-    String? userPerceivedMosquitoThorax,
-    String? userPerceivedMosquitoAbdomen,
-    String? userPerceivedMosquitoLegs,
+    MosquitoAppearanceRequest? mosquitoAppearance,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -109,10 +104,7 @@ class ObservationsApi {
         r'photos': encodeFormParameter(_serializers, photos, const FullType(BuiltList, [FullType(SimplePhotoRequest)])),
         r'event_environment': encodeFormParameter(_serializers, eventEnvironment, const FullType(String)),
         r'event_moment': encodeFormParameter(_serializers, eventMoment, const FullType(String)),
-        r'user_perceived_mosquito_specie': encodeFormParameter(_serializers, userPerceivedMosquitoSpecie, const FullType(String)),
-        r'user_perceived_mosquito_thorax': encodeFormParameter(_serializers, userPerceivedMosquitoThorax, const FullType(String)),
-        r'user_perceived_mosquito_abdomen': encodeFormParameter(_serializers, userPerceivedMosquitoAbdomen, const FullType(String)),
-        r'user_perceived_mosquito_legs': encodeFormParameter(_serializers, userPerceivedMosquitoLegs, const FullType(String)),
+        r'mosquito_appearance': encodeFormParameter(_serializers, mosquitoAppearance, const FullType(MosquitoAppearanceRequest)),
       });
 
     } catch(error, stackTrace) {

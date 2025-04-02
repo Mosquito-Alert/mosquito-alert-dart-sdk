@@ -10,16 +10,17 @@ import 'package:mosquito_alert/src/model/observations_create_photos_index_file_e
 import 'package:mosquito_alert/src/model/observations_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_specie_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_event_environment_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_thorax_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_legs_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_abdomen_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_thorax_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_specie_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/observations_create_photos_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_point_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_legs_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_photos_index_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_abdomen_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_source_error_component.dart';
 import 'package:built_value/built_value.dart';
@@ -36,7 +37,7 @@ part 'observations_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class ObservationsCreateError implements Built<ObservationsCreateError, ObservationsCreateErrorBuilder> {
-  /// One Of [ObservationsCreateCreatedAtErrorComponent], [ObservationsCreateEventEnvironmentErrorComponent], [ObservationsCreateEventMomentErrorComponent], [ObservationsCreateLocationNonFieldErrorsErrorComponent], [ObservationsCreateLocationPointErrorComponent], [ObservationsCreateLocationSourceErrorComponent], [ObservationsCreateNonFieldErrorsErrorComponent], [ObservationsCreateNoteErrorComponent], [ObservationsCreatePhotosINDEXFileErrorComponent], [ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent], [ObservationsCreatePhotosNonFieldErrorsErrorComponent], [ObservationsCreateSentAtErrorComponent], [ObservationsCreateTagsErrorComponent], [ObservationsCreateTagsINDEXErrorComponent], [ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent], [ObservationsCreateUserPerceivedMosquitoLegsErrorComponent], [ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent], [ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent]
+  /// One Of [ObservationsCreateCreatedAtErrorComponent], [ObservationsCreateEventEnvironmentErrorComponent], [ObservationsCreateEventMomentErrorComponent], [ObservationsCreateLocationNonFieldErrorsErrorComponent], [ObservationsCreateLocationPointErrorComponent], [ObservationsCreateLocationSourceErrorComponent], [ObservationsCreateMosquitoAppearanceAbdomenErrorComponent], [ObservationsCreateMosquitoAppearanceLegsErrorComponent], [ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent], [ObservationsCreateMosquitoAppearanceSpecieErrorComponent], [ObservationsCreateMosquitoAppearanceThoraxErrorComponent], [ObservationsCreateNonFieldErrorsErrorComponent], [ObservationsCreateNoteErrorComponent], [ObservationsCreatePhotosINDEXFileErrorComponent], [ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent], [ObservationsCreatePhotosNonFieldErrorsErrorComponent], [ObservationsCreateSentAtErrorComponent], [ObservationsCreateTagsErrorComponent], [ObservationsCreateTagsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -48,6 +49,11 @@ abstract class ObservationsCreateError implements Built<ObservationsCreateError,
     r'location.non_field_errors': ObservationsCreateLocationNonFieldErrorsErrorComponent,
     r'location.point': ObservationsCreateLocationPointErrorComponent,
     r'location.source': ObservationsCreateLocationSourceErrorComponent,
+    r'mosquito_appearance.abdomen': ObservationsCreateMosquitoAppearanceAbdomenErrorComponent,
+    r'mosquito_appearance.legs': ObservationsCreateMosquitoAppearanceLegsErrorComponent,
+    r'mosquito_appearance.non_field_errors': ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent,
+    r'mosquito_appearance.specie': ObservationsCreateMosquitoAppearanceSpecieErrorComponent,
+    r'mosquito_appearance.thorax': ObservationsCreateMosquitoAppearanceThoraxErrorComponent,
     r'non_field_errors': ObservationsCreateNonFieldErrorsErrorComponent,
     r'note': ObservationsCreateNoteErrorComponent,
     r'photos.INDEX.file': ObservationsCreatePhotosINDEXFileErrorComponent,
@@ -56,10 +62,6 @@ abstract class ObservationsCreateError implements Built<ObservationsCreateError,
     r'sent_at': ObservationsCreateSentAtErrorComponent,
     r'tags': ObservationsCreateTagsErrorComponent,
     r'tags.INDEX': ObservationsCreateTagsINDEXErrorComponent,
-    r'user_perceived_mosquito_abdomen': ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent,
-    r'user_perceived_mosquito_legs': ObservationsCreateUserPerceivedMosquitoLegsErrorComponent,
-    r'user_perceived_mosquito_specie': ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent,
-    r'user_perceived_mosquito_thorax': ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent,
   };
 
   ObservationsCreateError._();
@@ -93,6 +95,21 @@ extension ObservationsCreateErrorDiscriminatorExt on ObservationsCreateError {
         if (this is ObservationsCreateLocationSourceErrorComponent) {
             return r'location.source';
         }
+        if (this is ObservationsCreateMosquitoAppearanceAbdomenErrorComponent) {
+            return r'mosquito_appearance.abdomen';
+        }
+        if (this is ObservationsCreateMosquitoAppearanceLegsErrorComponent) {
+            return r'mosquito_appearance.legs';
+        }
+        if (this is ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent) {
+            return r'mosquito_appearance.non_field_errors';
+        }
+        if (this is ObservationsCreateMosquitoAppearanceSpecieErrorComponent) {
+            return r'mosquito_appearance.specie';
+        }
+        if (this is ObservationsCreateMosquitoAppearanceThoraxErrorComponent) {
+            return r'mosquito_appearance.thorax';
+        }
         if (this is ObservationsCreateNonFieldErrorsErrorComponent) {
             return r'non_field_errors';
         }
@@ -117,18 +134,6 @@ extension ObservationsCreateErrorDiscriminatorExt on ObservationsCreateError {
         if (this is ObservationsCreateTagsINDEXErrorComponent) {
             return r'tags.INDEX';
         }
-        if (this is ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent) {
-            return r'user_perceived_mosquito_abdomen';
-        }
-        if (this is ObservationsCreateUserPerceivedMosquitoLegsErrorComponent) {
-            return r'user_perceived_mosquito_legs';
-        }
-        if (this is ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent) {
-            return r'user_perceived_mosquito_specie';
-        }
-        if (this is ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent) {
-            return r'user_perceived_mosquito_thorax';
-        }
         return null;
     }
 }
@@ -151,6 +156,21 @@ extension ObservationsCreateErrorBuilderDiscriminatorExt on ObservationsCreateEr
         }
         if (this is ObservationsCreateLocationSourceErrorComponentBuilder) {
             return r'location.source';
+        }
+        if (this is ObservationsCreateMosquitoAppearanceAbdomenErrorComponentBuilder) {
+            return r'mosquito_appearance.abdomen';
+        }
+        if (this is ObservationsCreateMosquitoAppearanceLegsErrorComponentBuilder) {
+            return r'mosquito_appearance.legs';
+        }
+        if (this is ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentBuilder) {
+            return r'mosquito_appearance.non_field_errors';
+        }
+        if (this is ObservationsCreateMosquitoAppearanceSpecieErrorComponentBuilder) {
+            return r'mosquito_appearance.specie';
+        }
+        if (this is ObservationsCreateMosquitoAppearanceThoraxErrorComponentBuilder) {
+            return r'mosquito_appearance.thorax';
         }
         if (this is ObservationsCreateNonFieldErrorsErrorComponentBuilder) {
             return r'non_field_errors';
@@ -175,18 +195,6 @@ extension ObservationsCreateErrorBuilderDiscriminatorExt on ObservationsCreateEr
         }
         if (this is ObservationsCreateTagsINDEXErrorComponentBuilder) {
             return r'tags.INDEX';
-        }
-        if (this is ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponentBuilder) {
-            return r'user_perceived_mosquito_abdomen';
-        }
-        if (this is ObservationsCreateUserPerceivedMosquitoLegsErrorComponentBuilder) {
-            return r'user_perceived_mosquito_legs';
-        }
-        if (this is ObservationsCreateUserPerceivedMosquitoSpecieErrorComponentBuilder) {
-            return r'user_perceived_mosquito_specie';
-        }
-        if (this is ObservationsCreateUserPerceivedMosquitoThoraxErrorComponentBuilder) {
-            return r'user_perceived_mosquito_thorax';
         }
         return null;
     }
@@ -228,7 +236,7 @@ class _$ObservationsCreateErrorSerializer implements PrimitiveSerializer<Observa
     final discIndex = serializedList.indexOf(ObservationsCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [ObservationsCreateCreatedAtErrorComponent, ObservationsCreateEventEnvironmentErrorComponent, ObservationsCreateEventMomentErrorComponent, ObservationsCreateLocationNonFieldErrorsErrorComponent, ObservationsCreateLocationPointErrorComponent, ObservationsCreateLocationSourceErrorComponent, ObservationsCreateNonFieldErrorsErrorComponent, ObservationsCreateNoteErrorComponent, ObservationsCreatePhotosINDEXFileErrorComponent, ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent, ObservationsCreatePhotosNonFieldErrorsErrorComponent, ObservationsCreateSentAtErrorComponent, ObservationsCreateTagsErrorComponent, ObservationsCreateTagsINDEXErrorComponent, ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent, ObservationsCreateUserPerceivedMosquitoLegsErrorComponent, ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent, ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent, ];
+    final oneOfTypes = [ObservationsCreateCreatedAtErrorComponent, ObservationsCreateEventEnvironmentErrorComponent, ObservationsCreateEventMomentErrorComponent, ObservationsCreateLocationNonFieldErrorsErrorComponent, ObservationsCreateLocationPointErrorComponent, ObservationsCreateLocationSourceErrorComponent, ObservationsCreateMosquitoAppearanceAbdomenErrorComponent, ObservationsCreateMosquitoAppearanceLegsErrorComponent, ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent, ObservationsCreateMosquitoAppearanceSpecieErrorComponent, ObservationsCreateMosquitoAppearanceThoraxErrorComponent, ObservationsCreateNonFieldErrorsErrorComponent, ObservationsCreateNoteErrorComponent, ObservationsCreatePhotosINDEXFileErrorComponent, ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent, ObservationsCreatePhotosNonFieldErrorsErrorComponent, ObservationsCreateSentAtErrorComponent, ObservationsCreateTagsErrorComponent, ObservationsCreateTagsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -273,6 +281,41 @@ class _$ObservationsCreateErrorSerializer implements PrimitiveSerializer<Observa
           specifiedType: FullType(ObservationsCreateLocationSourceErrorComponent),
         ) as ObservationsCreateLocationSourceErrorComponent;
         oneOfType = ObservationsCreateLocationSourceErrorComponent;
+        break;
+      case r'mosquito_appearance.abdomen':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsCreateMosquitoAppearanceAbdomenErrorComponent),
+        ) as ObservationsCreateMosquitoAppearanceAbdomenErrorComponent;
+        oneOfType = ObservationsCreateMosquitoAppearanceAbdomenErrorComponent;
+        break;
+      case r'mosquito_appearance.legs':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsCreateMosquitoAppearanceLegsErrorComponent),
+        ) as ObservationsCreateMosquitoAppearanceLegsErrorComponent;
+        oneOfType = ObservationsCreateMosquitoAppearanceLegsErrorComponent;
+        break;
+      case r'mosquito_appearance.non_field_errors':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent),
+        ) as ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent;
+        oneOfType = ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent;
+        break;
+      case r'mosquito_appearance.specie':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsCreateMosquitoAppearanceSpecieErrorComponent),
+        ) as ObservationsCreateMosquitoAppearanceSpecieErrorComponent;
+        oneOfType = ObservationsCreateMosquitoAppearanceSpecieErrorComponent;
+        break;
+      case r'mosquito_appearance.thorax':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsCreateMosquitoAppearanceThoraxErrorComponent),
+        ) as ObservationsCreateMosquitoAppearanceThoraxErrorComponent;
+        oneOfType = ObservationsCreateMosquitoAppearanceThoraxErrorComponent;
         break;
       case r'non_field_errors':
         oneOfResult = serializers.deserialize(
@@ -330,34 +373,6 @@ class _$ObservationsCreateErrorSerializer implements PrimitiveSerializer<Observa
         ) as ObservationsCreateTagsINDEXErrorComponent;
         oneOfType = ObservationsCreateTagsINDEXErrorComponent;
         break;
-      case r'user_perceived_mosquito_abdomen':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent),
-        ) as ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent;
-        oneOfType = ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent;
-        break;
-      case r'user_perceived_mosquito_legs':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(ObservationsCreateUserPerceivedMosquitoLegsErrorComponent),
-        ) as ObservationsCreateUserPerceivedMosquitoLegsErrorComponent;
-        oneOfType = ObservationsCreateUserPerceivedMosquitoLegsErrorComponent;
-        break;
-      case r'user_perceived_mosquito_specie':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent),
-        ) as ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent;
-        oneOfType = ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent;
-        break;
-      case r'user_perceived_mosquito_thorax':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent),
-        ) as ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent;
-        oneOfType = ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent;
-        break;
       default:
         throw UnsupportedError("Couldn't deserialize oneOf for the discriminator value: ${discValue}");
     }
@@ -368,8 +383,8 @@ class _$ObservationsCreateErrorSerializer implements PrimitiveSerializer<Observa
 
 class ObservationsCreateErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'user_perceived_mosquito_legs')
-  static const ObservationsCreateErrorAttrEnum userPerceivedMosquitoLegs = _$observationsCreateErrorAttrEnum_userPerceivedMosquitoLegs;
+  @BuiltValueEnumConst(wireName: r'mosquito_appearance.legs')
+  static const ObservationsCreateErrorAttrEnum mosquitoAppearancePeriodLegs = _$observationsCreateErrorAttrEnum_mosquitoAppearancePeriodLegs;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const ObservationsCreateErrorAttrEnum unknownDefaultOpenApi = _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi;
 

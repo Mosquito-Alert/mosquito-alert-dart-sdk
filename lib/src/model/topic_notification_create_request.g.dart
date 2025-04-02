@@ -7,9 +7,6 @@ part of 'topic_notification_create_request.dart';
 // **************************************************************************
 
 const TopicNotificationCreateRequestReceiverTypeEnum
-    _$topicNotificationCreateRequestReceiverTypeEnum_user =
-    const TopicNotificationCreateRequestReceiverTypeEnum._('user');
-const TopicNotificationCreateRequestReceiverTypeEnum
     _$topicNotificationCreateRequestReceiverTypeEnum_topic =
     const TopicNotificationCreateRequestReceiverTypeEnum._('topic');
 const TopicNotificationCreateRequestReceiverTypeEnum
@@ -20,8 +17,6 @@ const TopicNotificationCreateRequestReceiverTypeEnum
 TopicNotificationCreateRequestReceiverTypeEnum
     _$topicNotificationCreateRequestReceiverTypeEnumValueOf(String name) {
   switch (name) {
-    case 'user':
-      return _$topicNotificationCreateRequestReceiverTypeEnum_user;
     case 'topic':
       return _$topicNotificationCreateRequestReceiverTypeEnum_topic;
     case 'unknownDefaultOpenApi':
@@ -34,7 +29,6 @@ TopicNotificationCreateRequestReceiverTypeEnum
 final BuiltSet<TopicNotificationCreateRequestReceiverTypeEnum>
     _$topicNotificationCreateRequestReceiverTypeEnumValues = new BuiltSet<
         TopicNotificationCreateRequestReceiverTypeEnum>(const <TopicNotificationCreateRequestReceiverTypeEnum>[
-  _$topicNotificationCreateRequestReceiverTypeEnum_user,
   _$topicNotificationCreateRequestReceiverTypeEnum_topic,
   _$topicNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi,
 ]);
@@ -47,12 +41,10 @@ class _$TopicNotificationCreateRequestReceiverTypeEnumSerializer
     implements
         PrimitiveSerializer<TopicNotificationCreateRequestReceiverTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'user': 'user',
     'topic': 'topic',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'user': 'user',
     'topic': 'topic',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
@@ -80,7 +72,7 @@ class _$TopicNotificationCreateRequestReceiverTypeEnumSerializer
 
 class _$TopicNotificationCreateRequest extends TopicNotificationCreateRequest {
   @override
-  final TopicNotificationCreateRequestReceiverTypeEnum receiverType;
+  final TopicNotificationCreateRequestReceiverTypeEnum? receiverType;
   @override
   final CreateNotificationMessageRequest message;
   @override
@@ -91,12 +83,8 @@ class _$TopicNotificationCreateRequest extends TopicNotificationCreateRequest {
       (new TopicNotificationCreateRequestBuilder()..update(updates))._build();
 
   _$TopicNotificationCreateRequest._(
-      {required this.receiverType,
-      required this.message,
-      required this.topicCodes})
+      {this.receiverType, required this.message, required this.topicCodes})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        receiverType, r'TopicNotificationCreateRequest', 'receiverType');
     BuiltValueNullFieldError.checkNotNull(
         message, r'TopicNotificationCreateRequest', 'message');
     BuiltValueNullFieldError.checkNotNull(
@@ -200,8 +188,7 @@ class TopicNotificationCreateRequestBuilder
     try {
       _$result = _$v ??
           new _$TopicNotificationCreateRequest._(
-              receiverType: BuiltValueNullFieldError.checkNotNull(receiverType,
-                  r'TopicNotificationCreateRequest', 'receiverType'),
+              receiverType: receiverType,
               message: message.build(),
               topicCodes: topicCodes.build());
     } catch (_) {

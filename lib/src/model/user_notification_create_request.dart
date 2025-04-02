@@ -19,8 +19,8 @@ part 'user_notification_create_request.g.dart';
 @BuiltValue()
 abstract class UserNotificationCreateRequest implements Built<UserNotificationCreateRequest, UserNotificationCreateRequestBuilder> {
   @BuiltValueField(wireName: r'receiver_type')
-  UserNotificationCreateRequestReceiverTypeEnum get receiverType;
-  // enum receiverTypeEnum {  user,  topic,  };
+  UserNotificationCreateRequestReceiverTypeEnum? get receiverType;
+  // enum receiverTypeEnum {  user,  };
 
   /// The message of the notification
   @BuiltValueField(wireName: r'message')
@@ -34,7 +34,8 @@ abstract class UserNotificationCreateRequest implements Built<UserNotificationCr
   factory UserNotificationCreateRequest([void updates(UserNotificationCreateRequestBuilder b)]) = _$UserNotificationCreateRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(UserNotificationCreateRequestBuilder b) => b;
+  static void _defaults(UserNotificationCreateRequestBuilder b) => b
+      ..receiverType = const UserNotificationCreateRequestReceiverTypeEnum._('user');
 
   @BuiltValueSerializer(custom: true)
   static Serializer<UserNotificationCreateRequest> get serializer => _$UserNotificationCreateRequestSerializer();
@@ -52,11 +53,13 @@ class _$UserNotificationCreateRequestSerializer implements PrimitiveSerializer<U
     UserNotificationCreateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'receiver_type';
-    yield serializers.serialize(
-      object.receiverType,
-      specifiedType: const FullType(UserNotificationCreateRequestReceiverTypeEnum),
-    );
+    if (object.receiverType != null) {
+      yield r'receiver_type';
+      yield serializers.serialize(
+        object.receiverType,
+        specifiedType: const FullType(UserNotificationCreateRequestReceiverTypeEnum),
+      );
+    }
     yield r'message';
     yield serializers.serialize(
       object.message,
@@ -144,8 +147,6 @@ class UserNotificationCreateRequestReceiverTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user')
   static const UserNotificationCreateRequestReceiverTypeEnum user = _$userNotificationCreateRequestReceiverTypeEnum_user;
-  @BuiltValueEnumConst(wireName: r'topic')
-  static const UserNotificationCreateRequestReceiverTypeEnum topic = _$userNotificationCreateRequestReceiverTypeEnum_topic;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const UserNotificationCreateRequestReceiverTypeEnum unknownDefaultOpenApi = _$userNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi;
 

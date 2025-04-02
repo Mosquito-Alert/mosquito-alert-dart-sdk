@@ -41,22 +41,25 @@ import 'package:mosquito_alert/src/model/auth_verify_token_non_field_errors_erro
 import 'package:mosquito_alert/src/model/auth_verify_token_token_error_component.dart';
 import 'package:mosquito_alert/src/model/auth_verify_token_validation_error.dart';
 import 'package:mosquito_alert/src/model/bite.dart';
+import 'package:mosquito_alert/src/model/bite_counts.dart';
+import 'package:mosquito_alert/src/model/bite_counts_request.dart';
 import 'package:mosquito_alert/src/model/bite_request.dart';
-import 'package:mosquito_alert/src/model/bites_create_chest_bite_count_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_chest_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_head_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_left_arm_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_left_leg_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_right_arm_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_right_leg_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_error.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_environment_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_moment_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_head_bite_count_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_left_arm_bite_count_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_left_leg_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_point_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_note_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_right_arm_bite_count_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_right_leg_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_index_error_component.dart';
@@ -204,6 +207,8 @@ import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/meta_notification_request.dart';
 import 'package:mosquito_alert/src/model/mobile_app.dart';
 import 'package:mosquito_alert/src/model/mobile_app_request.dart';
+import 'package:mosquito_alert/src/model/mosquito_appearance.dart';
+import 'package:mosquito_alert/src/model/mosquito_appearance_request.dart';
 import 'package:mosquito_alert/src/model/notification.dart';
 import 'package:mosquito_alert/src/model/notification_message.dart';
 import 'package:mosquito_alert/src/model/notification_request.dart';
@@ -288,6 +293,11 @@ import 'package:mosquito_alert/src/model/observations_create_event_moment_error_
 import 'package:mosquito_alert/src/model/observations_create_location_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_point_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_source_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_abdomen_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_legs_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_specie_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_thorax_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_photos_index_file_error_component.dart';
@@ -296,10 +306,6 @@ import 'package:mosquito_alert/src/model/observations_create_photos_non_field_er
 import 'package:mosquito_alert/src/model/observations_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_tags_index_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_abdomen_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_legs_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_specie_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_user_perceived_mosquito_thorax_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_validation_error.dart';
 import 'package:mosquito_alert/src/model/observations_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_created_at_error_component.dart';
@@ -380,22 +386,25 @@ part 'serializers.g.dart';
   AuthVerifyTokenTokenErrorComponent,
   AuthVerifyTokenValidationError,
   Bite,
+  BiteCounts,
+  BiteCountsRequest,
   BiteRequest,
-  BitesCreateChestBiteCountErrorComponent,
+  BitesCreateCountsChestErrorComponent,
+  BitesCreateCountsHeadErrorComponent,
+  BitesCreateCountsLeftArmErrorComponent,
+  BitesCreateCountsLeftLegErrorComponent,
+  BitesCreateCountsNonFieldErrorsErrorComponent,
+  BitesCreateCountsRightArmErrorComponent,
+  BitesCreateCountsRightLegErrorComponent,
   BitesCreateCreatedAtErrorComponent,
   BitesCreateError,
   BitesCreateEventEnvironmentErrorComponent,
   BitesCreateEventMomentErrorComponent,
-  BitesCreateHeadBiteCountErrorComponent,
-  BitesCreateLeftArmBiteCountErrorComponent,
-  BitesCreateLeftLegBiteCountErrorComponent,
   BitesCreateLocationNonFieldErrorsErrorComponent,
   BitesCreateLocationPointErrorComponent,
   BitesCreateLocationSourceErrorComponent,
   BitesCreateNonFieldErrorsErrorComponent,
   BitesCreateNoteErrorComponent,
-  BitesCreateRightArmBiteCountErrorComponent,
-  BitesCreateRightLegBiteCountErrorComponent,
   BitesCreateSentAtErrorComponent,
   BitesCreateTagsErrorComponent,
   BitesCreateTagsINDEXErrorComponent,
@@ -543,6 +552,8 @@ part 'serializers.g.dart';
   MetaNotificationRequest,
   MobileApp,
   MobileAppRequest,
+  MosquitoAppearance,
+  MosquitoAppearanceRequest,
   Notification,
   NotificationMessage,
   NotificationRequest,
@@ -627,6 +638,11 @@ part 'serializers.g.dart';
   ObservationsCreateLocationNonFieldErrorsErrorComponent,
   ObservationsCreateLocationPointErrorComponent,
   ObservationsCreateLocationSourceErrorComponent,
+  ObservationsCreateMosquitoAppearanceAbdomenErrorComponent,
+  ObservationsCreateMosquitoAppearanceLegsErrorComponent,
+  ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent,
+  ObservationsCreateMosquitoAppearanceSpecieErrorComponent,
+  ObservationsCreateMosquitoAppearanceThoraxErrorComponent,
   ObservationsCreateNonFieldErrorsErrorComponent,
   ObservationsCreateNoteErrorComponent,
   ObservationsCreatePhotosINDEXFileErrorComponent,
@@ -635,10 +651,6 @@ part 'serializers.g.dart';
   ObservationsCreateSentAtErrorComponent,
   ObservationsCreateTagsErrorComponent,
   ObservationsCreateTagsINDEXErrorComponent,
-  ObservationsCreateUserPerceivedMosquitoAbdomenErrorComponent,
-  ObservationsCreateUserPerceivedMosquitoLegsErrorComponent,
-  ObservationsCreateUserPerceivedMosquitoSpecieErrorComponent,
-  ObservationsCreateUserPerceivedMosquitoThoraxErrorComponent,
   ObservationsCreateValidationError,
   ObservationsListCountryIdErrorComponent,
   ObservationsListCreatedAtErrorComponent,

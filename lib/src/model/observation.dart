@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/mosquito_appearance.dart';
 import 'package:mosquito_alert/src/model/location.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -29,10 +30,7 @@ part 'observation.g.dart';
 /// * [photos] 
 /// * [eventEnvironment] - The environment where the event took place.
 /// * [eventMoment] - The moment of the day when the event took place.
-/// * [userPerceivedMosquitoSpecie] - The mosquito specie perceived by the user.
-/// * [userPerceivedMosquitoThorax] - The species of mosquito that the thorax resembles, according to the user.
-/// * [userPerceivedMosquitoAbdomen] - The species of mosquito that the abdomen resembles, according to the user.
-/// * [userPerceivedMosquitoLegs] - The species of mosquito that the leg resembles, according to the user.
+/// * [mosquitoAppearance] - User-provided description of the mosquito's appearance
 @BuiltValue()
 abstract class Observation implements Built<Observation, ObservationBuilder> {
   @BuiltValueField(wireName: r'uuid')
@@ -87,25 +85,9 @@ abstract class Observation implements Built<Observation, ObservationBuilder> {
   ObservationEventMomentEnum? get eventMoment;
   // enum eventMomentEnum {  now,  last_morning,  last_midday,  last_afternoon,  last_night,  ,  ,  };
 
-  /// The mosquito specie perceived by the user.
-  @BuiltValueField(wireName: r'user_perceived_mosquito_specie')
-  ObservationUserPerceivedMosquitoSpecieEnum? get userPerceivedMosquitoSpecie;
-  // enum userPerceivedMosquitoSpecieEnum {  albopictus,  aegypti,  japonicus,  koreicus,  culex,  other,  ,  ,  };
-
-  /// The species of mosquito that the thorax resembles, according to the user.
-  @BuiltValueField(wireName: r'user_perceived_mosquito_thorax')
-  ObservationUserPerceivedMosquitoThoraxEnum? get userPerceivedMosquitoThorax;
-  // enum userPerceivedMosquitoThoraxEnum {  albopictus,  aegypti,  japonicus,  koreicus,  culex,  other,  ,  ,  };
-
-  /// The species of mosquito that the abdomen resembles, according to the user.
-  @BuiltValueField(wireName: r'user_perceived_mosquito_abdomen')
-  ObservationUserPerceivedMosquitoAbdomenEnum? get userPerceivedMosquitoAbdomen;
-  // enum userPerceivedMosquitoAbdomenEnum {  albopictus,  aegypti,  japonicus,  koreicus,  culex,  other,  ,  ,  };
-
-  /// The species of mosquito that the leg resembles, according to the user.
-  @BuiltValueField(wireName: r'user_perceived_mosquito_legs')
-  ObservationUserPerceivedMosquitoLegsEnum? get userPerceivedMosquitoLegs;
-  // enum userPerceivedMosquitoLegsEnum {  albopictus,  aegypti,  japonicus,  koreicus,  culex,  other,  ,  ,  };
+  /// User-provided description of the mosquito's appearance
+  @BuiltValueField(wireName: r'mosquito_appearance')
+  MosquitoAppearance? get mosquitoAppearance;
 
   Observation._();
 
@@ -213,32 +195,11 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
         specifiedType: const FullType.nullable(ObservationEventMomentEnum),
       );
     }
-    if (object.userPerceivedMosquitoSpecie != null) {
-      yield r'user_perceived_mosquito_specie';
+    if (object.mosquitoAppearance != null) {
+      yield r'mosquito_appearance';
       yield serializers.serialize(
-        object.userPerceivedMosquitoSpecie,
-        specifiedType: const FullType.nullable(ObservationUserPerceivedMosquitoSpecieEnum),
-      );
-    }
-    if (object.userPerceivedMosquitoThorax != null) {
-      yield r'user_perceived_mosquito_thorax';
-      yield serializers.serialize(
-        object.userPerceivedMosquitoThorax,
-        specifiedType: const FullType.nullable(ObservationUserPerceivedMosquitoThoraxEnum),
-      );
-    }
-    if (object.userPerceivedMosquitoAbdomen != null) {
-      yield r'user_perceived_mosquito_abdomen';
-      yield serializers.serialize(
-        object.userPerceivedMosquitoAbdomen,
-        specifiedType: const FullType.nullable(ObservationUserPerceivedMosquitoAbdomenEnum),
-      );
-    }
-    if (object.userPerceivedMosquitoLegs != null) {
-      yield r'user_perceived_mosquito_legs';
-      yield serializers.serialize(
-        object.userPerceivedMosquitoLegs,
-        specifiedType: const FullType.nullable(ObservationUserPerceivedMosquitoLegsEnum),
+        object.mosquitoAppearance,
+        specifiedType: const FullType.nullable(MosquitoAppearance),
       );
     }
   }
@@ -372,37 +333,13 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
           if (valueDes == null) continue;
           result.eventMoment = valueDes;
           break;
-        case r'user_perceived_mosquito_specie':
+        case r'mosquito_appearance':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(ObservationUserPerceivedMosquitoSpecieEnum),
-          ) as ObservationUserPerceivedMosquitoSpecieEnum?;
+            specifiedType: const FullType.nullable(MosquitoAppearance),
+          ) as MosquitoAppearance?;
           if (valueDes == null) continue;
-          result.userPerceivedMosquitoSpecie = valueDes;
-          break;
-        case r'user_perceived_mosquito_thorax':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(ObservationUserPerceivedMosquitoThoraxEnum),
-          ) as ObservationUserPerceivedMosquitoThoraxEnum?;
-          if (valueDes == null) continue;
-          result.userPerceivedMosquitoThorax = valueDes;
-          break;
-        case r'user_perceived_mosquito_abdomen':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(ObservationUserPerceivedMosquitoAbdomenEnum),
-          ) as ObservationUserPerceivedMosquitoAbdomenEnum?;
-          if (valueDes == null) continue;
-          result.userPerceivedMosquitoAbdomen = valueDes;
-          break;
-        case r'user_perceived_mosquito_legs':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType.nullable(ObservationUserPerceivedMosquitoLegsEnum),
-          ) as ObservationUserPerceivedMosquitoLegsEnum?;
-          if (valueDes == null) continue;
-          result.userPerceivedMosquitoLegs = valueDes;
+          result.mosquitoAppearance.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -489,145 +426,5 @@ class ObservationEventMomentEnum extends EnumClass {
 
   static BuiltSet<ObservationEventMomentEnum> get values => _$observationEventMomentEnumValues;
   static ObservationEventMomentEnum valueOf(String name) => _$observationEventMomentEnumValueOf(name);
-}
-
-class ObservationUserPerceivedMosquitoSpecieEnum extends EnumClass {
-
-  /// The mosquito specie perceived by the user.
-  @BuiltValueEnumConst(wireName: r'albopictus')
-  static const ObservationUserPerceivedMosquitoSpecieEnum albopictus = _$observationUserPerceivedMosquitoSpecieEnum_albopictus;
-  /// The mosquito specie perceived by the user.
-  @BuiltValueEnumConst(wireName: r'aegypti')
-  static const ObservationUserPerceivedMosquitoSpecieEnum aegypti = _$observationUserPerceivedMosquitoSpecieEnum_aegypti;
-  /// The mosquito specie perceived by the user.
-  @BuiltValueEnumConst(wireName: r'japonicus')
-  static const ObservationUserPerceivedMosquitoSpecieEnum japonicus = _$observationUserPerceivedMosquitoSpecieEnum_japonicus;
-  /// The mosquito specie perceived by the user.
-  @BuiltValueEnumConst(wireName: r'koreicus')
-  static const ObservationUserPerceivedMosquitoSpecieEnum koreicus = _$observationUserPerceivedMosquitoSpecieEnum_koreicus;
-  /// The mosquito specie perceived by the user.
-  @BuiltValueEnumConst(wireName: r'culex')
-  static const ObservationUserPerceivedMosquitoSpecieEnum culex = _$observationUserPerceivedMosquitoSpecieEnum_culex;
-  /// The mosquito specie perceived by the user.
-  @BuiltValueEnumConst(wireName: r'other')
-  static const ObservationUserPerceivedMosquitoSpecieEnum other = _$observationUserPerceivedMosquitoSpecieEnum_other;
-  /// The mosquito specie perceived by the user.
-  @BuiltValueEnumConst(wireName: r'')
-  static const ObservationUserPerceivedMosquitoSpecieEnum empty = _$observationUserPerceivedMosquitoSpecieEnum_empty;
-  /// The mosquito specie perceived by the user.
-  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
-  static const ObservationUserPerceivedMosquitoSpecieEnum unknownDefaultOpenApi = _$observationUserPerceivedMosquitoSpecieEnum_unknownDefaultOpenApi;
-
-  static Serializer<ObservationUserPerceivedMosquitoSpecieEnum> get serializer => _$observationUserPerceivedMosquitoSpecieEnumSerializer;
-
-  const ObservationUserPerceivedMosquitoSpecieEnum._(String name): super(name);
-
-  static BuiltSet<ObservationUserPerceivedMosquitoSpecieEnum> get values => _$observationUserPerceivedMosquitoSpecieEnumValues;
-  static ObservationUserPerceivedMosquitoSpecieEnum valueOf(String name) => _$observationUserPerceivedMosquitoSpecieEnumValueOf(name);
-}
-
-class ObservationUserPerceivedMosquitoThoraxEnum extends EnumClass {
-
-  /// The species of mosquito that the thorax resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'albopictus')
-  static const ObservationUserPerceivedMosquitoThoraxEnum albopictus = _$observationUserPerceivedMosquitoThoraxEnum_albopictus;
-  /// The species of mosquito that the thorax resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'aegypti')
-  static const ObservationUserPerceivedMosquitoThoraxEnum aegypti = _$observationUserPerceivedMosquitoThoraxEnum_aegypti;
-  /// The species of mosquito that the thorax resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'japonicus')
-  static const ObservationUserPerceivedMosquitoThoraxEnum japonicus = _$observationUserPerceivedMosquitoThoraxEnum_japonicus;
-  /// The species of mosquito that the thorax resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'koreicus')
-  static const ObservationUserPerceivedMosquitoThoraxEnum koreicus = _$observationUserPerceivedMosquitoThoraxEnum_koreicus;
-  /// The species of mosquito that the thorax resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'culex')
-  static const ObservationUserPerceivedMosquitoThoraxEnum culex = _$observationUserPerceivedMosquitoThoraxEnum_culex;
-  /// The species of mosquito that the thorax resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'other')
-  static const ObservationUserPerceivedMosquitoThoraxEnum other = _$observationUserPerceivedMosquitoThoraxEnum_other;
-  /// The species of mosquito that the thorax resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'')
-  static const ObservationUserPerceivedMosquitoThoraxEnum empty = _$observationUserPerceivedMosquitoThoraxEnum_empty;
-  /// The species of mosquito that the thorax resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
-  static const ObservationUserPerceivedMosquitoThoraxEnum unknownDefaultOpenApi = _$observationUserPerceivedMosquitoThoraxEnum_unknownDefaultOpenApi;
-
-  static Serializer<ObservationUserPerceivedMosquitoThoraxEnum> get serializer => _$observationUserPerceivedMosquitoThoraxEnumSerializer;
-
-  const ObservationUserPerceivedMosquitoThoraxEnum._(String name): super(name);
-
-  static BuiltSet<ObservationUserPerceivedMosquitoThoraxEnum> get values => _$observationUserPerceivedMosquitoThoraxEnumValues;
-  static ObservationUserPerceivedMosquitoThoraxEnum valueOf(String name) => _$observationUserPerceivedMosquitoThoraxEnumValueOf(name);
-}
-
-class ObservationUserPerceivedMosquitoAbdomenEnum extends EnumClass {
-
-  /// The species of mosquito that the abdomen resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'albopictus')
-  static const ObservationUserPerceivedMosquitoAbdomenEnum albopictus = _$observationUserPerceivedMosquitoAbdomenEnum_albopictus;
-  /// The species of mosquito that the abdomen resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'aegypti')
-  static const ObservationUserPerceivedMosquitoAbdomenEnum aegypti = _$observationUserPerceivedMosquitoAbdomenEnum_aegypti;
-  /// The species of mosquito that the abdomen resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'japonicus')
-  static const ObservationUserPerceivedMosquitoAbdomenEnum japonicus = _$observationUserPerceivedMosquitoAbdomenEnum_japonicus;
-  /// The species of mosquito that the abdomen resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'koreicus')
-  static const ObservationUserPerceivedMosquitoAbdomenEnum koreicus = _$observationUserPerceivedMosquitoAbdomenEnum_koreicus;
-  /// The species of mosquito that the abdomen resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'culex')
-  static const ObservationUserPerceivedMosquitoAbdomenEnum culex = _$observationUserPerceivedMosquitoAbdomenEnum_culex;
-  /// The species of mosquito that the abdomen resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'other')
-  static const ObservationUserPerceivedMosquitoAbdomenEnum other = _$observationUserPerceivedMosquitoAbdomenEnum_other;
-  /// The species of mosquito that the abdomen resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'')
-  static const ObservationUserPerceivedMosquitoAbdomenEnum empty = _$observationUserPerceivedMosquitoAbdomenEnum_empty;
-  /// The species of mosquito that the abdomen resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
-  static const ObservationUserPerceivedMosquitoAbdomenEnum unknownDefaultOpenApi = _$observationUserPerceivedMosquitoAbdomenEnum_unknownDefaultOpenApi;
-
-  static Serializer<ObservationUserPerceivedMosquitoAbdomenEnum> get serializer => _$observationUserPerceivedMosquitoAbdomenEnumSerializer;
-
-  const ObservationUserPerceivedMosquitoAbdomenEnum._(String name): super(name);
-
-  static BuiltSet<ObservationUserPerceivedMosquitoAbdomenEnum> get values => _$observationUserPerceivedMosquitoAbdomenEnumValues;
-  static ObservationUserPerceivedMosquitoAbdomenEnum valueOf(String name) => _$observationUserPerceivedMosquitoAbdomenEnumValueOf(name);
-}
-
-class ObservationUserPerceivedMosquitoLegsEnum extends EnumClass {
-
-  /// The species of mosquito that the leg resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'albopictus')
-  static const ObservationUserPerceivedMosquitoLegsEnum albopictus = _$observationUserPerceivedMosquitoLegsEnum_albopictus;
-  /// The species of mosquito that the leg resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'aegypti')
-  static const ObservationUserPerceivedMosquitoLegsEnum aegypti = _$observationUserPerceivedMosquitoLegsEnum_aegypti;
-  /// The species of mosquito that the leg resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'japonicus')
-  static const ObservationUserPerceivedMosquitoLegsEnum japonicus = _$observationUserPerceivedMosquitoLegsEnum_japonicus;
-  /// The species of mosquito that the leg resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'koreicus')
-  static const ObservationUserPerceivedMosquitoLegsEnum koreicus = _$observationUserPerceivedMosquitoLegsEnum_koreicus;
-  /// The species of mosquito that the leg resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'culex')
-  static const ObservationUserPerceivedMosquitoLegsEnum culex = _$observationUserPerceivedMosquitoLegsEnum_culex;
-  /// The species of mosquito that the leg resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'other')
-  static const ObservationUserPerceivedMosquitoLegsEnum other = _$observationUserPerceivedMosquitoLegsEnum_other;
-  /// The species of mosquito that the leg resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'')
-  static const ObservationUserPerceivedMosquitoLegsEnum empty = _$observationUserPerceivedMosquitoLegsEnum_empty;
-  /// The species of mosquito that the leg resembles, according to the user.
-  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
-  static const ObservationUserPerceivedMosquitoLegsEnum unknownDefaultOpenApi = _$observationUserPerceivedMosquitoLegsEnum_unknownDefaultOpenApi;
-
-  static Serializer<ObservationUserPerceivedMosquitoLegsEnum> get serializer => _$observationUserPerceivedMosquitoLegsEnumSerializer;
-
-  const ObservationUserPerceivedMosquitoLegsEnum._(String name): super(name);
-
-  static BuiltSet<ObservationUserPerceivedMosquitoLegsEnum> get values => _$observationUserPerceivedMosquitoLegsEnumValues;
-  static ObservationUserPerceivedMosquitoLegsEnum valueOf(String name) => _$observationUserPerceivedMosquitoLegsEnumValueOf(name);
 }
 

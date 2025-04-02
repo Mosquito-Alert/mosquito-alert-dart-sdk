@@ -19,8 +19,8 @@ part 'topic_notification_create_request.g.dart';
 @BuiltValue()
 abstract class TopicNotificationCreateRequest implements Built<TopicNotificationCreateRequest, TopicNotificationCreateRequestBuilder> {
   @BuiltValueField(wireName: r'receiver_type')
-  TopicNotificationCreateRequestReceiverTypeEnum get receiverType;
-  // enum receiverTypeEnum {  user,  topic,  };
+  TopicNotificationCreateRequestReceiverTypeEnum? get receiverType;
+  // enum receiverTypeEnum {  topic,  };
 
   /// The message of the notification
   @BuiltValueField(wireName: r'message')
@@ -34,7 +34,8 @@ abstract class TopicNotificationCreateRequest implements Built<TopicNotification
   factory TopicNotificationCreateRequest([void updates(TopicNotificationCreateRequestBuilder b)]) = _$TopicNotificationCreateRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(TopicNotificationCreateRequestBuilder b) => b;
+  static void _defaults(TopicNotificationCreateRequestBuilder b) => b
+      ..receiverType = const TopicNotificationCreateRequestReceiverTypeEnum._('topic');
 
   @BuiltValueSerializer(custom: true)
   static Serializer<TopicNotificationCreateRequest> get serializer => _$TopicNotificationCreateRequestSerializer();
@@ -52,11 +53,13 @@ class _$TopicNotificationCreateRequestSerializer implements PrimitiveSerializer<
     TopicNotificationCreateRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'receiver_type';
-    yield serializers.serialize(
-      object.receiverType,
-      specifiedType: const FullType(TopicNotificationCreateRequestReceiverTypeEnum),
-    );
+    if (object.receiverType != null) {
+      yield r'receiver_type';
+      yield serializers.serialize(
+        object.receiverType,
+        specifiedType: const FullType(TopicNotificationCreateRequestReceiverTypeEnum),
+      );
+    }
     yield r'message';
     yield serializers.serialize(
       object.message,
@@ -142,8 +145,6 @@ class _$TopicNotificationCreateRequestSerializer implements PrimitiveSerializer<
 
 class TopicNotificationCreateRequestReceiverTypeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'user')
-  static const TopicNotificationCreateRequestReceiverTypeEnum user = _$topicNotificationCreateRequestReceiverTypeEnum_user;
   @BuiltValueEnumConst(wireName: r'topic')
   static const TopicNotificationCreateRequestReceiverTypeEnum topic = _$topicNotificationCreateRequestReceiverTypeEnum_topic;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)

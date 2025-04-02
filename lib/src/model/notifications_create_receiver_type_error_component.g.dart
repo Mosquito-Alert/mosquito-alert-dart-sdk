@@ -44,9 +44,6 @@ const NotificationsCreateReceiverTypeErrorComponentCodeEnum
     _$notificationsCreateReceiverTypeErrorComponentCodeEnum_null_ =
     const NotificationsCreateReceiverTypeErrorComponentCodeEnum._('null_');
 const NotificationsCreateReceiverTypeErrorComponentCodeEnum
-    _$notificationsCreateReceiverTypeErrorComponentCodeEnum_required_ =
-    const NotificationsCreateReceiverTypeErrorComponentCodeEnum._('required_');
-const NotificationsCreateReceiverTypeErrorComponentCodeEnum
     _$notificationsCreateReceiverTypeErrorComponentCodeEnum_unknownDefaultOpenApi =
     const NotificationsCreateReceiverTypeErrorComponentCodeEnum._(
         'unknownDefaultOpenApi');
@@ -59,8 +56,6 @@ NotificationsCreateReceiverTypeErrorComponentCodeEnum
       return _$notificationsCreateReceiverTypeErrorComponentCodeEnum_invalidChoice;
     case 'null_':
       return _$notificationsCreateReceiverTypeErrorComponentCodeEnum_null_;
-    case 'required_':
-      return _$notificationsCreateReceiverTypeErrorComponentCodeEnum_required_;
     case 'unknownDefaultOpenApi':
       return _$notificationsCreateReceiverTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -74,7 +69,6 @@ final BuiltSet<NotificationsCreateReceiverTypeErrorComponentCodeEnum>
         NotificationsCreateReceiverTypeErrorComponentCodeEnum>(const <NotificationsCreateReceiverTypeErrorComponentCodeEnum>[
   _$notificationsCreateReceiverTypeErrorComponentCodeEnum_invalidChoice,
   _$notificationsCreateReceiverTypeErrorComponentCodeEnum_null_,
-  _$notificationsCreateReceiverTypeErrorComponentCodeEnum_required_,
   _$notificationsCreateReceiverTypeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -127,13 +121,11 @@ class _$NotificationsCreateReceiverTypeErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
-    'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
-    'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

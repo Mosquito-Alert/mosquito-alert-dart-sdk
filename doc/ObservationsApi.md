@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **create**
-> Observation create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, userPerceivedMosquitoSpecie, userPerceivedMosquitoThorax, userPerceivedMosquitoAbdomen, userPerceivedMosquitoLegs)
+> Observation create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, mosquitoAppearance)
 
 
 
@@ -42,13 +42,10 @@ final String note = note_example; // String | Note user attached to report.
 final BuiltList<String> tags = ; // BuiltList<String> | 
 final String eventEnvironment = eventEnvironment_example; // String | The environment where the event took place.
 final String eventMoment = eventMoment_example; // String | The moment of the day when the event took place.
-final String userPerceivedMosquitoSpecie = userPerceivedMosquitoSpecie_example; // String | The mosquito specie perceived by the user.
-final String userPerceivedMosquitoThorax = userPerceivedMosquitoThorax_example; // String | The species of mosquito that the thorax resembles, according to the user.
-final String userPerceivedMosquitoAbdomen = userPerceivedMosquitoAbdomen_example; // String | The species of mosquito that the abdomen resembles, according to the user.
-final String userPerceivedMosquitoLegs = userPerceivedMosquitoLegs_example; // String | The species of mosquito that the leg resembles, according to the user.
+final MosquitoAppearanceRequest mosquitoAppearance = ; // MosquitoAppearanceRequest | User-provided description of the mosquito's appearance
 
 try {
-    final response = api.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, userPerceivedMosquitoSpecie, userPerceivedMosquitoThorax, userPerceivedMosquitoAbdomen, userPerceivedMosquitoLegs);
+    final response = api.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, mosquitoAppearance);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ObservationsApi->create: $e\n');
@@ -67,10 +64,7 @@ Name | Type | Description  | Notes
  **tags** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **eventEnvironment** | **String**| The environment where the event took place. | [optional] 
  **eventMoment** | **String**| The moment of the day when the event took place. | [optional] 
- **userPerceivedMosquitoSpecie** | **String**| The mosquito specie perceived by the user. | [optional] 
- **userPerceivedMosquitoThorax** | **String**| The species of mosquito that the thorax resembles, according to the user. | [optional] 
- **userPerceivedMosquitoAbdomen** | **String**| The species of mosquito that the abdomen resembles, according to the user. | [optional] 
- **userPerceivedMosquitoLegs** | **String**| The species of mosquito that the leg resembles, according to the user. | [optional] 
+ **mosquitoAppearance** | [**MosquitoAppearanceRequest**](MosquitoAppearanceRequest.md)| User-provided description of the mosquito's appearance | [optional] 
 
 ### Return type
 

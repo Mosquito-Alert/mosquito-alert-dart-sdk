@@ -10,9 +10,6 @@ const UserNotificationCreateRequestReceiverTypeEnum
     _$userNotificationCreateRequestReceiverTypeEnum_user =
     const UserNotificationCreateRequestReceiverTypeEnum._('user');
 const UserNotificationCreateRequestReceiverTypeEnum
-    _$userNotificationCreateRequestReceiverTypeEnum_topic =
-    const UserNotificationCreateRequestReceiverTypeEnum._('topic');
-const UserNotificationCreateRequestReceiverTypeEnum
     _$userNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi =
     const UserNotificationCreateRequestReceiverTypeEnum._(
         'unknownDefaultOpenApi');
@@ -22,8 +19,6 @@ UserNotificationCreateRequestReceiverTypeEnum
   switch (name) {
     case 'user':
       return _$userNotificationCreateRequestReceiverTypeEnum_user;
-    case 'topic':
-      return _$userNotificationCreateRequestReceiverTypeEnum_topic;
     case 'unknownDefaultOpenApi':
       return _$userNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi;
     default:
@@ -35,7 +30,6 @@ final BuiltSet<UserNotificationCreateRequestReceiverTypeEnum>
     _$userNotificationCreateRequestReceiverTypeEnumValues = new BuiltSet<
         UserNotificationCreateRequestReceiverTypeEnum>(const <UserNotificationCreateRequestReceiverTypeEnum>[
   _$userNotificationCreateRequestReceiverTypeEnum_user,
-  _$userNotificationCreateRequestReceiverTypeEnum_topic,
   _$userNotificationCreateRequestReceiverTypeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -48,12 +42,10 @@ class _$UserNotificationCreateRequestReceiverTypeEnumSerializer
         PrimitiveSerializer<UserNotificationCreateRequestReceiverTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'user': 'user',
-    'topic': 'topic',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'user': 'user',
-    'topic': 'topic',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -80,7 +72,7 @@ class _$UserNotificationCreateRequestReceiverTypeEnumSerializer
 
 class _$UserNotificationCreateRequest extends UserNotificationCreateRequest {
   @override
-  final UserNotificationCreateRequestReceiverTypeEnum receiverType;
+  final UserNotificationCreateRequestReceiverTypeEnum? receiverType;
   @override
   final CreateNotificationMessageRequest message;
   @override
@@ -91,12 +83,8 @@ class _$UserNotificationCreateRequest extends UserNotificationCreateRequest {
       (new UserNotificationCreateRequestBuilder()..update(updates))._build();
 
   _$UserNotificationCreateRequest._(
-      {required this.receiverType,
-      required this.message,
-      required this.userUuids})
+      {this.receiverType, required this.message, required this.userUuids})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        receiverType, r'UserNotificationCreateRequest', 'receiverType');
     BuiltValueNullFieldError.checkNotNull(
         message, r'UserNotificationCreateRequest', 'message');
     BuiltValueNullFieldError.checkNotNull(
@@ -200,8 +188,7 @@ class UserNotificationCreateRequestBuilder
     try {
       _$result = _$v ??
           new _$UserNotificationCreateRequest._(
-              receiverType: BuiltValueNullFieldError.checkNotNull(receiverType,
-                  r'UserNotificationCreateRequest', 'receiverType'),
+              receiverType: receiverType,
               message: message.build(),
               userUuids: userUuids.build());
     } catch (_) {

@@ -3,22 +3,23 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/bites_create_head_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_index_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_chest_bite_count_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_head_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_right_arm_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_note_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_left_leg_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_moment_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_source_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_right_arm_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_environment_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_left_leg_bite_count_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_chest_error_component.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_left_arm_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_right_leg_bite_count_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_counts_right_leg_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_point_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_created_at_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_left_arm_bite_count_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_non_field_errors_error_component.dart';
 import 'package:built_value/built_value.dart';
@@ -35,26 +36,27 @@ part 'bites_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BitesCreateError implements Built<BitesCreateError, BitesCreateErrorBuilder> {
-  /// One Of [BitesCreateChestBiteCountErrorComponent], [BitesCreateCreatedAtErrorComponent], [BitesCreateEventEnvironmentErrorComponent], [BitesCreateEventMomentErrorComponent], [BitesCreateHeadBiteCountErrorComponent], [BitesCreateLeftArmBiteCountErrorComponent], [BitesCreateLeftLegBiteCountErrorComponent], [BitesCreateLocationNonFieldErrorsErrorComponent], [BitesCreateLocationPointErrorComponent], [BitesCreateLocationSourceErrorComponent], [BitesCreateNonFieldErrorsErrorComponent], [BitesCreateNoteErrorComponent], [BitesCreateRightArmBiteCountErrorComponent], [BitesCreateRightLegBiteCountErrorComponent], [BitesCreateSentAtErrorComponent], [BitesCreateTagsErrorComponent], [BitesCreateTagsINDEXErrorComponent]
+  /// One Of [BitesCreateCountsChestErrorComponent], [BitesCreateCountsHeadErrorComponent], [BitesCreateCountsLeftArmErrorComponent], [BitesCreateCountsLeftLegErrorComponent], [BitesCreateCountsNonFieldErrorsErrorComponent], [BitesCreateCountsRightArmErrorComponent], [BitesCreateCountsRightLegErrorComponent], [BitesCreateCreatedAtErrorComponent], [BitesCreateEventEnvironmentErrorComponent], [BitesCreateEventMomentErrorComponent], [BitesCreateLocationNonFieldErrorsErrorComponent], [BitesCreateLocationPointErrorComponent], [BitesCreateLocationSourceErrorComponent], [BitesCreateNonFieldErrorsErrorComponent], [BitesCreateNoteErrorComponent], [BitesCreateSentAtErrorComponent], [BitesCreateTagsErrorComponent], [BitesCreateTagsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
-    r'chest_bite_count': BitesCreateChestBiteCountErrorComponent,
+    r'counts.chest': BitesCreateCountsChestErrorComponent,
+    r'counts.head': BitesCreateCountsHeadErrorComponent,
+    r'counts.left_arm': BitesCreateCountsLeftArmErrorComponent,
+    r'counts.left_leg': BitesCreateCountsLeftLegErrorComponent,
+    r'counts.non_field_errors': BitesCreateCountsNonFieldErrorsErrorComponent,
+    r'counts.right_arm': BitesCreateCountsRightArmErrorComponent,
+    r'counts.right_leg': BitesCreateCountsRightLegErrorComponent,
     r'created_at': BitesCreateCreatedAtErrorComponent,
     r'event_environment': BitesCreateEventEnvironmentErrorComponent,
     r'event_moment': BitesCreateEventMomentErrorComponent,
-    r'head_bite_count': BitesCreateHeadBiteCountErrorComponent,
-    r'left_arm_bite_count': BitesCreateLeftArmBiteCountErrorComponent,
-    r'left_leg_bite_count': BitesCreateLeftLegBiteCountErrorComponent,
     r'location.non_field_errors': BitesCreateLocationNonFieldErrorsErrorComponent,
     r'location.point': BitesCreateLocationPointErrorComponent,
     r'location.source': BitesCreateLocationSourceErrorComponent,
     r'non_field_errors': BitesCreateNonFieldErrorsErrorComponent,
     r'note': BitesCreateNoteErrorComponent,
-    r'right_arm_bite_count': BitesCreateRightArmBiteCountErrorComponent,
-    r'right_leg_bite_count': BitesCreateRightLegBiteCountErrorComponent,
     r'sent_at': BitesCreateSentAtErrorComponent,
     r'tags': BitesCreateTagsErrorComponent,
     r'tags.INDEX': BitesCreateTagsINDEXErrorComponent,
@@ -73,8 +75,26 @@ abstract class BitesCreateError implements Built<BitesCreateError, BitesCreateEr
 
 extension BitesCreateErrorDiscriminatorExt on BitesCreateError {
     String? get discriminatorValue {
-        if (this is BitesCreateChestBiteCountErrorComponent) {
-            return r'chest_bite_count';
+        if (this is BitesCreateCountsChestErrorComponent) {
+            return r'counts.chest';
+        }
+        if (this is BitesCreateCountsHeadErrorComponent) {
+            return r'counts.head';
+        }
+        if (this is BitesCreateCountsLeftArmErrorComponent) {
+            return r'counts.left_arm';
+        }
+        if (this is BitesCreateCountsLeftLegErrorComponent) {
+            return r'counts.left_leg';
+        }
+        if (this is BitesCreateCountsNonFieldErrorsErrorComponent) {
+            return r'counts.non_field_errors';
+        }
+        if (this is BitesCreateCountsRightArmErrorComponent) {
+            return r'counts.right_arm';
+        }
+        if (this is BitesCreateCountsRightLegErrorComponent) {
+            return r'counts.right_leg';
         }
         if (this is BitesCreateCreatedAtErrorComponent) {
             return r'created_at';
@@ -84,15 +104,6 @@ extension BitesCreateErrorDiscriminatorExt on BitesCreateError {
         }
         if (this is BitesCreateEventMomentErrorComponent) {
             return r'event_moment';
-        }
-        if (this is BitesCreateHeadBiteCountErrorComponent) {
-            return r'head_bite_count';
-        }
-        if (this is BitesCreateLeftArmBiteCountErrorComponent) {
-            return r'left_arm_bite_count';
-        }
-        if (this is BitesCreateLeftLegBiteCountErrorComponent) {
-            return r'left_leg_bite_count';
         }
         if (this is BitesCreateLocationNonFieldErrorsErrorComponent) {
             return r'location.non_field_errors';
@@ -109,12 +120,6 @@ extension BitesCreateErrorDiscriminatorExt on BitesCreateError {
         if (this is BitesCreateNoteErrorComponent) {
             return r'note';
         }
-        if (this is BitesCreateRightArmBiteCountErrorComponent) {
-            return r'right_arm_bite_count';
-        }
-        if (this is BitesCreateRightLegBiteCountErrorComponent) {
-            return r'right_leg_bite_count';
-        }
         if (this is BitesCreateSentAtErrorComponent) {
             return r'sent_at';
         }
@@ -129,8 +134,26 @@ extension BitesCreateErrorDiscriminatorExt on BitesCreateError {
 }
 extension BitesCreateErrorBuilderDiscriminatorExt on BitesCreateErrorBuilder {
     String? get discriminatorValue {
-        if (this is BitesCreateChestBiteCountErrorComponentBuilder) {
-            return r'chest_bite_count';
+        if (this is BitesCreateCountsChestErrorComponentBuilder) {
+            return r'counts.chest';
+        }
+        if (this is BitesCreateCountsHeadErrorComponentBuilder) {
+            return r'counts.head';
+        }
+        if (this is BitesCreateCountsLeftArmErrorComponentBuilder) {
+            return r'counts.left_arm';
+        }
+        if (this is BitesCreateCountsLeftLegErrorComponentBuilder) {
+            return r'counts.left_leg';
+        }
+        if (this is BitesCreateCountsNonFieldErrorsErrorComponentBuilder) {
+            return r'counts.non_field_errors';
+        }
+        if (this is BitesCreateCountsRightArmErrorComponentBuilder) {
+            return r'counts.right_arm';
+        }
+        if (this is BitesCreateCountsRightLegErrorComponentBuilder) {
+            return r'counts.right_leg';
         }
         if (this is BitesCreateCreatedAtErrorComponentBuilder) {
             return r'created_at';
@@ -140,15 +163,6 @@ extension BitesCreateErrorBuilderDiscriminatorExt on BitesCreateErrorBuilder {
         }
         if (this is BitesCreateEventMomentErrorComponentBuilder) {
             return r'event_moment';
-        }
-        if (this is BitesCreateHeadBiteCountErrorComponentBuilder) {
-            return r'head_bite_count';
-        }
-        if (this is BitesCreateLeftArmBiteCountErrorComponentBuilder) {
-            return r'left_arm_bite_count';
-        }
-        if (this is BitesCreateLeftLegBiteCountErrorComponentBuilder) {
-            return r'left_leg_bite_count';
         }
         if (this is BitesCreateLocationNonFieldErrorsErrorComponentBuilder) {
             return r'location.non_field_errors';
@@ -164,12 +178,6 @@ extension BitesCreateErrorBuilderDiscriminatorExt on BitesCreateErrorBuilder {
         }
         if (this is BitesCreateNoteErrorComponentBuilder) {
             return r'note';
-        }
-        if (this is BitesCreateRightArmBiteCountErrorComponentBuilder) {
-            return r'right_arm_bite_count';
-        }
-        if (this is BitesCreateRightLegBiteCountErrorComponentBuilder) {
-            return r'right_leg_bite_count';
         }
         if (this is BitesCreateSentAtErrorComponentBuilder) {
             return r'sent_at';
@@ -220,16 +228,58 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
     final discIndex = serializedList.indexOf(BitesCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BitesCreateChestBiteCountErrorComponent, BitesCreateCreatedAtErrorComponent, BitesCreateEventEnvironmentErrorComponent, BitesCreateEventMomentErrorComponent, BitesCreateHeadBiteCountErrorComponent, BitesCreateLeftArmBiteCountErrorComponent, BitesCreateLeftLegBiteCountErrorComponent, BitesCreateLocationNonFieldErrorsErrorComponent, BitesCreateLocationPointErrorComponent, BitesCreateLocationSourceErrorComponent, BitesCreateNonFieldErrorsErrorComponent, BitesCreateNoteErrorComponent, BitesCreateRightArmBiteCountErrorComponent, BitesCreateRightLegBiteCountErrorComponent, BitesCreateSentAtErrorComponent, BitesCreateTagsErrorComponent, BitesCreateTagsINDEXErrorComponent, ];
+    final oneOfTypes = [BitesCreateCountsChestErrorComponent, BitesCreateCountsHeadErrorComponent, BitesCreateCountsLeftArmErrorComponent, BitesCreateCountsLeftLegErrorComponent, BitesCreateCountsNonFieldErrorsErrorComponent, BitesCreateCountsRightArmErrorComponent, BitesCreateCountsRightLegErrorComponent, BitesCreateCreatedAtErrorComponent, BitesCreateEventEnvironmentErrorComponent, BitesCreateEventMomentErrorComponent, BitesCreateLocationNonFieldErrorsErrorComponent, BitesCreateLocationPointErrorComponent, BitesCreateLocationSourceErrorComponent, BitesCreateNonFieldErrorsErrorComponent, BitesCreateNoteErrorComponent, BitesCreateSentAtErrorComponent, BitesCreateTagsErrorComponent, BitesCreateTagsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
-      case r'chest_bite_count':
+      case r'counts.chest':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
-          specifiedType: FullType(BitesCreateChestBiteCountErrorComponent),
-        ) as BitesCreateChestBiteCountErrorComponent;
-        oneOfType = BitesCreateChestBiteCountErrorComponent;
+          specifiedType: FullType(BitesCreateCountsChestErrorComponent),
+        ) as BitesCreateCountsChestErrorComponent;
+        oneOfType = BitesCreateCountsChestErrorComponent;
+        break;
+      case r'counts.head':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesCreateCountsHeadErrorComponent),
+        ) as BitesCreateCountsHeadErrorComponent;
+        oneOfType = BitesCreateCountsHeadErrorComponent;
+        break;
+      case r'counts.left_arm':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesCreateCountsLeftArmErrorComponent),
+        ) as BitesCreateCountsLeftArmErrorComponent;
+        oneOfType = BitesCreateCountsLeftArmErrorComponent;
+        break;
+      case r'counts.left_leg':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesCreateCountsLeftLegErrorComponent),
+        ) as BitesCreateCountsLeftLegErrorComponent;
+        oneOfType = BitesCreateCountsLeftLegErrorComponent;
+        break;
+      case r'counts.non_field_errors':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesCreateCountsNonFieldErrorsErrorComponent),
+        ) as BitesCreateCountsNonFieldErrorsErrorComponent;
+        oneOfType = BitesCreateCountsNonFieldErrorsErrorComponent;
+        break;
+      case r'counts.right_arm':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesCreateCountsRightArmErrorComponent),
+        ) as BitesCreateCountsRightArmErrorComponent;
+        oneOfType = BitesCreateCountsRightArmErrorComponent;
+        break;
+      case r'counts.right_leg':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesCreateCountsRightLegErrorComponent),
+        ) as BitesCreateCountsRightLegErrorComponent;
+        oneOfType = BitesCreateCountsRightLegErrorComponent;
         break;
       case r'created_at':
         oneOfResult = serializers.deserialize(
@@ -251,27 +301,6 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
           specifiedType: FullType(BitesCreateEventMomentErrorComponent),
         ) as BitesCreateEventMomentErrorComponent;
         oneOfType = BitesCreateEventMomentErrorComponent;
-        break;
-      case r'head_bite_count':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesCreateHeadBiteCountErrorComponent),
-        ) as BitesCreateHeadBiteCountErrorComponent;
-        oneOfType = BitesCreateHeadBiteCountErrorComponent;
-        break;
-      case r'left_arm_bite_count':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesCreateLeftArmBiteCountErrorComponent),
-        ) as BitesCreateLeftArmBiteCountErrorComponent;
-        oneOfType = BitesCreateLeftArmBiteCountErrorComponent;
-        break;
-      case r'left_leg_bite_count':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesCreateLeftLegBiteCountErrorComponent),
-        ) as BitesCreateLeftLegBiteCountErrorComponent;
-        oneOfType = BitesCreateLeftLegBiteCountErrorComponent;
         break;
       case r'location.non_field_errors':
         oneOfResult = serializers.deserialize(
@@ -308,20 +337,6 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
         ) as BitesCreateNoteErrorComponent;
         oneOfType = BitesCreateNoteErrorComponent;
         break;
-      case r'right_arm_bite_count':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesCreateRightArmBiteCountErrorComponent),
-        ) as BitesCreateRightArmBiteCountErrorComponent;
-        oneOfType = BitesCreateRightArmBiteCountErrorComponent;
-        break;
-      case r'right_leg_bite_count':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BitesCreateRightLegBiteCountErrorComponent),
-        ) as BitesCreateRightLegBiteCountErrorComponent;
-        oneOfType = BitesCreateRightLegBiteCountErrorComponent;
-        break;
       case r'sent_at':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
@@ -353,8 +368,8 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
 
 class BitesCreateErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'right_leg_bite_count')
-  static const BitesCreateErrorAttrEnum rightLegBiteCount = _$bitesCreateErrorAttrEnum_rightLegBiteCount;
+  @BuiltValueEnumConst(wireName: r'counts.right_leg')
+  static const BitesCreateErrorAttrEnum countsPeriodRightLeg = _$bitesCreateErrorAttrEnum_countsPeriodRightLeg;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BitesCreateErrorAttrEnum unknownDefaultOpenApi = _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi;
 

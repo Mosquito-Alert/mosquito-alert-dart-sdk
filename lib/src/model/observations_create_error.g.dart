@@ -7,8 +7,8 @@ part of 'observations_create_error.dart';
 // **************************************************************************
 
 const ObservationsCreateErrorAttrEnum
-    _$observationsCreateErrorAttrEnum_userPerceivedMosquitoLegs =
-    const ObservationsCreateErrorAttrEnum._('userPerceivedMosquitoLegs');
+    _$observationsCreateErrorAttrEnum_mosquitoAppearancePeriodLegs =
+    const ObservationsCreateErrorAttrEnum._('mosquitoAppearancePeriodLegs');
 const ObservationsCreateErrorAttrEnum
     _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi =
     const ObservationsCreateErrorAttrEnum._('unknownDefaultOpenApi');
@@ -16,8 +16,8 @@ const ObservationsCreateErrorAttrEnum
 ObservationsCreateErrorAttrEnum _$observationsCreateErrorAttrEnumValueOf(
     String name) {
   switch (name) {
-    case 'userPerceivedMosquitoLegs':
-      return _$observationsCreateErrorAttrEnum_userPerceivedMosquitoLegs;
+    case 'mosquitoAppearancePeriodLegs':
+      return _$observationsCreateErrorAttrEnum_mosquitoAppearancePeriodLegs;
     case 'unknownDefaultOpenApi':
       return _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -28,7 +28,7 @@ ObservationsCreateErrorAttrEnum _$observationsCreateErrorAttrEnumValueOf(
 final BuiltSet<ObservationsCreateErrorAttrEnum>
     _$observationsCreateErrorAttrEnumValues = new BuiltSet<
         ObservationsCreateErrorAttrEnum>(const <ObservationsCreateErrorAttrEnum>[
-  _$observationsCreateErrorAttrEnum_userPerceivedMosquitoLegs,
+  _$observationsCreateErrorAttrEnum_mosquitoAppearancePeriodLegs,
   _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
@@ -68,11 +68,11 @@ Serializer<ObservationsCreateErrorCodeEnum>
 class _$ObservationsCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<ObservationsCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'userPerceivedMosquitoLegs': 'user_perceived_mosquito_legs',
+    'mosquitoAppearancePeriodLegs': 'mosquito_appearance.legs',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'user_perceived_mosquito_legs': 'userPerceivedMosquitoLegs',
+    'mosquito_appearance.legs': 'mosquitoAppearancePeriodLegs',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

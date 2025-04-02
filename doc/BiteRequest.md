@@ -15,12 +15,7 @@ Name | Type | Description | Notes
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **eventEnvironment** | **String** | The environment where the event took place. | [optional] 
 **eventMoment** | **String** | The moment of the day when the event took place. | [optional] 
-**headBiteCount** | **int** | Number of bites reported in the head. | [optional] [default to 0]
-**leftArmBiteCount** | **int** | Number of bites reported in the left arm. | [optional] [default to 0]
-**rightArmBiteCount** | **int** | Number of bites reported in the right arm. | [optional] [default to 0]
-**chestBiteCount** | **int** | Number of bites reported in the chest. | [optional] [default to 0]
-**leftLegBiteCount** | **int** | Number of bites reported in the left leg. | [optional] [default to 0]
-**rightLegBiteCount** | **int** | Number of bites reported in the right leg. | [optional] [default to 0]
+**counts** | [**BiteCountsRequest**](BiteCountsRequest.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

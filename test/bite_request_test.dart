@@ -45,39 +45,8 @@ void main() {
       // TODO
     });
 
-    // Number of bites reported in the head.
-    // int headBiteCount (default value: 0)
-    test('to test the property `headBiteCount`', () async {
-      // TODO
-    });
-
-    // Number of bites reported in the left arm.
-    // int leftArmBiteCount (default value: 0)
-    test('to test the property `leftArmBiteCount`', () async {
-      // TODO
-    });
-
-    // Number of bites reported in the right arm.
-    // int rightArmBiteCount (default value: 0)
-    test('to test the property `rightArmBiteCount`', () async {
-      // TODO
-    });
-
-    // Number of bites reported in the chest.
-    // int chestBiteCount (default value: 0)
-    test('to test the property `chestBiteCount`', () async {
-      // TODO
-    });
-
-    // Number of bites reported in the left leg.
-    // int leftLegBiteCount (default value: 0)
-    test('to test the property `leftLegBiteCount`', () async {
-      // TODO
-    });
-
-    // Number of bites reported in the right leg.
-    // int rightLegBiteCount (default value: 0)
-    test('to test the property `rightLegBiteCount`', () async {
+    // BiteCountsRequest counts
+    test('to test the property `counts`', () async {
       // TODO
     });
 

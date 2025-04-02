@@ -6,16 +6,16 @@ part of 'bites_create_error.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const BitesCreateErrorAttrEnum _$bitesCreateErrorAttrEnum_rightLegBiteCount =
-    const BitesCreateErrorAttrEnum._('rightLegBiteCount');
+const BitesCreateErrorAttrEnum _$bitesCreateErrorAttrEnum_countsPeriodRightLeg =
+    const BitesCreateErrorAttrEnum._('countsPeriodRightLeg');
 const BitesCreateErrorAttrEnum
     _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi =
     const BitesCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 BitesCreateErrorAttrEnum _$bitesCreateErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'rightLegBiteCount':
-      return _$bitesCreateErrorAttrEnum_rightLegBiteCount;
+    case 'countsPeriodRightLeg':
+      return _$bitesCreateErrorAttrEnum_countsPeriodRightLeg;
     case 'unknownDefaultOpenApi':
       return _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -25,7 +25,7 @@ BitesCreateErrorAttrEnum _$bitesCreateErrorAttrEnumValueOf(String name) {
 
 final BuiltSet<BitesCreateErrorAttrEnum> _$bitesCreateErrorAttrEnumValues =
     new BuiltSet<BitesCreateErrorAttrEnum>(const <BitesCreateErrorAttrEnum>[
-  _$bitesCreateErrorAttrEnum_rightLegBiteCount,
+  _$bitesCreateErrorAttrEnum_countsPeriodRightLeg,
   _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
@@ -70,11 +70,11 @@ Serializer<BitesCreateErrorCodeEnum> _$bitesCreateErrorCodeEnumSerializer =
 class _$BitesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<BitesCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'rightLegBiteCount': 'right_leg_bite_count',
+    'countsPeriodRightLeg': 'counts.right_leg',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'right_leg_bite_count': 'rightLegBiteCount',
+    'counts.right_leg': 'countsPeriodRightLeg',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

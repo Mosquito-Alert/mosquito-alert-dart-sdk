@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(UserNotificationCreateRequest, () {
-    // String receiverType
+    // String receiverType (default value: 'user')
     test('to test the property `receiverType`', () async {
       // TODO
     });

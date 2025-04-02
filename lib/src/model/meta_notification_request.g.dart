@@ -7,9 +7,6 @@ part of 'meta_notification_request.dart';
 // **************************************************************************
 
 const MetaNotificationRequestReceiverTypeEnum
-    _$metaNotificationRequestReceiverTypeEnum_user =
-    const MetaNotificationRequestReceiverTypeEnum._('user');
-const MetaNotificationRequestReceiverTypeEnum
     _$metaNotificationRequestReceiverTypeEnum_topic =
     const MetaNotificationRequestReceiverTypeEnum._('topic');
 const MetaNotificationRequestReceiverTypeEnum
@@ -19,8 +16,6 @@ const MetaNotificationRequestReceiverTypeEnum
 MetaNotificationRequestReceiverTypeEnum
     _$metaNotificationRequestReceiverTypeEnumValueOf(String name) {
   switch (name) {
-    case 'user':
-      return _$metaNotificationRequestReceiverTypeEnum_user;
     case 'topic':
       return _$metaNotificationRequestReceiverTypeEnum_topic;
     case 'unknownDefaultOpenApi':
@@ -33,7 +28,6 @@ MetaNotificationRequestReceiverTypeEnum
 final BuiltSet<MetaNotificationRequestReceiverTypeEnum>
     _$metaNotificationRequestReceiverTypeEnumValues = new BuiltSet<
         MetaNotificationRequestReceiverTypeEnum>(const <MetaNotificationRequestReceiverTypeEnum>[
-  _$metaNotificationRequestReceiverTypeEnum_user,
   _$metaNotificationRequestReceiverTypeEnum_topic,
   _$metaNotificationRequestReceiverTypeEnum_unknownDefaultOpenApi,
 ]);
@@ -45,12 +39,10 @@ Serializer<MetaNotificationRequestReceiverTypeEnum>
 class _$MetaNotificationRequestReceiverTypeEnumSerializer
     implements PrimitiveSerializer<MetaNotificationRequestReceiverTypeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'user': 'user',
     'topic': 'topic',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'user': 'user',
     'topic': 'topic',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };

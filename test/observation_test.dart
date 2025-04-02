@@ -87,27 +87,9 @@ void main() {
       // TODO
     });
 
-    // The mosquito specie perceived by the user.
-    // String userPerceivedMosquitoSpecie
-    test('to test the property `userPerceivedMosquitoSpecie`', () async {
-      // TODO
-    });
-
-    // The species of mosquito that the thorax resembles, according to the user.
-    // String userPerceivedMosquitoThorax
-    test('to test the property `userPerceivedMosquitoThorax`', () async {
-      // TODO
-    });
-
-    // The species of mosquito that the abdomen resembles, according to the user.
-    // String userPerceivedMosquitoAbdomen
-    test('to test the property `userPerceivedMosquitoAbdomen`', () async {
-      // TODO
-    });
-
-    // The species of mosquito that the leg resembles, according to the user.
-    // String userPerceivedMosquitoLegs
-    test('to test the property `userPerceivedMosquitoLegs`', () async {
+    // User-provided description of the mosquito's appearance
+    // MosquitoAppearance mosquitoAppearance
+    test('to test the property `mosquitoAppearance`', () async {
       // TODO
     });
 

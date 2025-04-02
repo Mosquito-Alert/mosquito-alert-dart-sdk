@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(TopicNotificationCreateRequest, () {
-    // String receiverType
+    // String receiverType (default value: 'topic')
     test('to test the property `receiverType`', () async {
       // TODO
     });

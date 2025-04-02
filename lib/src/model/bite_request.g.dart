@@ -194,17 +194,7 @@ class _$BiteRequest extends BiteRequest {
   @override
   final BiteRequestEventMomentEnum? eventMoment;
   @override
-  final int? headBiteCount;
-  @override
-  final int? leftArmBiteCount;
-  @override
-  final int? rightArmBiteCount;
-  @override
-  final int? chestBiteCount;
-  @override
-  final int? leftLegBiteCount;
-  @override
-  final int? rightLegBiteCount;
+  final BiteCountsRequest counts;
 
   factory _$BiteRequest([void Function(BiteRequestBuilder)? updates]) =>
       (new BiteRequestBuilder()..update(updates))._build();
@@ -217,17 +207,13 @@ class _$BiteRequest extends BiteRequest {
       this.tags,
       this.eventEnvironment,
       this.eventMoment,
-      this.headBiteCount,
-      this.leftArmBiteCount,
-      this.rightArmBiteCount,
-      this.chestBiteCount,
-      this.leftLegBiteCount,
-      this.rightLegBiteCount})
+      required this.counts})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'BiteRequest', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(sentAt, r'BiteRequest', 'sentAt');
     BuiltValueNullFieldError.checkNotNull(location, r'BiteRequest', 'location');
+    BuiltValueNullFieldError.checkNotNull(counts, r'BiteRequest', 'counts');
   }
 
   @override
@@ -248,12 +234,7 @@ class _$BiteRequest extends BiteRequest {
         tags == other.tags &&
         eventEnvironment == other.eventEnvironment &&
         eventMoment == other.eventMoment &&
-        headBiteCount == other.headBiteCount &&
-        leftArmBiteCount == other.leftArmBiteCount &&
-        rightArmBiteCount == other.rightArmBiteCount &&
-        chestBiteCount == other.chestBiteCount &&
-        leftLegBiteCount == other.leftLegBiteCount &&
-        rightLegBiteCount == other.rightLegBiteCount;
+        counts == other.counts;
   }
 
   @override
@@ -266,12 +247,7 @@ class _$BiteRequest extends BiteRequest {
     _$hash = $jc(_$hash, tags.hashCode);
     _$hash = $jc(_$hash, eventEnvironment.hashCode);
     _$hash = $jc(_$hash, eventMoment.hashCode);
-    _$hash = $jc(_$hash, headBiteCount.hashCode);
-    _$hash = $jc(_$hash, leftArmBiteCount.hashCode);
-    _$hash = $jc(_$hash, rightArmBiteCount.hashCode);
-    _$hash = $jc(_$hash, chestBiteCount.hashCode);
-    _$hash = $jc(_$hash, leftLegBiteCount.hashCode);
-    _$hash = $jc(_$hash, rightLegBiteCount.hashCode);
+    _$hash = $jc(_$hash, counts.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -286,12 +262,7 @@ class _$BiteRequest extends BiteRequest {
           ..add('tags', tags)
           ..add('eventEnvironment', eventEnvironment)
           ..add('eventMoment', eventMoment)
-          ..add('headBiteCount', headBiteCount)
-          ..add('leftArmBiteCount', leftArmBiteCount)
-          ..add('rightArmBiteCount', rightArmBiteCount)
-          ..add('chestBiteCount', chestBiteCount)
-          ..add('leftLegBiteCount', leftLegBiteCount)
-          ..add('rightLegBiteCount', rightLegBiteCount))
+          ..add('counts', counts))
         .toString();
   }
 }
@@ -331,35 +302,10 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
   set eventMoment(BiteRequestEventMomentEnum? eventMoment) =>
       _$this._eventMoment = eventMoment;
 
-  int? _headBiteCount;
-  int? get headBiteCount => _$this._headBiteCount;
-  set headBiteCount(int? headBiteCount) =>
-      _$this._headBiteCount = headBiteCount;
-
-  int? _leftArmBiteCount;
-  int? get leftArmBiteCount => _$this._leftArmBiteCount;
-  set leftArmBiteCount(int? leftArmBiteCount) =>
-      _$this._leftArmBiteCount = leftArmBiteCount;
-
-  int? _rightArmBiteCount;
-  int? get rightArmBiteCount => _$this._rightArmBiteCount;
-  set rightArmBiteCount(int? rightArmBiteCount) =>
-      _$this._rightArmBiteCount = rightArmBiteCount;
-
-  int? _chestBiteCount;
-  int? get chestBiteCount => _$this._chestBiteCount;
-  set chestBiteCount(int? chestBiteCount) =>
-      _$this._chestBiteCount = chestBiteCount;
-
-  int? _leftLegBiteCount;
-  int? get leftLegBiteCount => _$this._leftLegBiteCount;
-  set leftLegBiteCount(int? leftLegBiteCount) =>
-      _$this._leftLegBiteCount = leftLegBiteCount;
-
-  int? _rightLegBiteCount;
-  int? get rightLegBiteCount => _$this._rightLegBiteCount;
-  set rightLegBiteCount(int? rightLegBiteCount) =>
-      _$this._rightLegBiteCount = rightLegBiteCount;
+  BiteCountsRequestBuilder? _counts;
+  BiteCountsRequestBuilder get counts =>
+      _$this._counts ??= new BiteCountsRequestBuilder();
+  set counts(BiteCountsRequestBuilder? counts) => _$this._counts = counts;
 
   BiteRequestBuilder() {
     BiteRequest._defaults(this);
@@ -375,12 +321,7 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
       _tags = $v.tags?.toBuilder();
       _eventEnvironment = $v.eventEnvironment;
       _eventMoment = $v.eventMoment;
-      _headBiteCount = $v.headBiteCount;
-      _leftArmBiteCount = $v.leftArmBiteCount;
-      _rightArmBiteCount = $v.rightArmBiteCount;
-      _chestBiteCount = $v.chestBiteCount;
-      _leftLegBiteCount = $v.leftLegBiteCount;
-      _rightLegBiteCount = $v.rightLegBiteCount;
+      _counts = $v.counts.toBuilder();
       _$v = null;
     }
     return this;
@@ -414,12 +355,7 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
               tags: _tags?.build(),
               eventEnvironment: eventEnvironment,
               eventMoment: eventMoment,
-              headBiteCount: headBiteCount,
-              leftArmBiteCount: leftArmBiteCount,
-              rightArmBiteCount: rightArmBiteCount,
-              chestBiteCount: chestBiteCount,
-              leftLegBiteCount: leftLegBiteCount,
-              rightLegBiteCount: rightLegBiteCount);
+              counts: counts.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -428,6 +364,9 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
 
         _$failedField = 'tags';
         _tags?.build();
+
+        _$failedField = 'counts';
+        counts.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'BiteRequest', _$failedField, e.toString());
