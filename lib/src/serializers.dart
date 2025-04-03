@@ -126,6 +126,7 @@ import 'package:mosquito_alert/src/model/campaigns_list_error.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/country.dart';
+import 'package:mosquito_alert/src/model/country_request.dart';
 import 'package:mosquito_alert/src/model/create_notification.dart';
 import 'package:mosquito_alert/src/model/create_notification_message.dart';
 import 'package:mosquito_alert/src/model/create_notification_message_request.dart';
@@ -471,6 +472,7 @@ part 'serializers.g.dart';
   CampaignsListOrderByErrorComponent,
   CampaignsListValidationError,
   Country,
+  CountryRequest,
   CreateNotification,
   CreateNotificationMessage,
   CreateNotificationMessageRequest,

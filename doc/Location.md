@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **point** | [**LocationPoint**](LocationPoint.md) |  | 
 **timezone** | **String** |  | 
 **displayName** | **String** |  | 
-**countryId** | **int** |  | 
+**country** | [**Country**](Country.md) |  | 
 **admBoundaries** | [**BuiltList&lt;AdmBoundary&gt;**](AdmBoundary.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

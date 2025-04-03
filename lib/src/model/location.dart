@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/adm_boundary.dart';
+import 'package:mosquito_alert/src/model/country.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/location_point.dart';
 import 'package:built_value/built_value.dart';
@@ -18,7 +19,7 @@ part 'location.g.dart';
 /// * [point] 
 /// * [timezone] 
 /// * [displayName] 
-/// * [countryId] 
+/// * [country] 
 /// * [admBoundaries] 
 @BuiltValue()
 abstract class Location implements Built<Location, LocationBuilder> {
@@ -37,8 +38,8 @@ abstract class Location implements Built<Location, LocationBuilder> {
   @BuiltValueField(wireName: r'display_name')
   String? get displayName;
 
-  @BuiltValueField(wireName: r'country_id')
-  int? get countryId;
+  @BuiltValueField(wireName: r'country')
+  Country? get country;
 
   @BuiltValueField(wireName: r'adm_boundaries')
   BuiltList<AdmBoundary> get admBoundaries;
@@ -86,10 +87,10 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
       object.displayName,
       specifiedType: const FullType.nullable(String),
     );
-    yield r'country_id';
-    yield object.countryId == null ? null : serializers.serialize(
-      object.countryId,
-      specifiedType: const FullType.nullable(int),
+    yield r'country';
+    yield object.country == null ? null : serializers.serialize(
+      object.country,
+      specifiedType: const FullType.nullable(Country),
     );
     yield r'adm_boundaries';
     yield serializers.serialize(
@@ -149,13 +150,13 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
           if (valueDes == null) continue;
           result.displayName = valueDes;
           break;
-        case r'country_id':
+        case r'country':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
+            specifiedType: const FullType.nullable(Country),
+          ) as Country?;
           if (valueDes == null) continue;
-          result.countryId = valueDes;
+          result.country.replace(valueDes);
           break;
         case r'adm_boundaries':
           final valueDes = serializers.deserialize(

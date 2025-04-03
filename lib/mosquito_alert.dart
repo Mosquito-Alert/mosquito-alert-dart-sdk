@@ -135,6 +135,7 @@ export 'package:mosquito_alert/src/model/campaigns_list_error.dart';
 export 'package:mosquito_alert/src/model/campaigns_list_order_by_error_component.dart';
 export 'package:mosquito_alert/src/model/campaigns_list_validation_error.dart';
 export 'package:mosquito_alert/src/model/country.dart';
+export 'package:mosquito_alert/src/model/country_request.dart';
 export 'package:mosquito_alert/src/model/create_notification.dart';
 export 'package:mosquito_alert/src/model/create_notification_message.dart';
 export 'package:mosquito_alert/src/model/create_notification_message_request.dart';

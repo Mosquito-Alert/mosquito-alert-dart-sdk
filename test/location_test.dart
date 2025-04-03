@@ -28,8 +28,8 @@ void main() {
       // TODO
     });
 
-    // int countryId
-    test('to test the property `countryId`', () async {
+    // Country country
+    test('to test the property `country`', () async {
       // TODO
     });
 

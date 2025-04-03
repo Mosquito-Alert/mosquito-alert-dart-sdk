@@ -4321,7 +4321,7 @@ class _$Location extends Location {
   @override
   final String? displayName;
   @override
-  final int? countryId;
+  final Country? country;
   @override
   final BuiltList<AdmBoundary> admBoundaries;
 
@@ -4333,7 +4333,7 @@ class _$Location extends Location {
       required this.point,
       this.timezone,
       this.displayName,
-      this.countryId,
+      this.country,
       required this.admBoundaries})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(source_, r'Location', 'source_');
@@ -4357,7 +4357,7 @@ class _$Location extends Location {
         point == other.point &&
         timezone == other.timezone &&
         displayName == other.displayName &&
-        countryId == other.countryId &&
+        country == other.country &&
         admBoundaries == other.admBoundaries;
   }
 
@@ -4368,7 +4368,7 @@ class _$Location extends Location {
     _$hash = $jc(_$hash, point.hashCode);
     _$hash = $jc(_$hash, timezone.hashCode);
     _$hash = $jc(_$hash, displayName.hashCode);
-    _$hash = $jc(_$hash, countryId.hashCode);
+    _$hash = $jc(_$hash, country.hashCode);
     _$hash = $jc(_$hash, admBoundaries.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -4381,7 +4381,7 @@ class _$Location extends Location {
           ..add('point', point)
           ..add('timezone', timezone)
           ..add('displayName', displayName)
-          ..add('countryId', countryId)
+          ..add('country', country)
           ..add('admBoundaries', admBoundaries))
         .toString();
   }
@@ -4407,9 +4407,9 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
   String? get displayName => _$this._displayName;
   set displayName(String? displayName) => _$this._displayName = displayName;
 
-  int? _countryId;
-  int? get countryId => _$this._countryId;
-  set countryId(int? countryId) => _$this._countryId = countryId;
+  CountryBuilder? _country;
+  CountryBuilder get country => _$this._country ??= new CountryBuilder();
+  set country(CountryBuilder? country) => _$this._country = country;
 
   ListBuilder<AdmBoundary>? _admBoundaries;
   ListBuilder<AdmBoundary> get admBoundaries =>
@@ -4428,7 +4428,7 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
       _point = $v.point.toBuilder();
       _timezone = $v.timezone;
       _displayName = $v.displayName;
-      _countryId = $v.countryId;
+      _country = $v.country?.toBuilder();
       _admBoundaries = $v.admBoundaries.toBuilder();
       _$v = null;
     }
@@ -4459,7 +4459,7 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
               point: point.build(),
               timezone: timezone,
               displayName: displayName,
-              countryId: countryId,
+              country: _country?.build(),
               admBoundaries: admBoundaries.build());
     } catch (_) {
       late String _$failedField;
@@ -4467,6 +4467,8 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
         _$failedField = 'point';
         point.build();
 
+        _$failedField = 'country';
+        _country?.build();
         _$failedField = 'admBoundaries';
         admBoundaries.build();
       } catch (e) {

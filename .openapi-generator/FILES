@@ -118,6 +118,7 @@ doc/CampaignsListOrderByErrorComponent.md
 doc/CampaignsListValidationError.md
 doc/CountriesApi.md
 doc/Country.md
+doc/CountryRequest.md
 doc/CreateNotification.md
 doc/CreateNotificationMessage.md
 doc/CreateNotificationMessageRequest.md
@@ -487,6 +488,7 @@ lib/src/model/campaigns_list_error.dart
 lib/src/model/campaigns_list_order_by_error_component.dart
 lib/src/model/campaigns_list_validation_error.dart
 lib/src/model/country.dart
+lib/src/model/country_request.dart
 lib/src/model/create_notification.dart
 lib/src/model/create_notification_message.dart
 lib/src/model/create_notification_message_request.dart
@@ -835,6 +837,7 @@ test/campaigns_list_error_test.dart
 test/campaigns_list_order_by_error_component_test.dart
 test/campaigns_list_validation_error_test.dart
 test/countries_api_test.dart
+test/country_request_test.dart
 test/country_test.dart
 test/create_notification_message_request_test.dart
 test/create_notification_message_test.dart
