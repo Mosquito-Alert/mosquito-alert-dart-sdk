@@ -10,6 +10,7 @@ import 'package:mosquito_alert/src/model/observations_list_updated_at_error_comp
 import 'package:mosquito_alert/src/model/observations_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_identification_taxon_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_created_at_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -25,7 +26,7 @@ part 'observations_list_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class ObservationsListError implements Built<ObservationsListError, ObservationsListErrorBuilder> {
-  /// One Of [ObservationsListCountryIdErrorComponent], [ObservationsListCreatedAtErrorComponent], [ObservationsListOrderByErrorComponent], [ObservationsListReceivedAtErrorComponent], [ObservationsListShortIdErrorComponent], [ObservationsListUpdatedAtErrorComponent], [ObservationsListUserUuidErrorComponent]
+  /// One Of [ObservationsListCountryIdErrorComponent], [ObservationsListCreatedAtErrorComponent], [ObservationsListIdentificationTaxonIdsErrorComponent], [ObservationsListOrderByErrorComponent], [ObservationsListReceivedAtErrorComponent], [ObservationsListShortIdErrorComponent], [ObservationsListUpdatedAtErrorComponent], [ObservationsListUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -33,6 +34,7 @@ abstract class ObservationsListError implements Built<ObservationsListError, Obs
   static const Map<String, Type> discriminatorMapping = {
     r'country_id': ObservationsListCountryIdErrorComponent,
     r'created_at': ObservationsListCreatedAtErrorComponent,
+    r'identification_taxon_ids': ObservationsListIdentificationTaxonIdsErrorComponent,
     r'order_by': ObservationsListOrderByErrorComponent,
     r'received_at': ObservationsListReceivedAtErrorComponent,
     r'short_id': ObservationsListShortIdErrorComponent,
@@ -59,6 +61,9 @@ extension ObservationsListErrorDiscriminatorExt on ObservationsListError {
         if (this is ObservationsListCreatedAtErrorComponent) {
             return r'created_at';
         }
+        if (this is ObservationsListIdentificationTaxonIdsErrorComponent) {
+            return r'identification_taxon_ids';
+        }
         if (this is ObservationsListOrderByErrorComponent) {
             return r'order_by';
         }
@@ -84,6 +89,9 @@ extension ObservationsListErrorBuilderDiscriminatorExt on ObservationsListErrorB
         }
         if (this is ObservationsListCreatedAtErrorComponentBuilder) {
             return r'created_at';
+        }
+        if (this is ObservationsListIdentificationTaxonIdsErrorComponentBuilder) {
+            return r'identification_taxon_ids';
         }
         if (this is ObservationsListOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -140,7 +148,7 @@ class _$ObservationsListErrorSerializer implements PrimitiveSerializer<Observati
     final discIndex = serializedList.indexOf(ObservationsListError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [ObservationsListCountryIdErrorComponent, ObservationsListCreatedAtErrorComponent, ObservationsListOrderByErrorComponent, ObservationsListReceivedAtErrorComponent, ObservationsListShortIdErrorComponent, ObservationsListUpdatedAtErrorComponent, ObservationsListUserUuidErrorComponent, ];
+    final oneOfTypes = [ObservationsListCountryIdErrorComponent, ObservationsListCreatedAtErrorComponent, ObservationsListIdentificationTaxonIdsErrorComponent, ObservationsListOrderByErrorComponent, ObservationsListReceivedAtErrorComponent, ObservationsListShortIdErrorComponent, ObservationsListUpdatedAtErrorComponent, ObservationsListUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -157,6 +165,13 @@ class _$ObservationsListErrorSerializer implements PrimitiveSerializer<Observati
           specifiedType: FullType(ObservationsListCreatedAtErrorComponent),
         ) as ObservationsListCreatedAtErrorComponent;
         oneOfType = ObservationsListCreatedAtErrorComponent;
+        break;
+      case r'identification_taxon_ids':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsListIdentificationTaxonIdsErrorComponent),
+        ) as ObservationsListIdentificationTaxonIdsErrorComponent;
+        oneOfType = ObservationsListIdentificationTaxonIdsErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(
@@ -203,8 +218,8 @@ class _$ObservationsListErrorSerializer implements PrimitiveSerializer<Observati
 
 class ObservationsListErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'order_by')
-  static const ObservationsListErrorAttrEnum orderBy = _$observationsListErrorAttrEnum_orderBy;
+  @BuiltValueEnumConst(wireName: r'identification_taxon_ids')
+  static const ObservationsListErrorAttrEnum identificationTaxonIds = _$observationsListErrorAttrEnum_identificationTaxonIds;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const ObservationsListErrorAttrEnum unknownDefaultOpenApi = _$observationsListErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -220,6 +235,10 @@ class ObservationsListErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const ObservationsListErrorCodeEnum invalidChoice = _$observationsListErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'invalid_list')
+  static const ObservationsListErrorCodeEnum invalidList = _$observationsListErrorCodeEnum_invalidList;
+  @BuiltValueEnumConst(wireName: r'invalid_pk_value')
+  static const ObservationsListErrorCodeEnum invalidPkValue = _$observationsListErrorCodeEnum_invalidPkValue;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const ObservationsListErrorCodeEnum unknownDefaultOpenApi = _$observationsListErrorCodeEnum_unknownDefaultOpenApi;
 

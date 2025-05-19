@@ -206,6 +206,8 @@ class _$Observation extends Observation {
   @override
   final BuiltList<SimplePhoto> photos;
   @override
+  final Identification? identification;
+  @override
   final ObservationEventEnvironmentEnum? eventEnvironment;
   @override
   final ObservationEventMomentEnum? eventMoment;
@@ -229,6 +231,7 @@ class _$Observation extends Observation {
       this.tags,
       required this.published,
       required this.photos,
+      this.identification,
       this.eventEnvironment,
       this.eventMoment,
       this.mosquitoAppearance})
@@ -275,6 +278,7 @@ class _$Observation extends Observation {
         tags == other.tags &&
         published == other.published &&
         photos == other.photos &&
+        identification == other.identification &&
         eventEnvironment == other.eventEnvironment &&
         eventMoment == other.eventMoment &&
         mosquitoAppearance == other.mosquitoAppearance;
@@ -296,6 +300,7 @@ class _$Observation extends Observation {
     _$hash = $jc(_$hash, tags.hashCode);
     _$hash = $jc(_$hash, published.hashCode);
     _$hash = $jc(_$hash, photos.hashCode);
+    _$hash = $jc(_$hash, identification.hashCode);
     _$hash = $jc(_$hash, eventEnvironment.hashCode);
     _$hash = $jc(_$hash, eventMoment.hashCode);
     _$hash = $jc(_$hash, mosquitoAppearance.hashCode);
@@ -319,6 +324,7 @@ class _$Observation extends Observation {
           ..add('tags', tags)
           ..add('published', published)
           ..add('photos', photos)
+          ..add('identification', identification)
           ..add('eventEnvironment', eventEnvironment)
           ..add('eventMoment', eventMoment)
           ..add('mosquitoAppearance', mosquitoAppearance))
@@ -383,6 +389,12 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
       _$this._photos ??= new ListBuilder<SimplePhoto>();
   set photos(ListBuilder<SimplePhoto>? photos) => _$this._photos = photos;
 
+  IdentificationBuilder? _identification;
+  IdentificationBuilder get identification =>
+      _$this._identification ??= new IdentificationBuilder();
+  set identification(IdentificationBuilder? identification) =>
+      _$this._identification = identification;
+
   ObservationEventEnvironmentEnum? _eventEnvironment;
   ObservationEventEnvironmentEnum? get eventEnvironment =>
       _$this._eventEnvironment;
@@ -420,6 +432,7 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
       _tags = $v.tags?.toBuilder();
       _published = $v.published;
       _photos = $v.photos.toBuilder();
+      _identification = $v.identification?.toBuilder();
       _eventEnvironment = $v.eventEnvironment;
       _eventMoment = $v.eventMoment;
       _mosquitoAppearance = $v.mosquitoAppearance?.toBuilder();
@@ -469,6 +482,7 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
               published: BuiltValueNullFieldError.checkNotNull(
                   published, r'Observation', 'published'),
               photos: photos.build(),
+              identification: _identification?.build(),
               eventEnvironment: eventEnvironment,
               eventMoment: eventMoment,
               mosquitoAppearance: _mosquitoAppearance?.build());
@@ -483,6 +497,8 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
 
         _$failedField = 'photos';
         photos.build();
+        _$failedField = 'identification';
+        _identification?.build();
 
         _$failedField = 'mosquitoAppearance';
         _mosquitoAppearance?.build();

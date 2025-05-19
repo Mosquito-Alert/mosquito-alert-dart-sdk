@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/identification.dart';
 import 'package:mosquito_alert/src/model/mosquito_appearance.dart';
 import 'package:mosquito_alert/src/model/location.dart';
 import 'package:built_value/built_value.dart';
@@ -28,6 +29,7 @@ part 'observation.g.dart';
 /// * [tags] 
 /// * [published] 
 /// * [photos] 
+/// * [identification] 
 /// * [eventEnvironment] - The environment where the event took place.
 /// * [eventMoment] - The moment of the day when the event took place.
 /// * [mosquitoAppearance] - User-provided description of the mosquito's appearance
@@ -74,6 +76,9 @@ abstract class Observation implements Built<Observation, ObservationBuilder> {
 
   @BuiltValueField(wireName: r'photos')
   BuiltList<SimplePhoto> get photos;
+
+  @BuiltValueField(wireName: r'identification')
+  Identification? get identification;
 
   /// The environment where the event took place.
   @BuiltValueField(wireName: r'event_environment')
@@ -180,6 +185,11 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
     yield serializers.serialize(
       object.photos,
       specifiedType: const FullType(BuiltList, [FullType(SimplePhoto)]),
+    );
+    yield r'identification';
+    yield object.identification == null ? null : serializers.serialize(
+      object.identification,
+      specifiedType: const FullType.nullable(Identification),
     );
     if (object.eventEnvironment != null) {
       yield r'event_environment';
@@ -316,6 +326,14 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
             specifiedType: const FullType(BuiltList, [FullType(SimplePhoto)]),
           ) as BuiltList<SimplePhoto>;
           result.photos.replace(valueDes);
+          break;
+        case r'identification':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(Identification),
+          ) as Identification?;
+          if (valueDes == null) continue;
+          result.identification.replace(valueDes);
           break;
         case r'event_environment':
           final valueDes = serializers.deserialize(

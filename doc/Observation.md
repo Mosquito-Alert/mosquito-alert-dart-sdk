@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **published** | **bool** |  | 
 **photos** | [**BuiltList&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | 
+**identification** | [**Identification**](Identification.md) |  | 
 **eventEnvironment** | **String** | The environment where the event took place. | [optional] 
 **eventMoment** | **String** | The moment of the day when the event took place. | [optional] 
 **mosquitoAppearance** | [**MosquitoAppearance**](MosquitoAppearance.md) | User-provided description of the mosquito's appearance | [optional] 

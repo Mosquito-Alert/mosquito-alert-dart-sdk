@@ -75,6 +75,11 @@ void main() {
       // TODO
     });
 
+    // Identification identification
+    test('to test the property `identification`', () async {
+      // TODO
+    });
+
     // The environment where the event took place.
     // String eventEnvironment
     test('to test the property `eventEnvironment`', () async {

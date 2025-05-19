@@ -7,6 +7,11 @@ void main() {
   final instance = MosquitoAlert().getCountriesApi();
 
   group(CountriesApi, () {
+    //Future<PaginatedCountryList> list({ int page, int pageSize }) async
+    test('test list', () async {
+      // TODO
+    });
+
     //Future<Country> retrieve(int id) async
     test('test retrieve', () async {
       // TODO

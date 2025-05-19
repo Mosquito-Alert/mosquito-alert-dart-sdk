@@ -54,6 +54,16 @@ class DevicesApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
+            'type': 'apiKey',
+            'name': 'tokenAuth',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },{
+            'type': 'apiKey',
+            'name': 'cookieAuth',
+            'keyName': 'sessionid',
+            'where': '',
+          },{
             'type': 'http',
             'scheme': 'bearer',
             'name': 'jwtAuth',
@@ -157,6 +167,16 @@ class DevicesApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
+            'type': 'apiKey',
+            'name': 'tokenAuth',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },{
+            'type': 'apiKey',
+            'name': 'cookieAuth',
+            'keyName': 'sessionid',
+            'where': '',
+          },{
             'type': 'http',
             'scheme': 'bearer',
             'name': 'jwtAuth',
@@ -258,6 +278,16 @@ class DevicesApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
+            'type': 'apiKey',
+            'name': 'tokenAuth',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },{
+            'type': 'apiKey',
+            'name': 'cookieAuth',
+            'keyName': 'sessionid',
+            'where': '',
+          },{
             'type': 'http',
             'scheme': 'bearer',
             'name': 'jwtAuth',
@@ -341,6 +371,16 @@ class DevicesApi {
       extra: <String, dynamic>{
         'secure': <Map<String, String>>[
           {
+            'type': 'apiKey',
+            'name': 'tokenAuth',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },{
+            'type': 'apiKey',
+            'name': 'cookieAuth',
+            'keyName': 'sessionid',
+            'where': '',
+          },{
             'type': 'http',
             'scheme': 'bearer',
             'name': 'jwtAuth',

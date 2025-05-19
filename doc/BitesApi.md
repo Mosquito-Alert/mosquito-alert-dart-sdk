@@ -194,6 +194,14 @@ Get Current User's Bites
 ### Example
 ```dart
 import 'package:mosquito_alert/api.dart';
+// TODO Configure API key authorization: tokenAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
+// TODO Configure API key authorization: cookieAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getBitesApi();
 final int countryId = 56; // int | 
@@ -240,7 +248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[jwtAuth](../README.md#jwtAuth)
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
 
 ### HTTP request headers
 

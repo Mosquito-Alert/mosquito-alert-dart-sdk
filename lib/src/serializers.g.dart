@@ -9,8 +9,17 @@ part of 'serializers.dart';
 Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AdmBoundary.serializer)
       ..add(AdmBoundaryRequest.serializer)
+      ..add(Annotation.serializer)
+      ..add(AnnotationClassification.serializer)
+      ..add(AnnotationClassificationConfidenceLabelEnum.serializer)
+      ..add(AnnotationClassificationRequest.serializer)
+      ..add(AnnotationClassificationRequestConfidenceLabelEnum.serializer)
+      ..add(AnnotationFeedback.serializer)
+      ..add(AnnotationFeedbackRequest.serializer)
+      ..add(AnnotationRequest.serializer)
       ..add(AppUserTokenObtainPair.serializer)
       ..add(AppUserTokenObtainPairRequest.serializer)
+      ..add(Assignment.serializer)
       ..add(AuthChangePasswordError.serializer)
       ..add(AuthChangePasswordNonFieldErrorsErrorComponent.serializer)
       ..add(AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum.serializer)
@@ -175,6 +184,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(BitesListUserUuidErrorComponentCodeEnum.serializer)
       ..add(BitesListValidationError.serializer)
       ..add(BitesListValidationErrorTypeEnum.serializer)
+      ..add(BoundingBox.serializer)
+      ..add(BoundingBoxRequest.serializer)
       ..add(BreedingSite.serializer)
       ..add(BreedingSiteSiteTypeEnum.serializer)
       ..add(BreedingsitesCreateCreatedAtErrorComponent.serializer)
@@ -303,6 +314,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CreateNotification.serializer)
       ..add(CreateNotificationMessage.serializer)
       ..add(CreateNotificationMessageRequest.serializer)
+      ..add(CreatePhotoPrediction.serializer)
+      ..add(CreatePhotoPredictionClassifierVersionEnum.serializer)
+      ..add(CreatePhotoPredictionPredictedClassEnum.serializer)
+      ..add(CreatePhotoPredictionRequest.serializer)
+      ..add(CreatePhotoPredictionRequestClassifierVersionEnum.serializer)
+      ..add(CreatePhotoPredictionRequestPredictedClassEnum.serializer)
       ..add(Device.serializer)
       ..add(DeviceOs.serializer)
       ..add(DeviceOsRequest.serializer)
@@ -486,6 +503,851 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(FixesCreateValidationErrorTypeEnum.serializer)
       ..add(GuestRegistration.serializer)
       ..add(GuestRegistrationRequest.serializer)
+      ..add(Identification.serializer)
+      ..add(IdentificationRequest.serializer)
+      ..add(IdentificationTask.serializer)
+      ..add(IdentificationTaskResult.serializer)
+      ..add(IdentificationTaskResultRequest.serializer)
+      ..add(IdentificationTaskResultRequestSource_Enum.serializer)
+      ..add(IdentificationTaskResultSource_Enum.serializer)
+      ..add(IdentificationTaskReview.serializer)
+      ..add(IdentificationTaskReviewTypeEnum.serializer)
+      ..add(IdentificationTaskStatusEnum.serializer)
+      ..add(IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksAnnotationsCreateError.serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksAnnotationsCreateTagsErrorComponent.serializer)
+      ..add(IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateTagsErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsCreateValidationError.serializer)
+      ..add(IdentificationtasksAnnotationsCreateValidationErrorTypeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksAnnotationsListError.serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksAnnotationsListMineError.serializer)
+      ..add(IdentificationtasksAnnotationsListMineOrderByErrorComponent
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListMineUserIdsErrorComponent
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListMineUserIdsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListMineUserIdsErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListMineValidationError.serializer)
+      ..add(IdentificationtasksAnnotationsListMineValidationErrorTypeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListOrderByErrorComponent.serializer)
+      ..add(IdentificationtasksAnnotationsListOrderByErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListOrderByErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListUserIdsErrorComponent.serializer)
+      ..add(IdentificationtasksAnnotationsListUserIdsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListUserIdsErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListValidationError.serializer)
+      ..add(
+          IdentificationtasksAnnotationsListValidationErrorTypeEnum.serializer)
+      ..add(IdentificationtasksListAnnotatorIdsErrorComponent.serializer)
+      ..add(
+          IdentificationtasksListAnnotatorIdsErrorComponentAttrEnum.serializer)
+      ..add(
+          IdentificationtasksListAnnotatorIdsErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListAssigneeIdsErrorComponent.serializer)
+      ..add(IdentificationtasksListAssigneeIdsErrorComponentAttrEnum.serializer)
+      ..add(IdentificationtasksListAssigneeIdsErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListCreatedAtErrorComponent.serializer)
+      ..add(IdentificationtasksListCreatedAtErrorComponentAttrEnum.serializer)
+      ..add(IdentificationtasksListCreatedAtErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListError.serializer)
+      ..add(IdentificationtasksListMineAnnotatorIdsErrorComponent.serializer)
+      ..add(IdentificationtasksListMineAnnotatorIdsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListMineAnnotatorIdsErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListMineAssigneeIdsErrorComponent.serializer)
+      ..add(IdentificationtasksListMineAssigneeIdsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListMineAssigneeIdsErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListMineCreatedAtErrorComponent.serializer)
+      ..add(
+          IdentificationtasksListMineCreatedAtErrorComponentAttrEnum.serializer)
+      ..add(
+          IdentificationtasksListMineCreatedAtErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListMineError.serializer)
+      ..add(IdentificationtasksListMineNumAnnotationsErrorComponent.serializer)
+      ..add(IdentificationtasksListMineNumAnnotationsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListMineNumAnnotationsErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListMineObservationCountryIdsErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksListMineObservationCountryIdsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksListMineOrderByErrorComponent.serializer)
+      ..add(IdentificationtasksListMineOrderByErrorComponentAttrEnum.serializer)
+      ..add(IdentificationtasksListMineOrderByErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListMineResultAgreementErrorComponent.serializer)
+      ..add(IdentificationtasksListMineResultAgreementErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListMineResultAgreementErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksListMineResultConfidenceErrorComponent.serializer)
+      ..add(IdentificationtasksListMineResultConfidenceErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListMineResultConfidenceErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListMineResultSourceErrorComponent.serializer)
+      ..add(IdentificationtasksListMineResultSourceErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListMineResultSourceErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListMineResultTaxonIdsErrorComponent.serializer)
+      ..add(IdentificationtasksListMineResultTaxonIdsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListMineResultTaxonIdsErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksListMineResultUncertaintyErrorComponent.serializer)
+      ..add(IdentificationtasksListMineResultUncertaintyErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListMineResultUncertaintyErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListMineReviewTypeErrorComponent.serializer)
+      ..add(IdentificationtasksListMineReviewTypeErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListMineReviewTypeErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListMineStatusErrorComponent.serializer)
+      ..add(IdentificationtasksListMineStatusErrorComponentAttrEnum.serializer)
+      ..add(IdentificationtasksListMineStatusErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListMineUpdatedAtErrorComponent.serializer)
+      ..add(
+          IdentificationtasksListMineUpdatedAtErrorComponentAttrEnum.serializer)
+      ..add(
+          IdentificationtasksListMineUpdatedAtErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListMineValidationError.serializer)
+      ..add(IdentificationtasksListMineValidationErrorTypeEnum.serializer)
+      ..add(IdentificationtasksListNumAnnotationsErrorComponent.serializer)
+      ..add(IdentificationtasksListNumAnnotationsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListNumAnnotationsErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksListObservationCountryIdsErrorComponent.serializer)
+      ..add(IdentificationtasksListObservationCountryIdsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListObservationCountryIdsErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListOrderByErrorComponent.serializer)
+      ..add(IdentificationtasksListOrderByErrorComponentAttrEnum.serializer)
+      ..add(IdentificationtasksListOrderByErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListResultAgreementErrorComponent.serializer)
+      ..add(IdentificationtasksListResultAgreementErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListResultAgreementErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListResultConfidenceErrorComponent.serializer)
+      ..add(IdentificationtasksListResultConfidenceErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListResultConfidenceErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListResultSourceErrorComponent.serializer)
+      ..add(
+          IdentificationtasksListResultSourceErrorComponentAttrEnum.serializer)
+      ..add(
+          IdentificationtasksListResultSourceErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListResultTaxonIdsErrorComponent.serializer)
+      ..add(IdentificationtasksListResultTaxonIdsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListResultTaxonIdsErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListResultUncertaintyErrorComponent.serializer)
+      ..add(IdentificationtasksListResultUncertaintyErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksListResultUncertaintyErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksListReviewTypeErrorComponent.serializer)
+      ..add(IdentificationtasksListReviewTypeErrorComponentAttrEnum.serializer)
+      ..add(IdentificationtasksListReviewTypeErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListStatusErrorComponent.serializer)
+      ..add(IdentificationtasksListStatusErrorComponentAttrEnum.serializer)
+      ..add(IdentificationtasksListStatusErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListUpdatedAtErrorComponent.serializer)
+      ..add(IdentificationtasksListUpdatedAtErrorComponentAttrEnum.serializer)
+      ..add(IdentificationtasksListUpdatedAtErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListValidationError.serializer)
+      ..add(IdentificationtasksListValidationErrorTypeEnum.serializer)
+      ..add(IdentificationtasksPredictionsCreateBboxNonFieldErrorsErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateBboxNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateBboxNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateBboxXMaxErrorComponent.serializer)
+      ..add(IdentificationtasksPredictionsCreateBboxXMaxErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreateBboxXMaxErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateBboxXMinErrorComponent.serializer)
+      ..add(IdentificationtasksPredictionsCreateBboxXMinErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreateBboxXMinErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateBboxYMaxErrorComponent.serializer)
+      ..add(IdentificationtasksPredictionsCreateBboxYMaxErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreateBboxYMaxErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateBboxYMinErrorComponent.serializer)
+      ..add(IdentificationtasksPredictionsCreateBboxYMinErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreateBboxYMinErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreateClassifierVersionErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateError.serializer)
+      ..add(IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateIsDecisiveErrorComponent
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreatePhotoUuidErrorComponent
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsCreatePredictedClassErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateScoresAeAegyptiErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAeAegyptiErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAeAegyptiErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateScoresAeAlbopictusErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAeAlbopictusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAeAlbopictusErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateScoresAeKoreicusErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAeKoreicusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAeKoreicusErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateScoresAnophelesErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAnophelesErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresAnophelesErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateScoresCulexErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresCulexErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresCulexErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateScoresNotSureErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateScoresOtherSpeciesErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresOtherSpeciesErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateScoresOtherSpeciesErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsCreateValidationError.serializer)
+      ..add(IdentificationtasksPredictionsCreateValidationErrorTypeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsPartialUpdateBboxXMinErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxXMinErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxXMinErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsPartialUpdateBboxYMaxErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxYMaxErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxYMaxErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsPartialUpdateError.serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeKoreicusErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeKoreicusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAeKoreicusErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAnophelesErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAnophelesErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresAnophelesErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateThresholdDeviationErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateThresholdDeviationErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateThresholdDeviationErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsPartialUpdateValidationError.serializer)
+      ..add(IdentificationtasksPredictionsPartialUpdateValidationErrorTypeEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsUpdateBboxNonFieldErrorsErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateBboxNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateBboxNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateBboxXMaxErrorComponent.serializer)
+      ..add(IdentificationtasksPredictionsUpdateBboxXMaxErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsUpdateBboxXMaxErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateBboxXMinErrorComponent.serializer)
+      ..add(IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent.serializer)
+      ..add(IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateBboxYMinErrorComponent.serializer)
+      ..add(IdentificationtasksPredictionsUpdateBboxYMinErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsUpdateBboxYMinErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsUpdateClassifierVersionErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateClassifierVersionErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateClassifierVersionErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateError.serializer)
+      ..add(IdentificationtasksPredictionsUpdateInsectConfidenceErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateInsectConfidenceErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateInsectConfidenceErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateIsDecisiveErrorComponent
+          .serializer)
+      ..add(IdentificationtasksPredictionsUpdateIsDecisiveErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsUpdateIsDecisiveErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksPredictionsUpdateNonFieldErrorsErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdatePredictedClassErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdatePredictedClassErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdatePredictedClassErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateScoresAeAegyptiErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAeAegyptiErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAeAegyptiErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateScoresAeAlbopictusErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAeAlbopictusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAeAlbopictusErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateScoresAeJaponicusErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAeJaponicusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAeJaponicusErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateScoresCulexErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresCulexErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresCulexErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateScoresCulisetaErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresCulisetaErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresCulisetaErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateScoresNotSureErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresNotSureErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresNotSureErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateThresholdDeviationErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateThresholdDeviationErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksPredictionsUpdateThresholdDeviationErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksPredictionsUpdateValidationError.serializer)
+      ..add(IdentificationtasksPredictionsUpdateValidationErrorTypeEnum
+          .serializer)
       ..add(LocalizedMessageBody.serializer)
       ..add(LocalizedMessageBodyRequest.serializer)
       ..add(LocalizedMessageTitle.serializer)
@@ -819,6 +1681,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ObservationsListCreatedAtErrorComponentAttrEnum.serializer)
       ..add(ObservationsListCreatedAtErrorComponentCodeEnum.serializer)
       ..add(ObservationsListError.serializer)
+      ..add(ObservationsListIdentificationTaxonIdsErrorComponent.serializer)
+      ..add(ObservationsListIdentificationTaxonIdsErrorComponentAttrEnum
+          .serializer)
+      ..add(ObservationsListIdentificationTaxonIdsErrorComponentCodeEnum
+          .serializer)
       ..add(ObservationsListMineCountryIdErrorComponent.serializer)
       ..add(ObservationsListMineCountryIdErrorComponentAttrEnum.serializer)
       ..add(ObservationsListMineCountryIdErrorComponentCodeEnum.serializer)
@@ -826,6 +1693,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ObservationsListMineCreatedAtErrorComponentAttrEnum.serializer)
       ..add(ObservationsListMineCreatedAtErrorComponentCodeEnum.serializer)
       ..add(ObservationsListMineError.serializer)
+      ..add(ObservationsListMineIdentificationTaxonIdsErrorComponent.serializer)
+      ..add(ObservationsListMineIdentificationTaxonIdsErrorComponentAttrEnum
+          .serializer)
+      ..add(ObservationsListMineIdentificationTaxonIdsErrorComponentCodeEnum
+          .serializer)
       ..add(ObservationsListMineOrderByErrorComponent.serializer)
       ..add(ObservationsListMineOrderByErrorComponentAttrEnum.serializer)
       ..add(ObservationsListMineOrderByErrorComponentCodeEnum.serializer)
@@ -860,21 +1732,282 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(ObservationsListUserUuidErrorComponentCodeEnum.serializer)
       ..add(ObservationsListValidationError.serializer)
       ..add(ObservationsListValidationErrorTypeEnum.serializer)
+      ..add(PaginatedAnnotationList.serializer)
       ..add(PaginatedBiteList.serializer)
       ..add(PaginatedBreedingSiteList.serializer)
       ..add(PaginatedCampaignList.serializer)
+      ..add(PaginatedCountryList.serializer)
+      ..add(PaginatedIdentificationTaskList.serializer)
       ..add(PaginatedNotificationList.serializer)
       ..add(PaginatedObservationList.serializer)
       ..add(PaginatedPartnerList.serializer)
+      ..add(PaginatedPhotoPredictionList.serializer)
+      ..add(PaginatedSimplePhotoList.serializer)
+      ..add(PaginatedTaxonList.serializer)
       ..add(Partner.serializer)
       ..add(PasswordChangeRequest.serializer)
       ..add(PatchedDeviceUpdateRequest.serializer)
       ..add(PatchedNotificationRequest.serializer)
+      ..add(PatchedPhotoPredictionRequest.serializer)
+      ..add(PatchedPhotoPredictionRequestClassifierVersionEnum.serializer)
+      ..add(PatchedPhotoPredictionRequestPredictedClassEnum.serializer)
       ..add(PatchedUserRequest.serializer)
       ..add(PatchedUserRequestLocaleEnum.serializer)
       ..add(Photo.serializer)
+      ..add(PhotoPrediction.serializer)
+      ..add(PhotoPredictionClassifierVersionEnum.serializer)
+      ..add(PhotoPredictionPredictedClassEnum.serializer)
+      ..add(PhotoPredictionRequest.serializer)
+      ..add(PhotoPredictionRequestClassifierVersionEnum.serializer)
+      ..add(PhotoPredictionRequestPredictedClassEnum.serializer)
+      ..add(PhotosPredictionPartialUpdateBboxNonFieldErrorsErrorComponent
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(PhotosPredictionPartialUpdateBboxXMaxErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateBboxXMinErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateBboxXMinErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateBboxXMinErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateBboxYMaxErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateBboxYMaxErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateBboxYMaxErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateBboxYMinErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateBboxYMinErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateBboxYMinErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateClassifierVersionErrorComponent
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateError.serializer)
+      ..add(PhotosPredictionPartialUpdateInsectConfidenceErrorComponent
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateIsDecisiveErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateNonFieldErrorsErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateNonFieldErrorsErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateNonFieldErrorsErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdatePredictedClassErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdatePredictedClassErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdatePredictedClassErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateScoresAeAegyptiErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAeAegyptiErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAeAegyptiErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum
+              .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAeJaponicusErrorComponent
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAeJaponicusErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAeJaponicusErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAeKoreicusErrorComponent
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAeKoreicusErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAeKoreicusErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateScoresAnophelesErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAnophelesErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresAnophelesErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresCulexErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateScoresCulexErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresCulexErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateScoresCulisetaErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateScoresCulisetaErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresCulisetaErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponent
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresNotSureErrorComponent.serializer)
+      ..add(PhotosPredictionPartialUpdateScoresNotSureErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresNotSureErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionPartialUpdateScoresOtherSpeciesErrorComponent
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateScoresOtherSpeciesErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateScoresOtherSpeciesErrorComponentCodeEnum
+              .serializer)
+      ..add(PhotosPredictionPartialUpdateThresholdDeviationErrorComponent
+          .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          PhotosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnum
+              .serializer)
+      ..add(PhotosPredictionPartialUpdateValidationError.serializer)
+      ..add(PhotosPredictionPartialUpdateValidationErrorTypeEnum.serializer)
+      ..add(PhotosPredictionUpdateBboxNonFieldErrorsErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateBboxNonFieldErrorsErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateBboxNonFieldErrorsErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateBboxXMaxErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnum.serializer)
+      ..add(PhotosPredictionUpdateBboxXMaxErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdateBboxXMinErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateBboxXMinErrorComponentAttrEnum.serializer)
+      ..add(PhotosPredictionUpdateBboxXMinErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdateBboxYMaxErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateBboxYMaxErrorComponentAttrEnum.serializer)
+      ..add(PhotosPredictionUpdateBboxYMaxErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdateBboxYMinErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateBboxYMinErrorComponentAttrEnum.serializer)
+      ..add(PhotosPredictionUpdateBboxYMinErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdateClassifierVersionErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateClassifierVersionErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateError.serializer)
+      ..add(PhotosPredictionUpdateInsectConfidenceErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateInsectConfidenceErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateInsectConfidenceErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateIsDecisiveErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateIsDecisiveErrorComponentAttrEnum.serializer)
+      ..add(PhotosPredictionUpdateIsDecisiveErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdateNonFieldErrorsErrorComponent.serializer)
+      ..add(
+          PhotosPredictionUpdateNonFieldErrorsErrorComponentAttrEnum.serializer)
+      ..add(
+          PhotosPredictionUpdateNonFieldErrorsErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdatePredictedClassErrorComponent.serializer)
+      ..add(
+          PhotosPredictionUpdatePredictedClassErrorComponentAttrEnum.serializer)
+      ..add(
+          PhotosPredictionUpdatePredictedClassErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdateScoresAeAegyptiErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresAeAlbopictusErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateScoresAeAlbopictusErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresAeAlbopictusErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresAeJaponicusErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateScoresAeJaponicusErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresAeJaponicusErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresAeKoreicusErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateScoresAeKoreicusErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresAeKoreicusErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresAnophelesErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateScoresAnophelesErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresAnophelesErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresCulexErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateScoresCulexErrorComponentAttrEnum.serializer)
+      ..add(PhotosPredictionUpdateScoresCulexErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdateScoresCulisetaErrorComponent.serializer)
+      ..add(
+          PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnum.serializer)
+      ..add(
+          PhotosPredictionUpdateScoresCulisetaErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresNotSureErrorComponent.serializer)
+      ..add(
+          PhotosPredictionUpdateScoresNotSureErrorComponentAttrEnum.serializer)
+      ..add(
+          PhotosPredictionUpdateScoresNotSureErrorComponentCodeEnum.serializer)
+      ..add(PhotosPredictionUpdateScoresOtherSpeciesErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateScoresOtherSpeciesErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateScoresOtherSpeciesErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateThresholdDeviationErrorComponent.serializer)
+      ..add(PhotosPredictionUpdateThresholdDeviationErrorComponentAttrEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateThresholdDeviationErrorComponentCodeEnum
+          .serializer)
+      ..add(PhotosPredictionUpdateValidationError.serializer)
+      ..add(PhotosPredictionUpdateValidationErrorTypeEnum.serializer)
+      ..add(PredictionScore.serializer)
+      ..add(PredictionScoreRequest.serializer)
+      ..add(SimpleAnnotatorUser.serializer)
+      ..add(SimpleAnnotatorUserRequest.serializer)
       ..add(SimplePhoto.serializer)
       ..add(SimplePhotoRequest.serializer)
+      ..add(SimpleTaxon.serializer)
+      ..add(SimpleTaxonRankEnum.serializer)
+      ..add(SimpleTaxonRequest.serializer)
+      ..add(SimpleTaxonRequestRankEnum.serializer)
+      ..add(SimplifiedLocation.serializer)
+      ..add(SimplifiedLocationTimezoneEnum.serializer)
+      ..add(SimplifiedObservation.serializer)
+      ..add(TaxaListError.serializer)
+      ..add(TaxaListValidationError.serializer)
+      ..add(TaxaListValidationErrorTypeEnum.serializer)
+      ..add(Taxon.serializer)
+      ..add(TaxonRankEnum.serializer)
+      ..add(TaxonTreeNode.serializer)
+      ..add(TaxonTreeNodeRankEnum.serializer)
       ..add(TokenRefresh.serializer)
       ..add(TokenRefreshRequest.serializer)
       ..add(TokenVerifyRequest.serializer)
@@ -908,6 +2041,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(AdmBoundary)]),
           () => new ListBuilder<AdmBoundary>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Annotation)]),
+          () => new ListBuilder<Annotation>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Assignment)]),
+          () => new ListBuilder<Assignment>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(AuthChangePasswordError)]),
@@ -962,6 +2101,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(CampaignsListError)]),
           () => new ListBuilder<CampaignsListError>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Country)]),
+          () => new ListBuilder<Country>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(DevicesCreateError)]),
           () => new ListBuilder<DevicesCreateError>())
       ..addBuilderFactory(
@@ -983,6 +2125,47 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(FixesCreateError)]),
           () => new ListBuilder<FixesCreateError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(IdentificationTask)]),
+          () => new ListBuilder<IdentificationTask>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(IdentificationtasksAnnotationsCreateError)
+          ]),
+          () => new ListBuilder<IdentificationtasksAnnotationsCreateError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(IdentificationtasksAnnotationsListError)]),
+          () => new ListBuilder<IdentificationtasksAnnotationsListError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(IdentificationtasksAnnotationsListMineError)
+          ]),
+          () => new ListBuilder<IdentificationtasksAnnotationsListMineError>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(IdentificationtasksListError)]),
+          () => new ListBuilder<IdentificationtasksListError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(IdentificationtasksListMineError)]),
+          () => new ListBuilder<IdentificationtasksListMineError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(IdentificationtasksPredictionsCreateError)
+          ]),
+          () => new ListBuilder<IdentificationtasksPredictionsCreateError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(IdentificationtasksPredictionsPartialUpdateError)
+          ]),
+          () => new ListBuilder<
+              IdentificationtasksPredictionsPartialUpdateError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [
+            const FullType(IdentificationtasksPredictionsUpdateError)
+          ]),
+          () => new ListBuilder<IdentificationtasksPredictionsUpdateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Notification)]),
           () => new ListBuilder<Notification>())
@@ -1025,6 +2208,26 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(Partner)]),
           () => new ListBuilder<Partner>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(PhotoPrediction)]),
+          () => new ListBuilder<PhotoPrediction>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(PhotosPredictionPartialUpdateError)]),
+          () => new ListBuilder<PhotosPredictionPartialUpdateError>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(PhotosPredictionUpdateError)]),
+          () => new ListBuilder<PhotosPredictionUpdateError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(SimplePhoto)]),
+          () => new ListBuilder<SimplePhoto>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => new ListBuilder<String>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
@@ -1048,6 +2251,15 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimplePhoto)]),
           () => new ListBuilder<SimplePhoto>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(TaxaListError)]),
+          () => new ListBuilder<TaxaListError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Taxon)]),
+          () => new ListBuilder<Taxon>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(TaxonTreeNode)]),
+          () => new ListBuilder<TaxonTreeNode>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(UsersPartialUpdateError)]),
