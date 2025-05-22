@@ -20,6 +20,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AppUserTokenObtainPair.serializer)
       ..add(AppUserTokenObtainPairRequest.serializer)
       ..add(Assignment.serializer)
+      ..add(AssignmentAnnotationTypeEnum.serializer)
       ..add(AuthChangePasswordError.serializer)
       ..add(AuthChangePasswordNonFieldErrorsErrorComponent.serializer)
       ..add(AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum.serializer)
@@ -635,6 +636,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(
           IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnum
               .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListCreatedAtErrorComponent.serializer)
+      ..add(IdentificationtasksAnnotationsListCreatedAtErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListCreatedAtErrorComponentCodeEnum
+          .serializer)
       ..add(IdentificationtasksAnnotationsListError.serializer)
       ..add(
           IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent
@@ -663,6 +670,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(
           IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnum
               .serializer)
+      ..add(IdentificationtasksAnnotationsListMineCreatedAtErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineCreatedAtErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineCreatedAtErrorComponentCodeEnum
+              .serializer)
       ..add(IdentificationtasksAnnotationsListMineError.serializer)
       ..add(IdentificationtasksAnnotationsListMineOrderByErrorComponent
           .serializer)
@@ -670,6 +685,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum
           .serializer)
+      ..add(IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineUpdatedAtErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineUpdatedAtErrorComponentCodeEnum
+              .serializer)
       ..add(IdentificationtasksAnnotationsListMineUserIdsErrorComponent
           .serializer)
       ..add(IdentificationtasksAnnotationsListMineUserIdsErrorComponentAttrEnum
@@ -683,6 +706,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(IdentificationtasksAnnotationsListOrderByErrorComponentAttrEnum
           .serializer)
       ..add(IdentificationtasksAnnotationsListOrderByErrorComponentCodeEnum
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListUpdatedAtErrorComponent.serializer)
+      ..add(IdentificationtasksAnnotationsListUpdatedAtErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListUpdatedAtErrorComponentCodeEnum
           .serializer)
       ..add(IdentificationtasksAnnotationsListUserIdsErrorComponent.serializer)
       ..add(IdentificationtasksAnnotationsListUserIdsErrorComponentAttrEnum
@@ -1742,7 +1771,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PaginatedObservationList.serializer)
       ..add(PaginatedPartnerList.serializer)
       ..add(PaginatedPhotoPredictionList.serializer)
-      ..add(PaginatedSimplePhotoList.serializer)
       ..add(PaginatedTaxonList.serializer)
       ..add(Partner.serializer)
       ..add(PasswordChangeRequest.serializer)
@@ -2000,7 +2028,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SimpleTaxonRequestRankEnum.serializer)
       ..add(SimplifiedLocation.serializer)
       ..add(SimplifiedLocationTimezoneEnum.serializer)
-      ..add(SimplifiedObservation.serializer)
+      ..add(SimplifiedObservationWithPhotos.serializer)
       ..add(TaxaListError.serializer)
       ..add(TaxaListValidationError.serializer)
       ..add(TaxaListValidationErrorTypeEnum.serializer)
@@ -2014,6 +2042,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(TopicNotificationCreateRequest.serializer)
       ..add(TopicNotificationCreateRequestReceiverTypeEnum.serializer)
       ..add(User.serializer)
+      ..add(UserAssignment.serializer)
+      ..add(UserAssignmentAnnotationTypeEnum.serializer)
       ..add(UserLocaleEnum.serializer)
       ..add(UserNotificationCreateRequest.serializer)
       ..add(UserNotificationCreateRequestReceiverTypeEnum.serializer)
@@ -2044,9 +2074,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Annotation)]),
           () => new ListBuilder<Annotation>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Assignment)]),
-          () => new ListBuilder<Assignment>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(AuthChangePasswordError)]),
@@ -2260,6 +2287,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(TaxonTreeNode)]),
           () => new ListBuilder<TaxonTreeNode>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(UserAssignment)]),
+          () => new ListBuilder<UserAssignment>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(UsersPartialUpdateError)]),

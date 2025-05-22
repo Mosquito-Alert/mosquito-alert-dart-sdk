@@ -8,9 +8,9 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**observation** | [**SimplifiedObservation**](SimplifiedObservation.md) |  | 
+**observation** | [**SimplifiedObservationWithPhotos**](SimplifiedObservationWithPhotos.md) |  | 
 **publicPhoto** | [**SimplePhoto**](SimplePhoto.md) |  | 
-**assignments** | [**BuiltList&lt;Assignment&gt;**](Assignment.md) |  | 
+**assignments** | [**BuiltList&lt;UserAssignment&gt;**](UserAssignment.md) |  | 
 **status** | **String** |  | [optional] [default to 'open']
 **isFlagged** | **bool** |  | 
 **isSafe** | **bool** | Indicates if the content is safe for publication. | 

@@ -232,15 +232,19 @@ import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_classification_confidence_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_classification_confidence_label_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_classification_taxon_ids_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_error.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_confidence_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_confidence_label_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_taxon_ids_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_error.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_user_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_user_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_annotator_ids_error_component.dart';
@@ -485,7 +489,6 @@ import 'package:mosquito_alert/src/model/paginated_notification_list.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
 import 'package:mosquito_alert/src/model/paginated_photo_prediction_list.dart';
-import 'package:mosquito_alert/src/model/paginated_simple_photo_list.dart';
 import 'package:mosquito_alert/src/model/paginated_taxon_list.dart';
 import 'package:mosquito_alert/src/model/partner.dart';
 import 'package:mosquito_alert/src/model/password_change_request.dart';
@@ -551,7 +554,7 @@ import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 import 'package:mosquito_alert/src/model/simple_taxon.dart';
 import 'package:mosquito_alert/src/model/simple_taxon_request.dart';
 import 'package:mosquito_alert/src/model/simplified_location.dart';
-import 'package:mosquito_alert/src/model/simplified_observation.dart';
+import 'package:mosquito_alert/src/model/simplified_observation_with_photos.dart';
 import 'package:mosquito_alert/src/model/taxa_list_error.dart';
 import 'package:mosquito_alert/src/model/taxa_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/taxon.dart';
@@ -561,6 +564,7 @@ import 'package:mosquito_alert/src/model/token_refresh_request.dart';
 import 'package:mosquito_alert/src/model/token_verify_request.dart';
 import 'package:mosquito_alert/src/model/topic_notification_create_request.dart';
 import 'package:mosquito_alert/src/model/user.dart';
+import 'package:mosquito_alert/src/model/user_assignment.dart';
 import 'package:mosquito_alert/src/model/user_notification_create_request.dart';
 import 'package:mosquito_alert/src/model/user_request.dart';
 import 'package:mosquito_alert/src/model/user_score.dart';
@@ -794,15 +798,19 @@ part 'serializers.g.dart';
   IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent,
   IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent,
   IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent,
+  IdentificationtasksAnnotationsListCreatedAtErrorComponent,
   IdentificationtasksAnnotationsListError,
   IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent,
   IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent,
   IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent,
+  IdentificationtasksAnnotationsListMineCreatedAtErrorComponent,
   IdentificationtasksAnnotationsListMineError,
   IdentificationtasksAnnotationsListMineOrderByErrorComponent,
+  IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent,
   IdentificationtasksAnnotationsListMineUserIdsErrorComponent,
   IdentificationtasksAnnotationsListMineValidationError,
   IdentificationtasksAnnotationsListOrderByErrorComponent,
+  IdentificationtasksAnnotationsListUpdatedAtErrorComponent,
   IdentificationtasksAnnotationsListUserIdsErrorComponent,
   IdentificationtasksAnnotationsListValidationError,
   IdentificationtasksListAnnotatorIdsErrorComponent,
@@ -1047,7 +1055,6 @@ part 'serializers.g.dart';
   PaginatedObservationList,
   PaginatedPartnerList,
   PaginatedPhotoPredictionList,
-  PaginatedSimplePhotoList,
   PaginatedTaxonList,
   Partner,
   PasswordChangeRequest,
@@ -1113,7 +1120,7 @@ part 'serializers.g.dart';
   SimpleTaxon,
   SimpleTaxonRequest,
   SimplifiedLocation,
-  SimplifiedObservation,
+  SimplifiedObservationWithPhotos,
   TaxaListError,
   TaxaListValidationError,
   Taxon,
@@ -1123,6 +1130,7 @@ part 'serializers.g.dart';
   TokenVerifyRequest,
   TopicNotificationCreateRequest,
   User,
+  UserAssignment,
   UserNotificationCreateRequest,
   UserRequest,
   UserScore,

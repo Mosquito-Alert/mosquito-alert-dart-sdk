@@ -6,17 +6,86 @@ part of 'assignment.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const AssignmentAnnotationTypeEnum _$assignmentAnnotationTypeEnum_short =
+    const AssignmentAnnotationTypeEnum._('short');
+const AssignmentAnnotationTypeEnum _$assignmentAnnotationTypeEnum_long =
+    const AssignmentAnnotationTypeEnum._('long');
+const AssignmentAnnotationTypeEnum
+    _$assignmentAnnotationTypeEnum_unknownDefaultOpenApi =
+    const AssignmentAnnotationTypeEnum._('unknownDefaultOpenApi');
+
+AssignmentAnnotationTypeEnum _$assignmentAnnotationTypeEnumValueOf(
+    String name) {
+  switch (name) {
+    case 'short':
+      return _$assignmentAnnotationTypeEnum_short;
+    case 'long':
+      return _$assignmentAnnotationTypeEnum_long;
+    case 'unknownDefaultOpenApi':
+      return _$assignmentAnnotationTypeEnum_unknownDefaultOpenApi;
+    default:
+      return _$assignmentAnnotationTypeEnum_unknownDefaultOpenApi;
+  }
+}
+
+final BuiltSet<AssignmentAnnotationTypeEnum>
+    _$assignmentAnnotationTypeEnumValues = new BuiltSet<
+        AssignmentAnnotationTypeEnum>(const <AssignmentAnnotationTypeEnum>[
+  _$assignmentAnnotationTypeEnum_short,
+  _$assignmentAnnotationTypeEnum_long,
+  _$assignmentAnnotationTypeEnum_unknownDefaultOpenApi,
+]);
+
+Serializer<AssignmentAnnotationTypeEnum>
+    _$assignmentAnnotationTypeEnumSerializer =
+    new _$AssignmentAnnotationTypeEnumSerializer();
+
+class _$AssignmentAnnotationTypeEnumSerializer
+    implements PrimitiveSerializer<AssignmentAnnotationTypeEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'short': 'short',
+    'long': 'long',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'short': 'short',
+    'long': 'long',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[AssignmentAnnotationTypeEnum];
+  @override
+  final String wireName = 'AssignmentAnnotationTypeEnum';
+
+  @override
+  Object serialize(Serializers serializers, AssignmentAnnotationTypeEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  AssignmentAnnotationTypeEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      AssignmentAnnotationTypeEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$Assignment extends Assignment {
   @override
-  final SimpleAnnotatorUser user;
+  final SimplifiedObservationWithPhotos observation;
   @override
-  final int? annotationId;
+  final AssignmentAnnotationTypeEnum annotationType;
 
   factory _$Assignment([void Function(AssignmentBuilder)? updates]) =>
       (new AssignmentBuilder()..update(updates))._build();
 
-  _$Assignment._({required this.user, this.annotationId}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(user, r'Assignment', 'user');
+  _$Assignment._({required this.observation, required this.annotationType})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        observation, r'Assignment', 'observation');
+    BuiltValueNullFieldError.checkNotNull(
+        annotationType, r'Assignment', 'annotationType');
   }
 
   @override
@@ -30,15 +99,15 @@ class _$Assignment extends Assignment {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is Assignment &&
-        user == other.user &&
-        annotationId == other.annotationId;
+        observation == other.observation &&
+        annotationType == other.annotationType;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, user.hashCode);
-    _$hash = $jc(_$hash, annotationId.hashCode);
+    _$hash = $jc(_$hash, observation.hashCode);
+    _$hash = $jc(_$hash, annotationType.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -46,8 +115,8 @@ class _$Assignment extends Assignment {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'Assignment')
-          ..add('user', user)
-          ..add('annotationId', annotationId))
+          ..add('observation', observation)
+          ..add('annotationType', annotationType))
         .toString();
   }
 }
@@ -55,14 +124,16 @@ class _$Assignment extends Assignment {
 class AssignmentBuilder implements Builder<Assignment, AssignmentBuilder> {
   _$Assignment? _$v;
 
-  SimpleAnnotatorUserBuilder? _user;
-  SimpleAnnotatorUserBuilder get user =>
-      _$this._user ??= new SimpleAnnotatorUserBuilder();
-  set user(SimpleAnnotatorUserBuilder? user) => _$this._user = user;
+  SimplifiedObservationWithPhotosBuilder? _observation;
+  SimplifiedObservationWithPhotosBuilder get observation =>
+      _$this._observation ??= new SimplifiedObservationWithPhotosBuilder();
+  set observation(SimplifiedObservationWithPhotosBuilder? observation) =>
+      _$this._observation = observation;
 
-  int? _annotationId;
-  int? get annotationId => _$this._annotationId;
-  set annotationId(int? annotationId) => _$this._annotationId = annotationId;
+  AssignmentAnnotationTypeEnum? _annotationType;
+  AssignmentAnnotationTypeEnum? get annotationType => _$this._annotationType;
+  set annotationType(AssignmentAnnotationTypeEnum? annotationType) =>
+      _$this._annotationType = annotationType;
 
   AssignmentBuilder() {
     Assignment._defaults(this);
@@ -71,8 +142,8 @@ class AssignmentBuilder implements Builder<Assignment, AssignmentBuilder> {
   AssignmentBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _user = $v.user.toBuilder();
-      _annotationId = $v.annotationId;
+      _observation = $v.observation.toBuilder();
+      _annotationType = $v.annotationType;
       _$v = null;
     }
     return this;
@@ -96,12 +167,15 @@ class AssignmentBuilder implements Builder<Assignment, AssignmentBuilder> {
     _$Assignment _$result;
     try {
       _$result = _$v ??
-          new _$Assignment._(user: user.build(), annotationId: annotationId);
+          new _$Assignment._(
+              observation: observation.build(),
+              annotationType: BuiltValueNullFieldError.checkNotNull(
+                  annotationType, r'Assignment', 'annotationType'));
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'user';
-        user.build();
+        _$failedField = 'observation';
+        observation.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'Assignment', _$failedField, e.toString());

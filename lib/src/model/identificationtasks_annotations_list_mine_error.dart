@@ -7,6 +7,8 @@ import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mi
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_confidence_label_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_confidence_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_user_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_taxon_ids_error_component.dart';
 import 'package:built_value/built_value.dart';
@@ -23,7 +25,7 @@ part 'identificationtasks_annotations_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class IdentificationtasksAnnotationsListMineError implements Built<IdentificationtasksAnnotationsListMineError, IdentificationtasksAnnotationsListMineErrorBuilder> {
-  /// One Of [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListMineOrderByErrorComponent], [IdentificationtasksAnnotationsListMineUserIdsErrorComponent]
+  /// One Of [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListMineCreatedAtErrorComponent], [IdentificationtasksAnnotationsListMineOrderByErrorComponent], [IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent], [IdentificationtasksAnnotationsListMineUserIdsErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -32,7 +34,9 @@ abstract class IdentificationtasksAnnotationsListMineError implements Built<Iden
     r'classification_confidence': IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent,
     r'classification_confidence_label': IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent,
     r'classification_taxon_ids': IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent,
+    r'created_at': IdentificationtasksAnnotationsListMineCreatedAtErrorComponent,
     r'order_by': IdentificationtasksAnnotationsListMineOrderByErrorComponent,
+    r'updated_at': IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent,
     r'user_ids': IdentificationtasksAnnotationsListMineUserIdsErrorComponent,
   };
 
@@ -58,8 +62,14 @@ extension IdentificationtasksAnnotationsListMineErrorDiscriminatorExt on Identif
         if (this is IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent) {
             return r'classification_taxon_ids';
         }
+        if (this is IdentificationtasksAnnotationsListMineCreatedAtErrorComponent) {
+            return r'created_at';
+        }
         if (this is IdentificationtasksAnnotationsListMineOrderByErrorComponent) {
             return r'order_by';
+        }
+        if (this is IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent) {
+            return r'updated_at';
         }
         if (this is IdentificationtasksAnnotationsListMineUserIdsErrorComponent) {
             return r'user_ids';
@@ -78,8 +88,14 @@ extension IdentificationtasksAnnotationsListMineErrorBuilderDiscriminatorExt on 
         if (this is IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentBuilder) {
             return r'classification_taxon_ids';
         }
+        if (this is IdentificationtasksAnnotationsListMineCreatedAtErrorComponentBuilder) {
+            return r'created_at';
+        }
         if (this is IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder) {
             return r'order_by';
+        }
+        if (this is IdentificationtasksAnnotationsListMineUpdatedAtErrorComponentBuilder) {
+            return r'updated_at';
         }
         if (this is IdentificationtasksAnnotationsListMineUserIdsErrorComponentBuilder) {
             return r'user_ids';
@@ -124,7 +140,7 @@ class _$IdentificationtasksAnnotationsListMineErrorSerializer implements Primiti
     final discIndex = serializedList.indexOf(IdentificationtasksAnnotationsListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListMineOrderByErrorComponent, IdentificationtasksAnnotationsListMineUserIdsErrorComponent, ];
+    final oneOfTypes = [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListMineCreatedAtErrorComponent, IdentificationtasksAnnotationsListMineOrderByErrorComponent, IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent, IdentificationtasksAnnotationsListMineUserIdsErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -149,12 +165,26 @@ class _$IdentificationtasksAnnotationsListMineErrorSerializer implements Primiti
         ) as IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent;
         oneOfType = IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent;
         break;
+      case r'created_at':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsListMineCreatedAtErrorComponent),
+        ) as IdentificationtasksAnnotationsListMineCreatedAtErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsListMineCreatedAtErrorComponent;
+        break;
       case r'order_by':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
           specifiedType: FullType(IdentificationtasksAnnotationsListMineOrderByErrorComponent),
         ) as IdentificationtasksAnnotationsListMineOrderByErrorComponent;
         oneOfType = IdentificationtasksAnnotationsListMineOrderByErrorComponent;
+        break;
+      case r'updated_at':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent),
+        ) as IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent;
         break;
       case r'user_ids':
         oneOfResult = serializers.deserialize(

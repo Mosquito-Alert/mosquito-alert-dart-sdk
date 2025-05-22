@@ -3,7 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/simple_annotator_user.dart';
+import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/simplified_observation_with_photos.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -12,15 +13,16 @@ part 'assignment.g.dart';
 /// Assignment
 ///
 /// Properties:
-/// * [user] 
-/// * [annotationId] 
+/// * [observation] 
+/// * [annotationType] 
 @BuiltValue()
 abstract class Assignment implements Built<Assignment, AssignmentBuilder> {
-  @BuiltValueField(wireName: r'user')
-  SimpleAnnotatorUser get user;
+  @BuiltValueField(wireName: r'observation')
+  SimplifiedObservationWithPhotos get observation;
 
-  @BuiltValueField(wireName: r'annotation_id')
-  int? get annotationId;
+  @BuiltValueField(wireName: r'annotation_type')
+  AssignmentAnnotationTypeEnum get annotationType;
+  // enum annotationTypeEnum {  short,  long,  };
 
   Assignment._();
 
@@ -45,15 +47,15 @@ class _$AssignmentSerializer implements PrimitiveSerializer<Assignment> {
     Assignment object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'user';
+    yield r'observation';
     yield serializers.serialize(
-      object.user,
-      specifiedType: const FullType(SimpleAnnotatorUser),
+      object.observation,
+      specifiedType: const FullType(SimplifiedObservationWithPhotos),
     );
-    yield r'annotation_id';
-    yield object.annotationId == null ? null : serializers.serialize(
-      object.annotationId,
-      specifiedType: const FullType.nullable(int),
+    yield r'annotation_type';
+    yield serializers.serialize(
+      object.annotationType,
+      specifiedType: const FullType(AssignmentAnnotationTypeEnum),
     );
   }
 
@@ -78,20 +80,19 @@ class _$AssignmentSerializer implements PrimitiveSerializer<Assignment> {
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'user':
+        case r'observation':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(SimpleAnnotatorUser),
-          ) as SimpleAnnotatorUser;
-          result.user.replace(valueDes);
+            specifiedType: const FullType(SimplifiedObservationWithPhotos),
+          ) as SimplifiedObservationWithPhotos;
+          result.observation.replace(valueDes);
           break;
-        case r'annotation_id':
+        case r'annotation_type':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(int),
-          ) as int?;
-          if (valueDes == null) continue;
-          result.annotationId = valueDes;
+            specifiedType: const FullType(AssignmentAnnotationTypeEnum),
+          ) as AssignmentAnnotationTypeEnum;
+          result.annotationType = valueDes;
           break;
         default:
           unhandled.add(key);
@@ -120,5 +121,22 @@ class _$AssignmentSerializer implements PrimitiveSerializer<Assignment> {
     );
     return result.build();
   }
+}
+
+class AssignmentAnnotationTypeEnum extends EnumClass {
+
+  @BuiltValueEnumConst(wireName: r'short')
+  static const AssignmentAnnotationTypeEnum short = _$assignmentAnnotationTypeEnum_short;
+  @BuiltValueEnumConst(wireName: r'long')
+  static const AssignmentAnnotationTypeEnum long = _$assignmentAnnotationTypeEnum_long;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AssignmentAnnotationTypeEnum unknownDefaultOpenApi = _$assignmentAnnotationTypeEnum_unknownDefaultOpenApi;
+
+  static Serializer<AssignmentAnnotationTypeEnum> get serializer => _$assignmentAnnotationTypeEnumSerializer;
+
+  const AssignmentAnnotationTypeEnum._(String name): super(name);
+
+  static BuiltSet<AssignmentAnnotationTypeEnum> get values => _$assignmentAnnotationTypeEnumValues;
+  static AssignmentAnnotationTypeEnum valueOf(String name) => _$assignmentAnnotationTypeEnumValueOf(name);
 }
 

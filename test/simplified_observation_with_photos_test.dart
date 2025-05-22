@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for SimplifiedObservation
+// tests for SimplifiedObservationWithPhotos
 void main() {
-  final instance = SimplifiedObservationBuilder();
+  final instance = SimplifiedObservationWithPhotosBuilder();
   // TODO add properties to the builder and call build()
 
-  group(SimplifiedObservation, () {
+  group(SimplifiedObservationWithPhotos, () {
     // String uuid
     test('to test the property `uuid`', () async {
       // TODO
@@ -41,6 +41,11 @@ void main() {
     // Note user attached to report.
     // String note
     test('to test the property `note`', () async {
+      // TODO
+    });
+
+    // BuiltList<SimplePhoto> photos
+    test('to test the property `photos`', () async {
       // TODO
     });
 

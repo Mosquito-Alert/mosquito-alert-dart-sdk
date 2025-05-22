@@ -1,4 +1,4 @@
-# mosquito_alert.model.SimplifiedObservation
+# mosquito_alert.model.SimplifiedObservationWithPhotos
 
 ## Load the model package
 ```dart
@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **receivedAt** | [**DateTime**](DateTime.md) |  | 
 **location** | [**SimplifiedLocation**](SimplifiedLocation.md) |  | 
 **note** | **String** | Note user attached to report. | [optional] 
+**photos** | [**BuiltList&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

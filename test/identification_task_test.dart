@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(IdentificationTask, () {
-    // SimplifiedObservation observation
+    // SimplifiedObservationWithPhotos observation
     test('to test the property `observation`', () async {
       // TODO
     });
@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    // BuiltList<Assignment> assignments
+    // BuiltList<UserAssignment> assignments
     test('to test the property `assignments`', () async {
       // TODO
     });

@@ -3,13 +3,15 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/simple_photo.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/simplified_location.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'simplified_observation.g.dart';
+part 'simplified_observation_with_photos.g.dart';
 
-/// SimplifiedObservation
+/// SimplifiedObservationWithPhotos
 ///
 /// Properties:
 /// * [uuid] 
@@ -19,8 +21,9 @@ part 'simplified_observation.g.dart';
 /// * [receivedAt] 
 /// * [location] 
 /// * [note] - Note user attached to report.
+/// * [photos] 
 @BuiltValue()
-abstract class SimplifiedObservation implements Built<SimplifiedObservation, SimplifiedObservationBuilder> {
+abstract class SimplifiedObservationWithPhotos implements Built<SimplifiedObservationWithPhotos, SimplifiedObservationWithPhotosBuilder> {
   @BuiltValueField(wireName: r'uuid')
   String get uuid;
 
@@ -44,27 +47,30 @@ abstract class SimplifiedObservation implements Built<SimplifiedObservation, Sim
   @BuiltValueField(wireName: r'note')
   String? get note;
 
-  SimplifiedObservation._();
+  @BuiltValueField(wireName: r'photos')
+  BuiltList<SimplePhoto> get photos;
 
-  factory SimplifiedObservation([void updates(SimplifiedObservationBuilder b)]) = _$SimplifiedObservation;
+  SimplifiedObservationWithPhotos._();
+
+  factory SimplifiedObservationWithPhotos([void updates(SimplifiedObservationWithPhotosBuilder b)]) = _$SimplifiedObservationWithPhotos;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(SimplifiedObservationBuilder b) => b;
+  static void _defaults(SimplifiedObservationWithPhotosBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<SimplifiedObservation> get serializer => _$SimplifiedObservationSerializer();
+  static Serializer<SimplifiedObservationWithPhotos> get serializer => _$SimplifiedObservationWithPhotosSerializer();
 }
 
-class _$SimplifiedObservationSerializer implements PrimitiveSerializer<SimplifiedObservation> {
+class _$SimplifiedObservationWithPhotosSerializer implements PrimitiveSerializer<SimplifiedObservationWithPhotos> {
   @override
-  final Iterable<Type> types = const [SimplifiedObservation, _$SimplifiedObservation];
+  final Iterable<Type> types = const [SimplifiedObservationWithPhotos, _$SimplifiedObservationWithPhotos];
 
   @override
-  final String wireName = r'SimplifiedObservation';
+  final String wireName = r'SimplifiedObservationWithPhotos';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    SimplifiedObservation object, {
+    SimplifiedObservationWithPhotos object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'uuid';
@@ -104,12 +110,17 @@ class _$SimplifiedObservationSerializer implements PrimitiveSerializer<Simplifie
         specifiedType: const FullType.nullable(String),
       );
     }
+    yield r'photos';
+    yield serializers.serialize(
+      object.photos,
+      specifiedType: const FullType(BuiltList, [FullType(SimplePhoto)]),
+    );
   }
 
   @override
   Object serialize(
     Serializers serializers,
-    SimplifiedObservation object, {
+    SimplifiedObservationWithPhotos object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -120,7 +131,7 @@ class _$SimplifiedObservationSerializer implements PrimitiveSerializer<Simplifie
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required SimplifiedObservationBuilder result,
+    required SimplifiedObservationWithPhotosBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -177,6 +188,13 @@ class _$SimplifiedObservationSerializer implements PrimitiveSerializer<Simplifie
           if (valueDes == null) continue;
           result.note = valueDes;
           break;
+        case r'photos':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BuiltList, [FullType(SimplePhoto)]),
+          ) as BuiltList<SimplePhoto>;
+          result.photos.replace(valueDes);
+          break;
         default:
           unhandled.add(key);
           unhandled.add(value);
@@ -186,12 +204,12 @@ class _$SimplifiedObservationSerializer implements PrimitiveSerializer<Simplifie
   }
 
   @override
-  SimplifiedObservation deserialize(
+  SimplifiedObservationWithPhotos deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = SimplifiedObservationBuilder();
+    final result = SimplifiedObservationWithPhotosBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

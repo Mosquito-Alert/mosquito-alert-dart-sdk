@@ -1,14 +1,19 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for Assignment
+// tests for UserAssignment
 void main() {
-  final instance = AssignmentBuilder();
+  final instance = UserAssignmentBuilder();
   // TODO add properties to the builder and call build()
 
-  group(Assignment, () {
-    // SimplifiedObservationWithPhotos observation
-    test('to test the property `observation`', () async {
+  group(UserAssignment, () {
+    // SimpleAnnotatorUser user
+    test('to test the property `user`', () async {
+      // TODO
+    });
+
+    // int annotationId
+    test('to test the property `annotationId`', () async {
       // TODO
     });
 

@@ -12,14 +12,14 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedAnnotationList> annotationsList(String observationUuid, { String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, bool isDecisive, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, BuiltList<int> userIds }) async
+    //Future<PaginatedAnnotationList> annotationsList(String observationUuid, { String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, bool isDecisive, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
     test('test annotationsList', () async {
       // TODO
     });
 
     // Get my annotations
     //
-    //Future<PaginatedAnnotationList> annotationsListMine({ String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, bool isDecisive, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, BuiltList<int> userIds }) async
+    //Future<PaginatedAnnotationList> annotationsListMine({ String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, bool isDecisive, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
     test('test annotationsListMine', () async {
       // TODO
     });
@@ -31,8 +31,8 @@ void main() {
 
     // Assign the next available identification task.
     //
-    //Future<IdentificationTask> assignNew() async
-    test('test assignNew', () async {
+    //Future<Assignment> assignNext() async
+    test('test assignNext', () async {
       // TODO
     });
 
@@ -45,16 +45,6 @@ void main() {
     //
     //Future<PaginatedIdentificationTaskList> listMine({ BuiltList<int> annotatorIds, BuiltList<int> assigneeIds, DateTime createdAtAfter, DateTime createdAtBefore, bool fullyPredicted, bool isFlagged, bool isSafe, int numAnnotationsMax, int numAnnotationsMin, BuiltList<int> observationCountryIds, BuiltList<String> orderBy, int page, int pageSize, double resultAgreementMax, double resultAgreementMin, double resultConfidenceMax, double resultConfidenceMin, String resultSource, BuiltList<int> resultTaxonIds, double resultUncertaintyMax, double resultUncertaintyMin, String reviewType, BuiltList<String> status, DateTime updatedAtAfter, DateTime updatedAtBefore }) async
     test('test listMine', () async {
-      // TODO
-    });
-
-    //Future<PaginatedSimplePhotoList> photosList(String observationUuid, { int page, int pageSize }) async
-    test('test photosList', () async {
-      // TODO
-    });
-
-    //Future<SimplePhoto> photosRetrieve(String observationUuid, String uuid) async
-    test('test photosRetrieve', () async {
       // TODO
     });
 

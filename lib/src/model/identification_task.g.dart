@@ -94,11 +94,11 @@ class _$IdentificationTaskStatusEnumSerializer
 
 class _$IdentificationTask extends IdentificationTask {
   @override
-  final SimplifiedObservation observation;
+  final SimplifiedObservationWithPhotos observation;
   @override
   final SimplePhoto publicPhoto;
   @override
-  final BuiltList<Assignment> assignments;
+  final BuiltList<UserAssignment> assignments;
   @override
   final IdentificationTaskStatusEnum? status;
   @override
@@ -225,10 +225,10 @@ class IdentificationTaskBuilder
     implements Builder<IdentificationTask, IdentificationTaskBuilder> {
   _$IdentificationTask? _$v;
 
-  SimplifiedObservationBuilder? _observation;
-  SimplifiedObservationBuilder get observation =>
-      _$this._observation ??= new SimplifiedObservationBuilder();
-  set observation(SimplifiedObservationBuilder? observation) =>
+  SimplifiedObservationWithPhotosBuilder? _observation;
+  SimplifiedObservationWithPhotosBuilder get observation =>
+      _$this._observation ??= new SimplifiedObservationWithPhotosBuilder();
+  set observation(SimplifiedObservationWithPhotosBuilder? observation) =>
       _$this._observation = observation;
 
   SimplePhotoBuilder? _publicPhoto;
@@ -237,10 +237,10 @@ class IdentificationTaskBuilder
   set publicPhoto(SimplePhotoBuilder? publicPhoto) =>
       _$this._publicPhoto = publicPhoto;
 
-  ListBuilder<Assignment>? _assignments;
-  ListBuilder<Assignment> get assignments =>
-      _$this._assignments ??= new ListBuilder<Assignment>();
-  set assignments(ListBuilder<Assignment>? assignments) =>
+  ListBuilder<UserAssignment>? _assignments;
+  ListBuilder<UserAssignment> get assignments =>
+      _$this._assignments ??= new ListBuilder<UserAssignment>();
+  set assignments(ListBuilder<UserAssignment>? assignments) =>
       _$this._assignments = assignments;
 
   IdentificationTaskStatusEnum? _status;

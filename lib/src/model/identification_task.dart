@@ -4,10 +4,10 @@
 
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/identification_task_review.dart';
-import 'package:mosquito_alert/src/model/simplified_observation.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/assignment.dart';
+import 'package:mosquito_alert/src/model/simplified_observation_with_photos.dart';
+import 'package:mosquito_alert/src/model/user_assignment.dart';
 import 'package:mosquito_alert/src/model/identification_task_result.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -32,13 +32,13 @@ part 'identification_task.g.dart';
 @BuiltValue()
 abstract class IdentificationTask implements Built<IdentificationTask, IdentificationTaskBuilder> {
   @BuiltValueField(wireName: r'observation')
-  SimplifiedObservation get observation;
+  SimplifiedObservationWithPhotos get observation;
 
   @BuiltValueField(wireName: r'public_photo')
   SimplePhoto get publicPhoto;
 
   @BuiltValueField(wireName: r'assignments')
-  BuiltList<Assignment> get assignments;
+  BuiltList<UserAssignment> get assignments;
 
   @BuiltValueField(wireName: r'status')
   IdentificationTaskStatusEnum? get status;
@@ -96,7 +96,7 @@ class _$IdentificationTaskSerializer implements PrimitiveSerializer<Identificati
     yield r'observation';
     yield serializers.serialize(
       object.observation,
-      specifiedType: const FullType(SimplifiedObservation),
+      specifiedType: const FullType(SimplifiedObservationWithPhotos),
     );
     yield r'public_photo';
     yield serializers.serialize(
@@ -106,7 +106,7 @@ class _$IdentificationTaskSerializer implements PrimitiveSerializer<Identificati
     yield r'assignments';
     yield serializers.serialize(
       object.assignments,
-      specifiedType: const FullType(BuiltList, [FullType(Assignment)]),
+      specifiedType: const FullType(BuiltList, [FullType(UserAssignment)]),
     );
     if (object.status != null) {
       yield r'status';
@@ -181,8 +181,8 @@ class _$IdentificationTaskSerializer implements PrimitiveSerializer<Identificati
         case r'observation':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(SimplifiedObservation),
-          ) as SimplifiedObservation;
+            specifiedType: const FullType(SimplifiedObservationWithPhotos),
+          ) as SimplifiedObservationWithPhotos;
           result.observation.replace(valueDes);
           break;
         case r'public_photo':
@@ -195,8 +195,8 @@ class _$IdentificationTaskSerializer implements PrimitiveSerializer<Identificati
         case r'assignments':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(Assignment)]),
-          ) as BuiltList<Assignment>;
+            specifiedType: const FullType(BuiltList, [FullType(UserAssignment)]),
+          ) as BuiltList<UserAssignment>;
           result.assignments.replace(valueDes);
           break;
         case r'status':

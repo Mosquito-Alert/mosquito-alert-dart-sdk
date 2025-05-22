@@ -13,11 +13,9 @@ Method | HTTP request | Description
 [**annotationsList**](IdentificationTasksApi.md#annotationslist) | **GET** /identification-tasks/{observation_uuid}/annotations/ | 
 [**annotationsListMine**](IdentificationTasksApi.md#annotationslistmine) | **GET** /me/identification-tasks/annotations/ | 
 [**annotationsRetrieve**](IdentificationTasksApi.md#annotationsretrieve) | **GET** /identification-tasks/{observation_uuid}/annotations/{id}/ | 
-[**assignNew**](IdentificationTasksApi.md#assignnew) | **POST** /identification-tasks/assign/ | 
+[**assignNext**](IdentificationTasksApi.md#assignnext) | **POST** /identification-tasks/assignments/next/ | 
 [**list**](IdentificationTasksApi.md#list) | **GET** /identification-tasks/ | 
 [**listMine**](IdentificationTasksApi.md#listmine) | **GET** /me/identification-tasks/ | 
-[**photosList**](IdentificationTasksApi.md#photoslist) | **GET** /identification-tasks/{observation_uuid}/photos/ | 
-[**photosRetrieve**](IdentificationTasksApi.md#photosretrieve) | **GET** /identification-tasks/{observation_uuid}/photos/{uuid}/ | 
 [**predictionsCreate**](IdentificationTasksApi.md#predictionscreate) | **POST** /identification-tasks/{observation_uuid}/predictions/ | 
 [**predictionsDestroy**](IdentificationTasksApi.md#predictionsdestroy) | **DELETE** /identification-tasks/{observation_uuid}/predictions/{photo_uuid}/ | 
 [**predictionsList**](IdentificationTasksApi.md#predictionslist) | **GET** /identification-tasks/{observation_uuid}/predictions/ | 
@@ -79,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsList**
-> PaginatedAnnotationList annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, isDecisive, isFlagged, orderBy, page, pageSize, userIds)
+> PaginatedAnnotationList annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -101,15 +99,19 @@ final String classificationConfidenceLabel = classificationConfidenceLabel_examp
 final double classificationConfidenceMax = 1.2; // double | 
 final double classificationConfidenceMin = 1.2; // double | 
 final BuiltList<int> classificationTaxonIds = ; // BuiltList<int> | 
+final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
+final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final bool isDecisive = true; // bool | 
 final bool isFlagged = true; // bool | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
+final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
+final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, isDecisive, isFlagged, orderBy, page, pageSize, userIds);
+    final response = api.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->annotationsList: $e\n');
@@ -125,11 +127,15 @@ Name | Type | Description  | Notes
  **classificationConfidenceMax** | **double**|  | [optional] 
  **classificationConfidenceMin** | **double**|  | [optional] 
  **classificationTaxonIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
+ **createdAtAfter** | **DateTime**| Created at | [optional] 
+ **createdAtBefore** | **DateTime**| Created at | [optional] 
  **isDecisive** | **bool**|  | [optional] 
  **isFlagged** | **bool**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **updatedAtAfter** | **DateTime**| Updated at | [optional] 
+ **updatedAtBefore** | **DateTime**| Updated at | [optional] 
  **userIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
 
 ### Return type
@@ -148,7 +154,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsListMine**
-> PaginatedAnnotationList annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, isDecisive, isFlagged, orderBy, page, pageSize, userIds)
+> PaginatedAnnotationList annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -171,15 +177,19 @@ final String classificationConfidenceLabel = classificationConfidenceLabel_examp
 final double classificationConfidenceMax = 1.2; // double | 
 final double classificationConfidenceMin = 1.2; // double | 
 final BuiltList<int> classificationTaxonIds = ; // BuiltList<int> | 
+final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
+final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final bool isDecisive = true; // bool | 
 final bool isFlagged = true; // bool | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
+final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
+final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, isDecisive, isFlagged, orderBy, page, pageSize, userIds);
+    final response = api.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->annotationsListMine: $e\n');
@@ -194,11 +204,15 @@ Name | Type | Description  | Notes
  **classificationConfidenceMax** | **double**|  | [optional] 
  **classificationConfidenceMin** | **double**|  | [optional] 
  **classificationTaxonIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
+ **createdAtAfter** | **DateTime**| Created at | [optional] 
+ **createdAtBefore** | **DateTime**| Created at | [optional] 
  **isDecisive** | **bool**|  | [optional] 
  **isFlagged** | **bool**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **updatedAtAfter** | **DateTime**| Updated at | [optional] 
+ **updatedAtBefore** | **DateTime**| Updated at | [optional] 
  **userIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
 
 ### Return type
@@ -267,8 +281,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **assignNew**
-> IdentificationTask assignNew()
+# **assignNext**
+> Assignment assignNext()
 
 
 
@@ -289,10 +303,10 @@ import 'package:mosquito_alert/api.dart';
 final api = MosquitoAlert().getIdentificationTasksApi();
 
 try {
-    final response = api.assignNew();
+    final response = api.assignNext();
     print(response);
 } catch on DioException (e) {
-    print('Exception when calling IdentificationTasksApi->assignNew: $e\n');
+    print('Exception when calling IdentificationTasksApi->assignNext: $e\n');
 }
 ```
 
@@ -301,7 +315,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**IdentificationTask**](IdentificationTask.md)
+[**Assignment**](Assignment.md)
 
 ### Authorization
 
@@ -498,110 +512,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**PaginatedIdentificationTaskList**](PaginatedIdentificationTaskList.md)
-
-### Authorization
-
-[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **photosList**
-> PaginatedSimplePhotoList photosList(observationUuid, page, pageSize)
-
-
-
-### Example
-```dart
-import 'package:mosquito_alert/api.dart';
-// TODO Configure API key authorization: tokenAuth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
-// TODO Configure API key authorization: cookieAuth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
-
-final api = MosquitoAlert().getIdentificationTasksApi();
-final String observationUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | UUID of the Observation
-final int page = 56; // int | A page number within the paginated result set.
-final int pageSize = 56; // int | Number of results to return per page.
-
-try {
-    final response = api.photosList(observationUuid, page, pageSize);
-    print(response);
-} catch on DioException (e) {
-    print('Exception when calling IdentificationTasksApi->photosList: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **observationUuid** | **String**| UUID of the Observation | 
- **page** | **int**| A page number within the paginated result set. | [optional] 
- **pageSize** | **int**| Number of results to return per page. | [optional] 
-
-### Return type
-
-[**PaginatedSimplePhotoList**](PaginatedSimplePhotoList.md)
-
-### Authorization
-
-[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **photosRetrieve**
-> SimplePhoto photosRetrieve(observationUuid, uuid)
-
-
-
-### Example
-```dart
-import 'package:mosquito_alert/api.dart';
-// TODO Configure API key authorization: tokenAuth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
-// TODO Configure API key authorization: cookieAuth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
-
-final api = MosquitoAlert().getIdentificationTasksApi();
-final String observationUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | UUID of the Observation
-final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
-
-try {
-    final response = api.photosRetrieve(observationUuid, uuid);
-    print(response);
-} catch on DioException (e) {
-    print('Exception when calling IdentificationTasksApi->photosRetrieve: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **observationUuid** | **String**| UUID of the Observation | 
- **uuid** | **String**|  | 
-
-### Return type
-
-[**SimplePhoto**](SimplePhoto.md)
 
 ### Authorization
 

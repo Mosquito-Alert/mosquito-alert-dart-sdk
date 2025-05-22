@@ -11,17 +11,16 @@ import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/annotation.dart';
 import 'package:mosquito_alert/src/model/annotation_request.dart';
+import 'package:mosquito_alert/src/model/assignment.dart';
 import 'package:mosquito_alert/src/model/create_photo_prediction.dart';
 import 'package:mosquito_alert/src/model/create_photo_prediction_request.dart';
 import 'package:mosquito_alert/src/model/identification_task.dart';
 import 'package:mosquito_alert/src/model/paginated_annotation_list.dart';
 import 'package:mosquito_alert/src/model/paginated_identification_task_list.dart';
 import 'package:mosquito_alert/src/model/paginated_photo_prediction_list.dart';
-import 'package:mosquito_alert/src/model/paginated_simple_photo_list.dart';
 import 'package:mosquito_alert/src/model/patched_photo_prediction_request.dart';
 import 'package:mosquito_alert/src/model/photo_prediction.dart';
 import 'package:mosquito_alert/src/model/photo_prediction_request.dart';
-import 'package:mosquito_alert/src/model/simple_photo.dart';
 
 class IdentificationTasksApi {
 
@@ -153,11 +152,15 @@ class IdentificationTasksApi {
   /// * [classificationConfidenceMax] 
   /// * [classificationConfidenceMin] 
   /// * [classificationTaxonIds] 
+  /// * [createdAtAfter] - Created at
+  /// * [createdAtBefore] - Created at
   /// * [isDecisive] 
   /// * [isFlagged] 
   /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
+  /// * [updatedAtAfter] - Updated at
+  /// * [updatedAtBefore] - Updated at
   /// * [userIds] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -174,11 +177,15 @@ class IdentificationTasksApi {
     double? classificationConfidenceMax,
     double? classificationConfidenceMin,
     BuiltList<int>? classificationTaxonIds,
+    DateTime? createdAtAfter,
+    DateTime? createdAtBefore,
     bool? isDecisive,
     bool? isFlagged,
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
+    DateTime? updatedAtAfter,
+    DateTime? updatedAtBefore,
     BuiltList<int>? userIds,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -221,11 +228,15 @@ class IdentificationTasksApi {
       if (classificationConfidenceMax != null) r'classification_confidence_max': encodeQueryParameter(_serializers, classificationConfidenceMax, const FullType(double)),
       if (classificationConfidenceMin != null) r'classification_confidence_min': encodeQueryParameter(_serializers, classificationConfidenceMin, const FullType(double)),
       if (classificationTaxonIds != null) r'classification_taxon_ids': encodeCollectionQueryParameter<int>(_serializers, classificationTaxonIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
+      if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
+      if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (isDecisive != null) r'is_decisive': encodeQueryParameter(_serializers, isDecisive, const FullType(bool)),
       if (isFlagged != null) r'is_flagged': encodeQueryParameter(_serializers, isFlagged, const FullType(bool)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
+      if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
       if (userIds != null) r'user_ids': encodeCollectionQueryParameter<int>(_serializers, userIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
     };
 
@@ -277,11 +288,15 @@ class IdentificationTasksApi {
   /// * [classificationConfidenceMax] 
   /// * [classificationConfidenceMin] 
   /// * [classificationTaxonIds] 
+  /// * [createdAtAfter] - Created at
+  /// * [createdAtBefore] - Created at
   /// * [isDecisive] 
   /// * [isFlagged] 
   /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
+  /// * [updatedAtAfter] - Updated at
+  /// * [updatedAtBefore] - Updated at
   /// * [userIds] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -297,11 +312,15 @@ class IdentificationTasksApi {
     double? classificationConfidenceMax,
     double? classificationConfidenceMin,
     BuiltList<int>? classificationTaxonIds,
+    DateTime? createdAtAfter,
+    DateTime? createdAtBefore,
     bool? isDecisive,
     bool? isFlagged,
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
+    DateTime? updatedAtAfter,
+    DateTime? updatedAtBefore,
     BuiltList<int>? userIds,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -344,11 +363,15 @@ class IdentificationTasksApi {
       if (classificationConfidenceMax != null) r'classification_confidence_max': encodeQueryParameter(_serializers, classificationConfidenceMax, const FullType(double)),
       if (classificationConfidenceMin != null) r'classification_confidence_min': encodeQueryParameter(_serializers, classificationConfidenceMin, const FullType(double)),
       if (classificationTaxonIds != null) r'classification_taxon_ids': encodeCollectionQueryParameter<int>(_serializers, classificationTaxonIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
+      if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
+      if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (isDecisive != null) r'is_decisive': encodeQueryParameter(_serializers, isDecisive, const FullType(bool)),
       if (isFlagged != null) r'is_flagged': encodeQueryParameter(_serializers, isFlagged, const FullType(bool)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
+      if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
       if (userIds != null) r'user_ids': encodeCollectionQueryParameter<int>(_serializers, userIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
     };
 
@@ -485,7 +508,7 @@ class IdentificationTasksApi {
     );
   }
 
-  /// assignNew
+  /// assignNext
   /// Assign the next available identification task.
   ///
   /// Parameters:
@@ -496,9 +519,9 @@ class IdentificationTasksApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [IdentificationTask] as data
+  /// Returns a [Future] containing a [Response] with a [Assignment] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<IdentificationTask>> assignNew({ 
+  Future<Response<Assignment>> assignNext({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -506,7 +529,7 @@ class IdentificationTasksApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/identification-tasks/assign/';
+    final _path = r'/identification-tasks/assignments/next/';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -543,14 +566,14 @@ class IdentificationTasksApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    IdentificationTask? _responseData;
+    Assignment? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(IdentificationTask),
-      ) as IdentificationTask;
+        specifiedType: const FullType(Assignment),
+      ) as Assignment;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -562,7 +585,7 @@ class IdentificationTasksApi {
       );
     }
 
-    return Response<IdentificationTask>(
+    return Response<Assignment>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -899,200 +922,6 @@ class IdentificationTasksApi {
     }
 
     return Response<PaginatedIdentificationTaskList>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// photosList
-  /// 
-  ///
-  /// Parameters:
-  /// * [observationUuid] - UUID of the Observation
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [PaginatedSimplePhotoList] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<PaginatedSimplePhotoList>> photosList({ 
-    required String observationUuid,
-    int? page,
-    int? pageSize,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/identification-tasks/{observation_uuid}/photos/'.replaceAll('{' r'observation_uuid' '}', encodeQueryParameter(_serializers, observationUuid, const FullType(String)).toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'apiKey',
-            'name': 'tokenAuth',
-            'keyName': 'Authorization',
-            'where': 'header',
-          },{
-            'type': 'apiKey',
-            'name': 'cookieAuth',
-            'keyName': 'sessionid',
-            'where': '',
-          },{
-            'type': 'http',
-            'scheme': 'bearer',
-            'name': 'jwtAuth',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
-      if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    PaginatedSimplePhotoList? _responseData;
-
-    try {
-      final rawResponse = _response.data;
-      _responseData = rawResponse == null ? null : _serializers.deserialize(
-        rawResponse,
-        specifiedType: const FullType(PaginatedSimplePhotoList),
-      ) as PaginatedSimplePhotoList;
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<PaginatedSimplePhotoList>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// photosRetrieve
-  /// 
-  ///
-  /// Parameters:
-  /// * [observationUuid] - UUID of the Observation
-  /// * [uuid] 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [SimplePhoto] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<SimplePhoto>> photosRetrieve({ 
-    required String observationUuid,
-    required String uuid,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/identification-tasks/{observation_uuid}/photos/{uuid}/'.replaceAll('{' r'observation_uuid' '}', encodeQueryParameter(_serializers, observationUuid, const FullType(String)).toString()).replaceAll('{' r'uuid' '}', encodeQueryParameter(_serializers, uuid, const FullType(String)).toString());
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'apiKey',
-            'name': 'tokenAuth',
-            'keyName': 'Authorization',
-            'where': 'header',
-          },{
-            'type': 'apiKey',
-            'name': 'cookieAuth',
-            'keyName': 'sessionid',
-            'where': '',
-          },{
-            'type': 'http',
-            'scheme': 'bearer',
-            'name': 'jwtAuth',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    SimplePhoto? _responseData;
-
-    try {
-      final rawResponse = _response.data;
-      _responseData = rawResponse == null ? null : _serializers.deserialize(
-        rawResponse,
-        specifiedType: const FullType(SimplePhoto),
-      ) as SimplePhoto;
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<SimplePhoto>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
