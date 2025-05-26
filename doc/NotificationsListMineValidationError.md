@@ -9,7 +9,7 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** |  | 
-**errors** | [**BuiltList&lt;NotificationsListMineError&gt;**](NotificationsListMineError.md) |  | 
+**errors** | [**BuiltList&lt;NotificationsListMineOrderByErrorComponent&gt;**](NotificationsListMineOrderByErrorComponent.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

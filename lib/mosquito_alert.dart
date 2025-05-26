@@ -434,8 +434,6 @@ export 'package:mosquito_alert/src/model/notifications_create_topic_codes_index_
 export 'package:mosquito_alert/src/model/notifications_create_user_uuids_error_component.dart';
 export 'package:mosquito_alert/src/model/notifications_create_user_uuids_index_error_component.dart';
 export 'package:mosquito_alert/src/model/notifications_create_validation_error.dart';
-export 'package:mosquito_alert/src/model/notifications_list_error.dart';
-export 'package:mosquito_alert/src/model/notifications_list_mine_error.dart';
 export 'package:mosquito_alert/src/model/notifications_list_mine_order_by_error_component.dart';
 export 'package:mosquito_alert/src/model/notifications_list_mine_validation_error.dart';
 export 'package:mosquito_alert/src/model/notifications_list_order_by_error_component.dart';
@@ -566,7 +564,7 @@ export 'package:mosquito_alert/src/model/simple_taxon.dart';
 export 'package:mosquito_alert/src/model/simple_taxon_request.dart';
 export 'package:mosquito_alert/src/model/simplified_location.dart';
 export 'package:mosquito_alert/src/model/simplified_observation_with_photos.dart';
-export 'package:mosquito_alert/src/model/taxa_list_error.dart';
+export 'package:mosquito_alert/src/model/taxa_list_rank_error_component.dart';
 export 'package:mosquito_alert/src/model/taxa_list_validation_error.dart';
 export 'package:mosquito_alert/src/model/taxon.dart';
 export 'package:mosquito_alert/src/model/taxon_tree_node.dart';

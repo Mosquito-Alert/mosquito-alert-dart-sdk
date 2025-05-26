@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **list**
-> PaginatedTaxonList list(isRelevant, page, pageSize)
+> PaginatedTaxonList list(isRelevant, page, pageSize, rank)
 
 
 
@@ -36,9 +36,10 @@ final api = MosquitoAlert().getTaxaApi();
 final bool isRelevant = true; // bool | 
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
+final BuiltList<int> rank = ; // BuiltList<int> | 
 
 try {
-    final response = api.list(isRelevant, page, pageSize);
+    final response = api.list(isRelevant, page, pageSize, rank);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling TaxaApi->list: $e\n');
@@ -52,6 +53,7 @@ Name | Type | Description  | Notes
  **isRelevant** | **bool**|  | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **rank** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
 
 ### Return type
 

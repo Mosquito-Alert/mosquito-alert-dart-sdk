@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/taxa_list_rank_error_component.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/taxa_list_error.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -22,7 +22,7 @@ abstract class TaxaListValidationError implements Built<TaxaListValidationError,
   // enum typeEnum {  validation_error,  };
 
   @BuiltValueField(wireName: r'errors')
-  BuiltList<TaxaListError> get errors;
+  BuiltList<TaxaListRankErrorComponent> get errors;
 
   TaxaListValidationError._();
 
@@ -55,7 +55,7 @@ class _$TaxaListValidationErrorSerializer implements PrimitiveSerializer<TaxaLis
     yield r'errors';
     yield serializers.serialize(
       object.errors,
-      specifiedType: const FullType(BuiltList, [FullType(TaxaListError)]),
+      specifiedType: const FullType(BuiltList, [FullType(TaxaListRankErrorComponent)]),
     );
   }
 
@@ -90,8 +90,8 @@ class _$TaxaListValidationErrorSerializer implements PrimitiveSerializer<TaxaLis
         case r'errors':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(TaxaListError)]),
-          ) as BuiltList<TaxaListError>;
+            specifiedType: const FullType(BuiltList, [FullType(TaxaListRankErrorComponent)]),
+          ) as BuiltList<TaxaListRankErrorComponent>;
           result.errors.replace(valueDes);
           break;
         default:

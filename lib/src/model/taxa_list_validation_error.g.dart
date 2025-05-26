@@ -70,7 +70,7 @@ class _$TaxaListValidationError extends TaxaListValidationError {
   @override
   final TaxaListValidationErrorTypeEnum type;
   @override
-  final BuiltList<TaxaListError> errors;
+  final BuiltList<TaxaListRankErrorComponent> errors;
 
   factory _$TaxaListValidationError(
           [void Function(TaxaListValidationErrorBuilder)? updates]) =>
@@ -128,10 +128,11 @@ class TaxaListValidationErrorBuilder
   TaxaListValidationErrorTypeEnum? get type => _$this._type;
   set type(TaxaListValidationErrorTypeEnum? type) => _$this._type = type;
 
-  ListBuilder<TaxaListError>? _errors;
-  ListBuilder<TaxaListError> get errors =>
-      _$this._errors ??= new ListBuilder<TaxaListError>();
-  set errors(ListBuilder<TaxaListError>? errors) => _$this._errors = errors;
+  ListBuilder<TaxaListRankErrorComponent>? _errors;
+  ListBuilder<TaxaListRankErrorComponent> get errors =>
+      _$this._errors ??= new ListBuilder<TaxaListRankErrorComponent>();
+  set errors(ListBuilder<TaxaListRankErrorComponent>? errors) =>
+      _$this._errors = errors;
 
   TaxaListValidationErrorBuilder() {
     TaxaListValidationError._defaults(this);

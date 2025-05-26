@@ -7,6 +7,7 @@ import 'dart:async';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
+import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/paginated_taxon_list.dart';
 import 'package:mosquito_alert/src/model/taxon.dart';
@@ -27,6 +28,7 @@ class TaxaApi {
   /// * [isRelevant] 
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
+  /// * [rank] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -40,6 +42,7 @@ class TaxaApi {
     bool? isRelevant,
     int? page,
     int? pageSize,
+    BuiltList<int>? rank,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -80,6 +83,7 @@ class TaxaApi {
       if (isRelevant != null) r'is_relevant': encodeQueryParameter(_serializers, isRelevant, const FullType(bool)),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      if (rank != null) r'rank': encodeCollectionQueryParameter<int>(_serializers, rank, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
     };
 
     final _response = await _dio.request<Object>(

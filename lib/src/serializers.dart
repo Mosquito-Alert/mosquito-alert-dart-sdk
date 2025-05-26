@@ -423,8 +423,6 @@ import 'package:mosquito_alert/src/model/notifications_create_topic_codes_index_
 import 'package:mosquito_alert/src/model/notifications_create_user_uuids_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_create_user_uuids_index_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/notifications_list_error.dart';
-import 'package:mosquito_alert/src/model/notifications_list_mine_error.dart';
 import 'package:mosquito_alert/src/model/notifications_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/notifications_list_order_by_error_component.dart';
@@ -555,7 +553,7 @@ import 'package:mosquito_alert/src/model/simple_taxon.dart';
 import 'package:mosquito_alert/src/model/simple_taxon_request.dart';
 import 'package:mosquito_alert/src/model/simplified_location.dart';
 import 'package:mosquito_alert/src/model/simplified_observation_with_photos.dart';
-import 'package:mosquito_alert/src/model/taxa_list_error.dart';
+import 'package:mosquito_alert/src/model/taxa_list_rank_error_component.dart';
 import 'package:mosquito_alert/src/model/taxa_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/taxon.dart';
 import 'package:mosquito_alert/src/model/taxon_tree_node.dart';
@@ -989,8 +987,6 @@ part 'serializers.g.dart';
   NotificationsCreateUserUuidsErrorComponent,
   NotificationsCreateUserUuidsINDEXErrorComponent,
   NotificationsCreateValidationError,
-  NotificationsListError,
-  NotificationsListMineError,
   NotificationsListMineOrderByErrorComponent,
   NotificationsListMineValidationError,
   NotificationsListOrderByErrorComponent,
@@ -1121,7 +1117,7 @@ part 'serializers.g.dart';
   SimpleTaxonRequest,
   SimplifiedLocation,
   SimplifiedObservationWithPhotos,
-  TaxaListError,
+  TaxaListRankErrorComponent,
   TaxaListValidationError,
   Taxon,
   TaxonTreeNode,
@@ -1145,6 +1141,10 @@ part 'serializers.g.dart';
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType.nullable(int)]),
+        () => ListBuilder<int>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(int)]),
         () => ListBuilder<int>(),
       )
@@ -1163,8 +1163,8 @@ Serializers serializers = (_$serializers.toBuilder()
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())
       ..add(const DateSerializer())
-      ..add(Iso8601DateTimeSerializer()))
-    .build();
+      ..add(Iso8601DateTimeSerializer())
+    ).build();
 
 Serializers standardSerializers =
     (serializers.toBuilder()..addPlugin(StandardJsonPlugin())).build();

@@ -3,8 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/notifications_list_error.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/notifications_list_order_by_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -22,7 +22,7 @@ abstract class NotificationsListValidationError implements Built<NotificationsLi
   // enum typeEnum {  validation_error,  };
 
   @BuiltValueField(wireName: r'errors')
-  BuiltList<NotificationsListError> get errors;
+  BuiltList<NotificationsListOrderByErrorComponent> get errors;
 
   NotificationsListValidationError._();
 
@@ -55,7 +55,7 @@ class _$NotificationsListValidationErrorSerializer implements PrimitiveSerialize
     yield r'errors';
     yield serializers.serialize(
       object.errors,
-      specifiedType: const FullType(BuiltList, [FullType(NotificationsListError)]),
+      specifiedType: const FullType(BuiltList, [FullType(NotificationsListOrderByErrorComponent)]),
     );
   }
 
@@ -90,8 +90,8 @@ class _$NotificationsListValidationErrorSerializer implements PrimitiveSerialize
         case r'errors':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(NotificationsListError)]),
-          ) as BuiltList<NotificationsListError>;
+            specifiedType: const FullType(BuiltList, [FullType(NotificationsListOrderByErrorComponent)]),
+          ) as BuiltList<NotificationsListOrderByErrorComponent>;
           result.errors.replace(valueDes);
           break;
         default:

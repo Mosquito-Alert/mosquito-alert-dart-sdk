@@ -1587,8 +1587,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(NotificationsCreateUserUuidsINDEXErrorComponentCodeEnum.serializer)
       ..add(NotificationsCreateValidationError.serializer)
       ..add(NotificationsCreateValidationErrorTypeEnum.serializer)
-      ..add(NotificationsListError.serializer)
-      ..add(NotificationsListMineError.serializer)
       ..add(NotificationsListMineOrderByErrorComponent.serializer)
       ..add(NotificationsListMineOrderByErrorComponentAttrEnum.serializer)
       ..add(NotificationsListMineOrderByErrorComponentCodeEnum.serializer)
@@ -2029,7 +2027,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SimplifiedLocation.serializer)
       ..add(SimplifiedLocationTimezoneEnum.serializer)
       ..add(SimplifiedObservationWithPhotos.serializer)
-      ..add(TaxaListError.serializer)
+      ..add(TaxaListRankErrorComponent.serializer)
+      ..add(TaxaListRankErrorComponentAttrEnum.serializer)
+      ..add(TaxaListRankErrorComponentCodeEnum.serializer)
       ..add(TaxaListValidationError.serializer)
       ..add(TaxaListValidationErrorTypeEnum.serializer)
       ..add(Taxon.serializer)
@@ -2201,13 +2201,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
               BuiltList, const [const FullType(NotificationsCreateError)]),
           () => new ListBuilder<NotificationsCreateError>())
       ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(NotificationsListError)]),
-          () => new ListBuilder<NotificationsListError>())
+          const FullType(BuiltList, const [
+            const FullType(NotificationsListMineOrderByErrorComponent)
+          ]),
+          () => new ListBuilder<NotificationsListMineOrderByErrorComponent>())
       ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(NotificationsListMineError)]),
-          () => new ListBuilder<NotificationsListMineError>())
+          const FullType(BuiltList,
+              const [const FullType(NotificationsListOrderByErrorComponent)]),
+          () => new ListBuilder<NotificationsListOrderByErrorComponent>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(NotificationsPartialUpdateError)]),
@@ -2279,8 +2280,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(SimplePhoto)]),
           () => new ListBuilder<SimplePhoto>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(TaxaListError)]),
-          () => new ListBuilder<TaxaListError>())
+          const FullType(
+              BuiltList, const [const FullType(TaxaListRankErrorComponent)]),
+          () => new ListBuilder<TaxaListRankErrorComponent>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Taxon)]),
           () => new ListBuilder<Taxon>())

@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    // BuiltList<NotificationsListError> errors
+    // BuiltList<NotificationsListOrderByErrorComponent> errors
     test('to test the property `errors`', () async {
       // TODO
     });

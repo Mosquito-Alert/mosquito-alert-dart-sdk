@@ -73,7 +73,7 @@ class _$NotificationsListValidationError
   @override
   final NotificationsListValidationErrorTypeEnum type;
   @override
-  final BuiltList<NotificationsListError> errors;
+  final BuiltList<NotificationsListOrderByErrorComponent> errors;
 
   factory _$NotificationsListValidationError(
           [void Function(NotificationsListValidationErrorBuilder)? updates]) =>
@@ -134,10 +134,11 @@ class NotificationsListValidationErrorBuilder
   set type(NotificationsListValidationErrorTypeEnum? type) =>
       _$this._type = type;
 
-  ListBuilder<NotificationsListError>? _errors;
-  ListBuilder<NotificationsListError> get errors =>
-      _$this._errors ??= new ListBuilder<NotificationsListError>();
-  set errors(ListBuilder<NotificationsListError>? errors) =>
+  ListBuilder<NotificationsListOrderByErrorComponent>? _errors;
+  ListBuilder<NotificationsListOrderByErrorComponent> get errors =>
+      _$this._errors ??=
+          new ListBuilder<NotificationsListOrderByErrorComponent>();
+  set errors(ListBuilder<NotificationsListOrderByErrorComponent>? errors) =>
       _$this._errors = errors;
 
   NotificationsListValidationErrorBuilder() {

@@ -419,8 +419,6 @@ doc/NotificationsCreateTopicCodesINDEXErrorComponent.md
 doc/NotificationsCreateUserUuidsErrorComponent.md
 doc/NotificationsCreateUserUuidsINDEXErrorComponent.md
 doc/NotificationsCreateValidationError.md
-doc/NotificationsListError.md
-doc/NotificationsListMineError.md
 doc/NotificationsListMineOrderByErrorComponent.md
 doc/NotificationsListMineValidationError.md
 doc/NotificationsListOrderByErrorComponent.md
@@ -555,7 +553,7 @@ doc/SimpleTaxonRequest.md
 doc/SimplifiedLocation.md
 doc/SimplifiedObservationWithPhotos.md
 doc/TaxaApi.md
-doc/TaxaListError.md
+doc/TaxaListRankErrorComponent.md
 doc/TaxaListValidationError.md
 doc/Taxon.md
 doc/TaxonTreeNode.md
@@ -1010,8 +1008,6 @@ lib/src/model/notifications_create_topic_codes_index_error_component.dart
 lib/src/model/notifications_create_user_uuids_error_component.dart
 lib/src/model/notifications_create_user_uuids_index_error_component.dart
 lib/src/model/notifications_create_validation_error.dart
-lib/src/model/notifications_list_error.dart
-lib/src/model/notifications_list_mine_error.dart
 lib/src/model/notifications_list_mine_order_by_error_component.dart
 lib/src/model/notifications_list_mine_validation_error.dart
 lib/src/model/notifications_list_order_by_error_component.dart
@@ -1142,7 +1138,7 @@ lib/src/model/simple_taxon.dart
 lib/src/model/simple_taxon_request.dart
 lib/src/model/simplified_location.dart
 lib/src/model/simplified_observation_with_photos.dart
-lib/src/model/taxa_list_error.dart
+lib/src/model/taxa_list_rank_error_component.dart
 lib/src/model/taxa_list_validation_error.dart
 lib/src/model/taxon.dart
 lib/src/model/taxon_tree_node.dart
@@ -1583,8 +1579,6 @@ test/notifications_create_topic_codes_index_error_component_test.dart
 test/notifications_create_user_uuids_error_component_test.dart
 test/notifications_create_user_uuids_index_error_component_test.dart
 test/notifications_create_validation_error_test.dart
-test/notifications_list_error_test.dart
-test/notifications_list_mine_error_test.dart
 test/notifications_list_mine_order_by_error_component_test.dart
 test/notifications_list_mine_validation_error_test.dart
 test/notifications_list_order_by_error_component_test.dart
@@ -1719,7 +1713,7 @@ test/simple_taxon_test.dart
 test/simplified_location_test.dart
 test/simplified_observation_with_photos_test.dart
 test/taxa_api_test.dart
-test/taxa_list_error_test.dart
+test/taxa_list_rank_error_component_test.dart
 test/taxa_list_validation_error_test.dart
 test/taxon_test.dart
 test/taxon_tree_node_test.dart

@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    // BuiltList<TaxaListError> errors
+    // BuiltList<TaxaListRankErrorComponent> errors
     test('to test the property `errors`', () async {
       // TODO
     });
