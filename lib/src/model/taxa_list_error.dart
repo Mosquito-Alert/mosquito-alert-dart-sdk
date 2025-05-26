@@ -16,7 +16,7 @@ abstract class TaxaListError implements Built<TaxaListError, TaxaListErrorBuilde
   factory TaxaListError([void updates(TaxaListErrorBuilder b)]) = _$TaxaListError;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(TaxaListErrorBuilder b) => b..attr=b.discriminatorValue;
+  static void _defaults(TaxaListErrorBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<TaxaListError> get serializer => _$TaxaListErrorSerializer();
