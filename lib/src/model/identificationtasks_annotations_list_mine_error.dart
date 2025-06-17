@@ -6,6 +6,7 @@
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_order_by_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_confidence_label_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_type_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_confidence_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_updated_at_error_component.dart';
@@ -25,7 +26,7 @@ part 'identificationtasks_annotations_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class IdentificationtasksAnnotationsListMineError implements Built<IdentificationtasksAnnotationsListMineError, IdentificationtasksAnnotationsListMineErrorBuilder> {
-  /// One Of [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListMineCreatedAtErrorComponent], [IdentificationtasksAnnotationsListMineOrderByErrorComponent], [IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent], [IdentificationtasksAnnotationsListMineUserIdsErrorComponent]
+  /// One Of [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListMineCreatedAtErrorComponent], [IdentificationtasksAnnotationsListMineOrderByErrorComponent], [IdentificationtasksAnnotationsListMineTypeErrorComponent], [IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent], [IdentificationtasksAnnotationsListMineUserIdsErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -36,6 +37,7 @@ abstract class IdentificationtasksAnnotationsListMineError implements Built<Iden
     r'classification_taxon_ids': IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent,
     r'created_at': IdentificationtasksAnnotationsListMineCreatedAtErrorComponent,
     r'order_by': IdentificationtasksAnnotationsListMineOrderByErrorComponent,
+    r'type': IdentificationtasksAnnotationsListMineTypeErrorComponent,
     r'updated_at': IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent,
     r'user_ids': IdentificationtasksAnnotationsListMineUserIdsErrorComponent,
   };
@@ -68,6 +70,9 @@ extension IdentificationtasksAnnotationsListMineErrorDiscriminatorExt on Identif
         if (this is IdentificationtasksAnnotationsListMineOrderByErrorComponent) {
             return r'order_by';
         }
+        if (this is IdentificationtasksAnnotationsListMineTypeErrorComponent) {
+            return r'type';
+        }
         if (this is IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent) {
             return r'updated_at';
         }
@@ -93,6 +98,9 @@ extension IdentificationtasksAnnotationsListMineErrorBuilderDiscriminatorExt on 
         }
         if (this is IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder) {
             return r'order_by';
+        }
+        if (this is IdentificationtasksAnnotationsListMineTypeErrorComponentBuilder) {
+            return r'type';
         }
         if (this is IdentificationtasksAnnotationsListMineUpdatedAtErrorComponentBuilder) {
             return r'updated_at';
@@ -140,7 +148,7 @@ class _$IdentificationtasksAnnotationsListMineErrorSerializer implements Primiti
     final discIndex = serializedList.indexOf(IdentificationtasksAnnotationsListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListMineCreatedAtErrorComponent, IdentificationtasksAnnotationsListMineOrderByErrorComponent, IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent, IdentificationtasksAnnotationsListMineUserIdsErrorComponent, ];
+    final oneOfTypes = [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListMineCreatedAtErrorComponent, IdentificationtasksAnnotationsListMineOrderByErrorComponent, IdentificationtasksAnnotationsListMineTypeErrorComponent, IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent, IdentificationtasksAnnotationsListMineUserIdsErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -178,6 +186,13 @@ class _$IdentificationtasksAnnotationsListMineErrorSerializer implements Primiti
           specifiedType: FullType(IdentificationtasksAnnotationsListMineOrderByErrorComponent),
         ) as IdentificationtasksAnnotationsListMineOrderByErrorComponent;
         oneOfType = IdentificationtasksAnnotationsListMineOrderByErrorComponent;
+        break;
+      case r'type':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsListMineTypeErrorComponent),
+        ) as IdentificationtasksAnnotationsListMineTypeErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsListMineTypeErrorComponent;
         break;
       case r'updated_at':
         oneOfResult = serializers.deserialize(

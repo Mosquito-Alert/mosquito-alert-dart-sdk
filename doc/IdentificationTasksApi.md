@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsList**
-> PaginatedAnnotationList annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds)
+> PaginatedAnnotationList annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -102,16 +102,18 @@ final BuiltList<int> classificationTaxonIds = ; // BuiltList<int> |
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final bool isDecisive = true; // bool | 
+final bool isFavourite = true; // bool | 
 final bool isFlagged = true; // bool | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
+final String type = type_example; // String | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds);
+    final response = api.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->annotationsList: $e\n');
@@ -130,10 +132,12 @@ Name | Type | Description  | Notes
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
  **isDecisive** | **bool**|  | [optional] 
+ **isFavourite** | **bool**|  | [optional] 
  **isFlagged** | **bool**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **type** | **String**|  | [optional] 
  **updatedAtAfter** | **DateTime**| Updated at | [optional] 
  **updatedAtBefore** | **DateTime**| Updated at | [optional] 
  **userIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
@@ -154,7 +158,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsListMine**
-> PaginatedAnnotationList annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds)
+> PaginatedAnnotationList annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -180,16 +184,18 @@ final BuiltList<int> classificationTaxonIds = ; // BuiltList<int> |
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final bool isDecisive = true; // bool | 
+final bool isFavourite = true; // bool | 
 final bool isFlagged = true; // bool | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
+final String type = type_example; // String | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFlagged, orderBy, page, pageSize, updatedAtAfter, updatedAtBefore, userIds);
+    final response = api.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->annotationsListMine: $e\n');
@@ -207,10 +213,12 @@ Name | Type | Description  | Notes
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
  **isDecisive** | **bool**|  | [optional] 
+ **isFavourite** | **bool**|  | [optional] 
  **isFlagged** | **bool**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **type** | **String**|  | [optional] 
  **updatedAtAfter** | **DateTime**| Updated at | [optional] 
  **updatedAtBefore** | **DateTime**| Updated at | [optional] 
  **userIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 

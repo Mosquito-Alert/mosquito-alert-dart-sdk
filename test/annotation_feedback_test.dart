@@ -13,6 +13,12 @@ void main() {
       // TODO
     });
 
+    // Internal notes for yourself or other experts
+    // String internalNote
+    test('to test the property `internalNote`', () async {
+      // TODO
+    });
+
     // Message that user will receive when viewing report on phone
     // String userNote
     test('to test the property `userNote`', () async {

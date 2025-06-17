@@ -38,6 +38,11 @@ void main() {
       // TODO
     });
 
+    // String type
+    test('to test the property `type`', () async {
+      // TODO
+    });
+
     // bool isFlagged (default value: false)
     test('to test the property `isFlagged`', () async {
       // TODO
@@ -45,6 +50,11 @@ void main() {
 
     // bool isDecisive (default value: false)
     test('to test the property `isDecisive`', () async {
+      // TODO
+    });
+
+    // ObservationFlags observationFlags
+    test('to test the property `observationFlags`', () async {
       // TODO
     });
 

@@ -4,7 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/simplified_observation_with_photos.dart';
+import 'package:mosquito_alert/src/model/assigned_observation.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -18,7 +18,7 @@ part 'assignment.g.dart';
 @BuiltValue()
 abstract class Assignment implements Built<Assignment, AssignmentBuilder> {
   @BuiltValueField(wireName: r'observation')
-  SimplifiedObservationWithPhotos get observation;
+  AssignedObservation get observation;
 
   @BuiltValueField(wireName: r'annotation_type')
   AssignmentAnnotationTypeEnum get annotationType;
@@ -50,7 +50,7 @@ class _$AssignmentSerializer implements PrimitiveSerializer<Assignment> {
     yield r'observation';
     yield serializers.serialize(
       object.observation,
-      specifiedType: const FullType(SimplifiedObservationWithPhotos),
+      specifiedType: const FullType(AssignedObservation),
     );
     yield r'annotation_type';
     yield serializers.serialize(
@@ -83,8 +83,8 @@ class _$AssignmentSerializer implements PrimitiveSerializer<Assignment> {
         case r'observation':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(SimplifiedObservationWithPhotos),
-          ) as SimplifiedObservationWithPhotos;
+            specifiedType: const FullType(AssignedObservation),
+          ) as AssignedObservation;
           result.observation.replace(valueDes);
           break;
         case r'annotation_type':

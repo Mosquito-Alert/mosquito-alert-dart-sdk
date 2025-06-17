@@ -8,13 +8,13 @@ part of 'bounding_box.dart';
 
 class _$BoundingBox extends BoundingBox {
   @override
-  final int xMin;
+  final double xMin;
   @override
-  final int yMin;
+  final double yMin;
   @override
-  final int xMax;
+  final double xMax;
   @override
-  final int yMax;
+  final double yMax;
 
   factory _$BoundingBox([void Function(BoundingBoxBuilder)? updates]) =>
       (new BoundingBoxBuilder()..update(updates))._build();
@@ -73,21 +73,21 @@ class _$BoundingBox extends BoundingBox {
 class BoundingBoxBuilder implements Builder<BoundingBox, BoundingBoxBuilder> {
   _$BoundingBox? _$v;
 
-  int? _xMin;
-  int? get xMin => _$this._xMin;
-  set xMin(int? xMin) => _$this._xMin = xMin;
+  double? _xMin;
+  double? get xMin => _$this._xMin;
+  set xMin(double? xMin) => _$this._xMin = xMin;
 
-  int? _yMin;
-  int? get yMin => _$this._yMin;
-  set yMin(int? yMin) => _$this._yMin = yMin;
+  double? _yMin;
+  double? get yMin => _$this._yMin;
+  set yMin(double? yMin) => _$this._yMin = yMin;
 
-  int? _xMax;
-  int? get xMax => _$this._xMax;
-  set xMax(int? xMax) => _$this._xMax = xMax;
+  double? _xMax;
+  double? get xMax => _$this._xMax;
+  set xMax(double? xMax) => _$this._xMax = xMax;
 
-  int? _yMax;
-  int? get yMax => _$this._yMax;
-  set yMax(int? yMax) => _$this._yMax = yMax;
+  double? _yMax;
+  double? get yMax => _$this._yMax;
+  set yMax(double? yMax) => _$this._yMax = yMax;
 
   BoundingBoxBuilder() {
     BoundingBox._defaults(this);

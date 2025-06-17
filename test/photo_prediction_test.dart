@@ -28,6 +28,11 @@ void main() {
       // TODO
     });
 
+    // SimpleTaxon taxon
+    test('to test the property `taxon`', () async {
+      // TODO
+    });
+
     // double thresholdDeviation
     test('to test the property `thresholdDeviation`', () async {
       // TODO

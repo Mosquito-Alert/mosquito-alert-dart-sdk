@@ -14,8 +14,10 @@ Name | Type | Description | Notes
 **bestPhoto** | [**SimplePhoto**](SimplePhoto.md) |  | 
 **classification** | [**AnnotationClassification**](AnnotationClassification.md) |  | 
 **feedback** | [**AnnotationFeedback**](AnnotationFeedback.md) |  | [optional] 
+**type** | **String** |  | 
 **isFlagged** | **bool** |  | [default to false]
 **isDecisive** | **bool** |  | [default to false]
+**observationFlags** | [**ObservationFlags**](ObservationFlags.md) |  | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **updatedAt** | [**DateTime**](DateTime.md) |  | 

@@ -10,6 +10,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AdmBoundary.serializer)
       ..add(AdmBoundaryRequest.serializer)
       ..add(Annotation.serializer)
+      ..add(AnnotationCharacteristics.serializer)
+      ..add(AnnotationCharacteristicsRequest.serializer)
+      ..add(AnnotationCharacteristicsRequestSexEnum.serializer)
+      ..add(AnnotationCharacteristicsSexEnum.serializer)
       ..add(AnnotationClassification.serializer)
       ..add(AnnotationClassificationConfidenceLabelEnum.serializer)
       ..add(AnnotationClassificationRequest.serializer)
@@ -17,8 +21,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AnnotationFeedback.serializer)
       ..add(AnnotationFeedbackRequest.serializer)
       ..add(AnnotationRequest.serializer)
+      ..add(AnnotationTypeEnum.serializer)
       ..add(AppUserTokenObtainPair.serializer)
       ..add(AppUserTokenObtainPairRequest.serializer)
+      ..add(AssignedObservation.serializer)
       ..add(Assignment.serializer)
       ..add(AssignmentAnnotationTypeEnum.serializer)
       ..add(AuthChangePasswordError.serializer)
@@ -523,6 +529,41 @@ Serializers _$serializers = (new Serializers().toBuilder()
           IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnum
               .serializer)
       ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum
+              .serializer)
+      ..add(
           IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent
               .serializer)
       ..add(
@@ -550,6 +591,15 @@ Serializers _$serializers = (new Serializers().toBuilder()
           IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnum
               .serializer)
       ..add(IdentificationtasksAnnotationsCreateError.serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnum
+              .serializer)
       ..add(
           IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent
               .serializer)
@@ -594,6 +644,33 @@ Serializers _$serializers = (new Serializers().toBuilder()
               .serializer)
       ..add(
           IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnum
               .serializer)
       ..add(IdentificationtasksAnnotationsCreateTagsErrorComponent.serializer)
       ..add(IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnum
@@ -685,6 +762,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum
           .serializer)
+      ..add(IdentificationtasksAnnotationsListMineTypeErrorComponent.serializer)
+      ..add(IdentificationtasksAnnotationsListMineTypeErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListMineTypeErrorComponentCodeEnum
+          .serializer)
       ..add(IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent
           .serializer)
       ..add(
@@ -706,6 +788,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(IdentificationtasksAnnotationsListOrderByErrorComponentAttrEnum
           .serializer)
       ..add(IdentificationtasksAnnotationsListOrderByErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListTypeErrorComponent.serializer)
+      ..add(IdentificationtasksAnnotationsListTypeErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksAnnotationsListTypeErrorComponentCodeEnum
           .serializer)
       ..add(
           IdentificationtasksAnnotationsListUpdatedAtErrorComponent.serializer)
@@ -1620,6 +1707,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Observation.serializer)
       ..add(ObservationEventEnvironmentEnum.serializer)
       ..add(ObservationEventMomentEnum.serializer)
+      ..add(ObservationFlags.serializer)
+      ..add(ObservationFlagsRequest.serializer)
       ..add(ObservationsCreateCreatedAtErrorComponent.serializer)
       ..add(ObservationsCreateCreatedAtErrorComponentAttrEnum.serializer)
       ..add(ObservationsCreateCreatedAtErrorComponentCodeEnum.serializer)
@@ -2024,6 +2113,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SimpleTaxonRankEnum.serializer)
       ..add(SimpleTaxonRequest.serializer)
       ..add(SimpleTaxonRequestRankEnum.serializer)
+      ..add(SimpleUser.serializer)
+      ..add(SimpleUserLocaleEnum.serializer)
       ..add(SimplifiedLocation.serializer)
       ..add(SimplifiedLocationTimezoneEnum.serializer)
       ..add(SimplifiedObservationWithPhotos.serializer)
@@ -2246,6 +2337,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(PhotosPredictionUpdateError)]),
           () => new ListBuilder<PhotosPredictionUpdateError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(SimplePhoto)]),
+          () => new ListBuilder<SimplePhoto>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimplePhoto)]),
           () => new ListBuilder<SimplePhoto>())

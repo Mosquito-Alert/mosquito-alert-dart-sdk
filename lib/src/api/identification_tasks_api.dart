@@ -155,10 +155,12 @@ class IdentificationTasksApi {
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [isDecisive] 
+  /// * [isFavourite] 
   /// * [isFlagged] 
   /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
+  /// * [type] 
   /// * [updatedAtAfter] - Updated at
   /// * [updatedAtBefore] - Updated at
   /// * [userIds] 
@@ -180,10 +182,12 @@ class IdentificationTasksApi {
     DateTime? createdAtAfter,
     DateTime? createdAtBefore,
     bool? isDecisive,
+    bool? isFavourite,
     bool? isFlagged,
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
+    String? type,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
     BuiltList<int>? userIds,
@@ -231,10 +235,12 @@ class IdentificationTasksApi {
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (isDecisive != null) r'is_decisive': encodeQueryParameter(_serializers, isDecisive, const FullType(bool)),
+      if (isFavourite != null) r'is_favourite': encodeQueryParameter(_serializers, isFavourite, const FullType(bool)),
       if (isFlagged != null) r'is_flagged': encodeQueryParameter(_serializers, isFlagged, const FullType(bool)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      if (type != null) r'type': encodeQueryParameter(_serializers, type, const FullType(String)),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
       if (userIds != null) r'user_ids': encodeCollectionQueryParameter<int>(_serializers, userIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
@@ -291,10 +297,12 @@ class IdentificationTasksApi {
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [isDecisive] 
+  /// * [isFavourite] 
   /// * [isFlagged] 
   /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
+  /// * [type] 
   /// * [updatedAtAfter] - Updated at
   /// * [updatedAtBefore] - Updated at
   /// * [userIds] 
@@ -315,10 +323,12 @@ class IdentificationTasksApi {
     DateTime? createdAtAfter,
     DateTime? createdAtBefore,
     bool? isDecisive,
+    bool? isFavourite,
     bool? isFlagged,
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
+    String? type,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
     BuiltList<int>? userIds,
@@ -366,10 +376,12 @@ class IdentificationTasksApi {
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (isDecisive != null) r'is_decisive': encodeQueryParameter(_serializers, isDecisive, const FullType(bool)),
+      if (isFavourite != null) r'is_favourite': encodeQueryParameter(_serializers, isFavourite, const FullType(bool)),
       if (isFlagged != null) r'is_flagged': encodeQueryParameter(_serializers, isFlagged, const FullType(bool)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      if (type != null) r'type': encodeQueryParameter(_serializers, type, const FullType(String)),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
       if (userIds != null) r'user_ids': encodeCollectionQueryParameter<int>(_serializers, userIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),

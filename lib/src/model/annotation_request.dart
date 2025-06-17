@@ -4,6 +4,8 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/annotation_characteristics_request.dart';
+import 'package:mosquito_alert/src/model/observation_flags_request.dart';
 import 'package:mosquito_alert/src/model/annotation_classification_request.dart';
 import 'package:mosquito_alert/src/model/annotation_feedback_request.dart';
 import 'package:built_value/built_value.dart';
@@ -16,9 +18,11 @@ part 'annotation_request.g.dart';
 /// Properties:
 /// * [bestPhotoUuid] 
 /// * [classification] 
+/// * [characteristics] 
 /// * [feedback] 
 /// * [isFlagged] 
 /// * [isDecisive] 
+/// * [observationFlags] 
 /// * [tags] 
 @BuiltValue()
 abstract class AnnotationRequest implements Built<AnnotationRequest, AnnotationRequestBuilder> {
@@ -28,6 +32,9 @@ abstract class AnnotationRequest implements Built<AnnotationRequest, AnnotationR
   @BuiltValueField(wireName: r'classification')
   AnnotationClassificationRequest? get classification;
 
+  @BuiltValueField(wireName: r'characteristics')
+  AnnotationCharacteristicsRequest? get characteristics;
+
   @BuiltValueField(wireName: r'feedback')
   AnnotationFeedbackRequest? get feedback;
 
@@ -36,6 +43,9 @@ abstract class AnnotationRequest implements Built<AnnotationRequest, AnnotationR
 
   @BuiltValueField(wireName: r'is_decisive')
   bool? get isDecisive;
+
+  @BuiltValueField(wireName: r'observation_flags')
+  ObservationFlagsRequest? get observationFlags;
 
   @BuiltValueField(wireName: r'tags')
   BuiltList<String>? get tags;
@@ -77,6 +87,13 @@ class _$AnnotationRequestSerializer implements PrimitiveSerializer<AnnotationReq
       object.classification,
       specifiedType: const FullType.nullable(AnnotationClassificationRequest),
     );
+    if (object.characteristics != null) {
+      yield r'characteristics';
+      yield serializers.serialize(
+        object.characteristics,
+        specifiedType: const FullType(AnnotationCharacteristicsRequest),
+      );
+    }
     if (object.feedback != null) {
       yield r'feedback';
       yield serializers.serialize(
@@ -96,6 +113,13 @@ class _$AnnotationRequestSerializer implements PrimitiveSerializer<AnnotationReq
       yield serializers.serialize(
         object.isDecisive,
         specifiedType: const FullType(bool),
+      );
+    }
+    if (object.observationFlags != null) {
+      yield r'observation_flags';
+      yield serializers.serialize(
+        object.observationFlags,
+        specifiedType: const FullType(ObservationFlagsRequest),
       );
     }
     if (object.tags != null) {
@@ -143,6 +167,13 @@ class _$AnnotationRequestSerializer implements PrimitiveSerializer<AnnotationReq
           if (valueDes == null) continue;
           result.classification.replace(valueDes);
           break;
+        case r'characteristics':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(AnnotationCharacteristicsRequest),
+          ) as AnnotationCharacteristicsRequest;
+          result.characteristics.replace(valueDes);
+          break;
         case r'feedback':
           final valueDes = serializers.deserialize(
             value,
@@ -163,6 +194,13 @@ class _$AnnotationRequestSerializer implements PrimitiveSerializer<AnnotationReq
             specifiedType: const FullType(bool),
           ) as bool;
           result.isDecisive = valueDes;
+          break;
+        case r'observation_flags':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(ObservationFlagsRequest),
+          ) as ObservationFlagsRequest;
+          result.observationFlags.replace(valueDes);
           break;
         case r'tags':
           final valueDes = serializers.deserialize(

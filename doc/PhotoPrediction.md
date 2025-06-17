@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **bbox** | [**BoundingBox**](BoundingBox.md) |  | 
 **insectConfidence** | **double** | Insect confidence | 
 **predictedClass** | **String** |  | 
+**taxon** | [**SimpleTaxon**](SimpleTaxon.md) |  | 
 **thresholdDeviation** | **double** |  | 
 **isDecisive** | **bool** | Indicates if this prediction can close the identification task. | [optional] 
 **scores** | [**PredictionScore**](PredictionScore.md) |  | 

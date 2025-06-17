@@ -12,12 +12,17 @@ part 'annotation_feedback_request.g.dart';
 ///
 /// Properties:
 /// * [publicNote] - Notes to display on public map
+/// * [internalNote] - Internal notes for yourself or other experts
 /// * [userNote] - Message that user will receive when viewing report on phone
 @BuiltValue()
 abstract class AnnotationFeedbackRequest implements Built<AnnotationFeedbackRequest, AnnotationFeedbackRequestBuilder> {
   /// Notes to display on public map
   @BuiltValueField(wireName: r'public_note')
   String? get publicNote;
+
+  /// Internal notes for yourself or other experts
+  @BuiltValueField(wireName: r'internal_note')
+  String? get internalNote;
 
   /// Message that user will receive when viewing report on phone
   @BuiltValueField(wireName: r'user_note')
@@ -50,6 +55,13 @@ class _$AnnotationFeedbackRequestSerializer implements PrimitiveSerializer<Annot
       yield r'public_note';
       yield serializers.serialize(
         object.publicNote,
+        specifiedType: const FullType.nullable(String),
+      );
+    }
+    if (object.internalNote != null) {
+      yield r'internal_note';
+      yield serializers.serialize(
+        object.internalNote,
         specifiedType: const FullType.nullable(String),
       );
     }
@@ -90,6 +102,14 @@ class _$AnnotationFeedbackRequestSerializer implements PrimitiveSerializer<Annot
           ) as String?;
           if (valueDes == null) continue;
           result.publicNote = valueDes;
+          break;
+        case r'internal_note':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
+          result.internalNote = valueDes;
           break;
         case r'user_note':
           final valueDes = serializers.deserialize(

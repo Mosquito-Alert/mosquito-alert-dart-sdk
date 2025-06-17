@@ -7,6 +7,7 @@ import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/prediction_score.dart';
 import 'package:mosquito_alert/src/model/bounding_box.dart';
+import 'package:mosquito_alert/src/model/simple_taxon.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -19,6 +20,7 @@ part 'photo_prediction.g.dart';
 /// * [bbox] 
 /// * [insectConfidence] - Insect confidence
 /// * [predictedClass] 
+/// * [taxon] 
 /// * [thresholdDeviation] 
 /// * [isDecisive] - Indicates if this prediction can close the identification task.
 /// * [scores] 
@@ -40,6 +42,9 @@ abstract class PhotoPrediction implements Built<PhotoPrediction, PhotoPrediction
   @BuiltValueField(wireName: r'predicted_class')
   PhotoPredictionPredictedClassEnum? get predictedClass;
   // enum predictedClassEnum {  ae_albopictus,  ae_aegypti,  ae_japonicus,  ae_koreicus,  culex,  anopheles,  culiseta,  other_species,  not_sure,  ,  };
+
+  @BuiltValueField(wireName: r'taxon')
+  SimpleTaxon? get taxon;
 
   @BuiltValueField(wireName: r'threshold_deviation')
   double get thresholdDeviation;
@@ -103,6 +108,11 @@ class _$PhotoPredictionSerializer implements PrimitiveSerializer<PhotoPrediction
     yield object.predictedClass == null ? null : serializers.serialize(
       object.predictedClass,
       specifiedType: const FullType.nullable(PhotoPredictionPredictedClassEnum),
+    );
+    yield r'taxon';
+    yield object.taxon == null ? null : serializers.serialize(
+      object.taxon,
+      specifiedType: const FullType.nullable(SimpleTaxon),
     );
     yield r'threshold_deviation';
     yield serializers.serialize(
@@ -187,6 +197,14 @@ class _$PhotoPredictionSerializer implements PrimitiveSerializer<PhotoPrediction
           ) as PhotoPredictionPredictedClassEnum?;
           if (valueDes == null) continue;
           result.predictedClass = valueDes;
+          break;
+        case r'taxon':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(SimpleTaxon),
+          ) as SimpleTaxon?;
+          if (valueDes == null) continue;
+          result.taxon.replace(valueDes);
           break;
         case r'threshold_deviation':
           final valueDes = serializers.deserialize(

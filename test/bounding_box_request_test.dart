@@ -7,26 +7,26 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(BoundingBoxRequest, () {
-    // photo bounding box coordinates top left x
-    // int xMin
+    // photo bounding box relative coordinates top left x
+    // double xMin
     test('to test the property `xMin`', () async {
       // TODO
     });
 
-    // photo bounding box coordinates top left y
-    // int yMin
+    // photo bounding box relative coordinates top left y
+    // double yMin
     test('to test the property `yMin`', () async {
       // TODO
     });
 
-    // photo bounding box coordinates bottom right x
-    // int xMax
+    // photo bounding box relative coordinates bottom right x
+    // double xMax
     test('to test the property `xMax`', () async {
       // TODO
     });
 
-    // photo bounding box coordinates bottom right y
-    // int yMax
+    // photo bounding box relative coordinates bottom right y
+    // double yMax
     test('to test the property `yMax`', () async {
       // TODO
     });

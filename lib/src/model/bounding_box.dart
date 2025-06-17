@@ -11,27 +11,27 @@ part 'bounding_box.g.dart';
 /// BoundingBox
 ///
 /// Properties:
-/// * [xMin] - photo bounding box coordinates top left x
-/// * [yMin] - photo bounding box coordinates top left y
-/// * [xMax] - photo bounding box coordinates bottom right x
-/// * [yMax] - photo bounding box coordinates bottom right y
+/// * [xMin] - photo bounding box relative coordinates top left x
+/// * [yMin] - photo bounding box relative coordinates top left y
+/// * [xMax] - photo bounding box relative coordinates bottom right x
+/// * [yMax] - photo bounding box relative coordinates bottom right y
 @BuiltValue()
 abstract class BoundingBox implements Built<BoundingBox, BoundingBoxBuilder> {
-  /// photo bounding box coordinates top left x
+  /// photo bounding box relative coordinates top left x
   @BuiltValueField(wireName: r'x_min')
-  int get xMin;
+  double get xMin;
 
-  /// photo bounding box coordinates top left y
+  /// photo bounding box relative coordinates top left y
   @BuiltValueField(wireName: r'y_min')
-  int get yMin;
+  double get yMin;
 
-  /// photo bounding box coordinates bottom right x
+  /// photo bounding box relative coordinates bottom right x
   @BuiltValueField(wireName: r'x_max')
-  int get xMax;
+  double get xMax;
 
-  /// photo bounding box coordinates bottom right y
+  /// photo bounding box relative coordinates bottom right y
   @BuiltValueField(wireName: r'y_max')
-  int get yMax;
+  double get yMax;
 
   BoundingBox._();
 
@@ -59,22 +59,22 @@ class _$BoundingBoxSerializer implements PrimitiveSerializer<BoundingBox> {
     yield r'x_min';
     yield serializers.serialize(
       object.xMin,
-      specifiedType: const FullType(int),
+      specifiedType: const FullType(double),
     );
     yield r'y_min';
     yield serializers.serialize(
       object.yMin,
-      specifiedType: const FullType(int),
+      specifiedType: const FullType(double),
     );
     yield r'x_max';
     yield serializers.serialize(
       object.xMax,
-      specifiedType: const FullType(int),
+      specifiedType: const FullType(double),
     );
     yield r'y_max';
     yield serializers.serialize(
       object.yMax,
-      specifiedType: const FullType(int),
+      specifiedType: const FullType(double),
     );
   }
 
@@ -102,29 +102,29 @@ class _$BoundingBoxSerializer implements PrimitiveSerializer<BoundingBox> {
         case r'x_min':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
+            specifiedType: const FullType(double),
+          ) as double;
           result.xMin = valueDes;
           break;
         case r'y_min':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
+            specifiedType: const FullType(double),
+          ) as double;
           result.yMin = valueDes;
           break;
         case r'x_max':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
+            specifiedType: const FullType(double),
+          ) as double;
           result.xMax = valueDes;
           break;
         case r'y_max':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
+            specifiedType: const FullType(double),
+          ) as double;
           result.yMax = valueDes;
           break;
         default:

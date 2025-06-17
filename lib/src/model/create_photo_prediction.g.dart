@@ -243,6 +243,8 @@ class _$CreatePhotoPrediction extends CreatePhotoPrediction {
   @override
   final CreatePhotoPredictionPredictedClassEnum? predictedClass;
   @override
+  final SimpleTaxon? taxon;
+  @override
   final double thresholdDeviation;
   @override
   final bool? isDecisive;
@@ -264,6 +266,7 @@ class _$CreatePhotoPrediction extends CreatePhotoPrediction {
       required this.bbox,
       required this.insectConfidence,
       this.predictedClass,
+      this.taxon,
       required this.thresholdDeviation,
       this.isDecisive,
       required this.scores,
@@ -306,6 +309,7 @@ class _$CreatePhotoPrediction extends CreatePhotoPrediction {
         bbox == other.bbox &&
         insectConfidence == other.insectConfidence &&
         predictedClass == other.predictedClass &&
+        taxon == other.taxon &&
         thresholdDeviation == other.thresholdDeviation &&
         isDecisive == other.isDecisive &&
         scores == other.scores &&
@@ -321,6 +325,7 @@ class _$CreatePhotoPrediction extends CreatePhotoPrediction {
     _$hash = $jc(_$hash, bbox.hashCode);
     _$hash = $jc(_$hash, insectConfidence.hashCode);
     _$hash = $jc(_$hash, predictedClass.hashCode);
+    _$hash = $jc(_$hash, taxon.hashCode);
     _$hash = $jc(_$hash, thresholdDeviation.hashCode);
     _$hash = $jc(_$hash, isDecisive.hashCode);
     _$hash = $jc(_$hash, scores.hashCode);
@@ -338,6 +343,7 @@ class _$CreatePhotoPrediction extends CreatePhotoPrediction {
           ..add('bbox', bbox)
           ..add('insectConfidence', insectConfidence)
           ..add('predictedClass', predictedClass)
+          ..add('taxon', taxon)
           ..add('thresholdDeviation', thresholdDeviation)
           ..add('isDecisive', isDecisive)
           ..add('scores', scores)
@@ -370,6 +376,10 @@ class CreatePhotoPredictionBuilder
       _$this._predictedClass;
   set predictedClass(CreatePhotoPredictionPredictedClassEnum? predictedClass) =>
       _$this._predictedClass = predictedClass;
+
+  SimpleTaxonBuilder? _taxon;
+  SimpleTaxonBuilder get taxon => _$this._taxon ??= new SimpleTaxonBuilder();
+  set taxon(SimpleTaxonBuilder? taxon) => _$this._taxon = taxon;
 
   double? _thresholdDeviation;
   double? get thresholdDeviation => _$this._thresholdDeviation;
@@ -411,6 +421,7 @@ class CreatePhotoPredictionBuilder
       _bbox = $v.bbox.toBuilder();
       _insectConfidence = $v.insectConfidence;
       _predictedClass = $v.predictedClass;
+      _taxon = $v.taxon?.toBuilder();
       _thresholdDeviation = $v.thresholdDeviation;
       _isDecisive = $v.isDecisive;
       _scores = $v.scores.toBuilder();
@@ -448,6 +459,7 @@ class CreatePhotoPredictionBuilder
                   r'CreatePhotoPrediction',
                   'insectConfidence'),
               predictedClass: predictedClass,
+              taxon: _taxon?.build(),
               thresholdDeviation: BuiltValueNullFieldError.checkNotNull(
                   thresholdDeviation,
                   r'CreatePhotoPrediction',
@@ -469,6 +481,9 @@ class CreatePhotoPredictionBuilder
         photo.build();
         _$failedField = 'bbox';
         bbox.build();
+
+        _$failedField = 'taxon';
+        _taxon?.build();
 
         _$failedField = 'scores';
         scores.build();

@@ -17,6 +17,11 @@ void main() {
       // TODO
     });
 
+    // AnnotationCharacteristicsRequest characteristics
+    test('to test the property `characteristics`', () async {
+      // TODO
+    });
+
     // AnnotationFeedbackRequest feedback
     test('to test the property `feedback`', () async {
       // TODO
@@ -29,6 +34,11 @@ void main() {
 
     // bool isDecisive (default value: false)
     test('to test the property `isDecisive`', () async {
+      // TODO
+    });
+
+    // ObservationFlagsRequest observationFlags
+    test('to test the property `observationFlags`', () async {
       // TODO
     });
 

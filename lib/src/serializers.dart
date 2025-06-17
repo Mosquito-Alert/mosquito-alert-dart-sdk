@@ -17,6 +17,8 @@ import 'package:mosquito_alert/src/model/date.dart';
 import 'package:mosquito_alert/src/model/adm_boundary.dart';
 import 'package:mosquito_alert/src/model/adm_boundary_request.dart';
 import 'package:mosquito_alert/src/model/annotation.dart';
+import 'package:mosquito_alert/src/model/annotation_characteristics.dart';
+import 'package:mosquito_alert/src/model/annotation_characteristics_request.dart';
 import 'package:mosquito_alert/src/model/annotation_classification.dart';
 import 'package:mosquito_alert/src/model/annotation_classification_request.dart';
 import 'package:mosquito_alert/src/model/annotation_feedback.dart';
@@ -24,6 +26,7 @@ import 'package:mosquito_alert/src/model/annotation_feedback_request.dart';
 import 'package:mosquito_alert/src/model/annotation_request.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
+import 'package:mosquito_alert/src/model/assigned_observation.dart';
 import 'package:mosquito_alert/src/model/assignment.dart';
 import 'package:mosquito_alert/src/model/auth_change_password_error.dart';
 import 'package:mosquito_alert/src/model/auth_change_password_non_field_errors_error_component.dart';
@@ -216,16 +219,24 @@ import 'package:mosquito_alert/src/model/identification_task_result.dart';
 import 'package:mosquito_alert/src/model/identification_task_result_request.dart';
 import 'package:mosquito_alert/src/model/identification_task_review.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_best_photo_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_is_blood_fed_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_is_gravid_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_sex_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_classification_confidence_label_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_classification_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_classification_taxon_id_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_error.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_internal_note_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_public_note_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_user_note_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_is_decisive_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_is_flagged_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_observation_flags_is_favourite_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_observation_flags_is_visible_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_observation_flags_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_validation_error.dart';
@@ -240,10 +251,12 @@ import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mi
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_error.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_type_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_user_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_type_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_user_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_validation_error.dart';
@@ -436,6 +449,8 @@ import 'package:mosquito_alert/src/model/notifications_update_is_read_error_comp
 import 'package:mosquito_alert/src/model/notifications_update_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_update_validation_error.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
+import 'package:mosquito_alert/src/model/observation_flags.dart';
+import 'package:mosquito_alert/src/model/observation_flags_request.dart';
 import 'package:mosquito_alert/src/model/observations_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_error.dart';
 import 'package:mosquito_alert/src/model/observations_create_event_environment_error_component.dart';
@@ -551,6 +566,7 @@ import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 import 'package:mosquito_alert/src/model/simple_taxon.dart';
 import 'package:mosquito_alert/src/model/simple_taxon_request.dart';
+import 'package:mosquito_alert/src/model/simple_user.dart';
 import 'package:mosquito_alert/src/model/simplified_location.dart';
 import 'package:mosquito_alert/src/model/simplified_observation_with_photos.dart';
 import 'package:mosquito_alert/src/model/taxa_list_rank_error_component.dart';
@@ -581,6 +597,8 @@ part 'serializers.g.dart';
   AdmBoundary,
   AdmBoundaryRequest,
   Annotation,
+  AnnotationCharacteristics,
+  AnnotationCharacteristicsRequest,
   AnnotationClassification,
   AnnotationClassificationRequest,
   AnnotationFeedback,
@@ -588,6 +606,7 @@ part 'serializers.g.dart';
   AnnotationRequest,
   AppUserTokenObtainPair,
   AppUserTokenObtainPairRequest,
+  AssignedObservation,
   Assignment,
   AuthChangePasswordError,
   AuthChangePasswordNonFieldErrorsErrorComponent,
@@ -780,16 +799,24 @@ part 'serializers.g.dart';
   IdentificationTaskResultRequest,
   IdentificationTaskReview,
   IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent,
+  IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent,
+  IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent,
+  IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent,
+  IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent,
   IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent,
   IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent,
   IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent,
   IdentificationtasksAnnotationsCreateError,
+  IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent,
   IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent,
   IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent,
   IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent,
   IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent,
   IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent,
   IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent,
+  IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent,
+  IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent,
+  IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent,
   IdentificationtasksAnnotationsCreateTagsErrorComponent,
   IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent,
   IdentificationtasksAnnotationsCreateValidationError,
@@ -804,10 +831,12 @@ part 'serializers.g.dart';
   IdentificationtasksAnnotationsListMineCreatedAtErrorComponent,
   IdentificationtasksAnnotationsListMineError,
   IdentificationtasksAnnotationsListMineOrderByErrorComponent,
+  IdentificationtasksAnnotationsListMineTypeErrorComponent,
   IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent,
   IdentificationtasksAnnotationsListMineUserIdsErrorComponent,
   IdentificationtasksAnnotationsListMineValidationError,
   IdentificationtasksAnnotationsListOrderByErrorComponent,
+  IdentificationtasksAnnotationsListTypeErrorComponent,
   IdentificationtasksAnnotationsListUpdatedAtErrorComponent,
   IdentificationtasksAnnotationsListUserIdsErrorComponent,
   IdentificationtasksAnnotationsListValidationError,
@@ -1000,6 +1029,8 @@ part 'serializers.g.dart';
   NotificationsUpdateNonFieldErrorsErrorComponent,
   NotificationsUpdateValidationError,
   Observation,
+  ObservationFlags,
+  ObservationFlagsRequest,
   ObservationsCreateCreatedAtErrorComponent,
   ObservationsCreateError,
   ObservationsCreateEventEnvironmentErrorComponent,
@@ -1115,6 +1146,7 @@ part 'serializers.g.dart';
   SimplePhotoRequest,
   SimpleTaxon,
   SimpleTaxonRequest,
+  SimpleUser,
   SimplifiedLocation,
   SimplifiedObservationWithPhotos,
   TaxaListRankErrorComponent,

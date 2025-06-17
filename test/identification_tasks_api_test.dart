@@ -12,14 +12,14 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedAnnotationList> annotationsList(String observationUuid, { String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, bool isDecisive, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
+    //Future<PaginatedAnnotationList> annotationsList(String observationUuid, { String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, bool isDecisive, bool isFavourite, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, String type, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
     test('test annotationsList', () async {
       // TODO
     });
 
     // Get my annotations
     //
-    //Future<PaginatedAnnotationList> annotationsListMine({ String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, bool isDecisive, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
+    //Future<PaginatedAnnotationList> annotationsListMine({ String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, bool isDecisive, bool isFavourite, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, String type, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
     test('test annotationsListMine', () async {
       // TODO
     });

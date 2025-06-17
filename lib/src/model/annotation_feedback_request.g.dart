@@ -10,13 +10,17 @@ class _$AnnotationFeedbackRequest extends AnnotationFeedbackRequest {
   @override
   final String? publicNote;
   @override
+  final String? internalNote;
+  @override
   final String? userNote;
 
   factory _$AnnotationFeedbackRequest(
           [void Function(AnnotationFeedbackRequestBuilder)? updates]) =>
       (new AnnotationFeedbackRequestBuilder()..update(updates))._build();
 
-  _$AnnotationFeedbackRequest._({this.publicNote, this.userNote}) : super._();
+  _$AnnotationFeedbackRequest._(
+      {this.publicNote, this.internalNote, this.userNote})
+      : super._();
 
   @override
   AnnotationFeedbackRequest rebuild(
@@ -32,6 +36,7 @@ class _$AnnotationFeedbackRequest extends AnnotationFeedbackRequest {
     if (identical(other, this)) return true;
     return other is AnnotationFeedbackRequest &&
         publicNote == other.publicNote &&
+        internalNote == other.internalNote &&
         userNote == other.userNote;
   }
 
@@ -39,6 +44,7 @@ class _$AnnotationFeedbackRequest extends AnnotationFeedbackRequest {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, publicNote.hashCode);
+    _$hash = $jc(_$hash, internalNote.hashCode);
     _$hash = $jc(_$hash, userNote.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -48,6 +54,7 @@ class _$AnnotationFeedbackRequest extends AnnotationFeedbackRequest {
   String toString() {
     return (newBuiltValueToStringHelper(r'AnnotationFeedbackRequest')
           ..add('publicNote', publicNote)
+          ..add('internalNote', internalNote)
           ..add('userNote', userNote))
         .toString();
   }
@@ -62,6 +69,10 @@ class AnnotationFeedbackRequestBuilder
   String? get publicNote => _$this._publicNote;
   set publicNote(String? publicNote) => _$this._publicNote = publicNote;
 
+  String? _internalNote;
+  String? get internalNote => _$this._internalNote;
+  set internalNote(String? internalNote) => _$this._internalNote = internalNote;
+
   String? _userNote;
   String? get userNote => _$this._userNote;
   set userNote(String? userNote) => _$this._userNote = userNote;
@@ -74,6 +85,7 @@ class AnnotationFeedbackRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _publicNote = $v.publicNote;
+      _internalNote = $v.internalNote;
       _userNote = $v.userNote;
       _$v = null;
     }
@@ -97,7 +109,9 @@ class AnnotationFeedbackRequestBuilder
   _$AnnotationFeedbackRequest _build() {
     final _$result = _$v ??
         new _$AnnotationFeedbackRequest._(
-            publicNote: publicNote, userNote: userNote);
+            publicNote: publicNote,
+            internalNote: internalNote,
+            userNote: userNote);
     replace(_$result);
     return _$result;
   }

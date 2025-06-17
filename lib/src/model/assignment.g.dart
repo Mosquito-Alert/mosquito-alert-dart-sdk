@@ -73,7 +73,7 @@ class _$AssignmentAnnotationTypeEnumSerializer
 
 class _$Assignment extends Assignment {
   @override
-  final SimplifiedObservationWithPhotos observation;
+  final AssignedObservation observation;
   @override
   final AssignmentAnnotationTypeEnum annotationType;
 
@@ -124,10 +124,10 @@ class _$Assignment extends Assignment {
 class AssignmentBuilder implements Builder<Assignment, AssignmentBuilder> {
   _$Assignment? _$v;
 
-  SimplifiedObservationWithPhotosBuilder? _observation;
-  SimplifiedObservationWithPhotosBuilder get observation =>
-      _$this._observation ??= new SimplifiedObservationWithPhotosBuilder();
-  set observation(SimplifiedObservationWithPhotosBuilder? observation) =>
+  AssignedObservationBuilder? _observation;
+  AssignedObservationBuilder get observation =>
+      _$this._observation ??= new AssignedObservationBuilder();
+  set observation(AssignedObservationBuilder? observation) =>
       _$this._observation = observation;
 
   AssignmentAnnotationTypeEnum? _annotationType;

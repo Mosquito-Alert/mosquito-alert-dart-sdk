@@ -6,6 +6,66 @@ part of 'annotation.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const AnnotationTypeEnum _$annotationTypeEnum_short =
+    const AnnotationTypeEnum._('short');
+const AnnotationTypeEnum _$annotationTypeEnum_long =
+    const AnnotationTypeEnum._('long');
+const AnnotationTypeEnum _$annotationTypeEnum_unknownDefaultOpenApi =
+    const AnnotationTypeEnum._('unknownDefaultOpenApi');
+
+AnnotationTypeEnum _$annotationTypeEnumValueOf(String name) {
+  switch (name) {
+    case 'short':
+      return _$annotationTypeEnum_short;
+    case 'long':
+      return _$annotationTypeEnum_long;
+    case 'unknownDefaultOpenApi':
+      return _$annotationTypeEnum_unknownDefaultOpenApi;
+    default:
+      return _$annotationTypeEnum_unknownDefaultOpenApi;
+  }
+}
+
+final BuiltSet<AnnotationTypeEnum> _$annotationTypeEnumValues =
+    new BuiltSet<AnnotationTypeEnum>(const <AnnotationTypeEnum>[
+  _$annotationTypeEnum_short,
+  _$annotationTypeEnum_long,
+  _$annotationTypeEnum_unknownDefaultOpenApi,
+]);
+
+Serializer<AnnotationTypeEnum> _$annotationTypeEnumSerializer =
+    new _$AnnotationTypeEnumSerializer();
+
+class _$AnnotationTypeEnumSerializer
+    implements PrimitiveSerializer<AnnotationTypeEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'short': 'short',
+    'long': 'long',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'short': 'short',
+    'long': 'long',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[AnnotationTypeEnum];
+  @override
+  final String wireName = 'AnnotationTypeEnum';
+
+  @override
+  Object serialize(Serializers serializers, AnnotationTypeEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  AnnotationTypeEnum deserialize(Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      AnnotationTypeEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$Annotation extends Annotation {
   @override
   final int id;
@@ -20,9 +80,13 @@ class _$Annotation extends Annotation {
   @override
   final AnnotationFeedback? feedback;
   @override
+  final AnnotationTypeEnum type;
+  @override
   final bool isFlagged;
   @override
   final bool isDecisive;
+  @override
+  final ObservationFlags? observationFlags;
   @override
   final BuiltList<String>? tags;
   @override
@@ -40,8 +104,10 @@ class _$Annotation extends Annotation {
       this.bestPhoto,
       this.classification,
       this.feedback,
+      required this.type,
       required this.isFlagged,
       required this.isDecisive,
+      this.observationFlags,
       this.tags,
       required this.createdAt,
       required this.updatedAt})
@@ -50,6 +116,7 @@ class _$Annotation extends Annotation {
     BuiltValueNullFieldError.checkNotNull(
         observationUuid, r'Annotation', 'observationUuid');
     BuiltValueNullFieldError.checkNotNull(user, r'Annotation', 'user');
+    BuiltValueNullFieldError.checkNotNull(type, r'Annotation', 'type');
     BuiltValueNullFieldError.checkNotNull(
         isFlagged, r'Annotation', 'isFlagged');
     BuiltValueNullFieldError.checkNotNull(
@@ -77,8 +144,10 @@ class _$Annotation extends Annotation {
         bestPhoto == other.bestPhoto &&
         classification == other.classification &&
         feedback == other.feedback &&
+        type == other.type &&
         isFlagged == other.isFlagged &&
         isDecisive == other.isDecisive &&
+        observationFlags == other.observationFlags &&
         tags == other.tags &&
         createdAt == other.createdAt &&
         updatedAt == other.updatedAt;
@@ -93,8 +162,10 @@ class _$Annotation extends Annotation {
     _$hash = $jc(_$hash, bestPhoto.hashCode);
     _$hash = $jc(_$hash, classification.hashCode);
     _$hash = $jc(_$hash, feedback.hashCode);
+    _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, isFlagged.hashCode);
     _$hash = $jc(_$hash, isDecisive.hashCode);
+    _$hash = $jc(_$hash, observationFlags.hashCode);
     _$hash = $jc(_$hash, tags.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, updatedAt.hashCode);
@@ -111,8 +182,10 @@ class _$Annotation extends Annotation {
           ..add('bestPhoto', bestPhoto)
           ..add('classification', classification)
           ..add('feedback', feedback)
+          ..add('type', type)
           ..add('isFlagged', isFlagged)
           ..add('isDecisive', isDecisive)
+          ..add('observationFlags', observationFlags)
           ..add('tags', tags)
           ..add('createdAt', createdAt)
           ..add('updatedAt', updatedAt))
@@ -154,6 +227,10 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
   set feedback(AnnotationFeedbackBuilder? feedback) =>
       _$this._feedback = feedback;
 
+  AnnotationTypeEnum? _type;
+  AnnotationTypeEnum? get type => _$this._type;
+  set type(AnnotationTypeEnum? type) => _$this._type = type;
+
   bool? _isFlagged;
   bool? get isFlagged => _$this._isFlagged;
   set isFlagged(bool? isFlagged) => _$this._isFlagged = isFlagged;
@@ -161,6 +238,12 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
   bool? _isDecisive;
   bool? get isDecisive => _$this._isDecisive;
   set isDecisive(bool? isDecisive) => _$this._isDecisive = isDecisive;
+
+  ObservationFlagsBuilder? _observationFlags;
+  ObservationFlagsBuilder get observationFlags =>
+      _$this._observationFlags ??= new ObservationFlagsBuilder();
+  set observationFlags(ObservationFlagsBuilder? observationFlags) =>
+      _$this._observationFlags = observationFlags;
 
   ListBuilder<String>? _tags;
   ListBuilder<String> get tags => _$this._tags ??= new ListBuilder<String>();
@@ -187,8 +270,10 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
       _bestPhoto = $v.bestPhoto?.toBuilder();
       _classification = $v.classification?.toBuilder();
       _feedback = $v.feedback?.toBuilder();
+      _type = $v.type;
       _isFlagged = $v.isFlagged;
       _isDecisive = $v.isDecisive;
+      _observationFlags = $v.observationFlags?.toBuilder();
       _tags = $v.tags?.toBuilder();
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
@@ -224,10 +309,13 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
               bestPhoto: _bestPhoto?.build(),
               classification: _classification?.build(),
               feedback: _feedback?.build(),
+              type: BuiltValueNullFieldError.checkNotNull(
+                  type, r'Annotation', 'type'),
               isFlagged: BuiltValueNullFieldError.checkNotNull(
                   isFlagged, r'Annotation', 'isFlagged'),
               isDecisive: BuiltValueNullFieldError.checkNotNull(
                   isDecisive, r'Annotation', 'isDecisive'),
+              observationFlags: _observationFlags?.build(),
               tags: _tags?.build(),
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt, r'Annotation', 'createdAt'),
@@ -245,6 +333,8 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
         _$failedField = 'feedback';
         _feedback?.build();
 
+        _$failedField = 'observationFlags';
+        _observationFlags?.build();
         _$failedField = 'tags';
         _tags?.build();
       } catch (e) {

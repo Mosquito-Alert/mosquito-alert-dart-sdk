@@ -3,18 +3,26 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_is_gravid_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_classification_taxon_id_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_is_flagged_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_observation_flags_is_favourite_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_sex_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_classification_confidence_label_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_observation_flags_is_visible_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_best_photo_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_classification_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_user_note_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_tags_index_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_is_blood_fed_error_component.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_is_decisive_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_observation_flags_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_public_note_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_internal_note_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_non_field_errors_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -30,22 +38,30 @@ part 'identificationtasks_annotations_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class IdentificationtasksAnnotationsCreateError implements Built<IdentificationtasksAnnotationsCreateError, IdentificationtasksAnnotationsCreateErrorBuilder> {
-  /// One Of [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent], [IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent], [IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent], [IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent], [IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateTagsErrorComponent], [IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent]
+  /// One Of [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent], [IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent], [IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent], [IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent], [IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent], [IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent], [IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateTagsErrorComponent], [IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
     r'best_photo_uuid': IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent,
+    r'characteristics.is_blood_fed': IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent,
+    r'characteristics.is_gravid': IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent,
+    r'characteristics.non_field_errors': IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent,
+    r'characteristics.sex': IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent,
     r'classification.confidence_label': IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent,
     r'classification.non_field_errors': IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent,
     r'classification.taxon_id': IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent,
+    r'feedback.internal_note': IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent,
     r'feedback.non_field_errors': IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent,
     r'feedback.public_note': IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent,
     r'feedback.user_note': IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent,
     r'is_decisive': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent,
     r'is_flagged': IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent,
     r'non_field_errors': IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent,
+    r'observation_flags.is_favourite': IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent,
+    r'observation_flags.is_visible': IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent,
+    r'observation_flags.non_field_errors': IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent,
     r'tags': IdentificationtasksAnnotationsCreateTagsErrorComponent,
     r'tags.INDEX': IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent,
   };
@@ -66,6 +82,18 @@ extension IdentificationtasksAnnotationsCreateErrorDiscriminatorExt on Identific
         if (this is IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent) {
             return r'best_photo_uuid';
         }
+        if (this is IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent) {
+            return r'characteristics.is_blood_fed';
+        }
+        if (this is IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent) {
+            return r'characteristics.is_gravid';
+        }
+        if (this is IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent) {
+            return r'characteristics.non_field_errors';
+        }
+        if (this is IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent) {
+            return r'characteristics.sex';
+        }
         if (this is IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent) {
             return r'classification.confidence_label';
         }
@@ -74,6 +102,9 @@ extension IdentificationtasksAnnotationsCreateErrorDiscriminatorExt on Identific
         }
         if (this is IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent) {
             return r'classification.taxon_id';
+        }
+        if (this is IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent) {
+            return r'feedback.internal_note';
         }
         if (this is IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent) {
             return r'feedback.non_field_errors';
@@ -93,6 +124,15 @@ extension IdentificationtasksAnnotationsCreateErrorDiscriminatorExt on Identific
         if (this is IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent) {
             return r'non_field_errors';
         }
+        if (this is IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent) {
+            return r'observation_flags.is_favourite';
+        }
+        if (this is IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent) {
+            return r'observation_flags.is_visible';
+        }
+        if (this is IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent) {
+            return r'observation_flags.non_field_errors';
+        }
         if (this is IdentificationtasksAnnotationsCreateTagsErrorComponent) {
             return r'tags';
         }
@@ -107,6 +147,18 @@ extension IdentificationtasksAnnotationsCreateErrorBuilderDiscriminatorExt on Id
         if (this is IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentBuilder) {
             return r'best_photo_uuid';
         }
+        if (this is IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentBuilder) {
+            return r'characteristics.is_blood_fed';
+        }
+        if (this is IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentBuilder) {
+            return r'characteristics.is_gravid';
+        }
+        if (this is IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentBuilder) {
+            return r'characteristics.non_field_errors';
+        }
+        if (this is IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentBuilder) {
+            return r'characteristics.sex';
+        }
         if (this is IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentBuilder) {
             return r'classification.confidence_label';
         }
@@ -115,6 +167,9 @@ extension IdentificationtasksAnnotationsCreateErrorBuilderDiscriminatorExt on Id
         }
         if (this is IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentBuilder) {
             return r'classification.taxon_id';
+        }
+        if (this is IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentBuilder) {
+            return r'feedback.internal_note';
         }
         if (this is IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentBuilder) {
             return r'feedback.non_field_errors';
@@ -133,6 +188,15 @@ extension IdentificationtasksAnnotationsCreateErrorBuilderDiscriminatorExt on Id
         }
         if (this is IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponentBuilder) {
             return r'non_field_errors';
+        }
+        if (this is IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentBuilder) {
+            return r'observation_flags.is_favourite';
+        }
+        if (this is IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentBuilder) {
+            return r'observation_flags.is_visible';
+        }
+        if (this is IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentBuilder) {
+            return r'observation_flags.non_field_errors';
         }
         if (this is IdentificationtasksAnnotationsCreateTagsErrorComponentBuilder) {
             return r'tags';
@@ -180,7 +244,7 @@ class _$IdentificationtasksAnnotationsCreateErrorSerializer implements Primitive
     final discIndex = serializedList.indexOf(IdentificationtasksAnnotationsCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent, IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent, IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent, IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent, IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent, IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent, IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateTagsErrorComponent, IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent, ];
+    final oneOfTypes = [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent, IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent, IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent, IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent, IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent, IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent, IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent, IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent, IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent, IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateTagsErrorComponent, IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -190,6 +254,34 @@ class _$IdentificationtasksAnnotationsCreateErrorSerializer implements Primitive
           specifiedType: FullType(IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent),
         ) as IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent;
         oneOfType = IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent;
+        break;
+      case r'characteristics.is_blood_fed':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent),
+        ) as IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent;
+        break;
+      case r'characteristics.is_gravid':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent),
+        ) as IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent;
+        break;
+      case r'characteristics.non_field_errors':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent),
+        ) as IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent;
+        break;
+      case r'characteristics.sex':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent),
+        ) as IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent;
         break;
       case r'classification.confidence_label':
         oneOfResult = serializers.deserialize(
@@ -211,6 +303,13 @@ class _$IdentificationtasksAnnotationsCreateErrorSerializer implements Primitive
           specifiedType: FullType(IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent),
         ) as IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent;
         oneOfType = IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent;
+        break;
+      case r'feedback.internal_note':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent),
+        ) as IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent;
         break;
       case r'feedback.non_field_errors':
         oneOfResult = serializers.deserialize(
@@ -253,6 +352,27 @@ class _$IdentificationtasksAnnotationsCreateErrorSerializer implements Primitive
           specifiedType: FullType(IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent),
         ) as IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent;
         oneOfType = IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent;
+        break;
+      case r'observation_flags.is_favourite':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent),
+        ) as IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent;
+        break;
+      case r'observation_flags.is_visible':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent),
+        ) as IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent;
+        break;
+      case r'observation_flags.non_field_errors':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent),
+        ) as IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent;
         break;
       case r'tags':
         oneOfResult = serializers.deserialize(
