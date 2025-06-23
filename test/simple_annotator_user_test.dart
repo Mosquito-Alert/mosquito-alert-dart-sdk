@@ -7,12 +7,11 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(SimpleAnnotatorUser, () {
-    // int id
-    test('to test the property `id`', () async {
+    // String uuid
+    test('to test the property `uuid`', () async {
       // TODO
     });
 
-    // Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_ 
     // String username
     test('to test the property `username`', () async {
       // TODO

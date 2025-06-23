@@ -365,6 +365,7 @@ doc/Location.md
 doc/LocationPoint.md
 doc/LocationRequest.md
 doc/MetaNotificationRequest.md
+doc/MinimalUser.md
 doc/MobileApp.md
 doc/MobileAppRequest.md
 doc/MosquitoAppearance.md
@@ -560,12 +561,10 @@ doc/PhotosPredictionUpdateValidationError.md
 doc/PredictionScore.md
 doc/PredictionScoreRequest.md
 doc/SimpleAnnotatorUser.md
-doc/SimpleAnnotatorUserRequest.md
 doc/SimplePhoto.md
 doc/SimplePhotoRequest.md
 doc/SimpleTaxon.md
 doc/SimpleTaxonRequest.md
-doc/SimpleUser.md
 doc/SimplifiedLocation.md
 doc/SimplifiedObservationWithPhotos.md
 doc/TaxaApi.md
@@ -971,6 +970,7 @@ lib/src/model/location.dart
 lib/src/model/location_point.dart
 lib/src/model/location_request.dart
 lib/src/model/meta_notification_request.dart
+lib/src/model/minimal_user.dart
 lib/src/model/mobile_app.dart
 lib/src/model/mobile_app_request.dart
 lib/src/model/mosquito_appearance.dart
@@ -1162,12 +1162,10 @@ lib/src/model/photos_prediction_update_validation_error.dart
 lib/src/model/prediction_score.dart
 lib/src/model/prediction_score_request.dart
 lib/src/model/simple_annotator_user.dart
-lib/src/model/simple_annotator_user_request.dart
 lib/src/model/simple_photo.dart
 lib/src/model/simple_photo_request.dart
 lib/src/model/simple_taxon.dart
 lib/src/model/simple_taxon_request.dart
-lib/src/model/simple_user.dart
 lib/src/model/simplified_location.dart
 lib/src/model/simplified_observation_with_photos.dart
 lib/src/model/taxa_list_rank_error_component.dart
@@ -1557,6 +1555,7 @@ test/location_point_test.dart
 test/location_request_test.dart
 test/location_test.dart
 test/meta_notification_request_test.dart
+test/minimal_user_test.dart
 test/mobile_app_request_test.dart
 test/mobile_app_test.dart
 test/mosquito_appearance_request_test.dart
@@ -1751,13 +1750,11 @@ test/photos_prediction_update_threshold_deviation_error_component_test.dart
 test/photos_prediction_update_validation_error_test.dart
 test/prediction_score_request_test.dart
 test/prediction_score_test.dart
-test/simple_annotator_user_request_test.dart
 test/simple_annotator_user_test.dart
 test/simple_photo_request_test.dart
 test/simple_photo_test.dart
 test/simple_taxon_request_test.dart
 test/simple_taxon_test.dart
-test/simple_user_test.dart
 test/simplified_location_test.dart
 test/simplified_observation_with_photos_test.dart
 test/taxa_api_test.dart

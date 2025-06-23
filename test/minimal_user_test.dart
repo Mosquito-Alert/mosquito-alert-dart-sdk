@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for SimpleUser
+// tests for MinimalUser
 void main() {
-  final instance = SimpleUserBuilder();
+  final instance = MinimalUserBuilder();
   // TODO add properties to the builder and call build()
 
-  group(SimpleUser, () {
+  group(MinimalUser, () {
     // String uuid
     test('to test the property `uuid`', () async {
       // TODO

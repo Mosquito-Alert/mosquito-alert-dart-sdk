@@ -44,7 +44,7 @@ void main() {
       // TODO
     });
 
-    // SimpleUser user
+    // MinimalUser user
     test('to test the property `user`', () async {
       // TODO
     });

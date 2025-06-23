@@ -17,6 +17,21 @@ void main() {
       // TODO
     });
 
+    // String firstName
+    test('to test the property `firstName`', () async {
+      // TODO
+    });
+
+    // String lastName
+    test('to test the property `lastName`', () async {
+      // TODO
+    });
+
+    // String fullName
+    test('to test the property `fullName`', () async {
+      // TODO
+    });
+
     // The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
     // DateTime registrationTime
     test('to test the property `registrationTime`', () async {

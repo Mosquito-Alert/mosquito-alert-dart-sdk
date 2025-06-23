@@ -22,7 +22,7 @@ class _$AssignedObservation extends AssignedObservation {
   @override
   final BuiltList<SimplePhoto> photos;
   @override
-  final SimpleUser user;
+  final MinimalUser user;
 
   factory _$AssignedObservation(
           [void Function(AssignedObservationBuilder)? updates]) =>
@@ -141,9 +141,9 @@ class AssignedObservationBuilder
       _$this._photos ??= new ListBuilder<SimplePhoto>();
   set photos(ListBuilder<SimplePhoto>? photos) => _$this._photos = photos;
 
-  SimpleUserBuilder? _user;
-  SimpleUserBuilder get user => _$this._user ??= new SimpleUserBuilder();
-  set user(SimpleUserBuilder? user) => _$this._user = user;
+  MinimalUserBuilder? _user;
+  MinimalUserBuilder get user => _$this._user ??= new MinimalUserBuilder();
+  set user(MinimalUserBuilder? user) => _$this._user = user;
 
   AssignedObservationBuilder() {
     AssignedObservation._defaults(this);

@@ -202,6 +202,12 @@ class _$User extends User {
   @override
   final String username;
   @override
+  final String firstName;
+  @override
+  final String lastName;
+  @override
+  final String fullName;
+  @override
   final DateTime registrationTime;
   @override
   final UserLocaleEnum? locale;
@@ -218,6 +224,9 @@ class _$User extends User {
   _$User._(
       {required this.uuid,
       required this.username,
+      required this.firstName,
+      required this.lastName,
+      required this.fullName,
       required this.registrationTime,
       this.locale,
       required this.languageIso,
@@ -226,6 +235,9 @@ class _$User extends User {
       : super._() {
     BuiltValueNullFieldError.checkNotNull(uuid, r'User', 'uuid');
     BuiltValueNullFieldError.checkNotNull(username, r'User', 'username');
+    BuiltValueNullFieldError.checkNotNull(firstName, r'User', 'firstName');
+    BuiltValueNullFieldError.checkNotNull(lastName, r'User', 'lastName');
+    BuiltValueNullFieldError.checkNotNull(fullName, r'User', 'fullName');
     BuiltValueNullFieldError.checkNotNull(
         registrationTime, r'User', 'registrationTime');
     BuiltValueNullFieldError.checkNotNull(languageIso, r'User', 'languageIso');
@@ -246,6 +258,9 @@ class _$User extends User {
     return other is User &&
         uuid == other.uuid &&
         username == other.username &&
+        firstName == other.firstName &&
+        lastName == other.lastName &&
+        fullName == other.fullName &&
         registrationTime == other.registrationTime &&
         locale == other.locale &&
         languageIso == other.languageIso &&
@@ -258,6 +273,9 @@ class _$User extends User {
     var _$hash = 0;
     _$hash = $jc(_$hash, uuid.hashCode);
     _$hash = $jc(_$hash, username.hashCode);
+    _$hash = $jc(_$hash, firstName.hashCode);
+    _$hash = $jc(_$hash, lastName.hashCode);
+    _$hash = $jc(_$hash, fullName.hashCode);
     _$hash = $jc(_$hash, registrationTime.hashCode);
     _$hash = $jc(_$hash, locale.hashCode);
     _$hash = $jc(_$hash, languageIso.hashCode);
@@ -272,6 +290,9 @@ class _$User extends User {
     return (newBuiltValueToStringHelper(r'User')
           ..add('uuid', uuid)
           ..add('username', username)
+          ..add('firstName', firstName)
+          ..add('lastName', lastName)
+          ..add('fullName', fullName)
           ..add('registrationTime', registrationTime)
           ..add('locale', locale)
           ..add('languageIso', languageIso)
@@ -291,6 +312,18 @@ class UserBuilder implements Builder<User, UserBuilder> {
   String? _username;
   String? get username => _$this._username;
   set username(String? username) => _$this._username = username;
+
+  String? _firstName;
+  String? get firstName => _$this._firstName;
+  set firstName(String? firstName) => _$this._firstName = firstName;
+
+  String? _lastName;
+  String? get lastName => _$this._lastName;
+  set lastName(String? lastName) => _$this._lastName = lastName;
+
+  String? _fullName;
+  String? get fullName => _$this._fullName;
+  set fullName(String? fullName) => _$this._fullName = fullName;
 
   DateTime? _registrationTime;
   DateTime? get registrationTime => _$this._registrationTime;
@@ -322,6 +355,9 @@ class UserBuilder implements Builder<User, UserBuilder> {
     if ($v != null) {
       _uuid = $v.uuid;
       _username = $v.username;
+      _firstName = $v.firstName;
+      _lastName = $v.lastName;
+      _fullName = $v.fullName;
       _registrationTime = $v.registrationTime;
       _locale = $v.locale;
       _languageIso = $v.languageIso;
@@ -355,6 +391,12 @@ class UserBuilder implements Builder<User, UserBuilder> {
                   BuiltValueNullFieldError.checkNotNull(uuid, r'User', 'uuid'),
               username: BuiltValueNullFieldError.checkNotNull(
                   username, r'User', 'username'),
+              firstName: BuiltValueNullFieldError.checkNotNull(
+                  firstName, r'User', 'firstName'),
+              lastName: BuiltValueNullFieldError.checkNotNull(
+                  lastName, r'User', 'lastName'),
+              fullName: BuiltValueNullFieldError.checkNotNull(
+                  fullName, r'User', 'fullName'),
               registrationTime: BuiltValueNullFieldError.checkNotNull(
                   registrationTime, r'User', 'registrationTime'),
               locale: locale,

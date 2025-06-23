@@ -1,4 +1,4 @@
-# mosquito_alert.model.SimpleUser
+# mosquito_alert.model.MinimalUser
 
 ## Load the model package
 ```dart

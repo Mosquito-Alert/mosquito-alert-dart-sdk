@@ -8,13 +8,13 @@ part of 'simple_annotator_user.dart';
 
 class _$SimpleAnnotatorUser extends SimpleAnnotatorUser {
   @override
-  final int id;
+  final String uuid;
   @override
   final String username;
   @override
-  final String? firstName;
+  final String firstName;
   @override
-  final String? lastName;
+  final String lastName;
   @override
   final String fullName;
 
@@ -23,15 +23,19 @@ class _$SimpleAnnotatorUser extends SimpleAnnotatorUser {
       (new SimpleAnnotatorUserBuilder()..update(updates))._build();
 
   _$SimpleAnnotatorUser._(
-      {required this.id,
+      {required this.uuid,
       required this.username,
-      this.firstName,
-      this.lastName,
+      required this.firstName,
+      required this.lastName,
       required this.fullName})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'SimpleAnnotatorUser', 'id');
+    BuiltValueNullFieldError.checkNotNull(uuid, r'SimpleAnnotatorUser', 'uuid');
     BuiltValueNullFieldError.checkNotNull(
         username, r'SimpleAnnotatorUser', 'username');
+    BuiltValueNullFieldError.checkNotNull(
+        firstName, r'SimpleAnnotatorUser', 'firstName');
+    BuiltValueNullFieldError.checkNotNull(
+        lastName, r'SimpleAnnotatorUser', 'lastName');
     BuiltValueNullFieldError.checkNotNull(
         fullName, r'SimpleAnnotatorUser', 'fullName');
   }
@@ -49,7 +53,7 @@ class _$SimpleAnnotatorUser extends SimpleAnnotatorUser {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is SimpleAnnotatorUser &&
-        id == other.id &&
+        uuid == other.uuid &&
         username == other.username &&
         firstName == other.firstName &&
         lastName == other.lastName &&
@@ -59,7 +63,7 @@ class _$SimpleAnnotatorUser extends SimpleAnnotatorUser {
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, id.hashCode);
+    _$hash = $jc(_$hash, uuid.hashCode);
     _$hash = $jc(_$hash, username.hashCode);
     _$hash = $jc(_$hash, firstName.hashCode);
     _$hash = $jc(_$hash, lastName.hashCode);
@@ -71,7 +75,7 @@ class _$SimpleAnnotatorUser extends SimpleAnnotatorUser {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'SimpleAnnotatorUser')
-          ..add('id', id)
+          ..add('uuid', uuid)
           ..add('username', username)
           ..add('firstName', firstName)
           ..add('lastName', lastName)
@@ -84,9 +88,9 @@ class SimpleAnnotatorUserBuilder
     implements Builder<SimpleAnnotatorUser, SimpleAnnotatorUserBuilder> {
   _$SimpleAnnotatorUser? _$v;
 
-  int? _id;
-  int? get id => _$this._id;
-  set id(int? id) => _$this._id = id;
+  String? _uuid;
+  String? get uuid => _$this._uuid;
+  set uuid(String? uuid) => _$this._uuid = uuid;
 
   String? _username;
   String? get username => _$this._username;
@@ -111,7 +115,7 @@ class SimpleAnnotatorUserBuilder
   SimpleAnnotatorUserBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _id = $v.id;
+      _uuid = $v.uuid;
       _username = $v.username;
       _firstName = $v.firstName;
       _lastName = $v.lastName;
@@ -138,12 +142,14 @@ class SimpleAnnotatorUserBuilder
   _$SimpleAnnotatorUser _build() {
     final _$result = _$v ??
         new _$SimpleAnnotatorUser._(
-            id: BuiltValueNullFieldError.checkNotNull(
-                id, r'SimpleAnnotatorUser', 'id'),
+            uuid: BuiltValueNullFieldError.checkNotNull(
+                uuid, r'SimpleAnnotatorUser', 'uuid'),
             username: BuiltValueNullFieldError.checkNotNull(
                 username, r'SimpleAnnotatorUser', 'username'),
-            firstName: firstName,
-            lastName: lastName,
+            firstName: BuiltValueNullFieldError.checkNotNull(
+                firstName, r'SimpleAnnotatorUser', 'firstName'),
+            lastName: BuiltValueNullFieldError.checkNotNull(
+                lastName, r'SimpleAnnotatorUser', 'lastName'),
             fullName: BuiltValueNullFieldError.checkNotNull(
                 fullName, r'SimpleAnnotatorUser', 'fullName'));
     replace(_$result);

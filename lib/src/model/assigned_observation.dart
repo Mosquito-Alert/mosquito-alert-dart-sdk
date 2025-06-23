@@ -3,9 +3,9 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/minimal_user.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/simple_user.dart';
 import 'package:mosquito_alert/src/model/simplified_location.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -49,7 +49,7 @@ abstract class AssignedObservation implements Built<AssignedObservation, Assigne
   BuiltList<SimplePhoto> get photos;
 
   @BuiltValueField(wireName: r'user')
-  SimpleUser get user;
+  MinimalUser get user;
 
   AssignedObservation._();
 
@@ -114,7 +114,7 @@ class _$AssignedObservationSerializer implements PrimitiveSerializer<AssignedObs
     yield r'user';
     yield serializers.serialize(
       object.user,
-      specifiedType: const FullType(SimpleUser),
+      specifiedType: const FullType(MinimalUser),
     );
   }
 
@@ -192,8 +192,8 @@ class _$AssignedObservationSerializer implements PrimitiveSerializer<AssignedObs
         case r'user':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(SimpleUser),
-          ) as SimpleUser;
+            specifiedType: const FullType(MinimalUser),
+          ) as MinimalUser;
           result.user.replace(valueDes);
           break;
         default:

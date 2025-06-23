@@ -11,25 +11,24 @@ part 'simple_annotator_user.g.dart';
 /// SimpleAnnotatorUser
 ///
 /// Properties:
-/// * [id] 
-/// * [username] - Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_ 
+/// * [uuid] 
+/// * [username] 
 /// * [firstName] 
 /// * [lastName] 
 /// * [fullName] 
 @BuiltValue()
 abstract class SimpleAnnotatorUser implements Built<SimpleAnnotatorUser, SimpleAnnotatorUserBuilder> {
-  @BuiltValueField(wireName: r'id')
-  int get id;
+  @BuiltValueField(wireName: r'uuid')
+  String get uuid;
 
-  /// Requerido. 150 carácteres como máximo. Únicamente letras, dígitos y @/./+/-/_ 
   @BuiltValueField(wireName: r'username')
   String get username;
 
   @BuiltValueField(wireName: r'first_name')
-  String? get firstName;
+  String get firstName;
 
   @BuiltValueField(wireName: r'last_name')
-  String? get lastName;
+  String get lastName;
 
   @BuiltValueField(wireName: r'full_name')
   String get fullName;
@@ -57,30 +56,26 @@ class _$SimpleAnnotatorUserSerializer implements PrimitiveSerializer<SimpleAnnot
     SimpleAnnotatorUser object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'id';
+    yield r'uuid';
     yield serializers.serialize(
-      object.id,
-      specifiedType: const FullType(int),
+      object.uuid,
+      specifiedType: const FullType(String),
     );
     yield r'username';
     yield serializers.serialize(
       object.username,
       specifiedType: const FullType(String),
     );
-    if (object.firstName != null) {
-      yield r'first_name';
-      yield serializers.serialize(
-        object.firstName,
-        specifiedType: const FullType(String),
-      );
-    }
-    if (object.lastName != null) {
-      yield r'last_name';
-      yield serializers.serialize(
-        object.lastName,
-        specifiedType: const FullType(String),
-      );
-    }
+    yield r'first_name';
+    yield serializers.serialize(
+      object.firstName,
+      specifiedType: const FullType(String),
+    );
+    yield r'last_name';
+    yield serializers.serialize(
+      object.lastName,
+      specifiedType: const FullType(String),
+    );
     yield r'full_name';
     yield serializers.serialize(
       object.fullName,
@@ -109,12 +104,12 @@ class _$SimpleAnnotatorUserSerializer implements PrimitiveSerializer<SimpleAnnot
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'id':
+        case r'uuid':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
-          result.id = valueDes;
+            specifiedType: const FullType(String),
+          ) as String;
+          result.uuid = valueDes;
           break;
         case r'username':
           final valueDes = serializers.deserialize(

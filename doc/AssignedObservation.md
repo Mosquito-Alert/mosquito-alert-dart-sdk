@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **location** | [**SimplifiedLocation**](SimplifiedLocation.md) |  | 
 **note** | **String** | Note user attached to report. | [optional] 
 **photos** | [**BuiltList&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | 
-**user** | [**SimpleUser**](SimpleUser.md) |  | 
+**user** | [**MinimalUser**](MinimalUser.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

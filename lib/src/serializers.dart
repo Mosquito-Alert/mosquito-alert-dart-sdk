@@ -370,6 +370,7 @@ import 'package:mosquito_alert/src/model/location.dart';
 import 'package:mosquito_alert/src/model/location_point.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/meta_notification_request.dart';
+import 'package:mosquito_alert/src/model/minimal_user.dart';
 import 'package:mosquito_alert/src/model/mobile_app.dart';
 import 'package:mosquito_alert/src/model/mobile_app_request.dart';
 import 'package:mosquito_alert/src/model/mosquito_appearance.dart';
@@ -561,12 +562,10 @@ import 'package:mosquito_alert/src/model/photos_prediction_update_validation_err
 import 'package:mosquito_alert/src/model/prediction_score.dart';
 import 'package:mosquito_alert/src/model/prediction_score_request.dart';
 import 'package:mosquito_alert/src/model/simple_annotator_user.dart';
-import 'package:mosquito_alert/src/model/simple_annotator_user_request.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 import 'package:mosquito_alert/src/model/simple_taxon.dart';
 import 'package:mosquito_alert/src/model/simple_taxon_request.dart';
-import 'package:mosquito_alert/src/model/simple_user.dart';
 import 'package:mosquito_alert/src/model/simplified_location.dart';
 import 'package:mosquito_alert/src/model/simplified_observation_with_photos.dart';
 import 'package:mosquito_alert/src/model/taxa_list_rank_error_component.dart';
@@ -950,6 +949,7 @@ part 'serializers.g.dart';
   LocationPoint,
   LocationRequest,
   MetaNotificationRequest,
+  MinimalUser,
   MobileApp,
   MobileAppRequest,
   MosquitoAppearance,
@@ -1141,12 +1141,10 @@ part 'serializers.g.dart';
   PredictionScore,
   PredictionScoreRequest,
   SimpleAnnotatorUser,
-  SimpleAnnotatorUserRequest,
   SimplePhoto,
   SimplePhotoRequest,
   SimpleTaxon,
   SimpleTaxonRequest,
-  SimpleUser,
   SimplifiedLocation,
   SimplifiedObservationWithPhotos,
   TaxaListRankErrorComponent,

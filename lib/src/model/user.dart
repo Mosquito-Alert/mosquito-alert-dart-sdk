@@ -15,6 +15,9 @@ part 'user.g.dart';
 /// Properties:
 /// * [uuid] 
 /// * [username] 
+/// * [firstName] 
+/// * [lastName] 
+/// * [fullName] 
 /// * [registrationTime] - The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
 /// * [locale] - The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
 /// * [languageIso] - ISO 639-1 code
@@ -27,6 +30,15 @@ abstract class User implements Built<User, UserBuilder> {
 
   @BuiltValueField(wireName: r'username')
   String get username;
+
+  @BuiltValueField(wireName: r'first_name')
+  String get firstName;
+
+  @BuiltValueField(wireName: r'last_name')
+  String get lastName;
+
+  @BuiltValueField(wireName: r'full_name')
+  String get fullName;
 
   /// The date and time when user registered and consented to sharing data. Automatically set by server when user uploads registration.
   @BuiltValueField(wireName: r'registration_time')
@@ -80,6 +92,21 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
     yield r'username';
     yield serializers.serialize(
       object.username,
+      specifiedType: const FullType(String),
+    );
+    yield r'first_name';
+    yield serializers.serialize(
+      object.firstName,
+      specifiedType: const FullType(String),
+    );
+    yield r'last_name';
+    yield serializers.serialize(
+      object.lastName,
+      specifiedType: const FullType(String),
+    );
+    yield r'full_name';
+    yield serializers.serialize(
+      object.fullName,
       specifiedType: const FullType(String),
     );
     yield r'registration_time';
@@ -145,6 +172,27 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
             specifiedType: const FullType(String),
           ) as String;
           result.username = valueDes;
+          break;
+        case r'first_name':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.firstName = valueDes;
+          break;
+        case r'last_name':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.lastName = valueDes;
+          break;
+        case r'full_name':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.fullName = valueDes;
           break;
         case r'registration_time':
           final valueDes = serializers.deserialize(
