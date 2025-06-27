@@ -23,7 +23,7 @@ abstract class IdentificationtasksListResultSourceErrorComponent implements Buil
 
   @BuiltValueField(wireName: r'code')
   IdentificationtasksListResultSourceErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid_choice,  };
+  // enum codeEnum {  invalid_choice,  invalid_list,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -158,6 +158,8 @@ class IdentificationtasksListResultSourceErrorComponentCodeEnum extends EnumClas
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const IdentificationtasksListResultSourceErrorComponentCodeEnum invalidChoice = _$identificationtasksListResultSourceErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'invalid_list')
+  static const IdentificationtasksListResultSourceErrorComponentCodeEnum invalidList = _$identificationtasksListResultSourceErrorComponentCodeEnum_invalidList;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const IdentificationtasksListResultSourceErrorComponentCodeEnum unknownDefaultOpenApi = _$identificationtasksListResultSourceErrorComponentCodeEnum_unknownDefaultOpenApi;
 

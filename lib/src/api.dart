@@ -20,6 +20,7 @@ import 'package:mosquito_alert/src/api/identification_tasks_api.dart';
 import 'package:mosquito_alert/src/api/notifications_api.dart';
 import 'package:mosquito_alert/src/api/observations_api.dart';
 import 'package:mosquito_alert/src/api/partners_api.dart';
+import 'package:mosquito_alert/src/api/permissions_api.dart';
 import 'package:mosquito_alert/src/api/photos_api.dart';
 import 'package:mosquito_alert/src/api/taxa_api.dart';
 import 'package:mosquito_alert/src/api/users_api.dart';
@@ -142,6 +143,12 @@ class MosquitoAlert {
   /// by doing that all interceptors will not be executed
   PartnersApi getPartnersApi() {
     return PartnersApi(dio, serializers);
+  }
+
+  /// Get PermissionsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  PermissionsApi getPermissionsApi() {
+    return PermissionsApi(dio, serializers);
   }
 
   /// Get PhotosApi instance, base route and serializer can be overridden by a given but be careful,

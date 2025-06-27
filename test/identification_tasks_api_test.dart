@@ -36,14 +36,14 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedIdentificationTaskList> list({ BuiltList<int> annotatorIds, BuiltList<int> assigneeIds, DateTime createdAtAfter, DateTime createdAtBefore, bool fullyPredicted, bool isFlagged, bool isSafe, int numAnnotationsMax, int numAnnotationsMin, BuiltList<int> observationCountryIds, BuiltList<String> orderBy, int page, int pageSize, double resultAgreementMax, double resultAgreementMin, double resultConfidenceMax, double resultConfidenceMin, String resultSource, BuiltList<int> resultTaxonIds, double resultUncertaintyMax, double resultUncertaintyMin, String reviewType, BuiltList<String> status, DateTime updatedAtAfter, DateTime updatedAtBefore }) async
+    //Future<PaginatedIdentificationTaskList> list({ BuiltList<int> annotatorIds, BuiltList<int> assigneeIds, DateTime createdAtAfter, DateTime createdAtBefore, bool fullyPredicted, bool isFlagged, bool isSafe, int numAnnotationsMax, int numAnnotationsMin, BuiltList<int> observationCountryIds, BuiltList<String> orderBy, int page, int pageSize, double resultAgreementMax, double resultAgreementMin, double resultConfidenceMax, double resultConfidenceMin, BuiltList<String> resultSource, BuiltList<int> resultTaxonIds, double resultUncertaintyMax, double resultUncertaintyMin, String reviewType, BuiltList<String> status, DateTime updatedAtAfter, DateTime updatedAtBefore }) async
     test('test list', () async {
       // TODO
     });
 
     // Get identification tasks annotated by me
     //
-    //Future<PaginatedIdentificationTaskList> listMine({ BuiltList<int> annotatorIds, BuiltList<int> assigneeIds, DateTime createdAtAfter, DateTime createdAtBefore, bool fullyPredicted, bool isFlagged, bool isSafe, int numAnnotationsMax, int numAnnotationsMin, BuiltList<int> observationCountryIds, BuiltList<String> orderBy, int page, int pageSize, double resultAgreementMax, double resultAgreementMin, double resultConfidenceMax, double resultConfidenceMin, String resultSource, BuiltList<int> resultTaxonIds, double resultUncertaintyMax, double resultUncertaintyMin, String reviewType, BuiltList<String> status, DateTime updatedAtAfter, DateTime updatedAtBefore }) async
+    //Future<PaginatedIdentificationTaskList> listMine({ BuiltList<int> annotatorIds, BuiltList<int> assigneeIds, DateTime createdAtAfter, DateTime createdAtBefore, bool fullyPredicted, bool isFlagged, bool isSafe, int numAnnotationsMax, int numAnnotationsMin, BuiltList<int> observationCountryIds, BuiltList<String> orderBy, int page, int pageSize, double resultAgreementMax, double resultAgreementMin, double resultConfidenceMax, double resultConfidenceMin, BuiltList<String> resultSource, BuiltList<int> resultTaxonIds, double resultUncertaintyMax, double resultUncertaintyMin, String reviewType, BuiltList<String> status, DateTime updatedAtAfter, DateTime updatedAtBefore }) async
     test('test listMine', () async {
       // TODO
     });

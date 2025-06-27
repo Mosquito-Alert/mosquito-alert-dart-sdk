@@ -371,7 +371,7 @@ final double resultAgreementMax = 1.2; // double |
 final double resultAgreementMin = 1.2; // double | 
 final double resultConfidenceMax = resultConfidenceMax_example; // double | 
 final double resultConfidenceMin = resultConfidenceMin_example; // double | 
-final String resultSource = resultSource_example; // String | 
+final BuiltList<String> resultSource = ; // BuiltList<String> | 
 final BuiltList<int> resultTaxonIds = ; // BuiltList<int> | 
 final double resultUncertaintyMax = 1.2; // double | 
 final double resultUncertaintyMin = 1.2; // double | 
@@ -409,7 +409,7 @@ Name | Type | Description  | Notes
  **resultAgreementMin** | **double**|  | [optional] 
  **resultConfidenceMax** | **double**|  | [optional] 
  **resultConfidenceMin** | **double**|  | [optional] 
- **resultSource** | **String**|  | [optional] 
+ **resultSource** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **resultTaxonIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
  **resultUncertaintyMax** | **double**|  | [optional] 
  **resultUncertaintyMin** | **double**|  | [optional] 
@@ -470,7 +470,7 @@ final double resultAgreementMax = 1.2; // double |
 final double resultAgreementMin = 1.2; // double | 
 final double resultConfidenceMax = resultConfidenceMax_example; // double | 
 final double resultConfidenceMin = resultConfidenceMin_example; // double | 
-final String resultSource = resultSource_example; // String | 
+final BuiltList<String> resultSource = ; // BuiltList<String> | 
 final BuiltList<int> resultTaxonIds = ; // BuiltList<int> | 
 final double resultUncertaintyMax = 1.2; // double | 
 final double resultUncertaintyMin = 1.2; // double | 
@@ -508,7 +508,7 @@ Name | Type | Description  | Notes
  **resultAgreementMin** | **double**|  | [optional] 
  **resultConfidenceMax** | **double**|  | [optional] 
  **resultConfidenceMin** | **double**|  | [optional] 
- **resultSource** | **String**|  | [optional] 
+ **resultSource** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **resultTaxonIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
  **resultUncertaintyMax** | **double**|  | [optional] 
  **resultUncertaintyMin** | **double**|  | [optional] 

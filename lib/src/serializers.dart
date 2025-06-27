@@ -23,6 +23,7 @@ import 'package:mosquito_alert/src/model/annotation_classification.dart';
 import 'package:mosquito_alert/src/model/annotation_classification_request.dart';
 import 'package:mosquito_alert/src/model/annotation_feedback.dart';
 import 'package:mosquito_alert/src/model/annotation_feedback_request.dart';
+import 'package:mosquito_alert/src/model/annotation_permission.dart';
 import 'package:mosquito_alert/src/model/annotation_request.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
@@ -138,6 +139,7 @@ import 'package:mosquito_alert/src/model/campaigns_list_error.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/country.dart';
+import 'package:mosquito_alert/src/model/country_permission.dart';
 import 'package:mosquito_alert/src/model/country_request.dart';
 import 'package:mosquito_alert/src/model/create_notification.dart';
 import 'package:mosquito_alert/src/model/create_notification_message.dart';
@@ -210,11 +212,13 @@ import 'package:mosquito_alert/src/model/fixes_create_point_non_field_errors_err
 import 'package:mosquito_alert/src/model/fixes_create_power_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/general_permission.dart';
 import 'package:mosquito_alert/src/model/guest_registration.dart';
 import 'package:mosquito_alert/src/model/guest_registration_request.dart';
 import 'package:mosquito_alert/src/model/identification.dart';
 import 'package:mosquito_alert/src/model/identification_request.dart';
 import 'package:mosquito_alert/src/model/identification_task.dart';
+import 'package:mosquito_alert/src/model/identification_task_permission.dart';
 import 'package:mosquito_alert/src/model/identification_task_result.dart';
 import 'package:mosquito_alert/src/model/identification_task_result_request.dart';
 import 'package:mosquito_alert/src/model/identification_task_review.dart';
@@ -510,6 +514,7 @@ import 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 import 'package:mosquito_alert/src/model/patched_notification_request.dart';
 import 'package:mosquito_alert/src/model/patched_photo_prediction_request.dart';
 import 'package:mosquito_alert/src/model/patched_user_request.dart';
+import 'package:mosquito_alert/src/model/permissions.dart';
 import 'package:mosquito_alert/src/model/photo.dart';
 import 'package:mosquito_alert/src/model/photo_prediction.dart';
 import 'package:mosquito_alert/src/model/photo_prediction_request.dart';
@@ -561,6 +566,7 @@ import 'package:mosquito_alert/src/model/photos_prediction_update_threshold_devi
 import 'package:mosquito_alert/src/model/photos_prediction_update_validation_error.dart';
 import 'package:mosquito_alert/src/model/prediction_score.dart';
 import 'package:mosquito_alert/src/model/prediction_score_request.dart';
+import 'package:mosquito_alert/src/model/review_permission.dart';
 import 'package:mosquito_alert/src/model/simple_annotator_user.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:mosquito_alert/src/model/simple_photo_request.dart';
@@ -579,6 +585,7 @@ import 'package:mosquito_alert/src/model/topic_notification_create_request.dart'
 import 'package:mosquito_alert/src/model/user.dart';
 import 'package:mosquito_alert/src/model/user_assignment.dart';
 import 'package:mosquito_alert/src/model/user_notification_create_request.dart';
+import 'package:mosquito_alert/src/model/user_permission.dart';
 import 'package:mosquito_alert/src/model/user_request.dart';
 import 'package:mosquito_alert/src/model/user_score.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_error.dart';
@@ -602,6 +609,7 @@ part 'serializers.g.dart';
   AnnotationClassificationRequest,
   AnnotationFeedback,
   AnnotationFeedbackRequest,
+  AnnotationPermission,
   AnnotationRequest,
   AppUserTokenObtainPair,
   AppUserTokenObtainPairRequest,
@@ -717,6 +725,7 @@ part 'serializers.g.dart';
   CampaignsListOrderByErrorComponent,
   CampaignsListValidationError,
   Country,
+  CountryPermission,
   CountryRequest,
   CreateNotification,
   CreateNotificationMessage,
@@ -789,11 +798,13 @@ part 'serializers.g.dart';
   FixesCreatePowerErrorComponent,
   FixesCreateSentAtErrorComponent,
   FixesCreateValidationError,
+  GeneralPermission,
   GuestRegistration,
   GuestRegistrationRequest,
   Identification,
   IdentificationRequest,
   IdentificationTask,
+  IdentificationTaskPermission,
   IdentificationTaskResult,
   IdentificationTaskResultRequest,
   IdentificationTaskReview,
@@ -1089,6 +1100,7 @@ part 'serializers.g.dart';
   PatchedNotificationRequest,
   PatchedPhotoPredictionRequest,
   PatchedUserRequest,
+  Permissions,
   Photo,
   PhotoPrediction,
   PhotoPredictionRequest,
@@ -1140,6 +1152,7 @@ part 'serializers.g.dart';
   PhotosPredictionUpdateValidationError,
   PredictionScore,
   PredictionScoreRequest,
+  ReviewPermission,
   SimpleAnnotatorUser,
   SimplePhoto,
   SimplePhotoRequest,
@@ -1158,6 +1171,7 @@ part 'serializers.g.dart';
   User,
   UserAssignment,
   UserNotificationCreateRequest,
+  UserPermission,
   UserRequest,
   UserScore,
   UsersPartialUpdateError,

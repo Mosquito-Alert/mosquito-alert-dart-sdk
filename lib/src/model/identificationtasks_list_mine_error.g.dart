@@ -36,6 +36,9 @@ const IdentificationtasksListMineErrorCodeEnum
     _$identificationtasksListMineErrorCodeEnum_invalidChoice =
     const IdentificationtasksListMineErrorCodeEnum._('invalidChoice');
 const IdentificationtasksListMineErrorCodeEnum
+    _$identificationtasksListMineErrorCodeEnum_invalidList =
+    const IdentificationtasksListMineErrorCodeEnum._('invalidList');
+const IdentificationtasksListMineErrorCodeEnum
     _$identificationtasksListMineErrorCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksListMineErrorCodeEnum._('unknownDefaultOpenApi');
 
@@ -44,6 +47,8 @@ IdentificationtasksListMineErrorCodeEnum
   switch (name) {
     case 'invalidChoice':
       return _$identificationtasksListMineErrorCodeEnum_invalidChoice;
+    case 'invalidList':
+      return _$identificationtasksListMineErrorCodeEnum_invalidList;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksListMineErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -55,6 +60,7 @@ final BuiltSet<IdentificationtasksListMineErrorCodeEnum>
     _$identificationtasksListMineErrorCodeEnumValues = new BuiltSet<
         IdentificationtasksListMineErrorCodeEnum>(const <IdentificationtasksListMineErrorCodeEnum>[
   _$identificationtasksListMineErrorCodeEnum_invalidChoice,
+  _$identificationtasksListMineErrorCodeEnum_invalidList,
   _$identificationtasksListMineErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -101,10 +107,12 @@ class _$IdentificationtasksListMineErrorCodeEnumSerializer
     implements PrimitiveSerializer<IdentificationtasksListMineErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'invalidList': 'invalid_list',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'invalid_list': 'invalidList',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

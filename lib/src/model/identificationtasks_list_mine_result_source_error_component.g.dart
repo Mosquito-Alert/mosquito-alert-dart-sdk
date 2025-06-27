@@ -41,6 +41,10 @@ const IdentificationtasksListMineResultSourceErrorComponentCodeEnum
     const IdentificationtasksListMineResultSourceErrorComponentCodeEnum._(
         'invalidChoice');
 const IdentificationtasksListMineResultSourceErrorComponentCodeEnum
+    _$identificationtasksListMineResultSourceErrorComponentCodeEnum_invalidList =
+    const IdentificationtasksListMineResultSourceErrorComponentCodeEnum._(
+        'invalidList');
+const IdentificationtasksListMineResultSourceErrorComponentCodeEnum
     _$identificationtasksListMineResultSourceErrorComponentCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksListMineResultSourceErrorComponentCodeEnum._(
         'unknownDefaultOpenApi');
@@ -51,6 +55,8 @@ IdentificationtasksListMineResultSourceErrorComponentCodeEnum
   switch (name) {
     case 'invalidChoice':
       return _$identificationtasksListMineResultSourceErrorComponentCodeEnum_invalidChoice;
+    case 'invalidList':
+      return _$identificationtasksListMineResultSourceErrorComponentCodeEnum_invalidList;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksListMineResultSourceErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -63,6 +69,7 @@ final BuiltSet<IdentificationtasksListMineResultSourceErrorComponentCodeEnum>
     new BuiltSet<
         IdentificationtasksListMineResultSourceErrorComponentCodeEnum>(const <IdentificationtasksListMineResultSourceErrorComponentCodeEnum>[
   _$identificationtasksListMineResultSourceErrorComponentCodeEnum_invalidChoice,
+  _$identificationtasksListMineResultSourceErrorComponentCodeEnum_invalidList,
   _$identificationtasksListMineResultSourceErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -114,10 +121,12 @@ class _$IdentificationtasksListMineResultSourceErrorComponentCodeEnumSerializer
             IdentificationtasksListMineResultSourceErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'invalidList': 'invalid_list',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'invalid_list': 'invalidList',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

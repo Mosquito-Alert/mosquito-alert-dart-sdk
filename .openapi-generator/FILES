@@ -10,6 +10,7 @@ doc/AnnotationClassification.md
 doc/AnnotationClassificationRequest.md
 doc/AnnotationFeedback.md
 doc/AnnotationFeedbackRequest.md
+doc/AnnotationPermission.md
 doc/AnnotationRequest.md
 doc/AppUserTokenObtainPair.md
 doc/AppUserTokenObtainPairRequest.md
@@ -130,6 +131,7 @@ doc/CampaignsListOrderByErrorComponent.md
 doc/CampaignsListValidationError.md
 doc/CountriesApi.md
 doc/Country.md
+doc/CountryPermission.md
 doc/CountryRequest.md
 doc/CreateNotification.md
 doc/CreateNotificationMessage.md
@@ -204,11 +206,13 @@ doc/FixesCreatePointNonFieldErrorsErrorComponent.md
 doc/FixesCreatePowerErrorComponent.md
 doc/FixesCreateSentAtErrorComponent.md
 doc/FixesCreateValidationError.md
+doc/GeneralPermission.md
 doc/GuestRegistration.md
 doc/GuestRegistrationRequest.md
 doc/Identification.md
 doc/IdentificationRequest.md
 doc/IdentificationTask.md
+doc/IdentificationTaskPermission.md
 doc/IdentificationTaskResult.md
 doc/IdentificationTaskResultRequest.md
 doc/IdentificationTaskReview.md
@@ -508,6 +512,8 @@ doc/PatchedDeviceUpdateRequest.md
 doc/PatchedNotificationRequest.md
 doc/PatchedPhotoPredictionRequest.md
 doc/PatchedUserRequest.md
+doc/Permissions.md
+doc/PermissionsApi.md
 doc/Photo.md
 doc/PhotoPrediction.md
 doc/PhotoPredictionRequest.md
@@ -560,6 +566,7 @@ doc/PhotosPredictionUpdateThresholdDeviationErrorComponent.md
 doc/PhotosPredictionUpdateValidationError.md
 doc/PredictionScore.md
 doc/PredictionScoreRequest.md
+doc/ReviewPermission.md
 doc/SimpleAnnotatorUser.md
 doc/SimplePhoto.md
 doc/SimplePhotoRequest.md
@@ -579,6 +586,7 @@ doc/TopicNotificationCreateRequest.md
 doc/User.md
 doc/UserAssignment.md
 doc/UserNotificationCreateRequest.md
+doc/UserPermission.md
 doc/UserRequest.md
 doc/UserScore.md
 doc/UsersApi.md
@@ -603,6 +611,7 @@ lib/src/api/identification_tasks_api.dart
 lib/src/api/notifications_api.dart
 lib/src/api/observations_api.dart
 lib/src/api/partners_api.dart
+lib/src/api/permissions_api.dart
 lib/src/api/photos_api.dart
 lib/src/api/taxa_api.dart
 lib/src/api/users_api.dart
@@ -622,6 +631,7 @@ lib/src/model/annotation_classification.dart
 lib/src/model/annotation_classification_request.dart
 lib/src/model/annotation_feedback.dart
 lib/src/model/annotation_feedback_request.dart
+lib/src/model/annotation_permission.dart
 lib/src/model/annotation_request.dart
 lib/src/model/app_user_token_obtain_pair.dart
 lib/src/model/app_user_token_obtain_pair_request.dart
@@ -737,6 +747,7 @@ lib/src/model/campaigns_list_error.dart
 lib/src/model/campaigns_list_order_by_error_component.dart
 lib/src/model/campaigns_list_validation_error.dart
 lib/src/model/country.dart
+lib/src/model/country_permission.dart
 lib/src/model/country_request.dart
 lib/src/model/create_notification.dart
 lib/src/model/create_notification_message.dart
@@ -810,11 +821,13 @@ lib/src/model/fixes_create_point_non_field_errors_error_component.dart
 lib/src/model/fixes_create_power_error_component.dart
 lib/src/model/fixes_create_sent_at_error_component.dart
 lib/src/model/fixes_create_validation_error.dart
+lib/src/model/general_permission.dart
 lib/src/model/guest_registration.dart
 lib/src/model/guest_registration_request.dart
 lib/src/model/identification.dart
 lib/src/model/identification_request.dart
 lib/src/model/identification_task.dart
+lib/src/model/identification_task_permission.dart
 lib/src/model/identification_task_result.dart
 lib/src/model/identification_task_result_request.dart
 lib/src/model/identification_task_review.dart
@@ -1110,6 +1123,7 @@ lib/src/model/patched_device_update_request.dart
 lib/src/model/patched_notification_request.dart
 lib/src/model/patched_photo_prediction_request.dart
 lib/src/model/patched_user_request.dart
+lib/src/model/permissions.dart
 lib/src/model/photo.dart
 lib/src/model/photo_prediction.dart
 lib/src/model/photo_prediction_request.dart
@@ -1161,6 +1175,7 @@ lib/src/model/photos_prediction_update_threshold_deviation_error_component.dart
 lib/src/model/photos_prediction_update_validation_error.dart
 lib/src/model/prediction_score.dart
 lib/src/model/prediction_score_request.dart
+lib/src/model/review_permission.dart
 lib/src/model/simple_annotator_user.dart
 lib/src/model/simple_photo.dart
 lib/src/model/simple_photo_request.dart
@@ -1179,6 +1194,7 @@ lib/src/model/topic_notification_create_request.dart
 lib/src/model/user.dart
 lib/src/model/user_assignment.dart
 lib/src/model/user_notification_create_request.dart
+lib/src/model/user_permission.dart
 lib/src/model/user_request.dart
 lib/src/model/user_score.dart
 lib/src/model/users_partial_update_error.dart
@@ -1199,6 +1215,7 @@ test/annotation_classification_request_test.dart
 test/annotation_classification_test.dart
 test/annotation_feedback_request_test.dart
 test/annotation_feedback_test.dart
+test/annotation_permission_test.dart
 test/annotation_request_test.dart
 test/annotation_test.dart
 test/app_user_token_obtain_pair_request_test.dart
@@ -1319,6 +1336,7 @@ test/campaigns_list_error_test.dart
 test/campaigns_list_order_by_error_component_test.dart
 test/campaigns_list_validation_error_test.dart
 test/countries_api_test.dart
+test/country_permission_test.dart
 test/country_request_test.dart
 test/country_test.dart
 test/create_notification_message_request_test.dart
@@ -1394,9 +1412,11 @@ test/fixes_create_point_non_field_errors_error_component_test.dart
 test/fixes_create_power_error_component_test.dart
 test/fixes_create_sent_at_error_component_test.dart
 test/fixes_create_validation_error_test.dart
+test/general_permission_test.dart
 test/guest_registration_request_test.dart
 test/guest_registration_test.dart
 test/identification_request_test.dart
+test/identification_task_permission_test.dart
 test/identification_task_result_request_test.dart
 test/identification_task_result_test.dart
 test/identification_task_review_test.dart
@@ -1698,6 +1718,8 @@ test/patched_device_update_request_test.dart
 test/patched_notification_request_test.dart
 test/patched_photo_prediction_request_test.dart
 test/patched_user_request_test.dart
+test/permissions_api_test.dart
+test/permissions_test.dart
 test/photo_prediction_request_test.dart
 test/photo_prediction_test.dart
 test/photo_test.dart
@@ -1750,6 +1772,7 @@ test/photos_prediction_update_threshold_deviation_error_component_test.dart
 test/photos_prediction_update_validation_error_test.dart
 test/prediction_score_request_test.dart
 test/prediction_score_test.dart
+test/review_permission_test.dart
 test/simple_annotator_user_test.dart
 test/simple_photo_request_test.dart
 test/simple_photo_test.dart
@@ -1768,6 +1791,7 @@ test/token_verify_request_test.dart
 test/topic_notification_create_request_test.dart
 test/user_assignment_test.dart
 test/user_notification_create_request_test.dart
+test/user_permission_test.dart
 test/user_request_test.dart
 test/user_score_test.dart
 test/user_test.dart

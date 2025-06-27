@@ -325,6 +325,8 @@ class IdentificationtasksListMineErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const IdentificationtasksListMineErrorCodeEnum invalidChoice = _$identificationtasksListMineErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'invalid_list')
+  static const IdentificationtasksListMineErrorCodeEnum invalidList = _$identificationtasksListMineErrorCodeEnum_invalidList;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const IdentificationtasksListMineErrorCodeEnum unknownDefaultOpenApi = _$identificationtasksListMineErrorCodeEnum_unknownDefaultOpenApi;
 
