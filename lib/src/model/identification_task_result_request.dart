@@ -16,8 +16,8 @@ part 'identification_task_result_request.g.dart';
 @BuiltValue()
 abstract class IdentificationTaskResultRequest implements Built<IdentificationTaskResultRequest, IdentificationTaskResultRequestBuilder> {
   @BuiltValueField(wireName: r'source')
-  IdentificationTaskResultRequestSource_Enum? get source_;
-  // enum source_Enum {  expert,  ai,  ,  };
+  IdentificationTaskResultRequestSource_Enum get source_;
+  // enum source_Enum {  expert,  ai,  };
 
   IdentificationTaskResultRequest._();
 
@@ -43,9 +43,9 @@ class _$IdentificationTaskResultRequestSerializer implements PrimitiveSerializer
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'source';
-    yield object.source_ == null ? null : serializers.serialize(
+    yield serializers.serialize(
       object.source_,
-      specifiedType: const FullType.nullable(IdentificationTaskResultRequestSource_Enum),
+      specifiedType: const FullType(IdentificationTaskResultRequestSource_Enum),
     );
   }
 
@@ -73,9 +73,8 @@ class _$IdentificationTaskResultRequestSerializer implements PrimitiveSerializer
         case r'source':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(IdentificationTaskResultRequestSource_Enum),
-          ) as IdentificationTaskResultRequestSource_Enum?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(IdentificationTaskResultRequestSource_Enum),
+          ) as IdentificationTaskResultRequestSource_Enum;
           result.source_ = valueDes;
           break;
         default:

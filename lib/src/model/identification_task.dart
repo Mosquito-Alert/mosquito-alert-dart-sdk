@@ -61,7 +61,7 @@ abstract class IdentificationTask implements Built<IdentificationTask, Identific
   IdentificationTaskReview? get review;
 
   @BuiltValueField(wireName: r'result')
-  IdentificationTaskResult get result;
+  IdentificationTaskResult? get result;
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
@@ -141,9 +141,9 @@ class _$IdentificationTaskSerializer implements PrimitiveSerializer<Identificati
       specifiedType: const FullType.nullable(IdentificationTaskReview),
     );
     yield r'result';
-    yield serializers.serialize(
+    yield object.result == null ? null : serializers.serialize(
       object.result,
-      specifiedType: const FullType(IdentificationTaskResult),
+      specifiedType: const FullType.nullable(IdentificationTaskResult),
     );
     yield r'created_at';
     yield serializers.serialize(
@@ -246,8 +246,9 @@ class _$IdentificationTaskSerializer implements PrimitiveSerializer<Identificati
         case r'result':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(IdentificationTaskResult),
-          ) as IdentificationTaskResult;
+            specifiedType: const FullType.nullable(IdentificationTaskResult),
+          ) as IdentificationTaskResult?;
+          if (valueDes == null) continue;
           result.result.replace(valueDes);
           break;
         case r'created_at':

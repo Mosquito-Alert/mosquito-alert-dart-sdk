@@ -78,7 +78,7 @@ class _$IdentificationTaskResultSource_EnumSerializer
 
 class _$IdentificationTaskResult extends IdentificationTaskResult {
   @override
-  final IdentificationTaskResultSource_Enum? source_;
+  final IdentificationTaskResultSource_Enum source_;
   @override
   final SimpleTaxon? taxon;
   @override
@@ -97,7 +97,7 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
       (new IdentificationTaskResultBuilder()..update(updates))._build();
 
   _$IdentificationTaskResult._(
-      {this.source_,
+      {required this.source_,
       this.taxon,
       required this.isHighConfidence,
       required this.confidence,
@@ -105,6 +105,8 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
       required this.uncertainty,
       required this.agreement})
       : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        source_, r'IdentificationTaskResult', 'source_');
     BuiltValueNullFieldError.checkNotNull(
         isHighConfidence, r'IdentificationTaskResult', 'isHighConfidence');
     BuiltValueNullFieldError.checkNotNull(
@@ -241,7 +243,8 @@ class IdentificationTaskResultBuilder
     try {
       _$result = _$v ??
           new _$IdentificationTaskResult._(
-              source_: source_,
+              source_: BuiltValueNullFieldError.checkNotNull(
+                  source_, r'IdentificationTaskResult', 'source_'),
               taxon: _taxon?.build(),
               isHighConfidence: BuiltValueNullFieldError.checkNotNull(
                   isHighConfidence,

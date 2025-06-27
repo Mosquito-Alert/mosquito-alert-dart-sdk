@@ -79,13 +79,16 @@ class _$IdentificationTaskResultRequestSource_EnumSerializer
 class _$IdentificationTaskResultRequest
     extends IdentificationTaskResultRequest {
   @override
-  final IdentificationTaskResultRequestSource_Enum? source_;
+  final IdentificationTaskResultRequestSource_Enum source_;
 
   factory _$IdentificationTaskResultRequest(
           [void Function(IdentificationTaskResultRequestBuilder)? updates]) =>
       (new IdentificationTaskResultRequestBuilder()..update(updates))._build();
 
-  _$IdentificationTaskResultRequest._({this.source_}) : super._();
+  _$IdentificationTaskResultRequest._({required this.source_}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        source_, r'IdentificationTaskResultRequest', 'source_');
+  }
 
   @override
   IdentificationTaskResultRequest rebuild(
@@ -157,8 +160,10 @@ class IdentificationTaskResultRequestBuilder
   IdentificationTaskResultRequest build() => _build();
 
   _$IdentificationTaskResultRequest _build() {
-    final _$result =
-        _$v ?? new _$IdentificationTaskResultRequest._(source_: source_);
+    final _$result = _$v ??
+        new _$IdentificationTaskResultRequest._(
+            source_: BuiltValueNullFieldError.checkNotNull(
+                source_, r'IdentificationTaskResultRequest', 'source_'));
     replace(_$result);
     return _$result;
   }

@@ -112,7 +112,7 @@ class _$IdentificationTask extends IdentificationTask {
   @override
   final IdentificationTaskReview? review;
   @override
-  final IdentificationTaskResult result;
+  final IdentificationTaskResult? result;
   @override
   final DateTime createdAt;
   @override
@@ -132,7 +132,7 @@ class _$IdentificationTask extends IdentificationTask {
       this.publicNote,
       required this.numAnnotations,
       this.review,
-      required this.result,
+      this.result,
       required this.createdAt,
       required this.updatedAt})
       : super._() {
@@ -148,8 +148,6 @@ class _$IdentificationTask extends IdentificationTask {
         isSafe, r'IdentificationTask', 'isSafe');
     BuiltValueNullFieldError.checkNotNull(
         numAnnotations, r'IdentificationTask', 'numAnnotations');
-    BuiltValueNullFieldError.checkNotNull(
-        result, r'IdentificationTask', 'result');
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'IdentificationTask', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
@@ -300,7 +298,7 @@ class IdentificationTaskBuilder
       _publicNote = $v.publicNote;
       _numAnnotations = $v.numAnnotations;
       _review = $v.review?.toBuilder();
-      _result = $v.result.toBuilder();
+      _result = $v.result?.toBuilder();
       _createdAt = $v.createdAt;
       _updatedAt = $v.updatedAt;
       _$v = null;
@@ -339,7 +337,7 @@ class IdentificationTaskBuilder
               numAnnotations: BuiltValueNullFieldError.checkNotNull(
                   numAnnotations, r'IdentificationTask', 'numAnnotations'),
               review: _review?.build(),
-              result: result.build(),
+              result: _result?.build(),
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt, r'IdentificationTask', 'createdAt'),
               updatedAt: BuiltValueNullFieldError.checkNotNull(
@@ -357,7 +355,7 @@ class IdentificationTaskBuilder
         _$failedField = 'review';
         _review?.build();
         _$failedField = 'result';
-        result.build();
+        _result?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'IdentificationTask', _$failedField, e.toString());

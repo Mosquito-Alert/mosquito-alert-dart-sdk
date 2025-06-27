@@ -23,8 +23,8 @@ part 'identification_task_result.g.dart';
 @BuiltValue()
 abstract class IdentificationTaskResult implements Built<IdentificationTaskResult, IdentificationTaskResultBuilder> {
   @BuiltValueField(wireName: r'source')
-  IdentificationTaskResultSource_Enum? get source_;
-  // enum source_Enum {  expert,  ai,  ,  };
+  IdentificationTaskResultSource_Enum get source_;
+  // enum source_Enum {  expert,  ai,  };
 
   @BuiltValueField(wireName: r'taxon')
   SimpleTaxon? get taxon;
@@ -68,9 +68,9 @@ class _$IdentificationTaskResultSerializer implements PrimitiveSerializer<Identi
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'source';
-    yield object.source_ == null ? null : serializers.serialize(
+    yield serializers.serialize(
       object.source_,
-      specifiedType: const FullType.nullable(IdentificationTaskResultSource_Enum),
+      specifiedType: const FullType(IdentificationTaskResultSource_Enum),
     );
     yield r'taxon';
     yield object.taxon == null ? null : serializers.serialize(
@@ -128,9 +128,8 @@ class _$IdentificationTaskResultSerializer implements PrimitiveSerializer<Identi
         case r'source':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(IdentificationTaskResultSource_Enum),
-          ) as IdentificationTaskResultSource_Enum?;
-          if (valueDes == null) continue;
+            specifiedType: const FullType(IdentificationTaskResultSource_Enum),
+          ) as IdentificationTaskResultSource_Enum;
           result.source_ = valueDes;
           break;
         case r'taxon':
