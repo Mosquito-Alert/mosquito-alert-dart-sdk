@@ -1,29 +1,29 @@
 import 'package:dio/dio.dart';
-import 'package:mosquito_alert/src/api.dart';
 import 'package:mosquito_alert/src/api/auth_api.dart';
 import 'package:mosquito_alert/src/model/token_refresh.dart';
 import 'package:mosquito_alert/src/model/token_refresh_request.dart';
+import 'package:mosquito_alert/src/serializers.dart';
 
 class RevokedTokenException extends DioException {
   RevokedTokenException({required super.requestOptions});
 }
 
 class JwtAuthInterceptor extends QueuedInterceptor {
-  String accessToken;
-  String refreshToken;
-
   final Dio _dio;
-  final AuthApi _authApi;
+  late final AuthApi _authApi;
 
+  final Future<String> Function() getAccessToken;
+  final Future<String> Function() getRefreshToken;
   final void Function(String newAccessToken)? onTokenUpdateCallback;
 
   JwtAuthInterceptor({
-    required this.accessToken,
-    required this.refreshToken,
-    required MosquitoAlert apiClient,
+    required BaseOptions options,
+    required this.getAccessToken,
+    required this.getRefreshToken,
     this.onTokenUpdateCallback,
-  })  : _authApi = apiClient.getAuthApi(),
-        _dio = Dio(apiClient.dio.options) {}
+  }) : _dio = Dio(options) {
+    _authApi = AuthApi(_dio, standardSerializers);
+  }
 
   @override
   void onRequest(
@@ -49,15 +49,15 @@ class JwtAuthInterceptor extends QueuedInterceptor {
 
     try {
       // Try to refresh the token
+      final String refreshToken = await getRefreshToken();
+
       final Response<TokenRefresh> tokenRefreshResponse =
           await _authApi.refreshToken(
               tokenRefreshRequest: TokenRefreshRequest(
-                  (builder) => builder..refresh = this.refreshToken));
+                  (builder) => builder..refresh = refreshToken));
       final String? newToken = tokenRefreshResponse.data?.access;
 
       if (newToken != null) {
-        this.accessToken = newToken;
-
         // Trigger the callback if it's provided
         if (onTokenUpdateCallback != null) {
           onTokenUpdateCallback!(newToken);
@@ -79,8 +79,9 @@ class JwtAuthInterceptor extends QueuedInterceptor {
   }
 
   Future<Map<String, dynamic>> _buildHeaders() async {
+    final accessToken = await getAccessToken();
     return {
-      'Authorization': 'Bearer ${this.accessToken}',
+      'Authorization': 'Bearer ${accessToken}',
     };
   }
 }
