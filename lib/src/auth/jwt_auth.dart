@@ -37,14 +37,14 @@ class JwtAuthInterceptor extends QueuedInterceptor {
       }
     }
 
-    super.onRequest(options, handler);
+    return super.onRequest(options, handler);
   }
 
   @override
   void onError(DioException err, ErrorInterceptorHandler handler) async {
     // Check if the error is due to an expired token (401)
     if (err.response?.statusCode != 401) {
-      super.onError(err, handler);
+      return super.onError(err, handler);
     }
 
     try {
@@ -73,8 +73,7 @@ class JwtAuthInterceptor extends QueuedInterceptor {
       err.requestOptions.headers.addAll(await _buildHeaders());
       handler.resolve(await _dio.fetch(err.requestOptions));
     } catch (_) {
-      super.onError(err, handler);
-      return;
+      return super.onError(err, handler);
     }
   }
 
