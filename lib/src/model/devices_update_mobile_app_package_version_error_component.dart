@@ -23,7 +23,7 @@ abstract class DevicesUpdateMobileAppPackageVersionErrorComponent implements Bui
 
   @BuiltValueField(wireName: r'code')
   DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum get code;
-  // enum codeEnum {  blank,  invalid,  max_length,  null,  null_characters_not_allowed,  required,  surrogate_characters_not_allowed,  };
+  // enum codeEnum {  blank,  invalid,  invalid_version,  max_length,  null,  null_characters_not_allowed,  required,  surrogate_characters_not_allowed,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -160,6 +160,8 @@ class DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum extends EnumCla
   static const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum blank = _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_blank;
   @BuiltValueEnumConst(wireName: r'invalid')
   static const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum invalid = _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'invalid_version')
+  static const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum invalidVersion = _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalidVersion;
   @BuiltValueEnumConst(wireName: r'max_length')
   static const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum maxLength = _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_maxLength;
   @BuiltValueEnumConst(wireName: r'null')

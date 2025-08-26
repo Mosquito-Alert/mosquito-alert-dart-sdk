@@ -39,6 +39,9 @@ const DevicesPartialUpdateErrorCodeEnum
     _$devicesPartialUpdateErrorCodeEnum_invalid =
     const DevicesPartialUpdateErrorCodeEnum._('invalid');
 const DevicesPartialUpdateErrorCodeEnum
+    _$devicesPartialUpdateErrorCodeEnum_invalidVersion =
+    const DevicesPartialUpdateErrorCodeEnum._('invalidVersion');
+const DevicesPartialUpdateErrorCodeEnum
     _$devicesPartialUpdateErrorCodeEnum_maxLength =
     const DevicesPartialUpdateErrorCodeEnum._('maxLength');
 const DevicesPartialUpdateErrorCodeEnum
@@ -64,6 +67,8 @@ DevicesPartialUpdateErrorCodeEnum _$devicesPartialUpdateErrorCodeEnumValueOf(
       return _$devicesPartialUpdateErrorCodeEnum_blank;
     case 'invalid':
       return _$devicesPartialUpdateErrorCodeEnum_invalid;
+    case 'invalidVersion':
+      return _$devicesPartialUpdateErrorCodeEnum_invalidVersion;
     case 'maxLength':
       return _$devicesPartialUpdateErrorCodeEnum_maxLength;
     case 'null_':
@@ -86,6 +91,7 @@ final BuiltSet<DevicesPartialUpdateErrorCodeEnum>
         DevicesPartialUpdateErrorCodeEnum>(const <DevicesPartialUpdateErrorCodeEnum>[
   _$devicesPartialUpdateErrorCodeEnum_blank,
   _$devicesPartialUpdateErrorCodeEnum_invalid,
+  _$devicesPartialUpdateErrorCodeEnum_invalidVersion,
   _$devicesPartialUpdateErrorCodeEnum_maxLength,
   _$devicesPartialUpdateErrorCodeEnum_null_,
   _$devicesPartialUpdateErrorCodeEnum_nullCharactersNotAllowed,
@@ -136,6 +142,7 @@ class _$DevicesPartialUpdateErrorCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'invalidVersion': 'invalid_version',
     'maxLength': 'max_length',
     'null_': 'null',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
@@ -146,6 +153,7 @@ class _$DevicesPartialUpdateErrorCodeEnumSerializer
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'invalid_version': 'invalidVersion',
     'max_length': 'maxLength',
     'null': 'null_',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',

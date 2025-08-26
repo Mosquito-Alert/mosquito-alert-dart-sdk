@@ -34,6 +34,8 @@ const DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnum_blank =
     const DevicesCreateErrorCodeEnum._('blank');
 const DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnum_invalid =
     const DevicesCreateErrorCodeEnum._('invalid');
+const DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnum_invalidVersion =
+    const DevicesCreateErrorCodeEnum._('invalidVersion');
 const DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnum_maxLength =
     const DevicesCreateErrorCodeEnum._('maxLength');
 const DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnum_null_ =
@@ -56,6 +58,8 @@ DevicesCreateErrorCodeEnum _$devicesCreateErrorCodeEnumValueOf(String name) {
       return _$devicesCreateErrorCodeEnum_blank;
     case 'invalid':
       return _$devicesCreateErrorCodeEnum_invalid;
+    case 'invalidVersion':
+      return _$devicesCreateErrorCodeEnum_invalidVersion;
     case 'maxLength':
       return _$devicesCreateErrorCodeEnum_maxLength;
     case 'null_':
@@ -77,6 +81,7 @@ final BuiltSet<DevicesCreateErrorCodeEnum> _$devicesCreateErrorCodeEnumValues =
     new BuiltSet<DevicesCreateErrorCodeEnum>(const <DevicesCreateErrorCodeEnum>[
   _$devicesCreateErrorCodeEnum_blank,
   _$devicesCreateErrorCodeEnum_invalid,
+  _$devicesCreateErrorCodeEnum_invalidVersion,
   _$devicesCreateErrorCodeEnum_maxLength,
   _$devicesCreateErrorCodeEnum_null_,
   _$devicesCreateErrorCodeEnum_nullCharactersNotAllowed,
@@ -124,6 +129,7 @@ class _$DevicesCreateErrorCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'invalidVersion': 'invalid_version',
     'maxLength': 'max_length',
     'null_': 'null',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
@@ -134,6 +140,7 @@ class _$DevicesCreateErrorCodeEnumSerializer
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'invalid_version': 'invalidVersion',
     'max_length': 'maxLength',
     'null': 'null_',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',

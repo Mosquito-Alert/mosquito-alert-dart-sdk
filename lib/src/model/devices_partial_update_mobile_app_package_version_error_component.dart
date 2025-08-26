@@ -23,7 +23,7 @@ abstract class DevicesPartialUpdateMobileAppPackageVersionErrorComponent impleme
 
   @BuiltValueField(wireName: r'code')
   DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum get code;
-  // enum codeEnum {  blank,  invalid,  max_length,  null,  null_characters_not_allowed,  required,  surrogate_characters_not_allowed,  };
+  // enum codeEnum {  blank,  invalid,  invalid_version,  max_length,  null,  null_characters_not_allowed,  required,  surrogate_characters_not_allowed,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -160,6 +160,8 @@ class DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum extends 
   static const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum blank = _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_blank;
   @BuiltValueEnumConst(wireName: r'invalid')
   static const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum invalid = _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'invalid_version')
+  static const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum invalidVersion = _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalidVersion;
   @BuiltValueEnumConst(wireName: r'max_length')
   static const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum maxLength = _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_maxLength;
   @BuiltValueEnumConst(wireName: r'null')

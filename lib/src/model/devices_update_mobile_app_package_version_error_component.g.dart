@@ -44,6 +44,10 @@ const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum
     const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum._(
         'invalid');
 const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum
+    _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalidVersion =
+    const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum._(
+        'invalidVersion');
+const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum
     _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_maxLength =
     const DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum._(
         'maxLength');
@@ -75,6 +79,8 @@ DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum
       return _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_blank;
     case 'invalid':
       return _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalid;
+    case 'invalidVersion':
+      return _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalidVersion;
     case 'maxLength':
       return _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_maxLength;
     case 'null_':
@@ -98,6 +104,7 @@ final BuiltSet<DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum>
         DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum>(const <DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnum>[
   _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_blank,
   _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalid,
+  _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalidVersion,
   _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_maxLength,
   _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_null_,
   _$devicesUpdateMobileAppPackageVersionErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -155,6 +162,7 @@ class _$DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'invalidVersion': 'invalid_version',
     'maxLength': 'max_length',
     'null_': 'null',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
@@ -165,6 +173,7 @@ class _$DevicesUpdateMobileAppPackageVersionErrorComponentCodeEnumSerializer
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'invalid_version': 'invalidVersion',
     'max_length': 'maxLength',
     'null': 'null_',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',

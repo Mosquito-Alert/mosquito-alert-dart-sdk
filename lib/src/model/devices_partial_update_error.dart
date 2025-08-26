@@ -267,6 +267,8 @@ class DevicesPartialUpdateErrorCodeEnum extends EnumClass {
   static const DevicesPartialUpdateErrorCodeEnum blank = _$devicesPartialUpdateErrorCodeEnum_blank;
   @BuiltValueEnumConst(wireName: r'invalid')
   static const DevicesPartialUpdateErrorCodeEnum invalid = _$devicesPartialUpdateErrorCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'invalid_version')
+  static const DevicesPartialUpdateErrorCodeEnum invalidVersion = _$devicesPartialUpdateErrorCodeEnum_invalidVersion;
   @BuiltValueEnumConst(wireName: r'max_length')
   static const DevicesPartialUpdateErrorCodeEnum maxLength = _$devicesPartialUpdateErrorCodeEnum_maxLength;
   @BuiltValueEnumConst(wireName: r'null')

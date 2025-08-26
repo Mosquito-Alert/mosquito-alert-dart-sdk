@@ -327,6 +327,8 @@ class DevicesCreateErrorCodeEnum extends EnumClass {
   static const DevicesCreateErrorCodeEnum blank = _$devicesCreateErrorCodeEnum_blank;
   @BuiltValueEnumConst(wireName: r'invalid')
   static const DevicesCreateErrorCodeEnum invalid = _$devicesCreateErrorCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'invalid_version')
+  static const DevicesCreateErrorCodeEnum invalidVersion = _$devicesCreateErrorCodeEnum_invalidVersion;
   @BuiltValueEnumConst(wireName: r'max_length')
   static const DevicesCreateErrorCodeEnum maxLength = _$devicesCreateErrorCodeEnum_maxLength;
   @BuiltValueEnumConst(wireName: r'null')

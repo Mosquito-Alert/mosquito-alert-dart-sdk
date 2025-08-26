@@ -46,6 +46,10 @@ const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum
     const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum._(
         'invalid');
 const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum
+    _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalidVersion =
+    const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum._(
+        'invalidVersion');
+const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum
     _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_maxLength =
     const DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum._(
         'maxLength');
@@ -78,6 +82,8 @@ DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum
       return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_blank;
     case 'invalid':
       return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalid;
+    case 'invalidVersion':
+      return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalidVersion;
     case 'maxLength':
       return _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_maxLength;
     case 'null_':
@@ -102,6 +108,7 @@ final BuiltSet<
         DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum>(const <DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum>[
   _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_blank,
   _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalid,
+  _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_invalidVersion,
   _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_maxLength,
   _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_null_,
   _$devicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -161,6 +168,7 @@ class _$DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnumSeriali
   static const Map<String, Object> _toWire = const <String, Object>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'invalidVersion': 'invalid_version',
     'maxLength': 'max_length',
     'null_': 'null',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
@@ -171,6 +179,7 @@ class _$DevicesPartialUpdateMobileAppPackageVersionErrorComponentCodeEnumSeriali
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'invalid_version': 'invalidVersion',
     'max_length': 'maxLength',
     'null': 'null_',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
