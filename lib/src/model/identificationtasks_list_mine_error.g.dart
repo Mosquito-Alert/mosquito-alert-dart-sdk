@@ -7,8 +7,8 @@ part of 'identificationtasks_list_mine_error.dart';
 // **************************************************************************
 
 const IdentificationtasksListMineErrorAttrEnum
-    _$identificationtasksListMineErrorAttrEnum_resultSource =
-    const IdentificationtasksListMineErrorAttrEnum._('resultSource');
+    _$identificationtasksListMineErrorAttrEnum_reviewAction =
+    const IdentificationtasksListMineErrorAttrEnum._('reviewAction');
 const IdentificationtasksListMineErrorAttrEnum
     _$identificationtasksListMineErrorAttrEnum_unknownDefaultOpenApi =
     const IdentificationtasksListMineErrorAttrEnum._('unknownDefaultOpenApi');
@@ -16,8 +16,8 @@ const IdentificationtasksListMineErrorAttrEnum
 IdentificationtasksListMineErrorAttrEnum
     _$identificationtasksListMineErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'resultSource':
-      return _$identificationtasksListMineErrorAttrEnum_resultSource;
+    case 'reviewAction':
+      return _$identificationtasksListMineErrorAttrEnum_reviewAction;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksListMineErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -28,16 +28,13 @@ IdentificationtasksListMineErrorAttrEnum
 final BuiltSet<IdentificationtasksListMineErrorAttrEnum>
     _$identificationtasksListMineErrorAttrEnumValues = new BuiltSet<
         IdentificationtasksListMineErrorAttrEnum>(const <IdentificationtasksListMineErrorAttrEnum>[
-  _$identificationtasksListMineErrorAttrEnum_resultSource,
+  _$identificationtasksListMineErrorAttrEnum_reviewAction,
   _$identificationtasksListMineErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const IdentificationtasksListMineErrorCodeEnum
     _$identificationtasksListMineErrorCodeEnum_invalidChoice =
     const IdentificationtasksListMineErrorCodeEnum._('invalidChoice');
-const IdentificationtasksListMineErrorCodeEnum
-    _$identificationtasksListMineErrorCodeEnum_invalidList =
-    const IdentificationtasksListMineErrorCodeEnum._('invalidList');
 const IdentificationtasksListMineErrorCodeEnum
     _$identificationtasksListMineErrorCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksListMineErrorCodeEnum._('unknownDefaultOpenApi');
@@ -47,8 +44,6 @@ IdentificationtasksListMineErrorCodeEnum
   switch (name) {
     case 'invalidChoice':
       return _$identificationtasksListMineErrorCodeEnum_invalidChoice;
-    case 'invalidList':
-      return _$identificationtasksListMineErrorCodeEnum_invalidList;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksListMineErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -60,7 +55,6 @@ final BuiltSet<IdentificationtasksListMineErrorCodeEnum>
     _$identificationtasksListMineErrorCodeEnumValues = new BuiltSet<
         IdentificationtasksListMineErrorCodeEnum>(const <IdentificationtasksListMineErrorCodeEnum>[
   _$identificationtasksListMineErrorCodeEnum_invalidChoice,
-  _$identificationtasksListMineErrorCodeEnum_invalidList,
   _$identificationtasksListMineErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -74,11 +68,11 @@ Serializer<IdentificationtasksListMineErrorCodeEnum>
 class _$IdentificationtasksListMineErrorAttrEnumSerializer
     implements PrimitiveSerializer<IdentificationtasksListMineErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'resultSource': 'result_source',
+    'reviewAction': 'review_action',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'result_source': 'resultSource',
+    'review_action': 'reviewAction',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -107,12 +101,10 @@ class _$IdentificationtasksListMineErrorCodeEnumSerializer
     implements PrimitiveSerializer<IdentificationtasksListMineErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
-    'invalidList': 'invalid_list',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
-    'invalid_list': 'invalidList',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

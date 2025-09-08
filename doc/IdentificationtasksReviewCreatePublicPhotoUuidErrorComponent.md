@@ -1,4 +1,4 @@
-# mosquito_alert.model.IdentificationTaskResultRequest
+# mosquito_alert.model.IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent
 
 ## Load the model package
 ```dart
@@ -8,7 +8,9 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**source_** | **String** |  | 
+**attr** | **String** |  | 
+**code** | **String** |  | 
+**detail** | **String** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

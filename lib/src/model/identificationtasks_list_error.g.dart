@@ -7,8 +7,8 @@ part of 'identificationtasks_list_error.dart';
 // **************************************************************************
 
 const IdentificationtasksListErrorAttrEnum
-    _$identificationtasksListErrorAttrEnum_resultSource =
-    const IdentificationtasksListErrorAttrEnum._('resultSource');
+    _$identificationtasksListErrorAttrEnum_reviewAction =
+    const IdentificationtasksListErrorAttrEnum._('reviewAction');
 const IdentificationtasksListErrorAttrEnum
     _$identificationtasksListErrorAttrEnum_unknownDefaultOpenApi =
     const IdentificationtasksListErrorAttrEnum._('unknownDefaultOpenApi');
@@ -16,8 +16,8 @@ const IdentificationtasksListErrorAttrEnum
 IdentificationtasksListErrorAttrEnum
     _$identificationtasksListErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'resultSource':
-      return _$identificationtasksListErrorAttrEnum_resultSource;
+    case 'reviewAction':
+      return _$identificationtasksListErrorAttrEnum_reviewAction;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksListErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -28,16 +28,13 @@ IdentificationtasksListErrorAttrEnum
 final BuiltSet<IdentificationtasksListErrorAttrEnum>
     _$identificationtasksListErrorAttrEnumValues = new BuiltSet<
         IdentificationtasksListErrorAttrEnum>(const <IdentificationtasksListErrorAttrEnum>[
-  _$identificationtasksListErrorAttrEnum_resultSource,
+  _$identificationtasksListErrorAttrEnum_reviewAction,
   _$identificationtasksListErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const IdentificationtasksListErrorCodeEnum
     _$identificationtasksListErrorCodeEnum_invalidChoice =
     const IdentificationtasksListErrorCodeEnum._('invalidChoice');
-const IdentificationtasksListErrorCodeEnum
-    _$identificationtasksListErrorCodeEnum_invalidList =
-    const IdentificationtasksListErrorCodeEnum._('invalidList');
 const IdentificationtasksListErrorCodeEnum
     _$identificationtasksListErrorCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksListErrorCodeEnum._('unknownDefaultOpenApi');
@@ -47,8 +44,6 @@ IdentificationtasksListErrorCodeEnum
   switch (name) {
     case 'invalidChoice':
       return _$identificationtasksListErrorCodeEnum_invalidChoice;
-    case 'invalidList':
-      return _$identificationtasksListErrorCodeEnum_invalidList;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksListErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -60,7 +55,6 @@ final BuiltSet<IdentificationtasksListErrorCodeEnum>
     _$identificationtasksListErrorCodeEnumValues = new BuiltSet<
         IdentificationtasksListErrorCodeEnum>(const <IdentificationtasksListErrorCodeEnum>[
   _$identificationtasksListErrorCodeEnum_invalidChoice,
-  _$identificationtasksListErrorCodeEnum_invalidList,
   _$identificationtasksListErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -74,11 +68,11 @@ Serializer<IdentificationtasksListErrorCodeEnum>
 class _$IdentificationtasksListErrorAttrEnumSerializer
     implements PrimitiveSerializer<IdentificationtasksListErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'resultSource': 'result_source',
+    'reviewAction': 'review_action',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'result_source': 'resultSource',
+    'review_action': 'reviewAction',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -107,12 +101,10 @@ class _$IdentificationtasksListErrorCodeEnumSerializer
     implements PrimitiveSerializer<IdentificationtasksListErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
-    'invalidList': 'invalid_list',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
-    'invalid_list': 'invalidList',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

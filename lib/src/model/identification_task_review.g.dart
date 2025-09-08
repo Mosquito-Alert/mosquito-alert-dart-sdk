@@ -6,44 +6,44 @@ part of 'identification_task_review.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const IdentificationTaskReviewTypeEnum
-    _$identificationTaskReviewTypeEnum_agree =
-    const IdentificationTaskReviewTypeEnum._('agree');
-const IdentificationTaskReviewTypeEnum
-    _$identificationTaskReviewTypeEnum_overwrite =
-    const IdentificationTaskReviewTypeEnum._('overwrite');
-const IdentificationTaskReviewTypeEnum
-    _$identificationTaskReviewTypeEnum_unknownDefaultOpenApi =
-    const IdentificationTaskReviewTypeEnum._('unknownDefaultOpenApi');
+const IdentificationTaskReviewActionEnum
+    _$identificationTaskReviewActionEnum_agree =
+    const IdentificationTaskReviewActionEnum._('agree');
+const IdentificationTaskReviewActionEnum
+    _$identificationTaskReviewActionEnum_overwrite =
+    const IdentificationTaskReviewActionEnum._('overwrite');
+const IdentificationTaskReviewActionEnum
+    _$identificationTaskReviewActionEnum_unknownDefaultOpenApi =
+    const IdentificationTaskReviewActionEnum._('unknownDefaultOpenApi');
 
-IdentificationTaskReviewTypeEnum _$identificationTaskReviewTypeEnumValueOf(
+IdentificationTaskReviewActionEnum _$identificationTaskReviewActionEnumValueOf(
     String name) {
   switch (name) {
     case 'agree':
-      return _$identificationTaskReviewTypeEnum_agree;
+      return _$identificationTaskReviewActionEnum_agree;
     case 'overwrite':
-      return _$identificationTaskReviewTypeEnum_overwrite;
+      return _$identificationTaskReviewActionEnum_overwrite;
     case 'unknownDefaultOpenApi':
-      return _$identificationTaskReviewTypeEnum_unknownDefaultOpenApi;
+      return _$identificationTaskReviewActionEnum_unknownDefaultOpenApi;
     default:
-      return _$identificationTaskReviewTypeEnum_unknownDefaultOpenApi;
+      return _$identificationTaskReviewActionEnum_unknownDefaultOpenApi;
   }
 }
 
-final BuiltSet<IdentificationTaskReviewTypeEnum>
-    _$identificationTaskReviewTypeEnumValues = new BuiltSet<
-        IdentificationTaskReviewTypeEnum>(const <IdentificationTaskReviewTypeEnum>[
-  _$identificationTaskReviewTypeEnum_agree,
-  _$identificationTaskReviewTypeEnum_overwrite,
-  _$identificationTaskReviewTypeEnum_unknownDefaultOpenApi,
+final BuiltSet<IdentificationTaskReviewActionEnum>
+    _$identificationTaskReviewActionEnumValues = new BuiltSet<
+        IdentificationTaskReviewActionEnum>(const <IdentificationTaskReviewActionEnum>[
+  _$identificationTaskReviewActionEnum_agree,
+  _$identificationTaskReviewActionEnum_overwrite,
+  _$identificationTaskReviewActionEnum_unknownDefaultOpenApi,
 ]);
 
-Serializer<IdentificationTaskReviewTypeEnum>
-    _$identificationTaskReviewTypeEnumSerializer =
-    new _$IdentificationTaskReviewTypeEnumSerializer();
+Serializer<IdentificationTaskReviewActionEnum>
+    _$identificationTaskReviewActionEnumSerializer =
+    new _$IdentificationTaskReviewActionEnumSerializer();
 
-class _$IdentificationTaskReviewTypeEnumSerializer
-    implements PrimitiveSerializer<IdentificationTaskReviewTypeEnum> {
+class _$IdentificationTaskReviewActionEnumSerializer
+    implements PrimitiveSerializer<IdentificationTaskReviewActionEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'agree': 'agree',
     'overwrite': 'overwrite',
@@ -56,27 +56,27 @@ class _$IdentificationTaskReviewTypeEnumSerializer
   };
 
   @override
-  final Iterable<Type> types = const <Type>[IdentificationTaskReviewTypeEnum];
+  final Iterable<Type> types = const <Type>[IdentificationTaskReviewActionEnum];
   @override
-  final String wireName = 'IdentificationTaskReviewTypeEnum';
+  final String wireName = 'IdentificationTaskReviewActionEnum';
 
   @override
   Object serialize(
-          Serializers serializers, IdentificationTaskReviewTypeEnum object,
+          Serializers serializers, IdentificationTaskReviewActionEnum object,
           {FullType specifiedType = FullType.unspecified}) =>
       _toWire[object.name] ?? object.name;
 
   @override
-  IdentificationTaskReviewTypeEnum deserialize(
+  IdentificationTaskReviewActionEnum deserialize(
           Serializers serializers, Object serialized,
           {FullType specifiedType = FullType.unspecified}) =>
-      IdentificationTaskReviewTypeEnum.valueOf(
+      IdentificationTaskReviewActionEnum.valueOf(
           _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
 class _$IdentificationTaskReview extends IdentificationTaskReview {
   @override
-  final IdentificationTaskReviewTypeEnum type;
+  final IdentificationTaskReviewActionEnum action;
   @override
   final DateTime createdAt;
 
@@ -84,10 +84,10 @@ class _$IdentificationTaskReview extends IdentificationTaskReview {
           [void Function(IdentificationTaskReviewBuilder)? updates]) =>
       (new IdentificationTaskReviewBuilder()..update(updates))._build();
 
-  _$IdentificationTaskReview._({required this.type, required this.createdAt})
+  _$IdentificationTaskReview._({required this.action, required this.createdAt})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        type, r'IdentificationTaskReview', 'type');
+        action, r'IdentificationTaskReview', 'action');
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'IdentificationTaskReview', 'createdAt');
   }
@@ -105,14 +105,14 @@ class _$IdentificationTaskReview extends IdentificationTaskReview {
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is IdentificationTaskReview &&
-        type == other.type &&
+        action == other.action &&
         createdAt == other.createdAt;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
-    _$hash = $jc(_$hash, type.hashCode);
+    _$hash = $jc(_$hash, action.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
@@ -121,7 +121,7 @@ class _$IdentificationTaskReview extends IdentificationTaskReview {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'IdentificationTaskReview')
-          ..add('type', type)
+          ..add('action', action)
           ..add('createdAt', createdAt))
         .toString();
   }
@@ -132,9 +132,10 @@ class IdentificationTaskReviewBuilder
         Builder<IdentificationTaskReview, IdentificationTaskReviewBuilder> {
   _$IdentificationTaskReview? _$v;
 
-  IdentificationTaskReviewTypeEnum? _type;
-  IdentificationTaskReviewTypeEnum? get type => _$this._type;
-  set type(IdentificationTaskReviewTypeEnum? type) => _$this._type = type;
+  IdentificationTaskReviewActionEnum? _action;
+  IdentificationTaskReviewActionEnum? get action => _$this._action;
+  set action(IdentificationTaskReviewActionEnum? action) =>
+      _$this._action = action;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
@@ -147,7 +148,7 @@ class IdentificationTaskReviewBuilder
   IdentificationTaskReviewBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
-      _type = $v.type;
+      _action = $v.action;
       _createdAt = $v.createdAt;
       _$v = null;
     }
@@ -171,8 +172,8 @@ class IdentificationTaskReviewBuilder
   _$IdentificationTaskReview _build() {
     final _$result = _$v ??
         new _$IdentificationTaskReview._(
-            type: BuiltValueNullFieldError.checkNotNull(
-                type, r'IdentificationTaskReview', 'type'),
+            action: BuiltValueNullFieldError.checkNotNull(
+                action, r'IdentificationTaskReview', 'action'),
             createdAt: BuiltValueNullFieldError.checkNotNull(
                 createdAt, r'IdentificationTaskReview', 'createdAt'));
     replace(_$result);

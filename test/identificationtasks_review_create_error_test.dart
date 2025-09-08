@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for IdentificationtasksListReviewTypeErrorComponent
+// tests for IdentificationtasksReviewCreateError
 void main() {
-  final instance = IdentificationtasksListReviewTypeErrorComponentBuilder();
+  final instance = IdentificationtasksReviewCreateErrorBuilder();
   // TODO add properties to the builder and call build()
 
-  group(IdentificationtasksListReviewTypeErrorComponent, () {
+  group(IdentificationtasksReviewCreateError, () {
     // String attr
     test('to test the property `attr`', () async {
       // TODO

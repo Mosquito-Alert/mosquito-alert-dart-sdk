@@ -41,7 +41,7 @@ abstract class IdentificationTask implements Built<IdentificationTask, Identific
   BuiltList<UserAssignment> get assignments;
 
   @BuiltValueField(wireName: r'status')
-  IdentificationTaskStatusEnum? get status;
+  IdentificationTaskStatusEnum get status;
   // enum statusEnum {  open,  conflict,  review,  done,  archived,  };
 
   @BuiltValueField(wireName: r'is_flagged')
@@ -108,13 +108,11 @@ class _$IdentificationTaskSerializer implements PrimitiveSerializer<Identificati
       object.assignments,
       specifiedType: const FullType(BuiltList, [FullType(UserAssignment)]),
     );
-    if (object.status != null) {
-      yield r'status';
-      yield serializers.serialize(
-        object.status,
-        specifiedType: const FullType(IdentificationTaskStatusEnum),
-      );
-    }
+    yield r'status';
+    yield serializers.serialize(
+      object.status,
+      specifiedType: const FullType(IdentificationTaskStatusEnum),
+    );
     yield r'is_flagged';
     yield serializers.serialize(
       object.isFlagged,
