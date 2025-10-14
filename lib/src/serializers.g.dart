@@ -321,9 +321,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CountryPermission.serializer)
       ..add(CountryPermissionRoleEnum.serializer)
       ..add(CountryRequest.serializer)
+      ..add(CreateAgreeReviewRequest.serializer)
+      ..add(CreateAgreeReviewRequestActionEnum.serializer)
       ..add(CreateNotification.serializer)
       ..add(CreateNotificationMessage.serializer)
       ..add(CreateNotificationMessageRequest.serializer)
+      ..add(CreateOverwriteReviewRequest.serializer)
+      ..add(CreateOverwriteReviewRequestActionEnum.serializer)
       ..add(CreatePhotoPrediction.serializer)
       ..add(CreatePhotoPredictionClassifierVersionEnum.serializer)
       ..add(CreatePhotoPredictionPredictedClassEnum.serializer)
@@ -520,11 +524,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(IdentificationTask.serializer)
       ..add(IdentificationTaskPermission.serializer)
       ..add(IdentificationTaskResult.serializer)
-      ..add(IdentificationTaskResultRequest.serializer)
-      ..add(IdentificationTaskResultRequestSource_Enum.serializer)
       ..add(IdentificationTaskResultSource_Enum.serializer)
       ..add(IdentificationTaskReview.serializer)
-      ..add(IdentificationTaskReviewTypeEnum.serializer)
+      ..add(IdentificationTaskReviewActionEnum.serializer)
       ..add(IdentificationTaskStatusEnum.serializer)
       ..add(IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent
           .serializer)
@@ -885,10 +887,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(IdentificationtasksListMineResultUncertaintyErrorComponentCodeEnum
           .serializer)
-      ..add(IdentificationtasksListMineReviewTypeErrorComponent.serializer)
-      ..add(IdentificationtasksListMineReviewTypeErrorComponentAttrEnum
+      ..add(IdentificationtasksListMineReviewActionErrorComponent.serializer)
+      ..add(IdentificationtasksListMineReviewActionErrorComponentAttrEnum
           .serializer)
-      ..add(IdentificationtasksListMineReviewTypeErrorComponentCodeEnum
+      ..add(IdentificationtasksListMineReviewActionErrorComponentCodeEnum
           .serializer)
       ..add(IdentificationtasksListMineStatusErrorComponent.serializer)
       ..add(IdentificationtasksListMineStatusErrorComponentAttrEnum.serializer)
@@ -939,9 +941,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(IdentificationtasksListResultUncertaintyErrorComponentCodeEnum
           .serializer)
-      ..add(IdentificationtasksListReviewTypeErrorComponent.serializer)
-      ..add(IdentificationtasksListReviewTypeErrorComponentAttrEnum.serializer)
-      ..add(IdentificationtasksListReviewTypeErrorComponentCodeEnum.serializer)
+      ..add(IdentificationtasksListReviewActionErrorComponent.serializer)
+      ..add(
+          IdentificationtasksListReviewActionErrorComponentAttrEnum.serializer)
+      ..add(
+          IdentificationtasksListReviewActionErrorComponentCodeEnum.serializer)
       ..add(IdentificationtasksListStatusErrorComponent.serializer)
       ..add(IdentificationtasksListStatusErrorComponentAttrEnum.serializer)
       ..add(IdentificationtasksListStatusErrorComponentCodeEnum.serializer)
@@ -1470,6 +1474,58 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(IdentificationtasksPredictionsUpdateValidationError.serializer)
       ..add(IdentificationtasksPredictionsUpdateValidationErrorTypeEnum
           .serializer)
+      ..add(IdentificationtasksReviewCreateActionErrorComponent.serializer)
+      ..add(IdentificationtasksReviewCreateActionErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreateActionErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreateError.serializer)
+      ..add(IdentificationtasksReviewCreateIsSafeErrorComponent.serializer)
+      ..add(IdentificationtasksReviewCreateIsSafeErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreateIsSafeErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreateNonFieldErrorsErrorComponent
+          .serializer)
+      ..add(IdentificationtasksReviewCreateNonFieldErrorsErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreateNonFieldErrorsErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreatePublicNoteErrorComponent.serializer)
+      ..add(IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreatePublicNoteErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent
+          .serializer)
+      ..add(IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreateResultConfidenceLabelErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateResultTaxonIdErrorComponent.serializer)
+      ..add(IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttrEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreateResultTaxonIdErrorComponentCodeEnum
+          .serializer)
+      ..add(IdentificationtasksReviewCreateValidationError.serializer)
+      ..add(IdentificationtasksReviewCreateValidationErrorTypeEnum.serializer)
       ..add(LocalizedMessageBody.serializer)
       ..add(LocalizedMessageBodyRequest.serializer)
       ..add(LocalizedMessageTitle.serializer)
@@ -1480,6 +1536,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(LocationRequestSource_Enum.serializer)
       ..add(LocationSource_Enum.serializer)
       ..add(LocationTimezoneEnum.serializer)
+      ..add(MetaCreateIdentificationTaskReviewRequest.serializer)
       ..add(MetaNotificationRequest.serializer)
       ..add(MinimalUser.serializer)
       ..add(MinimalUserLocaleEnum.serializer)
@@ -2295,6 +2352,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
             const FullType(IdentificationtasksPredictionsUpdateError)
           ]),
           () => new ListBuilder<IdentificationtasksPredictionsUpdateError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList,
+              const [const FullType(IdentificationtasksReviewCreateError)]),
+          () => new ListBuilder<IdentificationtasksReviewCreateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Notification)]),
           () => new ListBuilder<Notification>())

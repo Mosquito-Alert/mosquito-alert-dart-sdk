@@ -7,8 +7,8 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(IdentificationTaskReview, () {
-    // String type
-    test('to test the property `type`', () async {
+    // String action
+    test('to test the property `action`', () async {
       // TODO
     });
 

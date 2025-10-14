@@ -15,6 +15,8 @@ import 'package:mosquito_alert/src/model/assignment.dart';
 import 'package:mosquito_alert/src/model/create_photo_prediction.dart';
 import 'package:mosquito_alert/src/model/create_photo_prediction_request.dart';
 import 'package:mosquito_alert/src/model/identification_task.dart';
+import 'package:mosquito_alert/src/model/identification_task_review.dart';
+import 'package:mosquito_alert/src/model/meta_create_identification_task_review_request.dart';
 import 'package:mosquito_alert/src/model/paginated_annotation_list.dart';
 import 'package:mosquito_alert/src/model/paginated_identification_task_list.dart';
 import 'package:mosquito_alert/src/model/paginated_photo_prediction_list.dart';
@@ -634,7 +636,7 @@ class IdentificationTasksApi {
   /// * [resultTaxonIds] 
   /// * [resultUncertaintyMax] 
   /// * [resultUncertaintyMin] 
-  /// * [reviewType] 
+  /// * [reviewAction] 
   /// * [status] 
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -669,7 +671,7 @@ class IdentificationTasksApi {
     BuiltList<int>? resultTaxonIds,
     double? resultUncertaintyMax,
     double? resultUncertaintyMin,
-    String? reviewType,
+    String? reviewAction,
     BuiltList<String>? status,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -731,7 +733,7 @@ class IdentificationTasksApi {
       if (resultTaxonIds != null) r'result_taxon_ids': encodeCollectionQueryParameter<int>(_serializers, resultTaxonIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
       if (resultUncertaintyMax != null) r'result_uncertainty_max': encodeQueryParameter(_serializers, resultUncertaintyMax, const FullType(double)),
       if (resultUncertaintyMin != null) r'result_uncertainty_min': encodeQueryParameter(_serializers, resultUncertaintyMin, const FullType(double)),
-      if (reviewType != null) r'review_type': encodeQueryParameter(_serializers, reviewType, const FullType(String)),
+      if (reviewAction != null) r'review_action': encodeQueryParameter(_serializers, reviewAction, const FullType(String)),
       if (status != null) r'status': encodeCollectionQueryParameter<String>(_serializers, status, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
@@ -802,7 +804,7 @@ class IdentificationTasksApi {
   /// * [resultTaxonIds] 
   /// * [resultUncertaintyMax] 
   /// * [resultUncertaintyMin] 
-  /// * [reviewType] 
+  /// * [reviewAction] 
   /// * [status] 
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -837,7 +839,7 @@ class IdentificationTasksApi {
     BuiltList<int>? resultTaxonIds,
     double? resultUncertaintyMax,
     double? resultUncertaintyMin,
-    String? reviewType,
+    String? reviewAction,
     BuiltList<String>? status,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -899,7 +901,7 @@ class IdentificationTasksApi {
       if (resultTaxonIds != null) r'result_taxon_ids': encodeCollectionQueryParameter<int>(_serializers, resultTaxonIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
       if (resultUncertaintyMax != null) r'result_uncertainty_max': encodeQueryParameter(_serializers, resultUncertaintyMax, const FullType(double)),
       if (resultUncertaintyMin != null) r'result_uncertainty_min': encodeQueryParameter(_serializers, resultUncertaintyMin, const FullType(double)),
-      if (reviewType != null) r'review_type': encodeQueryParameter(_serializers, reviewType, const FullType(String)),
+      if (reviewAction != null) r'review_action': encodeQueryParameter(_serializers, reviewAction, const FullType(String)),
       if (status != null) r'status': encodeCollectionQueryParameter<String>(_serializers, status, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
@@ -1627,6 +1629,119 @@ class IdentificationTasksApi {
     }
 
     return Response<IdentificationTask>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
+
+  /// reviewCreate
+  /// 
+  ///
+  /// Parameters:
+  /// * [observationUuid] 
+  /// * [metaCreateIdentificationTaskReviewRequest] 
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [IdentificationTaskReview] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<IdentificationTaskReview>> reviewCreate({ 
+    required String observationUuid,
+    MetaCreateIdentificationTaskReviewRequest? metaCreateIdentificationTaskReviewRequest,
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/identification-tasks/{observation_uuid}/review/'.replaceAll('{' r'observation_uuid' '}', encodeQueryParameter(_serializers, observationUuid, const FullType(String)).toString());
+    final _options = Options(
+      method: r'POST',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'tokenAuth',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },{
+            'type': 'apiKey',
+            'name': 'cookieAuth',
+            'keyName': 'sessionid',
+            'where': '',
+          },{
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'jwtAuth',
+          },
+        ],
+        ...?extra,
+      },
+      contentType: 'application/json',
+      validateStatus: validateStatus,
+    );
+
+    dynamic _bodyData;
+
+    try {
+      const _type = FullType(MetaCreateIdentificationTaskReviewRequest);
+      _bodyData = metaCreateIdentificationTaskReviewRequest == null ? null : _serializers.serialize(metaCreateIdentificationTaskReviewRequest, specifiedType: _type);
+
+    } catch(error, stackTrace) {
+      throw DioException(
+         requestOptions: _options.compose(
+          _dio.options,
+          _path,
+        ),
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    final _response = await _dio.request<Object>(
+      _path,
+      data: _bodyData,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    IdentificationTaskReview? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(IdentificationTaskReview),
+      ) as IdentificationTaskReview;
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<IdentificationTaskReview>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

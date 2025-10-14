@@ -23,6 +23,7 @@ Method | HTTP request | Description
 [**predictionsRetrieve**](IdentificationTasksApi.md#predictionsretrieve) | **GET** /identification-tasks/{observation_uuid}/predictions/{photo_uuid}/ | 
 [**predictionsUpdate**](IdentificationTasksApi.md#predictionsupdate) | **PUT** /identification-tasks/{observation_uuid}/predictions/{photo_uuid}/ | 
 [**retrieve**](IdentificationTasksApi.md#retrieve) | **GET** /identification-tasks/{observation_uuid}/ | 
+[**reviewCreate**](IdentificationTasksApi.md#reviewcreate) | **POST** /identification-tasks/{observation_uuid}/review/ | 
 
 
 # **annotationsCreate**
@@ -337,7 +338,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
-> PaginatedIdentificationTaskList list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewType, status, updatedAtAfter, updatedAtBefore)
+> PaginatedIdentificationTaskList list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, status, updatedAtAfter, updatedAtBefore)
 
 
 
@@ -375,13 +376,13 @@ final BuiltList<String> resultSource = ; // BuiltList<String> |
 final BuiltList<int> resultTaxonIds = ; // BuiltList<int> | 
 final double resultUncertaintyMax = 1.2; // double | 
 final double resultUncertaintyMin = 1.2; // double | 
-final String reviewType = reviewType_example; // String | 
+final String reviewAction = reviewAction_example; // String | 
 final BuiltList<String> status = ; // BuiltList<String> | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 
 try {
-    final response = api.list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewType, status, updatedAtAfter, updatedAtBefore);
+    final response = api.list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, status, updatedAtAfter, updatedAtBefore);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->list: $e\n');
@@ -413,7 +414,7 @@ Name | Type | Description  | Notes
  **resultTaxonIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
  **resultUncertaintyMax** | **double**|  | [optional] 
  **resultUncertaintyMin** | **double**|  | [optional] 
- **reviewType** | **String**|  | [optional] 
+ **reviewAction** | **String**|  | [optional] 
  **status** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
@@ -434,7 +435,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listMine**
-> PaginatedIdentificationTaskList listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewType, status, updatedAtAfter, updatedAtBefore)
+> PaginatedIdentificationTaskList listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, status, updatedAtAfter, updatedAtBefore)
 
 
 
@@ -474,13 +475,13 @@ final BuiltList<String> resultSource = ; // BuiltList<String> |
 final BuiltList<int> resultTaxonIds = ; // BuiltList<int> | 
 final double resultUncertaintyMax = 1.2; // double | 
 final double resultUncertaintyMin = 1.2; // double | 
-final String reviewType = reviewType_example; // String | 
+final String reviewAction = reviewAction_example; // String | 
 final BuiltList<String> status = ; // BuiltList<String> | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 
 try {
-    final response = api.listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewType, status, updatedAtAfter, updatedAtBefore);
+    final response = api.listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, status, updatedAtAfter, updatedAtBefore);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->listMine: $e\n');
@@ -512,7 +513,7 @@ Name | Type | Description  | Notes
  **resultTaxonIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
  **resultUncertaintyMax** | **double**|  | [optional] 
  **resultUncertaintyMin** | **double**|  | [optional] 
- **reviewType** | **String**|  | [optional] 
+ **reviewAction** | **String**|  | [optional] 
  **status** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
@@ -888,6 +889,57 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **reviewCreate**
+> IdentificationTaskReview reviewCreate(observationUuid, metaCreateIdentificationTaskReviewRequest)
+
+
+
+### Example
+```dart
+import 'package:mosquito_alert/api.dart';
+// TODO Configure API key authorization: tokenAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
+// TODO Configure API key authorization: cookieAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
+
+final api = MosquitoAlert().getIdentificationTasksApi();
+final String observationUuid = observationUuid_example; // String | 
+final MetaCreateIdentificationTaskReviewRequest metaCreateIdentificationTaskReviewRequest = ; // MetaCreateIdentificationTaskReviewRequest | 
+
+try {
+    final response = api.reviewCreate(observationUuid, metaCreateIdentificationTaskReviewRequest);
+    print(response);
+} catch on DioException (e) {
+    print('Exception when calling IdentificationTasksApi->reviewCreate: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **observationUuid** | **String**|  | 
+ **metaCreateIdentificationTaskReviewRequest** | [**MetaCreateIdentificationTaskReviewRequest**](MetaCreateIdentificationTaskReviewRequest.md)|  | [optional] 
+
+### Return type
+
+[**IdentificationTaskReview**](IdentificationTaskReview.md)
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

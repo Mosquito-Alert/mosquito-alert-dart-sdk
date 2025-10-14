@@ -12,13 +12,13 @@ part 'identification_task_review.g.dart';
 /// IdentificationTaskReview
 ///
 /// Properties:
-/// * [type] 
+/// * [action] 
 /// * [createdAt] 
 @BuiltValue()
 abstract class IdentificationTaskReview implements Built<IdentificationTaskReview, IdentificationTaskReviewBuilder> {
-  @BuiltValueField(wireName: r'type')
-  IdentificationTaskReviewTypeEnum get type;
-  // enum typeEnum {  agree,  overwrite,  };
+  @BuiltValueField(wireName: r'action')
+  IdentificationTaskReviewActionEnum get action;
+  // enum actionEnum {  agree,  overwrite,  };
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
@@ -46,10 +46,10 @@ class _$IdentificationTaskReviewSerializer implements PrimitiveSerializer<Identi
     IdentificationTaskReview object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'type';
+    yield r'action';
     yield serializers.serialize(
-      object.type,
-      specifiedType: const FullType(IdentificationTaskReviewTypeEnum),
+      object.action,
+      specifiedType: const FullType(IdentificationTaskReviewActionEnum),
     );
     yield r'created_at';
     yield serializers.serialize(
@@ -79,12 +79,12 @@ class _$IdentificationTaskReviewSerializer implements PrimitiveSerializer<Identi
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'type':
+        case r'action':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(IdentificationTaskReviewTypeEnum),
-          ) as IdentificationTaskReviewTypeEnum;
-          result.type = valueDes;
+            specifiedType: const FullType(IdentificationTaskReviewActionEnum),
+          ) as IdentificationTaskReviewActionEnum;
+          result.action = valueDes;
           break;
         case r'created_at':
           final valueDes = serializers.deserialize(
@@ -122,20 +122,20 @@ class _$IdentificationTaskReviewSerializer implements PrimitiveSerializer<Identi
   }
 }
 
-class IdentificationTaskReviewTypeEnum extends EnumClass {
+class IdentificationTaskReviewActionEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'agree')
-  static const IdentificationTaskReviewTypeEnum agree = _$identificationTaskReviewTypeEnum_agree;
+  static const IdentificationTaskReviewActionEnum agree = _$identificationTaskReviewActionEnum_agree;
   @BuiltValueEnumConst(wireName: r'overwrite')
-  static const IdentificationTaskReviewTypeEnum overwrite = _$identificationTaskReviewTypeEnum_overwrite;
+  static const IdentificationTaskReviewActionEnum overwrite = _$identificationTaskReviewActionEnum_overwrite;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
-  static const IdentificationTaskReviewTypeEnum unknownDefaultOpenApi = _$identificationTaskReviewTypeEnum_unknownDefaultOpenApi;
+  static const IdentificationTaskReviewActionEnum unknownDefaultOpenApi = _$identificationTaskReviewActionEnum_unknownDefaultOpenApi;
 
-  static Serializer<IdentificationTaskReviewTypeEnum> get serializer => _$identificationTaskReviewTypeEnumSerializer;
+  static Serializer<IdentificationTaskReviewActionEnum> get serializer => _$identificationTaskReviewActionEnumSerializer;
 
-  const IdentificationTaskReviewTypeEnum._(String name): super(name);
+  const IdentificationTaskReviewActionEnum._(String name): super(name);
 
-  static BuiltSet<IdentificationTaskReviewTypeEnum> get values => _$identificationTaskReviewTypeEnumValues;
-  static IdentificationTaskReviewTypeEnum valueOf(String name) => _$identificationTaskReviewTypeEnumValueOf(name);
+  static BuiltSet<IdentificationTaskReviewActionEnum> get values => _$identificationTaskReviewActionEnumValues;
+  static IdentificationTaskReviewActionEnum valueOf(String name) => _$identificationTaskReviewActionEnumValueOf(name);
 }
 

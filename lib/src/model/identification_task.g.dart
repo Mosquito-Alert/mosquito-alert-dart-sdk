@@ -100,7 +100,7 @@ class _$IdentificationTask extends IdentificationTask {
   @override
   final BuiltList<UserAssignment> assignments;
   @override
-  final IdentificationTaskStatusEnum? status;
+  final IdentificationTaskStatusEnum status;
   @override
   final bool isFlagged;
   @override
@@ -126,7 +126,7 @@ class _$IdentificationTask extends IdentificationTask {
       {required this.observation,
       required this.publicPhoto,
       required this.assignments,
-      this.status,
+      required this.status,
       required this.isFlagged,
       required this.isSafe,
       this.publicNote,
@@ -142,6 +142,8 @@ class _$IdentificationTask extends IdentificationTask {
         publicPhoto, r'IdentificationTask', 'publicPhoto');
     BuiltValueNullFieldError.checkNotNull(
         assignments, r'IdentificationTask', 'assignments');
+    BuiltValueNullFieldError.checkNotNull(
+        status, r'IdentificationTask', 'status');
     BuiltValueNullFieldError.checkNotNull(
         isFlagged, r'IdentificationTask', 'isFlagged');
     BuiltValueNullFieldError.checkNotNull(
@@ -328,7 +330,8 @@ class IdentificationTaskBuilder
               observation: observation.build(),
               publicPhoto: publicPhoto.build(),
               assignments: assignments.build(),
-              status: status,
+              status: BuiltValueNullFieldError.checkNotNull(
+                  status, r'IdentificationTask', 'status'),
               isFlagged: BuiltValueNullFieldError.checkNotNull(
                   isFlagged, r'IdentificationTask', 'isFlagged'),
               isSafe: BuiltValueNullFieldError.checkNotNull(

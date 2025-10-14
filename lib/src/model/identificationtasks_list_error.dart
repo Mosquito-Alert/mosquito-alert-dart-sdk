@@ -9,7 +9,6 @@ import 'package:mosquito_alert/src/model/identificationtasks_list_order_by_error
 import 'package:mosquito_alert/src/model/identificationtasks_list_observation_country_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_result_source_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_status_error_component.dart';
-import 'package:mosquito_alert/src/model/identificationtasks_list_review_type_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_result_taxon_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_result_confidence_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_created_at_error_component.dart';
@@ -18,6 +17,7 @@ import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_assignee_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_num_annotations_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_result_uncertainty_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_list_review_action_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';
@@ -32,7 +32,7 @@ part 'identificationtasks_list_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class IdentificationtasksListError implements Built<IdentificationtasksListError, IdentificationtasksListErrorBuilder> {
-  /// One Of [IdentificationtasksListAnnotatorIdsErrorComponent], [IdentificationtasksListAssigneeIdsErrorComponent], [IdentificationtasksListCreatedAtErrorComponent], [IdentificationtasksListNumAnnotationsErrorComponent], [IdentificationtasksListObservationCountryIdsErrorComponent], [IdentificationtasksListOrderByErrorComponent], [IdentificationtasksListResultAgreementErrorComponent], [IdentificationtasksListResultConfidenceErrorComponent], [IdentificationtasksListResultSourceErrorComponent], [IdentificationtasksListResultTaxonIdsErrorComponent], [IdentificationtasksListResultUncertaintyErrorComponent], [IdentificationtasksListReviewTypeErrorComponent], [IdentificationtasksListStatusErrorComponent], [IdentificationtasksListUpdatedAtErrorComponent]
+  /// One Of [IdentificationtasksListAnnotatorIdsErrorComponent], [IdentificationtasksListAssigneeIdsErrorComponent], [IdentificationtasksListCreatedAtErrorComponent], [IdentificationtasksListNumAnnotationsErrorComponent], [IdentificationtasksListObservationCountryIdsErrorComponent], [IdentificationtasksListOrderByErrorComponent], [IdentificationtasksListResultAgreementErrorComponent], [IdentificationtasksListResultConfidenceErrorComponent], [IdentificationtasksListResultSourceErrorComponent], [IdentificationtasksListResultTaxonIdsErrorComponent], [IdentificationtasksListResultUncertaintyErrorComponent], [IdentificationtasksListReviewActionErrorComponent], [IdentificationtasksListStatusErrorComponent], [IdentificationtasksListUpdatedAtErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -49,7 +49,7 @@ abstract class IdentificationtasksListError implements Built<Identificationtasks
     r'result_source': IdentificationtasksListResultSourceErrorComponent,
     r'result_taxon_ids': IdentificationtasksListResultTaxonIdsErrorComponent,
     r'result_uncertainty': IdentificationtasksListResultUncertaintyErrorComponent,
-    r'review_type': IdentificationtasksListReviewTypeErrorComponent,
+    r'review_action': IdentificationtasksListReviewActionErrorComponent,
     r'status': IdentificationtasksListStatusErrorComponent,
     r'updated_at': IdentificationtasksListUpdatedAtErrorComponent,
   };
@@ -100,8 +100,8 @@ extension IdentificationtasksListErrorDiscriminatorExt on IdentificationtasksLis
         if (this is IdentificationtasksListResultUncertaintyErrorComponent) {
             return r'result_uncertainty';
         }
-        if (this is IdentificationtasksListReviewTypeErrorComponent) {
-            return r'review_type';
+        if (this is IdentificationtasksListReviewActionErrorComponent) {
+            return r'review_action';
         }
         if (this is IdentificationtasksListStatusErrorComponent) {
             return r'status';
@@ -147,8 +147,8 @@ extension IdentificationtasksListErrorBuilderDiscriminatorExt on Identificationt
         if (this is IdentificationtasksListResultUncertaintyErrorComponentBuilder) {
             return r'result_uncertainty';
         }
-        if (this is IdentificationtasksListReviewTypeErrorComponentBuilder) {
-            return r'review_type';
+        if (this is IdentificationtasksListReviewActionErrorComponentBuilder) {
+            return r'review_action';
         }
         if (this is IdentificationtasksListStatusErrorComponentBuilder) {
             return r'status';
@@ -196,7 +196,7 @@ class _$IdentificationtasksListErrorSerializer implements PrimitiveSerializer<Id
     final discIndex = serializedList.indexOf(IdentificationtasksListError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [IdentificationtasksListAnnotatorIdsErrorComponent, IdentificationtasksListAssigneeIdsErrorComponent, IdentificationtasksListCreatedAtErrorComponent, IdentificationtasksListNumAnnotationsErrorComponent, IdentificationtasksListObservationCountryIdsErrorComponent, IdentificationtasksListOrderByErrorComponent, IdentificationtasksListResultAgreementErrorComponent, IdentificationtasksListResultConfidenceErrorComponent, IdentificationtasksListResultSourceErrorComponent, IdentificationtasksListResultTaxonIdsErrorComponent, IdentificationtasksListResultUncertaintyErrorComponent, IdentificationtasksListReviewTypeErrorComponent, IdentificationtasksListStatusErrorComponent, IdentificationtasksListUpdatedAtErrorComponent, ];
+    final oneOfTypes = [IdentificationtasksListAnnotatorIdsErrorComponent, IdentificationtasksListAssigneeIdsErrorComponent, IdentificationtasksListCreatedAtErrorComponent, IdentificationtasksListNumAnnotationsErrorComponent, IdentificationtasksListObservationCountryIdsErrorComponent, IdentificationtasksListOrderByErrorComponent, IdentificationtasksListResultAgreementErrorComponent, IdentificationtasksListResultConfidenceErrorComponent, IdentificationtasksListResultSourceErrorComponent, IdentificationtasksListResultTaxonIdsErrorComponent, IdentificationtasksListResultUncertaintyErrorComponent, IdentificationtasksListReviewActionErrorComponent, IdentificationtasksListStatusErrorComponent, IdentificationtasksListUpdatedAtErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -277,12 +277,12 @@ class _$IdentificationtasksListErrorSerializer implements PrimitiveSerializer<Id
         ) as IdentificationtasksListResultUncertaintyErrorComponent;
         oneOfType = IdentificationtasksListResultUncertaintyErrorComponent;
         break;
-      case r'review_type':
+      case r'review_action':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
-          specifiedType: FullType(IdentificationtasksListReviewTypeErrorComponent),
-        ) as IdentificationtasksListReviewTypeErrorComponent;
-        oneOfType = IdentificationtasksListReviewTypeErrorComponent;
+          specifiedType: FullType(IdentificationtasksListReviewActionErrorComponent),
+        ) as IdentificationtasksListReviewActionErrorComponent;
+        oneOfType = IdentificationtasksListReviewActionErrorComponent;
         break;
       case r'status':
         oneOfResult = serializers.deserialize(
@@ -308,8 +308,8 @@ class _$IdentificationtasksListErrorSerializer implements PrimitiveSerializer<Id
 
 class IdentificationtasksListErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'result_source')
-  static const IdentificationtasksListErrorAttrEnum resultSource = _$identificationtasksListErrorAttrEnum_resultSource;
+  @BuiltValueEnumConst(wireName: r'review_action')
+  static const IdentificationtasksListErrorAttrEnum reviewAction = _$identificationtasksListErrorAttrEnum_reviewAction;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const IdentificationtasksListErrorAttrEnum unknownDefaultOpenApi = _$identificationtasksListErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -325,8 +325,6 @@ class IdentificationtasksListErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const IdentificationtasksListErrorCodeEnum invalidChoice = _$identificationtasksListErrorCodeEnum_invalidChoice;
-  @BuiltValueEnumConst(wireName: r'invalid_list')
-  static const IdentificationtasksListErrorCodeEnum invalidList = _$identificationtasksListErrorCodeEnum_invalidList;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const IdentificationtasksListErrorCodeEnum unknownDefaultOpenApi = _$identificationtasksListErrorCodeEnum_unknownDefaultOpenApi;
 
