@@ -35,7 +35,7 @@ abstract class UserNotificationCreateRequest implements Built<UserNotificationCr
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(UserNotificationCreateRequestBuilder b) => b
-      ..receiverType = const UserNotificationCreateRequestReceiverTypeEnum._('user');
+      ..receiverType = 'user';
 
   @BuiltValueSerializer(custom: true)
   static Serializer<UserNotificationCreateRequest> get serializer => _$UserNotificationCreateRequestSerializer();
