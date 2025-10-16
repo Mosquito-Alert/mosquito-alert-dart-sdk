@@ -30,7 +30,7 @@ abstract class MinimalUser implements Built<MinimalUser, MinimalUserBuilder> {
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(MinimalUserBuilder b) => b
-      ..locale = 'en';
+      ..locale = const MinimalUserLocaleEnum._('en');
 
   @BuiltValueSerializer(custom: true)
   static Serializer<MinimalUser> get serializer => _$MinimalUserSerializer();

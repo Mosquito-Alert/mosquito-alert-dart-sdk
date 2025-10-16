@@ -65,7 +65,7 @@ abstract class User implements Built<User, UserBuilder> {
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(UserBuilder b) => b
-      ..locale = 'en'
+      ..locale = const UserLocaleEnum._('en')
       ..languageIso = 'en';
 
   @BuiltValueSerializer(custom: true)

@@ -26,7 +26,7 @@ abstract class UserRequest implements Built<UserRequest, UserRequestBuilder> {
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(UserRequestBuilder b) => b
-      ..locale = 'en';
+      ..locale = const UserRequestLocaleEnum._('en');
 
   @BuiltValueSerializer(custom: true)
   static Serializer<UserRequest> get serializer => _$UserRequestSerializer();

@@ -43,7 +43,7 @@ abstract class CreateOverwriteReviewRequest implements Built<CreateOverwriteRevi
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(CreateOverwriteReviewRequestBuilder b) => b
-      ..action = 'overwrite';
+      ..action = const CreateOverwriteReviewRequestActionEnum._('overwrite');
 
   @BuiltValueSerializer(custom: true)
   static Serializer<CreateOverwriteReviewRequest> get serializer => _$CreateOverwriteReviewRequestSerializer();

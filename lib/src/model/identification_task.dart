@@ -75,7 +75,7 @@ abstract class IdentificationTask implements Built<IdentificationTask, Identific
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(IdentificationTaskBuilder b) => b
-      ..status = 'open';
+      ..status = const IdentificationTaskStatusEnum._('open');
 
   @BuiltValueSerializer(custom: true)
   static Serializer<IdentificationTask> get serializer => _$IdentificationTaskSerializer();
