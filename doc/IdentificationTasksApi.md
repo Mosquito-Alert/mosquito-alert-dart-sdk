@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsList**
-> PaginatedAnnotationList annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds)
+> PaginatedAnnotationList annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -108,13 +108,14 @@ final bool isFlagged = true; // bool |
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
+final String search = search_example; // String | A search term.
 final String type = type_example; // String | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds);
+    final response = api.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->annotationsList: $e\n');
@@ -138,6 +139,7 @@ Name | Type | Description  | Notes
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **type** | **String**|  | [optional] 
  **updatedAtAfter** | **DateTime**| Updated at | [optional] 
  **updatedAtBefore** | **DateTime**| Updated at | [optional] 
@@ -159,7 +161,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsListMine**
-> PaginatedAnnotationList annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds)
+> PaginatedAnnotationList annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -190,13 +192,14 @@ final bool isFlagged = true; // bool |
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
 final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
+final String search = search_example; // String | A search term.
 final String type = type_example; // String | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, type, updatedAtAfter, updatedAtBefore, userIds);
+    final response = api.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->annotationsListMine: $e\n');
@@ -219,6 +222,7 @@ Name | Type | Description  | Notes
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **type** | **String**|  | [optional] 
  **updatedAtAfter** | **DateTime**| Updated at | [optional] 
  **updatedAtBefore** | **DateTime**| Updated at | [optional] 
@@ -338,7 +342,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
-> PaginatedIdentificationTaskList list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, status, updatedAtAfter, updatedAtBefore)
+> PaginatedIdentificationTaskList list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore)
 
 
 
@@ -377,12 +381,13 @@ final BuiltList<int> resultTaxonIds = ; // BuiltList<int> |
 final double resultUncertaintyMax = 1.2; // double | 
 final double resultUncertaintyMin = 1.2; // double | 
 final String reviewAction = reviewAction_example; // String | 
+final String search = search_example; // String | A search term.
 final BuiltList<String> status = ; // BuiltList<String> | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 
 try {
-    final response = api.list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, status, updatedAtAfter, updatedAtBefore);
+    final response = api.list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->list: $e\n');
@@ -415,6 +420,7 @@ Name | Type | Description  | Notes
  **resultUncertaintyMax** | **double**|  | [optional] 
  **resultUncertaintyMin** | **double**|  | [optional] 
  **reviewAction** | **String**|  | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **status** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
@@ -435,7 +441,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listMine**
-> PaginatedIdentificationTaskList listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, status, updatedAtAfter, updatedAtBefore)
+> PaginatedIdentificationTaskList listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore)
 
 
 
@@ -476,12 +482,13 @@ final BuiltList<int> resultTaxonIds = ; // BuiltList<int> |
 final double resultUncertaintyMax = 1.2; // double | 
 final double resultUncertaintyMin = 1.2; // double | 
 final String reviewAction = reviewAction_example; // String | 
+final String search = search_example; // String | A search term.
 final BuiltList<String> status = ; // BuiltList<String> | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 
 try {
-    final response = api.listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, status, updatedAtAfter, updatedAtBefore);
+    final response = api.listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling IdentificationTasksApi->listMine: $e\n');
@@ -514,6 +521,7 @@ Name | Type | Description  | Notes
  **resultUncertaintyMax** | **double**|  | [optional] 
  **resultUncertaintyMin** | **double**|  | [optional] 
  **reviewAction** | **String**|  | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **status** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 

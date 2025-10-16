@@ -16,6 +16,7 @@ part 'assigned_observation.g.dart';
 ///
 /// Properties:
 /// * [uuid] 
+/// * [shortId] 
 /// * [createdAt] 
 /// * [createdAtLocal] - The date and time when the record was created, displayed in the local timezone specified for this entry.
 /// * [receivedAt] 
@@ -27,6 +28,9 @@ part 'assigned_observation.g.dart';
 abstract class AssignedObservation implements Built<AssignedObservation, AssignedObservationBuilder> {
   @BuiltValueField(wireName: r'uuid')
   String get uuid;
+
+  @BuiltValueField(wireName: r'short_id')
+  String get shortId;
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
@@ -77,6 +81,11 @@ class _$AssignedObservationSerializer implements PrimitiveSerializer<AssignedObs
     yield r'uuid';
     yield serializers.serialize(
       object.uuid,
+      specifiedType: const FullType(String),
+    );
+    yield r'short_id';
+    yield serializers.serialize(
+      object.shortId,
       specifiedType: const FullType(String),
     );
     yield r'created_at';
@@ -145,6 +154,13 @@ class _$AssignedObservationSerializer implements PrimitiveSerializer<AssignedObs
             specifiedType: const FullType(String),
           ) as String;
           result.uuid = valueDes;
+          break;
+        case r'short_id':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.shortId = valueDes;
           break;
         case r'created_at':
           final valueDes = serializers.deserialize(

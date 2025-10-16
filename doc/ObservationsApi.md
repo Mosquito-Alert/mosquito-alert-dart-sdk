@@ -130,7 +130,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
-> PaginatedObservationList list(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+> PaginatedObservationList list(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid)
 
 
 
@@ -157,13 +157,14 @@ final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
 final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
+final String search = search_example; // String | A search term.
 final String shortId = shortId_example; // String | Short ID
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    final response = api.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ObservationsApi->list: $e\n');
@@ -184,6 +185,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**| Number of results to return per page. | [optional] 
  **receivedAtAfter** | **DateTime**| Received at | [optional] 
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
@@ -205,7 +207,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listMine**
-> PaginatedObservationList listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid)
+> PaginatedObservationList listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid)
 
 
 
@@ -234,13 +236,14 @@ final int page = 56; // int | A page number within the paginated result set.
 final int pageSize = 56; // int | Number of results to return per page.
 final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
+final String search = search_example; // String | A search term.
 final String shortId = shortId_example; // String | Short ID
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, shortId, updatedAtAfter, updatedAtBefore, userUuid);
+    final response = api.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling ObservationsApi->listMine: $e\n');
@@ -261,6 +264,7 @@ Name | Type | Description  | Notes
  **pageSize** | **int**| Number of results to return per page. | [optional] 
  **receivedAtAfter** | **DateTime**| Received at | [optional] 
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 

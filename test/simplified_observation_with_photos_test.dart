@@ -12,6 +12,11 @@ void main() {
       // TODO
     });
 
+    // String shortId
+    test('to test the property `shortId`', () async {
+      // TODO
+    });
+
     // String userUuid
     test('to test the property `userUuid`', () async {
       // TODO

@@ -240,6 +240,7 @@ class BreedingSitesApi {
   /// * [pageSize] - Number of results to return per page.
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
+  /// * [search] - A search term.
   /// * [shortId] - Short ID
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -263,6 +264,7 @@ class BreedingSitesApi {
     int? pageSize,
     DateTime? receivedAtAfter,
     DateTime? receivedAtBefore,
+    String? search,
     String? shortId,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -313,6 +315,7 @@ class BreedingSitesApi {
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       if (receivedAtAfter != null) r'received_at_after': encodeQueryParameter(_serializers, receivedAtAfter, const FullType(DateTime)),
       if (receivedAtBefore != null) r'received_at_before': encodeQueryParameter(_serializers, receivedAtBefore, const FullType(DateTime)),
+      if (search != null) r'search': encodeQueryParameter(_serializers, search, const FullType(String)),
       if (shortId != null) r'short_id': encodeQueryParameter(_serializers, shortId, const FullType(String)),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
@@ -372,6 +375,7 @@ class BreedingSitesApi {
   /// * [pageSize] - Number of results to return per page.
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
+  /// * [search] - A search term.
   /// * [shortId] - Short ID
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -395,6 +399,7 @@ class BreedingSitesApi {
     int? pageSize,
     DateTime? receivedAtAfter,
     DateTime? receivedAtBefore,
+    String? search,
     String? shortId,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -445,6 +450,7 @@ class BreedingSitesApi {
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       if (receivedAtAfter != null) r'received_at_after': encodeQueryParameter(_serializers, receivedAtAfter, const FullType(DateTime)),
       if (receivedAtBefore != null) r'received_at_before': encodeQueryParameter(_serializers, receivedAtBefore, const FullType(DateTime)),
+      if (search != null) r'search': encodeQueryParameter(_serializers, search, const FullType(String)),
       if (shortId != null) r'short_id': encodeQueryParameter(_serializers, shortId, const FullType(String)),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),

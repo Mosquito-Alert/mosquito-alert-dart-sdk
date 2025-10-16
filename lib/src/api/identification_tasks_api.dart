@@ -162,6 +162,7 @@ class IdentificationTasksApi {
   /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
+  /// * [search] - A search term.
   /// * [type] 
   /// * [updatedAtAfter] - Updated at
   /// * [updatedAtBefore] - Updated at
@@ -189,6 +190,7 @@ class IdentificationTasksApi {
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
+    String? search,
     String? type,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -242,6 +244,7 @@ class IdentificationTasksApi {
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      if (search != null) r'search': encodeQueryParameter(_serializers, search, const FullType(String)),
       if (type != null) r'type': encodeQueryParameter(_serializers, type, const FullType(String)),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
@@ -304,6 +307,7 @@ class IdentificationTasksApi {
   /// * [orderBy] - Ordenado  
   /// * [page] - A page number within the paginated result set.
   /// * [pageSize] - Number of results to return per page.
+  /// * [search] - A search term.
   /// * [type] 
   /// * [updatedAtAfter] - Updated at
   /// * [updatedAtBefore] - Updated at
@@ -330,6 +334,7 @@ class IdentificationTasksApi {
     BuiltList<String>? orderBy,
     int? page,
     int? pageSize,
+    String? search,
     String? type,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -383,6 +388,7 @@ class IdentificationTasksApi {
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
+      if (search != null) r'search': encodeQueryParameter(_serializers, search, const FullType(String)),
       if (type != null) r'type': encodeQueryParameter(_serializers, type, const FullType(String)),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
@@ -637,6 +643,7 @@ class IdentificationTasksApi {
   /// * [resultUncertaintyMax] 
   /// * [resultUncertaintyMin] 
   /// * [reviewAction] 
+  /// * [search] - A search term.
   /// * [status] 
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -672,6 +679,7 @@ class IdentificationTasksApi {
     double? resultUncertaintyMax,
     double? resultUncertaintyMin,
     String? reviewAction,
+    String? search,
     BuiltList<String>? status,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -734,6 +742,7 @@ class IdentificationTasksApi {
       if (resultUncertaintyMax != null) r'result_uncertainty_max': encodeQueryParameter(_serializers, resultUncertaintyMax, const FullType(double)),
       if (resultUncertaintyMin != null) r'result_uncertainty_min': encodeQueryParameter(_serializers, resultUncertaintyMin, const FullType(double)),
       if (reviewAction != null) r'review_action': encodeQueryParameter(_serializers, reviewAction, const FullType(String)),
+      if (search != null) r'search': encodeQueryParameter(_serializers, search, const FullType(String)),
       if (status != null) r'status': encodeCollectionQueryParameter<String>(_serializers, status, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),
@@ -805,6 +814,7 @@ class IdentificationTasksApi {
   /// * [resultUncertaintyMax] 
   /// * [resultUncertaintyMin] 
   /// * [reviewAction] 
+  /// * [search] - A search term.
   /// * [status] 
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -840,6 +850,7 @@ class IdentificationTasksApi {
     double? resultUncertaintyMax,
     double? resultUncertaintyMin,
     String? reviewAction,
+    String? search,
     BuiltList<String>? status,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -902,6 +913,7 @@ class IdentificationTasksApi {
       if (resultUncertaintyMax != null) r'result_uncertainty_max': encodeQueryParameter(_serializers, resultUncertaintyMax, const FullType(double)),
       if (resultUncertaintyMin != null) r'result_uncertainty_min': encodeQueryParameter(_serializers, resultUncertaintyMin, const FullType(double)),
       if (reviewAction != null) r'review_action': encodeQueryParameter(_serializers, reviewAction, const FullType(String)),
+      if (search != null) r'search': encodeQueryParameter(_serializers, search, const FullType(String)),
       if (status != null) r'status': encodeCollectionQueryParameter<String>(_serializers, status, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
       if (updatedAtBefore != null) r'updated_at_before': encodeQueryParameter(_serializers, updatedAtBefore, const FullType(DateTime)),

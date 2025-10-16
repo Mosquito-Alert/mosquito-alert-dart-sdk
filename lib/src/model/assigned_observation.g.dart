@@ -10,6 +10,8 @@ class _$AssignedObservation extends AssignedObservation {
   @override
   final String uuid;
   @override
+  final String shortId;
+  @override
   final DateTime createdAt;
   @override
   final DateTime createdAtLocal;
@@ -30,6 +32,7 @@ class _$AssignedObservation extends AssignedObservation {
 
   _$AssignedObservation._(
       {required this.uuid,
+      required this.shortId,
       required this.createdAt,
       required this.createdAtLocal,
       required this.receivedAt,
@@ -39,6 +42,8 @@ class _$AssignedObservation extends AssignedObservation {
       required this.user})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(uuid, r'AssignedObservation', 'uuid');
+    BuiltValueNullFieldError.checkNotNull(
+        shortId, r'AssignedObservation', 'shortId');
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'AssignedObservation', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
@@ -66,6 +71,7 @@ class _$AssignedObservation extends AssignedObservation {
     if (identical(other, this)) return true;
     return other is AssignedObservation &&
         uuid == other.uuid &&
+        shortId == other.shortId &&
         createdAt == other.createdAt &&
         createdAtLocal == other.createdAtLocal &&
         receivedAt == other.receivedAt &&
@@ -79,6 +85,7 @@ class _$AssignedObservation extends AssignedObservation {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, uuid.hashCode);
+    _$hash = $jc(_$hash, shortId.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, createdAtLocal.hashCode);
     _$hash = $jc(_$hash, receivedAt.hashCode);
@@ -94,6 +101,7 @@ class _$AssignedObservation extends AssignedObservation {
   String toString() {
     return (newBuiltValueToStringHelper(r'AssignedObservation')
           ..add('uuid', uuid)
+          ..add('shortId', shortId)
           ..add('createdAt', createdAt)
           ..add('createdAtLocal', createdAtLocal)
           ..add('receivedAt', receivedAt)
@@ -112,6 +120,10 @@ class AssignedObservationBuilder
   String? _uuid;
   String? get uuid => _$this._uuid;
   set uuid(String? uuid) => _$this._uuid = uuid;
+
+  String? _shortId;
+  String? get shortId => _$this._shortId;
+  set shortId(String? shortId) => _$this._shortId = shortId;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
@@ -153,6 +165,7 @@ class AssignedObservationBuilder
     final $v = _$v;
     if ($v != null) {
       _uuid = $v.uuid;
+      _shortId = $v.shortId;
       _createdAt = $v.createdAt;
       _createdAtLocal = $v.createdAtLocal;
       _receivedAt = $v.receivedAt;
@@ -186,6 +199,8 @@ class AssignedObservationBuilder
           new _$AssignedObservation._(
               uuid: BuiltValueNullFieldError.checkNotNull(
                   uuid, r'AssignedObservation', 'uuid'),
+              shortId: BuiltValueNullFieldError.checkNotNull(
+                  shortId, r'AssignedObservation', 'shortId'),
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt, r'AssignedObservation', 'createdAt'),
               createdAtLocal: BuiltValueNullFieldError.checkNotNull(

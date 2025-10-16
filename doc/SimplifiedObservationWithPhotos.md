@@ -9,6 +9,7 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **String** |  | 
+**shortId** | **String** |  | 
 **userUuid** | **String** |  | 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **createdAtLocal** | [**DateTime**](DateTime.md) | The date and time when the record was created, displayed in the local timezone specified for this entry. | 

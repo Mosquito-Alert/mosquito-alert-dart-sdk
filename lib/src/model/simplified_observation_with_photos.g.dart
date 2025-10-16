@@ -11,6 +11,8 @@ class _$SimplifiedObservationWithPhotos
   @override
   final String uuid;
   @override
+  final String shortId;
+  @override
   final String userUuid;
   @override
   final DateTime createdAt;
@@ -31,6 +33,7 @@ class _$SimplifiedObservationWithPhotos
 
   _$SimplifiedObservationWithPhotos._(
       {required this.uuid,
+      required this.shortId,
       required this.userUuid,
       required this.createdAt,
       required this.createdAtLocal,
@@ -41,6 +44,8 @@ class _$SimplifiedObservationWithPhotos
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         uuid, r'SimplifiedObservationWithPhotos', 'uuid');
+    BuiltValueNullFieldError.checkNotNull(
+        shortId, r'SimplifiedObservationWithPhotos', 'shortId');
     BuiltValueNullFieldError.checkNotNull(
         userUuid, r'SimplifiedObservationWithPhotos', 'userUuid');
     BuiltValueNullFieldError.checkNotNull(
@@ -69,6 +74,7 @@ class _$SimplifiedObservationWithPhotos
     if (identical(other, this)) return true;
     return other is SimplifiedObservationWithPhotos &&
         uuid == other.uuid &&
+        shortId == other.shortId &&
         userUuid == other.userUuid &&
         createdAt == other.createdAt &&
         createdAtLocal == other.createdAtLocal &&
@@ -82,6 +88,7 @@ class _$SimplifiedObservationWithPhotos
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, uuid.hashCode);
+    _$hash = $jc(_$hash, shortId.hashCode);
     _$hash = $jc(_$hash, userUuid.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, createdAtLocal.hashCode);
@@ -97,6 +104,7 @@ class _$SimplifiedObservationWithPhotos
   String toString() {
     return (newBuiltValueToStringHelper(r'SimplifiedObservationWithPhotos')
           ..add('uuid', uuid)
+          ..add('shortId', shortId)
           ..add('userUuid', userUuid)
           ..add('createdAt', createdAt)
           ..add('createdAtLocal', createdAtLocal)
@@ -117,6 +125,10 @@ class SimplifiedObservationWithPhotosBuilder
   String? _uuid;
   String? get uuid => _$this._uuid;
   set uuid(String? uuid) => _$this._uuid = uuid;
+
+  String? _shortId;
+  String? get shortId => _$this._shortId;
+  set shortId(String? shortId) => _$this._shortId = shortId;
 
   String? _userUuid;
   String? get userUuid => _$this._userUuid;
@@ -158,6 +170,7 @@ class SimplifiedObservationWithPhotosBuilder
     final $v = _$v;
     if ($v != null) {
       _uuid = $v.uuid;
+      _shortId = $v.shortId;
       _userUuid = $v.userUuid;
       _createdAt = $v.createdAt;
       _createdAtLocal = $v.createdAtLocal;
@@ -191,6 +204,8 @@ class SimplifiedObservationWithPhotosBuilder
           new _$SimplifiedObservationWithPhotos._(
               uuid: BuiltValueNullFieldError.checkNotNull(
                   uuid, r'SimplifiedObservationWithPhotos', 'uuid'),
+              shortId: BuiltValueNullFieldError.checkNotNull(
+                  shortId, r'SimplifiedObservationWithPhotos', 'shortId'),
               userUuid: BuiltValueNullFieldError.checkNotNull(
                   userUuid, r'SimplifiedObservationWithPhotos', 'userUuid'),
               createdAt: BuiltValueNullFieldError.checkNotNull(

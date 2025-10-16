@@ -12,6 +12,11 @@ void main() {
       // TODO
     });
 
+    // String shortId
+    test('to test the property `shortId`', () async {
+      // TODO
+    });
+
     // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO

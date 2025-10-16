@@ -17,14 +17,14 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedBreedingSiteList> list({ int countryId, DateTime createdAtAfter, DateTime createdAtBefore, bool hasPhotos, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    //Future<PaginatedBreedingSiteList> list({ int countryId, DateTime createdAtAfter, DateTime createdAtBefore, bool hasPhotos, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test list', () async {
       // TODO
     });
 
     // Get Current User's Breeding Sites
     //
-    //Future<PaginatedBreedingSiteList> listMine({ int countryId, DateTime createdAtAfter, DateTime createdAtBefore, bool hasPhotos, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    //Future<PaginatedBreedingSiteList> listMine({ int countryId, DateTime createdAtAfter, DateTime createdAtBefore, bool hasPhotos, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test listMine', () async {
       // TODO
     });
