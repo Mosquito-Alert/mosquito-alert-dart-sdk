@@ -13,7 +13,6 @@ import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/mosquito_appearance_request.dart';
 import 'package:mosquito_alert/src/model/observation.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
-import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 
 class ObservationsApi {
 
@@ -49,7 +48,7 @@ class ObservationsApi {
     required DateTime createdAt,
     required DateTime sentAt,
     required LocationRequest location,
-    required BuiltList<SimplePhotoRequest> photos,
+    required BuiltList<MultipartFile> photos,
     String? note,
     BuiltList<String>? tags,
     String? eventEnvironment,
@@ -101,7 +100,7 @@ class ObservationsApi {
         r'location': encodeFormParameter(_serializers, location, const FullType(LocationRequest)),
         r'note': encodeFormParameter(_serializers, note, const FullType(String)),
         if (tags != null) r'tags': encodeFormParameter(_serializers, tags, const FullType(BuiltList, [FullType(String)])),
-        r'photos': encodeFormParameter(_serializers, photos, const FullType(BuiltList, [FullType(SimplePhotoRequest)])),
+        r'photos': photos.toList(),
         r'event_environment': encodeFormParameter(_serializers, eventEnvironment, const FullType(String)),
         r'event_moment': encodeFormParameter(_serializers, eventMoment, const FullType(String)),
         r'mosquito_appearance': encodeFormParameter(_serializers, mosquitoAppearance, const FullType(MosquitoAppearanceRequest)),

@@ -37,7 +37,7 @@ final api = MosquitoAlert().getBreedingSitesApi();
 final DateTime createdAt = 2013-10-20T19:20:30+01:00; // DateTime | 
 final DateTime sentAt = 2013-10-20T19:20:30+01:00; // DateTime | 
 final LocationRequest location = ; // LocationRequest | 
-final BuiltList<SimplePhotoRequest> photos = ; // BuiltList<SimplePhotoRequest> | 
+final BuiltList<MultipartFile> photos = /path/to/file.txt; // BuiltList<MultipartFile> | 
 final String note = note_example; // String | Note user attached to report.
 final BuiltList<String> tags = ; // BuiltList<String> | 
 final String siteType = siteType_example; // String | Breeding site type.
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
  **createdAt** | **DateTime**|  | 
  **sentAt** | **DateTime**|  | 
  **location** | [**LocationRequest**](LocationRequest.md)|  | 
- **photos** | [**BuiltList&lt;SimplePhotoRequest&gt;**](SimplePhotoRequest.md)|  | 
+ **photos** | [**BuiltList&lt;MultipartFile&gt;**](MultipartFile.md)|  | 
  **note** | **String**| Note user attached to report. | [optional] 
  **tags** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **siteType** | **String**| Breeding site type. | [optional] 

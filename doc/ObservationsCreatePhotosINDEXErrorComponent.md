@@ -1,4 +1,4 @@
-# mosquito_alert.model.BreedingsitesCreatePhotosINDEXFileErrorComponent
+# mosquito_alert.model.ObservationsCreatePhotosINDEXErrorComponent
 
 ## Load the model package
 ```dart

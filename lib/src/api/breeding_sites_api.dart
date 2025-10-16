@@ -12,7 +12,6 @@ import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/breeding_site.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/paginated_breeding_site_list.dart';
-import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 
 class BreedingSitesApi {
 
@@ -50,7 +49,7 @@ class BreedingSitesApi {
     required DateTime createdAt,
     required DateTime sentAt,
     required LocationRequest location,
-    required BuiltList<SimplePhotoRequest> photos,
+    required BuiltList<MultipartFile> photos,
     String? note,
     BuiltList<String>? tags,
     String? siteType,
@@ -104,7 +103,7 @@ class BreedingSitesApi {
         r'location': encodeFormParameter(_serializers, location, const FullType(LocationRequest)),
         r'note': encodeFormParameter(_serializers, note, const FullType(String)),
         if (tags != null) r'tags': encodeFormParameter(_serializers, tags, const FullType(BuiltList, [FullType(String)])),
-        r'photos': encodeFormParameter(_serializers, photos, const FullType(BuiltList, [FullType(SimplePhotoRequest)])),
+        r'photos': photos.toList(),
         if (siteType != null) r'site_type': encodeFormParameter(_serializers, siteType, const FullType(String)),
         r'has_water': encodeFormParameter(_serializers, hasWater, const FullType(bool)),
         r'in_public_area': encodeFormParameter(_serializers, inPublicArea, const FullType(bool)),

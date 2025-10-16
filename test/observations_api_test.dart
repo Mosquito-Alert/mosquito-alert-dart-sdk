@@ -7,7 +7,7 @@ void main() {
   final instance = MosquitoAlert().getObservationsApi();
 
   group(ObservationsApi, () {
-    //Future<Observation> create(DateTime createdAt, DateTime sentAt, LocationRequest location, BuiltList<SimplePhotoRequest> photos, { String note, BuiltList<String> tags, String eventEnvironment, String eventMoment, MosquitoAppearanceRequest mosquitoAppearance }) async
+    //Future<Observation> create(DateTime createdAt, DateTime sentAt, LocationRequest location, BuiltList<MultipartFile> photos, { String note, BuiltList<String> tags, String eventEnvironment, String eventMoment, MosquitoAppearanceRequest mosquitoAppearance }) async
     test('test create', () async {
       // TODO
     });

@@ -97,9 +97,8 @@ doc/BreedingsitesCreateLocationPointErrorComponent.md
 doc/BreedingsitesCreateLocationSourceErrorComponent.md
 doc/BreedingsitesCreateNonFieldErrorsErrorComponent.md
 doc/BreedingsitesCreateNoteErrorComponent.md
-doc/BreedingsitesCreatePhotosINDEXFileErrorComponent.md
-doc/BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent.md
-doc/BreedingsitesCreatePhotosNonFieldErrorsErrorComponent.md
+doc/BreedingsitesCreatePhotosErrorComponent.md
+doc/BreedingsitesCreatePhotosINDEXErrorComponent.md
 doc/BreedingsitesCreateSentAtErrorComponent.md
 doc/BreedingsitesCreateSiteTypeErrorComponent.md
 doc/BreedingsitesCreateTagsErrorComponent.md
@@ -212,7 +211,6 @@ doc/GeneralPermission.md
 doc/GuestRegistration.md
 doc/GuestRegistrationRequest.md
 doc/Identification.md
-doc/IdentificationRequest.md
 doc/IdentificationTask.md
 doc/IdentificationTaskPermission.md
 doc/IdentificationTaskResult.md
@@ -479,9 +477,8 @@ doc/ObservationsCreateMosquitoAppearanceSpecieErrorComponent.md
 doc/ObservationsCreateMosquitoAppearanceThoraxErrorComponent.md
 doc/ObservationsCreateNonFieldErrorsErrorComponent.md
 doc/ObservationsCreateNoteErrorComponent.md
-doc/ObservationsCreatePhotosINDEXFileErrorComponent.md
-doc/ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent.md
-doc/ObservationsCreatePhotosNonFieldErrorsErrorComponent.md
+doc/ObservationsCreatePhotosErrorComponent.md
+doc/ObservationsCreatePhotosINDEXErrorComponent.md
 doc/ObservationsCreateSentAtErrorComponent.md
 doc/ObservationsCreateTagsErrorComponent.md
 doc/ObservationsCreateTagsINDEXErrorComponent.md
@@ -581,7 +578,6 @@ doc/PredictionScoreRequest.md
 doc/ReviewPermission.md
 doc/SimpleAnnotatorUser.md
 doc/SimplePhoto.md
-doc/SimplePhotoRequest.md
 doc/SimpleTaxon.md
 doc/SimpleTaxonRequest.md
 doc/SimplifiedLocation.md
@@ -727,9 +723,8 @@ lib/src/model/breedingsites_create_location_point_error_component.dart
 lib/src/model/breedingsites_create_location_source_error_component.dart
 lib/src/model/breedingsites_create_non_field_errors_error_component.dart
 lib/src/model/breedingsites_create_note_error_component.dart
-lib/src/model/breedingsites_create_photos_index_file_error_component.dart
-lib/src/model/breedingsites_create_photos_index_non_field_errors_error_component.dart
-lib/src/model/breedingsites_create_photos_non_field_errors_error_component.dart
+lib/src/model/breedingsites_create_photos_error_component.dart
+lib/src/model/breedingsites_create_photos_index_error_component.dart
 lib/src/model/breedingsites_create_sent_at_error_component.dart
 lib/src/model/breedingsites_create_site_type_error_component.dart
 lib/src/model/breedingsites_create_tags_error_component.dart
@@ -839,7 +834,6 @@ lib/src/model/general_permission.dart
 lib/src/model/guest_registration.dart
 lib/src/model/guest_registration_request.dart
 lib/src/model/identification.dart
-lib/src/model/identification_request.dart
 lib/src/model/identification_task.dart
 lib/src/model/identification_task_permission.dart
 lib/src/model/identification_task_result.dart
@@ -1103,9 +1097,8 @@ lib/src/model/observations_create_mosquito_appearance_specie_error_component.dar
 lib/src/model/observations_create_mosquito_appearance_thorax_error_component.dart
 lib/src/model/observations_create_non_field_errors_error_component.dart
 lib/src/model/observations_create_note_error_component.dart
-lib/src/model/observations_create_photos_index_file_error_component.dart
-lib/src/model/observations_create_photos_index_non_field_errors_error_component.dart
-lib/src/model/observations_create_photos_non_field_errors_error_component.dart
+lib/src/model/observations_create_photos_error_component.dart
+lib/src/model/observations_create_photos_index_error_component.dart
 lib/src/model/observations_create_sent_at_error_component.dart
 lib/src/model/observations_create_tags_error_component.dart
 lib/src/model/observations_create_tags_index_error_component.dart
@@ -1202,7 +1195,6 @@ lib/src/model/prediction_score_request.dart
 lib/src/model/review_permission.dart
 lib/src/model/simple_annotator_user.dart
 lib/src/model/simple_photo.dart
-lib/src/model/simple_photo_request.dart
 lib/src/model/simple_taxon.dart
 lib/src/model/simple_taxon_request.dart
 lib/src/model/simplified_location.dart
@@ -1327,9 +1319,8 @@ test/breedingsites_create_location_point_error_component_test.dart
 test/breedingsites_create_location_source_error_component_test.dart
 test/breedingsites_create_non_field_errors_error_component_test.dart
 test/breedingsites_create_note_error_component_test.dart
-test/breedingsites_create_photos_index_file_error_component_test.dart
-test/breedingsites_create_photos_index_non_field_errors_error_component_test.dart
-test/breedingsites_create_photos_non_field_errors_error_component_test.dart
+test/breedingsites_create_photos_error_component_test.dart
+test/breedingsites_create_photos_index_error_component_test.dart
 test/breedingsites_create_sent_at_error_component_test.dart
 test/breedingsites_create_site_type_error_component_test.dart
 test/breedingsites_create_tags_error_component_test.dart
@@ -1441,7 +1432,6 @@ test/fixes_create_validation_error_test.dart
 test/general_permission_test.dart
 test/guest_registration_request_test.dart
 test/guest_registration_test.dart
-test/identification_request_test.dart
 test/identification_task_permission_test.dart
 test/identification_task_result_test.dart
 test/identification_task_review_test.dart
@@ -1709,9 +1699,8 @@ test/observations_create_mosquito_appearance_specie_error_component_test.dart
 test/observations_create_mosquito_appearance_thorax_error_component_test.dart
 test/observations_create_non_field_errors_error_component_test.dart
 test/observations_create_note_error_component_test.dart
-test/observations_create_photos_index_file_error_component_test.dart
-test/observations_create_photos_index_non_field_errors_error_component_test.dart
-test/observations_create_photos_non_field_errors_error_component_test.dart
+test/observations_create_photos_error_component_test.dart
+test/observations_create_photos_index_error_component_test.dart
 test/observations_create_sent_at_error_component_test.dart
 test/observations_create_tags_error_component_test.dart
 test/observations_create_tags_index_error_component_test.dart
@@ -1810,7 +1799,6 @@ test/prediction_score_request_test.dart
 test/prediction_score_test.dart
 test/review_permission_test.dart
 test/simple_annotator_user_test.dart
-test/simple_photo_request_test.dart
 test/simple_photo_test.dart
 test/simple_taxon_request_test.dart
 test/simple_taxon_test.dart

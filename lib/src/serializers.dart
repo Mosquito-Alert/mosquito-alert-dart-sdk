@@ -107,9 +107,8 @@ import 'package:mosquito_alert/src/model/breedingsites_create_location_point_err
 import 'package:mosquito_alert/src/model/breedingsites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_note_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_file_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_photos_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_photos_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_site_type_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_tags_error_component.dart';
@@ -218,7 +217,6 @@ import 'package:mosquito_alert/src/model/general_permission.dart';
 import 'package:mosquito_alert/src/model/guest_registration.dart';
 import 'package:mosquito_alert/src/model/guest_registration_request.dart';
 import 'package:mosquito_alert/src/model/identification.dart';
-import 'package:mosquito_alert/src/model/identification_request.dart';
 import 'package:mosquito_alert/src/model/identification_task.dart';
 import 'package:mosquito_alert/src/model/identification_task_permission.dart';
 import 'package:mosquito_alert/src/model/identification_task_result.dart';
@@ -482,9 +480,8 @@ import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance
 import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_thorax_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_note_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_photos_index_file_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_photos_index_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_photos_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_photos_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_photos_index_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_tags_index_error_component.dart';
@@ -581,7 +578,6 @@ import 'package:mosquito_alert/src/model/prediction_score_request.dart';
 import 'package:mosquito_alert/src/model/review_permission.dart';
 import 'package:mosquito_alert/src/model/simple_annotator_user.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
-import 'package:mosquito_alert/src/model/simple_photo_request.dart';
 import 'package:mosquito_alert/src/model/simple_taxon.dart';
 import 'package:mosquito_alert/src/model/simple_taxon_request.dart';
 import 'package:mosquito_alert/src/model/simplified_location.dart';
@@ -705,9 +701,8 @@ part 'serializers.g.dart';
   BreedingsitesCreateLocationSourceErrorComponent,
   BreedingsitesCreateNonFieldErrorsErrorComponent,
   BreedingsitesCreateNoteErrorComponent,
-  BreedingsitesCreatePhotosINDEXFileErrorComponent,
-  BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent,
-  BreedingsitesCreatePhotosNonFieldErrorsErrorComponent,
+  BreedingsitesCreatePhotosErrorComponent,
+  BreedingsitesCreatePhotosINDEXErrorComponent,
   BreedingsitesCreateSentAtErrorComponent,
   BreedingsitesCreateSiteTypeErrorComponent,
   BreedingsitesCreateTagsErrorComponent,
@@ -816,7 +811,6 @@ part 'serializers.g.dart';
   GuestRegistration,
   GuestRegistrationRequest,
   Identification,
-  IdentificationRequest,
   IdentificationTask,
   IdentificationTaskPermission,
   IdentificationTaskResult,
@@ -1080,9 +1074,8 @@ part 'serializers.g.dart';
   ObservationsCreateMosquitoAppearanceThoraxErrorComponent,
   ObservationsCreateNonFieldErrorsErrorComponent,
   ObservationsCreateNoteErrorComponent,
-  ObservationsCreatePhotosINDEXFileErrorComponent,
-  ObservationsCreatePhotosINDEXNonFieldErrorsErrorComponent,
-  ObservationsCreatePhotosNonFieldErrorsErrorComponent,
+  ObservationsCreatePhotosErrorComponent,
+  ObservationsCreatePhotosINDEXErrorComponent,
   ObservationsCreateSentAtErrorComponent,
   ObservationsCreateTagsErrorComponent,
   ObservationsCreateTagsINDEXErrorComponent,
@@ -1179,7 +1172,6 @@ part 'serializers.g.dart';
   ReviewPermission,
   SimpleAnnotatorUser,
   SimplePhoto,
-  SimplePhotoRequest,
   SimpleTaxon,
   SimpleTaxonRequest,
   SimplifiedLocation,
@@ -1219,10 +1211,6 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CreateNotification)]),
         () => ListBuilder<CreateNotification>(),
-      )
-      ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(SimplePhotoRequest)]),
-        () => ListBuilder<SimplePhotoRequest>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(String)]),

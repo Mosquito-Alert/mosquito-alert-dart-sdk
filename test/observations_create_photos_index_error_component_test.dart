@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent
+// tests for ObservationsCreatePhotosINDEXErrorComponent
 void main() {
-  final instance = BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentBuilder();
+  final instance = ObservationsCreatePhotosINDEXErrorComponentBuilder();
   // TODO add properties to the builder and call build()
 
-  group(BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent, () {
+  group(ObservationsCreatePhotosINDEXErrorComponent, () {
     // String attr
     test('to test the property `attr`', () async {
       // TODO

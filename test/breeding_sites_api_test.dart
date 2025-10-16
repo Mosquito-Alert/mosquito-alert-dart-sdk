@@ -7,7 +7,7 @@ void main() {
   final instance = MosquitoAlert().getBreedingSitesApi();
 
   group(BreedingSitesApi, () {
-    //Future<BreedingSite> create(DateTime createdAt, DateTime sentAt, LocationRequest location, BuiltList<SimplePhotoRequest> photos, { String note, BuiltList<String> tags, String siteType, bool hasWater, bool inPublicArea, bool hasNearMosquitoes, bool hasLarvae }) async
+    //Future<BreedingSite> create(DateTime createdAt, DateTime sentAt, LocationRequest location, BuiltList<MultipartFile> photos, { String note, BuiltList<String> tags, String siteType, bool hasWater, bool inPublicArea, bool hasNearMosquitoes, bool hasLarvae }) async
     test('test create', () async {
       // TODO
     });

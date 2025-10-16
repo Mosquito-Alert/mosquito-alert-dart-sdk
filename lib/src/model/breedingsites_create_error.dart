@@ -4,7 +4,6 @@
 
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/breedingsites_create_tags_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_photos_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_sent_at_error_component.dart';
@@ -12,13 +11,13 @@ import 'package:mosquito_alert/src/model/breedingsites_create_has_larvae_error_c
 import 'package:mosquito_alert/src/model/breedingsites_create_location_point_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_has_near_mosquitoes_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_photos_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_site_type_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_tags_index_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_has_water_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_file_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_in_public_area_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_location_non_field_errors_error_component.dart';
 import 'package:built_value/built_value.dart';
@@ -35,7 +34,7 @@ part 'breedingsites_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BreedingsitesCreateError implements Built<BreedingsitesCreateError, BreedingsitesCreateErrorBuilder> {
-  /// One Of [BreedingsitesCreateCreatedAtErrorComponent], [BreedingsitesCreateHasLarvaeErrorComponent], [BreedingsitesCreateHasNearMosquitoesErrorComponent], [BreedingsitesCreateHasWaterErrorComponent], [BreedingsitesCreateInPublicAreaErrorComponent], [BreedingsitesCreateLocationNonFieldErrorsErrorComponent], [BreedingsitesCreateLocationPointErrorComponent], [BreedingsitesCreateLocationSourceErrorComponent], [BreedingsitesCreateNonFieldErrorsErrorComponent], [BreedingsitesCreateNoteErrorComponent], [BreedingsitesCreatePhotosINDEXFileErrorComponent], [BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent], [BreedingsitesCreatePhotosNonFieldErrorsErrorComponent], [BreedingsitesCreateSentAtErrorComponent], [BreedingsitesCreateSiteTypeErrorComponent], [BreedingsitesCreateTagsErrorComponent], [BreedingsitesCreateTagsINDEXErrorComponent]
+  /// One Of [BreedingsitesCreateCreatedAtErrorComponent], [BreedingsitesCreateHasLarvaeErrorComponent], [BreedingsitesCreateHasNearMosquitoesErrorComponent], [BreedingsitesCreateHasWaterErrorComponent], [BreedingsitesCreateInPublicAreaErrorComponent], [BreedingsitesCreateLocationNonFieldErrorsErrorComponent], [BreedingsitesCreateLocationPointErrorComponent], [BreedingsitesCreateLocationSourceErrorComponent], [BreedingsitesCreateNonFieldErrorsErrorComponent], [BreedingsitesCreateNoteErrorComponent], [BreedingsitesCreatePhotosErrorComponent], [BreedingsitesCreatePhotosINDEXErrorComponent], [BreedingsitesCreateSentAtErrorComponent], [BreedingsitesCreateSiteTypeErrorComponent], [BreedingsitesCreateTagsErrorComponent], [BreedingsitesCreateTagsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -51,9 +50,8 @@ abstract class BreedingsitesCreateError implements Built<BreedingsitesCreateErro
     r'location.source': BreedingsitesCreateLocationSourceErrorComponent,
     r'non_field_errors': BreedingsitesCreateNonFieldErrorsErrorComponent,
     r'note': BreedingsitesCreateNoteErrorComponent,
-    r'photos.INDEX.file': BreedingsitesCreatePhotosINDEXFileErrorComponent,
-    r'photos.INDEX.non_field_errors': BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent,
-    r'photos.non_field_errors': BreedingsitesCreatePhotosNonFieldErrorsErrorComponent,
+    r'photos': BreedingsitesCreatePhotosErrorComponent,
+    r'photos.INDEX': BreedingsitesCreatePhotosINDEXErrorComponent,
     r'sent_at': BreedingsitesCreateSentAtErrorComponent,
     r'site_type': BreedingsitesCreateSiteTypeErrorComponent,
     r'tags': BreedingsitesCreateTagsErrorComponent,
@@ -103,14 +101,11 @@ extension BreedingsitesCreateErrorDiscriminatorExt on BreedingsitesCreateError {
         if (this is BreedingsitesCreateNoteErrorComponent) {
             return r'note';
         }
-        if (this is BreedingsitesCreatePhotosINDEXFileErrorComponent) {
-            return r'photos.INDEX.file';
+        if (this is BreedingsitesCreatePhotosErrorComponent) {
+            return r'photos';
         }
-        if (this is BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent) {
-            return r'photos.INDEX.non_field_errors';
-        }
-        if (this is BreedingsitesCreatePhotosNonFieldErrorsErrorComponent) {
-            return r'photos.non_field_errors';
+        if (this is BreedingsitesCreatePhotosINDEXErrorComponent) {
+            return r'photos.INDEX';
         }
         if (this is BreedingsitesCreateSentAtErrorComponent) {
             return r'sent_at';
@@ -159,14 +154,11 @@ extension BreedingsitesCreateErrorBuilderDiscriminatorExt on BreedingsitesCreate
         if (this is BreedingsitesCreateNoteErrorComponentBuilder) {
             return r'note';
         }
-        if (this is BreedingsitesCreatePhotosINDEXFileErrorComponentBuilder) {
-            return r'photos.INDEX.file';
+        if (this is BreedingsitesCreatePhotosErrorComponentBuilder) {
+            return r'photos';
         }
-        if (this is BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponentBuilder) {
-            return r'photos.INDEX.non_field_errors';
-        }
-        if (this is BreedingsitesCreatePhotosNonFieldErrorsErrorComponentBuilder) {
-            return r'photos.non_field_errors';
+        if (this is BreedingsitesCreatePhotosINDEXErrorComponentBuilder) {
+            return r'photos.INDEX';
         }
         if (this is BreedingsitesCreateSentAtErrorComponentBuilder) {
             return r'sent_at';
@@ -220,7 +212,7 @@ class _$BreedingsitesCreateErrorSerializer implements PrimitiveSerializer<Breedi
     final discIndex = serializedList.indexOf(BreedingsitesCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BreedingsitesCreateCreatedAtErrorComponent, BreedingsitesCreateHasLarvaeErrorComponent, BreedingsitesCreateHasNearMosquitoesErrorComponent, BreedingsitesCreateHasWaterErrorComponent, BreedingsitesCreateInPublicAreaErrorComponent, BreedingsitesCreateLocationNonFieldErrorsErrorComponent, BreedingsitesCreateLocationPointErrorComponent, BreedingsitesCreateLocationSourceErrorComponent, BreedingsitesCreateNonFieldErrorsErrorComponent, BreedingsitesCreateNoteErrorComponent, BreedingsitesCreatePhotosINDEXFileErrorComponent, BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent, BreedingsitesCreatePhotosNonFieldErrorsErrorComponent, BreedingsitesCreateSentAtErrorComponent, BreedingsitesCreateSiteTypeErrorComponent, BreedingsitesCreateTagsErrorComponent, BreedingsitesCreateTagsINDEXErrorComponent, ];
+    final oneOfTypes = [BreedingsitesCreateCreatedAtErrorComponent, BreedingsitesCreateHasLarvaeErrorComponent, BreedingsitesCreateHasNearMosquitoesErrorComponent, BreedingsitesCreateHasWaterErrorComponent, BreedingsitesCreateInPublicAreaErrorComponent, BreedingsitesCreateLocationNonFieldErrorsErrorComponent, BreedingsitesCreateLocationPointErrorComponent, BreedingsitesCreateLocationSourceErrorComponent, BreedingsitesCreateNonFieldErrorsErrorComponent, BreedingsitesCreateNoteErrorComponent, BreedingsitesCreatePhotosErrorComponent, BreedingsitesCreatePhotosINDEXErrorComponent, BreedingsitesCreateSentAtErrorComponent, BreedingsitesCreateSiteTypeErrorComponent, BreedingsitesCreateTagsErrorComponent, BreedingsitesCreateTagsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -294,26 +286,19 @@ class _$BreedingsitesCreateErrorSerializer implements PrimitiveSerializer<Breedi
         ) as BreedingsitesCreateNoteErrorComponent;
         oneOfType = BreedingsitesCreateNoteErrorComponent;
         break;
-      case r'photos.INDEX.file':
+      case r'photos':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
-          specifiedType: FullType(BreedingsitesCreatePhotosINDEXFileErrorComponent),
-        ) as BreedingsitesCreatePhotosINDEXFileErrorComponent;
-        oneOfType = BreedingsitesCreatePhotosINDEXFileErrorComponent;
+          specifiedType: FullType(BreedingsitesCreatePhotosErrorComponent),
+        ) as BreedingsitesCreatePhotosErrorComponent;
+        oneOfType = BreedingsitesCreatePhotosErrorComponent;
         break;
-      case r'photos.INDEX.non_field_errors':
+      case r'photos.INDEX':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
-          specifiedType: FullType(BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent),
-        ) as BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent;
-        oneOfType = BreedingsitesCreatePhotosINDEXNonFieldErrorsErrorComponent;
-        break;
-      case r'photos.non_field_errors':
-        oneOfResult = serializers.deserialize(
-          oneOfDataSrc,
-          specifiedType: FullType(BreedingsitesCreatePhotosNonFieldErrorsErrorComponent),
-        ) as BreedingsitesCreatePhotosNonFieldErrorsErrorComponent;
-        oneOfType = BreedingsitesCreatePhotosNonFieldErrorsErrorComponent;
+          specifiedType: FullType(BreedingsitesCreatePhotosINDEXErrorComponent),
+        ) as BreedingsitesCreatePhotosINDEXErrorComponent;
+        oneOfType = BreedingsitesCreatePhotosINDEXErrorComponent;
         break;
       case r'sent_at':
         oneOfResult = serializers.deserialize(
