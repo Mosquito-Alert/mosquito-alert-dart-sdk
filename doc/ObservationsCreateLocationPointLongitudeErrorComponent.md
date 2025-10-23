@@ -1,4 +1,4 @@
-# mosquito_alert.model.ObservationsCreateLocationPointErrorComponent
+# mosquito_alert.model.ObservationsCreateLocationPointLongitudeErrorComponent
 
 ## Load the model package
 ```dart

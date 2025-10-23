@@ -6,7 +6,7 @@
 import 'package:mosquito_alert/src/model/adm_boundary.dart';
 import 'package:mosquito_alert/src/model/country.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/location_point.dart';
+import 'package:mosquito_alert/src/model/point.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -29,7 +29,7 @@ abstract class Location implements Built<Location, LocationBuilder> {
   // enum source_Enum {  auto,  manual,  };
 
   @BuiltValueField(wireName: r'point')
-  LocationPoint get point;
+  Point get point;
 
   @BuiltValueField(wireName: r'timezone')
   LocationTimezoneEnum? get timezone;
@@ -75,7 +75,7 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
     yield r'point';
     yield serializers.serialize(
       object.point,
-      specifiedType: const FullType(LocationPoint),
+      specifiedType: const FullType(Point),
     );
     yield r'timezone';
     yield object.timezone == null ? null : serializers.serialize(
@@ -130,8 +130,8 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
         case r'point':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(LocationPoint),
-          ) as LocationPoint;
+            specifiedType: const FullType(Point),
+          ) as Point;
           result.point.replace(valueDes);
           break;
         case r'timezone':

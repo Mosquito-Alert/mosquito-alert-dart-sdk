@@ -72,7 +72,7 @@ class _$LocationRequest extends LocationRequest {
   @override
   final LocationRequestSource_Enum source_;
   @override
-  final LocationPoint point;
+  final PointRequest point;
 
   factory _$LocationRequest([void Function(LocationRequestBuilder)? updates]) =>
       (new LocationRequestBuilder()..update(updates))._build();
@@ -126,10 +126,9 @@ class LocationRequestBuilder
   LocationRequestSource_Enum? get source_ => _$this._source_;
   set source_(LocationRequestSource_Enum? source_) => _$this._source_ = source_;
 
-  LocationPointBuilder? _point;
-  LocationPointBuilder get point =>
-      _$this._point ??= new LocationPointBuilder();
-  set point(LocationPointBuilder? point) => _$this._point = point;
+  PointRequestBuilder? _point;
+  PointRequestBuilder get point => _$this._point ??= new PointRequestBuilder();
+  set point(PointRequestBuilder? point) => _$this._point = point;
 
   LocationRequestBuilder() {
     LocationRequest._defaults(this);

@@ -67,7 +67,9 @@ import 'package:mosquito_alert/src/model/bites_create_error.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_environment_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_event_moment_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_location_point_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_location_point_latitude_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_location_point_longitude_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_location_point_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_note_error_component.dart';
@@ -103,7 +105,9 @@ import 'package:mosquito_alert/src/model/breedingsites_create_has_near_mosquitoe
 import 'package:mosquito_alert/src/model/breedingsites_create_has_water_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_in_public_area_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_location_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_location_point_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_location_point_latitude_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_location_point_longitude_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_create_location_point_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_note_error_component.dart';
@@ -380,7 +384,6 @@ import 'package:mosquito_alert/src/model/localized_message_body_request.dart';
 import 'package:mosquito_alert/src/model/localized_message_title.dart';
 import 'package:mosquito_alert/src/model/localized_message_title_request.dart';
 import 'package:mosquito_alert/src/model/location.dart';
-import 'package:mosquito_alert/src/model/location_point.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/meta_create_identification_task_review_request.dart';
 import 'package:mosquito_alert/src/model/meta_notification_request.dart';
@@ -471,7 +474,9 @@ import 'package:mosquito_alert/src/model/observations_create_error.dart';
 import 'package:mosquito_alert/src/model/observations_create_event_environment_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_event_moment_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_location_point_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_location_point_latitude_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_location_point_longitude_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_location_point_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_abdomen_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_legs_error_component.dart';
@@ -518,6 +523,7 @@ import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
 import 'package:mosquito_alert/src/model/paginated_photo_prediction_list.dart';
 import 'package:mosquito_alert/src/model/paginated_taxon_list.dart';
 import 'package:mosquito_alert/src/model/partner.dart';
+import 'package:mosquito_alert/src/model/partner_point.dart';
 import 'package:mosquito_alert/src/model/password_change_request.dart';
 import 'package:mosquito_alert/src/model/patched_device_update_request.dart';
 import 'package:mosquito_alert/src/model/patched_notification_request.dart';
@@ -573,6 +579,8 @@ import 'package:mosquito_alert/src/model/photos_prediction_update_scores_not_sur
 import 'package:mosquito_alert/src/model/photos_prediction_update_scores_other_species_error_component.dart';
 import 'package:mosquito_alert/src/model/photos_prediction_update_threshold_deviation_error_component.dart';
 import 'package:mosquito_alert/src/model/photos_prediction_update_validation_error.dart';
+import 'package:mosquito_alert/src/model/point.dart';
+import 'package:mosquito_alert/src/model/point_request.dart';
 import 'package:mosquito_alert/src/model/prediction_score.dart';
 import 'package:mosquito_alert/src/model/prediction_score_request.dart';
 import 'package:mosquito_alert/src/model/review_permission.dart';
@@ -661,7 +669,9 @@ part 'serializers.g.dart';
   BitesCreateEventEnvironmentErrorComponent,
   BitesCreateEventMomentErrorComponent,
   BitesCreateLocationNonFieldErrorsErrorComponent,
-  BitesCreateLocationPointErrorComponent,
+  BitesCreateLocationPointLatitudeErrorComponent,
+  BitesCreateLocationPointLongitudeErrorComponent,
+  BitesCreateLocationPointNonFieldErrorsErrorComponent,
   BitesCreateLocationSourceErrorComponent,
   BitesCreateNonFieldErrorsErrorComponent,
   BitesCreateNoteErrorComponent,
@@ -697,7 +707,9 @@ part 'serializers.g.dart';
   BreedingsitesCreateHasWaterErrorComponent,
   BreedingsitesCreateInPublicAreaErrorComponent,
   BreedingsitesCreateLocationNonFieldErrorsErrorComponent,
-  BreedingsitesCreateLocationPointErrorComponent,
+  BreedingsitesCreateLocationPointLatitudeErrorComponent,
+  BreedingsitesCreateLocationPointLongitudeErrorComponent,
+  BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent,
   BreedingsitesCreateLocationSourceErrorComponent,
   BreedingsitesCreateNonFieldErrorsErrorComponent,
   BreedingsitesCreateNoteErrorComponent,
@@ -974,7 +986,6 @@ part 'serializers.g.dart';
   LocalizedMessageTitle,
   LocalizedMessageTitleRequest,
   Location,
-  LocationPoint,
   LocationRequest,
   MetaCreateIdentificationTaskReviewRequest,
   MetaNotificationRequest,
@@ -1065,7 +1076,9 @@ part 'serializers.g.dart';
   ObservationsCreateEventEnvironmentErrorComponent,
   ObservationsCreateEventMomentErrorComponent,
   ObservationsCreateLocationNonFieldErrorsErrorComponent,
-  ObservationsCreateLocationPointErrorComponent,
+  ObservationsCreateLocationPointLatitudeErrorComponent,
+  ObservationsCreateLocationPointLongitudeErrorComponent,
+  ObservationsCreateLocationPointNonFieldErrorsErrorComponent,
   ObservationsCreateLocationSourceErrorComponent,
   ObservationsCreateMosquitoAppearanceAbdomenErrorComponent,
   ObservationsCreateMosquitoAppearanceLegsErrorComponent,
@@ -1112,6 +1125,7 @@ part 'serializers.g.dart';
   PaginatedPhotoPredictionList,
   PaginatedTaxonList,
   Partner,
+  PartnerPoint,
   PasswordChangeRequest,
   PatchedDeviceUpdateRequest,
   PatchedNotificationRequest,
@@ -1167,6 +1181,8 @@ part 'serializers.g.dart';
   PhotosPredictionUpdateScoresOtherSpeciesErrorComponent,
   PhotosPredictionUpdateThresholdDeviationErrorComponent,
   PhotosPredictionUpdateValidationError,
+  Point,
+  PointRequest,
   PredictionScore,
   PredictionScoreRequest,
   ReviewPermission,

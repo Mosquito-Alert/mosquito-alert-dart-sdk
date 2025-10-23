@@ -56,7 +56,9 @@ doc/BitesCreateError.md
 doc/BitesCreateEventEnvironmentErrorComponent.md
 doc/BitesCreateEventMomentErrorComponent.md
 doc/BitesCreateLocationNonFieldErrorsErrorComponent.md
-doc/BitesCreateLocationPointErrorComponent.md
+doc/BitesCreateLocationPointLatitudeErrorComponent.md
+doc/BitesCreateLocationPointLongitudeErrorComponent.md
+doc/BitesCreateLocationPointNonFieldErrorsErrorComponent.md
 doc/BitesCreateLocationSourceErrorComponent.md
 doc/BitesCreateNonFieldErrorsErrorComponent.md
 doc/BitesCreateNoteErrorComponent.md
@@ -93,7 +95,9 @@ doc/BreedingsitesCreateHasNearMosquitoesErrorComponent.md
 doc/BreedingsitesCreateHasWaterErrorComponent.md
 doc/BreedingsitesCreateInPublicAreaErrorComponent.md
 doc/BreedingsitesCreateLocationNonFieldErrorsErrorComponent.md
-doc/BreedingsitesCreateLocationPointErrorComponent.md
+doc/BreedingsitesCreateLocationPointLatitudeErrorComponent.md
+doc/BreedingsitesCreateLocationPointLongitudeErrorComponent.md
+doc/BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent.md
 doc/BreedingsitesCreateLocationSourceErrorComponent.md
 doc/BreedingsitesCreateNonFieldErrorsErrorComponent.md
 doc/BreedingsitesCreateNoteErrorComponent.md
@@ -375,7 +379,6 @@ doc/LocalizedMessageBodyRequest.md
 doc/LocalizedMessageTitle.md
 doc/LocalizedMessageTitleRequest.md
 doc/Location.md
-doc/LocationPoint.md
 doc/LocationRequest.md
 doc/MetaCreateIdentificationTaskReviewRequest.md
 doc/MetaNotificationRequest.md
@@ -468,7 +471,9 @@ doc/ObservationsCreateError.md
 doc/ObservationsCreateEventEnvironmentErrorComponent.md
 doc/ObservationsCreateEventMomentErrorComponent.md
 doc/ObservationsCreateLocationNonFieldErrorsErrorComponent.md
-doc/ObservationsCreateLocationPointErrorComponent.md
+doc/ObservationsCreateLocationPointLatitudeErrorComponent.md
+doc/ObservationsCreateLocationPointLongitudeErrorComponent.md
+doc/ObservationsCreateLocationPointNonFieldErrorsErrorComponent.md
 doc/ObservationsCreateLocationSourceErrorComponent.md
 doc/ObservationsCreateMosquitoAppearanceAbdomenErrorComponent.md
 doc/ObservationsCreateMosquitoAppearanceLegsErrorComponent.md
@@ -515,6 +520,7 @@ doc/PaginatedPartnerList.md
 doc/PaginatedPhotoPredictionList.md
 doc/PaginatedTaxonList.md
 doc/Partner.md
+doc/PartnerPoint.md
 doc/PartnersApi.md
 doc/PasswordChangeRequest.md
 doc/PatchedDeviceUpdateRequest.md
@@ -573,6 +579,8 @@ doc/PhotosPredictionUpdateScoresNotSureErrorComponent.md
 doc/PhotosPredictionUpdateScoresOtherSpeciesErrorComponent.md
 doc/PhotosPredictionUpdateThresholdDeviationErrorComponent.md
 doc/PhotosPredictionUpdateValidationError.md
+doc/Point.md
+doc/PointRequest.md
 doc/PredictionScore.md
 doc/PredictionScoreRequest.md
 doc/ReviewPermission.md
@@ -683,7 +691,9 @@ lib/src/model/bites_create_error.dart
 lib/src/model/bites_create_event_environment_error_component.dart
 lib/src/model/bites_create_event_moment_error_component.dart
 lib/src/model/bites_create_location_non_field_errors_error_component.dart
-lib/src/model/bites_create_location_point_error_component.dart
+lib/src/model/bites_create_location_point_latitude_error_component.dart
+lib/src/model/bites_create_location_point_longitude_error_component.dart
+lib/src/model/bites_create_location_point_non_field_errors_error_component.dart
 lib/src/model/bites_create_location_source_error_component.dart
 lib/src/model/bites_create_non_field_errors_error_component.dart
 lib/src/model/bites_create_note_error_component.dart
@@ -719,7 +729,9 @@ lib/src/model/breedingsites_create_has_near_mosquitoes_error_component.dart
 lib/src/model/breedingsites_create_has_water_error_component.dart
 lib/src/model/breedingsites_create_in_public_area_error_component.dart
 lib/src/model/breedingsites_create_location_non_field_errors_error_component.dart
-lib/src/model/breedingsites_create_location_point_error_component.dart
+lib/src/model/breedingsites_create_location_point_latitude_error_component.dart
+lib/src/model/breedingsites_create_location_point_longitude_error_component.dart
+lib/src/model/breedingsites_create_location_point_non_field_errors_error_component.dart
 lib/src/model/breedingsites_create_location_source_error_component.dart
 lib/src/model/breedingsites_create_non_field_errors_error_component.dart
 lib/src/model/breedingsites_create_note_error_component.dart
@@ -997,7 +1009,6 @@ lib/src/model/localized_message_body_request.dart
 lib/src/model/localized_message_title.dart
 lib/src/model/localized_message_title_request.dart
 lib/src/model/location.dart
-lib/src/model/location_point.dart
 lib/src/model/location_request.dart
 lib/src/model/meta_create_identification_task_review_request.dart
 lib/src/model/meta_notification_request.dart
@@ -1088,7 +1099,9 @@ lib/src/model/observations_create_error.dart
 lib/src/model/observations_create_event_environment_error_component.dart
 lib/src/model/observations_create_event_moment_error_component.dart
 lib/src/model/observations_create_location_non_field_errors_error_component.dart
-lib/src/model/observations_create_location_point_error_component.dart
+lib/src/model/observations_create_location_point_latitude_error_component.dart
+lib/src/model/observations_create_location_point_longitude_error_component.dart
+lib/src/model/observations_create_location_point_non_field_errors_error_component.dart
 lib/src/model/observations_create_location_source_error_component.dart
 lib/src/model/observations_create_mosquito_appearance_abdomen_error_component.dart
 lib/src/model/observations_create_mosquito_appearance_legs_error_component.dart
@@ -1135,6 +1148,7 @@ lib/src/model/paginated_partner_list.dart
 lib/src/model/paginated_photo_prediction_list.dart
 lib/src/model/paginated_taxon_list.dart
 lib/src/model/partner.dart
+lib/src/model/partner_point.dart
 lib/src/model/password_change_request.dart
 lib/src/model/patched_device_update_request.dart
 lib/src/model/patched_notification_request.dart
@@ -1190,6 +1204,8 @@ lib/src/model/photos_prediction_update_scores_not_sure_error_component.dart
 lib/src/model/photos_prediction_update_scores_other_species_error_component.dart
 lib/src/model/photos_prediction_update_threshold_deviation_error_component.dart
 lib/src/model/photos_prediction_update_validation_error.dart
+lib/src/model/point.dart
+lib/src/model/point_request.dart
 lib/src/model/prediction_score.dart
 lib/src/model/prediction_score_request.dart
 lib/src/model/review_permission.dart
@@ -1278,7 +1294,9 @@ test/bites_create_error_test.dart
 test/bites_create_event_environment_error_component_test.dart
 test/bites_create_event_moment_error_component_test.dart
 test/bites_create_location_non_field_errors_error_component_test.dart
-test/bites_create_location_point_error_component_test.dart
+test/bites_create_location_point_latitude_error_component_test.dart
+test/bites_create_location_point_longitude_error_component_test.dart
+test/bites_create_location_point_non_field_errors_error_component_test.dart
 test/bites_create_location_source_error_component_test.dart
 test/bites_create_non_field_errors_error_component_test.dart
 test/bites_create_note_error_component_test.dart
@@ -1315,7 +1333,9 @@ test/breedingsites_create_has_near_mosquitoes_error_component_test.dart
 test/breedingsites_create_has_water_error_component_test.dart
 test/breedingsites_create_in_public_area_error_component_test.dart
 test/breedingsites_create_location_non_field_errors_error_component_test.dart
-test/breedingsites_create_location_point_error_component_test.dart
+test/breedingsites_create_location_point_latitude_error_component_test.dart
+test/breedingsites_create_location_point_longitude_error_component_test.dart
+test/breedingsites_create_location_point_non_field_errors_error_component_test.dart
 test/breedingsites_create_location_source_error_component_test.dart
 test/breedingsites_create_non_field_errors_error_component_test.dart
 test/breedingsites_create_note_error_component_test.dart
@@ -1596,7 +1616,6 @@ test/localized_message_body_request_test.dart
 test/localized_message_body_test.dart
 test/localized_message_title_request_test.dart
 test/localized_message_title_test.dart
-test/location_point_test.dart
 test/location_request_test.dart
 test/location_test.dart
 test/meta_create_identification_task_review_request_test.dart
@@ -1690,7 +1709,9 @@ test/observations_create_error_test.dart
 test/observations_create_event_environment_error_component_test.dart
 test/observations_create_event_moment_error_component_test.dart
 test/observations_create_location_non_field_errors_error_component_test.dart
-test/observations_create_location_point_error_component_test.dart
+test/observations_create_location_point_latitude_error_component_test.dart
+test/observations_create_location_point_longitude_error_component_test.dart
+test/observations_create_location_point_non_field_errors_error_component_test.dart
 test/observations_create_location_source_error_component_test.dart
 test/observations_create_mosquito_appearance_abdomen_error_component_test.dart
 test/observations_create_mosquito_appearance_legs_error_component_test.dart
@@ -1736,6 +1757,7 @@ test/paginated_observation_list_test.dart
 test/paginated_partner_list_test.dart
 test/paginated_photo_prediction_list_test.dart
 test/paginated_taxon_list_test.dart
+test/partner_point_test.dart
 test/partner_test.dart
 test/partners_api_test.dart
 test/password_change_request_test.dart
@@ -1795,6 +1817,8 @@ test/photos_prediction_update_scores_not_sure_error_component_test.dart
 test/photos_prediction_update_scores_other_species_error_component_test.dart
 test/photos_prediction_update_threshold_deviation_error_component_test.dart
 test/photos_prediction_update_validation_error_test.dart
+test/point_request_test.dart
+test/point_test.dart
 test/prediction_score_request_test.dart
 test/prediction_score_test.dart
 test/review_permission_test.dart

@@ -13,7 +13,7 @@ void main() {
       // TODO
     });
 
-    // LocationPoint point
+    // PointRequest point
     test('to test the property `point`', () async {
       // TODO
     });

@@ -5,7 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/country.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/location_point.dart';
+import 'package:mosquito_alert/src/model/point.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -21,7 +21,7 @@ part 'simplified_location.g.dart';
 @BuiltValue()
 abstract class SimplifiedLocation implements Built<SimplifiedLocation, SimplifiedLocationBuilder> {
   @BuiltValueField(wireName: r'point')
-  LocationPoint get point;
+  Point get point;
 
   @BuiltValueField(wireName: r'timezone')
   SimplifiedLocationTimezoneEnum? get timezone;
@@ -59,7 +59,7 @@ class _$SimplifiedLocationSerializer implements PrimitiveSerializer<SimplifiedLo
     yield r'point';
     yield serializers.serialize(
       object.point,
-      specifiedType: const FullType(LocationPoint),
+      specifiedType: const FullType(Point),
     );
     yield r'timezone';
     yield object.timezone == null ? null : serializers.serialize(
@@ -102,8 +102,8 @@ class _$SimplifiedLocationSerializer implements PrimitiveSerializer<SimplifiedLo
         case r'point':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(LocationPoint),
-          ) as LocationPoint;
+            specifiedType: const FullType(Point),
+          ) as Point;
           result.point.replace(valueDes);
           break;
         case r'timezone':

@@ -9,7 +9,7 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **source_** | **String** | Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map. | 
-**point** | [**LocationPoint**](LocationPoint.md) |  | 
+**point** | [**Point**](Point.md) |  | 
 **timezone** | **String** |  | 
 **displayName** | **String** |  | 
 **country** | [**Country**](Country.md) |  | 

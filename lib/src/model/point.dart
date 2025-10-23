@@ -6,42 +6,42 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
-part 'location_point.g.dart';
+part 'point.g.dart';
 
-/// LocationPoint
+/// Point
 ///
 /// Properties:
 /// * [latitude] 
 /// * [longitude] 
 @BuiltValue()
-abstract class LocationPoint implements Built<LocationPoint, LocationPointBuilder> {
+abstract class Point implements Built<Point, PointBuilder> {
   @BuiltValueField(wireName: r'latitude')
   double get latitude;
 
   @BuiltValueField(wireName: r'longitude')
   double get longitude;
 
-  LocationPoint._();
+  Point._();
 
-  factory LocationPoint([void updates(LocationPointBuilder b)]) = _$LocationPoint;
+  factory Point([void updates(PointBuilder b)]) = _$Point;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(LocationPointBuilder b) => b;
+  static void _defaults(PointBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
-  static Serializer<LocationPoint> get serializer => _$LocationPointSerializer();
+  static Serializer<Point> get serializer => _$PointSerializer();
 }
 
-class _$LocationPointSerializer implements PrimitiveSerializer<LocationPoint> {
+class _$PointSerializer implements PrimitiveSerializer<Point> {
   @override
-  final Iterable<Type> types = const [LocationPoint, _$LocationPoint];
+  final Iterable<Type> types = const [Point, _$Point];
 
   @override
-  final String wireName = r'LocationPoint';
+  final String wireName = r'Point';
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    LocationPoint object, {
+    Point object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
     yield r'latitude';
@@ -59,7 +59,7 @@ class _$LocationPointSerializer implements PrimitiveSerializer<LocationPoint> {
   @override
   Object serialize(
     Serializers serializers,
-    LocationPoint object, {
+    Point object, {
     FullType specifiedType = FullType.unspecified,
   }) {
     return _serializeProperties(serializers, object, specifiedType: specifiedType).toList();
@@ -70,7 +70,7 @@ class _$LocationPointSerializer implements PrimitiveSerializer<LocationPoint> {
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
     required List<Object?> serializedList,
-    required LocationPointBuilder result,
+    required PointBuilder result,
     required List<Object?> unhandled,
   }) {
     for (var i = 0; i < serializedList.length; i += 2) {
@@ -100,12 +100,12 @@ class _$LocationPointSerializer implements PrimitiveSerializer<LocationPoint> {
   }
 
   @override
-  LocationPoint deserialize(
+  Point deserialize(
     Serializers serializers,
     Object serialized, {
     FullType specifiedType = FullType.unspecified,
   }) {
-    final result = LocationPointBuilder();
+    final result = PointBuilder();
     final serializedList = (serialized as Iterable<Object?>).toList();
     final unhandled = <Object?>[];
     _deserializeProperties(

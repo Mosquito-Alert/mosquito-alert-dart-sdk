@@ -3,6 +3,8 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/bites_create_location_point_longitude_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_location_point_latitude_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_counts_head_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_counts_non_field_errors_error_component.dart';
@@ -18,7 +20,7 @@ import 'package:mosquito_alert/src/model/bites_create_counts_left_arm_error_comp
 import 'package:mosquito_alert/src/model/bites_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_counts_right_leg_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_location_point_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_create_location_point_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_non_field_errors_error_component.dart';
@@ -36,7 +38,7 @@ part 'bites_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BitesCreateError implements Built<BitesCreateError, BitesCreateErrorBuilder> {
-  /// One Of [BitesCreateCountsChestErrorComponent], [BitesCreateCountsHeadErrorComponent], [BitesCreateCountsLeftArmErrorComponent], [BitesCreateCountsLeftLegErrorComponent], [BitesCreateCountsNonFieldErrorsErrorComponent], [BitesCreateCountsRightArmErrorComponent], [BitesCreateCountsRightLegErrorComponent], [BitesCreateCreatedAtErrorComponent], [BitesCreateEventEnvironmentErrorComponent], [BitesCreateEventMomentErrorComponent], [BitesCreateLocationNonFieldErrorsErrorComponent], [BitesCreateLocationPointErrorComponent], [BitesCreateLocationSourceErrorComponent], [BitesCreateNonFieldErrorsErrorComponent], [BitesCreateNoteErrorComponent], [BitesCreateSentAtErrorComponent], [BitesCreateTagsErrorComponent], [BitesCreateTagsINDEXErrorComponent]
+  /// One Of [BitesCreateCountsChestErrorComponent], [BitesCreateCountsHeadErrorComponent], [BitesCreateCountsLeftArmErrorComponent], [BitesCreateCountsLeftLegErrorComponent], [BitesCreateCountsNonFieldErrorsErrorComponent], [BitesCreateCountsRightArmErrorComponent], [BitesCreateCountsRightLegErrorComponent], [BitesCreateCreatedAtErrorComponent], [BitesCreateEventEnvironmentErrorComponent], [BitesCreateEventMomentErrorComponent], [BitesCreateLocationNonFieldErrorsErrorComponent], [BitesCreateLocationPointLatitudeErrorComponent], [BitesCreateLocationPointLongitudeErrorComponent], [BitesCreateLocationPointNonFieldErrorsErrorComponent], [BitesCreateLocationSourceErrorComponent], [BitesCreateNonFieldErrorsErrorComponent], [BitesCreateNoteErrorComponent], [BitesCreateSentAtErrorComponent], [BitesCreateTagsErrorComponent], [BitesCreateTagsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -53,7 +55,9 @@ abstract class BitesCreateError implements Built<BitesCreateError, BitesCreateEr
     r'event_environment': BitesCreateEventEnvironmentErrorComponent,
     r'event_moment': BitesCreateEventMomentErrorComponent,
     r'location.non_field_errors': BitesCreateLocationNonFieldErrorsErrorComponent,
-    r'location.point': BitesCreateLocationPointErrorComponent,
+    r'location.point.latitude': BitesCreateLocationPointLatitudeErrorComponent,
+    r'location.point.longitude': BitesCreateLocationPointLongitudeErrorComponent,
+    r'location.point.non_field_errors': BitesCreateLocationPointNonFieldErrorsErrorComponent,
     r'location.source': BitesCreateLocationSourceErrorComponent,
     r'non_field_errors': BitesCreateNonFieldErrorsErrorComponent,
     r'note': BitesCreateNoteErrorComponent,
@@ -108,8 +112,14 @@ extension BitesCreateErrorDiscriminatorExt on BitesCreateError {
         if (this is BitesCreateLocationNonFieldErrorsErrorComponent) {
             return r'location.non_field_errors';
         }
-        if (this is BitesCreateLocationPointErrorComponent) {
-            return r'location.point';
+        if (this is BitesCreateLocationPointLatitudeErrorComponent) {
+            return r'location.point.latitude';
+        }
+        if (this is BitesCreateLocationPointLongitudeErrorComponent) {
+            return r'location.point.longitude';
+        }
+        if (this is BitesCreateLocationPointNonFieldErrorsErrorComponent) {
+            return r'location.point.non_field_errors';
         }
         if (this is BitesCreateLocationSourceErrorComponent) {
             return r'location.source';
@@ -167,8 +177,14 @@ extension BitesCreateErrorBuilderDiscriminatorExt on BitesCreateErrorBuilder {
         if (this is BitesCreateLocationNonFieldErrorsErrorComponentBuilder) {
             return r'location.non_field_errors';
         }
-        if (this is BitesCreateLocationPointErrorComponentBuilder) {
-            return r'location.point';
+        if (this is BitesCreateLocationPointLatitudeErrorComponentBuilder) {
+            return r'location.point.latitude';
+        }
+        if (this is BitesCreateLocationPointLongitudeErrorComponentBuilder) {
+            return r'location.point.longitude';
+        }
+        if (this is BitesCreateLocationPointNonFieldErrorsErrorComponentBuilder) {
+            return r'location.point.non_field_errors';
         }
         if (this is BitesCreateLocationSourceErrorComponentBuilder) {
             return r'location.source';
@@ -228,7 +244,7 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
     final discIndex = serializedList.indexOf(BitesCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BitesCreateCountsChestErrorComponent, BitesCreateCountsHeadErrorComponent, BitesCreateCountsLeftArmErrorComponent, BitesCreateCountsLeftLegErrorComponent, BitesCreateCountsNonFieldErrorsErrorComponent, BitesCreateCountsRightArmErrorComponent, BitesCreateCountsRightLegErrorComponent, BitesCreateCreatedAtErrorComponent, BitesCreateEventEnvironmentErrorComponent, BitesCreateEventMomentErrorComponent, BitesCreateLocationNonFieldErrorsErrorComponent, BitesCreateLocationPointErrorComponent, BitesCreateLocationSourceErrorComponent, BitesCreateNonFieldErrorsErrorComponent, BitesCreateNoteErrorComponent, BitesCreateSentAtErrorComponent, BitesCreateTagsErrorComponent, BitesCreateTagsINDEXErrorComponent, ];
+    final oneOfTypes = [BitesCreateCountsChestErrorComponent, BitesCreateCountsHeadErrorComponent, BitesCreateCountsLeftArmErrorComponent, BitesCreateCountsLeftLegErrorComponent, BitesCreateCountsNonFieldErrorsErrorComponent, BitesCreateCountsRightArmErrorComponent, BitesCreateCountsRightLegErrorComponent, BitesCreateCreatedAtErrorComponent, BitesCreateEventEnvironmentErrorComponent, BitesCreateEventMomentErrorComponent, BitesCreateLocationNonFieldErrorsErrorComponent, BitesCreateLocationPointLatitudeErrorComponent, BitesCreateLocationPointLongitudeErrorComponent, BitesCreateLocationPointNonFieldErrorsErrorComponent, BitesCreateLocationSourceErrorComponent, BitesCreateNonFieldErrorsErrorComponent, BitesCreateNoteErrorComponent, BitesCreateSentAtErrorComponent, BitesCreateTagsErrorComponent, BitesCreateTagsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -309,12 +325,26 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
         ) as BitesCreateLocationNonFieldErrorsErrorComponent;
         oneOfType = BitesCreateLocationNonFieldErrorsErrorComponent;
         break;
-      case r'location.point':
+      case r'location.point.latitude':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
-          specifiedType: FullType(BitesCreateLocationPointErrorComponent),
-        ) as BitesCreateLocationPointErrorComponent;
-        oneOfType = BitesCreateLocationPointErrorComponent;
+          specifiedType: FullType(BitesCreateLocationPointLatitudeErrorComponent),
+        ) as BitesCreateLocationPointLatitudeErrorComponent;
+        oneOfType = BitesCreateLocationPointLatitudeErrorComponent;
+        break;
+      case r'location.point.longitude':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesCreateLocationPointLongitudeErrorComponent),
+        ) as BitesCreateLocationPointLongitudeErrorComponent;
+        oneOfType = BitesCreateLocationPointLongitudeErrorComponent;
+        break;
+      case r'location.point.non_field_errors':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesCreateLocationPointNonFieldErrorsErrorComponent),
+        ) as BitesCreateLocationPointNonFieldErrorsErrorComponent;
+        oneOfType = BitesCreateLocationPointNonFieldErrorsErrorComponent;
         break;
       case r'location.source':
         oneOfResult = serializers.deserialize(

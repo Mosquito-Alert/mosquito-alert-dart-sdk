@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(SimplifiedLocation, () {
-    // LocationPoint point
+    // Point point
     test('to test the property `point`', () async {
       // TODO
     });

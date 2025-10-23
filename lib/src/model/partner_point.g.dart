@@ -1,39 +1,39 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'location_point.dart';
+part of 'partner_point.dart';
 
 // **************************************************************************
 // BuiltValueGenerator
 // **************************************************************************
 
-class _$LocationPoint extends LocationPoint {
+class _$PartnerPoint extends PartnerPoint {
   @override
   final double latitude;
   @override
   final double longitude;
 
-  factory _$LocationPoint([void Function(LocationPointBuilder)? updates]) =>
-      (new LocationPointBuilder()..update(updates))._build();
+  factory _$PartnerPoint([void Function(PartnerPointBuilder)? updates]) =>
+      (new PartnerPointBuilder()..update(updates))._build();
 
-  _$LocationPoint._({required this.latitude, required this.longitude})
+  _$PartnerPoint._({required this.latitude, required this.longitude})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
-        latitude, r'LocationPoint', 'latitude');
+        latitude, r'PartnerPoint', 'latitude');
     BuiltValueNullFieldError.checkNotNull(
-        longitude, r'LocationPoint', 'longitude');
+        longitude, r'PartnerPoint', 'longitude');
   }
 
   @override
-  LocationPoint rebuild(void Function(LocationPointBuilder) updates) =>
+  PartnerPoint rebuild(void Function(PartnerPointBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  LocationPointBuilder toBuilder() => new LocationPointBuilder()..replace(this);
+  PartnerPointBuilder toBuilder() => new PartnerPointBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is LocationPoint &&
+    return other is PartnerPoint &&
         latitude == other.latitude &&
         longitude == other.longitude;
   }
@@ -49,16 +49,16 @@ class _$LocationPoint extends LocationPoint {
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'LocationPoint')
+    return (newBuiltValueToStringHelper(r'PartnerPoint')
           ..add('latitude', latitude)
           ..add('longitude', longitude))
         .toString();
   }
 }
 
-class LocationPointBuilder
-    implements Builder<LocationPoint, LocationPointBuilder> {
-  _$LocationPoint? _$v;
+class PartnerPointBuilder
+    implements Builder<PartnerPoint, PartnerPointBuilder> {
+  _$PartnerPoint? _$v;
 
   double? _latitude;
   double? get latitude => _$this._latitude;
@@ -68,11 +68,11 @@ class LocationPointBuilder
   double? get longitude => _$this._longitude;
   set longitude(double? longitude) => _$this._longitude = longitude;
 
-  LocationPointBuilder() {
-    LocationPoint._defaults(this);
+  PartnerPointBuilder() {
+    PartnerPoint._defaults(this);
   }
 
-  LocationPointBuilder get _$this {
+  PartnerPointBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
       _latitude = $v.latitude;
@@ -83,26 +83,26 @@ class LocationPointBuilder
   }
 
   @override
-  void replace(LocationPoint other) {
+  void replace(PartnerPoint other) {
     ArgumentError.checkNotNull(other, 'other');
-    _$v = other as _$LocationPoint;
+    _$v = other as _$PartnerPoint;
   }
 
   @override
-  void update(void Function(LocationPointBuilder)? updates) {
+  void update(void Function(PartnerPointBuilder)? updates) {
     if (updates != null) updates(this);
   }
 
   @override
-  LocationPoint build() => _build();
+  PartnerPoint build() => _build();
 
-  _$LocationPoint _build() {
+  _$PartnerPoint _build() {
     final _$result = _$v ??
-        new _$LocationPoint._(
+        new _$PartnerPoint._(
             latitude: BuiltValueNullFieldError.checkNotNull(
-                latitude, r'LocationPoint', 'latitude'),
+                latitude, r'PartnerPoint', 'latitude'),
             longitude: BuiltValueNullFieldError.checkNotNull(
-                longitude, r'LocationPoint', 'longitude'));
+                longitude, r'PartnerPoint', 'longitude'));
     replace(_$result);
     return _$result;
   }

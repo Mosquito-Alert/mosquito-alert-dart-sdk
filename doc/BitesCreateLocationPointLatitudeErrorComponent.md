@@ -1,4 +1,4 @@
-# mosquito_alert.model.BitesCreateLocationPointErrorComponent
+# mosquito_alert.model.BitesCreateLocationPointLatitudeErrorComponent
 
 ## Load the model package
 ```dart

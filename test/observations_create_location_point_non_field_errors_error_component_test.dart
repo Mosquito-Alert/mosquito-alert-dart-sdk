@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for BreedingsitesCreateLocationPointErrorComponent
+// tests for ObservationsCreateLocationPointNonFieldErrorsErrorComponent
 void main() {
-  final instance = BreedingsitesCreateLocationPointErrorComponentBuilder();
+  final instance = ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder();
   // TODO add properties to the builder and call build()
 
-  group(BreedingsitesCreateLocationPointErrorComponent, () {
+  group(ObservationsCreateLocationPointNonFieldErrorsErrorComponent, () {
     // String attr
     test('to test the property `attr`', () async {
       // TODO

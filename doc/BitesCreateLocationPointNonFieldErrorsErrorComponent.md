@@ -1,4 +1,4 @@
-# mosquito_alert.model.BreedingsitesCreateLocationPointErrorComponent
+# mosquito_alert.model.BitesCreateLocationPointNonFieldErrorsErrorComponent
 
 ## Load the model package
 ```dart

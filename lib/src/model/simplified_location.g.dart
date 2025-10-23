@@ -4801,7 +4801,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
 
 class _$SimplifiedLocation extends SimplifiedLocation {
   @override
-  final LocationPoint point;
+  final Point point;
   @override
   final SimplifiedLocationTimezoneEnum? timezone;
   @override
@@ -4865,10 +4865,9 @@ class SimplifiedLocationBuilder
     implements Builder<SimplifiedLocation, SimplifiedLocationBuilder> {
   _$SimplifiedLocation? _$v;
 
-  LocationPointBuilder? _point;
-  LocationPointBuilder get point =>
-      _$this._point ??= new LocationPointBuilder();
-  set point(LocationPointBuilder? point) => _$this._point = point;
+  PointBuilder? _point;
+  PointBuilder get point => _$this._point ??= new PointBuilder();
+  set point(PointBuilder? point) => _$this._point = point;
 
   SimplifiedLocationTimezoneEnum? _timezone;
   SimplifiedLocationTimezoneEnum? get timezone => _$this._timezone;

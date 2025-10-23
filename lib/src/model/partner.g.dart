@@ -10,7 +10,7 @@ class _$Partner extends Partner {
   @override
   final int id;
   @override
-  final LocationPoint point;
+  final PartnerPoint point;
   @override
   final String description;
   @override
@@ -78,10 +78,9 @@ class PartnerBuilder implements Builder<Partner, PartnerBuilder> {
   int? get id => _$this._id;
   set id(int? id) => _$this._id = id;
 
-  LocationPointBuilder? _point;
-  LocationPointBuilder get point =>
-      _$this._point ??= new LocationPointBuilder();
-  set point(LocationPointBuilder? point) => _$this._point = point;
+  PartnerPointBuilder? _point;
+  PartnerPointBuilder get point => _$this._point ??= new PartnerPointBuilder();
+  set point(PartnerPointBuilder? point) => _$this._point = point;
 
   String? _description;
   String? get description => _$this._description;

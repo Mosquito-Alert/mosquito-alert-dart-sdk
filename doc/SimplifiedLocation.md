@@ -8,7 +8,7 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**point** | [**LocationPoint**](LocationPoint.md) |  | 
+**point** | [**Point**](Point.md) |  | 
 **timezone** | **String** |  | 
 **displayName** | **String** |  | 
 **country** | [**Country**](Country.md) |  | 

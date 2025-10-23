@@ -8,6 +8,7 @@ import 'package:mosquito_alert/src/model/observations_create_note_error_componen
 import 'package:mosquito_alert/src/model/observations_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_location_point_latitude_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_location_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_photos_index_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_event_environment_error_component.dart';
@@ -17,7 +18,8 @@ import 'package:mosquito_alert/src/model/observations_create_non_field_errors_er
 import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_specie_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_photos_error_component.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/observations_create_location_point_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_location_point_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_create_location_point_longitude_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_legs_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_abdomen_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_sent_at_error_component.dart';
@@ -36,7 +38,7 @@ part 'observations_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class ObservationsCreateError implements Built<ObservationsCreateError, ObservationsCreateErrorBuilder> {
-  /// One Of [ObservationsCreateCreatedAtErrorComponent], [ObservationsCreateEventEnvironmentErrorComponent], [ObservationsCreateEventMomentErrorComponent], [ObservationsCreateLocationNonFieldErrorsErrorComponent], [ObservationsCreateLocationPointErrorComponent], [ObservationsCreateLocationSourceErrorComponent], [ObservationsCreateMosquitoAppearanceAbdomenErrorComponent], [ObservationsCreateMosquitoAppearanceLegsErrorComponent], [ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent], [ObservationsCreateMosquitoAppearanceSpecieErrorComponent], [ObservationsCreateMosquitoAppearanceThoraxErrorComponent], [ObservationsCreateNonFieldErrorsErrorComponent], [ObservationsCreateNoteErrorComponent], [ObservationsCreatePhotosErrorComponent], [ObservationsCreatePhotosINDEXErrorComponent], [ObservationsCreateSentAtErrorComponent], [ObservationsCreateTagsErrorComponent], [ObservationsCreateTagsINDEXErrorComponent]
+  /// One Of [ObservationsCreateCreatedAtErrorComponent], [ObservationsCreateEventEnvironmentErrorComponent], [ObservationsCreateEventMomentErrorComponent], [ObservationsCreateLocationNonFieldErrorsErrorComponent], [ObservationsCreateLocationPointLatitudeErrorComponent], [ObservationsCreateLocationPointLongitudeErrorComponent], [ObservationsCreateLocationPointNonFieldErrorsErrorComponent], [ObservationsCreateLocationSourceErrorComponent], [ObservationsCreateMosquitoAppearanceAbdomenErrorComponent], [ObservationsCreateMosquitoAppearanceLegsErrorComponent], [ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent], [ObservationsCreateMosquitoAppearanceSpecieErrorComponent], [ObservationsCreateMosquitoAppearanceThoraxErrorComponent], [ObservationsCreateNonFieldErrorsErrorComponent], [ObservationsCreateNoteErrorComponent], [ObservationsCreatePhotosErrorComponent], [ObservationsCreatePhotosINDEXErrorComponent], [ObservationsCreateSentAtErrorComponent], [ObservationsCreateTagsErrorComponent], [ObservationsCreateTagsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -46,7 +48,9 @@ abstract class ObservationsCreateError implements Built<ObservationsCreateError,
     r'event_environment': ObservationsCreateEventEnvironmentErrorComponent,
     r'event_moment': ObservationsCreateEventMomentErrorComponent,
     r'location.non_field_errors': ObservationsCreateLocationNonFieldErrorsErrorComponent,
-    r'location.point': ObservationsCreateLocationPointErrorComponent,
+    r'location.point.latitude': ObservationsCreateLocationPointLatitudeErrorComponent,
+    r'location.point.longitude': ObservationsCreateLocationPointLongitudeErrorComponent,
+    r'location.point.non_field_errors': ObservationsCreateLocationPointNonFieldErrorsErrorComponent,
     r'location.source': ObservationsCreateLocationSourceErrorComponent,
     r'mosquito_appearance.abdomen': ObservationsCreateMosquitoAppearanceAbdomenErrorComponent,
     r'mosquito_appearance.legs': ObservationsCreateMosquitoAppearanceLegsErrorComponent,
@@ -87,8 +91,14 @@ extension ObservationsCreateErrorDiscriminatorExt on ObservationsCreateError {
         if (this is ObservationsCreateLocationNonFieldErrorsErrorComponent) {
             return r'location.non_field_errors';
         }
-        if (this is ObservationsCreateLocationPointErrorComponent) {
-            return r'location.point';
+        if (this is ObservationsCreateLocationPointLatitudeErrorComponent) {
+            return r'location.point.latitude';
+        }
+        if (this is ObservationsCreateLocationPointLongitudeErrorComponent) {
+            return r'location.point.longitude';
+        }
+        if (this is ObservationsCreateLocationPointNonFieldErrorsErrorComponent) {
+            return r'location.point.non_field_errors';
         }
         if (this is ObservationsCreateLocationSourceErrorComponent) {
             return r'location.source';
@@ -146,8 +156,14 @@ extension ObservationsCreateErrorBuilderDiscriminatorExt on ObservationsCreateEr
         if (this is ObservationsCreateLocationNonFieldErrorsErrorComponentBuilder) {
             return r'location.non_field_errors';
         }
-        if (this is ObservationsCreateLocationPointErrorComponentBuilder) {
-            return r'location.point';
+        if (this is ObservationsCreateLocationPointLatitudeErrorComponentBuilder) {
+            return r'location.point.latitude';
+        }
+        if (this is ObservationsCreateLocationPointLongitudeErrorComponentBuilder) {
+            return r'location.point.longitude';
+        }
+        if (this is ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder) {
+            return r'location.point.non_field_errors';
         }
         if (this is ObservationsCreateLocationSourceErrorComponentBuilder) {
             return r'location.source';
@@ -228,7 +244,7 @@ class _$ObservationsCreateErrorSerializer implements PrimitiveSerializer<Observa
     final discIndex = serializedList.indexOf(ObservationsCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [ObservationsCreateCreatedAtErrorComponent, ObservationsCreateEventEnvironmentErrorComponent, ObservationsCreateEventMomentErrorComponent, ObservationsCreateLocationNonFieldErrorsErrorComponent, ObservationsCreateLocationPointErrorComponent, ObservationsCreateLocationSourceErrorComponent, ObservationsCreateMosquitoAppearanceAbdomenErrorComponent, ObservationsCreateMosquitoAppearanceLegsErrorComponent, ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent, ObservationsCreateMosquitoAppearanceSpecieErrorComponent, ObservationsCreateMosquitoAppearanceThoraxErrorComponent, ObservationsCreateNonFieldErrorsErrorComponent, ObservationsCreateNoteErrorComponent, ObservationsCreatePhotosErrorComponent, ObservationsCreatePhotosINDEXErrorComponent, ObservationsCreateSentAtErrorComponent, ObservationsCreateTagsErrorComponent, ObservationsCreateTagsINDEXErrorComponent, ];
+    final oneOfTypes = [ObservationsCreateCreatedAtErrorComponent, ObservationsCreateEventEnvironmentErrorComponent, ObservationsCreateEventMomentErrorComponent, ObservationsCreateLocationNonFieldErrorsErrorComponent, ObservationsCreateLocationPointLatitudeErrorComponent, ObservationsCreateLocationPointLongitudeErrorComponent, ObservationsCreateLocationPointNonFieldErrorsErrorComponent, ObservationsCreateLocationSourceErrorComponent, ObservationsCreateMosquitoAppearanceAbdomenErrorComponent, ObservationsCreateMosquitoAppearanceLegsErrorComponent, ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent, ObservationsCreateMosquitoAppearanceSpecieErrorComponent, ObservationsCreateMosquitoAppearanceThoraxErrorComponent, ObservationsCreateNonFieldErrorsErrorComponent, ObservationsCreateNoteErrorComponent, ObservationsCreatePhotosErrorComponent, ObservationsCreatePhotosINDEXErrorComponent, ObservationsCreateSentAtErrorComponent, ObservationsCreateTagsErrorComponent, ObservationsCreateTagsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -260,12 +276,26 @@ class _$ObservationsCreateErrorSerializer implements PrimitiveSerializer<Observa
         ) as ObservationsCreateLocationNonFieldErrorsErrorComponent;
         oneOfType = ObservationsCreateLocationNonFieldErrorsErrorComponent;
         break;
-      case r'location.point':
+      case r'location.point.latitude':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
-          specifiedType: FullType(ObservationsCreateLocationPointErrorComponent),
-        ) as ObservationsCreateLocationPointErrorComponent;
-        oneOfType = ObservationsCreateLocationPointErrorComponent;
+          specifiedType: FullType(ObservationsCreateLocationPointLatitudeErrorComponent),
+        ) as ObservationsCreateLocationPointLatitudeErrorComponent;
+        oneOfType = ObservationsCreateLocationPointLatitudeErrorComponent;
+        break;
+      case r'location.point.longitude':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsCreateLocationPointLongitudeErrorComponent),
+        ) as ObservationsCreateLocationPointLongitudeErrorComponent;
+        oneOfType = ObservationsCreateLocationPointLongitudeErrorComponent;
+        break;
+      case r'location.point.non_field_errors':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsCreateLocationPointNonFieldErrorsErrorComponent),
+        ) as ObservationsCreateLocationPointNonFieldErrorsErrorComponent;
+        oneOfType = ObservationsCreateLocationPointNonFieldErrorsErrorComponent;
         break;
       case r'location.source':
         oneOfResult = serializers.deserialize(

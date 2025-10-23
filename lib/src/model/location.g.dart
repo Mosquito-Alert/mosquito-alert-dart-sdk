@@ -4315,7 +4315,7 @@ class _$Location extends Location {
   @override
   final LocationSource_Enum source_;
   @override
-  final LocationPoint point;
+  final Point point;
   @override
   final LocationTimezoneEnum? timezone;
   @override
@@ -4394,10 +4394,9 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
   LocationSource_Enum? get source_ => _$this._source_;
   set source_(LocationSource_Enum? source_) => _$this._source_ = source_;
 
-  LocationPointBuilder? _point;
-  LocationPointBuilder get point =>
-      _$this._point ??= new LocationPointBuilder();
-  set point(LocationPointBuilder? point) => _$this._point = point;
+  PointBuilder? _point;
+  PointBuilder get point => _$this._point ??= new PointBuilder();
+  set point(PointBuilder? point) => _$this._point = point;
 
   LocationTimezoneEnum? _timezone;
   LocationTimezoneEnum? get timezone => _$this._timezone;

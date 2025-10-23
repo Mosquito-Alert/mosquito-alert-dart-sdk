@@ -4,7 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/location_point.dart';
+import 'package:mosquito_alert/src/model/point_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -23,7 +23,7 @@ abstract class LocationRequest implements Built<LocationRequest, LocationRequest
   // enum source_Enum {  auto,  manual,  };
 
   @BuiltValueField(wireName: r'point')
-  LocationPoint get point;
+  PointRequest get point;
 
   LocationRequest._();
 
@@ -56,7 +56,7 @@ class _$LocationRequestSerializer implements PrimitiveSerializer<LocationRequest
     yield r'point';
     yield serializers.serialize(
       object.point,
-      specifiedType: const FullType(LocationPoint),
+      specifiedType: const FullType(PointRequest),
     );
   }
 
@@ -91,8 +91,8 @@ class _$LocationRequestSerializer implements PrimitiveSerializer<LocationRequest
         case r'point':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(LocationPoint),
-          ) as LocationPoint;
+            specifiedType: const FullType(PointRequest),
+          ) as PointRequest;
           result.point.replace(valueDes);
           break;
         default:

@@ -12,7 +12,7 @@ void main() {
       // TODO
     });
 
-    // LocationPoint point
+    // PartnerPoint point
     test('to test the property `point`', () async {
       // TODO
     });
