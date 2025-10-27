@@ -18,7 +18,7 @@ part 'simplified_observation_with_photos.g.dart';
 /// * [shortId] 
 /// * [userUuid] 
 /// * [createdAt] 
-/// * [createdAtLocal] - The date and time when the record was created, displayed in the local timezone specified for this entry.
+/// * [createdAtLocal] - The date and time when the record was created, displayed without timezone field.
 /// * [receivedAt] 
 /// * [location] 
 /// * [note] - Note user attached to report.
@@ -37,7 +37,7 @@ abstract class SimplifiedObservationWithPhotos implements Built<SimplifiedObserv
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
 
-  /// The date and time when the record was created, displayed in the local timezone specified for this entry.
+  /// The date and time when the record was created, displayed without timezone field.
   @BuiltValueField(wireName: r'created_at_local')
   DateTime get createdAtLocal;
 

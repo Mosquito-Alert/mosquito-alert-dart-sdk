@@ -33,7 +33,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getUsersApi();
-final String uuid = uuid_example; // String | 
+final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final PatchedUserRequest patchedUserRequest = ; // PatchedUserRequest | 
 
 try {
@@ -84,7 +84,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getUsersApi();
-final String uuid = uuid_example; // String | 
+final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
     final response = api.retrieve(uuid);
@@ -180,7 +180,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getUsersApi();
-final String uuid = uuid_example; // String | 
+final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 final UserRequest userRequest = ; // UserRequest | 
 
 try {

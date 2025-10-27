@@ -18,7 +18,7 @@ part 'breeding_site.g.dart';
 /// * [shortId] 
 /// * [userUuid] 
 /// * [createdAt] 
-/// * [createdAtLocal] - The date and time when the record was created, displayed in the local timezone specified for this entry.
+/// * [createdAtLocal] - The date and time when the record was created, displayed without timezone field.
 /// * [sentAt] 
 /// * [receivedAt] 
 /// * [updatedAt] - Date and time when the report was last modified
@@ -46,7 +46,7 @@ abstract class BreedingSite implements Built<BreedingSite, BreedingSiteBuilder> 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
 
-  /// The date and time when the record was created, displayed in the local timezone specified for this entry.
+  /// The date and time when the record was created, displayed without timezone field.
   @BuiltValueField(wireName: r'created_at_local')
   DateTime get createdAtLocal;
 

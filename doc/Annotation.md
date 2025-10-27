@@ -9,7 +9,7 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | 
-**observationUuid** | **String** | UUID randomly generated on phone to identify each unique report version. Must be exactly 36 characters (32 hex digits plus 4 hyphens). | 
+**observationUuid** | **String** |  | 
 **user** | [**SimpleAnnotatorUser**](SimpleAnnotatorUser.md) |  | 
 **bestPhoto** | [**SimplePhoto**](SimplePhoto.md) |  | 
 **classification** | [**AnnotationClassification**](AnnotationClassification.md) |  | 

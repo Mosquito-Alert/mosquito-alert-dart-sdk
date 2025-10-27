@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **shortId** | **String** |  | 
 **userUuid** | **String** |  | 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
-**createdAtLocal** | [**DateTime**](DateTime.md) | The date and time when the record was created, displayed in the local timezone specified for this entry. | 
+**createdAtLocal** | [**DateTime**](DateTime.md) | The date and time when the record was created, displayed without timezone field. | 
 **sentAt** | [**DateTime**](DateTime.md) |  | 
 **receivedAt** | [**DateTime**](DateTime.md) |  | 
 **updatedAt** | [**DateTime**](DateTime.md) | Date and time when the report was last modified | 

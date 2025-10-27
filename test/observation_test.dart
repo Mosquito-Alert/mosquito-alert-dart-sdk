@@ -27,7 +27,7 @@ void main() {
       // TODO
     });
 
-    // The date and time when the record was created, displayed in the local timezone specified for this entry.
+    // The date and time when the record was created, displayed without timezone field.
     // DateTime createdAtLocal
     test('to test the property `createdAtLocal`', () async {
       // TODO

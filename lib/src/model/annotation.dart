@@ -18,7 +18,7 @@ part 'annotation.g.dart';
 ///
 /// Properties:
 /// * [id] 
-/// * [observationUuid] - UUID randomly generated on phone to identify each unique report version. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
+/// * [observationUuid] 
 /// * [user] 
 /// * [bestPhoto] 
 /// * [classification] 
@@ -35,7 +35,6 @@ abstract class Annotation implements Built<Annotation, AnnotationBuilder> {
   @BuiltValueField(wireName: r'id')
   int get id;
 
-  /// UUID randomly generated on phone to identify each unique report version. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
   @BuiltValueField(wireName: r'observation_uuid')
   String get observationUuid;
 

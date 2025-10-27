@@ -12,7 +12,6 @@ void main() {
       // TODO
     });
 
-    // UUID randomly generated on phone to identify each unique report version. Must be exactly 36 characters (32 hex digits plus 4 hyphens).
     // String observationUuid
     test('to test the property `observationUuid`', () async {
       // TODO
