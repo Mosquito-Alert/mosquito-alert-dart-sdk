@@ -25,7 +25,7 @@ abstract class CreateAgreeReviewRequest implements Built<CreateAgreeReviewReques
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(CreateAgreeReviewRequestBuilder b) => b
-      ..action = const CreateAgreeReviewRequestActionEnum._('agree');
+      ..action = CreateAgreeReviewRequestActionEnum.valueOf('agree');
 
   @BuiltValueSerializer(custom: true)
   static Serializer<CreateAgreeReviewRequest> get serializer => _$CreateAgreeReviewRequestSerializer();

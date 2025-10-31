@@ -35,7 +35,7 @@ abstract class TopicNotificationCreateRequest implements Built<TopicNotification
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(TopicNotificationCreateRequestBuilder b) => b
-      ..receiverType = const TopicNotificationCreateRequestReceiverTypeEnum._('topic');
+      ..receiverType = TopicNotificationCreateRequestReceiverTypeEnum.valueOf('topic');
 
   @BuiltValueSerializer(custom: true)
   static Serializer<TopicNotificationCreateRequest> get serializer => _$TopicNotificationCreateRequestSerializer();
