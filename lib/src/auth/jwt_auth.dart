@@ -14,7 +14,7 @@ class JwtAuthInterceptor extends QueuedInterceptor {
 
   final Future<String> Function() getAccessToken;
   final Future<String> Function() getRefreshToken;
-  final void Function(String newAccessToken)? onTokenUpdateCallback;
+  final Future<void> Function(String newAccessToken)? onTokenUpdateCallback;
 
   JwtAuthInterceptor({
     required BaseOptions options,
@@ -57,21 +57,23 @@ class JwtAuthInterceptor extends QueuedInterceptor {
                   (builder) => builder..refresh = refreshToken));
       final String? newToken = tokenRefreshResponse.data?.access;
 
-      if (newToken != null) {
-        // Trigger the callback if it's provided
-        if (onTokenUpdateCallback != null) {
-          onTokenUpdateCallback!(newToken);
-        }
+      if (newToken == null) {
+        return super.onError(err, handler);
+      }
+
+      // Persist updated token
+      if (onTokenUpdateCallback != null) {
+        await onTokenUpdateCallback!(newToken);
       }
     } catch (_) {
-      handler.reject(RevokedTokenException(requestOptions: err.requestOptions));
-      return;
+      return handler
+          .reject(RevokedTokenException(requestOptions: err.requestOptions));
     }
 
     try {
       // Retry request
       err.requestOptions.headers.addAll(await _buildHeaders());
-      handler.resolve(await _dio.fetch(err.requestOptions));
+      return handler.resolve(await _dio.fetch(err.requestOptions));
     } catch (_) {
       return super.onError(err, handler);
     }
