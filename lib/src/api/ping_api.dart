@@ -8,16 +8,16 @@ import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
 
-class StatusApi {
+class PingApi {
 
   final Dio _dio;
 
   final Serializers _serializers;
 
-  const StatusApi(this._dio, this._serializers);
+  const PingApi(this._dio, this._serializers);
 
   /// retrieve
-  /// 
+  /// Simple ping endpoint to check API connectivity
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -37,7 +37,7 @@ class StatusApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/status/';
+    final _path = r'/ping/';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

@@ -22,7 +22,7 @@ import 'package:mosquito_alert/src/api/observations_api.dart';
 import 'package:mosquito_alert/src/api/partners_api.dart';
 import 'package:mosquito_alert/src/api/permissions_api.dart';
 import 'package:mosquito_alert/src/api/photos_api.dart';
-import 'package:mosquito_alert/src/api/status_api.dart';
+import 'package:mosquito_alert/src/api/ping_api.dart';
 import 'package:mosquito_alert/src/api/taxa_api.dart';
 import 'package:mosquito_alert/src/api/users_api.dart';
 
@@ -158,10 +158,10 @@ class MosquitoAlert {
     return PhotosApi(dio, serializers);
   }
 
-  /// Get StatusApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get PingApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  StatusApi getStatusApi() {
-    return StatusApi(dio, serializers);
+  PingApi getPingApi() {
+    return PingApi(dio, serializers);
   }
 
   /// Get TaxaApi instance, base route and serializer can be overridden by a given but be careful,

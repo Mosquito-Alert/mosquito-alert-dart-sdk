@@ -1,4 +1,4 @@
-# mosquito_alert.api.StatusApi
+# mosquito_alert.api.PingApi
 
 ## Load the API package
 ```dart
@@ -9,7 +9,7 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**retrieve**](StatusApi.md#retrieve) | **GET** /status/ | 
+[**retrieve**](PingApi.md#retrieve) | **GET** /ping/ | 
 
 
 # **retrieve**
@@ -17,16 +17,18 @@ Method | HTTP request | Description
 
 
 
+Simple ping endpoint to check API connectivity
+
 ### Example
 ```dart
 import 'package:mosquito_alert/api.dart';
 
-final api = MosquitoAlert().getStatusApi();
+final api = MosquitoAlert().getPingApi();
 
 try {
     api.retrieve();
 } on DioException catch (e) {
-    print('Exception when calling StatusApi->retrieve: $e\n');
+    print('Exception when calling PingApi->retrieve: $e\n');
 }
 ```
 
