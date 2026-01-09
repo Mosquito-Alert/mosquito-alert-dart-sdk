@@ -23,6 +23,7 @@ export 'package:mosquito_alert/src/api/observations_api.dart';
 export 'package:mosquito_alert/src/api/partners_api.dart';
 export 'package:mosquito_alert/src/api/permissions_api.dart';
 export 'package:mosquito_alert/src/api/photos_api.dart';
+export 'package:mosquito_alert/src/api/status_api.dart';
 export 'package:mosquito_alert/src/api/taxa_api.dart';
 export 'package:mosquito_alert/src/api/users_api.dart';
 

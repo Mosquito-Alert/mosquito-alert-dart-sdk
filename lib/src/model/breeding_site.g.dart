@@ -131,7 +131,7 @@ class _$BreedingSite extends BreedingSite {
   @override
   final BuiltList<SimplePhoto> photos;
   @override
-  final BreedingSiteSiteTypeEnum? siteType;
+  final BreedingSiteSiteTypeEnum siteType;
   @override
   final bool? hasWater;
   @override
@@ -158,7 +158,7 @@ class _$BreedingSite extends BreedingSite {
       this.tags,
       required this.published,
       required this.photos,
-      this.siteType,
+      required this.siteType,
       this.hasWater,
       this.inPublicArea,
       this.hasNearMosquitoes,
@@ -182,6 +182,8 @@ class _$BreedingSite extends BreedingSite {
     BuiltValueNullFieldError.checkNotNull(
         published, r'BreedingSite', 'published');
     BuiltValueNullFieldError.checkNotNull(photos, r'BreedingSite', 'photos');
+    BuiltValueNullFieldError.checkNotNull(
+        siteType, r'BreedingSite', 'siteType');
   }
 
   @override
@@ -416,7 +418,7 @@ class BreedingSiteBuilder
               published: BuiltValueNullFieldError.checkNotNull(
                   published, r'BreedingSite', 'published'),
               photos: photos.build(),
-              siteType: siteType,
+              siteType: BuiltValueNullFieldError.checkNotNull(siteType, r'BreedingSite', 'siteType'),
               hasWater: hasWater,
               inPublicArea: inPublicArea,
               hasNearMosquitoes: hasNearMosquitoes,

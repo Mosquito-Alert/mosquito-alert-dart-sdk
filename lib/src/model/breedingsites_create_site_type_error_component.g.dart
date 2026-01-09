@@ -40,6 +40,9 @@ const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
     _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_ =
     const BreedingsitesCreateSiteTypeErrorComponentCodeEnum._('null_');
 const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
+    _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_required_ =
+    const BreedingsitesCreateSiteTypeErrorComponentCodeEnum._('required_');
+const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
     _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_unknownDefaultOpenApi =
     const BreedingsitesCreateSiteTypeErrorComponentCodeEnum._(
         'unknownDefaultOpenApi');
@@ -51,6 +54,8 @@ BreedingsitesCreateSiteTypeErrorComponentCodeEnum
       return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_invalidChoice;
     case 'null_':
       return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_;
+    case 'required_':
+      return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_required_;
     case 'unknownDefaultOpenApi':
       return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -63,6 +68,7 @@ final BuiltSet<BreedingsitesCreateSiteTypeErrorComponentCodeEnum>
         BreedingsitesCreateSiteTypeErrorComponentCodeEnum>(const <BreedingsitesCreateSiteTypeErrorComponentCodeEnum>[
   _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_invalidChoice,
   _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_,
+  _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_required_,
   _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -112,11 +118,13 @@ class _$BreedingsitesCreateSiteTypeErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
+    'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
+    'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

@@ -29,9 +29,9 @@ class BreedingSitesApi {
   /// * [sentAt] 
   /// * [location] 
   /// * [photos] 
+  /// * [siteType] - Breeding site type.
   /// * [note] - Note user attached to report.
   /// * [tags] 
-  /// * [siteType] - Breeding site type.
   /// * [hasWater] - Either if the user perceived water in the breeding site.
   /// * [inPublicArea] - Either if the breeding site is found in a public area.
   /// * [hasNearMosquitoes] - Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
@@ -50,9 +50,9 @@ class BreedingSitesApi {
     required DateTime sentAt,
     required LocationRequest location,
     required BuiltList<MultipartFile> photos,
+    required String siteType,
     String? note,
     BuiltList<String>? tags,
-    String? siteType,
     bool? hasWater,
     bool? inPublicArea,
     bool? hasNearMosquitoes,
@@ -104,7 +104,7 @@ class BreedingSitesApi {
         r'note': encodeFormParameter(_serializers, note, const FullType(String)),
         if (tags != null) r'tags': encodeFormParameter(_serializers, tags, const FullType(BuiltList, [FullType(String)])),
         r'photos': photos.toList(),
-        if (siteType != null) r'site_type': encodeFormParameter(_serializers, siteType, const FullType(String)),
+        r'site_type': encodeFormParameter(_serializers, siteType, const FullType(String)),
         r'has_water': encodeFormParameter(_serializers, hasWater, const FullType(bool)),
         r'in_public_area': encodeFormParameter(_serializers, inPublicArea, const FullType(bool)),
         r'has_near_mosquitoes': encodeFormParameter(_serializers, hasNearMosquitoes, const FullType(bool)),

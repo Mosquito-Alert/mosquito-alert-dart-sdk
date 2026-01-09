@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **published** | **bool** |  | 
 **photos** | [**BuiltList&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | 
-**siteType** | **String** | Breeding site type. | [optional] 
+**siteType** | **String** | Breeding site type. | 
 **hasWater** | **bool** | Either if the user perceived water in the breeding site. | [optional] 
 **inPublicArea** | **bool** | Either if the breeding site is found in a public area. | [optional] 
 **hasNearMosquitoes** | **bool** | Either if the user perceived mosquitoes near the breeding site (less than 10 meters). | [optional] 

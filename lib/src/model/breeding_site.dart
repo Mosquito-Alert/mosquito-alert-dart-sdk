@@ -78,7 +78,7 @@ abstract class BreedingSite implements Built<BreedingSite, BreedingSiteBuilder> 
 
   /// Breeding site type.
   @BuiltValueField(wireName: r'site_type')
-  BreedingSiteSiteTypeEnum? get siteType;
+  BreedingSiteSiteTypeEnum get siteType;
   // enum siteTypeEnum {  basin,  bucket,  fountain,  small_container,  storm_drain,  well,  other,  };
 
   /// Either if the user perceived water in the breeding site.
@@ -189,13 +189,11 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
       object.photos,
       specifiedType: const FullType(BuiltList, [FullType(SimplePhoto)]),
     );
-    if (object.siteType != null) {
-      yield r'site_type';
-      yield serializers.serialize(
-        object.siteType,
-        specifiedType: const FullType(BreedingSiteSiteTypeEnum),
-      );
-    }
+    yield r'site_type';
+    yield serializers.serialize(
+      object.siteType,
+      specifiedType: const FullType(BreedingSiteSiteTypeEnum),
+    );
     if (object.hasWater != null) {
       yield r'has_water';
       yield serializers.serialize(

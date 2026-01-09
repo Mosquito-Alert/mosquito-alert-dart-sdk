@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 
 # **create**
-> BreedingSite create(createdAt, sentAt, location, photos, note, tags, siteType, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae)
+> BreedingSite create(createdAt, sentAt, location, photos, siteType, note, tags, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae)
 
 
 
@@ -38,16 +38,16 @@ final DateTime createdAt = 2013-10-20T19:20:30+01:00; // DateTime |
 final DateTime sentAt = 2013-10-20T19:20:30+01:00; // DateTime | 
 final LocationRequest location = ; // LocationRequest | 
 final BuiltList<MultipartFile> photos = /path/to/file.txt; // BuiltList<MultipartFile> | 
+final String siteType = siteType_example; // String | Breeding site type.
 final String note = note_example; // String | Note user attached to report.
 final BuiltList<String> tags = ; // BuiltList<String> | 
-final String siteType = siteType_example; // String | Breeding site type.
 final bool hasWater = true; // bool | Either if the user perceived water in the breeding site.
 final bool inPublicArea = true; // bool | Either if the breeding site is found in a public area.
 final bool hasNearMosquitoes = true; // bool | Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
 final bool hasLarvae = true; // bool | Either if the user perceived larvaes the breeding site.
 
 try {
-    final response = api.create(createdAt, sentAt, location, photos, note, tags, siteType, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae);
+    final response = api.create(createdAt, sentAt, location, photos, siteType, note, tags, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae);
     print(response);
 } catch on DioException (e) {
     print('Exception when calling BreedingSitesApi->create: $e\n');
@@ -62,9 +62,9 @@ Name | Type | Description  | Notes
  **sentAt** | **DateTime**|  | 
  **location** | [**LocationRequest**](LocationRequest.md)|  | 
  **photos** | [**BuiltList&lt;MultipartFile&gt;**](MultipartFile.md)|  | 
+ **siteType** | **String**| Breeding site type. | 
  **note** | **String**| Note user attached to report. | [optional] 
  **tags** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
- **siteType** | **String**| Breeding site type. | [optional] 
  **hasWater** | **bool**| Either if the user perceived water in the breeding site. | [optional] 
  **inPublicArea** | **bool**| Either if the breeding site is found in a public area. | [optional] 
  **hasNearMosquitoes** | **bool**| Either if the user perceived mosquitoes near the breeding site (less than 10 meters). | [optional] 
