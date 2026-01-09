@@ -40,7 +40,7 @@ final MetaNotificationRequest metaNotificationRequest = ; // MetaNotificationReq
 try {
     final response = api.create(metaNotificationRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling NotificationsApi->create: $e\n');
 }
 ```
@@ -92,7 +92,7 @@ final int pageSize = 56; // int | Number of results to return per page.
 try {
     final response = api.list(isRead, orderBy, page, pageSize);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling NotificationsApi->list: $e\n');
 }
 ```
@@ -149,7 +149,7 @@ final int pageSize = 56; // int | Number of results to return per page.
 try {
     final response = api.listMine(isRead, orderBy, page, pageSize);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling NotificationsApi->listMine: $e\n');
 }
 ```
@@ -202,7 +202,7 @@ final PatchedNotificationRequest patchedNotificationRequest = ; // PatchedNotifi
 try {
     final response = api.partialUpdate(id, patchedNotificationRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling NotificationsApi->partialUpdate: $e\n');
 }
 ```
@@ -252,7 +252,7 @@ final int id = 56; // int | A unique integer value identifying this notification
 try {
     final response = api.retrieve(id);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling NotificationsApi->retrieve: $e\n');
 }
 ```
@@ -302,7 +302,7 @@ final NotificationRequest notificationRequest = ; // NotificationRequest |
 try {
     final response = api.update(id, notificationRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling NotificationsApi->update: $e\n');
 }
 ```

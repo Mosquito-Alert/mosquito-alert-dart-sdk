@@ -40,7 +40,7 @@ final int pageSize = 56; // int | Number of results to return per page.
 try {
     final response = api.list(countryId, isActive, orderBy, page, pageSize);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling CampaignsApi->list: $e\n');
 }
 ```
@@ -93,7 +93,7 @@ final int id = 56; // int | A unique integer value identifying this ow campaigns
 try {
     final response = api.retrieve(id);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling CampaignsApi->retrieve: $e\n');
 }
 ```

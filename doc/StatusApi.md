@@ -25,7 +25,7 @@ final api = MosquitoAlert().getStatusApi();
 
 try {
     api.retrieve();
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling StatusApi->retrieve: $e\n');
 }
 ```

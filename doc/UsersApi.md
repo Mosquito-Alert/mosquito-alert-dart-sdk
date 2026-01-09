@@ -39,7 +39,7 @@ final PatchedUserRequest patchedUserRequest = ; // PatchedUserRequest |
 try {
     final response = api.partialUpdate(uuid, patchedUserRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling UsersApi->partialUpdate: $e\n');
 }
 ```
@@ -89,7 +89,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.retrieve(uuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling UsersApi->retrieve: $e\n');
 }
 ```
@@ -139,7 +139,7 @@ final api = MosquitoAlert().getUsersApi();
 try {
     final response = api.retrieveMine();
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling UsersApi->retrieveMine: $e\n');
 }
 ```
@@ -186,7 +186,7 @@ final UserRequest userRequest = ; // UserRequest |
 try {
     final response = api.update(uuid, userRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling UsersApi->update: $e\n');
 }
 ```

@@ -41,7 +41,7 @@ final BuiltList<int> rank = ; // BuiltList<int> |
 try {
     final response = api.list(isRelevant, page, pageSize, rank);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling TaxaApi->list: $e\n');
 }
 ```
@@ -93,7 +93,7 @@ final int id = 56; // int | A unique integer value identifying this taxon.
 try {
     final response = api.retrieve(id);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling TaxaApi->retrieve: $e\n');
 }
 ```
@@ -141,7 +141,7 @@ final api = MosquitoAlert().getTaxaApi();
 try {
     final response = api.rootTreeRetrieve();
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling TaxaApi->rootTreeRetrieve: $e\n');
 }
 ```
@@ -187,7 +187,7 @@ final int id = 56; // int | A unique integer value identifying this taxon.
 try {
     final response = api.treeRetrieve(id);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling TaxaApi->treeRetrieve: $e\n');
 }
 ```

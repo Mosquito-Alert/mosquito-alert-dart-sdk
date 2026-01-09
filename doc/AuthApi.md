@@ -38,7 +38,7 @@ final PasswordChangeRequest passwordChangeRequest = ; // PasswordChangeRequest |
 
 try {
     api.changePassword(passwordChangeRequest);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling AuthApi->changePassword: $e\n');
 }
 ```
@@ -81,7 +81,7 @@ final AppUserTokenObtainPairRequest appUserTokenObtainPairRequest = ; // AppUser
 try {
     final response = api.obtainToken(appUserTokenObtainPairRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling AuthApi->obtainToken: $e\n');
 }
 ```
@@ -124,7 +124,7 @@ final TokenRefreshRequest tokenRefreshRequest = ; // TokenRefreshRequest |
 try {
     final response = api.refreshToken(tokenRefreshRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling AuthApi->refreshToken: $e\n');
 }
 ```
@@ -165,7 +165,7 @@ final GuestRegistrationRequest guestRegistrationRequest = ; // GuestRegistration
 try {
     final response = api.signupGuest(guestRegistrationRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling AuthApi->signupGuest: $e\n');
 }
 ```
@@ -207,7 +207,7 @@ final TokenVerifyRequest tokenVerifyRequest = ; // TokenVerifyRequest |
 
 try {
     api.verifyToken(tokenVerifyRequest);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling AuthApi->verifyToken: $e\n');
 }
 ```

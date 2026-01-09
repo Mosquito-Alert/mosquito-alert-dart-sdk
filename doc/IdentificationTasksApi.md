@@ -50,7 +50,7 @@ final AnnotationRequest annotationRequest = ; // AnnotationRequest |
 try {
     final response = api.annotationsCreate(observationUuid, annotationRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->annotationsCreate: $e\n');
 }
 ```
@@ -117,7 +117,7 @@ final BuiltList<int> userIds = ; // BuiltList<int> |
 try {
     final response = api.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->annotationsList: $e\n');
 }
 ```
@@ -201,7 +201,7 @@ final BuiltList<int> userIds = ; // BuiltList<int> |
 try {
     final response = api.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->annotationsListMine: $e\n');
 }
 ```
@@ -267,7 +267,7 @@ final String observationUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.annotationsRetrieve(id, observationUuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->annotationsRetrieve: $e\n');
 }
 ```
@@ -318,7 +318,7 @@ final api = MosquitoAlert().getIdentificationTasksApi();
 try {
     final response = api.assignNext();
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->assignNext: $e\n');
 }
 ```
@@ -389,7 +389,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 try {
     final response = api.list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->list: $e\n');
 }
 ```
@@ -490,7 +490,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 try {
     final response = api.listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->listMine: $e\n');
 }
 ```
@@ -565,7 +565,7 @@ final CreatePhotoPredictionRequest createPhotoPredictionRequest = ; // CreatePho
 try {
     final response = api.predictionsCreate(observationUuid, createPhotoPredictionRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->predictionsCreate: $e\n');
 }
 ```
@@ -615,7 +615,7 @@ final String photoUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.predictionsDestroy(observationUuid, photoUuid);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->predictionsDestroy: $e\n');
 }
 ```
@@ -667,7 +667,7 @@ final int pageSize = 56; // int | Number of results to return per page.
 try {
     final response = api.predictionsList(observationUuid, page, pageSize);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->predictionsList: $e\n');
 }
 ```
@@ -720,7 +720,7 @@ final PatchedPhotoPredictionRequest patchedPhotoPredictionRequest = ; // Patched
 try {
     final response = api.predictionsPartialUpdate(observationUuid, photoUuid, patchedPhotoPredictionRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->predictionsPartialUpdate: $e\n');
 }
 ```
@@ -772,7 +772,7 @@ final String photoUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.predictionsRetrieve(observationUuid, photoUuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->predictionsRetrieve: $e\n');
 }
 ```
@@ -824,7 +824,7 @@ final PhotoPredictionRequest photoPredictionRequest = ; // PhotoPredictionReques
 try {
     final response = api.predictionsUpdate(observationUuid, photoUuid, photoPredictionRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->predictionsUpdate: $e\n');
 }
 ```
@@ -875,7 +875,7 @@ final String observationUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.retrieve(observationUuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->retrieve: $e\n');
 }
 ```
@@ -925,7 +925,7 @@ final MetaCreateIdentificationTaskReviewRequest metaCreateIdentificationTaskRevi
 try {
     final response = api.reviewCreate(observationUuid, metaCreateIdentificationTaskReviewRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->reviewCreate: $e\n');
 }
 ```

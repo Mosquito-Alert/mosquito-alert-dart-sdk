@@ -35,7 +35,7 @@ final FixRequest fixRequest = ; // FixRequest |
 try {
     final response = api.create(fixRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling FixesApi->create: $e\n');
 }
 ```

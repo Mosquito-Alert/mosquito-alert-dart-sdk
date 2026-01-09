@@ -38,7 +38,7 @@ final DeviceRequest deviceRequest = ; // DeviceRequest |
 try {
     final response = api.create(deviceRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling DevicesApi->create: $e\n');
 }
 ```
@@ -88,7 +88,7 @@ final PatchedDeviceUpdateRequest patchedDeviceUpdateRequest = ; // PatchedDevice
 try {
     final response = api.partialUpdate(deviceId, patchedDeviceUpdateRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling DevicesApi->partialUpdate: $e\n');
 }
 ```
@@ -138,7 +138,7 @@ final String deviceId = deviceId_example; // String |
 try {
     final response = api.retrieve(deviceId);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling DevicesApi->retrieve: $e\n');
 }
 ```
@@ -188,7 +188,7 @@ final DeviceUpdateRequest deviceUpdateRequest = ; // DeviceUpdateRequest |
 try {
     final response = api.update(deviceId, deviceUpdateRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling DevicesApi->update: $e\n');
 }
 ```

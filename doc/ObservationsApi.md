@@ -47,7 +47,7 @@ final MosquitoAppearanceRequest mosquitoAppearance = ; // MosquitoAppearanceRequ
 try {
     final response = api.create(createdAt, sentAt, location, photos, note, tags, eventEnvironment, eventMoment, mosquitoAppearance);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling ObservationsApi->create: $e\n');
 }
 ```
@@ -103,7 +103,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.destroy(uuid);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling ObservationsApi->destroy: $e\n');
 }
 ```
@@ -166,7 +166,7 @@ final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling ObservationsApi->list: $e\n');
 }
 ```
@@ -245,7 +245,7 @@ final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, identificationTaxonIds, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling ObservationsApi->listMine: $e\n');
 }
 ```
@@ -308,7 +308,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.retrieve(uuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling ObservationsApi->retrieve: $e\n');
 }
 ```

@@ -38,7 +38,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.predictionDestroy(uuid);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling PhotosApi->predictionDestroy: $e\n');
 }
 ```
@@ -88,7 +88,7 @@ final PatchedPhotoPredictionRequest patchedPhotoPredictionRequest = ; // Patched
 try {
     final response = api.predictionPartialUpdate(uuid, patchedPhotoPredictionRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling PhotosApi->predictionPartialUpdate: $e\n');
 }
 ```
@@ -138,7 +138,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.predictionRetrieve(uuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling PhotosApi->predictionRetrieve: $e\n');
 }
 ```
@@ -188,7 +188,7 @@ final PhotoPredictionRequest photoPredictionRequest = ; // PhotoPredictionReques
 try {
     final response = api.predictionUpdate(uuid, photoPredictionRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling PhotosApi->predictionUpdate: $e\n');
 }
 ```
@@ -238,7 +238,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.retrieve(uuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling PhotosApi->retrieve: $e\n');
 }
 ```

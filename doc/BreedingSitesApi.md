@@ -49,7 +49,7 @@ final bool hasLarvae = true; // bool | Either if the user perceived larvaes the 
 try {
     final response = api.create(createdAt, sentAt, location, photos, siteType, note, tags, hasWater, inPublicArea, hasNearMosquitoes, hasLarvae);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BreedingSitesApi->create: $e\n');
 }
 ```
@@ -107,7 +107,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.destroy(uuid);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BreedingSitesApi->destroy: $e\n');
 }
 ```
@@ -169,7 +169,7 @@ final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.list(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BreedingSitesApi->list: $e\n');
 }
 ```
@@ -246,7 +246,7 @@ final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.listMine(countryId, createdAtAfter, createdAtBefore, hasPhotos, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BreedingSitesApi->listMine: $e\n');
 }
 ```
@@ -308,7 +308,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.retrieve(uuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BreedingSitesApi->retrieve: $e\n');
 }
 ```

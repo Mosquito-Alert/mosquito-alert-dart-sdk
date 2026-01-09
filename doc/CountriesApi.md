@@ -37,7 +37,7 @@ final int pageSize = 56; // int | Number of results to return per page.
 try {
     final response = api.list(page, pageSize);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling CountriesApi->list: $e\n');
 }
 ```
@@ -87,7 +87,7 @@ final int id = 56; // int | A unique integer value identifying this europe count
 try {
     final response = api.retrieve(id);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling CountriesApi->retrieve: $e\n');
 }
 ```

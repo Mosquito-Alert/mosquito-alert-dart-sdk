@@ -36,7 +36,7 @@ final api = MosquitoAlert().getPermissionsApi();
 try {
     final response = api.retrieveMine();
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling PermissionsApi->retrieveMine: $e\n');
 }
 ```

@@ -39,7 +39,7 @@ final BiteRequest biteRequest = ; // BiteRequest |
 try {
     final response = api.create(biteRequest);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BitesApi->create: $e\n');
 }
 ```
@@ -87,7 +87,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 
 try {
     api.destroy(uuid);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BitesApi->destroy: $e\n');
 }
 ```
@@ -148,7 +148,7 @@ final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.list(countryId, createdAtAfter, createdAtBefore, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BitesApi->list: $e\n');
 }
 ```
@@ -223,7 +223,7 @@ final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.listMine(countryId, createdAtAfter, createdAtBefore, orderBy, page, pageSize, receivedAtAfter, receivedAtBefore, search, shortId, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BitesApi->listMine: $e\n');
 }
 ```
@@ -284,7 +284,7 @@ final String uuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String |
 try {
     final response = api.retrieve(uuid);
     print(response);
-} catch on DioException (e) {
+} on DioException catch (e) {
     print('Exception when calling BitesApi->retrieve: $e\n');
 }
 ```
