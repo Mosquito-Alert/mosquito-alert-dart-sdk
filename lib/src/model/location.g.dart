@@ -244,6 +244,8 @@ const LocationTimezoneEnum _$locationTimezoneEnum_americaSlashCordoba =
     const LocationTimezoneEnum._('americaSlashCordoba');
 const LocationTimezoneEnum _$locationTimezoneEnum_americaSlashCostaRica =
     const LocationTimezoneEnum._('americaSlashCostaRica');
+const LocationTimezoneEnum _$locationTimezoneEnum_americaSlashCoyhaique =
+    const LocationTimezoneEnum._('americaSlashCoyhaique');
 const LocationTimezoneEnum _$locationTimezoneEnum_americaSlashCreston =
     const LocationTimezoneEnum._('americaSlashCreston');
 const LocationTimezoneEnum _$locationTimezoneEnum_americaSlashCuiaba =
@@ -1454,6 +1456,8 @@ LocationTimezoneEnum _$locationTimezoneEnumValueOf(String name) {
       return _$locationTimezoneEnum_americaSlashCordoba;
     case 'americaSlashCostaRica':
       return _$locationTimezoneEnum_americaSlashCostaRica;
+    case 'americaSlashCoyhaique':
+      return _$locationTimezoneEnum_americaSlashCoyhaique;
     case 'americaSlashCreston':
       return _$locationTimezoneEnum_americaSlashCreston;
     case 'americaSlashCuiaba':
@@ -2556,6 +2560,7 @@ final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
   _$locationTimezoneEnum_americaSlashCoralHarbour,
   _$locationTimezoneEnum_americaSlashCordoba,
   _$locationTimezoneEnum_americaSlashCostaRica,
+  _$locationTimezoneEnum_americaSlashCoyhaique,
   _$locationTimezoneEnum_americaSlashCreston,
   _$locationTimezoneEnum_americaSlashCuiaba,
   _$locationTimezoneEnum_americaSlashCuracao,
@@ -3194,6 +3199,7 @@ class _$LocationTimezoneEnumSerializer
     'americaSlashCoralHarbour': 'America/Coral_Harbour',
     'americaSlashCordoba': 'America/Cordoba',
     'americaSlashCostaRica': 'America/Costa_Rica',
+    'americaSlashCoyhaique': 'America/Coyhaique',
     'americaSlashCreston': 'America/Creston',
     'americaSlashCuiaba': 'America/Cuiaba',
     'americaSlashCuracao': 'America/Curacao',
@@ -3794,6 +3800,7 @@ class _$LocationTimezoneEnumSerializer
     'America/Coral_Harbour': 'americaSlashCoralHarbour',
     'America/Cordoba': 'americaSlashCordoba',
     'America/Costa_Rica': 'americaSlashCostaRica',
+    'America/Coyhaique': 'americaSlashCoyhaique',
     'America/Creston': 'americaSlashCreston',
     'America/Cuiaba': 'americaSlashCuiaba',
     'America/Curacao': 'americaSlashCuracao',

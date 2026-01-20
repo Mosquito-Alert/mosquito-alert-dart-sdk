@@ -54,6 +54,7 @@ abstract class BiteCounts implements Built<BiteCounts, BiteCountsBuilder> {
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(BiteCountsBuilder b) => b
+      ..total = 0
       ..head = 0
       ..leftArm = 0
       ..rightArm = 0

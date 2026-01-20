@@ -85,9 +85,9 @@ import 'package:mosquito_alert/api.dart';
 
 final api = MosquitoAlert().getNotificationsApi();
 final bool isRead = true; // bool | 
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
-final int page = 56; // int | A page number within the paginated result set.
-final int pageSize = 56; // int | Number of results to return per page.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
+final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
+final int pageSize = 56; // int | Número de resultados a devolver por página.
 
 try {
     final response = api.list(isRead, orderBy, page, pageSize);
@@ -102,9 +102,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **isRead** | **bool**|  | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
- **page** | **int**| A page number within the paginated result set. | [optional] 
- **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
+ **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
+ **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
 
 ### Return type
 
@@ -142,9 +142,9 @@ import 'package:mosquito_alert/api.dart';
 
 final api = MosquitoAlert().getNotificationsApi();
 final bool isRead = true; // bool | 
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
-final int page = 56; // int | A page number within the paginated result set.
-final int pageSize = 56; // int | Number of results to return per page.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
+final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
+final int pageSize = 56; // int | Número de resultados a devolver por página.
 
 try {
     final response = api.listMine(isRead, orderBy, page, pageSize);
@@ -159,9 +159,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **isRead** | **bool**|  | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
- **page** | **int**| A page number within the paginated result set. | [optional] 
- **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
+ **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
+ **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
 
 ### Return type
 
@@ -196,7 +196,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getNotificationsApi();
-final int id = 56; // int | A unique integer value identifying this notification.
+final int id = 56; // int | Un valor de entero único que identifique este notification.
 final PatchedNotificationRequest patchedNotificationRequest = ; // PatchedNotificationRequest | 
 
 try {
@@ -211,7 +211,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this notification. | 
+ **id** | **int**| Un valor de entero único que identifique este notification. | 
  **patchedNotificationRequest** | [**PatchedNotificationRequest**](PatchedNotificationRequest.md)|  | [optional] 
 
 ### Return type
@@ -247,7 +247,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getNotificationsApi();
-final int id = 56; // int | A unique integer value identifying this notification.
+final int id = 56; // int | Un valor de entero único que identifique este notification.
 
 try {
     final response = api.retrieve(id);
@@ -261,7 +261,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this notification. | 
+ **id** | **int**| Un valor de entero único que identifique este notification. | 
 
 ### Return type
 
@@ -296,7 +296,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getNotificationsApi();
-final int id = 56; // int | A unique integer value identifying this notification.
+final int id = 56; // int | Un valor de entero único que identifique este notification.
 final NotificationRequest notificationRequest = ; // NotificationRequest | 
 
 try {
@@ -311,7 +311,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this notification. | 
+ **id** | **int**| Un valor de entero único que identifique este notification. | 
  **notificationRequest** | [**NotificationRequest**](NotificationRequest.md)|  | 
 
 ### Return type

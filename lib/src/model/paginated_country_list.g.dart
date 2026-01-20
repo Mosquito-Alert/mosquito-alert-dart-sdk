@@ -8,20 +8,26 @@ part of 'paginated_country_list.dart';
 
 class _$PaginatedCountryList extends PaginatedCountryList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<Country>? results;
+  final BuiltList<Country> results;
 
   factory _$PaginatedCountryList(
           [void Function(PaginatedCountryListBuilder)? updates]) =>
       (new PaginatedCountryListBuilder()..update(updates))._build();
 
-  _$PaginatedCountryList._({this.count, this.next, this.previous, this.results})
-      : super._();
+  _$PaginatedCountryList._(
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, r'PaginatedCountryList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedCountryList', 'results');
+  }
 
   @override
   PaginatedCountryList rebuild(
@@ -95,7 +101,7 @@ class PaginatedCountryListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -120,15 +126,16 @@ class PaginatedCountryListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedCountryList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedCountryList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedCountryList', _$failedField, e.toString());

@@ -34,6 +34,9 @@ final BuiltSet<DevicesCreateDeviceIdErrorComponentAttrEnum>
 ]);
 
 const DevicesCreateDeviceIdErrorComponentCodeEnum
+    _$devicesCreateDeviceIdErrorComponentCodeEnum_blank =
+    const DevicesCreateDeviceIdErrorComponentCodeEnum._('blank');
+const DevicesCreateDeviceIdErrorComponentCodeEnum
     _$devicesCreateDeviceIdErrorComponentCodeEnum_invalid =
     const DevicesCreateDeviceIdErrorComponentCodeEnum._('invalid');
 const DevicesCreateDeviceIdErrorComponentCodeEnum
@@ -61,6 +64,8 @@ const DevicesCreateDeviceIdErrorComponentCodeEnum
 DevicesCreateDeviceIdErrorComponentCodeEnum
     _$devicesCreateDeviceIdErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
+    case 'blank':
+      return _$devicesCreateDeviceIdErrorComponentCodeEnum_blank;
     case 'invalid':
       return _$devicesCreateDeviceIdErrorComponentCodeEnum_invalid;
     case 'maxLength':
@@ -83,6 +88,7 @@ DevicesCreateDeviceIdErrorComponentCodeEnum
 final BuiltSet<DevicesCreateDeviceIdErrorComponentCodeEnum>
     _$devicesCreateDeviceIdErrorComponentCodeEnumValues = new BuiltSet<
         DevicesCreateDeviceIdErrorComponentCodeEnum>(const <DevicesCreateDeviceIdErrorComponentCodeEnum>[
+  _$devicesCreateDeviceIdErrorComponentCodeEnum_blank,
   _$devicesCreateDeviceIdErrorComponentCodeEnum_invalid,
   _$devicesCreateDeviceIdErrorComponentCodeEnum_maxLength,
   _$devicesCreateDeviceIdErrorComponentCodeEnum_null_,
@@ -136,6 +142,7 @@ class _$DevicesCreateDeviceIdErrorComponentCodeEnumSerializer
     implements
         PrimitiveSerializer<DevicesCreateDeviceIdErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'blank': 'blank',
     'invalid': 'invalid',
     'maxLength': 'max_length',
     'null_': 'null',
@@ -145,6 +152,7 @@ class _$DevicesCreateDeviceIdErrorComponentCodeEnumSerializer
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'blank': 'blank',
     'invalid': 'invalid',
     'max_length': 'maxLength',
     'null': 'null_',

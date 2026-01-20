@@ -308,6 +308,9 @@ const SimplifiedLocationTimezoneEnum
     _$simplifiedLocationTimezoneEnum_americaSlashCostaRica =
     const SimplifiedLocationTimezoneEnum._('americaSlashCostaRica');
 const SimplifiedLocationTimezoneEnum
+    _$simplifiedLocationTimezoneEnum_americaSlashCoyhaique =
+    const SimplifiedLocationTimezoneEnum._('americaSlashCoyhaique');
+const SimplifiedLocationTimezoneEnum
     _$simplifiedLocationTimezoneEnum_americaSlashCreston =
     const SimplifiedLocationTimezoneEnum._('americaSlashCreston');
 const SimplifiedLocationTimezoneEnum
@@ -1970,6 +1973,8 @@ SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnumValueOf(
       return _$simplifiedLocationTimezoneEnum_americaSlashCordoba;
     case 'americaSlashCostaRica':
       return _$simplifiedLocationTimezoneEnum_americaSlashCostaRica;
+    case 'americaSlashCoyhaique':
+      return _$simplifiedLocationTimezoneEnum_americaSlashCoyhaique;
     case 'americaSlashCreston':
       return _$simplifiedLocationTimezoneEnum_americaSlashCreston;
     case 'americaSlashCuiaba':
@@ -3073,6 +3078,7 @@ final BuiltSet<SimplifiedLocationTimezoneEnum>
   _$simplifiedLocationTimezoneEnum_americaSlashCoralHarbour,
   _$simplifiedLocationTimezoneEnum_americaSlashCordoba,
   _$simplifiedLocationTimezoneEnum_americaSlashCostaRica,
+  _$simplifiedLocationTimezoneEnum_americaSlashCoyhaique,
   _$simplifiedLocationTimezoneEnum_americaSlashCreston,
   _$simplifiedLocationTimezoneEnum_americaSlashCuiaba,
   _$simplifiedLocationTimezoneEnum_americaSlashCuracao,
@@ -3680,6 +3686,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'americaSlashCoralHarbour': 'America/Coral_Harbour',
     'americaSlashCordoba': 'America/Cordoba',
     'americaSlashCostaRica': 'America/Costa_Rica',
+    'americaSlashCoyhaique': 'America/Coyhaique',
     'americaSlashCreston': 'America/Creston',
     'americaSlashCuiaba': 'America/Cuiaba',
     'americaSlashCuracao': 'America/Curacao',
@@ -4280,6 +4287,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'America/Coral_Harbour': 'americaSlashCoralHarbour',
     'America/Cordoba': 'americaSlashCordoba',
     'America/Costa_Rica': 'americaSlashCostaRica',
+    'America/Coyhaique': 'americaSlashCoyhaique',
     'America/Creston': 'americaSlashCreston',
     'America/Cuiaba': 'americaSlashCuiaba',
     'America/Curacao': 'americaSlashCuracao',

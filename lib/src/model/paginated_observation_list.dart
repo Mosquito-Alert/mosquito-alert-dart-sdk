@@ -20,7 +20,7 @@ part 'paginated_observation_list.g.dart';
 @BuiltValue()
 abstract class PaginatedObservationList implements Built<PaginatedObservationList, PaginatedObservationListBuilder> {
   @BuiltValueField(wireName: r'count')
-  int? get count;
+  int get count;
 
   @BuiltValueField(wireName: r'next')
   String? get next;
@@ -29,7 +29,7 @@ abstract class PaginatedObservationList implements Built<PaginatedObservationLis
   String? get previous;
 
   @BuiltValueField(wireName: r'results')
-  BuiltList<Observation>? get results;
+  BuiltList<Observation> get results;
 
   PaginatedObservationList._();
 
@@ -54,13 +54,11 @@ class _$PaginatedObservationListSerializer implements PrimitiveSerializer<Pagina
     PaginatedObservationList object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.count != null) {
-      yield r'count';
-      yield serializers.serialize(
-        object.count,
-        specifiedType: const FullType(int),
-      );
-    }
+    yield r'count';
+    yield serializers.serialize(
+      object.count,
+      specifiedType: const FullType(int),
+    );
     if (object.next != null) {
       yield r'next';
       yield serializers.serialize(
@@ -75,13 +73,11 @@ class _$PaginatedObservationListSerializer implements PrimitiveSerializer<Pagina
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.results != null) {
-      yield r'results';
-      yield serializers.serialize(
-        object.results,
-        specifiedType: const FullType(BuiltList, [FullType(Observation)]),
-      );
-    }
+    yield r'results';
+    yield serializers.serialize(
+      object.results,
+      specifiedType: const FullType(BuiltList, [FullType(Observation)]),
+    );
   }
 
   @override

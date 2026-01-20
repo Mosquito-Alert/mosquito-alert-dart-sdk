@@ -8,20 +8,26 @@ part of 'paginated_partner_list.dart';
 
 class _$PaginatedPartnerList extends PaginatedPartnerList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<Partner>? results;
+  final BuiltList<Partner> results;
 
   factory _$PaginatedPartnerList(
           [void Function(PaginatedPartnerListBuilder)? updates]) =>
       (new PaginatedPartnerListBuilder()..update(updates))._build();
 
-  _$PaginatedPartnerList._({this.count, this.next, this.previous, this.results})
-      : super._();
+  _$PaginatedPartnerList._(
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, r'PaginatedPartnerList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedPartnerList', 'results');
+  }
 
   @override
   PaginatedPartnerList rebuild(
@@ -95,7 +101,7 @@ class PaginatedPartnerListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -120,15 +126,16 @@ class PaginatedPartnerListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedPartnerList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedPartnerList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedPartnerList', _$failedField, e.toString());

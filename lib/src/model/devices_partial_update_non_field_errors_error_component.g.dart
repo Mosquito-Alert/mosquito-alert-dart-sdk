@@ -43,6 +43,9 @@ const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
     _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_ =
     const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum._('null_');
 const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
+    _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unique =
+    const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum._('unique');
+const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
     _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
     const DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum._(
         'unknownDefaultOpenApi');
@@ -55,6 +58,8 @@ DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum
       return _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unique':
+      return _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unique;
     case 'unknownDefaultOpenApi':
       return _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -68,6 +73,7 @@ final BuiltSet<DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum>
         DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum>(const <DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unique,
   _$devicesPartialUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -120,11 +126,13 @@ class _$DevicesPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unique': 'unique',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unique': 'unique',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

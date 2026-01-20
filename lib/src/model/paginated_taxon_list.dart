@@ -20,7 +20,7 @@ part 'paginated_taxon_list.g.dart';
 @BuiltValue()
 abstract class PaginatedTaxonList implements Built<PaginatedTaxonList, PaginatedTaxonListBuilder> {
   @BuiltValueField(wireName: r'count')
-  int? get count;
+  int get count;
 
   @BuiltValueField(wireName: r'next')
   String? get next;
@@ -29,7 +29,7 @@ abstract class PaginatedTaxonList implements Built<PaginatedTaxonList, Paginated
   String? get previous;
 
   @BuiltValueField(wireName: r'results')
-  BuiltList<Taxon>? get results;
+  BuiltList<Taxon> get results;
 
   PaginatedTaxonList._();
 
@@ -54,13 +54,11 @@ class _$PaginatedTaxonListSerializer implements PrimitiveSerializer<PaginatedTax
     PaginatedTaxonList object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.count != null) {
-      yield r'count';
-      yield serializers.serialize(
-        object.count,
-        specifiedType: const FullType(int),
-      );
-    }
+    yield r'count';
+    yield serializers.serialize(
+      object.count,
+      specifiedType: const FullType(int),
+    );
     if (object.next != null) {
       yield r'next';
       yield serializers.serialize(
@@ -75,13 +73,11 @@ class _$PaginatedTaxonListSerializer implements PrimitiveSerializer<PaginatedTax
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.results != null) {
-      yield r'results';
-      yield serializers.serialize(
-        object.results,
-        specifiedType: const FullType(BuiltList, [FullType(Taxon)]),
-      );
-    }
+    yield r'results';
+    yield serializers.serialize(
+      object.results,
+      specifiedType: const FullType(BuiltList, [FullType(Taxon)]),
+    );
   }
 
   @override

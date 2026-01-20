@@ -159,10 +159,10 @@ class IdentificationTasksApi {
   /// * [isDecisive] 
   /// * [isFavourite] 
   /// * [isFlagged] 
-  /// * [orderBy] - Ordenado  
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
-  /// * [search] - A search term.
+  /// * [orderBy] - Ordenamiento  
+  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
+  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [search] - Un término de búsqueda.
   /// * [type] 
   /// * [updatedAtAfter] - Updated at
   /// * [updatedAtBefore] - Updated at
@@ -304,10 +304,10 @@ class IdentificationTasksApi {
   /// * [isDecisive] 
   /// * [isFavourite] 
   /// * [isFlagged] 
-  /// * [orderBy] - Ordenado  
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
-  /// * [search] - A search term.
+  /// * [orderBy] - Ordenamiento  
+  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
+  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [search] - Un término de búsqueda.
   /// * [type] 
   /// * [updatedAtAfter] - Updated at
   /// * [updatedAtBefore] - Updated at
@@ -439,7 +439,7 @@ class IdentificationTasksApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - A unique integer value identifying this expert report annotation.
+  /// * [id] - Un valor de entero único que identifique este expert report annotation.
   /// * [observationUuid] - UUID of the Observation
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -631,9 +631,9 @@ class IdentificationTasksApi {
   /// * [numAnnotationsMax] 
   /// * [numAnnotationsMin] 
   /// * [observationCountryIds] 
-  /// * [orderBy] - Ordenado  
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
+  /// * [orderBy] - Ordenamiento  
+  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
+  /// * [pageSize] - Número de resultados a devolver por página.
   /// * [resultAgreementMax] 
   /// * [resultAgreementMin] 
   /// * [resultConfidenceMax] 
@@ -643,7 +643,7 @@ class IdentificationTasksApi {
   /// * [resultUncertaintyMax] 
   /// * [resultUncertaintyMin] 
   /// * [reviewAction] 
-  /// * [search] - A search term.
+  /// * [search] - Un término de búsqueda.
   /// * [status] 
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -741,7 +741,7 @@ class IdentificationTasksApi {
       if (resultTaxonIds != null) r'result_taxon_ids': encodeCollectionQueryParameter<int>(_serializers, resultTaxonIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
       if (resultUncertaintyMax != null) r'result_uncertainty_max': encodeQueryParameter(_serializers, resultUncertaintyMax, const FullType(double)),
       if (resultUncertaintyMin != null) r'result_uncertainty_min': encodeQueryParameter(_serializers, resultUncertaintyMin, const FullType(double)),
-      if (reviewAction != null) r'review_action': encodeQueryParameter(_serializers, reviewAction, const FullType(String)),
+      r'review_action': encodeQueryParameter(_serializers, reviewAction, const FullType(String)),
       if (search != null) r'search': encodeQueryParameter(_serializers, search, const FullType(String)),
       if (status != null) r'status': encodeCollectionQueryParameter<String>(_serializers, status, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
@@ -802,9 +802,9 @@ class IdentificationTasksApi {
   /// * [numAnnotationsMax] 
   /// * [numAnnotationsMin] 
   /// * [observationCountryIds] 
-  /// * [orderBy] - Ordenado  
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
+  /// * [orderBy] - Ordenamiento  
+  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
+  /// * [pageSize] - Número de resultados a devolver por página.
   /// * [resultAgreementMax] 
   /// * [resultAgreementMin] 
   /// * [resultConfidenceMax] 
@@ -814,7 +814,7 @@ class IdentificationTasksApi {
   /// * [resultUncertaintyMax] 
   /// * [resultUncertaintyMin] 
   /// * [reviewAction] 
-  /// * [search] - A search term.
+  /// * [search] - Un término de búsqueda.
   /// * [status] 
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -912,7 +912,7 @@ class IdentificationTasksApi {
       if (resultTaxonIds != null) r'result_taxon_ids': encodeCollectionQueryParameter<int>(_serializers, resultTaxonIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
       if (resultUncertaintyMax != null) r'result_uncertainty_max': encodeQueryParameter(_serializers, resultUncertaintyMax, const FullType(double)),
       if (resultUncertaintyMin != null) r'result_uncertainty_min': encodeQueryParameter(_serializers, resultUncertaintyMin, const FullType(double)),
-      if (reviewAction != null) r'review_action': encodeQueryParameter(_serializers, reviewAction, const FullType(String)),
+      r'review_action': encodeQueryParameter(_serializers, reviewAction, const FullType(String)),
       if (search != null) r'search': encodeQueryParameter(_serializers, search, const FullType(String)),
       if (status != null) r'status': encodeCollectionQueryParameter<String>(_serializers, status, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (updatedAtAfter != null) r'updated_at_after': encodeQueryParameter(_serializers, updatedAtAfter, const FullType(DateTime)),
@@ -1142,8 +1142,8 @@ class IdentificationTasksApi {
   ///
   /// Parameters:
   /// * [observationUuid] - UUID of the Observation
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
+  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
+  /// * [pageSize] - Número de resultados a devolver por página.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request

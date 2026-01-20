@@ -9,21 +9,26 @@ part of 'paginated_identification_task_list.dart';
 class _$PaginatedIdentificationTaskList
     extends PaginatedIdentificationTaskList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<IdentificationTask>? results;
+  final BuiltList<IdentificationTask> results;
 
   factory _$PaginatedIdentificationTaskList(
           [void Function(PaginatedIdentificationTaskListBuilder)? updates]) =>
       (new PaginatedIdentificationTaskListBuilder()..update(updates))._build();
 
   _$PaginatedIdentificationTaskList._(
-      {this.count, this.next, this.previous, this.results})
-      : super._();
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, r'PaginatedIdentificationTaskList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedIdentificationTaskList', 'results');
+  }
 
   @override
   PaginatedIdentificationTaskList rebuild(
@@ -100,7 +105,7 @@ class PaginatedIdentificationTaskListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -125,15 +130,16 @@ class PaginatedIdentificationTaskListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedIdentificationTaskList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedIdentificationTaskList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedIdentificationTaskList', _$failedField, e.toString());

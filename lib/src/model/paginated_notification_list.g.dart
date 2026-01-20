@@ -8,21 +8,26 @@ part of 'paginated_notification_list.dart';
 
 class _$PaginatedNotificationList extends PaginatedNotificationList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<Notification>? results;
+  final BuiltList<Notification> results;
 
   factory _$PaginatedNotificationList(
           [void Function(PaginatedNotificationListBuilder)? updates]) =>
       (new PaginatedNotificationListBuilder()..update(updates))._build();
 
   _$PaginatedNotificationList._(
-      {this.count, this.next, this.previous, this.results})
-      : super._();
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, r'PaginatedNotificationList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedNotificationList', 'results');
+  }
 
   @override
   PaginatedNotificationList rebuild(
@@ -97,7 +102,7 @@ class PaginatedNotificationListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -122,15 +127,16 @@ class PaginatedNotificationListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedNotificationList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedNotificationList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedNotificationList', _$failedField, e.toString());

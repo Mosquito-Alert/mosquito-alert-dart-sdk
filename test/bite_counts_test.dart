@@ -8,7 +8,7 @@ void main() {
 
   group(BiteCounts, () {
     // Total number of bites reported.
-    // int total
+    // int total (default value: 0)
     test('to test the property `total`', () async {
       // TODO
     });

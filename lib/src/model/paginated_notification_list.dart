@@ -20,7 +20,7 @@ part 'paginated_notification_list.g.dart';
 @BuiltValue()
 abstract class PaginatedNotificationList implements Built<PaginatedNotificationList, PaginatedNotificationListBuilder> {
   @BuiltValueField(wireName: r'count')
-  int? get count;
+  int get count;
 
   @BuiltValueField(wireName: r'next')
   String? get next;
@@ -29,7 +29,7 @@ abstract class PaginatedNotificationList implements Built<PaginatedNotificationL
   String? get previous;
 
   @BuiltValueField(wireName: r'results')
-  BuiltList<Notification>? get results;
+  BuiltList<Notification> get results;
 
   PaginatedNotificationList._();
 
@@ -54,13 +54,11 @@ class _$PaginatedNotificationListSerializer implements PrimitiveSerializer<Pagin
     PaginatedNotificationList object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.count != null) {
-      yield r'count';
-      yield serializers.serialize(
-        object.count,
-        specifiedType: const FullType(int),
-      );
-    }
+    yield r'count';
+    yield serializers.serialize(
+      object.count,
+      specifiedType: const FullType(int),
+    );
     if (object.next != null) {
       yield r'next';
       yield serializers.serialize(
@@ -75,13 +73,11 @@ class _$PaginatedNotificationListSerializer implements PrimitiveSerializer<Pagin
         specifiedType: const FullType.nullable(String),
       );
     }
-    if (object.results != null) {
-      yield r'results';
-      yield serializers.serialize(
-        object.results,
-        specifiedType: const FullType(BuiltList, [FullType(Notification)]),
-      );
-    }
+    yield r'results';
+    yield serializers.serialize(
+      object.results,
+      specifiedType: const FullType(BuiltList, [FullType(Notification)]),
+    );
   }
 
   @override

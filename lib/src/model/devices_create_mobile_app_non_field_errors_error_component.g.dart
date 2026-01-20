@@ -44,6 +44,10 @@ const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum
     _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_null_ =
     const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum._('null_');
 const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum
+    _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_unique =
+    const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum._(
+        'unique');
+const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum
     _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
     const DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum._(
         'unknownDefaultOpenApi');
@@ -56,6 +60,8 @@ DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum
       return _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unique':
+      return _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_unique;
     case 'unknownDefaultOpenApi':
       return _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -69,6 +75,7 @@ final BuiltSet<DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum>
         DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum>(const <DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum>[
   _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_unique,
   _$devicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -121,11 +128,13 @@ class _$DevicesCreateMobileAppNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unique': 'unique',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unique': 'unique',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

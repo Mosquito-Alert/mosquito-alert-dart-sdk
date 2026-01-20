@@ -31,8 +31,8 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getPartnersApi();
-final int page = 56; // int | A page number within the paginated result set.
-final int pageSize = 56; // int | Number of results to return per page.
+final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
+final int pageSize = 56; // int | Número de resultados a devolver por página.
 
 try {
     final response = api.list(page, pageSize);
@@ -46,8 +46,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int**| A page number within the paginated result set. | [optional] 
- **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
+ **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
 
 ### Return type
 
@@ -82,7 +82,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getPartnersApi();
-final int id = 56; // int | A unique integer value identifying this organization pin.
+final int id = 56; // int | Un valor de entero único que identifique este organization pin.
 
 try {
     final response = api.retrieve(id);
@@ -96,7 +96,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this organization pin. | 
+ **id** | **int**| Un valor de entero único que identifique este organization pin. | 
 
 ### Return type
 

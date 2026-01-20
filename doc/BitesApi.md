@@ -134,12 +134,12 @@ final api = MosquitoAlert().getBitesApi();
 final int countryId = 56; // int | 
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
-final int page = 56; // int | A page number within the paginated result set.
-final int pageSize = 56; // int | Number of results to return per page.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
+final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
+final int pageSize = 56; // int | Número de resultados a devolver por página.
 final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
-final String search = search_example; // String | A search term.
+final String search = search_example; // String | Un término de búsqueda.
 final String shortId = shortId_example; // String | Short ID
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
@@ -160,12 +160,12 @@ Name | Type | Description  | Notes
  **countryId** | **int**|  | [optional] 
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
- **page** | **int**| A page number within the paginated result set. | [optional] 
- **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
+ **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
+ **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
  **receivedAtAfter** | **DateTime**| Received at | [optional] 
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
- **search** | **String**| A search term. | [optional] 
+ **search** | **String**| Un término de búsqueda. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
@@ -209,12 +209,12 @@ final api = MosquitoAlert().getBitesApi();
 final int countryId = 56; // int | 
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
-final int page = 56; // int | A page number within the paginated result set.
-final int pageSize = 56; // int | Number of results to return per page.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
+final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
+final int pageSize = 56; // int | Número de resultados a devolver por página.
 final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
-final String search = search_example; // String | A search term.
+final String search = search_example; // String | Un término de búsqueda.
 final String shortId = shortId_example; // String | Short ID
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
@@ -235,12 +235,12 @@ Name | Type | Description  | Notes
  **countryId** | **int**|  | [optional] 
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
- **page** | **int**| A page number within the paginated result set. | [optional] 
- **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
+ **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
+ **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
  **receivedAtAfter** | **DateTime**| Received at | [optional] 
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
- **search** | **String**| A search term. | [optional] 
+ **search** | **String**| Un término de búsqueda. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 

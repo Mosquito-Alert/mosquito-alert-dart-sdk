@@ -8,20 +8,25 @@ part of 'paginated_bite_list.dart';
 
 class _$PaginatedBiteList extends PaginatedBiteList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<Bite>? results;
+  final BuiltList<Bite> results;
 
   factory _$PaginatedBiteList(
           [void Function(PaginatedBiteListBuilder)? updates]) =>
       (new PaginatedBiteListBuilder()..update(updates))._build();
 
-  _$PaginatedBiteList._({this.count, this.next, this.previous, this.results})
-      : super._();
+  _$PaginatedBiteList._(
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(count, r'PaginatedBiteList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedBiteList', 'results');
+  }
 
   @override
   PaginatedBiteList rebuild(void Function(PaginatedBiteListBuilder) updates) =>
@@ -93,7 +98,7 @@ class PaginatedBiteListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -118,15 +123,16 @@ class PaginatedBiteListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedBiteList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedBiteList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedBiteList', _$failedField, e.toString());

@@ -8,7 +8,7 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**total** | **int** | Total number of bites reported. | 
+**total** | **int** | Total number of bites reported. | [default to 0]
 **head** | **int** | Number of bites reported in the head. | [optional] [default to 0]
 **leftArm** | **int** | Number of bites reported in the left arm. | [optional] [default to 0]
 **rightArm** | **int** | Number of bites reported in the right arm. | [optional] [default to 0]

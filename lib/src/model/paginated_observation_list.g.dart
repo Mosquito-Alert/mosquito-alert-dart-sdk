@@ -8,21 +8,26 @@ part of 'paginated_observation_list.dart';
 
 class _$PaginatedObservationList extends PaginatedObservationList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<Observation>? results;
+  final BuiltList<Observation> results;
 
   factory _$PaginatedObservationList(
           [void Function(PaginatedObservationListBuilder)? updates]) =>
       (new PaginatedObservationListBuilder()..update(updates))._build();
 
   _$PaginatedObservationList._(
-      {this.count, this.next, this.previous, this.results})
-      : super._();
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, r'PaginatedObservationList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedObservationList', 'results');
+  }
 
   @override
   PaginatedObservationList rebuild(
@@ -97,7 +102,7 @@ class PaginatedObservationListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -122,15 +127,16 @@ class PaginatedObservationListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedObservationList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedObservationList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedObservationList', _$failedField, e.toString());

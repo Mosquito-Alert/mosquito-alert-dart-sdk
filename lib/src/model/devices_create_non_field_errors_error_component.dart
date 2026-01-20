@@ -23,7 +23,7 @@ abstract class DevicesCreateNonFieldErrorsErrorComponent implements Built<Device
 
   @BuiltValueField(wireName: r'code')
   DevicesCreateNonFieldErrorsErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid,  null,  };
+  // enum codeEnum {  invalid,  null,  unique,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -160,6 +160,8 @@ class DevicesCreateNonFieldErrorsErrorComponentCodeEnum extends EnumClass {
   static const DevicesCreateNonFieldErrorsErrorComponentCodeEnum invalid = _$devicesCreateNonFieldErrorsErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const DevicesCreateNonFieldErrorsErrorComponentCodeEnum null_ = _$devicesCreateNonFieldErrorsErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'unique')
+  static const DevicesCreateNonFieldErrorsErrorComponentCodeEnum unique = _$devicesCreateNonFieldErrorsErrorComponentCodeEnum_unique;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const DevicesCreateNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$devicesCreateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 

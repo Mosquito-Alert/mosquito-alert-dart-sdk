@@ -33,9 +33,9 @@ import 'package:mosquito_alert/api.dart';
 final api = MosquitoAlert().getCampaignsApi();
 final int countryId = 56; // int | Country in which the campaign is taking place
 final bool isActive = true; // bool | 
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenado  
-final int page = 56; // int | A page number within the paginated result set.
-final int pageSize = 56; // int | Number of results to return per page.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
+final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
+final int pageSize = 56; // int | Número de resultados a devolver por página.
 
 try {
     final response = api.list(countryId, isActive, orderBy, page, pageSize);
@@ -51,9 +51,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **countryId** | **int**| Country in which the campaign is taking place | [optional] 
  **isActive** | **bool**|  | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenado   | [optional] 
- **page** | **int**| A page number within the paginated result set. | [optional] 
- **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
+ **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
+ **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
 
 ### Return type
 
@@ -88,7 +88,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getCampaignsApi();
-final int id = 56; // int | A unique integer value identifying this ow campaigns.
+final int id = 56; // int | Un valor de entero único que identifique este ow campaigns.
 
 try {
     final response = api.retrieve(id);
@@ -102,7 +102,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this ow campaigns. | 
+ **id** | **int**| Un valor de entero único que identifique este ow campaigns. | 
 
 ### Return type
 

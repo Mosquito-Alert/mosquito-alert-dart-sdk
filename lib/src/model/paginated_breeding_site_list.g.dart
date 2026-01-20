@@ -8,21 +8,26 @@ part of 'paginated_breeding_site_list.dart';
 
 class _$PaginatedBreedingSiteList extends PaginatedBreedingSiteList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<BreedingSite>? results;
+  final BuiltList<BreedingSite> results;
 
   factory _$PaginatedBreedingSiteList(
           [void Function(PaginatedBreedingSiteListBuilder)? updates]) =>
       (new PaginatedBreedingSiteListBuilder()..update(updates))._build();
 
   _$PaginatedBreedingSiteList._(
-      {this.count, this.next, this.previous, this.results})
-      : super._();
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, r'PaginatedBreedingSiteList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedBreedingSiteList', 'results');
+  }
 
   @override
   PaginatedBreedingSiteList rebuild(
@@ -97,7 +102,7 @@ class PaginatedBreedingSiteListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -122,15 +127,16 @@ class PaginatedBreedingSiteListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedBreedingSiteList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedBreedingSiteList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedBreedingSiteList', _$failedField, e.toString());

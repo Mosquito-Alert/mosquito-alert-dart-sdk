@@ -234,12 +234,12 @@ class BreedingSitesApi {
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [hasPhotos] - Has any photo
-  /// * [orderBy] - Ordenado  
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
+  /// * [orderBy] - Ordenamiento  
+  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
+  /// * [pageSize] - Número de resultados a devolver por página.
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
-  /// * [search] - A search term.
+  /// * [search] - Un término de búsqueda.
   /// * [shortId] - Short ID
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -305,7 +305,7 @@ class BreedingSitesApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'country_id': encodeQueryParameter(_serializers, countryId, const FullType(int)),
+      if (countryId != null) r'country_id': encodeQueryParameter(_serializers, countryId, const FullType(int)),
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (hasPhotos != null) r'has_photos': encodeQueryParameter(_serializers, hasPhotos, const FullType(bool)),
@@ -369,12 +369,12 @@ class BreedingSitesApi {
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [hasPhotos] - Has any photo
-  /// * [orderBy] - Ordenado  
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
+  /// * [orderBy] - Ordenamiento  
+  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
+  /// * [pageSize] - Número de resultados a devolver por página.
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
-  /// * [search] - A search term.
+  /// * [search] - Un término de búsqueda.
   /// * [shortId] - Short ID
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -440,7 +440,7 @@ class BreedingSitesApi {
     );
 
     final _queryParameters = <String, dynamic>{
-      r'country_id': encodeQueryParameter(_serializers, countryId, const FullType(int)),
+      if (countryId != null) r'country_id': encodeQueryParameter(_serializers, countryId, const FullType(int)),
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (hasPhotos != null) r'has_photos': encodeQueryParameter(_serializers, hasPhotos, const FullType(bool)),

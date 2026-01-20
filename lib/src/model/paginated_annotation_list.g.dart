@@ -8,21 +8,26 @@ part of 'paginated_annotation_list.dart';
 
 class _$PaginatedAnnotationList extends PaginatedAnnotationList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<Annotation>? results;
+  final BuiltList<Annotation> results;
 
   factory _$PaginatedAnnotationList(
           [void Function(PaginatedAnnotationListBuilder)? updates]) =>
       (new PaginatedAnnotationListBuilder()..update(updates))._build();
 
   _$PaginatedAnnotationList._(
-      {this.count, this.next, this.previous, this.results})
-      : super._();
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, r'PaginatedAnnotationList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedAnnotationList', 'results');
+  }
 
   @override
   PaginatedAnnotationList rebuild(
@@ -97,7 +102,7 @@ class PaginatedAnnotationListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -122,15 +127,16 @@ class PaginatedAnnotationListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedAnnotationList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedAnnotationList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedAnnotationList', _$failedField, e.toString());

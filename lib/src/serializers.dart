@@ -1229,6 +1229,10 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<CreateNotification>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType.nullable(String)]),
+        () => ListBuilder<String>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(String)]),
         () => ListBuilder<String>(),
       )

@@ -8,21 +8,26 @@ part of 'paginated_campaign_list.dart';
 
 class _$PaginatedCampaignList extends PaginatedCampaignList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<Campaign>? results;
+  final BuiltList<Campaign> results;
 
   factory _$PaginatedCampaignList(
           [void Function(PaginatedCampaignListBuilder)? updates]) =>
       (new PaginatedCampaignListBuilder()..update(updates))._build();
 
   _$PaginatedCampaignList._(
-      {this.count, this.next, this.previous, this.results})
-      : super._();
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, r'PaginatedCampaignList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedCampaignList', 'results');
+  }
 
   @override
   PaginatedCampaignList rebuild(
@@ -96,7 +101,7 @@ class PaginatedCampaignListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -121,15 +126,16 @@ class PaginatedCampaignListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedCampaignList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedCampaignList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedCampaignList', _$failedField, e.toString());

@@ -81,7 +81,7 @@ class _$DeviceUpdate extends DeviceUpdate {
   @override
   final DeviceUpdateTypeEnum type;
   @override
-  final String manufacturer;
+  final String? manufacturer;
   @override
   final String model;
   @override
@@ -104,7 +104,7 @@ class _$DeviceUpdate extends DeviceUpdate {
       {required this.deviceId,
       this.nameValue,
       required this.type,
-      required this.manufacturer,
+      this.manufacturer,
       required this.model,
       required this.os,
       this.mobileApp,
@@ -116,8 +116,6 @@ class _$DeviceUpdate extends DeviceUpdate {
     BuiltValueNullFieldError.checkNotNull(
         deviceId, r'DeviceUpdate', 'deviceId');
     BuiltValueNullFieldError.checkNotNull(type, r'DeviceUpdate', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        manufacturer, r'DeviceUpdate', 'manufacturer');
     BuiltValueNullFieldError.checkNotNull(model, r'DeviceUpdate', 'model');
     BuiltValueNullFieldError.checkNotNull(os, r'DeviceUpdate', 'os');
     BuiltValueNullFieldError.checkNotNull(
@@ -284,8 +282,7 @@ class DeviceUpdateBuilder
               nameValue: nameValue,
               type: BuiltValueNullFieldError.checkNotNull(
                   type, r'DeviceUpdate', 'type'),
-              manufacturer: BuiltValueNullFieldError.checkNotNull(
-                  manufacturer, r'DeviceUpdate', 'manufacturer'),
+              manufacturer: manufacturer,
               model: BuiltValueNullFieldError.checkNotNull(
                   model, r'DeviceUpdate', 'model'),
               os: os.build(),

@@ -40,7 +40,7 @@ abstract class DeviceUpdate implements Built<DeviceUpdate, DeviceUpdateBuilder> 
 
   /// The manufacturer of the device.
   @BuiltValueField(wireName: r'manufacturer')
-  String get manufacturer;
+  String? get manufacturer;
 
   /// The end-user-visible name for the end product.
   @BuiltValueField(wireName: r'model')
@@ -105,9 +105,9 @@ class _$DeviceUpdateSerializer implements PrimitiveSerializer<DeviceUpdate> {
       specifiedType: const FullType(DeviceUpdateTypeEnum),
     );
     yield r'manufacturer';
-    yield serializers.serialize(
+    yield object.manufacturer == null ? null : serializers.serialize(
       object.manufacturer,
-      specifiedType: const FullType(String),
+      specifiedType: const FullType.nullable(String),
     );
     yield r'model';
     yield serializers.serialize(
@@ -194,8 +194,9 @@ class _$DeviceUpdateSerializer implements PrimitiveSerializer<DeviceUpdate> {
         case r'manufacturer':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.manufacturer = valueDes;
           break;
         case r'model':

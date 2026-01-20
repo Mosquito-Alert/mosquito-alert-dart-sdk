@@ -8,21 +8,26 @@ part of 'paginated_photo_prediction_list.dart';
 
 class _$PaginatedPhotoPredictionList extends PaginatedPhotoPredictionList {
   @override
-  final int? count;
+  final int count;
   @override
   final String? next;
   @override
   final String? previous;
   @override
-  final BuiltList<PhotoPrediction>? results;
+  final BuiltList<PhotoPrediction> results;
 
   factory _$PaginatedPhotoPredictionList(
           [void Function(PaginatedPhotoPredictionListBuilder)? updates]) =>
       (new PaginatedPhotoPredictionListBuilder()..update(updates))._build();
 
   _$PaginatedPhotoPredictionList._(
-      {this.count, this.next, this.previous, this.results})
-      : super._();
+      {required this.count, this.next, this.previous, required this.results})
+      : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        count, r'PaginatedPhotoPredictionList', 'count');
+    BuiltValueNullFieldError.checkNotNull(
+        results, r'PaginatedPhotoPredictionList', 'results');
+  }
 
   @override
   PaginatedPhotoPredictionList rebuild(
@@ -99,7 +104,7 @@ class PaginatedPhotoPredictionListBuilder
       _count = $v.count;
       _next = $v.next;
       _previous = $v.previous;
-      _results = $v.results?.toBuilder();
+      _results = $v.results.toBuilder();
       _$v = null;
     }
     return this;
@@ -124,15 +129,16 @@ class PaginatedPhotoPredictionListBuilder
     try {
       _$result = _$v ??
           new _$PaginatedPhotoPredictionList._(
-              count: count,
+              count: BuiltValueNullFieldError.checkNotNull(
+                  count, r'PaginatedPhotoPredictionList', 'count'),
               next: next,
               previous: previous,
-              results: _results?.build());
+              results: results.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
-        _results?.build();
+        results.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'PaginatedPhotoPredictionList', _$failedField, e.toString());

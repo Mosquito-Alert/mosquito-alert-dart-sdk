@@ -40,6 +40,9 @@ const DevicesUpdateNonFieldErrorsErrorComponentCodeEnum
     _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_null_ =
     const DevicesUpdateNonFieldErrorsErrorComponentCodeEnum._('null_');
 const DevicesUpdateNonFieldErrorsErrorComponentCodeEnum
+    _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_unique =
+    const DevicesUpdateNonFieldErrorsErrorComponentCodeEnum._('unique');
+const DevicesUpdateNonFieldErrorsErrorComponentCodeEnum
     _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
     const DevicesUpdateNonFieldErrorsErrorComponentCodeEnum._(
         'unknownDefaultOpenApi');
@@ -51,6 +54,8 @@ DevicesUpdateNonFieldErrorsErrorComponentCodeEnum
       return _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_null_;
+    case 'unique':
+      return _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_unique;
     case 'unknownDefaultOpenApi':
       return _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -63,6 +68,7 @@ final BuiltSet<DevicesUpdateNonFieldErrorsErrorComponentCodeEnum>
         DevicesUpdateNonFieldErrorsErrorComponentCodeEnum>(const <DevicesUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
+  _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_unique,
   _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -112,11 +118,13 @@ class _$DevicesUpdateNonFieldErrorsErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
     'null_': 'null',
+    'unique': 'unique',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
     'null': 'null_',
+    'unique': 'unique',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

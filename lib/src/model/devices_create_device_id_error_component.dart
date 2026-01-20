@@ -23,7 +23,7 @@ abstract class DevicesCreateDeviceIdErrorComponent implements Built<DevicesCreat
 
   @BuiltValueField(wireName: r'code')
   DevicesCreateDeviceIdErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid,  max_length,  null,  null_characters_not_allowed,  required,  surrogate_characters_not_allowed,  };
+  // enum codeEnum {  blank,  invalid,  max_length,  null,  null_characters_not_allowed,  required,  surrogate_characters_not_allowed,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -156,6 +156,8 @@ class DevicesCreateDeviceIdErrorComponentAttrEnum extends EnumClass {
 
 class DevicesCreateDeviceIdErrorComponentCodeEnum extends EnumClass {
 
+  @BuiltValueEnumConst(wireName: r'blank')
+  static const DevicesCreateDeviceIdErrorComponentCodeEnum blank = _$devicesCreateDeviceIdErrorComponentCodeEnum_blank;
   @BuiltValueEnumConst(wireName: r'invalid')
   static const DevicesCreateDeviceIdErrorComponentCodeEnum invalid = _$devicesCreateDeviceIdErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'max_length')
