@@ -131,7 +131,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **geoList**
-> BuiltList<ObservationGeoModel> geoList(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, hasPhotos, identificationTaxonIds, identificationTaxonIdsLookup, negateIdentificationTaxonIds, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid)
+> BuiltList<ObservationGeoModel> geoList(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, geoPrecision, hasPhotos, identificationTaxonIds, identificationTaxonIdsLookup, negateIdentificationTaxonIds, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid)
 
 
 
@@ -153,7 +153,6 @@ final int countryId = 56; // int |
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final double dist = 3.4; // double | Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
-final String format = format_example; // String | 
 final num geoPrecision = 8.14; // num | Latitude/Longitude precision
 final bool hasPhotos = true; // bool | Has any photo
 final BuiltList<String> identificationTaxonIds = ; // BuiltList<String> | 
@@ -171,7 +170,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
 
 try {
-    final response = api.geoList(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, format, geoPrecision, hasPhotos, identificationTaxonIds, identificationTaxonIdsLookup, negateIdentificationTaxonIds, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid);
+    final response = api.geoList(boundaryUuid, countryId, createdAtAfter, createdAtBefore, dist, geoPrecision, hasPhotos, identificationTaxonIds, identificationTaxonIdsLookup, negateIdentificationTaxonIds, orderBy, point, receivedAtAfter, receivedAtBefore, search, shortId, tags, updatedAtAfter, updatedAtBefore, userUuid);
     print(response);
 } on DioException catch (e) {
     print('Exception when calling ObservationsApi->geoList: $e\n');
@@ -187,7 +186,6 @@ Name | Type | Description  | Notes
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
  **dist** | **double**| Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed. | [optional] [default to 1000]
- **format** | **String**|  | [optional] 
  **geoPrecision** | **num**| Latitude/Longitude precision | [optional] 
  **hasPhotos** | **bool**| Has any photo | [optional] 
  **identificationTaxonIds** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 

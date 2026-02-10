@@ -17,7 +17,7 @@ void main() {
       // TODO
     });
 
-    //Future<BuiltList<ObservationGeoModel>> geoList({ String boundaryUuid, int countryId, DateTime createdAtAfter, DateTime createdAtBefore, double dist, String format, num geoPrecision, bool hasPhotos, BuiltList<String> identificationTaxonIds, String identificationTaxonIdsLookup, bool negateIdentificationTaxonIds, BuiltList<String> orderBy, BuiltList<double> point, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, BuiltList<String> tags, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    //Future<BuiltList<ObservationGeoModel>> geoList({ String boundaryUuid, int countryId, DateTime createdAtAfter, DateTime createdAtBefore, double dist, num geoPrecision, bool hasPhotos, BuiltList<String> identificationTaxonIds, String identificationTaxonIdsLookup, bool negateIdentificationTaxonIds, BuiltList<String> orderBy, BuiltList<double> point, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, BuiltList<String> tags, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test geoList', () async {
       // TODO
     });

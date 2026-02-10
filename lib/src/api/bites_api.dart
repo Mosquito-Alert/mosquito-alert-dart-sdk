@@ -205,7 +205,6 @@ class BitesApi {
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [dist] - Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
-  /// * [format] 
   /// * [geoPrecision] - Latitude/Longitude precision
   /// * [orderBy] - Ordenamiento  
   /// * [point] - Point represented in **x,y** format. Represents **point** in **Distance to point filter**
@@ -232,7 +231,6 @@ class BitesApi {
     DateTime? createdAtAfter,
     DateTime? createdAtBefore,
     double? dist = 1000,
-    String? format,
     num? geoPrecision,
     BuiltList<String>? orderBy,
     BuiltList<double>? point,
@@ -286,7 +284,6 @@ class BitesApi {
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (dist != null) r'dist': encodeQueryParameter(_serializers, dist, const FullType(double)),
-      if (format != null) r'format': encodeQueryParameter(_serializers, format, const FullType(String)),
       if (geoPrecision != null) r'geo_precision': encodeQueryParameter(_serializers, geoPrecision, const FullType(num)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (point != null) r'point': encodeCollectionQueryParameter<double>(_serializers, point, const FullType(BuiltList, [FullType(double)]), format: ListFormat.csv,),

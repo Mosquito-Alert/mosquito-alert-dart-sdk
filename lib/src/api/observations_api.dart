@@ -231,7 +231,6 @@ class ObservationsApi {
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [dist] - Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
-  /// * [format] 
   /// * [geoPrecision] - Latitude/Longitude precision
   /// * [hasPhotos] - Has any photo
   /// * [identificationTaxonIds] 
@@ -262,7 +261,6 @@ class ObservationsApi {
     DateTime? createdAtAfter,
     DateTime? createdAtBefore,
     double? dist = 1000,
-    String? format,
     num? geoPrecision,
     bool? hasPhotos,
     BuiltList<String>? identificationTaxonIds,
@@ -320,7 +318,6 @@ class ObservationsApi {
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (dist != null) r'dist': encodeQueryParameter(_serializers, dist, const FullType(double)),
-      if (format != null) r'format': encodeQueryParameter(_serializers, format, const FullType(String)),
       if (geoPrecision != null) r'geo_precision': encodeQueryParameter(_serializers, geoPrecision, const FullType(num)),
       if (hasPhotos != null) r'has_photos': encodeQueryParameter(_serializers, hasPhotos, const FullType(bool)),
       if (identificationTaxonIds != null) r'identification_taxon_ids': encodeCollectionQueryParameter<String>(_serializers, identificationTaxonIds, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),

@@ -236,7 +236,6 @@ class BreedingSitesApi {
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
   /// * [dist] - Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
-  /// * [format] 
   /// * [geoPrecision] - Latitude/Longitude precision
   /// * [hasLarvae] 
   /// * [hasNearMosquitoes] 
@@ -268,7 +267,6 @@ class BreedingSitesApi {
     DateTime? createdAtAfter,
     DateTime? createdAtBefore,
     double? dist = 1000,
-    String? format,
     num? geoPrecision,
     bool? hasLarvae,
     bool? hasNearMosquitoes,
@@ -327,7 +325,6 @@ class BreedingSitesApi {
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
       if (dist != null) r'dist': encodeQueryParameter(_serializers, dist, const FullType(double)),
-      if (format != null) r'format': encodeQueryParameter(_serializers, format, const FullType(String)),
       if (geoPrecision != null) r'geo_precision': encodeQueryParameter(_serializers, geoPrecision, const FullType(num)),
       if (hasLarvae != null) r'has_larvae': encodeQueryParameter(_serializers, hasLarvae, const FullType(bool)),
       if (hasNearMosquitoes != null) r'has_near_mosquitoes': encodeQueryParameter(_serializers, hasNearMosquitoes, const FullType(bool)),
