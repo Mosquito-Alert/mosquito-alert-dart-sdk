@@ -15,7 +15,6 @@ part 'breeding_site_geo_json_model.g.dart';
 ///
 /// Properties:
 /// * [type] 
-/// * [id] 
 /// * [geometry] 
 /// * [properties] 
 @BuiltValue()
@@ -23,9 +22,6 @@ abstract class BreedingSiteGeoJsonModel implements Built<BreedingSiteGeoJsonMode
   @BuiltValueField(wireName: r'type')
   BreedingSiteGeoJsonModelTypeEnum? get type;
   // enum typeEnum {  Feature,  };
-
-  @BuiltValueField(wireName: r'id')
-  String? get id;
 
   @BuiltValueField(wireName: r'geometry')
   BiteGeoJsonModelGeometry? get geometry;
@@ -61,13 +57,6 @@ class _$BreedingSiteGeoJsonModelSerializer implements PrimitiveSerializer<Breedi
       yield serializers.serialize(
         object.type,
         specifiedType: const FullType(BreedingSiteGeoJsonModelTypeEnum),
-      );
-    }
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
       );
     }
     if (object.geometry != null) {
@@ -113,13 +102,6 @@ class _$BreedingSiteGeoJsonModelSerializer implements PrimitiveSerializer<Breedi
             specifiedType: const FullType(BreedingSiteGeoJsonModelTypeEnum),
           ) as BreedingSiteGeoJsonModelTypeEnum;
           result.type = valueDes;
-          break;
-        case r'id':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.id = valueDes;
           break;
         case r'geometry':
           final valueDes = serializers.deserialize(

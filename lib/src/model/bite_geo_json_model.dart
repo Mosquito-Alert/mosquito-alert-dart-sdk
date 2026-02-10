@@ -15,7 +15,6 @@ part 'bite_geo_json_model.g.dart';
 ///
 /// Properties:
 /// * [type] 
-/// * [id] 
 /// * [geometry] 
 /// * [properties] 
 @BuiltValue()
@@ -23,9 +22,6 @@ abstract class BiteGeoJsonModel implements Built<BiteGeoJsonModel, BiteGeoJsonMo
   @BuiltValueField(wireName: r'type')
   BiteGeoJsonModelTypeEnum? get type;
   // enum typeEnum {  Feature,  };
-
-  @BuiltValueField(wireName: r'id')
-  String? get id;
 
   @BuiltValueField(wireName: r'geometry')
   BiteGeoJsonModelGeometry? get geometry;
@@ -61,13 +57,6 @@ class _$BiteGeoJsonModelSerializer implements PrimitiveSerializer<BiteGeoJsonMod
       yield serializers.serialize(
         object.type,
         specifiedType: const FullType(BiteGeoJsonModelTypeEnum),
-      );
-    }
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
       );
     }
     if (object.geometry != null) {
@@ -113,13 +102,6 @@ class _$BiteGeoJsonModelSerializer implements PrimitiveSerializer<BiteGeoJsonMod
             specifiedType: const FullType(BiteGeoJsonModelTypeEnum),
           ) as BiteGeoJsonModelTypeEnum;
           result.type = valueDes;
-          break;
-        case r'id':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.id = valueDes;
           break;
         case r'geometry':
           final valueDes = serializers.deserialize(

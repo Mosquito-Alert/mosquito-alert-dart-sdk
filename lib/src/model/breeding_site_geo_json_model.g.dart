@@ -70,8 +70,6 @@ class _$BreedingSiteGeoJsonModel extends BreedingSiteGeoJsonModel {
   @override
   final BreedingSiteGeoJsonModelTypeEnum? type;
   @override
-  final String? id;
-  @override
   final BiteGeoJsonModelGeometry? geometry;
   @override
   final BreedingSiteGeoJsonModelProperties? properties;
@@ -80,8 +78,7 @@ class _$BreedingSiteGeoJsonModel extends BreedingSiteGeoJsonModel {
           [void Function(BreedingSiteGeoJsonModelBuilder)? updates]) =>
       (new BreedingSiteGeoJsonModelBuilder()..update(updates))._build();
 
-  _$BreedingSiteGeoJsonModel._(
-      {this.type, this.id, this.geometry, this.properties})
+  _$BreedingSiteGeoJsonModel._({this.type, this.geometry, this.properties})
       : super._();
 
   @override
@@ -98,7 +95,6 @@ class _$BreedingSiteGeoJsonModel extends BreedingSiteGeoJsonModel {
     if (identical(other, this)) return true;
     return other is BreedingSiteGeoJsonModel &&
         type == other.type &&
-        id == other.id &&
         geometry == other.geometry &&
         properties == other.properties;
   }
@@ -107,7 +103,6 @@ class _$BreedingSiteGeoJsonModel extends BreedingSiteGeoJsonModel {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, type.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, geometry.hashCode);
     _$hash = $jc(_$hash, properties.hashCode);
     _$hash = $jf(_$hash);
@@ -118,7 +113,6 @@ class _$BreedingSiteGeoJsonModel extends BreedingSiteGeoJsonModel {
   String toString() {
     return (newBuiltValueToStringHelper(r'BreedingSiteGeoJsonModel')
           ..add('type', type)
-          ..add('id', id)
           ..add('geometry', geometry)
           ..add('properties', properties))
         .toString();
@@ -133,10 +127,6 @@ class BreedingSiteGeoJsonModelBuilder
   BreedingSiteGeoJsonModelTypeEnum? _type;
   BreedingSiteGeoJsonModelTypeEnum? get type => _$this._type;
   set type(BreedingSiteGeoJsonModelTypeEnum? type) => _$this._type = type;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
 
   BiteGeoJsonModelGeometryBuilder? _geometry;
   BiteGeoJsonModelGeometryBuilder get geometry =>
@@ -158,7 +148,6 @@ class BreedingSiteGeoJsonModelBuilder
     final $v = _$v;
     if ($v != null) {
       _type = $v.type;
-      _id = $v.id;
       _geometry = $v.geometry?.toBuilder();
       _properties = $v.properties?.toBuilder();
       _$v = null;
@@ -186,7 +175,6 @@ class BreedingSiteGeoJsonModelBuilder
       _$result = _$v ??
           new _$BreedingSiteGeoJsonModel._(
               type: type,
-              id: id,
               geometry: _geometry?.build(),
               properties: _properties?.build());
     } catch (_) {

@@ -9,7 +9,6 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** |  | [optional] 
-**id** | **String** |  | [optional] 
 **geometry** | [**BiteGeoJsonModelGeometry**](BiteGeoJsonModelGeometry.md) |  | [optional] 
 **properties** | [**BreedingSiteGeoJsonModelProperties**](BreedingSiteGeoJsonModelProperties.md) |  | [optional] 
 

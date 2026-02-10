@@ -12,11 +12,6 @@ void main() {
       // TODO
     });
 
-    // String id
-    test('to test the property `id`', () async {
-      // TODO
-    });
-
     // BiteGeoJsonModelGeometry geometry
     test('to test the property `geometry`', () async {
       // TODO

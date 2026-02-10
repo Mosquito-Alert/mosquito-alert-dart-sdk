@@ -65,8 +65,6 @@ class _$BiteGeoJsonModel extends BiteGeoJsonModel {
   @override
   final BiteGeoJsonModelTypeEnum? type;
   @override
-  final String? id;
-  @override
   final BiteGeoJsonModelGeometry? geometry;
   @override
   final BiteGeoJsonModelProperties? properties;
@@ -75,8 +73,7 @@ class _$BiteGeoJsonModel extends BiteGeoJsonModel {
           [void Function(BiteGeoJsonModelBuilder)? updates]) =>
       (new BiteGeoJsonModelBuilder()..update(updates))._build();
 
-  _$BiteGeoJsonModel._({this.type, this.id, this.geometry, this.properties})
-      : super._();
+  _$BiteGeoJsonModel._({this.type, this.geometry, this.properties}) : super._();
 
   @override
   BiteGeoJsonModel rebuild(void Function(BiteGeoJsonModelBuilder) updates) =>
@@ -91,7 +88,6 @@ class _$BiteGeoJsonModel extends BiteGeoJsonModel {
     if (identical(other, this)) return true;
     return other is BiteGeoJsonModel &&
         type == other.type &&
-        id == other.id &&
         geometry == other.geometry &&
         properties == other.properties;
   }
@@ -100,7 +96,6 @@ class _$BiteGeoJsonModel extends BiteGeoJsonModel {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, type.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, geometry.hashCode);
     _$hash = $jc(_$hash, properties.hashCode);
     _$hash = $jf(_$hash);
@@ -111,7 +106,6 @@ class _$BiteGeoJsonModel extends BiteGeoJsonModel {
   String toString() {
     return (newBuiltValueToStringHelper(r'BiteGeoJsonModel')
           ..add('type', type)
-          ..add('id', id)
           ..add('geometry', geometry)
           ..add('properties', properties))
         .toString();
@@ -125,10 +119,6 @@ class BiteGeoJsonModelBuilder
   BiteGeoJsonModelTypeEnum? _type;
   BiteGeoJsonModelTypeEnum? get type => _$this._type;
   set type(BiteGeoJsonModelTypeEnum? type) => _$this._type = type;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
 
   BiteGeoJsonModelGeometryBuilder? _geometry;
   BiteGeoJsonModelGeometryBuilder get geometry =>
@@ -150,7 +140,6 @@ class BiteGeoJsonModelBuilder
     final $v = _$v;
     if ($v != null) {
       _type = $v.type;
-      _id = $v.id;
       _geometry = $v.geometry?.toBuilder();
       _properties = $v.properties?.toBuilder();
       _$v = null;
@@ -178,7 +167,6 @@ class BiteGeoJsonModelBuilder
       _$result = _$v ??
           new _$BiteGeoJsonModel._(
               type: type,
-              id: id,
               geometry: _geometry?.build(),
               properties: _properties?.build());
     } catch (_) {

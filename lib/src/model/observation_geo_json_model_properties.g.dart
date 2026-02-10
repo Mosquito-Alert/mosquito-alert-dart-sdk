@@ -9,6 +9,8 @@ part of 'observation_geo_json_model_properties.dart';
 class _$ObservationGeoJsonModelProperties
     extends ObservationGeoJsonModelProperties {
   @override
+  final String? uuid;
+  @override
   final DateTime? receivedAt;
   @override
   final int? identificationTaxonId;
@@ -19,7 +21,7 @@ class _$ObservationGeoJsonModelProperties
           ._build();
 
   _$ObservationGeoJsonModelProperties._(
-      {this.receivedAt, this.identificationTaxonId})
+      {this.uuid, this.receivedAt, this.identificationTaxonId})
       : super._();
 
   @override
@@ -35,6 +37,7 @@ class _$ObservationGeoJsonModelProperties
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is ObservationGeoJsonModelProperties &&
+        uuid == other.uuid &&
         receivedAt == other.receivedAt &&
         identificationTaxonId == other.identificationTaxonId;
   }
@@ -42,6 +45,7 @@ class _$ObservationGeoJsonModelProperties
   @override
   int get hashCode {
     var _$hash = 0;
+    _$hash = $jc(_$hash, uuid.hashCode);
     _$hash = $jc(_$hash, receivedAt.hashCode);
     _$hash = $jc(_$hash, identificationTaxonId.hashCode);
     _$hash = $jf(_$hash);
@@ -51,6 +55,7 @@ class _$ObservationGeoJsonModelProperties
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'ObservationGeoJsonModelProperties')
+          ..add('uuid', uuid)
           ..add('receivedAt', receivedAt)
           ..add('identificationTaxonId', identificationTaxonId))
         .toString();
@@ -62,6 +67,10 @@ class ObservationGeoJsonModelPropertiesBuilder
         Builder<ObservationGeoJsonModelProperties,
             ObservationGeoJsonModelPropertiesBuilder> {
   _$ObservationGeoJsonModelProperties? _$v;
+
+  String? _uuid;
+  String? get uuid => _$this._uuid;
+  set uuid(String? uuid) => _$this._uuid = uuid;
 
   DateTime? _receivedAt;
   DateTime? get receivedAt => _$this._receivedAt;
@@ -79,6 +88,7 @@ class ObservationGeoJsonModelPropertiesBuilder
   ObservationGeoJsonModelPropertiesBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _uuid = $v.uuid;
       _receivedAt = $v.receivedAt;
       _identificationTaxonId = $v.identificationTaxonId;
       _$v = null;
@@ -104,6 +114,7 @@ class ObservationGeoJsonModelPropertiesBuilder
   _$ObservationGeoJsonModelProperties _build() {
     final _$result = _$v ??
         new _$ObservationGeoJsonModelProperties._(
+            uuid: uuid,
             receivedAt: receivedAt,
             identificationTaxonId: identificationTaxonId);
     replace(_$result);

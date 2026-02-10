@@ -11,10 +11,14 @@ part 'observation_geo_json_model_properties.g.dart';
 /// ObservationGeoJsonModelProperties
 ///
 /// Properties:
+/// * [uuid] 
 /// * [receivedAt] 
 /// * [identificationTaxonId] 
 @BuiltValue()
 abstract class ObservationGeoJsonModelProperties implements Built<ObservationGeoJsonModelProperties, ObservationGeoJsonModelPropertiesBuilder> {
+  @BuiltValueField(wireName: r'uuid')
+  String? get uuid;
+
   @BuiltValueField(wireName: r'received_at')
   DateTime? get receivedAt;
 
@@ -44,6 +48,13 @@ class _$ObservationGeoJsonModelPropertiesSerializer implements PrimitiveSerializ
     ObservationGeoJsonModelProperties object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
+    if (object.uuid != null) {
+      yield r'uuid';
+      yield serializers.serialize(
+        object.uuid,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.receivedAt != null) {
       yield r'received_at';
       yield serializers.serialize(
@@ -81,6 +92,13 @@ class _$ObservationGeoJsonModelPropertiesSerializer implements PrimitiveSerializ
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
+        case r'uuid':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(String),
+          ) as String;
+          result.uuid = valueDes;
+          break;
         case r'received_at':
           final valueDes = serializers.deserialize(
             value,

@@ -15,7 +15,6 @@ part 'observation_geo_json_model.g.dart';
 ///
 /// Properties:
 /// * [type] 
-/// * [id] 
 /// * [geometry] 
 /// * [properties] 
 @BuiltValue()
@@ -23,9 +22,6 @@ abstract class ObservationGeoJsonModel implements Built<ObservationGeoJsonModel,
   @BuiltValueField(wireName: r'type')
   ObservationGeoJsonModelTypeEnum? get type;
   // enum typeEnum {  Feature,  };
-
-  @BuiltValueField(wireName: r'id')
-  String? get id;
 
   @BuiltValueField(wireName: r'geometry')
   BiteGeoJsonModelGeometry? get geometry;
@@ -61,13 +57,6 @@ class _$ObservationGeoJsonModelSerializer implements PrimitiveSerializer<Observa
       yield serializers.serialize(
         object.type,
         specifiedType: const FullType(ObservationGeoJsonModelTypeEnum),
-      );
-    }
-    if (object.id != null) {
-      yield r'id';
-      yield serializers.serialize(
-        object.id,
-        specifiedType: const FullType(String),
       );
     }
     if (object.geometry != null) {
@@ -113,13 +102,6 @@ class _$ObservationGeoJsonModelSerializer implements PrimitiveSerializer<Observa
             specifiedType: const FullType(ObservationGeoJsonModelTypeEnum),
           ) as ObservationGeoJsonModelTypeEnum;
           result.type = valueDes;
-          break;
-        case r'id':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.id = valueDes;
           break;
         case r'geometry':
           final valueDes = serializers.deserialize(

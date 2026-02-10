@@ -70,8 +70,6 @@ class _$ObservationGeoJsonModel extends ObservationGeoJsonModel {
   @override
   final ObservationGeoJsonModelTypeEnum? type;
   @override
-  final String? id;
-  @override
   final BiteGeoJsonModelGeometry? geometry;
   @override
   final ObservationGeoJsonModelProperties? properties;
@@ -80,8 +78,7 @@ class _$ObservationGeoJsonModel extends ObservationGeoJsonModel {
           [void Function(ObservationGeoJsonModelBuilder)? updates]) =>
       (new ObservationGeoJsonModelBuilder()..update(updates))._build();
 
-  _$ObservationGeoJsonModel._(
-      {this.type, this.id, this.geometry, this.properties})
+  _$ObservationGeoJsonModel._({this.type, this.geometry, this.properties})
       : super._();
 
   @override
@@ -98,7 +95,6 @@ class _$ObservationGeoJsonModel extends ObservationGeoJsonModel {
     if (identical(other, this)) return true;
     return other is ObservationGeoJsonModel &&
         type == other.type &&
-        id == other.id &&
         geometry == other.geometry &&
         properties == other.properties;
   }
@@ -107,7 +103,6 @@ class _$ObservationGeoJsonModel extends ObservationGeoJsonModel {
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, type.hashCode);
-    _$hash = $jc(_$hash, id.hashCode);
     _$hash = $jc(_$hash, geometry.hashCode);
     _$hash = $jc(_$hash, properties.hashCode);
     _$hash = $jf(_$hash);
@@ -118,7 +113,6 @@ class _$ObservationGeoJsonModel extends ObservationGeoJsonModel {
   String toString() {
     return (newBuiltValueToStringHelper(r'ObservationGeoJsonModel')
           ..add('type', type)
-          ..add('id', id)
           ..add('geometry', geometry)
           ..add('properties', properties))
         .toString();
@@ -133,10 +127,6 @@ class ObservationGeoJsonModelBuilder
   ObservationGeoJsonModelTypeEnum? _type;
   ObservationGeoJsonModelTypeEnum? get type => _$this._type;
   set type(ObservationGeoJsonModelTypeEnum? type) => _$this._type = type;
-
-  String? _id;
-  String? get id => _$this._id;
-  set id(String? id) => _$this._id = id;
 
   BiteGeoJsonModelGeometryBuilder? _geometry;
   BiteGeoJsonModelGeometryBuilder get geometry =>
@@ -158,7 +148,6 @@ class ObservationGeoJsonModelBuilder
     final $v = _$v;
     if ($v != null) {
       _type = $v.type;
-      _id = $v.id;
       _geometry = $v.geometry?.toBuilder();
       _properties = $v.properties?.toBuilder();
       _$v = null;
@@ -186,7 +175,6 @@ class ObservationGeoJsonModelBuilder
       _$result = _$v ??
           new _$ObservationGeoJsonModel._(
               type: type,
-              id: id,
               geometry: _geometry?.build(),
               properties: _properties?.build());
     } catch (_) {

@@ -121,6 +121,8 @@ class _$BreedingSiteGeoJsonModelPropertiesSiteTypeEnumSerializer
 class _$BreedingSiteGeoJsonModelProperties
     extends BreedingSiteGeoJsonModelProperties {
   @override
+  final String? uuid;
+  @override
   final DateTime? receivedAt;
   @override
   final BreedingSiteGeoJsonModelPropertiesSiteTypeEnum? siteType;
@@ -134,7 +136,7 @@ class _$BreedingSiteGeoJsonModelProperties
           ._build();
 
   _$BreedingSiteGeoJsonModelProperties._(
-      {this.receivedAt, this.siteType, this.hasWater})
+      {this.uuid, this.receivedAt, this.siteType, this.hasWater})
       : super._();
 
   @override
@@ -150,6 +152,7 @@ class _$BreedingSiteGeoJsonModelProperties
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
     return other is BreedingSiteGeoJsonModelProperties &&
+        uuid == other.uuid &&
         receivedAt == other.receivedAt &&
         siteType == other.siteType &&
         hasWater == other.hasWater;
@@ -158,6 +161,7 @@ class _$BreedingSiteGeoJsonModelProperties
   @override
   int get hashCode {
     var _$hash = 0;
+    _$hash = $jc(_$hash, uuid.hashCode);
     _$hash = $jc(_$hash, receivedAt.hashCode);
     _$hash = $jc(_$hash, siteType.hashCode);
     _$hash = $jc(_$hash, hasWater.hashCode);
@@ -168,6 +172,7 @@ class _$BreedingSiteGeoJsonModelProperties
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'BreedingSiteGeoJsonModelProperties')
+          ..add('uuid', uuid)
           ..add('receivedAt', receivedAt)
           ..add('siteType', siteType)
           ..add('hasWater', hasWater))
@@ -180,6 +185,10 @@ class BreedingSiteGeoJsonModelPropertiesBuilder
         Builder<BreedingSiteGeoJsonModelProperties,
             BreedingSiteGeoJsonModelPropertiesBuilder> {
   _$BreedingSiteGeoJsonModelProperties? _$v;
+
+  String? _uuid;
+  String? get uuid => _$this._uuid;
+  set uuid(String? uuid) => _$this._uuid = uuid;
 
   DateTime? _receivedAt;
   DateTime? get receivedAt => _$this._receivedAt;
@@ -202,6 +211,7 @@ class BreedingSiteGeoJsonModelPropertiesBuilder
   BreedingSiteGeoJsonModelPropertiesBuilder get _$this {
     final $v = _$v;
     if ($v != null) {
+      _uuid = $v.uuid;
       _receivedAt = $v.receivedAt;
       _siteType = $v.siteType;
       _hasWater = $v.hasWater;
@@ -228,7 +238,10 @@ class BreedingSiteGeoJsonModelPropertiesBuilder
   _$BreedingSiteGeoJsonModelProperties _build() {
     final _$result = _$v ??
         new _$BreedingSiteGeoJsonModelProperties._(
-            receivedAt: receivedAt, siteType: siteType, hasWater: hasWater);
+            uuid: uuid,
+            receivedAt: receivedAt,
+            siteType: siteType,
+            hasWater: hasWater);
     replace(_$result);
     return _$result;
   }

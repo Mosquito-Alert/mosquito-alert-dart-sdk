@@ -8,6 +8,7 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**uuid** | **String** |  | [optional] 
 **receivedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **siteType** | **String** |  | [optional] 
 **hasWater** | **bool** | Either if the user perceived water in the breeding site. | [optional] 

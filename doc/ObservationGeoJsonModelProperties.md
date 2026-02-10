@@ -8,6 +8,7 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**uuid** | **String** |  | [optional] 
 **receivedAt** | [**DateTime**](DateTime.md) |  | [optional] 
 **identificationTaxonId** | **int** |  | [optional] 
 
