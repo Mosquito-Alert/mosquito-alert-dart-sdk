@@ -17,7 +17,7 @@ part 'bite_request.g.dart';
 /// * [createdAt] 
 /// * [sentAt] 
 /// * [location] 
-/// * [note] - Note user attached to report.
+/// * [note] 
 /// * [tags] 
 /// * [eventEnvironment] - The environment where the event took place.
 /// * [eventMoment] - The moment of the day when the event took place.
@@ -33,7 +33,6 @@ abstract class BiteRequest implements Built<BiteRequest, BiteRequestBuilder> {
   @BuiltValueField(wireName: r'location')
   LocationRequest get location;
 
-  /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
   String? get note;
 

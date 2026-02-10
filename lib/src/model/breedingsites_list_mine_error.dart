@@ -3,12 +3,16 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_geo_precision_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_created_at_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_updated_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_boundary_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_site_type_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_user_uuid_error_component.dart';
 import 'package:built_value/built_value.dart';
@@ -25,17 +29,21 @@ part 'breedingsites_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BreedingsitesListMineError implements Built<BreedingsitesListMineError, BreedingsitesListMineErrorBuilder> {
-  /// One Of [BreedingsitesListMineCountryIdErrorComponent], [BreedingsitesListMineCreatedAtErrorComponent], [BreedingsitesListMineOrderByErrorComponent], [BreedingsitesListMineReceivedAtErrorComponent], [BreedingsitesListMineShortIdErrorComponent], [BreedingsitesListMineUpdatedAtErrorComponent], [BreedingsitesListMineUserUuidErrorComponent]
+  /// One Of [BreedingsitesListMineBoundaryUuidErrorComponent], [BreedingsitesListMineCountryIdErrorComponent], [BreedingsitesListMineCreatedAtErrorComponent], [BreedingsitesListMineGeoPrecisionErrorComponent], [BreedingsitesListMineOrderByErrorComponent], [BreedingsitesListMineReceivedAtErrorComponent], [BreedingsitesListMineShortIdErrorComponent], [BreedingsitesListMineSiteTypeErrorComponent], [BreedingsitesListMineTagsErrorComponent], [BreedingsitesListMineUpdatedAtErrorComponent], [BreedingsitesListMineUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
+    r'boundary_uuid': BreedingsitesListMineBoundaryUuidErrorComponent,
     r'country_id': BreedingsitesListMineCountryIdErrorComponent,
     r'created_at': BreedingsitesListMineCreatedAtErrorComponent,
+    r'geo_precision': BreedingsitesListMineGeoPrecisionErrorComponent,
     r'order_by': BreedingsitesListMineOrderByErrorComponent,
     r'received_at': BreedingsitesListMineReceivedAtErrorComponent,
     r'short_id': BreedingsitesListMineShortIdErrorComponent,
+    r'site_type': BreedingsitesListMineSiteTypeErrorComponent,
+    r'tags': BreedingsitesListMineTagsErrorComponent,
     r'updated_at': BreedingsitesListMineUpdatedAtErrorComponent,
     r'user_uuid': BreedingsitesListMineUserUuidErrorComponent,
   };
@@ -53,11 +61,17 @@ abstract class BreedingsitesListMineError implements Built<BreedingsitesListMine
 
 extension BreedingsitesListMineErrorDiscriminatorExt on BreedingsitesListMineError {
     String? get discriminatorValue {
+        if (this is BreedingsitesListMineBoundaryUuidErrorComponent) {
+            return r'boundary_uuid';
+        }
         if (this is BreedingsitesListMineCountryIdErrorComponent) {
             return r'country_id';
         }
         if (this is BreedingsitesListMineCreatedAtErrorComponent) {
             return r'created_at';
+        }
+        if (this is BreedingsitesListMineGeoPrecisionErrorComponent) {
+            return r'geo_precision';
         }
         if (this is BreedingsitesListMineOrderByErrorComponent) {
             return r'order_by';
@@ -67,6 +81,12 @@ extension BreedingsitesListMineErrorDiscriminatorExt on BreedingsitesListMineErr
         }
         if (this is BreedingsitesListMineShortIdErrorComponent) {
             return r'short_id';
+        }
+        if (this is BreedingsitesListMineSiteTypeErrorComponent) {
+            return r'site_type';
+        }
+        if (this is BreedingsitesListMineTagsErrorComponent) {
+            return r'tags';
         }
         if (this is BreedingsitesListMineUpdatedAtErrorComponent) {
             return r'updated_at';
@@ -79,11 +99,17 @@ extension BreedingsitesListMineErrorDiscriminatorExt on BreedingsitesListMineErr
 }
 extension BreedingsitesListMineErrorBuilderDiscriminatorExt on BreedingsitesListMineErrorBuilder {
     String? get discriminatorValue {
+        if (this is BreedingsitesListMineBoundaryUuidErrorComponentBuilder) {
+            return r'boundary_uuid';
+        }
         if (this is BreedingsitesListMineCountryIdErrorComponentBuilder) {
             return r'country_id';
         }
         if (this is BreedingsitesListMineCreatedAtErrorComponentBuilder) {
             return r'created_at';
+        }
+        if (this is BreedingsitesListMineGeoPrecisionErrorComponentBuilder) {
+            return r'geo_precision';
         }
         if (this is BreedingsitesListMineOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -93,6 +119,12 @@ extension BreedingsitesListMineErrorBuilderDiscriminatorExt on BreedingsitesList
         }
         if (this is BreedingsitesListMineShortIdErrorComponentBuilder) {
             return r'short_id';
+        }
+        if (this is BreedingsitesListMineSiteTypeErrorComponentBuilder) {
+            return r'site_type';
+        }
+        if (this is BreedingsitesListMineTagsErrorComponentBuilder) {
+            return r'tags';
         }
         if (this is BreedingsitesListMineUpdatedAtErrorComponentBuilder) {
             return r'updated_at';
@@ -140,10 +172,17 @@ class _$BreedingsitesListMineErrorSerializer implements PrimitiveSerializer<Bree
     final discIndex = serializedList.indexOf(BreedingsitesListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BreedingsitesListMineCountryIdErrorComponent, BreedingsitesListMineCreatedAtErrorComponent, BreedingsitesListMineOrderByErrorComponent, BreedingsitesListMineReceivedAtErrorComponent, BreedingsitesListMineShortIdErrorComponent, BreedingsitesListMineUpdatedAtErrorComponent, BreedingsitesListMineUserUuidErrorComponent, ];
+    final oneOfTypes = [BreedingsitesListMineBoundaryUuidErrorComponent, BreedingsitesListMineCountryIdErrorComponent, BreedingsitesListMineCreatedAtErrorComponent, BreedingsitesListMineGeoPrecisionErrorComponent, BreedingsitesListMineOrderByErrorComponent, BreedingsitesListMineReceivedAtErrorComponent, BreedingsitesListMineShortIdErrorComponent, BreedingsitesListMineSiteTypeErrorComponent, BreedingsitesListMineTagsErrorComponent, BreedingsitesListMineUpdatedAtErrorComponent, BreedingsitesListMineUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
+      case r'boundary_uuid':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BreedingsitesListMineBoundaryUuidErrorComponent),
+        ) as BreedingsitesListMineBoundaryUuidErrorComponent;
+        oneOfType = BreedingsitesListMineBoundaryUuidErrorComponent;
+        break;
       case r'country_id':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
@@ -157,6 +196,13 @@ class _$BreedingsitesListMineErrorSerializer implements PrimitiveSerializer<Bree
           specifiedType: FullType(BreedingsitesListMineCreatedAtErrorComponent),
         ) as BreedingsitesListMineCreatedAtErrorComponent;
         oneOfType = BreedingsitesListMineCreatedAtErrorComponent;
+        break;
+      case r'geo_precision':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BreedingsitesListMineGeoPrecisionErrorComponent),
+        ) as BreedingsitesListMineGeoPrecisionErrorComponent;
+        oneOfType = BreedingsitesListMineGeoPrecisionErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(
@@ -178,6 +224,20 @@ class _$BreedingsitesListMineErrorSerializer implements PrimitiveSerializer<Bree
           specifiedType: FullType(BreedingsitesListMineShortIdErrorComponent),
         ) as BreedingsitesListMineShortIdErrorComponent;
         oneOfType = BreedingsitesListMineShortIdErrorComponent;
+        break;
+      case r'site_type':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BreedingsitesListMineSiteTypeErrorComponent),
+        ) as BreedingsitesListMineSiteTypeErrorComponent;
+        oneOfType = BreedingsitesListMineSiteTypeErrorComponent;
+        break;
+      case r'tags':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BreedingsitesListMineTagsErrorComponent),
+        ) as BreedingsitesListMineTagsErrorComponent;
+        oneOfType = BreedingsitesListMineTagsErrorComponent;
         break;
       case r'updated_at':
         oneOfResult = serializers.deserialize(
@@ -203,8 +263,8 @@ class _$BreedingsitesListMineErrorSerializer implements PrimitiveSerializer<Bree
 
 class BreedingsitesListMineErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'order_by')
-  static const BreedingsitesListMineErrorAttrEnum orderBy = _$breedingsitesListMineErrorAttrEnum_orderBy;
+  @BuiltValueEnumConst(wireName: r'site_type')
+  static const BreedingsitesListMineErrorAttrEnum siteType = _$breedingsitesListMineErrorAttrEnum_siteType;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BreedingsitesListMineErrorAttrEnum unknownDefaultOpenApi = _$breedingsitesListMineErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -220,6 +280,8 @@ class BreedingsitesListMineErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const BreedingsitesListMineErrorCodeEnum invalidChoice = _$breedingsitesListMineErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'invalid_list')
+  static const BreedingsitesListMineErrorCodeEnum invalidList = _$breedingsitesListMineErrorCodeEnum_invalidList;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BreedingsitesListMineErrorCodeEnum unknownDefaultOpenApi = _$breedingsitesListMineErrorCodeEnum_unknownDefaultOpenApi;
 

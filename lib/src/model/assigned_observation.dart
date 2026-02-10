@@ -21,7 +21,7 @@ part 'assigned_observation.g.dart';
 /// * [createdAtLocal] - The date and time when the record was created, displayed without timezone field.
 /// * [receivedAt] 
 /// * [location] 
-/// * [note] - Note user attached to report.
+/// * [note] 
 /// * [photos] 
 /// * [user] 
 @BuiltValue()
@@ -45,7 +45,6 @@ abstract class AssignedObservation implements Built<AssignedObservation, Assigne
   @BuiltValueField(wireName: r'location')
   SimplifiedLocation get location;
 
-  /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
   String? get note;
 
@@ -108,13 +107,11 @@ class _$AssignedObservationSerializer implements PrimitiveSerializer<AssignedObs
       object.location,
       specifiedType: const FullType(SimplifiedLocation),
     );
-    if (object.note != null) {
-      yield r'note';
-      yield serializers.serialize(
-        object.note,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
+    yield r'note';
+    yield object.note == null ? null : serializers.serialize(
+      object.note,
+      specifiedType: const FullType.nullable(String),
+    );
     yield r'photos';
     yield serializers.serialize(
       object.photos,

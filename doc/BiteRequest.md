@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **sentAt** | [**DateTime**](DateTime.md) |  | 
 **location** | [**LocationRequest**](LocationRequest.md) |  | 
-**note** | **String** | Note user attached to report. | [optional] 
+**note** | **String** |  | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **eventEnvironment** | **String** | The environment where the event took place. | [optional] 
 **eventMoment** | **String** | The moment of the day when the event took place. | [optional] 

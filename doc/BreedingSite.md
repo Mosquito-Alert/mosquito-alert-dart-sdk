@@ -17,11 +17,11 @@ Name | Type | Description | Notes
 **receivedAt** | [**DateTime**](DateTime.md) |  | 
 **updatedAt** | [**DateTime**](DateTime.md) | Date and time when the report was last modified | 
 **location** | [**Location**](Location.md) |  | 
-**note** | **String** | Note user attached to report. | [optional] 
+**note** | **String** |  | 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **published** | **bool** |  | 
 **photos** | [**BuiltList&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | 
-**siteType** | **String** | Breeding site type. | 
+**siteType** | **String** |  | 
 **hasWater** | **bool** | Either if the user perceived water in the breeding site. | [optional] 
 **inPublicArea** | **bool** | Either if the breeding site is found in a public area. | [optional] 
 **hasNearMosquitoes** | **bool** | Either if the user perceived mosquitoes near the breeding site (less than 10 meters). | [optional] 

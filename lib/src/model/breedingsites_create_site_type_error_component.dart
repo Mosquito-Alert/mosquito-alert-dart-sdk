@@ -23,7 +23,7 @@ abstract class BreedingsitesCreateSiteTypeErrorComponent implements Built<Breedi
 
   @BuiltValueField(wireName: r'code')
   BreedingsitesCreateSiteTypeErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid_choice,  null,  required,  };
+  // enum codeEnum {  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -156,8 +156,6 @@ class BreedingsitesCreateSiteTypeErrorComponentAttrEnum extends EnumClass {
 
 class BreedingsitesCreateSiteTypeErrorComponentCodeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'invalid_choice')
-  static const BreedingsitesCreateSiteTypeErrorComponentCodeEnum invalidChoice = _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_invalidChoice;
   @BuiltValueEnumConst(wireName: r'null')
   static const BreedingsitesCreateSiteTypeErrorComponentCodeEnum null_ = _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')

@@ -11,6 +11,7 @@ import 'package:mosquito_alert/src/auth/bearer_auth.dart';
 import 'package:mosquito_alert/src/auth/oauth.dart';
 import 'package:mosquito_alert/src/api/auth_api.dart';
 import 'package:mosquito_alert/src/api/bites_api.dart';
+import 'package:mosquito_alert/src/api/boundaries_api.dart';
 import 'package:mosquito_alert/src/api/breeding_sites_api.dart';
 import 'package:mosquito_alert/src/api/campaigns_api.dart';
 import 'package:mosquito_alert/src/api/countries_api.dart';
@@ -90,6 +91,12 @@ class MosquitoAlert {
   /// by doing that all interceptors will not be executed
   BitesApi getBitesApi() {
     return BitesApi(dio, serializers);
+  }
+
+  /// Get BoundariesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  BoundariesApi getBoundariesApi() {
+    return BoundariesApi(dio, serializers);
   }
 
   /// Get BreedingSitesApi instance, base route and serializer can be overridden by a given but be careful,

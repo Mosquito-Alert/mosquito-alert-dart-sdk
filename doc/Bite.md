@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **receivedAt** | [**DateTime**](DateTime.md) |  | 
 **updatedAt** | [**DateTime**](DateTime.md) | Date and time when the report was last modified | 
 **location** | [**Location**](Location.md) |  | 
-**note** | **String** | Note user attached to report. | [optional] 
+**note** | **String** |  | 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **published** | **bool** |  | 
 **eventEnvironment** | **String** | The environment where the event took place. | [optional] 

@@ -21,7 +21,7 @@ part 'simplified_observation_with_photos.g.dart';
 /// * [createdAtLocal] - The date and time when the record was created, displayed without timezone field.
 /// * [receivedAt] 
 /// * [location] 
-/// * [note] - Note user attached to report.
+/// * [note] 
 /// * [photos] 
 @BuiltValue()
 abstract class SimplifiedObservationWithPhotos implements Built<SimplifiedObservationWithPhotos, SimplifiedObservationWithPhotosBuilder> {
@@ -47,7 +47,6 @@ abstract class SimplifiedObservationWithPhotos implements Built<SimplifiedObserv
   @BuiltValueField(wireName: r'location')
   SimplifiedLocation get location;
 
-  /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
   String? get note;
 
@@ -112,13 +111,11 @@ class _$SimplifiedObservationWithPhotosSerializer implements PrimitiveSerializer
       object.location,
       specifiedType: const FullType(SimplifiedLocation),
     );
-    if (object.note != null) {
-      yield r'note';
-      yield serializers.serialize(
-        object.note,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
+    yield r'note';
+    yield object.note == null ? null : serializers.serialize(
+      object.note,
+      specifiedType: const FullType.nullable(String),
+    );
     yield r'photos';
     yield serializers.serialize(
       object.photos,

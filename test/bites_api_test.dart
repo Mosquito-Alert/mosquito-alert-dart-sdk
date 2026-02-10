@@ -17,14 +17,19 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedBiteList> list({ int countryId, DateTime createdAtAfter, DateTime createdAtBefore, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    //Future<BuiltList<BiteGeoModel>> geoList({ String boundaryUuid, int countryId, DateTime createdAtAfter, DateTime createdAtBefore, double dist, String format, num geoPrecision, BuiltList<String> orderBy, BuiltList<double> point, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, BuiltList<String> tags, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    test('test geoList', () async {
+      // TODO
+    });
+
+    //Future<PaginatedBiteList> list({ String boundaryUuid, int countryId, DateTime createdAtAfter, DateTime createdAtBefore, double dist, String format, num geoPrecision, BuiltList<String> orderBy, int page, int pageSize, BuiltList<double> point, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, BuiltList<String> tags, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test list', () async {
       // TODO
     });
 
     // Get Current User's Bites
     //
-    //Future<PaginatedBiteList> listMine({ int countryId, DateTime createdAtAfter, DateTime createdAtBefore, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    //Future<PaginatedBiteList> listMine({ String boundaryUuid, int countryId, DateTime createdAtAfter, DateTime createdAtBefore, double dist, String format, num geoPrecision, BuiltList<String> orderBy, int page, int pageSize, BuiltList<double> point, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, BuiltList<String> tags, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test listMine', () async {
       // TODO
     });

@@ -7,8 +7,8 @@ part of 'observations_list_mine_error.dart';
 // **************************************************************************
 
 const ObservationsListMineErrorAttrEnum
-    _$observationsListMineErrorAttrEnum_identificationTaxonIds =
-    const ObservationsListMineErrorAttrEnum._('identificationTaxonIds');
+    _$observationsListMineErrorAttrEnum_identificationTaxonIdsLookup =
+    const ObservationsListMineErrorAttrEnum._('identificationTaxonIdsLookup');
 const ObservationsListMineErrorAttrEnum
     _$observationsListMineErrorAttrEnum_unknownDefaultOpenApi =
     const ObservationsListMineErrorAttrEnum._('unknownDefaultOpenApi');
@@ -16,8 +16,8 @@ const ObservationsListMineErrorAttrEnum
 ObservationsListMineErrorAttrEnum _$observationsListMineErrorAttrEnumValueOf(
     String name) {
   switch (name) {
-    case 'identificationTaxonIds':
-      return _$observationsListMineErrorAttrEnum_identificationTaxonIds;
+    case 'identificationTaxonIdsLookup':
+      return _$observationsListMineErrorAttrEnum_identificationTaxonIdsLookup;
     case 'unknownDefaultOpenApi':
       return _$observationsListMineErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -28,19 +28,13 @@ ObservationsListMineErrorAttrEnum _$observationsListMineErrorAttrEnumValueOf(
 final BuiltSet<ObservationsListMineErrorAttrEnum>
     _$observationsListMineErrorAttrEnumValues = new BuiltSet<
         ObservationsListMineErrorAttrEnum>(const <ObservationsListMineErrorAttrEnum>[
-  _$observationsListMineErrorAttrEnum_identificationTaxonIds,
+  _$observationsListMineErrorAttrEnum_identificationTaxonIdsLookup,
   _$observationsListMineErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListMineErrorCodeEnum
     _$observationsListMineErrorCodeEnum_invalidChoice =
     const ObservationsListMineErrorCodeEnum._('invalidChoice');
-const ObservationsListMineErrorCodeEnum
-    _$observationsListMineErrorCodeEnum_invalidList =
-    const ObservationsListMineErrorCodeEnum._('invalidList');
-const ObservationsListMineErrorCodeEnum
-    _$observationsListMineErrorCodeEnum_invalidPkValue =
-    const ObservationsListMineErrorCodeEnum._('invalidPkValue');
 const ObservationsListMineErrorCodeEnum
     _$observationsListMineErrorCodeEnum_unknownDefaultOpenApi =
     const ObservationsListMineErrorCodeEnum._('unknownDefaultOpenApi');
@@ -50,10 +44,6 @@ ObservationsListMineErrorCodeEnum _$observationsListMineErrorCodeEnumValueOf(
   switch (name) {
     case 'invalidChoice':
       return _$observationsListMineErrorCodeEnum_invalidChoice;
-    case 'invalidList':
-      return _$observationsListMineErrorCodeEnum_invalidList;
-    case 'invalidPkValue':
-      return _$observationsListMineErrorCodeEnum_invalidPkValue;
     case 'unknownDefaultOpenApi':
       return _$observationsListMineErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -65,8 +55,6 @@ final BuiltSet<ObservationsListMineErrorCodeEnum>
     _$observationsListMineErrorCodeEnumValues = new BuiltSet<
         ObservationsListMineErrorCodeEnum>(const <ObservationsListMineErrorCodeEnum>[
   _$observationsListMineErrorCodeEnum_invalidChoice,
-  _$observationsListMineErrorCodeEnum_invalidList,
-  _$observationsListMineErrorCodeEnum_invalidPkValue,
   _$observationsListMineErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -80,11 +68,11 @@ Serializer<ObservationsListMineErrorCodeEnum>
 class _$ObservationsListMineErrorAttrEnumSerializer
     implements PrimitiveSerializer<ObservationsListMineErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'identificationTaxonIds': 'identification_taxon_ids',
+    'identificationTaxonIdsLookup': 'identification_taxon_ids_lookup',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'identification_taxon_ids': 'identificationTaxonIds',
+    'identification_taxon_ids_lookup': 'identificationTaxonIdsLookup',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -111,14 +99,10 @@ class _$ObservationsListMineErrorCodeEnumSerializer
     implements PrimitiveSerializer<ObservationsListMineErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
-    'invalidList': 'invalid_list',
-    'invalidPkValue': 'invalid_pk_value',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
-    'invalid_list': 'invalidList',
-    'invalid_pk_value': 'invalidPkValue',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

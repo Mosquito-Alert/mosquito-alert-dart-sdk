@@ -54,7 +54,6 @@ void main() {
       // TODO
     });
 
-    // Note user attached to report.
     // String note
     test('to test the property `note`', () async {
       // TODO
@@ -75,7 +74,6 @@ void main() {
       // TODO
     });
 
-    // Breeding site type.
     // String siteType
     test('to test the property `siteType`', () async {
       // TODO

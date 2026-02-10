@@ -17,14 +17,19 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedBreedingSiteList> list({ int countryId, DateTime createdAtAfter, DateTime createdAtBefore, bool hasPhotos, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    //Future<BuiltList<BreedingSiteGeoModel>> geoList({ String boundaryUuid, int countryId, DateTime createdAtAfter, DateTime createdAtBefore, double dist, String format, num geoPrecision, bool hasLarvae, bool hasNearMosquitoes, bool hasPhotos, bool hasWater, BuiltList<String> orderBy, BuiltList<double> point, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, BuiltList<String> siteType, BuiltList<String> tags, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    test('test geoList', () async {
+      // TODO
+    });
+
+    //Future<PaginatedBreedingSiteList> list({ String boundaryUuid, int countryId, DateTime createdAtAfter, DateTime createdAtBefore, double dist, String format, num geoPrecision, bool hasLarvae, bool hasNearMosquitoes, bool hasPhotos, bool hasWater, BuiltList<String> orderBy, int page, int pageSize, BuiltList<double> point, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, BuiltList<String> siteType, BuiltList<String> tags, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test list', () async {
       // TODO
     });
 
     // Get Current User's Breeding Sites
     //
-    //Future<PaginatedBreedingSiteList> listMine({ int countryId, DateTime createdAtAfter, DateTime createdAtBefore, bool hasPhotos, BuiltList<String> orderBy, int page, int pageSize, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
+    //Future<PaginatedBreedingSiteList> listMine({ String boundaryUuid, int countryId, DateTime createdAtAfter, DateTime createdAtBefore, double dist, String format, num geoPrecision, bool hasLarvae, bool hasNearMosquitoes, bool hasPhotos, bool hasWater, BuiltList<String> orderBy, int page, int pageSize, BuiltList<double> point, DateTime receivedAtAfter, DateTime receivedAtBefore, String search, String shortId, BuiltList<String> siteType, BuiltList<String> tags, DateTime updatedAtAfter, DateTime updatedAtBefore, String userUuid }) async
     test('test listMine', () async {
       // TODO
     });

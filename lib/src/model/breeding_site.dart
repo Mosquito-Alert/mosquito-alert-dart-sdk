@@ -23,11 +23,11 @@ part 'breeding_site.g.dart';
 /// * [receivedAt] 
 /// * [updatedAt] - Date and time when the report was last modified
 /// * [location] 
-/// * [note] - Note user attached to report.
+/// * [note] 
 /// * [tags] 
 /// * [published] 
 /// * [photos] 
-/// * [siteType] - Breeding site type.
+/// * [siteType] 
 /// * [hasWater] - Either if the user perceived water in the breeding site.
 /// * [inPublicArea] - Either if the breeding site is found in a public area.
 /// * [hasNearMosquitoes] - Either if the user perceived mosquitoes near the breeding site (less than 10 meters).
@@ -63,7 +63,6 @@ abstract class BreedingSite implements Built<BreedingSite, BreedingSiteBuilder> 
   @BuiltValueField(wireName: r'location')
   Location get location;
 
-  /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
   String? get note;
 
@@ -76,7 +75,6 @@ abstract class BreedingSite implements Built<BreedingSite, BreedingSiteBuilder> 
   @BuiltValueField(wireName: r'photos')
   BuiltList<SimplePhoto> get photos;
 
-  /// Breeding site type.
   @BuiltValueField(wireName: r'site_type')
   BreedingSiteSiteTypeEnum get siteType;
   // enum siteTypeEnum {  basin,  bucket,  fountain,  small_container,  storm_drain,  well,  other,  };
@@ -165,13 +163,11 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
       object.location,
       specifiedType: const FullType(Location),
     );
-    if (object.note != null) {
-      yield r'note';
-      yield serializers.serialize(
-        object.note,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
+    yield r'note';
+    yield object.note == null ? null : serializers.serialize(
+      object.note,
+      specifiedType: const FullType.nullable(String),
+    );
     if (object.tags != null) {
       yield r'tags';
       yield serializers.serialize(
@@ -407,28 +403,20 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
 
 class BreedingSiteSiteTypeEnum extends EnumClass {
 
-  /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'basin')
   static const BreedingSiteSiteTypeEnum basin = _$breedingSiteSiteTypeEnum_basin;
-  /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'bucket')
   static const BreedingSiteSiteTypeEnum bucket = _$breedingSiteSiteTypeEnum_bucket;
-  /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'fountain')
   static const BreedingSiteSiteTypeEnum fountain = _$breedingSiteSiteTypeEnum_fountain;
-  /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'small_container')
   static const BreedingSiteSiteTypeEnum smallContainer = _$breedingSiteSiteTypeEnum_smallContainer;
-  /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'storm_drain')
   static const BreedingSiteSiteTypeEnum stormDrain = _$breedingSiteSiteTypeEnum_stormDrain;
-  /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'well')
   static const BreedingSiteSiteTypeEnum well = _$breedingSiteSiteTypeEnum_well;
-  /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'other')
   static const BreedingSiteSiteTypeEnum other = _$breedingSiteSiteTypeEnum_other;
-  /// Breeding site type.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BreedingSiteSiteTypeEnum unknownDefaultOpenApi = _$breedingSiteSiteTypeEnum_unknownDefaultOpenApi;
 

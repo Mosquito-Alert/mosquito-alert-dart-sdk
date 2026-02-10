@@ -3,15 +3,19 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/observations_list_boundary_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_tags_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_identification_taxon_ids_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_identification_taxon_ids_lookup_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_short_id_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/observations_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_order_by_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_received_at_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_identification_taxon_ids_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_list_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_geo_precision_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';
@@ -26,18 +30,22 @@ part 'observations_list_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class ObservationsListError implements Built<ObservationsListError, ObservationsListErrorBuilder> {
-  /// One Of [ObservationsListCountryIdErrorComponent], [ObservationsListCreatedAtErrorComponent], [ObservationsListIdentificationTaxonIdsErrorComponent], [ObservationsListOrderByErrorComponent], [ObservationsListReceivedAtErrorComponent], [ObservationsListShortIdErrorComponent], [ObservationsListUpdatedAtErrorComponent], [ObservationsListUserUuidErrorComponent]
+  /// One Of [ObservationsListBoundaryUuidErrorComponent], [ObservationsListCountryIdErrorComponent], [ObservationsListCreatedAtErrorComponent], [ObservationsListGeoPrecisionErrorComponent], [ObservationsListIdentificationTaxonIdsErrorComponent], [ObservationsListIdentificationTaxonIdsLookupErrorComponent], [ObservationsListOrderByErrorComponent], [ObservationsListReceivedAtErrorComponent], [ObservationsListShortIdErrorComponent], [ObservationsListTagsErrorComponent], [ObservationsListUpdatedAtErrorComponent], [ObservationsListUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
+    r'boundary_uuid': ObservationsListBoundaryUuidErrorComponent,
     r'country_id': ObservationsListCountryIdErrorComponent,
     r'created_at': ObservationsListCreatedAtErrorComponent,
+    r'geo_precision': ObservationsListGeoPrecisionErrorComponent,
     r'identification_taxon_ids': ObservationsListIdentificationTaxonIdsErrorComponent,
+    r'identification_taxon_ids_lookup': ObservationsListIdentificationTaxonIdsLookupErrorComponent,
     r'order_by': ObservationsListOrderByErrorComponent,
     r'received_at': ObservationsListReceivedAtErrorComponent,
     r'short_id': ObservationsListShortIdErrorComponent,
+    r'tags': ObservationsListTagsErrorComponent,
     r'updated_at': ObservationsListUpdatedAtErrorComponent,
     r'user_uuid': ObservationsListUserUuidErrorComponent,
   };
@@ -55,14 +63,23 @@ abstract class ObservationsListError implements Built<ObservationsListError, Obs
 
 extension ObservationsListErrorDiscriminatorExt on ObservationsListError {
     String? get discriminatorValue {
+        if (this is ObservationsListBoundaryUuidErrorComponent) {
+            return r'boundary_uuid';
+        }
         if (this is ObservationsListCountryIdErrorComponent) {
             return r'country_id';
         }
         if (this is ObservationsListCreatedAtErrorComponent) {
             return r'created_at';
         }
+        if (this is ObservationsListGeoPrecisionErrorComponent) {
+            return r'geo_precision';
+        }
         if (this is ObservationsListIdentificationTaxonIdsErrorComponent) {
             return r'identification_taxon_ids';
+        }
+        if (this is ObservationsListIdentificationTaxonIdsLookupErrorComponent) {
+            return r'identification_taxon_ids_lookup';
         }
         if (this is ObservationsListOrderByErrorComponent) {
             return r'order_by';
@@ -72,6 +89,9 @@ extension ObservationsListErrorDiscriminatorExt on ObservationsListError {
         }
         if (this is ObservationsListShortIdErrorComponent) {
             return r'short_id';
+        }
+        if (this is ObservationsListTagsErrorComponent) {
+            return r'tags';
         }
         if (this is ObservationsListUpdatedAtErrorComponent) {
             return r'updated_at';
@@ -84,14 +104,23 @@ extension ObservationsListErrorDiscriminatorExt on ObservationsListError {
 }
 extension ObservationsListErrorBuilderDiscriminatorExt on ObservationsListErrorBuilder {
     String? get discriminatorValue {
+        if (this is ObservationsListBoundaryUuidErrorComponentBuilder) {
+            return r'boundary_uuid';
+        }
         if (this is ObservationsListCountryIdErrorComponentBuilder) {
             return r'country_id';
         }
         if (this is ObservationsListCreatedAtErrorComponentBuilder) {
             return r'created_at';
         }
+        if (this is ObservationsListGeoPrecisionErrorComponentBuilder) {
+            return r'geo_precision';
+        }
         if (this is ObservationsListIdentificationTaxonIdsErrorComponentBuilder) {
             return r'identification_taxon_ids';
+        }
+        if (this is ObservationsListIdentificationTaxonIdsLookupErrorComponentBuilder) {
+            return r'identification_taxon_ids_lookup';
         }
         if (this is ObservationsListOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -101,6 +130,9 @@ extension ObservationsListErrorBuilderDiscriminatorExt on ObservationsListErrorB
         }
         if (this is ObservationsListShortIdErrorComponentBuilder) {
             return r'short_id';
+        }
+        if (this is ObservationsListTagsErrorComponentBuilder) {
+            return r'tags';
         }
         if (this is ObservationsListUpdatedAtErrorComponentBuilder) {
             return r'updated_at';
@@ -148,10 +180,17 @@ class _$ObservationsListErrorSerializer implements PrimitiveSerializer<Observati
     final discIndex = serializedList.indexOf(ObservationsListError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [ObservationsListCountryIdErrorComponent, ObservationsListCreatedAtErrorComponent, ObservationsListIdentificationTaxonIdsErrorComponent, ObservationsListOrderByErrorComponent, ObservationsListReceivedAtErrorComponent, ObservationsListShortIdErrorComponent, ObservationsListUpdatedAtErrorComponent, ObservationsListUserUuidErrorComponent, ];
+    final oneOfTypes = [ObservationsListBoundaryUuidErrorComponent, ObservationsListCountryIdErrorComponent, ObservationsListCreatedAtErrorComponent, ObservationsListGeoPrecisionErrorComponent, ObservationsListIdentificationTaxonIdsErrorComponent, ObservationsListIdentificationTaxonIdsLookupErrorComponent, ObservationsListOrderByErrorComponent, ObservationsListReceivedAtErrorComponent, ObservationsListShortIdErrorComponent, ObservationsListTagsErrorComponent, ObservationsListUpdatedAtErrorComponent, ObservationsListUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
+      case r'boundary_uuid':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsListBoundaryUuidErrorComponent),
+        ) as ObservationsListBoundaryUuidErrorComponent;
+        oneOfType = ObservationsListBoundaryUuidErrorComponent;
+        break;
       case r'country_id':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
@@ -166,12 +205,26 @@ class _$ObservationsListErrorSerializer implements PrimitiveSerializer<Observati
         ) as ObservationsListCreatedAtErrorComponent;
         oneOfType = ObservationsListCreatedAtErrorComponent;
         break;
+      case r'geo_precision':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsListGeoPrecisionErrorComponent),
+        ) as ObservationsListGeoPrecisionErrorComponent;
+        oneOfType = ObservationsListGeoPrecisionErrorComponent;
+        break;
       case r'identification_taxon_ids':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
           specifiedType: FullType(ObservationsListIdentificationTaxonIdsErrorComponent),
         ) as ObservationsListIdentificationTaxonIdsErrorComponent;
         oneOfType = ObservationsListIdentificationTaxonIdsErrorComponent;
+        break;
+      case r'identification_taxon_ids_lookup':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsListIdentificationTaxonIdsLookupErrorComponent),
+        ) as ObservationsListIdentificationTaxonIdsLookupErrorComponent;
+        oneOfType = ObservationsListIdentificationTaxonIdsLookupErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(
@@ -193,6 +246,13 @@ class _$ObservationsListErrorSerializer implements PrimitiveSerializer<Observati
           specifiedType: FullType(ObservationsListShortIdErrorComponent),
         ) as ObservationsListShortIdErrorComponent;
         oneOfType = ObservationsListShortIdErrorComponent;
+        break;
+      case r'tags':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(ObservationsListTagsErrorComponent),
+        ) as ObservationsListTagsErrorComponent;
+        oneOfType = ObservationsListTagsErrorComponent;
         break;
       case r'updated_at':
         oneOfResult = serializers.deserialize(
@@ -218,8 +278,8 @@ class _$ObservationsListErrorSerializer implements PrimitiveSerializer<Observati
 
 class ObservationsListErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'identification_taxon_ids')
-  static const ObservationsListErrorAttrEnum identificationTaxonIds = _$observationsListErrorAttrEnum_identificationTaxonIds;
+  @BuiltValueEnumConst(wireName: r'identification_taxon_ids_lookup')
+  static const ObservationsListErrorAttrEnum identificationTaxonIdsLookup = _$observationsListErrorAttrEnum_identificationTaxonIdsLookup;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const ObservationsListErrorAttrEnum unknownDefaultOpenApi = _$observationsListErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -235,10 +295,6 @@ class ObservationsListErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const ObservationsListErrorCodeEnum invalidChoice = _$observationsListErrorCodeEnum_invalidChoice;
-  @BuiltValueEnumConst(wireName: r'invalid_list')
-  static const ObservationsListErrorCodeEnum invalidList = _$observationsListErrorCodeEnum_invalidList;
-  @BuiltValueEnumConst(wireName: r'invalid_pk_value')
-  static const ObservationsListErrorCodeEnum invalidPkValue = _$observationsListErrorCodeEnum_invalidPkValue;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const ObservationsListErrorCodeEnum unknownDefaultOpenApi = _$observationsListErrorCodeEnum_unknownDefaultOpenApi;
 

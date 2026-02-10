@@ -34,9 +34,6 @@ final BuiltSet<BreedingsitesCreateSiteTypeErrorComponentAttrEnum>
 ]);
 
 const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
-    _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_invalidChoice =
-    const BreedingsitesCreateSiteTypeErrorComponentCodeEnum._('invalidChoice');
-const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
     _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_ =
     const BreedingsitesCreateSiteTypeErrorComponentCodeEnum._('null_');
 const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
@@ -50,8 +47,6 @@ const BreedingsitesCreateSiteTypeErrorComponentCodeEnum
 BreedingsitesCreateSiteTypeErrorComponentCodeEnum
     _$breedingsitesCreateSiteTypeErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
-    case 'invalidChoice':
-      return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_invalidChoice;
     case 'null_':
       return _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_;
     case 'required_':
@@ -66,7 +61,6 @@ BreedingsitesCreateSiteTypeErrorComponentCodeEnum
 final BuiltSet<BreedingsitesCreateSiteTypeErrorComponentCodeEnum>
     _$breedingsitesCreateSiteTypeErrorComponentCodeEnumValues = new BuiltSet<
         BreedingsitesCreateSiteTypeErrorComponentCodeEnum>(const <BreedingsitesCreateSiteTypeErrorComponentCodeEnum>[
-  _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_invalidChoice,
   _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_null_,
   _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_required_,
   _$breedingsitesCreateSiteTypeErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -116,13 +110,11 @@ class _$BreedingsitesCreateSiteTypeErrorComponentCodeEnumSerializer
     implements
         PrimitiveSerializer<BreedingsitesCreateSiteTypeErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'invalidChoice': 'invalid_choice',
     'null_': 'null',
     'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'invalid_choice': 'invalidChoice',
     'null': 'null_',
     'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',

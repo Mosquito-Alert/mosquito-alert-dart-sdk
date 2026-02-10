@@ -23,7 +23,7 @@ part 'bite.g.dart';
 /// * [receivedAt] 
 /// * [updatedAt] - Date and time when the report was last modified
 /// * [location] 
-/// * [note] - Note user attached to report.
+/// * [note] 
 /// * [tags] 
 /// * [published] 
 /// * [eventEnvironment] - The environment where the event took place.
@@ -60,7 +60,6 @@ abstract class Bite implements Built<Bite, BiteBuilder> {
   @BuiltValueField(wireName: r'location')
   Location get location;
 
-  /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
   String? get note;
 
@@ -151,13 +150,11 @@ class _$BiteSerializer implements PrimitiveSerializer<Bite> {
       object.location,
       specifiedType: const FullType(Location),
     );
-    if (object.note != null) {
-      yield r'note';
-      yield serializers.serialize(
-        object.note,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
+    yield r'note';
+    yield object.note == null ? null : serializers.serialize(
+      object.note,
+      specifiedType: const FullType.nullable(String),
+    );
     if (object.tags != null) {
       yield r'tags';
       yield serializers.serialize(

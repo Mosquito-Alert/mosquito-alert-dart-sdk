@@ -54,6 +54,11 @@ import 'package:mosquito_alert/src/model/auth_verify_token_validation_error.dart
 import 'package:mosquito_alert/src/model/bite.dart';
 import 'package:mosquito_alert/src/model/bite_counts.dart';
 import 'package:mosquito_alert/src/model/bite_counts_request.dart';
+import 'package:mosquito_alert/src/model/bite_geo_json_model.dart';
+import 'package:mosquito_alert/src/model/bite_geo_json_model_geometry.dart';
+import 'package:mosquito_alert/src/model/bite_geo_json_model_list.dart';
+import 'package:mosquito_alert/src/model/bite_geo_json_model_properties.dart';
+import 'package:mosquito_alert/src/model/bite_geo_model.dart';
 import 'package:mosquito_alert/src/model/bite_request.dart';
 import 'package:mosquito_alert/src/model/bites_create_counts_chest_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_counts_head_error_component.dart';
@@ -72,32 +77,57 @@ import 'package:mosquito_alert/src/model/bites_create_location_point_longitude_e
 import 'package:mosquito_alert/src/model/bites_create_location_point_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/bites_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_boundary_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_error.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_geo_precision_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_tags_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_updated_at_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_user_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_geo_list_validation_error.dart';
+import 'package:mosquito_alert/src/model/bites_list_boundary_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_error.dart';
+import 'package:mosquito_alert/src/model/bites_list_geo_precision_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_boundary_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_geo_precision_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/bites_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_validation_error.dart';
+import 'package:mosquito_alert/src/model/boundaries_create_temporary_error.dart';
+import 'package:mosquito_alert/src/model/boundaries_create_temporary_geojson_error_component.dart';
+import 'package:mosquito_alert/src/model/boundaries_create_temporary_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/boundaries_create_temporary_validation_error.dart';
 import 'package:mosquito_alert/src/model/bounding_box.dart';
 import 'package:mosquito_alert/src/model/bounding_box_request.dart';
 import 'package:mosquito_alert/src/model/breeding_site.dart';
+import 'package:mosquito_alert/src/model/breeding_site_geo_json_model.dart';
+import 'package:mosquito_alert/src/model/breeding_site_geo_json_model_list.dart';
+import 'package:mosquito_alert/src/model/breeding_site_geo_json_model_properties.dart';
+import 'package:mosquito_alert/src/model/breeding_site_geo_model.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_error.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_has_larvae_error_component.dart';
@@ -110,7 +140,6 @@ import 'package:mosquito_alert/src/model/breedingsites_create_location_point_lon
 import 'package:mosquito_alert/src/model/breedingsites_create_location_point_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_location_source_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/breedingsites_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_photos_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_photos_index_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_sent_at_error_component.dart';
@@ -118,21 +147,42 @@ import 'package:mosquito_alert/src/model/breedingsites_create_site_type_error_co
 import 'package:mosquito_alert/src/model/breedingsites_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_boundary_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_geo_precision_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_site_type_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_tags_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_updated_at_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_user_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_geo_list_validation_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_boundary_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_geo_precision_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_boundary_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_geo_precision_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_site_type_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_mine_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_site_type_error_component.dart';
+import 'package:mosquito_alert/src/model/breedingsites_list_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/breedingsites_list_validation_error.dart';
@@ -469,6 +519,10 @@ import 'package:mosquito_alert/src/model/notifications_update_validation_error.d
 import 'package:mosquito_alert/src/model/observation.dart';
 import 'package:mosquito_alert/src/model/observation_flags.dart';
 import 'package:mosquito_alert/src/model/observation_flags_request.dart';
+import 'package:mosquito_alert/src/model/observation_geo_json_model.dart';
+import 'package:mosquito_alert/src/model/observation_geo_json_model_list.dart';
+import 'package:mosquito_alert/src/model/observation_geo_json_model_properties.dart';
+import 'package:mosquito_alert/src/model/observation_geo_model.dart';
 import 'package:mosquito_alert/src/model/observations_create_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_error.dart';
 import 'package:mosquito_alert/src/model/observations_create_event_environment_error_component.dart';
@@ -484,30 +538,51 @@ import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance
 import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_specie_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_mosquito_appearance_thorax_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/observations_create_note_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_photos_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_photos_index_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_tags_index_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_boundary_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_country_id_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_error.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_geo_precision_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_identification_taxon_ids_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_identification_taxon_ids_lookup_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_received_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_tags_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_updated_at_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_user_uuid_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_geo_list_validation_error.dart';
+import 'package:mosquito_alert/src/model/observations_list_boundary_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_error.dart';
+import 'package:mosquito_alert/src/model/observations_list_geo_precision_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_identification_taxon_ids_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_identification_taxon_ids_lookup_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_boundary_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_error.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_geo_precision_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_identification_taxon_ids_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_identification_taxon_ids_lookup_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_mine_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_mine_validation_error.dart';
 import 'package:mosquito_alert/src/model/observations_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_short_id_error_component.dart';
+import 'package:mosquito_alert/src/model/observations_list_tags_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_user_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/observations_list_validation_error.dart';
@@ -594,6 +669,8 @@ import 'package:mosquito_alert/src/model/taxa_list_rank_error_component.dart';
 import 'package:mosquito_alert/src/model/taxa_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/taxon.dart';
 import 'package:mosquito_alert/src/model/taxon_tree_node.dart';
+import 'package:mosquito_alert/src/model/temporary_boundary.dart';
+import 'package:mosquito_alert/src/model/temporary_boundary_request.dart';
 import 'package:mosquito_alert/src/model/token_refresh.dart';
 import 'package:mosquito_alert/src/model/token_refresh_request.dart';
 import 'package:mosquito_alert/src/model/token_verify_request.dart';
@@ -656,6 +733,11 @@ part 'serializers.g.dart';
   Bite,
   BiteCounts,
   BiteCountsRequest,
+  BiteGeoJsonModel,
+  BiteGeoJsonModelGeometry,
+  BiteGeoJsonModelList,
+  BiteGeoJsonModelProperties,
+  BiteGeoModel,
   BiteRequest,
   BitesCreateCountsChestErrorComponent,
   BitesCreateCountsHeadErrorComponent,
@@ -674,32 +756,57 @@ part 'serializers.g.dart';
   BitesCreateLocationPointNonFieldErrorsErrorComponent,
   BitesCreateLocationSourceErrorComponent,
   BitesCreateNonFieldErrorsErrorComponent,
-  BitesCreateNoteErrorComponent,
   BitesCreateSentAtErrorComponent,
   BitesCreateTagsErrorComponent,
   BitesCreateTagsINDEXErrorComponent,
   BitesCreateValidationError,
+  BitesGeoListBoundaryUuidErrorComponent,
+  BitesGeoListCountryIdErrorComponent,
+  BitesGeoListCreatedAtErrorComponent,
+  BitesGeoListError,
+  BitesGeoListGeoPrecisionErrorComponent,
+  BitesGeoListOrderByErrorComponent,
+  BitesGeoListReceivedAtErrorComponent,
+  BitesGeoListShortIdErrorComponent,
+  BitesGeoListTagsErrorComponent,
+  BitesGeoListUpdatedAtErrorComponent,
+  BitesGeoListUserUuidErrorComponent,
+  BitesGeoListValidationError,
+  BitesListBoundaryUuidErrorComponent,
   BitesListCountryIdErrorComponent,
   BitesListCreatedAtErrorComponent,
   BitesListError,
+  BitesListGeoPrecisionErrorComponent,
+  BitesListMineBoundaryUuidErrorComponent,
   BitesListMineCountryIdErrorComponent,
   BitesListMineCreatedAtErrorComponent,
   BitesListMineError,
+  BitesListMineGeoPrecisionErrorComponent,
   BitesListMineOrderByErrorComponent,
   BitesListMineReceivedAtErrorComponent,
   BitesListMineShortIdErrorComponent,
+  BitesListMineTagsErrorComponent,
   BitesListMineUpdatedAtErrorComponent,
   BitesListMineUserUuidErrorComponent,
   BitesListMineValidationError,
   BitesListOrderByErrorComponent,
   BitesListReceivedAtErrorComponent,
   BitesListShortIdErrorComponent,
+  BitesListTagsErrorComponent,
   BitesListUpdatedAtErrorComponent,
   BitesListUserUuidErrorComponent,
   BitesListValidationError,
+  BoundariesCreateTemporaryError,
+  BoundariesCreateTemporaryGeojsonErrorComponent,
+  BoundariesCreateTemporaryNonFieldErrorsErrorComponent,
+  BoundariesCreateTemporaryValidationError,
   BoundingBox,
   BoundingBoxRequest,
   BreedingSite,
+  BreedingSiteGeoJsonModel,
+  BreedingSiteGeoJsonModelList,
+  BreedingSiteGeoJsonModelProperties,
+  BreedingSiteGeoModel,
   BreedingsitesCreateCreatedAtErrorComponent,
   BreedingsitesCreateError,
   BreedingsitesCreateHasLarvaeErrorComponent,
@@ -712,7 +819,6 @@ part 'serializers.g.dart';
   BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent,
   BreedingsitesCreateLocationSourceErrorComponent,
   BreedingsitesCreateNonFieldErrorsErrorComponent,
-  BreedingsitesCreateNoteErrorComponent,
   BreedingsitesCreatePhotosErrorComponent,
   BreedingsitesCreatePhotosINDEXErrorComponent,
   BreedingsitesCreateSentAtErrorComponent,
@@ -720,21 +826,42 @@ part 'serializers.g.dart';
   BreedingsitesCreateTagsErrorComponent,
   BreedingsitesCreateTagsINDEXErrorComponent,
   BreedingsitesCreateValidationError,
+  BreedingsitesGeoListBoundaryUuidErrorComponent,
+  BreedingsitesGeoListCountryIdErrorComponent,
+  BreedingsitesGeoListCreatedAtErrorComponent,
+  BreedingsitesGeoListError,
+  BreedingsitesGeoListGeoPrecisionErrorComponent,
+  BreedingsitesGeoListOrderByErrorComponent,
+  BreedingsitesGeoListReceivedAtErrorComponent,
+  BreedingsitesGeoListShortIdErrorComponent,
+  BreedingsitesGeoListSiteTypeErrorComponent,
+  BreedingsitesGeoListTagsErrorComponent,
+  BreedingsitesGeoListUpdatedAtErrorComponent,
+  BreedingsitesGeoListUserUuidErrorComponent,
+  BreedingsitesGeoListValidationError,
+  BreedingsitesListBoundaryUuidErrorComponent,
   BreedingsitesListCountryIdErrorComponent,
   BreedingsitesListCreatedAtErrorComponent,
   BreedingsitesListError,
+  BreedingsitesListGeoPrecisionErrorComponent,
+  BreedingsitesListMineBoundaryUuidErrorComponent,
   BreedingsitesListMineCountryIdErrorComponent,
   BreedingsitesListMineCreatedAtErrorComponent,
   BreedingsitesListMineError,
+  BreedingsitesListMineGeoPrecisionErrorComponent,
   BreedingsitesListMineOrderByErrorComponent,
   BreedingsitesListMineReceivedAtErrorComponent,
   BreedingsitesListMineShortIdErrorComponent,
+  BreedingsitesListMineSiteTypeErrorComponent,
+  BreedingsitesListMineTagsErrorComponent,
   BreedingsitesListMineUpdatedAtErrorComponent,
   BreedingsitesListMineUserUuidErrorComponent,
   BreedingsitesListMineValidationError,
   BreedingsitesListOrderByErrorComponent,
   BreedingsitesListReceivedAtErrorComponent,
   BreedingsitesListShortIdErrorComponent,
+  BreedingsitesListSiteTypeErrorComponent,
+  BreedingsitesListTagsErrorComponent,
   BreedingsitesListUpdatedAtErrorComponent,
   BreedingsitesListUserUuidErrorComponent,
   BreedingsitesListValidationError,
@@ -1071,6 +1198,10 @@ part 'serializers.g.dart';
   Observation,
   ObservationFlags,
   ObservationFlagsRequest,
+  ObservationGeoJsonModel,
+  ObservationGeoJsonModelList,
+  ObservationGeoJsonModelProperties,
+  ObservationGeoModel,
   ObservationsCreateCreatedAtErrorComponent,
   ObservationsCreateError,
   ObservationsCreateEventEnvironmentErrorComponent,
@@ -1086,30 +1217,51 @@ part 'serializers.g.dart';
   ObservationsCreateMosquitoAppearanceSpecieErrorComponent,
   ObservationsCreateMosquitoAppearanceThoraxErrorComponent,
   ObservationsCreateNonFieldErrorsErrorComponent,
-  ObservationsCreateNoteErrorComponent,
   ObservationsCreatePhotosErrorComponent,
   ObservationsCreatePhotosINDEXErrorComponent,
   ObservationsCreateSentAtErrorComponent,
   ObservationsCreateTagsErrorComponent,
   ObservationsCreateTagsINDEXErrorComponent,
   ObservationsCreateValidationError,
+  ObservationsGeoListBoundaryUuidErrorComponent,
+  ObservationsGeoListCountryIdErrorComponent,
+  ObservationsGeoListCreatedAtErrorComponent,
+  ObservationsGeoListError,
+  ObservationsGeoListGeoPrecisionErrorComponent,
+  ObservationsGeoListIdentificationTaxonIdsErrorComponent,
+  ObservationsGeoListIdentificationTaxonIdsLookupErrorComponent,
+  ObservationsGeoListOrderByErrorComponent,
+  ObservationsGeoListReceivedAtErrorComponent,
+  ObservationsGeoListShortIdErrorComponent,
+  ObservationsGeoListTagsErrorComponent,
+  ObservationsGeoListUpdatedAtErrorComponent,
+  ObservationsGeoListUserUuidErrorComponent,
+  ObservationsGeoListValidationError,
+  ObservationsListBoundaryUuidErrorComponent,
   ObservationsListCountryIdErrorComponent,
   ObservationsListCreatedAtErrorComponent,
   ObservationsListError,
+  ObservationsListGeoPrecisionErrorComponent,
   ObservationsListIdentificationTaxonIdsErrorComponent,
+  ObservationsListIdentificationTaxonIdsLookupErrorComponent,
+  ObservationsListMineBoundaryUuidErrorComponent,
   ObservationsListMineCountryIdErrorComponent,
   ObservationsListMineCreatedAtErrorComponent,
   ObservationsListMineError,
+  ObservationsListMineGeoPrecisionErrorComponent,
   ObservationsListMineIdentificationTaxonIdsErrorComponent,
+  ObservationsListMineIdentificationTaxonIdsLookupErrorComponent,
   ObservationsListMineOrderByErrorComponent,
   ObservationsListMineReceivedAtErrorComponent,
   ObservationsListMineShortIdErrorComponent,
+  ObservationsListMineTagsErrorComponent,
   ObservationsListMineUpdatedAtErrorComponent,
   ObservationsListMineUserUuidErrorComponent,
   ObservationsListMineValidationError,
   ObservationsListOrderByErrorComponent,
   ObservationsListReceivedAtErrorComponent,
   ObservationsListShortIdErrorComponent,
+  ObservationsListTagsErrorComponent,
   ObservationsListUpdatedAtErrorComponent,
   ObservationsListUserUuidErrorComponent,
   ObservationsListValidationError,
@@ -1196,6 +1348,8 @@ part 'serializers.g.dart';
   TaxaListValidationError,
   Taxon,
   TaxonTreeNode,
+  TemporaryBoundary,
+  TemporaryBoundaryRequest,
   TokenRefresh,
   TokenRefreshRequest,
   TokenVerifyRequest,
@@ -1217,6 +1371,10 @@ part 'serializers.g.dart';
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BreedingSiteGeoModel)]),
+        () => ListBuilder<BreedingSiteGeoModel>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType.nullable(int)]),
         () => ListBuilder<int>(),
       )
@@ -1233,8 +1391,20 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<String>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ObservationGeoModel)]),
+        () => ListBuilder<ObservationGeoModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BiteGeoModel)]),
+        () => ListBuilder<BiteGeoModel>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(String)]),
         () => ListBuilder<String>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(double)]),
+        () => ListBuilder<double>(),
       )
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())

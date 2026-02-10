@@ -6,16 +6,16 @@ part of 'bites_list_mine_error.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const BitesListMineErrorAttrEnum _$bitesListMineErrorAttrEnum_orderBy =
-    const BitesListMineErrorAttrEnum._('orderBy');
+const BitesListMineErrorAttrEnum _$bitesListMineErrorAttrEnum_boundaryUuid =
+    const BitesListMineErrorAttrEnum._('boundaryUuid');
 const BitesListMineErrorAttrEnum
     _$bitesListMineErrorAttrEnum_unknownDefaultOpenApi =
     const BitesListMineErrorAttrEnum._('unknownDefaultOpenApi');
 
 BitesListMineErrorAttrEnum _$bitesListMineErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'orderBy':
-      return _$bitesListMineErrorAttrEnum_orderBy;
+    case 'boundaryUuid':
+      return _$bitesListMineErrorAttrEnum_boundaryUuid;
     case 'unknownDefaultOpenApi':
       return _$bitesListMineErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -25,20 +25,25 @@ BitesListMineErrorAttrEnum _$bitesListMineErrorAttrEnumValueOf(String name) {
 
 final BuiltSet<BitesListMineErrorAttrEnum> _$bitesListMineErrorAttrEnumValues =
     new BuiltSet<BitesListMineErrorAttrEnum>(const <BitesListMineErrorAttrEnum>[
-  _$bitesListMineErrorAttrEnum_orderBy,
+  _$bitesListMineErrorAttrEnum_boundaryUuid,
   _$bitesListMineErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
-const BitesListMineErrorCodeEnum _$bitesListMineErrorCodeEnum_invalidChoice =
-    const BitesListMineErrorCodeEnum._('invalidChoice');
+const BitesListMineErrorCodeEnum _$bitesListMineErrorCodeEnum_invalid =
+    const BitesListMineErrorCodeEnum._('invalid');
+const BitesListMineErrorCodeEnum
+    _$bitesListMineErrorCodeEnum_nullCharactersNotAllowed =
+    const BitesListMineErrorCodeEnum._('nullCharactersNotAllowed');
 const BitesListMineErrorCodeEnum
     _$bitesListMineErrorCodeEnum_unknownDefaultOpenApi =
     const BitesListMineErrorCodeEnum._('unknownDefaultOpenApi');
 
 BitesListMineErrorCodeEnum _$bitesListMineErrorCodeEnumValueOf(String name) {
   switch (name) {
-    case 'invalidChoice':
-      return _$bitesListMineErrorCodeEnum_invalidChoice;
+    case 'invalid':
+      return _$bitesListMineErrorCodeEnum_invalid;
+    case 'nullCharactersNotAllowed':
+      return _$bitesListMineErrorCodeEnum_nullCharactersNotAllowed;
     case 'unknownDefaultOpenApi':
       return _$bitesListMineErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -48,7 +53,8 @@ BitesListMineErrorCodeEnum _$bitesListMineErrorCodeEnumValueOf(String name) {
 
 final BuiltSet<BitesListMineErrorCodeEnum> _$bitesListMineErrorCodeEnumValues =
     new BuiltSet<BitesListMineErrorCodeEnum>(const <BitesListMineErrorCodeEnum>[
-  _$bitesListMineErrorCodeEnum_invalidChoice,
+  _$bitesListMineErrorCodeEnum_invalid,
+  _$bitesListMineErrorCodeEnum_nullCharactersNotAllowed,
   _$bitesListMineErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -60,11 +66,11 @@ Serializer<BitesListMineErrorCodeEnum> _$bitesListMineErrorCodeEnumSerializer =
 class _$BitesListMineErrorAttrEnumSerializer
     implements PrimitiveSerializer<BitesListMineErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'orderBy': 'order_by',
+    'boundaryUuid': 'boundary_uuid',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'order_by': 'orderBy',
+    'boundary_uuid': 'boundaryUuid',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -89,11 +95,13 @@ class _$BitesListMineErrorAttrEnumSerializer
 class _$BitesListMineErrorCodeEnumSerializer
     implements PrimitiveSerializer<BitesListMineErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'invalidChoice': 'invalid_choice',
+    'invalid': 'invalid',
+    'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'invalid_choice': 'invalidChoice',
+    'invalid': 'invalid',
+    'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

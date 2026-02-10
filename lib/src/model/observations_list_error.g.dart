@@ -7,8 +7,8 @@ part of 'observations_list_error.dart';
 // **************************************************************************
 
 const ObservationsListErrorAttrEnum
-    _$observationsListErrorAttrEnum_identificationTaxonIds =
-    const ObservationsListErrorAttrEnum._('identificationTaxonIds');
+    _$observationsListErrorAttrEnum_identificationTaxonIdsLookup =
+    const ObservationsListErrorAttrEnum._('identificationTaxonIdsLookup');
 const ObservationsListErrorAttrEnum
     _$observationsListErrorAttrEnum_unknownDefaultOpenApi =
     const ObservationsListErrorAttrEnum._('unknownDefaultOpenApi');
@@ -16,8 +16,8 @@ const ObservationsListErrorAttrEnum
 ObservationsListErrorAttrEnum _$observationsListErrorAttrEnumValueOf(
     String name) {
   switch (name) {
-    case 'identificationTaxonIds':
-      return _$observationsListErrorAttrEnum_identificationTaxonIds;
+    case 'identificationTaxonIdsLookup':
+      return _$observationsListErrorAttrEnum_identificationTaxonIdsLookup;
     case 'unknownDefaultOpenApi':
       return _$observationsListErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -28,19 +28,13 @@ ObservationsListErrorAttrEnum _$observationsListErrorAttrEnumValueOf(
 final BuiltSet<ObservationsListErrorAttrEnum>
     _$observationsListErrorAttrEnumValues = new BuiltSet<
         ObservationsListErrorAttrEnum>(const <ObservationsListErrorAttrEnum>[
-  _$observationsListErrorAttrEnum_identificationTaxonIds,
+  _$observationsListErrorAttrEnum_identificationTaxonIdsLookup,
   _$observationsListErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const ObservationsListErrorCodeEnum
     _$observationsListErrorCodeEnum_invalidChoice =
     const ObservationsListErrorCodeEnum._('invalidChoice');
-const ObservationsListErrorCodeEnum
-    _$observationsListErrorCodeEnum_invalidList =
-    const ObservationsListErrorCodeEnum._('invalidList');
-const ObservationsListErrorCodeEnum
-    _$observationsListErrorCodeEnum_invalidPkValue =
-    const ObservationsListErrorCodeEnum._('invalidPkValue');
 const ObservationsListErrorCodeEnum
     _$observationsListErrorCodeEnum_unknownDefaultOpenApi =
     const ObservationsListErrorCodeEnum._('unknownDefaultOpenApi');
@@ -50,10 +44,6 @@ ObservationsListErrorCodeEnum _$observationsListErrorCodeEnumValueOf(
   switch (name) {
     case 'invalidChoice':
       return _$observationsListErrorCodeEnum_invalidChoice;
-    case 'invalidList':
-      return _$observationsListErrorCodeEnum_invalidList;
-    case 'invalidPkValue':
-      return _$observationsListErrorCodeEnum_invalidPkValue;
     case 'unknownDefaultOpenApi':
       return _$observationsListErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -65,8 +55,6 @@ final BuiltSet<ObservationsListErrorCodeEnum>
     _$observationsListErrorCodeEnumValues = new BuiltSet<
         ObservationsListErrorCodeEnum>(const <ObservationsListErrorCodeEnum>[
   _$observationsListErrorCodeEnum_invalidChoice,
-  _$observationsListErrorCodeEnum_invalidList,
-  _$observationsListErrorCodeEnum_invalidPkValue,
   _$observationsListErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -80,11 +68,11 @@ Serializer<ObservationsListErrorCodeEnum>
 class _$ObservationsListErrorAttrEnumSerializer
     implements PrimitiveSerializer<ObservationsListErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'identificationTaxonIds': 'identification_taxon_ids',
+    'identificationTaxonIdsLookup': 'identification_taxon_ids_lookup',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'identification_taxon_ids': 'identificationTaxonIds',
+    'identification_taxon_ids_lookup': 'identificationTaxonIdsLookup',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -111,14 +99,10 @@ class _$ObservationsListErrorCodeEnumSerializer
     implements PrimitiveSerializer<ObservationsListErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
-    'invalidList': 'invalid_list',
-    'invalidPkValue': 'invalid_pk_value',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
-    'invalid_list': 'invalidList',
-    'invalid_pk_value': 'invalidPkValue',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

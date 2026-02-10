@@ -25,7 +25,7 @@ part 'observation.g.dart';
 /// * [receivedAt] 
 /// * [updatedAt] - Date and time when the report was last modified
 /// * [location] 
-/// * [note] - Note user attached to report.
+/// * [note] 
 /// * [tags] 
 /// * [published] 
 /// * [photos] 
@@ -64,7 +64,6 @@ abstract class Observation implements Built<Observation, ObservationBuilder> {
   @BuiltValueField(wireName: r'location')
   Location get location;
 
-  /// Note user attached to report.
   @BuiltValueField(wireName: r'note')
   String? get note;
 
@@ -162,13 +161,11 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
       object.location,
       specifiedType: const FullType(Location),
     );
-    if (object.note != null) {
-      yield r'note';
-      yield serializers.serialize(
-        object.note,
-        specifiedType: const FullType.nullable(String),
-      );
-    }
+    yield r'note';
+    yield object.note == null ? null : serializers.serialize(
+      object.note,
+      specifiedType: const FullType.nullable(String),
+    );
     if (object.tags != null) {
       yield r'tags';
       yield serializers.serialize(

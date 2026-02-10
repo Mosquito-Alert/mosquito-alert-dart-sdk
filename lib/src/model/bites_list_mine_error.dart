@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/bites_list_mine_geo_precision_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_received_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_user_uuid_error_component.dart';
 import 'package:built_collection/built_collection.dart';
@@ -10,6 +11,8 @@ import 'package:mosquito_alert/src/model/bites_list_mine_short_id_error_componen
 import 'package:mosquito_alert/src/model/bites_list_mine_country_id_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_updated_at_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_tags_error_component.dart';
+import 'package:mosquito_alert/src/model/bites_list_mine_boundary_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/bites_list_mine_order_by_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -25,17 +28,20 @@ part 'bites_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class BitesListMineError implements Built<BitesListMineError, BitesListMineErrorBuilder> {
-  /// One Of [BitesListMineCountryIdErrorComponent], [BitesListMineCreatedAtErrorComponent], [BitesListMineOrderByErrorComponent], [BitesListMineReceivedAtErrorComponent], [BitesListMineShortIdErrorComponent], [BitesListMineUpdatedAtErrorComponent], [BitesListMineUserUuidErrorComponent]
+  /// One Of [BitesListMineBoundaryUuidErrorComponent], [BitesListMineCountryIdErrorComponent], [BitesListMineCreatedAtErrorComponent], [BitesListMineGeoPrecisionErrorComponent], [BitesListMineOrderByErrorComponent], [BitesListMineReceivedAtErrorComponent], [BitesListMineShortIdErrorComponent], [BitesListMineTagsErrorComponent], [BitesListMineUpdatedAtErrorComponent], [BitesListMineUserUuidErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
+    r'boundary_uuid': BitesListMineBoundaryUuidErrorComponent,
     r'country_id': BitesListMineCountryIdErrorComponent,
     r'created_at': BitesListMineCreatedAtErrorComponent,
+    r'geo_precision': BitesListMineGeoPrecisionErrorComponent,
     r'order_by': BitesListMineOrderByErrorComponent,
     r'received_at': BitesListMineReceivedAtErrorComponent,
     r'short_id': BitesListMineShortIdErrorComponent,
+    r'tags': BitesListMineTagsErrorComponent,
     r'updated_at': BitesListMineUpdatedAtErrorComponent,
     r'user_uuid': BitesListMineUserUuidErrorComponent,
   };
@@ -53,11 +59,17 @@ abstract class BitesListMineError implements Built<BitesListMineError, BitesList
 
 extension BitesListMineErrorDiscriminatorExt on BitesListMineError {
     String? get discriminatorValue {
+        if (this is BitesListMineBoundaryUuidErrorComponent) {
+            return r'boundary_uuid';
+        }
         if (this is BitesListMineCountryIdErrorComponent) {
             return r'country_id';
         }
         if (this is BitesListMineCreatedAtErrorComponent) {
             return r'created_at';
+        }
+        if (this is BitesListMineGeoPrecisionErrorComponent) {
+            return r'geo_precision';
         }
         if (this is BitesListMineOrderByErrorComponent) {
             return r'order_by';
@@ -67,6 +79,9 @@ extension BitesListMineErrorDiscriminatorExt on BitesListMineError {
         }
         if (this is BitesListMineShortIdErrorComponent) {
             return r'short_id';
+        }
+        if (this is BitesListMineTagsErrorComponent) {
+            return r'tags';
         }
         if (this is BitesListMineUpdatedAtErrorComponent) {
             return r'updated_at';
@@ -79,11 +94,17 @@ extension BitesListMineErrorDiscriminatorExt on BitesListMineError {
 }
 extension BitesListMineErrorBuilderDiscriminatorExt on BitesListMineErrorBuilder {
     String? get discriminatorValue {
+        if (this is BitesListMineBoundaryUuidErrorComponentBuilder) {
+            return r'boundary_uuid';
+        }
         if (this is BitesListMineCountryIdErrorComponentBuilder) {
             return r'country_id';
         }
         if (this is BitesListMineCreatedAtErrorComponentBuilder) {
             return r'created_at';
+        }
+        if (this is BitesListMineGeoPrecisionErrorComponentBuilder) {
+            return r'geo_precision';
         }
         if (this is BitesListMineOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -93,6 +114,9 @@ extension BitesListMineErrorBuilderDiscriminatorExt on BitesListMineErrorBuilder
         }
         if (this is BitesListMineShortIdErrorComponentBuilder) {
             return r'short_id';
+        }
+        if (this is BitesListMineTagsErrorComponentBuilder) {
+            return r'tags';
         }
         if (this is BitesListMineUpdatedAtErrorComponentBuilder) {
             return r'updated_at';
@@ -140,10 +164,17 @@ class _$BitesListMineErrorSerializer implements PrimitiveSerializer<BitesListMin
     final discIndex = serializedList.indexOf(BitesListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [BitesListMineCountryIdErrorComponent, BitesListMineCreatedAtErrorComponent, BitesListMineOrderByErrorComponent, BitesListMineReceivedAtErrorComponent, BitesListMineShortIdErrorComponent, BitesListMineUpdatedAtErrorComponent, BitesListMineUserUuidErrorComponent, ];
+    final oneOfTypes = [BitesListMineBoundaryUuidErrorComponent, BitesListMineCountryIdErrorComponent, BitesListMineCreatedAtErrorComponent, BitesListMineGeoPrecisionErrorComponent, BitesListMineOrderByErrorComponent, BitesListMineReceivedAtErrorComponent, BitesListMineShortIdErrorComponent, BitesListMineTagsErrorComponent, BitesListMineUpdatedAtErrorComponent, BitesListMineUserUuidErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
+      case r'boundary_uuid':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesListMineBoundaryUuidErrorComponent),
+        ) as BitesListMineBoundaryUuidErrorComponent;
+        oneOfType = BitesListMineBoundaryUuidErrorComponent;
+        break;
       case r'country_id':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
@@ -157,6 +188,13 @@ class _$BitesListMineErrorSerializer implements PrimitiveSerializer<BitesListMin
           specifiedType: FullType(BitesListMineCreatedAtErrorComponent),
         ) as BitesListMineCreatedAtErrorComponent;
         oneOfType = BitesListMineCreatedAtErrorComponent;
+        break;
+      case r'geo_precision':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesListMineGeoPrecisionErrorComponent),
+        ) as BitesListMineGeoPrecisionErrorComponent;
+        oneOfType = BitesListMineGeoPrecisionErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(
@@ -178,6 +216,13 @@ class _$BitesListMineErrorSerializer implements PrimitiveSerializer<BitesListMin
           specifiedType: FullType(BitesListMineShortIdErrorComponent),
         ) as BitesListMineShortIdErrorComponent;
         oneOfType = BitesListMineShortIdErrorComponent;
+        break;
+      case r'tags':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(BitesListMineTagsErrorComponent),
+        ) as BitesListMineTagsErrorComponent;
+        oneOfType = BitesListMineTagsErrorComponent;
         break;
       case r'updated_at':
         oneOfResult = serializers.deserialize(
@@ -203,8 +248,8 @@ class _$BitesListMineErrorSerializer implements PrimitiveSerializer<BitesListMin
 
 class BitesListMineErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'order_by')
-  static const BitesListMineErrorAttrEnum orderBy = _$bitesListMineErrorAttrEnum_orderBy;
+  @BuiltValueEnumConst(wireName: r'boundary_uuid')
+  static const BitesListMineErrorAttrEnum boundaryUuid = _$bitesListMineErrorAttrEnum_boundaryUuid;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BitesListMineErrorAttrEnum unknownDefaultOpenApi = _$bitesListMineErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -218,8 +263,10 @@ class BitesListMineErrorAttrEnum extends EnumClass {
 
 class BitesListMineErrorCodeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'invalid_choice')
-  static const BitesListMineErrorCodeEnum invalidChoice = _$bitesListMineErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'invalid')
+  static const BitesListMineErrorCodeEnum invalid = _$bitesListMineErrorCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
+  static const BitesListMineErrorCodeEnum nullCharactersNotAllowed = _$bitesListMineErrorCodeEnum_nullCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BitesListMineErrorCodeEnum unknownDefaultOpenApi = _$bitesListMineErrorCodeEnum_unknownDefaultOpenApi;
 

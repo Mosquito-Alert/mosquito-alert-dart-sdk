@@ -6,15 +6,15 @@ part of 'bites_list_error.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const BitesListErrorAttrEnum _$bitesListErrorAttrEnum_orderBy =
-    const BitesListErrorAttrEnum._('orderBy');
+const BitesListErrorAttrEnum _$bitesListErrorAttrEnum_boundaryUuid =
+    const BitesListErrorAttrEnum._('boundaryUuid');
 const BitesListErrorAttrEnum _$bitesListErrorAttrEnum_unknownDefaultOpenApi =
     const BitesListErrorAttrEnum._('unknownDefaultOpenApi');
 
 BitesListErrorAttrEnum _$bitesListErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'orderBy':
-      return _$bitesListErrorAttrEnum_orderBy;
+    case 'boundaryUuid':
+      return _$bitesListErrorAttrEnum_boundaryUuid;
     case 'unknownDefaultOpenApi':
       return _$bitesListErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -24,19 +24,23 @@ BitesListErrorAttrEnum _$bitesListErrorAttrEnumValueOf(String name) {
 
 final BuiltSet<BitesListErrorAttrEnum> _$bitesListErrorAttrEnumValues =
     new BuiltSet<BitesListErrorAttrEnum>(const <BitesListErrorAttrEnum>[
-  _$bitesListErrorAttrEnum_orderBy,
+  _$bitesListErrorAttrEnum_boundaryUuid,
   _$bitesListErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
-const BitesListErrorCodeEnum _$bitesListErrorCodeEnum_invalidChoice =
-    const BitesListErrorCodeEnum._('invalidChoice');
+const BitesListErrorCodeEnum _$bitesListErrorCodeEnum_invalid =
+    const BitesListErrorCodeEnum._('invalid');
+const BitesListErrorCodeEnum _$bitesListErrorCodeEnum_nullCharactersNotAllowed =
+    const BitesListErrorCodeEnum._('nullCharactersNotAllowed');
 const BitesListErrorCodeEnum _$bitesListErrorCodeEnum_unknownDefaultOpenApi =
     const BitesListErrorCodeEnum._('unknownDefaultOpenApi');
 
 BitesListErrorCodeEnum _$bitesListErrorCodeEnumValueOf(String name) {
   switch (name) {
-    case 'invalidChoice':
-      return _$bitesListErrorCodeEnum_invalidChoice;
+    case 'invalid':
+      return _$bitesListErrorCodeEnum_invalid;
+    case 'nullCharactersNotAllowed':
+      return _$bitesListErrorCodeEnum_nullCharactersNotAllowed;
     case 'unknownDefaultOpenApi':
       return _$bitesListErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -46,7 +50,8 @@ BitesListErrorCodeEnum _$bitesListErrorCodeEnumValueOf(String name) {
 
 final BuiltSet<BitesListErrorCodeEnum> _$bitesListErrorCodeEnumValues =
     new BuiltSet<BitesListErrorCodeEnum>(const <BitesListErrorCodeEnum>[
-  _$bitesListErrorCodeEnum_invalidChoice,
+  _$bitesListErrorCodeEnum_invalid,
+  _$bitesListErrorCodeEnum_nullCharactersNotAllowed,
   _$bitesListErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -58,11 +63,11 @@ Serializer<BitesListErrorCodeEnum> _$bitesListErrorCodeEnumSerializer =
 class _$BitesListErrorAttrEnumSerializer
     implements PrimitiveSerializer<BitesListErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'orderBy': 'order_by',
+    'boundaryUuid': 'boundary_uuid',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'order_by': 'orderBy',
+    'boundary_uuid': 'boundaryUuid',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -86,11 +91,13 @@ class _$BitesListErrorAttrEnumSerializer
 class _$BitesListErrorCodeEnumSerializer
     implements PrimitiveSerializer<BitesListErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'invalidChoice': 'invalid_choice',
+    'invalid': 'invalid',
+    'nullCharactersNotAllowed': 'null_characters_not_allowed',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'invalid_choice': 'invalidChoice',
+    'invalid': 'invalid',
+    'null_characters_not_allowed': 'nullCharactersNotAllowed',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

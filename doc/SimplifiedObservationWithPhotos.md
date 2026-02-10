@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **createdAtLocal** | [**DateTime**](DateTime.md) | The date and time when the record was created, displayed without timezone field. | 
 **receivedAt** | [**DateTime**](DateTime.md) |  | 
 **location** | [**SimplifiedLocation**](SimplifiedLocation.md) |  | 
-**note** | **String** | Note user attached to report. | [optional] 
+**note** | **String** |  | 
 **photos** | [**BuiltList&lt;SimplePhoto&gt;**](SimplePhoto.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

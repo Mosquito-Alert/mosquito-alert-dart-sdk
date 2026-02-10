@@ -38,7 +38,6 @@ void main() {
       // TODO
     });
 
-    // Note user attached to report.
     // String note
     test('to test the property `note`', () async {
       // TODO
