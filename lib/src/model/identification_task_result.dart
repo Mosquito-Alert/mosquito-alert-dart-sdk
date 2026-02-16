@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/species_characteristics.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/simple_taxon.dart';
 import 'package:built_value/built_value.dart';
@@ -20,6 +21,7 @@ part 'identification_task_result.g.dart';
 /// * [confidenceLabel] 
 /// * [uncertainty] 
 /// * [agreement] 
+/// * [characteristics] 
 @BuiltValue()
 abstract class IdentificationTaskResult implements Built<IdentificationTaskResult, IdentificationTaskResultBuilder> {
   @BuiltValueField(wireName: r'source')
@@ -43,6 +45,9 @@ abstract class IdentificationTaskResult implements Built<IdentificationTaskResul
 
   @BuiltValueField(wireName: r'agreement')
   double get agreement;
+
+  @BuiltValueField(wireName: r'characteristics')
+  SpeciesCharacteristics? get characteristics;
 
   IdentificationTaskResult._();
 
@@ -101,6 +106,11 @@ class _$IdentificationTaskResultSerializer implements PrimitiveSerializer<Identi
     yield serializers.serialize(
       object.agreement,
       specifiedType: const FullType(double),
+    );
+    yield r'characteristics';
+    yield object.characteristics == null ? null : serializers.serialize(
+      object.characteristics,
+      specifiedType: const FullType.nullable(SpeciesCharacteristics),
     );
   }
 
@@ -174,6 +184,14 @@ class _$IdentificationTaskResultSerializer implements PrimitiveSerializer<Identi
             specifiedType: const FullType(double),
           ) as double;
           result.agreement = valueDes;
+          break;
+        case r'characteristics':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(SpeciesCharacteristics),
+          ) as SpeciesCharacteristics?;
+          if (valueDes == null) continue;
+          result.characteristics.replace(valueDes);
           break;
         default:
           unhandled.add(key);

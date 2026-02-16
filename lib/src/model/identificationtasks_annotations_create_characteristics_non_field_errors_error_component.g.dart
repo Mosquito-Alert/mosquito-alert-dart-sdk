@@ -42,10 +42,6 @@ const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComp
     const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum
         ._('invalid');
 const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum
-    _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_null_ =
-    const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum
-        ._('null_');
-const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum
     _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum
         ._('unknownDefaultOpenApi');
@@ -56,8 +52,6 @@ IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentC
   switch (name) {
     case 'invalid':
       return _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_invalid;
-    case 'null_':
-      return _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_null_;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -71,7 +65,6 @@ final BuiltSet<
     new BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_invalid,
-  _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_null_,
   _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -128,12 +121,10 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorCo
             IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
-    'null_': 'null',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
-    'null': 'null_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

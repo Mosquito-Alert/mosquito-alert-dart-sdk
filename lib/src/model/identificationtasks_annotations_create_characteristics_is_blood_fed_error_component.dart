@@ -23,7 +23,7 @@ abstract class IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErro
 
   @BuiltValueField(wireName: r'code')
   IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid,  null,  };
+  // enum codeEnum {  invalid,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -158,8 +158,6 @@ class IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponen
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum invalid = _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_invalid;
-  @BuiltValueEnumConst(wireName: r'null')
-  static const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum null_ = _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum unknownDefaultOpenApi = _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_unknownDefaultOpenApi;
 

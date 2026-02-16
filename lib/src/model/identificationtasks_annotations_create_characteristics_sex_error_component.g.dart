@@ -42,6 +42,14 @@ const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEn
     const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum
         ._('invalidChoice');
 const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum
+    _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_null_ =
+    const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum
+        ._('null_');
+const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum
+    _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_required_ =
+    const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum
+        ._('required_');
+const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum
     _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum
         ._('unknownDefaultOpenApi');
@@ -52,6 +60,10 @@ IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum
   switch (name) {
     case 'invalidChoice':
       return _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_invalidChoice;
+    case 'null_':
+      return _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_null_;
+    case 'required_':
+      return _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_required_;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -65,6 +77,8 @@ final BuiltSet<
     new BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_invalidChoice,
+  _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_null_,
+  _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_required_,
   _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -121,10 +135,14 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCode
             IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
+    'null_': 'null',
+    'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
+    'null': 'null_',
+    'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

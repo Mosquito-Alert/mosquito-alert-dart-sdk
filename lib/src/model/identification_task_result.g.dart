@@ -91,6 +91,8 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
   final double uncertainty;
   @override
   final double agreement;
+  @override
+  final SpeciesCharacteristics? characteristics;
 
   factory _$IdentificationTaskResult(
           [void Function(IdentificationTaskResultBuilder)? updates]) =>
@@ -103,7 +105,8 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
       required this.confidence,
       required this.confidenceLabel,
       required this.uncertainty,
-      required this.agreement})
+      required this.agreement,
+      this.characteristics})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         source_, r'IdentificationTaskResult', 'source_');
@@ -138,7 +141,8 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
         confidence == other.confidence &&
         confidenceLabel == other.confidenceLabel &&
         uncertainty == other.uncertainty &&
-        agreement == other.agreement;
+        agreement == other.agreement &&
+        characteristics == other.characteristics;
   }
 
   @override
@@ -151,6 +155,7 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
     _$hash = $jc(_$hash, confidenceLabel.hashCode);
     _$hash = $jc(_$hash, uncertainty.hashCode);
     _$hash = $jc(_$hash, agreement.hashCode);
+    _$hash = $jc(_$hash, characteristics.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -164,7 +169,8 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
           ..add('confidence', confidence)
           ..add('confidenceLabel', confidenceLabel)
           ..add('uncertainty', uncertainty)
-          ..add('agreement', agreement))
+          ..add('agreement', agreement)
+          ..add('characteristics', characteristics))
         .toString();
   }
 }
@@ -205,6 +211,12 @@ class IdentificationTaskResultBuilder
   double? get agreement => _$this._agreement;
   set agreement(double? agreement) => _$this._agreement = agreement;
 
+  SpeciesCharacteristicsBuilder? _characteristics;
+  SpeciesCharacteristicsBuilder get characteristics =>
+      _$this._characteristics ??= new SpeciesCharacteristicsBuilder();
+  set characteristics(SpeciesCharacteristicsBuilder? characteristics) =>
+      _$this._characteristics = characteristics;
+
   IdentificationTaskResultBuilder() {
     IdentificationTaskResult._defaults(this);
   }
@@ -219,6 +231,7 @@ class IdentificationTaskResultBuilder
       _confidenceLabel = $v.confidenceLabel;
       _uncertainty = $v.uncertainty;
       _agreement = $v.agreement;
+      _characteristics = $v.characteristics?.toBuilder();
       _$v = null;
     }
     return this;
@@ -259,12 +272,16 @@ class IdentificationTaskResultBuilder
               uncertainty: BuiltValueNullFieldError.checkNotNull(
                   uncertainty, r'IdentificationTaskResult', 'uncertainty'),
               agreement: BuiltValueNullFieldError.checkNotNull(
-                  agreement, r'IdentificationTaskResult', 'agreement'));
+                  agreement, r'IdentificationTaskResult', 'agreement'),
+              characteristics: _characteristics?.build());
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'taxon';
         _taxon?.build();
+
+        _$failedField = 'characteristics';
+        _characteristics?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'IdentificationTaskResult', _$failedField, e.toString());

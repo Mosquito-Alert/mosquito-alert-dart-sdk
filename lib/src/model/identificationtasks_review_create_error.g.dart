@@ -7,9 +7,9 @@ part of 'identificationtasks_review_create_error.dart';
 // **************************************************************************
 
 const IdentificationtasksReviewCreateErrorAttrEnum
-    _$identificationtasksReviewCreateErrorAttrEnum_resultPeriodConfidenceLabel =
+    _$identificationtasksReviewCreateErrorAttrEnum_characteristicsPeriodIsGravid =
     const IdentificationtasksReviewCreateErrorAttrEnum._(
-        'resultPeriodConfidenceLabel');
+        'characteristicsPeriodIsGravid');
 const IdentificationtasksReviewCreateErrorAttrEnum
     _$identificationtasksReviewCreateErrorAttrEnum_unknownDefaultOpenApi =
     const IdentificationtasksReviewCreateErrorAttrEnum._(
@@ -18,8 +18,8 @@ const IdentificationtasksReviewCreateErrorAttrEnum
 IdentificationtasksReviewCreateErrorAttrEnum
     _$identificationtasksReviewCreateErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'resultPeriodConfidenceLabel':
-      return _$identificationtasksReviewCreateErrorAttrEnum_resultPeriodConfidenceLabel;
+    case 'characteristicsPeriodIsGravid':
+      return _$identificationtasksReviewCreateErrorAttrEnum_characteristicsPeriodIsGravid;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksReviewCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -30,19 +30,13 @@ IdentificationtasksReviewCreateErrorAttrEnum
 final BuiltSet<IdentificationtasksReviewCreateErrorAttrEnum>
     _$identificationtasksReviewCreateErrorAttrEnumValues = new BuiltSet<
         IdentificationtasksReviewCreateErrorAttrEnum>(const <IdentificationtasksReviewCreateErrorAttrEnum>[
-  _$identificationtasksReviewCreateErrorAttrEnum_resultPeriodConfidenceLabel,
+  _$identificationtasksReviewCreateErrorAttrEnum_characteristicsPeriodIsGravid,
   _$identificationtasksReviewCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const IdentificationtasksReviewCreateErrorCodeEnum
-    _$identificationtasksReviewCreateErrorCodeEnum_invalidChoice =
-    const IdentificationtasksReviewCreateErrorCodeEnum._('invalidChoice');
-const IdentificationtasksReviewCreateErrorCodeEnum
-    _$identificationtasksReviewCreateErrorCodeEnum_null_ =
-    const IdentificationtasksReviewCreateErrorCodeEnum._('null_');
-const IdentificationtasksReviewCreateErrorCodeEnum
-    _$identificationtasksReviewCreateErrorCodeEnum_required_ =
-    const IdentificationtasksReviewCreateErrorCodeEnum._('required_');
+    _$identificationtasksReviewCreateErrorCodeEnum_invalid =
+    const IdentificationtasksReviewCreateErrorCodeEnum._('invalid');
 const IdentificationtasksReviewCreateErrorCodeEnum
     _$identificationtasksReviewCreateErrorCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksReviewCreateErrorCodeEnum._(
@@ -51,12 +45,8 @@ const IdentificationtasksReviewCreateErrorCodeEnum
 IdentificationtasksReviewCreateErrorCodeEnum
     _$identificationtasksReviewCreateErrorCodeEnumValueOf(String name) {
   switch (name) {
-    case 'invalidChoice':
-      return _$identificationtasksReviewCreateErrorCodeEnum_invalidChoice;
-    case 'null_':
-      return _$identificationtasksReviewCreateErrorCodeEnum_null_;
-    case 'required_':
-      return _$identificationtasksReviewCreateErrorCodeEnum_required_;
+    case 'invalid':
+      return _$identificationtasksReviewCreateErrorCodeEnum_invalid;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksReviewCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -67,9 +57,7 @@ IdentificationtasksReviewCreateErrorCodeEnum
 final BuiltSet<IdentificationtasksReviewCreateErrorCodeEnum>
     _$identificationtasksReviewCreateErrorCodeEnumValues = new BuiltSet<
         IdentificationtasksReviewCreateErrorCodeEnum>(const <IdentificationtasksReviewCreateErrorCodeEnum>[
-  _$identificationtasksReviewCreateErrorCodeEnum_invalidChoice,
-  _$identificationtasksReviewCreateErrorCodeEnum_null_,
-  _$identificationtasksReviewCreateErrorCodeEnum_required_,
+  _$identificationtasksReviewCreateErrorCodeEnum_invalid,
   _$identificationtasksReviewCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -84,11 +72,11 @@ class _$IdentificationtasksReviewCreateErrorAttrEnumSerializer
     implements
         PrimitiveSerializer<IdentificationtasksReviewCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'resultPeriodConfidenceLabel': 'result.confidence_label',
+    'characteristicsPeriodIsGravid': 'characteristics.is_gravid',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'result.confidence_label': 'resultPeriodConfidenceLabel',
+    'characteristics.is_gravid': 'characteristicsPeriodIsGravid',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -117,15 +105,11 @@ class _$IdentificationtasksReviewCreateErrorCodeEnumSerializer
     implements
         PrimitiveSerializer<IdentificationtasksReviewCreateErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'invalidChoice': 'invalid_choice',
-    'null_': 'null',
-    'required_': 'required',
+    'invalid': 'invalid',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'invalid_choice': 'invalidChoice',
-    'null': 'null_',
-    'required': 'required_',
+    'invalid': 'invalid',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

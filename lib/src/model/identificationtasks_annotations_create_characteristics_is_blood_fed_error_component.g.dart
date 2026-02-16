@@ -42,10 +42,6 @@ const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponen
     const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum
         ._('invalid');
 const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum
-    _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_null_ =
-    const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum
-        ._('null_');
-const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum
     _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum
         ._('unknownDefaultOpenApi');
@@ -56,8 +52,6 @@ IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeE
   switch (name) {
     case 'invalid':
       return _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_invalid;
-    case 'null_':
-      return _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_null_;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -71,7 +65,6 @@ final BuiltSet<
     new BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_invalid,
-  _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_null_,
   _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -128,12 +121,10 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorCompon
             IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
-    'null_': 'null',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
-    'null': 'null_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **confidenceLabel** | **String** |  | 
 **uncertainty** | **double** |  | 
 **agreement** | **double** |  | 
+**characteristics** | [**SpeciesCharacteristics**](SpeciesCharacteristics.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

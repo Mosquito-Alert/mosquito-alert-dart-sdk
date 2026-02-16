@@ -42,10 +42,6 @@ const IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentC
     const IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum
         ._('invalid');
 const IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum
-    _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_null_ =
-    const IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum
-        ._('null_');
-const IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum
     _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum
         ._('unknownDefaultOpenApi');
@@ -56,8 +52,6 @@ IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnu
   switch (name) {
     case 'invalid':
       return _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_invalid;
-    case 'null_':
-      return _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_null_;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -71,7 +65,6 @@ final BuiltSet<
     new BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_invalid,
-  _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_null_,
   _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -128,12 +121,10 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponen
             IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalid': 'invalid',
-    'null_': 'null',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid': 'invalid',
-    'null': 'null_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

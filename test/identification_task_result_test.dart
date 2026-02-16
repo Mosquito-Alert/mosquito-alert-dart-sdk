@@ -42,5 +42,10 @@ void main() {
       // TODO
     });
 
+    // SpeciesCharacteristics characteristics
+    test('to test the property `characteristics`', () async {
+      // TODO
+    });
+
   });
 }

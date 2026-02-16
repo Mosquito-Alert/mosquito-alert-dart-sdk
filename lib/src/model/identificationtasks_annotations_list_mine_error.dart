@@ -7,6 +7,7 @@ import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mi
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_confidence_label_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_type_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_characteristics_sex_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_confidence_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_created_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_updated_at_error_component.dart';
@@ -26,12 +27,13 @@ part 'identificationtasks_annotations_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class IdentificationtasksAnnotationsListMineError implements Built<IdentificationtasksAnnotationsListMineError, IdentificationtasksAnnotationsListMineErrorBuilder> {
-  /// One Of [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListMineCreatedAtErrorComponent], [IdentificationtasksAnnotationsListMineOrderByErrorComponent], [IdentificationtasksAnnotationsListMineTypeErrorComponent], [IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent], [IdentificationtasksAnnotationsListMineUserIdsErrorComponent]
+  /// One Of [IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListMineCreatedAtErrorComponent], [IdentificationtasksAnnotationsListMineOrderByErrorComponent], [IdentificationtasksAnnotationsListMineTypeErrorComponent], [IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent], [IdentificationtasksAnnotationsListMineUserIdsErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
+    r'characteristics_sex': IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent,
     r'classification_confidence': IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent,
     r'classification_confidence_label': IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent,
     r'classification_taxon_ids': IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent,
@@ -55,6 +57,9 @@ abstract class IdentificationtasksAnnotationsListMineError implements Built<Iden
 
 extension IdentificationtasksAnnotationsListMineErrorDiscriminatorExt on IdentificationtasksAnnotationsListMineError {
     String? get discriminatorValue {
+        if (this is IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent) {
+            return r'characteristics_sex';
+        }
         if (this is IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent) {
             return r'classification_confidence';
         }
@@ -84,6 +89,9 @@ extension IdentificationtasksAnnotationsListMineErrorDiscriminatorExt on Identif
 }
 extension IdentificationtasksAnnotationsListMineErrorBuilderDiscriminatorExt on IdentificationtasksAnnotationsListMineErrorBuilder {
     String? get discriminatorValue {
+        if (this is IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentBuilder) {
+            return r'characteristics_sex';
+        }
         if (this is IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentBuilder) {
             return r'classification_confidence';
         }
@@ -148,10 +156,17 @@ class _$IdentificationtasksAnnotationsListMineErrorSerializer implements Primiti
     final discIndex = serializedList.indexOf(IdentificationtasksAnnotationsListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListMineCreatedAtErrorComponent, IdentificationtasksAnnotationsListMineOrderByErrorComponent, IdentificationtasksAnnotationsListMineTypeErrorComponent, IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent, IdentificationtasksAnnotationsListMineUserIdsErrorComponent, ];
+    final oneOfTypes = [IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListMineCreatedAtErrorComponent, IdentificationtasksAnnotationsListMineOrderByErrorComponent, IdentificationtasksAnnotationsListMineTypeErrorComponent, IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent, IdentificationtasksAnnotationsListMineUserIdsErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
+      case r'characteristics_sex':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent),
+        ) as IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent;
+        break;
       case r'classification_confidence':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,

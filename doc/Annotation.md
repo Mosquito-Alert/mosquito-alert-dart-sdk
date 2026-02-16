@@ -12,7 +12,8 @@ Name | Type | Description | Notes
 **observationUuid** | **String** |  | 
 **user** | [**SimpleAnnotatorUser**](SimpleAnnotatorUser.md) |  | 
 **bestPhoto** | [**SimplePhoto**](SimplePhoto.md) |  | 
-**classification** | [**AnnotationClassification**](AnnotationClassification.md) |  | 
+**classification** | [**SpeciesClassification**](SpeciesClassification.md) |  | 
+**characteristics** | [**SpeciesCharacteristics**](SpeciesCharacteristics.md) |  | [optional] 
 **feedback** | [**AnnotationFeedback**](AnnotationFeedback.md) |  | [optional] 
 **type** | **String** |  | 
 **isFlagged** | **bool** |  | [default to false]

@@ -23,7 +23,7 @@ abstract class IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrors
 
   @BuiltValueField(wireName: r'code')
   IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid,  null,  };
+  // enum codeEnum {  invalid,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -158,8 +158,6 @@ class IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComp
 
   @BuiltValueEnumConst(wireName: r'invalid')
   static const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum invalid = _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_invalid;
-  @BuiltValueEnumConst(wireName: r'null')
-  static const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum null_ = _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum unknownDefaultOpenApi = _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi;
 

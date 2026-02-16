@@ -78,7 +78,9 @@ class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
   @override
   final String? publicNote;
   @override
-  final AnnotationClassificationRequest? result;
+  final SpeciesClassificationRequest? classification;
+  @override
+  final SpeciesCharacteristicsRequest? characteristics;
 
   factory _$CreateOverwriteReviewRequest(
           [void Function(CreateOverwriteReviewRequestBuilder)? updates]) =>
@@ -89,7 +91,8 @@ class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
       required this.publicPhotoUuid,
       required this.isSafe,
       this.publicNote,
-      this.result})
+      this.classification,
+      this.characteristics})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         publicPhotoUuid, r'CreateOverwriteReviewRequest', 'publicPhotoUuid');
@@ -114,7 +117,8 @@ class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
         publicPhotoUuid == other.publicPhotoUuid &&
         isSafe == other.isSafe &&
         publicNote == other.publicNote &&
-        result == other.result;
+        classification == other.classification &&
+        characteristics == other.characteristics;
   }
 
   @override
@@ -124,7 +128,8 @@ class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
     _$hash = $jc(_$hash, publicPhotoUuid.hashCode);
     _$hash = $jc(_$hash, isSafe.hashCode);
     _$hash = $jc(_$hash, publicNote.hashCode);
-    _$hash = $jc(_$hash, result.hashCode);
+    _$hash = $jc(_$hash, classification.hashCode);
+    _$hash = $jc(_$hash, characteristics.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -136,7 +141,8 @@ class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
           ..add('publicPhotoUuid', publicPhotoUuid)
           ..add('isSafe', isSafe)
           ..add('publicNote', publicNote)
-          ..add('result', result))
+          ..add('classification', classification)
+          ..add('characteristics', characteristics))
         .toString();
   }
 }
@@ -165,11 +171,17 @@ class CreateOverwriteReviewRequestBuilder
   String? get publicNote => _$this._publicNote;
   set publicNote(String? publicNote) => _$this._publicNote = publicNote;
 
-  AnnotationClassificationRequestBuilder? _result;
-  AnnotationClassificationRequestBuilder get result =>
-      _$this._result ??= new AnnotationClassificationRequestBuilder();
-  set result(AnnotationClassificationRequestBuilder? result) =>
-      _$this._result = result;
+  SpeciesClassificationRequestBuilder? _classification;
+  SpeciesClassificationRequestBuilder get classification =>
+      _$this._classification ??= new SpeciesClassificationRequestBuilder();
+  set classification(SpeciesClassificationRequestBuilder? classification) =>
+      _$this._classification = classification;
+
+  SpeciesCharacteristicsRequestBuilder? _characteristics;
+  SpeciesCharacteristicsRequestBuilder get characteristics =>
+      _$this._characteristics ??= new SpeciesCharacteristicsRequestBuilder();
+  set characteristics(SpeciesCharacteristicsRequestBuilder? characteristics) =>
+      _$this._characteristics = characteristics;
 
   CreateOverwriteReviewRequestBuilder() {
     CreateOverwriteReviewRequest._defaults(this);
@@ -182,7 +194,8 @@ class CreateOverwriteReviewRequestBuilder
       _publicPhotoUuid = $v.publicPhotoUuid;
       _isSafe = $v.isSafe;
       _publicNote = $v.publicNote;
-      _result = $v.result?.toBuilder();
+      _classification = $v.classification?.toBuilder();
+      _characteristics = $v.characteristics?.toBuilder();
       _$v = null;
     }
     return this;
@@ -215,12 +228,15 @@ class CreateOverwriteReviewRequestBuilder
               isSafe: BuiltValueNullFieldError.checkNotNull(
                   isSafe, r'CreateOverwriteReviewRequest', 'isSafe'),
               publicNote: publicNote,
-              result: _result?.build());
+              classification: _classification?.build(),
+              characteristics: _characteristics?.build());
     } catch (_) {
       late String _$failedField;
       try {
-        _$failedField = 'result';
-        _result?.build();
+        _$failedField = 'classification';
+        _classification?.build();
+        _$failedField = 'characteristics';
+        _characteristics?.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'CreateOverwriteReviewRequest', _$failedField, e.toString());

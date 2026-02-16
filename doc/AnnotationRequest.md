@@ -9,8 +9,8 @@ import 'package:mosquito_alert/api.dart';
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **bestPhotoUuid** | **String** |  | [optional] 
-**classification** | [**AnnotationClassificationRequest**](AnnotationClassificationRequest.md) |  | 
-**characteristics** | [**AnnotationCharacteristicsRequest**](AnnotationCharacteristicsRequest.md) |  | [optional] 
+**classification** | [**SpeciesClassificationRequest**](SpeciesClassificationRequest.md) |  | 
+**characteristics** | [**SpeciesCharacteristicsRequest**](SpeciesCharacteristicsRequest.md) |  | [optional] 
 **feedback** | [**AnnotationFeedbackRequest**](AnnotationFeedbackRequest.md) |  | [optional] 
 **isFlagged** | **bool** |  | [optional] [default to false]
 **isDecisive** | **bool** |  | [optional] [default to false]

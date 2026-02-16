@@ -27,8 +27,13 @@ void main() {
       // TODO
     });
 
-    // AnnotationClassification classification
+    // SpeciesClassification classification
     test('to test the property `classification`', () async {
+      // TODO
+    });
+
+    // SpeciesCharacteristics characteristics
+    test('to test the property `characteristics`', () async {
       // TODO
     });
 

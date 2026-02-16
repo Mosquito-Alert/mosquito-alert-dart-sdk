@@ -12,12 +12,12 @@ void main() {
       // TODO
     });
 
-    // AnnotationClassificationRequest classification
+    // SpeciesClassificationRequest classification
     test('to test the property `classification`', () async {
       // TODO
     });
 
-    // AnnotationCharacteristicsRequest characteristics
+    // SpeciesCharacteristicsRequest characteristics
     test('to test the property `characteristics`', () async {
       // TODO
     });

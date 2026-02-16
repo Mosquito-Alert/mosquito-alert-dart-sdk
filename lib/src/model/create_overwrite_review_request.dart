@@ -4,7 +4,8 @@
 
 // ignore_for_file: unused_element
 import 'package:built_collection/built_collection.dart';
-import 'package:mosquito_alert/src/model/annotation_classification_request.dart';
+import 'package:mosquito_alert/src/model/species_characteristics_request.dart';
+import 'package:mosquito_alert/src/model/species_classification_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 
@@ -17,7 +18,8 @@ part 'create_overwrite_review_request.g.dart';
 /// * [publicPhotoUuid] 
 /// * [isSafe] - Indicates if the content is safe for publication.
 /// * [publicNote] 
-/// * [result] 
+/// * [classification] 
+/// * [characteristics] 
 @BuiltValue()
 abstract class CreateOverwriteReviewRequest implements Built<CreateOverwriteReviewRequest, CreateOverwriteReviewRequestBuilder> {
   @BuiltValueField(wireName: r'action')
@@ -34,8 +36,11 @@ abstract class CreateOverwriteReviewRequest implements Built<CreateOverwriteRevi
   @BuiltValueField(wireName: r'public_note')
   String? get publicNote;
 
-  @BuiltValueField(wireName: r'result')
-  AnnotationClassificationRequest? get result;
+  @BuiltValueField(wireName: r'classification')
+  SpeciesClassificationRequest? get classification;
+
+  @BuiltValueField(wireName: r'characteristics')
+  SpeciesCharacteristicsRequest? get characteristics;
 
   CreateOverwriteReviewRequest._();
 
@@ -83,11 +88,18 @@ class _$CreateOverwriteReviewRequestSerializer implements PrimitiveSerializer<Cr
       object.publicNote,
       specifiedType: const FullType.nullable(String),
     );
-    yield r'result';
-    yield object.result == null ? null : serializers.serialize(
-      object.result,
-      specifiedType: const FullType.nullable(AnnotationClassificationRequest),
+    yield r'classification';
+    yield object.classification == null ? null : serializers.serialize(
+      object.classification,
+      specifiedType: const FullType.nullable(SpeciesClassificationRequest),
     );
+    if (object.characteristics != null) {
+      yield r'characteristics';
+      yield serializers.serialize(
+        object.characteristics,
+        specifiedType: const FullType.nullable(SpeciesCharacteristicsRequest),
+      );
+    }
   }
 
   @override
@@ -140,13 +152,21 @@ class _$CreateOverwriteReviewRequestSerializer implements PrimitiveSerializer<Cr
           if (valueDes == null) continue;
           result.publicNote = valueDes;
           break;
-        case r'result':
+        case r'classification':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(AnnotationClassificationRequest),
-          ) as AnnotationClassificationRequest?;
+            specifiedType: const FullType.nullable(SpeciesClassificationRequest),
+          ) as SpeciesClassificationRequest?;
           if (valueDes == null) continue;
-          result.result.replace(valueDes);
+          result.classification.replace(valueDes);
+          break;
+        case r'characteristics':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(SpeciesCharacteristicsRequest),
+          ) as SpeciesCharacteristicsRequest?;
+          if (valueDes == null) continue;
+          result.characteristics.replace(valueDes);
           break;
         default:
           unhandled.add(key);

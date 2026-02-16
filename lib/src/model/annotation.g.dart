@@ -76,7 +76,9 @@ class _$Annotation extends Annotation {
   @override
   final SimplePhoto? bestPhoto;
   @override
-  final AnnotationClassification? classification;
+  final SpeciesClassification? classification;
+  @override
+  final SpeciesCharacteristics? characteristics;
   @override
   final AnnotationFeedback? feedback;
   @override
@@ -103,6 +105,7 @@ class _$Annotation extends Annotation {
       required this.user,
       this.bestPhoto,
       this.classification,
+      this.characteristics,
       this.feedback,
       required this.type,
       required this.isFlagged,
@@ -143,6 +146,7 @@ class _$Annotation extends Annotation {
         user == other.user &&
         bestPhoto == other.bestPhoto &&
         classification == other.classification &&
+        characteristics == other.characteristics &&
         feedback == other.feedback &&
         type == other.type &&
         isFlagged == other.isFlagged &&
@@ -161,6 +165,7 @@ class _$Annotation extends Annotation {
     _$hash = $jc(_$hash, user.hashCode);
     _$hash = $jc(_$hash, bestPhoto.hashCode);
     _$hash = $jc(_$hash, classification.hashCode);
+    _$hash = $jc(_$hash, characteristics.hashCode);
     _$hash = $jc(_$hash, feedback.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, isFlagged.hashCode);
@@ -181,6 +186,7 @@ class _$Annotation extends Annotation {
           ..add('user', user)
           ..add('bestPhoto', bestPhoto)
           ..add('classification', classification)
+          ..add('characteristics', characteristics)
           ..add('feedback', feedback)
           ..add('type', type)
           ..add('isFlagged', isFlagged)
@@ -215,11 +221,17 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
       _$this._bestPhoto ??= new SimplePhotoBuilder();
   set bestPhoto(SimplePhotoBuilder? bestPhoto) => _$this._bestPhoto = bestPhoto;
 
-  AnnotationClassificationBuilder? _classification;
-  AnnotationClassificationBuilder get classification =>
-      _$this._classification ??= new AnnotationClassificationBuilder();
-  set classification(AnnotationClassificationBuilder? classification) =>
+  SpeciesClassificationBuilder? _classification;
+  SpeciesClassificationBuilder get classification =>
+      _$this._classification ??= new SpeciesClassificationBuilder();
+  set classification(SpeciesClassificationBuilder? classification) =>
       _$this._classification = classification;
+
+  SpeciesCharacteristicsBuilder? _characteristics;
+  SpeciesCharacteristicsBuilder get characteristics =>
+      _$this._characteristics ??= new SpeciesCharacteristicsBuilder();
+  set characteristics(SpeciesCharacteristicsBuilder? characteristics) =>
+      _$this._characteristics = characteristics;
 
   AnnotationFeedbackBuilder? _feedback;
   AnnotationFeedbackBuilder get feedback =>
@@ -269,6 +281,7 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
       _user = $v.user.toBuilder();
       _bestPhoto = $v.bestPhoto?.toBuilder();
       _classification = $v.classification?.toBuilder();
+      _characteristics = $v.characteristics?.toBuilder();
       _feedback = $v.feedback?.toBuilder();
       _type = $v.type;
       _isFlagged = $v.isFlagged;
@@ -308,6 +321,7 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
               user: user.build(),
               bestPhoto: _bestPhoto?.build(),
               classification: _classification?.build(),
+              characteristics: _characteristics?.build(),
               feedback: _feedback?.build(),
               type: BuiltValueNullFieldError.checkNotNull(
                   type, r'Annotation', 'type'),
@@ -330,6 +344,8 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
         _bestPhoto?.build();
         _$failedField = 'classification';
         _classification?.build();
+        _$failedField = 'characteristics';
+        _characteristics?.build();
         _$failedField = 'feedback';
         _feedback?.build();
 

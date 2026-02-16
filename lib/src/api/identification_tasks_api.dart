@@ -150,6 +150,9 @@ class IdentificationTasksApi {
   ///
   /// Parameters:
   /// * [observationUuid] - UUID of the Observation
+  /// * [characteristicsIsBloodFed] 
+  /// * [characteristicsIsGravid] 
+  /// * [characteristicsSex] 
   /// * [classificationConfidenceLabel] 
   /// * [classificationConfidenceMax] 
   /// * [classificationConfidenceMin] 
@@ -178,6 +181,9 @@ class IdentificationTasksApi {
   /// Throws [DioException] if API call or serialization fails
   Future<Response<PaginatedAnnotationList>> annotationsList({ 
     required String observationUuid,
+    bool? characteristicsIsBloodFed,
+    bool? characteristicsIsGravid,
+    String? characteristicsSex,
     String? classificationConfidenceLabel,
     double? classificationConfidenceMax,
     double? classificationConfidenceMin,
@@ -232,6 +238,9 @@ class IdentificationTasksApi {
     );
 
     final _queryParameters = <String, dynamic>{
+      if (characteristicsIsBloodFed != null) r'characteristics_is_blood_fed': encodeQueryParameter(_serializers, characteristicsIsBloodFed, const FullType(bool)),
+      if (characteristicsIsGravid != null) r'characteristics_is_gravid': encodeQueryParameter(_serializers, characteristicsIsGravid, const FullType(bool)),
+      r'characteristics_sex': encodeQueryParameter(_serializers, characteristicsSex, const FullType(String)),
       if (classificationConfidenceLabel != null) r'classification_confidence_label': encodeQueryParameter(_serializers, classificationConfidenceLabel, const FullType(String)),
       if (classificationConfidenceMax != null) r'classification_confidence_max': encodeQueryParameter(_serializers, classificationConfidenceMax, const FullType(double)),
       if (classificationConfidenceMin != null) r'classification_confidence_min': encodeQueryParameter(_serializers, classificationConfidenceMin, const FullType(double)),
@@ -295,6 +304,9 @@ class IdentificationTasksApi {
   /// Get my annotations
   ///
   /// Parameters:
+  /// * [characteristicsIsBloodFed] 
+  /// * [characteristicsIsGravid] 
+  /// * [characteristicsSex] 
   /// * [classificationConfidenceLabel] 
   /// * [classificationConfidenceMax] 
   /// * [classificationConfidenceMin] 
@@ -322,6 +334,9 @@ class IdentificationTasksApi {
   /// Returns a [Future] containing a [Response] with a [PaginatedAnnotationList] as data
   /// Throws [DioException] if API call or serialization fails
   Future<Response<PaginatedAnnotationList>> annotationsListMine({ 
+    bool? characteristicsIsBloodFed,
+    bool? characteristicsIsGravid,
+    String? characteristicsSex,
     String? classificationConfidenceLabel,
     double? classificationConfidenceMax,
     double? classificationConfidenceMin,
@@ -376,6 +391,9 @@ class IdentificationTasksApi {
     );
 
     final _queryParameters = <String, dynamic>{
+      if (characteristicsIsBloodFed != null) r'characteristics_is_blood_fed': encodeQueryParameter(_serializers, characteristicsIsBloodFed, const FullType(bool)),
+      if (characteristicsIsGravid != null) r'characteristics_is_gravid': encodeQueryParameter(_serializers, characteristicsIsGravid, const FullType(bool)),
+      r'characteristics_sex': encodeQueryParameter(_serializers, characteristicsSex, const FullType(String)),
       if (classificationConfidenceLabel != null) r'classification_confidence_label': encodeQueryParameter(_serializers, classificationConfidenceLabel, const FullType(String)),
       if (classificationConfidenceMax != null) r'classification_confidence_max': encodeQueryParameter(_serializers, classificationConfidenceMax, const FullType(double)),
       if (classificationConfidenceMin != null) r'classification_confidence_min': encodeQueryParameter(_serializers, classificationConfidenceMin, const FullType(double)),
@@ -636,6 +654,9 @@ class IdentificationTasksApi {
   /// * [pageSize] - Número de resultados a devolver por página.
   /// * [resultAgreementMax] 
   /// * [resultAgreementMin] 
+  /// * [resultCharacteristicsIsBloodFed] 
+  /// * [resultCharacteristicsIsGravid] 
+  /// * [resultCharacteristicsSex] 
   /// * [resultConfidenceMax] 
   /// * [resultConfidenceMin] 
   /// * [resultSource] 
@@ -672,6 +693,9 @@ class IdentificationTasksApi {
     int? pageSize,
     double? resultAgreementMax,
     double? resultAgreementMin,
+    bool? resultCharacteristicsIsBloodFed,
+    bool? resultCharacteristicsIsGravid,
+    String? resultCharacteristicsSex,
     double? resultConfidenceMax,
     double? resultConfidenceMin,
     BuiltList<String>? resultSource,
@@ -735,6 +759,9 @@ class IdentificationTasksApi {
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       if (resultAgreementMax != null) r'result_agreement_max': encodeQueryParameter(_serializers, resultAgreementMax, const FullType(double)),
       if (resultAgreementMin != null) r'result_agreement_min': encodeQueryParameter(_serializers, resultAgreementMin, const FullType(double)),
+      if (resultCharacteristicsIsBloodFed != null) r'result_characteristics_is_blood_fed': encodeQueryParameter(_serializers, resultCharacteristicsIsBloodFed, const FullType(bool)),
+      if (resultCharacteristicsIsGravid != null) r'result_characteristics_is_gravid': encodeQueryParameter(_serializers, resultCharacteristicsIsGravid, const FullType(bool)),
+      r'result_characteristics_sex': encodeQueryParameter(_serializers, resultCharacteristicsSex, const FullType(String)),
       if (resultConfidenceMax != null) r'result_confidence_max': encodeQueryParameter(_serializers, resultConfidenceMax, const FullType(double)),
       if (resultConfidenceMin != null) r'result_confidence_min': encodeQueryParameter(_serializers, resultConfidenceMin, const FullType(double)),
       if (resultSource != null) r'result_source': encodeCollectionQueryParameter<String>(_serializers, resultSource, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
@@ -807,6 +834,9 @@ class IdentificationTasksApi {
   /// * [pageSize] - Número de resultados a devolver por página.
   /// * [resultAgreementMax] 
   /// * [resultAgreementMin] 
+  /// * [resultCharacteristicsIsBloodFed] 
+  /// * [resultCharacteristicsIsGravid] 
+  /// * [resultCharacteristicsSex] 
   /// * [resultConfidenceMax] 
   /// * [resultConfidenceMin] 
   /// * [resultSource] 
@@ -843,6 +873,9 @@ class IdentificationTasksApi {
     int? pageSize,
     double? resultAgreementMax,
     double? resultAgreementMin,
+    bool? resultCharacteristicsIsBloodFed,
+    bool? resultCharacteristicsIsGravid,
+    String? resultCharacteristicsSex,
     double? resultConfidenceMax,
     double? resultConfidenceMin,
     BuiltList<String>? resultSource,
@@ -906,6 +939,9 @@ class IdentificationTasksApi {
       if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       if (resultAgreementMax != null) r'result_agreement_max': encodeQueryParameter(_serializers, resultAgreementMax, const FullType(double)),
       if (resultAgreementMin != null) r'result_agreement_min': encodeQueryParameter(_serializers, resultAgreementMin, const FullType(double)),
+      if (resultCharacteristicsIsBloodFed != null) r'result_characteristics_is_blood_fed': encodeQueryParameter(_serializers, resultCharacteristicsIsBloodFed, const FullType(bool)),
+      if (resultCharacteristicsIsGravid != null) r'result_characteristics_is_gravid': encodeQueryParameter(_serializers, resultCharacteristicsIsGravid, const FullType(bool)),
+      r'result_characteristics_sex': encodeQueryParameter(_serializers, resultCharacteristicsSex, const FullType(String)),
       if (resultConfidenceMax != null) r'result_confidence_max': encodeQueryParameter(_serializers, resultConfidenceMax, const FullType(double)),
       if (resultConfidenceMin != null) r'result_confidence_min': encodeQueryParameter(_serializers, resultConfidenceMin, const FullType(double)),
       if (resultSource != null) r'result_source': encodeCollectionQueryParameter<String>(_serializers, resultSource, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),

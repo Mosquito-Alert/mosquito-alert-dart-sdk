@@ -19,7 +19,8 @@ part 'meta_create_identification_task_review_request.g.dart';
 /// * [publicPhotoUuid] 
 /// * [isSafe] - Indicates if the content is safe for publication.
 /// * [publicNote] 
-/// * [result] 
+/// * [classification] 
+/// * [characteristics] 
 @BuiltValue()
 abstract class MetaCreateIdentificationTaskReviewRequest implements Built<MetaCreateIdentificationTaskReviewRequest, MetaCreateIdentificationTaskReviewRequestBuilder> {
   /// One Of [CreateAgreeReviewRequest], [CreateOverwriteReviewRequest]

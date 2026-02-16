@@ -10,9 +10,9 @@ class _$AnnotationRequest extends AnnotationRequest {
   @override
   final String? bestPhotoUuid;
   @override
-  final AnnotationClassificationRequest? classification;
+  final SpeciesClassificationRequest? classification;
   @override
-  final AnnotationCharacteristicsRequest? characteristics;
+  final SpeciesCharacteristicsRequest? characteristics;
   @override
   final AnnotationFeedbackRequest? feedback;
   @override
@@ -100,17 +100,16 @@ class AnnotationRequestBuilder
   set bestPhotoUuid(String? bestPhotoUuid) =>
       _$this._bestPhotoUuid = bestPhotoUuid;
 
-  AnnotationClassificationRequestBuilder? _classification;
-  AnnotationClassificationRequestBuilder get classification =>
-      _$this._classification ??= new AnnotationClassificationRequestBuilder();
-  set classification(AnnotationClassificationRequestBuilder? classification) =>
+  SpeciesClassificationRequestBuilder? _classification;
+  SpeciesClassificationRequestBuilder get classification =>
+      _$this._classification ??= new SpeciesClassificationRequestBuilder();
+  set classification(SpeciesClassificationRequestBuilder? classification) =>
       _$this._classification = classification;
 
-  AnnotationCharacteristicsRequestBuilder? _characteristics;
-  AnnotationCharacteristicsRequestBuilder get characteristics =>
-      _$this._characteristics ??= new AnnotationCharacteristicsRequestBuilder();
-  set characteristics(
-          AnnotationCharacteristicsRequestBuilder? characteristics) =>
+  SpeciesCharacteristicsRequestBuilder? _characteristics;
+  SpeciesCharacteristicsRequestBuilder get characteristics =>
+      _$this._characteristics ??= new SpeciesCharacteristicsRequestBuilder();
+  set characteristics(SpeciesCharacteristicsRequestBuilder? characteristics) =>
       _$this._characteristics = characteristics;
 
   AnnotationFeedbackRequestBuilder? _feedback;

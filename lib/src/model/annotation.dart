@@ -3,7 +3,8 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/annotation_classification.dart';
+import 'package:mosquito_alert/src/model/species_classification.dart';
+import 'package:mosquito_alert/src/model/species_characteristics.dart';
 import 'package:mosquito_alert/src/model/observation_flags.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
@@ -22,6 +23,7 @@ part 'annotation.g.dart';
 /// * [user] 
 /// * [bestPhoto] 
 /// * [classification] 
+/// * [characteristics] 
 /// * [feedback] 
 /// * [type] 
 /// * [isFlagged] 
@@ -45,7 +47,10 @@ abstract class Annotation implements Built<Annotation, AnnotationBuilder> {
   SimplePhoto? get bestPhoto;
 
   @BuiltValueField(wireName: r'classification')
-  AnnotationClassification? get classification;
+  SpeciesClassification? get classification;
+
+  @BuiltValueField(wireName: r'characteristics')
+  SpeciesCharacteristics? get characteristics;
 
   @BuiltValueField(wireName: r'feedback')
   AnnotationFeedback? get feedback;
@@ -120,8 +125,15 @@ class _$AnnotationSerializer implements PrimitiveSerializer<Annotation> {
     yield r'classification';
     yield object.classification == null ? null : serializers.serialize(
       object.classification,
-      specifiedType: const FullType.nullable(AnnotationClassification),
+      specifiedType: const FullType.nullable(SpeciesClassification),
     );
+    if (object.characteristics != null) {
+      yield r'characteristics';
+      yield serializers.serialize(
+        object.characteristics,
+        specifiedType: const FullType.nullable(SpeciesCharacteristics),
+      );
+    }
     if (object.feedback != null) {
       yield r'feedback';
       yield serializers.serialize(
@@ -223,10 +235,18 @@ class _$AnnotationSerializer implements PrimitiveSerializer<Annotation> {
         case r'classification':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType.nullable(AnnotationClassification),
-          ) as AnnotationClassification?;
+            specifiedType: const FullType.nullable(SpeciesClassification),
+          ) as SpeciesClassification?;
           if (valueDes == null) continue;
           result.classification.replace(valueDes);
+          break;
+        case r'characteristics':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(SpeciesCharacteristics),
+          ) as SpeciesCharacteristics?;
+          if (valueDes == null) continue;
+          result.characteristics.replace(valueDes);
           break;
         case r'feedback':
           final valueDes = serializers.deserialize(

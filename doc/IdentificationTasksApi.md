@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsList**
-> PaginatedAnnotationList annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
+> PaginatedAnnotationList annotationsList(observationUuid, characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -96,6 +96,9 @@ import 'package:mosquito_alert/api.dart';
 
 final api = MosquitoAlert().getIdentificationTasksApi();
 final String observationUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | UUID of the Observation
+final bool characteristicsIsBloodFed = true; // bool | 
+final bool characteristicsIsGravid = true; // bool | 
+final String characteristicsSex = characteristicsSex_example; // String | 
 final String classificationConfidenceLabel = classificationConfidenceLabel_example; // String | 
 final double classificationConfidenceMax = 1.2; // double | 
 final double classificationConfidenceMin = 1.2; // double | 
@@ -115,7 +118,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsList(observationUuid, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
+    final response = api.annotationsList(observationUuid, characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->annotationsList: $e\n');
@@ -127,6 +130,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **observationUuid** | **String**| UUID of the Observation | 
+ **characteristicsIsBloodFed** | **bool**|  | [optional] 
+ **characteristicsIsGravid** | **bool**|  | [optional] 
+ **characteristicsSex** | **String**|  | [optional] 
  **classificationConfidenceLabel** | **String**|  | [optional] 
  **classificationConfidenceMax** | **double**|  | [optional] 
  **classificationConfidenceMin** | **double**|  | [optional] 
@@ -161,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsListMine**
-> PaginatedAnnotationList annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
+> PaginatedAnnotationList annotationsListMine(characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -180,6 +186,9 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getIdentificationTasksApi();
+final bool characteristicsIsBloodFed = true; // bool | 
+final bool characteristicsIsGravid = true; // bool | 
+final String characteristicsSex = characteristicsSex_example; // String | 
 final String classificationConfidenceLabel = classificationConfidenceLabel_example; // String | 
 final double classificationConfidenceMax = 1.2; // double | 
 final double classificationConfidenceMin = 1.2; // double | 
@@ -199,7 +208,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsListMine(classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
+    final response = api.annotationsListMine(characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->annotationsListMine: $e\n');
@@ -210,6 +219,9 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **characteristicsIsBloodFed** | **bool**|  | [optional] 
+ **characteristicsIsGravid** | **bool**|  | [optional] 
+ **characteristicsSex** | **String**|  | [optional] 
  **classificationConfidenceLabel** | **String**|  | [optional] 
  **classificationConfidenceMax** | **double**|  | [optional] 
  **classificationConfidenceMin** | **double**|  | [optional] 
@@ -342,7 +354,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
-> PaginatedIdentificationTaskList list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore)
+> PaginatedIdentificationTaskList list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultCharacteristicsIsBloodFed, resultCharacteristicsIsGravid, resultCharacteristicsSex, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore)
 
 
 
@@ -374,6 +386,9 @@ final int page = 56; // int | Un número de página dentro del conjunto de resul
 final int pageSize = 56; // int | Número de resultados a devolver por página.
 final double resultAgreementMax = 1.2; // double | 
 final double resultAgreementMin = 1.2; // double | 
+final bool resultCharacteristicsIsBloodFed = true; // bool | 
+final bool resultCharacteristicsIsGravid = true; // bool | 
+final String resultCharacteristicsSex = resultCharacteristicsSex_example; // String | 
 final double resultConfidenceMax = resultConfidenceMax_example; // double | 
 final double resultConfidenceMin = resultConfidenceMin_example; // double | 
 final BuiltList<String> resultSource = ; // BuiltList<String> | 
@@ -387,7 +402,7 @@ final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update 
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 
 try {
-    final response = api.list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore);
+    final response = api.list(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultCharacteristicsIsBloodFed, resultCharacteristicsIsGravid, resultCharacteristicsSex, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore);
     print(response);
 } on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->list: $e\n');
@@ -413,6 +428,9 @@ Name | Type | Description  | Notes
  **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
  **resultAgreementMax** | **double**|  | [optional] 
  **resultAgreementMin** | **double**|  | [optional] 
+ **resultCharacteristicsIsBloodFed** | **bool**|  | [optional] 
+ **resultCharacteristicsIsGravid** | **bool**|  | [optional] 
+ **resultCharacteristicsSex** | **String**|  | [optional] 
  **resultConfidenceMax** | **double**|  | [optional] 
  **resultConfidenceMin** | **double**|  | [optional] 
  **resultSource** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
@@ -441,7 +459,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **listMine**
-> PaginatedIdentificationTaskList listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore)
+> PaginatedIdentificationTaskList listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultCharacteristicsIsBloodFed, resultCharacteristicsIsGravid, resultCharacteristicsSex, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore)
 
 
 
@@ -475,6 +493,9 @@ final int page = 56; // int | Un número de página dentro del conjunto de resul
 final int pageSize = 56; // int | Número de resultados a devolver por página.
 final double resultAgreementMax = 1.2; // double | 
 final double resultAgreementMin = 1.2; // double | 
+final bool resultCharacteristicsIsBloodFed = true; // bool | 
+final bool resultCharacteristicsIsGravid = true; // bool | 
+final String resultCharacteristicsSex = resultCharacteristicsSex_example; // String | 
 final double resultConfidenceMax = resultConfidenceMax_example; // double | 
 final double resultConfidenceMin = resultConfidenceMin_example; // double | 
 final BuiltList<String> resultSource = ; // BuiltList<String> | 
@@ -488,7 +509,7 @@ final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update 
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 
 try {
-    final response = api.listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore);
+    final response = api.listMine(annotatorIds, assigneeIds, createdAtAfter, createdAtBefore, fullyPredicted, isFlagged, isSafe, numAnnotationsMax, numAnnotationsMin, observationCountryIds, orderBy, page, pageSize, resultAgreementMax, resultAgreementMin, resultCharacteristicsIsBloodFed, resultCharacteristicsIsGravid, resultCharacteristicsSex, resultConfidenceMax, resultConfidenceMin, resultSource, resultTaxonIds, resultUncertaintyMax, resultUncertaintyMin, reviewAction, search, status, updatedAtAfter, updatedAtBefore);
     print(response);
 } on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->listMine: $e\n');
@@ -514,6 +535,9 @@ Name | Type | Description  | Notes
  **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
  **resultAgreementMax** | **double**|  | [optional] 
  **resultAgreementMin** | **double**|  | [optional] 
+ **resultCharacteristicsIsBloodFed** | **bool**|  | [optional] 
+ **resultCharacteristicsIsGravid** | **bool**|  | [optional] 
+ **resultCharacteristicsSex** | **String**|  | [optional] 
  **resultConfidenceMax** | **double**|  | [optional] 
  **resultConfidenceMin** | **double**|  | [optional] 
  **resultSource** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 

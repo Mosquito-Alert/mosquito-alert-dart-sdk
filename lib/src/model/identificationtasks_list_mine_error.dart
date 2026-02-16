@@ -18,6 +18,7 @@ import 'package:mosquito_alert/src/model/identificationtasks_list_mine_result_co
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_list_mine_result_uncertainty_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_list_mine_result_characteristics_sex_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';
@@ -32,7 +33,7 @@ part 'identificationtasks_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class IdentificationtasksListMineError implements Built<IdentificationtasksListMineError, IdentificationtasksListMineErrorBuilder> {
-  /// One Of [IdentificationtasksListMineAnnotatorIdsErrorComponent], [IdentificationtasksListMineAssigneeIdsErrorComponent], [IdentificationtasksListMineCreatedAtErrorComponent], [IdentificationtasksListMineNumAnnotationsErrorComponent], [IdentificationtasksListMineObservationCountryIdsErrorComponent], [IdentificationtasksListMineOrderByErrorComponent], [IdentificationtasksListMineResultAgreementErrorComponent], [IdentificationtasksListMineResultConfidenceErrorComponent], [IdentificationtasksListMineResultSourceErrorComponent], [IdentificationtasksListMineResultTaxonIdsErrorComponent], [IdentificationtasksListMineResultUncertaintyErrorComponent], [IdentificationtasksListMineReviewActionErrorComponent], [IdentificationtasksListMineStatusErrorComponent], [IdentificationtasksListMineUpdatedAtErrorComponent]
+  /// One Of [IdentificationtasksListMineAnnotatorIdsErrorComponent], [IdentificationtasksListMineAssigneeIdsErrorComponent], [IdentificationtasksListMineCreatedAtErrorComponent], [IdentificationtasksListMineNumAnnotationsErrorComponent], [IdentificationtasksListMineObservationCountryIdsErrorComponent], [IdentificationtasksListMineOrderByErrorComponent], [IdentificationtasksListMineResultAgreementErrorComponent], [IdentificationtasksListMineResultCharacteristicsSexErrorComponent], [IdentificationtasksListMineResultConfidenceErrorComponent], [IdentificationtasksListMineResultSourceErrorComponent], [IdentificationtasksListMineResultTaxonIdsErrorComponent], [IdentificationtasksListMineResultUncertaintyErrorComponent], [IdentificationtasksListMineReviewActionErrorComponent], [IdentificationtasksListMineStatusErrorComponent], [IdentificationtasksListMineUpdatedAtErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -45,6 +46,7 @@ abstract class IdentificationtasksListMineError implements Built<Identificationt
     r'observation_country_ids': IdentificationtasksListMineObservationCountryIdsErrorComponent,
     r'order_by': IdentificationtasksListMineOrderByErrorComponent,
     r'result_agreement': IdentificationtasksListMineResultAgreementErrorComponent,
+    r'result_characteristics_sex': IdentificationtasksListMineResultCharacteristicsSexErrorComponent,
     r'result_confidence': IdentificationtasksListMineResultConfidenceErrorComponent,
     r'result_source': IdentificationtasksListMineResultSourceErrorComponent,
     r'result_taxon_ids': IdentificationtasksListMineResultTaxonIdsErrorComponent,
@@ -87,6 +89,9 @@ extension IdentificationtasksListMineErrorDiscriminatorExt on Identificationtask
         }
         if (this is IdentificationtasksListMineResultAgreementErrorComponent) {
             return r'result_agreement';
+        }
+        if (this is IdentificationtasksListMineResultCharacteristicsSexErrorComponent) {
+            return r'result_characteristics_sex';
         }
         if (this is IdentificationtasksListMineResultConfidenceErrorComponent) {
             return r'result_confidence';
@@ -134,6 +139,9 @@ extension IdentificationtasksListMineErrorBuilderDiscriminatorExt on Identificat
         }
         if (this is IdentificationtasksListMineResultAgreementErrorComponentBuilder) {
             return r'result_agreement';
+        }
+        if (this is IdentificationtasksListMineResultCharacteristicsSexErrorComponentBuilder) {
+            return r'result_characteristics_sex';
         }
         if (this is IdentificationtasksListMineResultConfidenceErrorComponentBuilder) {
             return r'result_confidence';
@@ -196,7 +204,7 @@ class _$IdentificationtasksListMineErrorSerializer implements PrimitiveSerialize
     final discIndex = serializedList.indexOf(IdentificationtasksListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [IdentificationtasksListMineAnnotatorIdsErrorComponent, IdentificationtasksListMineAssigneeIdsErrorComponent, IdentificationtasksListMineCreatedAtErrorComponent, IdentificationtasksListMineNumAnnotationsErrorComponent, IdentificationtasksListMineObservationCountryIdsErrorComponent, IdentificationtasksListMineOrderByErrorComponent, IdentificationtasksListMineResultAgreementErrorComponent, IdentificationtasksListMineResultConfidenceErrorComponent, IdentificationtasksListMineResultSourceErrorComponent, IdentificationtasksListMineResultTaxonIdsErrorComponent, IdentificationtasksListMineResultUncertaintyErrorComponent, IdentificationtasksListMineReviewActionErrorComponent, IdentificationtasksListMineStatusErrorComponent, IdentificationtasksListMineUpdatedAtErrorComponent, ];
+    final oneOfTypes = [IdentificationtasksListMineAnnotatorIdsErrorComponent, IdentificationtasksListMineAssigneeIdsErrorComponent, IdentificationtasksListMineCreatedAtErrorComponent, IdentificationtasksListMineNumAnnotationsErrorComponent, IdentificationtasksListMineObservationCountryIdsErrorComponent, IdentificationtasksListMineOrderByErrorComponent, IdentificationtasksListMineResultAgreementErrorComponent, IdentificationtasksListMineResultCharacteristicsSexErrorComponent, IdentificationtasksListMineResultConfidenceErrorComponent, IdentificationtasksListMineResultSourceErrorComponent, IdentificationtasksListMineResultTaxonIdsErrorComponent, IdentificationtasksListMineResultUncertaintyErrorComponent, IdentificationtasksListMineReviewActionErrorComponent, IdentificationtasksListMineStatusErrorComponent, IdentificationtasksListMineUpdatedAtErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -248,6 +256,13 @@ class _$IdentificationtasksListMineErrorSerializer implements PrimitiveSerialize
           specifiedType: FullType(IdentificationtasksListMineResultAgreementErrorComponent),
         ) as IdentificationtasksListMineResultAgreementErrorComponent;
         oneOfType = IdentificationtasksListMineResultAgreementErrorComponent;
+        break;
+      case r'result_characteristics_sex':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksListMineResultCharacteristicsSexErrorComponent),
+        ) as IdentificationtasksListMineResultCharacteristicsSexErrorComponent;
+        oneOfType = IdentificationtasksListMineResultCharacteristicsSexErrorComponent;
         break;
       case r'result_confidence':
         oneOfResult = serializers.deserialize(

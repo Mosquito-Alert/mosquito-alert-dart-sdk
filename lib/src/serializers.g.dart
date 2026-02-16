@@ -10,14 +10,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AdmBoundary.serializer)
       ..add(AdmBoundaryRequest.serializer)
       ..add(Annotation.serializer)
-      ..add(AnnotationCharacteristics.serializer)
-      ..add(AnnotationCharacteristicsRequest.serializer)
-      ..add(AnnotationCharacteristicsRequestSexEnum.serializer)
-      ..add(AnnotationCharacteristicsSexEnum.serializer)
-      ..add(AnnotationClassification.serializer)
-      ..add(AnnotationClassificationConfidenceLabelEnum.serializer)
-      ..add(AnnotationClassificationRequest.serializer)
-      ..add(AnnotationClassificationRequestConfidenceLabelEnum.serializer)
       ..add(AnnotationFeedback.serializer)
       ..add(AnnotationFeedbackRequest.serializer)
       ..add(AnnotationPermission.serializer)
@@ -838,6 +830,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(IdentificationtasksAnnotationsCreateValidationError.serializer)
       ..add(IdentificationtasksAnnotationsCreateValidationErrorTypeEnum
           .serializer)
+      ..add(IdentificationtasksAnnotationsListCharacteristicsSexErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListCharacteristicsSexErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListCharacteristicsSexErrorComponentCodeEnum
+              .serializer)
       ..add(
           IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent
               .serializer)
@@ -872,6 +872,15 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(IdentificationtasksAnnotationsListCreatedAtErrorComponentCodeEnum
           .serializer)
       ..add(IdentificationtasksAnnotationsListError.serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnum
+              .serializer)
       ..add(
           IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent
               .serializer)
@@ -1009,6 +1018,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(IdentificationtasksListMineResultAgreementErrorComponentCodeEnum
           .serializer)
+      ..add(IdentificationtasksListMineResultCharacteristicsSexErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksListMineResultCharacteristicsSexErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksListMineResultCharacteristicsSexErrorComponentCodeEnum
+              .serializer)
       ..add(
           IdentificationtasksListMineResultConfidenceErrorComponent.serializer)
       ..add(IdentificationtasksListMineResultConfidenceErrorComponentAttrEnum
@@ -1065,6 +1082,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(IdentificationtasksListResultAgreementErrorComponentCodeEnum
           .serializer)
+      ..add(IdentificationtasksListResultCharacteristicsSexErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksListResultCharacteristicsSexErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksListResultCharacteristicsSexErrorComponentCodeEnum
+              .serializer)
       ..add(IdentificationtasksListResultConfidenceErrorComponent.serializer)
       ..add(IdentificationtasksListResultConfidenceErrorComponentAttrEnum
           .serializer)
@@ -1623,6 +1648,66 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(IdentificationtasksReviewCreateActionErrorComponentCodeEnum
           .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksReviewCreateCharacteristicsSexErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnum
+              .serializer)
       ..add(IdentificationtasksReviewCreateError.serializer)
       ..add(IdentificationtasksReviewCreateIsSafeErrorComponent.serializer)
       ..add(IdentificationtasksReviewCreateIsSafeErrorComponentAttrEnum
@@ -1645,28 +1730,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum
           .serializer)
       ..add(IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnum
-          .serializer)
-      ..add(IdentificationtasksReviewCreateResultConfidenceLabelErrorComponent
-          .serializer)
-      ..add(
-          IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentAttrEnum
-              .serializer)
-      ..add(
-          IdentificationtasksReviewCreateResultConfidenceLabelErrorComponentCodeEnum
-              .serializer)
-      ..add(IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponent
-          .serializer)
-      ..add(
-          IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentAttrEnum
-              .serializer)
-      ..add(
-          IdentificationtasksReviewCreateResultNonFieldErrorsErrorComponentCodeEnum
-              .serializer)
-      ..add(
-          IdentificationtasksReviewCreateResultTaxonIdErrorComponent.serializer)
-      ..add(IdentificationtasksReviewCreateResultTaxonIdErrorComponentAttrEnum
-          .serializer)
-      ..add(IdentificationtasksReviewCreateResultTaxonIdErrorComponentCodeEnum
           .serializer)
       ..add(IdentificationtasksReviewCreateValidationError.serializer)
       ..add(IdentificationtasksReviewCreateValidationErrorTypeEnum.serializer)
@@ -2413,6 +2476,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SimplifiedLocation.serializer)
       ..add(SimplifiedLocationTimezoneEnum.serializer)
       ..add(SimplifiedObservationWithPhotos.serializer)
+      ..add(SpeciesCharacteristics.serializer)
+      ..add(SpeciesCharacteristicsRequest.serializer)
+      ..add(SpeciesCharacteristicsRequestSexEnum.serializer)
+      ..add(SpeciesCharacteristicsSexEnum.serializer)
+      ..add(SpeciesClassification.serializer)
+      ..add(SpeciesClassificationConfidenceLabelEnum.serializer)
+      ..add(SpeciesClassificationRequest.serializer)
+      ..add(SpeciesClassificationRequestConfidenceLabelEnum.serializer)
       ..add(TaxaListRankErrorComponent.serializer)
       ..add(TaxaListRankErrorComponentAttrEnum.serializer)
       ..add(TaxaListRankErrorComponentCodeEnum.serializer)

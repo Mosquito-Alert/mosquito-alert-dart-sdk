@@ -23,7 +23,7 @@ abstract class IdentificationtasksAnnotationsCreateCharacteristicsSexErrorCompon
 
   @BuiltValueField(wireName: r'code')
   IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid_choice,  };
+  // enum codeEnum {  invalid_choice,  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -158,6 +158,10 @@ class IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEn
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum invalidChoice = _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'null')
+  static const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum null_ = _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'required')
+  static const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum required_ = _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum unknownDefaultOpenApi = _$identificationtasksAnnotationsCreateCharacteristicsSexErrorComponentCodeEnum_unknownDefaultOpenApi;
 
