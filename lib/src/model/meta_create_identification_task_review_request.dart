@@ -17,8 +17,8 @@ part 'meta_create_identification_task_review_request.g.dart';
 /// Properties:
 /// * [action] 
 /// * [publicPhotoUuid] 
-/// * [isSafe] - Indicates if the content is safe for publication.
-/// * [publicNote] 
+/// * [isSafe] 
+/// * [publicNote] - Notes to display on public map
 /// * [classification] 
 /// * [characteristics] 
 @BuiltValue()

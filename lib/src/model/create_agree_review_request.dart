@@ -16,7 +16,7 @@ part 'create_agree_review_request.g.dart';
 @BuiltValue()
 abstract class CreateAgreeReviewRequest implements Built<CreateAgreeReviewRequest, CreateAgreeReviewRequestBuilder> {
   @BuiltValueField(wireName: r'action')
-  CreateAgreeReviewRequestActionEnum? get action;
+  CreateAgreeReviewRequestActionEnum get action;
   // enum actionEnum {  agree,  };
 
   CreateAgreeReviewRequest._();
@@ -24,8 +24,7 @@ abstract class CreateAgreeReviewRequest implements Built<CreateAgreeReviewReques
   factory CreateAgreeReviewRequest([void updates(CreateAgreeReviewRequestBuilder b)]) = _$CreateAgreeReviewRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(CreateAgreeReviewRequestBuilder b) => b
-      ..action = CreateAgreeReviewRequestActionEnum.valueOf('agree');
+  static void _defaults(CreateAgreeReviewRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<CreateAgreeReviewRequest> get serializer => _$CreateAgreeReviewRequestSerializer();
@@ -43,13 +42,11 @@ class _$CreateAgreeReviewRequestSerializer implements PrimitiveSerializer<Create
     CreateAgreeReviewRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.action != null) {
-      yield r'action';
-      yield serializers.serialize(
-        object.action,
-        specifiedType: const FullType(CreateAgreeReviewRequestActionEnum),
-      );
-    }
+    yield r'action';
+    yield serializers.serialize(
+      object.action,
+      specifiedType: const FullType(CreateAgreeReviewRequestActionEnum),
+    );
   }
 
   @override

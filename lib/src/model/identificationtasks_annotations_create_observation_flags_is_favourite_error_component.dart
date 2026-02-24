@@ -23,7 +23,7 @@ abstract class IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteEr
 
   @BuiltValueField(wireName: r'code')
   IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum get code;
-  // enum codeEnum {  null,  };
+  // enum codeEnum {  invalid,  null,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -156,6 +156,8 @@ class IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorCompon
 
 class IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum extends EnumClass {
 
+  @BuiltValueEnumConst(wireName: r'invalid')
+  static const IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum invalid = _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum null_ = _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)

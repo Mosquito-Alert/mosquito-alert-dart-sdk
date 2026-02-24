@@ -8,10 +8,10 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**action** | **String** |  | [optional] [default to 'overwrite']
+**action** | **String** |  | 
 **publicPhotoUuid** | **String** |  | 
-**isSafe** | **bool** | Indicates if the content is safe for publication. | 
-**publicNote** | **String** |  | 
+**isSafe** | **bool** |  | 
+**publicNote** | **String** | Notes to display on public map | 
 **classification** | [**SpeciesClassificationRequest**](SpeciesClassificationRequest.md) |  | 
 **characteristics** | [**SpeciesCharacteristicsRequest**](SpeciesCharacteristicsRequest.md) |  | [optional] 
 

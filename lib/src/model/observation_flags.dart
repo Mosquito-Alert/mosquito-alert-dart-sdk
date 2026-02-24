@@ -16,7 +16,7 @@ part 'observation_flags.g.dart';
 @BuiltValue()
 abstract class ObservationFlags implements Built<ObservationFlags, ObservationFlagsBuilder> {
   @BuiltValueField(wireName: r'is_favourite')
-  bool get isFavourite;
+  bool? get isFavourite;
 
   @BuiltValueField(wireName: r'is_visible')
   bool get isVisible;
@@ -46,11 +46,13 @@ class _$ObservationFlagsSerializer implements PrimitiveSerializer<ObservationFla
     ObservationFlags object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'is_favourite';
-    yield serializers.serialize(
-      object.isFavourite,
-      specifiedType: const FullType(bool),
-    );
+    if (object.isFavourite != null) {
+      yield r'is_favourite';
+      yield serializers.serialize(
+        object.isFavourite,
+        specifiedType: const FullType(bool),
+      );
+    }
     yield r'is_visible';
     yield serializers.serialize(
       object.isVisible,

@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(CreateOverwriteReviewRequest, () {
-    // String action (default value: 'overwrite')
+    // String action
     test('to test the property `action`', () async {
       // TODO
     });
@@ -17,12 +17,12 @@ void main() {
       // TODO
     });
 
-    // Indicates if the content is safe for publication.
     // bool isSafe
     test('to test the property `isSafe`', () async {
       // TODO
     });
 
+    // Notes to display on public map
     // String publicNote
     test('to test the property `publicNote`', () async {
       // TODO

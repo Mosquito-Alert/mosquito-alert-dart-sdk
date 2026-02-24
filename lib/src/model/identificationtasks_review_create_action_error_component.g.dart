@@ -45,6 +45,10 @@ const IdentificationtasksReviewCreateActionErrorComponentCodeEnum
     const IdentificationtasksReviewCreateActionErrorComponentCodeEnum._(
         'null_');
 const IdentificationtasksReviewCreateActionErrorComponentCodeEnum
+    _$identificationtasksReviewCreateActionErrorComponentCodeEnum_required_ =
+    const IdentificationtasksReviewCreateActionErrorComponentCodeEnum._(
+        'required_');
+const IdentificationtasksReviewCreateActionErrorComponentCodeEnum
     _$identificationtasksReviewCreateActionErrorComponentCodeEnum_unknownDefaultOpenApi =
     const IdentificationtasksReviewCreateActionErrorComponentCodeEnum._(
         'unknownDefaultOpenApi');
@@ -57,6 +61,8 @@ IdentificationtasksReviewCreateActionErrorComponentCodeEnum
       return _$identificationtasksReviewCreateActionErrorComponentCodeEnum_invalidChoice;
     case 'null_':
       return _$identificationtasksReviewCreateActionErrorComponentCodeEnum_null_;
+    case 'required_':
+      return _$identificationtasksReviewCreateActionErrorComponentCodeEnum_required_;
     case 'unknownDefaultOpenApi':
       return _$identificationtasksReviewCreateActionErrorComponentCodeEnum_unknownDefaultOpenApi;
     default:
@@ -70,6 +76,7 @@ final BuiltSet<IdentificationtasksReviewCreateActionErrorComponentCodeEnum>
         IdentificationtasksReviewCreateActionErrorComponentCodeEnum>(const <IdentificationtasksReviewCreateActionErrorComponentCodeEnum>[
   _$identificationtasksReviewCreateActionErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksReviewCreateActionErrorComponentCodeEnum_null_,
+  _$identificationtasksReviewCreateActionErrorComponentCodeEnum_required_,
   _$identificationtasksReviewCreateActionErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -122,11 +129,13 @@ class _$IdentificationtasksReviewCreateActionErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
     'null_': 'null',
+    'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
     'null': 'null_',
+    'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

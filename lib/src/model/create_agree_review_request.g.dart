@@ -68,13 +68,16 @@ class _$CreateAgreeReviewRequestActionEnumSerializer
 
 class _$CreateAgreeReviewRequest extends CreateAgreeReviewRequest {
   @override
-  final CreateAgreeReviewRequestActionEnum? action;
+  final CreateAgreeReviewRequestActionEnum action;
 
   factory _$CreateAgreeReviewRequest(
           [void Function(CreateAgreeReviewRequestBuilder)? updates]) =>
       (new CreateAgreeReviewRequestBuilder()..update(updates))._build();
 
-  _$CreateAgreeReviewRequest._({this.action}) : super._();
+  _$CreateAgreeReviewRequest._({required this.action}) : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        action, r'CreateAgreeReviewRequest', 'action');
+  }
 
   @override
   CreateAgreeReviewRequest rebuild(
@@ -145,7 +148,10 @@ class CreateAgreeReviewRequestBuilder
   CreateAgreeReviewRequest build() => _build();
 
   _$CreateAgreeReviewRequest _build() {
-    final _$result = _$v ?? new _$CreateAgreeReviewRequest._(action: action);
+    final _$result = _$v ??
+        new _$CreateAgreeReviewRequest._(
+            action: BuiltValueNullFieldError.checkNotNull(
+                action, r'CreateAgreeReviewRequest', 'action'));
     replace(_$result);
     return _$result;
   }

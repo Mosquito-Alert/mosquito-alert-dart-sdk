@@ -38,6 +38,10 @@ final BuiltSet<
 ]);
 
 const IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum
+    _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_invalid =
+    const IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum
+        ._('invalid');
+const IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum
     _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_null_ =
     const IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum
         ._('null_');
@@ -50,6 +54,8 @@ IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCod
     _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnumValueOf(
         String name) {
   switch (name) {
+    case 'invalid':
+      return _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_null_;
     case 'unknownDefaultOpenApi':
@@ -64,6 +70,7 @@ final BuiltSet<
     _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnumValues =
     new BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum>[
+  _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_null_,
   _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
@@ -120,10 +127,12 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComp
         PrimitiveSerializer<
             IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'invalid': 'invalid',
     'null_': 'null',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'invalid': 'invalid',
     'null': 'null_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };

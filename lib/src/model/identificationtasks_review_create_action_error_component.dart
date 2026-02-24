@@ -23,7 +23,7 @@ abstract class IdentificationtasksReviewCreateActionErrorComponent implements Bu
 
   @BuiltValueField(wireName: r'code')
   IdentificationtasksReviewCreateActionErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid_choice,  null,  };
+  // enum codeEnum {  invalid_choice,  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -160,6 +160,8 @@ class IdentificationtasksReviewCreateActionErrorComponentCodeEnum extends EnumCl
   static const IdentificationtasksReviewCreateActionErrorComponentCodeEnum invalidChoice = _$identificationtasksReviewCreateActionErrorComponentCodeEnum_invalidChoice;
   @BuiltValueEnumConst(wireName: r'null')
   static const IdentificationtasksReviewCreateActionErrorComponentCodeEnum null_ = _$identificationtasksReviewCreateActionErrorComponentCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'required')
+  static const IdentificationtasksReviewCreateActionErrorComponentCodeEnum required_ = _$identificationtasksReviewCreateActionErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const IdentificationtasksReviewCreateActionErrorComponentCodeEnum unknownDefaultOpenApi = _$identificationtasksReviewCreateActionErrorComponentCodeEnum_unknownDefaultOpenApi;
 

@@ -16,23 +16,23 @@ part 'create_overwrite_review_request.g.dart';
 /// Properties:
 /// * [action] 
 /// * [publicPhotoUuid] 
-/// * [isSafe] - Indicates if the content is safe for publication.
-/// * [publicNote] 
+/// * [isSafe] 
+/// * [publicNote] - Notes to display on public map
 /// * [classification] 
 /// * [characteristics] 
 @BuiltValue()
 abstract class CreateOverwriteReviewRequest implements Built<CreateOverwriteReviewRequest, CreateOverwriteReviewRequestBuilder> {
   @BuiltValueField(wireName: r'action')
-  CreateOverwriteReviewRequestActionEnum? get action;
+  CreateOverwriteReviewRequestActionEnum get action;
   // enum actionEnum {  overwrite,  };
 
   @BuiltValueField(wireName: r'public_photo_uuid')
   String get publicPhotoUuid;
 
-  /// Indicates if the content is safe for publication.
   @BuiltValueField(wireName: r'is_safe')
   bool get isSafe;
 
+  /// Notes to display on public map
   @BuiltValueField(wireName: r'public_note')
   String? get publicNote;
 
@@ -47,8 +47,7 @@ abstract class CreateOverwriteReviewRequest implements Built<CreateOverwriteRevi
   factory CreateOverwriteReviewRequest([void updates(CreateOverwriteReviewRequestBuilder b)]) = _$CreateOverwriteReviewRequest;
 
   @BuiltValueHook(initializeBuilder: true)
-  static void _defaults(CreateOverwriteReviewRequestBuilder b) => b
-      ..action = CreateOverwriteReviewRequestActionEnum.valueOf('overwrite');
+  static void _defaults(CreateOverwriteReviewRequestBuilder b) => b;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<CreateOverwriteReviewRequest> get serializer => _$CreateOverwriteReviewRequestSerializer();
@@ -66,13 +65,11 @@ class _$CreateOverwriteReviewRequestSerializer implements PrimitiveSerializer<Cr
     CreateOverwriteReviewRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    if (object.action != null) {
-      yield r'action';
-      yield serializers.serialize(
-        object.action,
-        specifiedType: const FullType(CreateOverwriteReviewRequestActionEnum),
-      );
-    }
+    yield r'action';
+    yield serializers.serialize(
+      object.action,
+      specifiedType: const FullType(CreateOverwriteReviewRequestActionEnum),
+    );
     yield r'public_photo_uuid';
     yield serializers.serialize(
       object.publicPhotoUuid,

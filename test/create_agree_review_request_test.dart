@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(CreateAgreeReviewRequest, () {
-    // String action (default value: 'agree')
+    // String action
     test('to test the property `action`', () async {
       // TODO
     });

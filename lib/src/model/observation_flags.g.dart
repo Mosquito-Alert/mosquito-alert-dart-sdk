@@ -8,7 +8,7 @@ part of 'observation_flags.dart';
 
 class _$ObservationFlags extends ObservationFlags {
   @override
-  final bool isFavourite;
+  final bool? isFavourite;
   @override
   final bool isVisible;
 
@@ -16,10 +16,8 @@ class _$ObservationFlags extends ObservationFlags {
           [void Function(ObservationFlagsBuilder)? updates]) =>
       (new ObservationFlagsBuilder()..update(updates))._build();
 
-  _$ObservationFlags._({required this.isFavourite, required this.isVisible})
+  _$ObservationFlags._({this.isFavourite, required this.isVisible})
       : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        isFavourite, r'ObservationFlags', 'isFavourite');
     BuiltValueNullFieldError.checkNotNull(
         isVisible, r'ObservationFlags', 'isVisible');
   }
@@ -101,8 +99,7 @@ class ObservationFlagsBuilder
   _$ObservationFlags _build() {
     final _$result = _$v ??
         new _$ObservationFlags._(
-            isFavourite: BuiltValueNullFieldError.checkNotNull(
-                isFavourite, r'ObservationFlags', 'isFavourite'),
+            isFavourite: isFavourite,
             isVisible: BuiltValueNullFieldError.checkNotNull(
                 isVisible, r'ObservationFlags', 'isVisible'));
     replace(_$result);

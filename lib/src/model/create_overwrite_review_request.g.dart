@@ -70,7 +70,7 @@ class _$CreateOverwriteReviewRequestActionEnumSerializer
 
 class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
   @override
-  final CreateOverwriteReviewRequestActionEnum? action;
+  final CreateOverwriteReviewRequestActionEnum action;
   @override
   final String publicPhotoUuid;
   @override
@@ -87,13 +87,15 @@ class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
       (new CreateOverwriteReviewRequestBuilder()..update(updates))._build();
 
   _$CreateOverwriteReviewRequest._(
-      {this.action,
+      {required this.action,
       required this.publicPhotoUuid,
       required this.isSafe,
       this.publicNote,
       this.classification,
       this.characteristics})
       : super._() {
+    BuiltValueNullFieldError.checkNotNull(
+        action, r'CreateOverwriteReviewRequest', 'action');
     BuiltValueNullFieldError.checkNotNull(
         publicPhotoUuid, r'CreateOverwriteReviewRequest', 'publicPhotoUuid');
     BuiltValueNullFieldError.checkNotNull(
@@ -220,7 +222,8 @@ class CreateOverwriteReviewRequestBuilder
     try {
       _$result = _$v ??
           new _$CreateOverwriteReviewRequest._(
-              action: action,
+              action: BuiltValueNullFieldError.checkNotNull(
+                  action, r'CreateOverwriteReviewRequest', 'action'),
               publicPhotoUuid: BuiltValueNullFieldError.checkNotNull(
                   publicPhotoUuid,
                   r'CreateOverwriteReviewRequest',
