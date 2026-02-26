@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsList**
-> PaginatedAnnotationList annotationsList(observationUuid, characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
+> PaginatedAnnotationList annotationsList(observationUuid, characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, decisionLevel, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -105,7 +105,7 @@ final double classificationConfidenceMin = 1.2; // double |
 final BuiltList<int> classificationTaxonIds = ; // BuiltList<int> | 
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
-final bool isDecisive = true; // bool | 
+final BuiltList<String> decisionLevel = ; // BuiltList<String> | 
 final bool isFavourite = true; // bool | 
 final bool isFlagged = true; // bool | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
@@ -118,7 +118,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsList(observationUuid, characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
+    final response = api.annotationsList(observationUuid, characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, decisionLevel, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->annotationsList: $e\n');
@@ -139,7 +139,7 @@ Name | Type | Description  | Notes
  **classificationTaxonIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
- **isDecisive** | **bool**|  | [optional] 
+ **decisionLevel** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **isFavourite** | **bool**|  | [optional] 
  **isFlagged** | **bool**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
@@ -167,7 +167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **annotationsListMine**
-> PaginatedAnnotationList annotationsListMine(characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
+> PaginatedAnnotationList annotationsListMine(characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, decisionLevel, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds)
 
 
 
@@ -195,7 +195,7 @@ final double classificationConfidenceMin = 1.2; // double |
 final BuiltList<int> classificationTaxonIds = ; // BuiltList<int> | 
 final DateTime createdAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Created at
 final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Created at
-final bool isDecisive = true; // bool | 
+final BuiltList<String> decisionLevel = ; // BuiltList<String> | 
 final bool isFavourite = true; // bool | 
 final bool isFlagged = true; // bool | 
 final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
@@ -208,7 +208,7 @@ final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update
 final BuiltList<int> userIds = ; // BuiltList<int> | 
 
 try {
-    final response = api.annotationsListMine(characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, isDecisive, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
+    final response = api.annotationsListMine(characteristicsIsBloodFed, characteristicsIsGravid, characteristicsSex, classificationConfidenceLabel, classificationConfidenceMax, classificationConfidenceMin, classificationTaxonIds, createdAtAfter, createdAtBefore, decisionLevel, isFavourite, isFlagged, orderBy, page, pageSize, search, type, updatedAtAfter, updatedAtBefore, userIds);
     print(response);
 } on DioException catch (e) {
     print('Exception when calling IdentificationTasksApi->annotationsListMine: $e\n');
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
  **classificationTaxonIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
  **createdAtAfter** | **DateTime**| Created at | [optional] 
  **createdAtBefore** | **DateTime**| Created at | [optional] 
- **isDecisive** | **bool**|  | [optional] 
+ **decisionLevel** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **isFavourite** | **bool**|  | [optional] 
  **isFlagged** | **bool**|  | [optional] 
  **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 

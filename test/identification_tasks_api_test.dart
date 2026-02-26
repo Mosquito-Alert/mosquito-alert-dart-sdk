@@ -12,14 +12,14 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedAnnotationList> annotationsList(String observationUuid, { bool characteristicsIsBloodFed, bool characteristicsIsGravid, String characteristicsSex, String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, bool isDecisive, bool isFavourite, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, String search, String type, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
+    //Future<PaginatedAnnotationList> annotationsList(String observationUuid, { bool characteristicsIsBloodFed, bool characteristicsIsGravid, String characteristicsSex, String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, BuiltList<String> decisionLevel, bool isFavourite, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, String search, String type, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
     test('test annotationsList', () async {
       // TODO
     });
 
     // Get my annotations
     //
-    //Future<PaginatedAnnotationList> annotationsListMine({ bool characteristicsIsBloodFed, bool characteristicsIsGravid, String characteristicsSex, String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, bool isDecisive, bool isFavourite, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, String search, String type, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
+    //Future<PaginatedAnnotationList> annotationsListMine({ bool characteristicsIsBloodFed, bool characteristicsIsGravid, String characteristicsSex, String classificationConfidenceLabel, double classificationConfidenceMax, double classificationConfidenceMin, BuiltList<int> classificationTaxonIds, DateTime createdAtAfter, DateTime createdAtBefore, BuiltList<String> decisionLevel, bool isFavourite, bool isFlagged, BuiltList<String> orderBy, int page, int pageSize, String search, String type, DateTime updatedAtAfter, DateTime updatedAtBefore, BuiltList<int> userIds }) async
     test('test annotationsListMine', () async {
       // TODO
     });

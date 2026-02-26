@@ -27,8 +27,8 @@ void main() {
       // TODO
     });
 
-    // bool markAsDecisive
-    test('to test the property `markAsDecisive`', () async {
+    // bool markAsExecutive
+    test('to test the property `markAsExecutive`', () async {
       // TODO
     });
 

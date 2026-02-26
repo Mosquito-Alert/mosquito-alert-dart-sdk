@@ -23,7 +23,7 @@ abstract class IdentificationtasksAnnotationsCreateClassificationConfidenceLabel
 
   @BuiltValueField(wireName: r'code')
   IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum get code;
-  // enum codeEnum {  invalid_choice,  null,  required,  };
+  // enum codeEnum {  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -156,8 +156,6 @@ class IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComp
 
 class IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'invalid_choice')
-  static const IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum invalidChoice = _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_invalidChoice;
   @BuiltValueEnumConst(wireName: r'null')
   static const IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum null_ = _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')

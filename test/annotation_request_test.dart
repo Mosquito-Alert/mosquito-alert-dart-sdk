@@ -32,8 +32,8 @@ void main() {
       // TODO
     });
 
-    // bool isDecisive (default value: false)
-    test('to test the property `isDecisive`', () async {
+    // bool isExecutive (default value: false)
+    test('to test the property `isExecutive`', () async {
       // TODO
     });
 

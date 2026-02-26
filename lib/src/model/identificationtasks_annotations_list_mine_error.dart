@@ -10,6 +10,7 @@ import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mi
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_characteristics_sex_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_confidence_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_created_at_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_decision_level_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_updated_at_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_user_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_mine_classification_taxon_ids_error_component.dart';
@@ -27,7 +28,7 @@ part 'identificationtasks_annotations_list_mine_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class IdentificationtasksAnnotationsListMineError implements Built<IdentificationtasksAnnotationsListMineError, IdentificationtasksAnnotationsListMineErrorBuilder> {
-  /// One Of [IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListMineCreatedAtErrorComponent], [IdentificationtasksAnnotationsListMineOrderByErrorComponent], [IdentificationtasksAnnotationsListMineTypeErrorComponent], [IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent], [IdentificationtasksAnnotationsListMineUserIdsErrorComponent]
+  /// One Of [IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListMineCreatedAtErrorComponent], [IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent], [IdentificationtasksAnnotationsListMineOrderByErrorComponent], [IdentificationtasksAnnotationsListMineTypeErrorComponent], [IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent], [IdentificationtasksAnnotationsListMineUserIdsErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -38,6 +39,7 @@ abstract class IdentificationtasksAnnotationsListMineError implements Built<Iden
     r'classification_confidence_label': IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent,
     r'classification_taxon_ids': IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent,
     r'created_at': IdentificationtasksAnnotationsListMineCreatedAtErrorComponent,
+    r'decision_level': IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent,
     r'order_by': IdentificationtasksAnnotationsListMineOrderByErrorComponent,
     r'type': IdentificationtasksAnnotationsListMineTypeErrorComponent,
     r'updated_at': IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent,
@@ -72,6 +74,9 @@ extension IdentificationtasksAnnotationsListMineErrorDiscriminatorExt on Identif
         if (this is IdentificationtasksAnnotationsListMineCreatedAtErrorComponent) {
             return r'created_at';
         }
+        if (this is IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent) {
+            return r'decision_level';
+        }
         if (this is IdentificationtasksAnnotationsListMineOrderByErrorComponent) {
             return r'order_by';
         }
@@ -103,6 +108,9 @@ extension IdentificationtasksAnnotationsListMineErrorBuilderDiscriminatorExt on 
         }
         if (this is IdentificationtasksAnnotationsListMineCreatedAtErrorComponentBuilder) {
             return r'created_at';
+        }
+        if (this is IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder) {
+            return r'decision_level';
         }
         if (this is IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -156,7 +164,7 @@ class _$IdentificationtasksAnnotationsListMineErrorSerializer implements Primiti
     final discIndex = serializedList.indexOf(IdentificationtasksAnnotationsListMineError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListMineCreatedAtErrorComponent, IdentificationtasksAnnotationsListMineOrderByErrorComponent, IdentificationtasksAnnotationsListMineTypeErrorComponent, IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent, IdentificationtasksAnnotationsListMineUserIdsErrorComponent, ];
+    final oneOfTypes = [IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListMineClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListMineCreatedAtErrorComponent, IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent, IdentificationtasksAnnotationsListMineOrderByErrorComponent, IdentificationtasksAnnotationsListMineTypeErrorComponent, IdentificationtasksAnnotationsListMineUpdatedAtErrorComponent, IdentificationtasksAnnotationsListMineUserIdsErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -194,6 +202,13 @@ class _$IdentificationtasksAnnotationsListMineErrorSerializer implements Primiti
           specifiedType: FullType(IdentificationtasksAnnotationsListMineCreatedAtErrorComponent),
         ) as IdentificationtasksAnnotationsListMineCreatedAtErrorComponent;
         oneOfType = IdentificationtasksAnnotationsListMineCreatedAtErrorComponent;
+        break;
+      case r'decision_level':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent),
+        ) as IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(

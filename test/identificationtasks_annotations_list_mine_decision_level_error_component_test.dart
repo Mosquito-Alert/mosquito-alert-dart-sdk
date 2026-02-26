@@ -1,12 +1,12 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent
+// tests for IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent
 void main() {
-  final instance = IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentBuilder();
+  final instance = IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder();
   // TODO add properties to the builder and call build()
 
-  group(IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent, () {
+  group(IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent, () {
     // String attr
     test('to test the property `attr`', () async {
       // TODO

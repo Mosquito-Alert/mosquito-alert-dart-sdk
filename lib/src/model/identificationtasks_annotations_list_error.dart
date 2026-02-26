@@ -10,6 +10,7 @@ import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_or
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_characteristics_sex_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_classification_taxon_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_type_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_decision_level_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_classification_confidence_label_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_user_ids_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_list_updated_at_error_component.dart';
@@ -27,7 +28,7 @@ part 'identificationtasks_annotations_list_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class IdentificationtasksAnnotationsListError implements Built<IdentificationtasksAnnotationsListError, IdentificationtasksAnnotationsListErrorBuilder> {
-  /// One Of [IdentificationtasksAnnotationsListCharacteristicsSexErrorComponent], [IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListCreatedAtErrorComponent], [IdentificationtasksAnnotationsListOrderByErrorComponent], [IdentificationtasksAnnotationsListTypeErrorComponent], [IdentificationtasksAnnotationsListUpdatedAtErrorComponent], [IdentificationtasksAnnotationsListUserIdsErrorComponent]
+  /// One Of [IdentificationtasksAnnotationsListCharacteristicsSexErrorComponent], [IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent], [IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent], [IdentificationtasksAnnotationsListCreatedAtErrorComponent], [IdentificationtasksAnnotationsListDecisionLevelErrorComponent], [IdentificationtasksAnnotationsListOrderByErrorComponent], [IdentificationtasksAnnotationsListTypeErrorComponent], [IdentificationtasksAnnotationsListUpdatedAtErrorComponent], [IdentificationtasksAnnotationsListUserIdsErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -38,6 +39,7 @@ abstract class IdentificationtasksAnnotationsListError implements Built<Identifi
     r'classification_confidence_label': IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent,
     r'classification_taxon_ids': IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent,
     r'created_at': IdentificationtasksAnnotationsListCreatedAtErrorComponent,
+    r'decision_level': IdentificationtasksAnnotationsListDecisionLevelErrorComponent,
     r'order_by': IdentificationtasksAnnotationsListOrderByErrorComponent,
     r'type': IdentificationtasksAnnotationsListTypeErrorComponent,
     r'updated_at': IdentificationtasksAnnotationsListUpdatedAtErrorComponent,
@@ -72,6 +74,9 @@ extension IdentificationtasksAnnotationsListErrorDiscriminatorExt on Identificat
         if (this is IdentificationtasksAnnotationsListCreatedAtErrorComponent) {
             return r'created_at';
         }
+        if (this is IdentificationtasksAnnotationsListDecisionLevelErrorComponent) {
+            return r'decision_level';
+        }
         if (this is IdentificationtasksAnnotationsListOrderByErrorComponent) {
             return r'order_by';
         }
@@ -103,6 +108,9 @@ extension IdentificationtasksAnnotationsListErrorBuilderDiscriminatorExt on Iden
         }
         if (this is IdentificationtasksAnnotationsListCreatedAtErrorComponentBuilder) {
             return r'created_at';
+        }
+        if (this is IdentificationtasksAnnotationsListDecisionLevelErrorComponentBuilder) {
+            return r'decision_level';
         }
         if (this is IdentificationtasksAnnotationsListOrderByErrorComponentBuilder) {
             return r'order_by';
@@ -156,7 +164,7 @@ class _$IdentificationtasksAnnotationsListErrorSerializer implements PrimitiveSe
     final discIndex = serializedList.indexOf(IdentificationtasksAnnotationsListError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [IdentificationtasksAnnotationsListCharacteristicsSexErrorComponent, IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListCreatedAtErrorComponent, IdentificationtasksAnnotationsListOrderByErrorComponent, IdentificationtasksAnnotationsListTypeErrorComponent, IdentificationtasksAnnotationsListUpdatedAtErrorComponent, IdentificationtasksAnnotationsListUserIdsErrorComponent, ];
+    final oneOfTypes = [IdentificationtasksAnnotationsListCharacteristicsSexErrorComponent, IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent, IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent, IdentificationtasksAnnotationsListCreatedAtErrorComponent, IdentificationtasksAnnotationsListDecisionLevelErrorComponent, IdentificationtasksAnnotationsListOrderByErrorComponent, IdentificationtasksAnnotationsListTypeErrorComponent, IdentificationtasksAnnotationsListUpdatedAtErrorComponent, IdentificationtasksAnnotationsListUserIdsErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -194,6 +202,13 @@ class _$IdentificationtasksAnnotationsListErrorSerializer implements PrimitiveSe
           specifiedType: FullType(IdentificationtasksAnnotationsListCreatedAtErrorComponent),
         ) as IdentificationtasksAnnotationsListCreatedAtErrorComponent;
         oneOfType = IdentificationtasksAnnotationsListCreatedAtErrorComponent;
+        break;
+      case r'decision_level':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(IdentificationtasksAnnotationsListDecisionLevelErrorComponent),
+        ) as IdentificationtasksAnnotationsListDecisionLevelErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsListDecisionLevelErrorComponent;
         break;
       case r'order_by':
         oneOfResult = serializers.deserialize(

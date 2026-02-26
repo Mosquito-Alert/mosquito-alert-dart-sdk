@@ -16,7 +16,7 @@ class _$AnnotationPermission extends AnnotationPermission {
   @override
   final bool delete;
   @override
-  final bool markAsDecisive;
+  final bool markAsExecutive;
 
   factory _$AnnotationPermission(
           [void Function(AnnotationPermissionBuilder)? updates]) =>
@@ -27,7 +27,7 @@ class _$AnnotationPermission extends AnnotationPermission {
       required this.change,
       required this.view,
       required this.delete,
-      required this.markAsDecisive})
+      required this.markAsExecutive})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(add, r'AnnotationPermission', 'add');
     BuiltValueNullFieldError.checkNotNull(
@@ -37,7 +37,7 @@ class _$AnnotationPermission extends AnnotationPermission {
     BuiltValueNullFieldError.checkNotNull(
         delete, r'AnnotationPermission', 'delete');
     BuiltValueNullFieldError.checkNotNull(
-        markAsDecisive, r'AnnotationPermission', 'markAsDecisive');
+        markAsExecutive, r'AnnotationPermission', 'markAsExecutive');
   }
 
   @override
@@ -57,7 +57,7 @@ class _$AnnotationPermission extends AnnotationPermission {
         change == other.change &&
         view == other.view &&
         delete == other.delete &&
-        markAsDecisive == other.markAsDecisive;
+        markAsExecutive == other.markAsExecutive;
   }
 
   @override
@@ -67,7 +67,7 @@ class _$AnnotationPermission extends AnnotationPermission {
     _$hash = $jc(_$hash, change.hashCode);
     _$hash = $jc(_$hash, view.hashCode);
     _$hash = $jc(_$hash, delete.hashCode);
-    _$hash = $jc(_$hash, markAsDecisive.hashCode);
+    _$hash = $jc(_$hash, markAsExecutive.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -79,7 +79,7 @@ class _$AnnotationPermission extends AnnotationPermission {
           ..add('change', change)
           ..add('view', view)
           ..add('delete', delete)
-          ..add('markAsDecisive', markAsDecisive))
+          ..add('markAsExecutive', markAsExecutive))
         .toString();
   }
 }
@@ -104,10 +104,10 @@ class AnnotationPermissionBuilder
   bool? get delete => _$this._delete;
   set delete(bool? delete) => _$this._delete = delete;
 
-  bool? _markAsDecisive;
-  bool? get markAsDecisive => _$this._markAsDecisive;
-  set markAsDecisive(bool? markAsDecisive) =>
-      _$this._markAsDecisive = markAsDecisive;
+  bool? _markAsExecutive;
+  bool? get markAsExecutive => _$this._markAsExecutive;
+  set markAsExecutive(bool? markAsExecutive) =>
+      _$this._markAsExecutive = markAsExecutive;
 
   AnnotationPermissionBuilder() {
     AnnotationPermission._defaults(this);
@@ -120,7 +120,7 @@ class AnnotationPermissionBuilder
       _change = $v.change;
       _view = $v.view;
       _delete = $v.delete;
-      _markAsDecisive = $v.markAsDecisive;
+      _markAsExecutive = $v.markAsExecutive;
       _$v = null;
     }
     return this;
@@ -151,8 +151,8 @@ class AnnotationPermissionBuilder
                 view, r'AnnotationPermission', 'view'),
             delete: BuiltValueNullFieldError.checkNotNull(
                 delete, r'AnnotationPermission', 'delete'),
-            markAsDecisive: BuiltValueNullFieldError.checkNotNull(
-                markAsDecisive, r'AnnotationPermission', 'markAsDecisive'));
+            markAsExecutive: BuiltValueNullFieldError.checkNotNull(
+                markAsExecutive, r'AnnotationPermission', 'markAsExecutive'));
     replace(_$result);
     return _$result;
   }

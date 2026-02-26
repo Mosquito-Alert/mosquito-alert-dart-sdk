@@ -27,7 +27,7 @@ part 'annotation.g.dart';
 /// * [feedback] 
 /// * [type] 
 /// * [isFlagged] 
-/// * [isDecisive] 
+/// * [decisionLevel] 
 /// * [observationFlags] 
 /// * [tags] 
 /// * [createdAt] 
@@ -62,8 +62,9 @@ abstract class Annotation implements Built<Annotation, AnnotationBuilder> {
   @BuiltValueField(wireName: r'is_flagged')
   bool get isFlagged;
 
-  @BuiltValueField(wireName: r'is_decisive')
-  bool get isDecisive;
+  @BuiltValueField(wireName: r'decision_level')
+  AnnotationDecisionLevelEnum get decisionLevel;
+  // enum decisionLevelEnum {  normal,  executive,  final,  };
 
   @BuiltValueField(wireName: r'observation_flags')
   ObservationFlags? get observationFlags;
@@ -83,8 +84,7 @@ abstract class Annotation implements Built<Annotation, AnnotationBuilder> {
 
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(AnnotationBuilder b) => b
-      ..isFlagged = false
-      ..isDecisive = false;
+      ..isFlagged = false;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<Annotation> get serializer => _$AnnotationSerializer();
@@ -151,10 +151,10 @@ class _$AnnotationSerializer implements PrimitiveSerializer<Annotation> {
       object.isFlagged,
       specifiedType: const FullType(bool),
     );
-    yield r'is_decisive';
+    yield r'decision_level';
     yield serializers.serialize(
-      object.isDecisive,
-      specifiedType: const FullType(bool),
+      object.decisionLevel,
+      specifiedType: const FullType(AnnotationDecisionLevelEnum),
     );
     if (object.observationFlags != null) {
       yield r'observation_flags';
@@ -269,12 +269,12 @@ class _$AnnotationSerializer implements PrimitiveSerializer<Annotation> {
           ) as bool;
           result.isFlagged = valueDes;
           break;
-        case r'is_decisive':
+        case r'decision_level':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(bool),
-          ) as bool;
-          result.isDecisive = valueDes;
+            specifiedType: const FullType(AnnotationDecisionLevelEnum),
+          ) as AnnotationDecisionLevelEnum;
+          result.decisionLevel = valueDes;
           break;
         case r'observation_flags':
           final valueDes = serializers.deserialize(
@@ -348,5 +348,24 @@ class AnnotationTypeEnum extends EnumClass {
 
   static BuiltSet<AnnotationTypeEnum> get values => _$annotationTypeEnumValues;
   static AnnotationTypeEnum valueOf(String name) => _$annotationTypeEnumValueOf(name);
+}
+
+class AnnotationDecisionLevelEnum extends EnumClass {
+
+  @BuiltValueEnumConst(wireName: r'normal')
+  static const AnnotationDecisionLevelEnum normal = _$annotationDecisionLevelEnum_normal;
+  @BuiltValueEnumConst(wireName: r'executive')
+  static const AnnotationDecisionLevelEnum executive = _$annotationDecisionLevelEnum_executive;
+  @BuiltValueEnumConst(wireName: r'final')
+  static const AnnotationDecisionLevelEnum final_ = _$annotationDecisionLevelEnum_final_;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const AnnotationDecisionLevelEnum unknownDefaultOpenApi = _$annotationDecisionLevelEnum_unknownDefaultOpenApi;
+
+  static Serializer<AnnotationDecisionLevelEnum> get serializer => _$annotationDecisionLevelEnumSerializer;
+
+  const AnnotationDecisionLevelEnum._(String name): super(name);
+
+  static BuiltSet<AnnotationDecisionLevelEnum> get values => _$annotationDecisionLevelEnumValues;
+  static AnnotationDecisionLevelEnum valueOf(String name) => _$annotationDecisionLevelEnumValueOf(name);
 }
 

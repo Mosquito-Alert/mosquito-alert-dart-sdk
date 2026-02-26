@@ -33,8 +33,45 @@ final BuiltSet<AnnotationTypeEnum> _$annotationTypeEnumValues =
   _$annotationTypeEnum_unknownDefaultOpenApi,
 ]);
 
+const AnnotationDecisionLevelEnum _$annotationDecisionLevelEnum_normal =
+    const AnnotationDecisionLevelEnum._('normal');
+const AnnotationDecisionLevelEnum _$annotationDecisionLevelEnum_executive =
+    const AnnotationDecisionLevelEnum._('executive');
+const AnnotationDecisionLevelEnum _$annotationDecisionLevelEnum_final_ =
+    const AnnotationDecisionLevelEnum._('final_');
+const AnnotationDecisionLevelEnum
+    _$annotationDecisionLevelEnum_unknownDefaultOpenApi =
+    const AnnotationDecisionLevelEnum._('unknownDefaultOpenApi');
+
+AnnotationDecisionLevelEnum _$annotationDecisionLevelEnumValueOf(String name) {
+  switch (name) {
+    case 'normal':
+      return _$annotationDecisionLevelEnum_normal;
+    case 'executive':
+      return _$annotationDecisionLevelEnum_executive;
+    case 'final_':
+      return _$annotationDecisionLevelEnum_final_;
+    case 'unknownDefaultOpenApi':
+      return _$annotationDecisionLevelEnum_unknownDefaultOpenApi;
+    default:
+      return _$annotationDecisionLevelEnum_unknownDefaultOpenApi;
+  }
+}
+
+final BuiltSet<AnnotationDecisionLevelEnum>
+    _$annotationDecisionLevelEnumValues = new BuiltSet<
+        AnnotationDecisionLevelEnum>(const <AnnotationDecisionLevelEnum>[
+  _$annotationDecisionLevelEnum_normal,
+  _$annotationDecisionLevelEnum_executive,
+  _$annotationDecisionLevelEnum_final_,
+  _$annotationDecisionLevelEnum_unknownDefaultOpenApi,
+]);
+
 Serializer<AnnotationTypeEnum> _$annotationTypeEnumSerializer =
     new _$AnnotationTypeEnumSerializer();
+Serializer<AnnotationDecisionLevelEnum>
+    _$annotationDecisionLevelEnumSerializer =
+    new _$AnnotationDecisionLevelEnumSerializer();
 
 class _$AnnotationTypeEnumSerializer
     implements PrimitiveSerializer<AnnotationTypeEnum> {
@@ -66,6 +103,39 @@ class _$AnnotationTypeEnumSerializer
           _fromWire[serialized] ?? (serialized is String ? serialized : ''));
 }
 
+class _$AnnotationDecisionLevelEnumSerializer
+    implements PrimitiveSerializer<AnnotationDecisionLevelEnum> {
+  static const Map<String, Object> _toWire = const <String, Object>{
+    'normal': 'normal',
+    'executive': 'executive',
+    'final_': 'final',
+    'unknownDefaultOpenApi': 'unknown_default_open_api',
+  };
+  static const Map<Object, String> _fromWire = const <Object, String>{
+    'normal': 'normal',
+    'executive': 'executive',
+    'final': 'final_',
+    'unknown_default_open_api': 'unknownDefaultOpenApi',
+  };
+
+  @override
+  final Iterable<Type> types = const <Type>[AnnotationDecisionLevelEnum];
+  @override
+  final String wireName = 'AnnotationDecisionLevelEnum';
+
+  @override
+  Object serialize(Serializers serializers, AnnotationDecisionLevelEnum object,
+          {FullType specifiedType = FullType.unspecified}) =>
+      _toWire[object.name] ?? object.name;
+
+  @override
+  AnnotationDecisionLevelEnum deserialize(
+          Serializers serializers, Object serialized,
+          {FullType specifiedType = FullType.unspecified}) =>
+      AnnotationDecisionLevelEnum.valueOf(
+          _fromWire[serialized] ?? (serialized is String ? serialized : ''));
+}
+
 class _$Annotation extends Annotation {
   @override
   final int id;
@@ -86,7 +156,7 @@ class _$Annotation extends Annotation {
   @override
   final bool isFlagged;
   @override
-  final bool isDecisive;
+  final AnnotationDecisionLevelEnum decisionLevel;
   @override
   final ObservationFlags? observationFlags;
   @override
@@ -109,7 +179,7 @@ class _$Annotation extends Annotation {
       this.feedback,
       required this.type,
       required this.isFlagged,
-      required this.isDecisive,
+      required this.decisionLevel,
       this.observationFlags,
       this.tags,
       required this.createdAt,
@@ -123,7 +193,7 @@ class _$Annotation extends Annotation {
     BuiltValueNullFieldError.checkNotNull(
         isFlagged, r'Annotation', 'isFlagged');
     BuiltValueNullFieldError.checkNotNull(
-        isDecisive, r'Annotation', 'isDecisive');
+        decisionLevel, r'Annotation', 'decisionLevel');
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'Annotation', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
@@ -150,7 +220,7 @@ class _$Annotation extends Annotation {
         feedback == other.feedback &&
         type == other.type &&
         isFlagged == other.isFlagged &&
-        isDecisive == other.isDecisive &&
+        decisionLevel == other.decisionLevel &&
         observationFlags == other.observationFlags &&
         tags == other.tags &&
         createdAt == other.createdAt &&
@@ -169,7 +239,7 @@ class _$Annotation extends Annotation {
     _$hash = $jc(_$hash, feedback.hashCode);
     _$hash = $jc(_$hash, type.hashCode);
     _$hash = $jc(_$hash, isFlagged.hashCode);
-    _$hash = $jc(_$hash, isDecisive.hashCode);
+    _$hash = $jc(_$hash, decisionLevel.hashCode);
     _$hash = $jc(_$hash, observationFlags.hashCode);
     _$hash = $jc(_$hash, tags.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
@@ -190,7 +260,7 @@ class _$Annotation extends Annotation {
           ..add('feedback', feedback)
           ..add('type', type)
           ..add('isFlagged', isFlagged)
-          ..add('isDecisive', isDecisive)
+          ..add('decisionLevel', decisionLevel)
           ..add('observationFlags', observationFlags)
           ..add('tags', tags)
           ..add('createdAt', createdAt)
@@ -247,9 +317,10 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
   bool? get isFlagged => _$this._isFlagged;
   set isFlagged(bool? isFlagged) => _$this._isFlagged = isFlagged;
 
-  bool? _isDecisive;
-  bool? get isDecisive => _$this._isDecisive;
-  set isDecisive(bool? isDecisive) => _$this._isDecisive = isDecisive;
+  AnnotationDecisionLevelEnum? _decisionLevel;
+  AnnotationDecisionLevelEnum? get decisionLevel => _$this._decisionLevel;
+  set decisionLevel(AnnotationDecisionLevelEnum? decisionLevel) =>
+      _$this._decisionLevel = decisionLevel;
 
   ObservationFlagsBuilder? _observationFlags;
   ObservationFlagsBuilder get observationFlags =>
@@ -285,7 +356,7 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
       _feedback = $v.feedback?.toBuilder();
       _type = $v.type;
       _isFlagged = $v.isFlagged;
-      _isDecisive = $v.isDecisive;
+      _decisionLevel = $v.decisionLevel;
       _observationFlags = $v.observationFlags?.toBuilder();
       _tags = $v.tags?.toBuilder();
       _createdAt = $v.createdAt;
@@ -327,8 +398,8 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
                   type, r'Annotation', 'type'),
               isFlagged: BuiltValueNullFieldError.checkNotNull(
                   isFlagged, r'Annotation', 'isFlagged'),
-              isDecisive: BuiltValueNullFieldError.checkNotNull(
-                  isDecisive, r'Annotation', 'isDecisive'),
+              decisionLevel: BuiltValueNullFieldError.checkNotNull(
+                  decisionLevel, r'Annotation', 'decisionLevel'),
               observationFlags: _observationFlags?.build(),
               tags: _tags?.build(),
               createdAt: BuiltValueNullFieldError.checkNotNull(

@@ -38,10 +38,6 @@ final BuiltSet<
 ]);
 
 const IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum
-    _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_invalidChoice =
-    const IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum
-        ._('invalidChoice');
-const IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum
     _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_null_ =
     const IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum
         ._('null_');
@@ -58,8 +54,6 @@ IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentC
     _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnumValueOf(
         String name) {
   switch (name) {
-    case 'invalidChoice':
-      return _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_invalidChoice;
     case 'null_':
       return _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_null_;
     case 'required_':
@@ -76,7 +70,6 @@ final BuiltSet<
     _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnumValues =
     new BuiltSet<
         IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum>[
-  _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_null_,
   _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_required_,
   _$identificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -134,13 +127,11 @@ class _$IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorCo
         PrimitiveSerializer<
             IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'invalidChoice': 'invalid_choice',
     'null_': 'null',
     'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'invalid_choice': 'invalidChoice',
     'null': 'null_',
     'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',

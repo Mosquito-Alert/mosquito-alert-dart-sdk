@@ -18,7 +18,7 @@ class _$AnnotationRequest extends AnnotationRequest {
   @override
   final bool? isFlagged;
   @override
-  final bool? isDecisive;
+  final bool? isExecutive;
   @override
   final ObservationFlagsRequest? observationFlags;
   @override
@@ -34,7 +34,7 @@ class _$AnnotationRequest extends AnnotationRequest {
       this.characteristics,
       this.feedback,
       this.isFlagged,
-      this.isDecisive,
+      this.isExecutive,
       this.observationFlags,
       this.tags})
       : super._();
@@ -56,7 +56,7 @@ class _$AnnotationRequest extends AnnotationRequest {
         characteristics == other.characteristics &&
         feedback == other.feedback &&
         isFlagged == other.isFlagged &&
-        isDecisive == other.isDecisive &&
+        isExecutive == other.isExecutive &&
         observationFlags == other.observationFlags &&
         tags == other.tags;
   }
@@ -69,7 +69,7 @@ class _$AnnotationRequest extends AnnotationRequest {
     _$hash = $jc(_$hash, characteristics.hashCode);
     _$hash = $jc(_$hash, feedback.hashCode);
     _$hash = $jc(_$hash, isFlagged.hashCode);
-    _$hash = $jc(_$hash, isDecisive.hashCode);
+    _$hash = $jc(_$hash, isExecutive.hashCode);
     _$hash = $jc(_$hash, observationFlags.hashCode);
     _$hash = $jc(_$hash, tags.hashCode);
     _$hash = $jf(_$hash);
@@ -84,7 +84,7 @@ class _$AnnotationRequest extends AnnotationRequest {
           ..add('characteristics', characteristics)
           ..add('feedback', feedback)
           ..add('isFlagged', isFlagged)
-          ..add('isDecisive', isDecisive)
+          ..add('isExecutive', isExecutive)
           ..add('observationFlags', observationFlags)
           ..add('tags', tags))
         .toString();
@@ -122,9 +122,9 @@ class AnnotationRequestBuilder
   bool? get isFlagged => _$this._isFlagged;
   set isFlagged(bool? isFlagged) => _$this._isFlagged = isFlagged;
 
-  bool? _isDecisive;
-  bool? get isDecisive => _$this._isDecisive;
-  set isDecisive(bool? isDecisive) => _$this._isDecisive = isDecisive;
+  bool? _isExecutive;
+  bool? get isExecutive => _$this._isExecutive;
+  set isExecutive(bool? isExecutive) => _$this._isExecutive = isExecutive;
 
   ObservationFlagsRequestBuilder? _observationFlags;
   ObservationFlagsRequestBuilder get observationFlags =>
@@ -148,7 +148,7 @@ class AnnotationRequestBuilder
       _characteristics = $v.characteristics?.toBuilder();
       _feedback = $v.feedback?.toBuilder();
       _isFlagged = $v.isFlagged;
-      _isDecisive = $v.isDecisive;
+      _isExecutive = $v.isExecutive;
       _observationFlags = $v.observationFlags?.toBuilder();
       _tags = $v.tags?.toBuilder();
       _$v = null;
@@ -180,7 +180,7 @@ class AnnotationRequestBuilder
               characteristics: _characteristics?.build(),
               feedback: _feedback?.build(),
               isFlagged: isFlagged,
-              isDecisive: isDecisive,
+              isExecutive: isExecutive,
               observationFlags: _observationFlags?.build(),
               tags: _tags?.build());
     } catch (_) {

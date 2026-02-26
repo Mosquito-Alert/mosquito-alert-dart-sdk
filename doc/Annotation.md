@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **feedback** | [**AnnotationFeedback**](AnnotationFeedback.md) |  | [optional] 
 **type** | **String** |  | 
 **isFlagged** | **bool** |  | [default to false]
-**isDecisive** | **bool** |  | [default to false]
+**decisionLevel** | **String** |  | 
 **observationFlags** | [**ObservationFlags**](ObservationFlags.md) |  | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 **createdAt** | [**DateTime**](DateTime.md) |  | 

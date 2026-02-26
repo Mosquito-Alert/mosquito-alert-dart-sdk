@@ -15,7 +15,7 @@ part 'annotation_permission.g.dart';
 /// * [change] 
 /// * [view] 
 /// * [delete] 
-/// * [markAsDecisive] 
+/// * [markAsExecutive] 
 @BuiltValue()
 abstract class AnnotationPermission implements Built<AnnotationPermission, AnnotationPermissionBuilder> {
   @BuiltValueField(wireName: r'add')
@@ -30,8 +30,8 @@ abstract class AnnotationPermission implements Built<AnnotationPermission, Annot
   @BuiltValueField(wireName: r'delete')
   bool get delete;
 
-  @BuiltValueField(wireName: r'mark_as_decisive')
-  bool get markAsDecisive;
+  @BuiltValueField(wireName: r'mark_as_executive')
+  bool get markAsExecutive;
 
   AnnotationPermission._();
 
@@ -76,9 +76,9 @@ class _$AnnotationPermissionSerializer implements PrimitiveSerializer<Annotation
       object.delete,
       specifiedType: const FullType(bool),
     );
-    yield r'mark_as_decisive';
+    yield r'mark_as_executive';
     yield serializers.serialize(
-      object.markAsDecisive,
+      object.markAsExecutive,
       specifiedType: const FullType(bool),
     );
   }
@@ -132,12 +132,12 @@ class _$AnnotationPermissionSerializer implements PrimitiveSerializer<Annotation
           ) as bool;
           result.delete = valueDes;
           break;
-        case r'mark_as_decisive':
+        case r'mark_as_executive':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(bool),
           ) as bool;
-          result.markAsDecisive = valueDes;
+          result.markAsExecutive = valueDes;
           break;
         default:
           unhandled.add(key);

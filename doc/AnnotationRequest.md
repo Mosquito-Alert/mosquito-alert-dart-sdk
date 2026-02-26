@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **characteristics** | [**SpeciesCharacteristicsRequest**](SpeciesCharacteristicsRequest.md) |  | [optional] 
 **feedback** | [**AnnotationFeedbackRequest**](AnnotationFeedbackRequest.md) |  | [optional] 
 **isFlagged** | **bool** |  | [optional] [default to false]
-**isDecisive** | **bool** |  | [optional] [default to false]
+**isExecutive** | **bool** |  | [optional] [default to false]
 **observationFlags** | [**ObservationFlagsRequest**](ObservationFlagsRequest.md) |  | [optional] 
 **tags** | **BuiltList&lt;String&gt;** |  | [optional] 
 

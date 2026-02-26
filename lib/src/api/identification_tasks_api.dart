@@ -159,7 +159,7 @@ class IdentificationTasksApi {
   /// * [classificationTaxonIds] 
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
-  /// * [isDecisive] 
+  /// * [decisionLevel] 
   /// * [isFavourite] 
   /// * [isFlagged] 
   /// * [orderBy] - Ordenamiento  
@@ -190,7 +190,7 @@ class IdentificationTasksApi {
     BuiltList<int>? classificationTaxonIds,
     DateTime? createdAtAfter,
     DateTime? createdAtBefore,
-    bool? isDecisive,
+    BuiltList<String>? decisionLevel,
     bool? isFavourite,
     bool? isFlagged,
     BuiltList<String>? orderBy,
@@ -247,7 +247,7 @@ class IdentificationTasksApi {
       if (classificationTaxonIds != null) r'classification_taxon_ids': encodeCollectionQueryParameter<int>(_serializers, classificationTaxonIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
-      if (isDecisive != null) r'is_decisive': encodeQueryParameter(_serializers, isDecisive, const FullType(bool)),
+      if (decisionLevel != null) r'decision_level': encodeCollectionQueryParameter<String>(_serializers, decisionLevel, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (isFavourite != null) r'is_favourite': encodeQueryParameter(_serializers, isFavourite, const FullType(bool)),
       if (isFlagged != null) r'is_flagged': encodeQueryParameter(_serializers, isFlagged, const FullType(bool)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
@@ -313,7 +313,7 @@ class IdentificationTasksApi {
   /// * [classificationTaxonIds] 
   /// * [createdAtAfter] - Created at
   /// * [createdAtBefore] - Created at
-  /// * [isDecisive] 
+  /// * [decisionLevel] 
   /// * [isFavourite] 
   /// * [isFlagged] 
   /// * [orderBy] - Ordenamiento  
@@ -343,7 +343,7 @@ class IdentificationTasksApi {
     BuiltList<int>? classificationTaxonIds,
     DateTime? createdAtAfter,
     DateTime? createdAtBefore,
-    bool? isDecisive,
+    BuiltList<String>? decisionLevel,
     bool? isFavourite,
     bool? isFlagged,
     BuiltList<String>? orderBy,
@@ -400,7 +400,7 @@ class IdentificationTasksApi {
       if (classificationTaxonIds != null) r'classification_taxon_ids': encodeCollectionQueryParameter<int>(_serializers, classificationTaxonIds, const FullType(BuiltList, [FullType(int)]), format: ListFormat.multi,),
       if (createdAtAfter != null) r'created_at_after': encodeQueryParameter(_serializers, createdAtAfter, const FullType(DateTime)),
       if (createdAtBefore != null) r'created_at_before': encodeQueryParameter(_serializers, createdAtBefore, const FullType(DateTime)),
-      if (isDecisive != null) r'is_decisive': encodeQueryParameter(_serializers, isDecisive, const FullType(bool)),
+      if (decisionLevel != null) r'decision_level': encodeCollectionQueryParameter<String>(_serializers, decisionLevel, const FullType(BuiltList, [FullType(String)]), format: ListFormat.multi,),
       if (isFavourite != null) r'is_favourite': encodeQueryParameter(_serializers, isFavourite, const FullType(bool)),
       if (isFlagged != null) r'is_flagged': encodeQueryParameter(_serializers, isFlagged, const FullType(bool)),
       if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),

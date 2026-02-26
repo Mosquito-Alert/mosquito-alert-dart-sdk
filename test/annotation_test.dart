@@ -52,8 +52,8 @@ void main() {
       // TODO
     });
 
-    // bool isDecisive (default value: false)
-    test('to test the property `isDecisive`', () async {
+    // String decisionLevel
+    test('to test the property `decisionLevel`', () async {
       // TODO
     });
 

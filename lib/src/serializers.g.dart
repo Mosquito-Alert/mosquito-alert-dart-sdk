@@ -10,6 +10,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AdmBoundary.serializer)
       ..add(AdmBoundaryRequest.serializer)
       ..add(Annotation.serializer)
+      ..add(AnnotationDecisionLevelEnum.serializer)
       ..add(AnnotationFeedback.serializer)
       ..add(AnnotationFeedbackRequest.serializer)
       ..add(AnnotationPermission.serializer)
@@ -769,12 +770,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(
           IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentCodeEnum
               .serializer)
-      ..add(IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent
+      ..add(IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent
           .serializer)
-      ..add(IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentAttrEnum
-          .serializer)
-      ..add(IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentCodeEnum
-          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnum
+              .serializer)
       ..add(IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent
           .serializer)
       ..add(IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum
@@ -871,6 +874,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(IdentificationtasksAnnotationsListCreatedAtErrorComponentCodeEnum
           .serializer)
+      ..add(IdentificationtasksAnnotationsListDecisionLevelErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnum
+              .serializer)
       ..add(IdentificationtasksAnnotationsListError.serializer)
       ..add(
           IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent
@@ -915,6 +926,14 @@ Serializers _$serializers = (new Serializers().toBuilder()
               .serializer)
       ..add(
           IdentificationtasksAnnotationsListMineCreatedAtErrorComponentCodeEnum
+              .serializer)
+      ..add(IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent
+          .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnum
+              .serializer)
+      ..add(
+          IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnum
               .serializer)
       ..add(IdentificationtasksAnnotationsListMineError.serializer)
       ..add(IdentificationtasksAnnotationsListMineOrderByErrorComponent

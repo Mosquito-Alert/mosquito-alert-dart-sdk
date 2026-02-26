@@ -21,7 +21,7 @@ part 'annotation_request.g.dart';
 /// * [characteristics] 
 /// * [feedback] 
 /// * [isFlagged] 
-/// * [isDecisive] 
+/// * [isExecutive] 
 /// * [observationFlags] 
 /// * [tags] 
 @BuiltValue()
@@ -41,8 +41,8 @@ abstract class AnnotationRequest implements Built<AnnotationRequest, AnnotationR
   @BuiltValueField(wireName: r'is_flagged')
   bool? get isFlagged;
 
-  @BuiltValueField(wireName: r'is_decisive')
-  bool? get isDecisive;
+  @BuiltValueField(wireName: r'is_executive')
+  bool? get isExecutive;
 
   @BuiltValueField(wireName: r'observation_flags')
   ObservationFlagsRequest? get observationFlags;
@@ -57,7 +57,7 @@ abstract class AnnotationRequest implements Built<AnnotationRequest, AnnotationR
   @BuiltValueHook(initializeBuilder: true)
   static void _defaults(AnnotationRequestBuilder b) => b
       ..isFlagged = false
-      ..isDecisive = false;
+      ..isExecutive = false;
 
   @BuiltValueSerializer(custom: true)
   static Serializer<AnnotationRequest> get serializer => _$AnnotationRequestSerializer();
@@ -108,10 +108,10 @@ class _$AnnotationRequestSerializer implements PrimitiveSerializer<AnnotationReq
         specifiedType: const FullType(bool),
       );
     }
-    if (object.isDecisive != null) {
-      yield r'is_decisive';
+    if (object.isExecutive != null) {
+      yield r'is_executive';
       yield serializers.serialize(
-        object.isDecisive,
+        object.isExecutive,
         specifiedType: const FullType(bool),
       );
     }
@@ -189,12 +189,12 @@ class _$AnnotationRequestSerializer implements PrimitiveSerializer<AnnotationReq
           ) as bool;
           result.isFlagged = valueDes;
           break;
-        case r'is_decisive':
+        case r'is_executive':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(bool),
           ) as bool;
-          result.isDecisive = valueDes;
+          result.isExecutive = valueDes;
           break;
         case r'observation_flags':
           final valueDes = serializers.deserialize(

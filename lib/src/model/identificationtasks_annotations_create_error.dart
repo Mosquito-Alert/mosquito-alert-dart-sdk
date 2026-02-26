@@ -9,6 +9,7 @@ import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_observation_flags_is_favourite_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_sex_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_classification_confidence_label_error_component.dart';
+import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_is_executive_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_observation_flags_is_visible_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_tags_error_component.dart';
@@ -19,7 +20,6 @@ import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_is_blood_fed_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_characteristics_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_is_decisive_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_observation_flags_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_public_note_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_annotations_create_feedback_internal_note_error_component.dart';
@@ -38,7 +38,7 @@ part 'identificationtasks_annotations_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class IdentificationtasksAnnotationsCreateError implements Built<IdentificationtasksAnnotationsCreateError, IdentificationtasksAnnotationsCreateErrorBuilder> {
-  /// One Of [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent], [IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent], [IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent], [IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent], [IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent], [IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent], [IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateTagsErrorComponent], [IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent]
+  /// One Of [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent], [IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent], [IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent], [IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent], [IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent], [IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent], [IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent], [IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent], [IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent], [IdentificationtasksAnnotationsCreateTagsErrorComponent], [IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -56,7 +56,7 @@ abstract class IdentificationtasksAnnotationsCreateError implements Built<Identi
     r'feedback.non_field_errors': IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent,
     r'feedback.public_note': IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent,
     r'feedback.user_note': IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent,
-    r'is_decisive': IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent,
+    r'is_executive': IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent,
     r'is_flagged': IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent,
     r'non_field_errors': IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent,
     r'observation_flags.is_favourite': IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent,
@@ -115,8 +115,8 @@ extension IdentificationtasksAnnotationsCreateErrorDiscriminatorExt on Identific
         if (this is IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent) {
             return r'feedback.user_note';
         }
-        if (this is IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent) {
-            return r'is_decisive';
+        if (this is IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent) {
+            return r'is_executive';
         }
         if (this is IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent) {
             return r'is_flagged';
@@ -180,8 +180,8 @@ extension IdentificationtasksAnnotationsCreateErrorBuilderDiscriminatorExt on Id
         if (this is IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponentBuilder) {
             return r'feedback.user_note';
         }
-        if (this is IdentificationtasksAnnotationsCreateIsDecisiveErrorComponentBuilder) {
-            return r'is_decisive';
+        if (this is IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentBuilder) {
+            return r'is_executive';
         }
         if (this is IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentBuilder) {
             return r'is_flagged';
@@ -244,7 +244,7 @@ class _$IdentificationtasksAnnotationsCreateErrorSerializer implements Primitive
     final discIndex = serializedList.indexOf(IdentificationtasksAnnotationsCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent, IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent, IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent, IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent, IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent, IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent, IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent, IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent, IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent, IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateTagsErrorComponent, IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent, ];
+    final oneOfTypes = [IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateCharacteristicsSexErrorComponent, IdentificationtasksAnnotationsCreateClassificationConfidenceLabelErrorComponent, IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent, IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent, IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent, IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent, IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent, IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent, IdentificationtasksAnnotationsCreateNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent, IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent, IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent, IdentificationtasksAnnotationsCreateTagsErrorComponent, IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -332,12 +332,12 @@ class _$IdentificationtasksAnnotationsCreateErrorSerializer implements Primitive
         ) as IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent;
         oneOfType = IdentificationtasksAnnotationsCreateFeedbackUserNoteErrorComponent;
         break;
-      case r'is_decisive':
+      case r'is_executive':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
-          specifiedType: FullType(IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent),
-        ) as IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent;
-        oneOfType = IdentificationtasksAnnotationsCreateIsDecisiveErrorComponent;
+          specifiedType: FullType(IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent),
+        ) as IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent;
+        oneOfType = IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent;
         break;
       case r'is_flagged':
         oneOfResult = serializers.deserialize(
