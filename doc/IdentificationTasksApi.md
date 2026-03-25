@@ -108,10 +108,10 @@ final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Create
 final BuiltList<String> decisionLevel = ; // BuiltList<String> | 
 final bool isFavourite = true; // bool | 
 final bool isFlagged = true; // bool | 
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
-final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
-final int pageSize = 56; // int | Número de resultados a devolver por página.
-final String search = search_example; // String | Un término de búsqueda.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordering  
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
+final String search = search_example; // String | A search term.
 final String type = type_example; // String | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
@@ -142,10 +142,10 @@ Name | Type | Description  | Notes
  **decisionLevel** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **isFavourite** | **bool**|  | [optional] 
  **isFlagged** | **bool**|  | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
- **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
- **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
- **search** | **String**| Un término de búsqueda. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordering   | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **type** | **String**|  | [optional] 
  **updatedAtAfter** | **DateTime**| Updated at | [optional] 
  **updatedAtBefore** | **DateTime**| Updated at | [optional] 
@@ -198,10 +198,10 @@ final DateTime createdAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Create
 final BuiltList<String> decisionLevel = ; // BuiltList<String> | 
 final bool isFavourite = true; // bool | 
 final bool isFlagged = true; // bool | 
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
-final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
-final int pageSize = 56; // int | Número de resultados a devolver por página.
-final String search = search_example; // String | Un término de búsqueda.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordering  
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
+final String search = search_example; // String | A search term.
 final String type = type_example; // String | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Updated at
@@ -231,10 +231,10 @@ Name | Type | Description  | Notes
  **decisionLevel** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **isFavourite** | **bool**|  | [optional] 
  **isFlagged** | **bool**|  | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
- **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
- **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
- **search** | **String**| Un término de búsqueda. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordering   | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **type** | **String**|  | [optional] 
  **updatedAtAfter** | **DateTime**| Updated at | [optional] 
  **updatedAtBefore** | **DateTime**| Updated at | [optional] 
@@ -273,7 +273,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getIdentificationTasksApi();
-final int id = 56; // int | Un valor de entero único que identifique este expert report annotation.
+final int id = 56; // int | A unique integer value identifying this expert report annotation.
 final String observationUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | UUID of the Observation
 
 try {
@@ -288,7 +288,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| Un valor de entero único que identifique este expert report annotation. | 
+ **id** | **int**| A unique integer value identifying this expert report annotation. | 
  **observationUuid** | **String**| UUID of the Observation | 
 
 ### Return type
@@ -381,9 +381,9 @@ final bool isSafe = true; // bool |
 final int numAnnotationsMax = 56; // int | 
 final int numAnnotationsMin = 56; // int | 
 final BuiltList<int> observationCountryIds = ; // BuiltList<int> | 
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
-final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
-final int pageSize = 56; // int | Número de resultados a devolver por página.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordering  
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
 final double resultAgreementMax = 1.2; // double | 
 final double resultAgreementMin = 1.2; // double | 
 final bool resultCharacteristicsIsBloodFed = true; // bool | 
@@ -396,7 +396,7 @@ final BuiltList<int> resultTaxonIds = ; // BuiltList<int> |
 final double resultUncertaintyMax = 1.2; // double | 
 final double resultUncertaintyMin = 1.2; // double | 
 final String reviewAction = reviewAction_example; // String | 
-final String search = search_example; // String | Un término de búsqueda.
+final String search = search_example; // String | A search term.
 final BuiltList<String> status = ; // BuiltList<String> | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
@@ -423,9 +423,9 @@ Name | Type | Description  | Notes
  **numAnnotationsMax** | **int**|  | [optional] 
  **numAnnotationsMin** | **int**|  | [optional] 
  **observationCountryIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
- **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
- **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordering   | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
  **resultAgreementMax** | **double**|  | [optional] 
  **resultAgreementMin** | **double**|  | [optional] 
  **resultCharacteristicsIsBloodFed** | **bool**|  | [optional] 
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
  **resultUncertaintyMax** | **double**|  | [optional] 
  **resultUncertaintyMin** | **double**|  | [optional] 
  **reviewAction** | **String**|  | [optional] 
- **search** | **String**| Un término de búsqueda. | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **status** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
@@ -488,9 +488,9 @@ final bool isSafe = true; // bool |
 final int numAnnotationsMax = 56; // int | 
 final int numAnnotationsMin = 56; // int | 
 final BuiltList<int> observationCountryIds = ; // BuiltList<int> | 
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
-final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
-final int pageSize = 56; // int | Número de resultados a devolver por página.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordering  
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
 final double resultAgreementMax = 1.2; // double | 
 final double resultAgreementMin = 1.2; // double | 
 final bool resultCharacteristicsIsBloodFed = true; // bool | 
@@ -503,7 +503,7 @@ final BuiltList<int> resultTaxonIds = ; // BuiltList<int> |
 final double resultUncertaintyMax = 1.2; // double | 
 final double resultUncertaintyMin = 1.2; // double | 
 final String reviewAction = reviewAction_example; // String | 
-final String search = search_example; // String | Un término de búsqueda.
+final String search = search_example; // String | A search term.
 final BuiltList<String> status = ; // BuiltList<String> | 
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
@@ -530,9 +530,9 @@ Name | Type | Description  | Notes
  **numAnnotationsMax** | **int**|  | [optional] 
  **numAnnotationsMin** | **int**|  | [optional] 
  **observationCountryIds** | [**BuiltList&lt;int&gt;**](int.md)|  | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
- **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
- **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordering   | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
  **resultAgreementMax** | **double**|  | [optional] 
  **resultAgreementMin** | **double**|  | [optional] 
  **resultCharacteristicsIsBloodFed** | **bool**|  | [optional] 
@@ -545,7 +545,7 @@ Name | Type | Description  | Notes
  **resultUncertaintyMax** | **double**|  | [optional] 
  **resultUncertaintyMin** | **double**|  | [optional] 
  **reviewAction** | **String**|  | [optional] 
- **search** | **String**| Un término de búsqueda. | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **status** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
@@ -685,8 +685,8 @@ import 'package:mosquito_alert/api.dart';
 
 final api = MosquitoAlert().getIdentificationTasksApi();
 final String observationUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | UUID of the Observation
-final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
-final int pageSize = 56; // int | Número de resultados a devolver por página.
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
 
 try {
     final response = api.predictionsList(observationUuid, page, pageSize);
@@ -701,8 +701,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **observationUuid** | **String**| UUID of the Observation | 
- **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
- **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
 
 ### Return type
 

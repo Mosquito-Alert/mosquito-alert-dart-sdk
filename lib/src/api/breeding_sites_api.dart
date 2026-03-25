@@ -241,14 +241,14 @@ class BreedingSitesApi {
   /// * [hasNearMosquitoes] 
   /// * [hasPhotos] - Has any photo
   /// * [hasWater] 
-  /// * [orderBy] - Ordenamiento  
+  /// * [orderBy] - Ordering  
   /// * [point] - Point represented in **x,y** format. Represents **point** in **Distance to point filter**
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
-  /// * [search] - Un término de búsqueda.
+  /// * [search] - A search term.
   /// * [shortId] - Short ID
   /// * [siteType] - Breeding site type.  
-  /// * [tags] - Múltiples valores separados por comas.
+  /// * [tags] - Multiple values may be separated by commas.
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
   /// * [userUuid] 
@@ -398,16 +398,16 @@ class BreedingSitesApi {
   /// * [hasNearMosquitoes] 
   /// * [hasPhotos] - Has any photo
   /// * [hasWater] 
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [point] - Point represented in **x,y** format. Represents **point** in **Distance to point filter**
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
-  /// * [search] - Un término de búsqueda.
+  /// * [search] - A search term.
   /// * [shortId] - Short ID
   /// * [siteType] - Breeding site type.  
-  /// * [tags] - Múltiples valores separados por comas.
+  /// * [tags] - Multiple values may be separated by commas.
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
   /// * [userUuid] 
@@ -563,16 +563,16 @@ class BreedingSitesApi {
   /// * [hasNearMosquitoes] 
   /// * [hasPhotos] - Has any photo
   /// * [hasWater] 
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [point] - Point represented in **x,y** format. Represents **point** in **Distance to point filter**
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
-  /// * [search] - Un término de búsqueda.
+  /// * [search] - A search term.
   /// * [shortId] - Short ID
   /// * [siteType] - Breeding site type.  
-  /// * [tags] - Múltiples valores separados por comas.
+  /// * [tags] - Multiple values may be separated by commas.
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
   /// * [userUuid] 

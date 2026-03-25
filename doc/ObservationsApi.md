@@ -158,13 +158,13 @@ final bool hasPhotos = true; // bool | Has any photo
 final BuiltList<String> identificationTaxonIds = ; // BuiltList<String> | 
 final String identificationTaxonIdsLookup = identificationTaxonIdsLookup_example; // String | 
 final bool negateIdentificationTaxonIds = true; // bool | Negate identification_taxon_ids filter
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordering  
 final BuiltList<double> point = [0,10]; // BuiltList<double> | Point represented in **x,y** format. Represents **point** in **Distance to point filter**
 final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
-final String search = search_example; // String | Un término de búsqueda.
+final String search = search_example; // String | A search term.
 final String shortId = shortId_example; // String | Short ID
-final BuiltList<String> tags = ; // BuiltList<String> | Múltiples valores separados por comas.
+final BuiltList<String> tags = ; // BuiltList<String> | Multiple values may be separated by commas.
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -191,13 +191,13 @@ Name | Type | Description  | Notes
  **identificationTaxonIds** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **identificationTaxonIdsLookup** | **String**|  | [optional] 
  **negateIdentificationTaxonIds** | **bool**| Negate identification_taxon_ids filter | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordering   | [optional] 
  **point** | [**BuiltList&lt;double&gt;**](double.md)| Point represented in **x,y** format. Represents **point** in **Distance to point filter** | [optional] 
  **receivedAtAfter** | **DateTime**| Received at | [optional] 
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
- **search** | **String**| Un término de búsqueda. | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
- **tags** | [**BuiltList&lt;String&gt;**](String.md)| Múltiples valores separados por comas. | [optional] 
+ **tags** | [**BuiltList&lt;String&gt;**](String.md)| Multiple values may be separated by commas. | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
  **userUuid** | **String**|  | [optional] 
@@ -246,15 +246,15 @@ final bool hasPhotos = true; // bool | Has any photo
 final BuiltList<String> identificationTaxonIds = ; // BuiltList<String> | 
 final String identificationTaxonIdsLookup = identificationTaxonIdsLookup_example; // String | 
 final bool negateIdentificationTaxonIds = true; // bool | Negate identification_taxon_ids filter
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
-final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
-final int pageSize = 56; // int | Número de resultados a devolver por página.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordering  
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
 final BuiltList<double> point = [0,10]; // BuiltList<double> | Point represented in **x,y** format. Represents **point** in **Distance to point filter**
 final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
-final String search = search_example; // String | Un término de búsqueda.
+final String search = search_example; // String | A search term.
 final String shortId = shortId_example; // String | Short ID
-final BuiltList<String> tags = ; // BuiltList<String> | Múltiples valores separados por comas.
+final BuiltList<String> tags = ; // BuiltList<String> | Multiple values may be separated by commas.
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -282,15 +282,15 @@ Name | Type | Description  | Notes
  **identificationTaxonIds** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **identificationTaxonIdsLookup** | **String**|  | [optional] 
  **negateIdentificationTaxonIds** | **bool**| Negate identification_taxon_ids filter | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
- **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
- **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordering   | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
  **point** | [**BuiltList&lt;double&gt;**](double.md)| Point represented in **x,y** format. Represents **point** in **Distance to point filter** | [optional] 
  **receivedAtAfter** | **DateTime**| Received at | [optional] 
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
- **search** | **String**| Un término de búsqueda. | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
- **tags** | [**BuiltList&lt;String&gt;**](String.md)| Múltiples valores separados por comas. | [optional] 
+ **tags** | [**BuiltList&lt;String&gt;**](String.md)| Multiple values may be separated by commas. | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
  **userUuid** | **String**|  | [optional] 
@@ -341,15 +341,15 @@ final bool hasPhotos = true; // bool | Has any photo
 final BuiltList<String> identificationTaxonIds = ; // BuiltList<String> | 
 final String identificationTaxonIdsLookup = identificationTaxonIdsLookup_example; // String | 
 final bool negateIdentificationTaxonIds = true; // bool | Negate identification_taxon_ids filter
-final BuiltList<String> orderBy = ; // BuiltList<String> | Ordenamiento  
-final int page = 56; // int | Un número de página dentro del conjunto de resultados paginado.
-final int pageSize = 56; // int | Número de resultados a devolver por página.
+final BuiltList<String> orderBy = ; // BuiltList<String> | Ordering  
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
 final BuiltList<double> point = [0,10]; // BuiltList<double> | Point represented in **x,y** format. Represents **point** in **Distance to point filter**
 final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
-final String search = search_example; // String | Un término de búsqueda.
+final String search = search_example; // String | A search term.
 final String shortId = shortId_example; // String | Short ID
-final BuiltList<String> tags = ; // BuiltList<String> | Múltiples valores separados por comas.
+final BuiltList<String> tags = ; // BuiltList<String> | Multiple values may be separated by commas.
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final String userUuid = 38400000-8cf0-11bd-b23e-10b96e4ef00d; // String | 
@@ -377,15 +377,15 @@ Name | Type | Description  | Notes
  **identificationTaxonIds** | [**BuiltList&lt;String&gt;**](String.md)|  | [optional] 
  **identificationTaxonIdsLookup** | **String**|  | [optional] 
  **negateIdentificationTaxonIds** | **bool**| Negate identification_taxon_ids filter | [optional] 
- **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordenamiento   | [optional] 
- **page** | **int**| Un número de página dentro del conjunto de resultados paginado. | [optional] 
- **pageSize** | **int**| Número de resultados a devolver por página. | [optional] 
+ **orderBy** | [**BuiltList&lt;String&gt;**](String.md)| Ordering   | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
  **point** | [**BuiltList&lt;double&gt;**](double.md)| Point represented in **x,y** format. Represents **point** in **Distance to point filter** | [optional] 
  **receivedAtAfter** | **DateTime**| Received at | [optional] 
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
- **search** | **String**| Un término de búsqueda. | [optional] 
+ **search** | **String**| A search term. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
- **tags** | [**BuiltList&lt;String&gt;**](String.md)| Múltiples valores separados por comas. | [optional] 
+ **tags** | [**BuiltList&lt;String&gt;**](String.md)| Multiple values may be separated by commas. | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
  **userUuid** | **String**|  | [optional] 

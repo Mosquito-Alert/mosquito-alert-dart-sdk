@@ -6,6 +6,8 @@ part of 'patched_user_request.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_en =
+    const PatchedUserRequestLocaleEnum._('en');
 const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_es =
     const PatchedUserRequestLocaleEnum._('es');
 const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_ca =
@@ -16,8 +18,6 @@ const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_bn =
     const PatchedUserRequestLocaleEnum._('bn');
 const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_sv =
     const PatchedUserRequestLocaleEnum._('sv');
-const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_en =
-    const PatchedUserRequestLocaleEnum._('en');
 const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_de =
     const PatchedUserRequestLocaleEnum._('de');
 const PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnum_sq =
@@ -61,6 +61,8 @@ const PatchedUserRequestLocaleEnum
 PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnumValueOf(
     String name) {
   switch (name) {
+    case 'en':
+      return _$patchedUserRequestLocaleEnum_en;
     case 'es':
       return _$patchedUserRequestLocaleEnum_es;
     case 'ca':
@@ -71,8 +73,6 @@ PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnumValueOf(
       return _$patchedUserRequestLocaleEnum_bn;
     case 'sv':
       return _$patchedUserRequestLocaleEnum_sv;
-    case 'en':
-      return _$patchedUserRequestLocaleEnum_en;
     case 'de':
       return _$patchedUserRequestLocaleEnum_de;
     case 'sq':
@@ -119,12 +119,12 @@ PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnumValueOf(
 final BuiltSet<PatchedUserRequestLocaleEnum>
     _$patchedUserRequestLocaleEnumValues = new BuiltSet<
         PatchedUserRequestLocaleEnum>(const <PatchedUserRequestLocaleEnum>[
+  _$patchedUserRequestLocaleEnum_en,
   _$patchedUserRequestLocaleEnum_es,
   _$patchedUserRequestLocaleEnum_ca,
   _$patchedUserRequestLocaleEnum_eu,
   _$patchedUserRequestLocaleEnum_bn,
   _$patchedUserRequestLocaleEnum_sv,
-  _$patchedUserRequestLocaleEnum_en,
   _$patchedUserRequestLocaleEnum_de,
   _$patchedUserRequestLocaleEnum_sq,
   _$patchedUserRequestLocaleEnum_el,
@@ -153,12 +153,12 @@ Serializer<PatchedUserRequestLocaleEnum>
 class _$PatchedUserRequestLocaleEnumSerializer
     implements PrimitiveSerializer<PatchedUserRequestLocaleEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'en': 'en',
     'es': 'es',
     'ca': 'ca',
     'eu': 'eu',
     'bn': 'bn',
     'sv': 'sv',
-    'en': 'en',
     'de': 'de',
     'sq': 'sq',
     'el': 'el',
@@ -180,12 +180,12 @@ class _$PatchedUserRequestLocaleEnumSerializer
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'en': 'en',
     'es': 'es',
     'ca': 'ca',
     'eu': 'eu',
     'bn': 'bn',
     'sv': 'sv',
-    'en': 'en',
     'de': 'de',
     'sq': 'sq',
     'el': 'el',

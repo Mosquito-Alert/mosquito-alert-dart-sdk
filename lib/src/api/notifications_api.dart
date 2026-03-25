@@ -140,9 +140,9 @@ class NotificationsApi {
   ///
   /// Parameters:
   /// * [isRead] 
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -245,9 +245,9 @@ class NotificationsApi {
   ///
   /// Parameters:
   /// * [isRead] 
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -349,7 +349,7 @@ class NotificationsApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - Un valor de entero único que identifique este notification.
+  /// * [id] - A unique integer value identifying this notification.
   /// * [patchedNotificationRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -462,7 +462,7 @@ class NotificationsApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - Un valor de entero único que identifique este notification.
+  /// * [id] - A unique integer value identifying this notification.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -553,7 +553,7 @@ class NotificationsApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - Un valor de entero único que identifique este notification.
+  /// * [id] - A unique integer value identifying this notification.
   /// * [notificationRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request

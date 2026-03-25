@@ -6,12 +6,12 @@ part of 'user.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const UserLocaleEnum _$userLocaleEnum_en = const UserLocaleEnum._('en');
 const UserLocaleEnum _$userLocaleEnum_es = const UserLocaleEnum._('es');
 const UserLocaleEnum _$userLocaleEnum_ca = const UserLocaleEnum._('ca');
 const UserLocaleEnum _$userLocaleEnum_eu = const UserLocaleEnum._('eu');
 const UserLocaleEnum _$userLocaleEnum_bn = const UserLocaleEnum._('bn');
 const UserLocaleEnum _$userLocaleEnum_sv = const UserLocaleEnum._('sv');
-const UserLocaleEnum _$userLocaleEnum_en = const UserLocaleEnum._('en');
 const UserLocaleEnum _$userLocaleEnum_de = const UserLocaleEnum._('de');
 const UserLocaleEnum _$userLocaleEnum_sq = const UserLocaleEnum._('sq');
 const UserLocaleEnum _$userLocaleEnum_el = const UserLocaleEnum._('el');
@@ -35,6 +35,8 @@ const UserLocaleEnum _$userLocaleEnum_unknownDefaultOpenApi =
 
 UserLocaleEnum _$userLocaleEnumValueOf(String name) {
   switch (name) {
+    case 'en':
+      return _$userLocaleEnum_en;
     case 'es':
       return _$userLocaleEnum_es;
     case 'ca':
@@ -45,8 +47,6 @@ UserLocaleEnum _$userLocaleEnumValueOf(String name) {
       return _$userLocaleEnum_bn;
     case 'sv':
       return _$userLocaleEnum_sv;
-    case 'en':
-      return _$userLocaleEnum_en;
     case 'de':
       return _$userLocaleEnum_de;
     case 'sq':
@@ -92,12 +92,12 @@ UserLocaleEnum _$userLocaleEnumValueOf(String name) {
 
 final BuiltSet<UserLocaleEnum> _$userLocaleEnumValues =
     new BuiltSet<UserLocaleEnum>(const <UserLocaleEnum>[
+  _$userLocaleEnum_en,
   _$userLocaleEnum_es,
   _$userLocaleEnum_ca,
   _$userLocaleEnum_eu,
   _$userLocaleEnum_bn,
   _$userLocaleEnum_sv,
-  _$userLocaleEnum_en,
   _$userLocaleEnum_de,
   _$userLocaleEnum_sq,
   _$userLocaleEnum_el,
@@ -125,12 +125,12 @@ Serializer<UserLocaleEnum> _$userLocaleEnumSerializer =
 class _$UserLocaleEnumSerializer
     implements PrimitiveSerializer<UserLocaleEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'en': 'en',
     'es': 'es',
     'ca': 'ca',
     'eu': 'eu',
     'bn': 'bn',
     'sv': 'sv',
-    'en': 'en',
     'de': 'de',
     'sq': 'sq',
     'el': 'el',
@@ -152,12 +152,12 @@ class _$UserLocaleEnumSerializer
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'en': 'en',
     'es': 'es',
     'ca': 'ca',
     'eu': 'eu',
     'bn': 'bn',
     'sv': 'sv',
-    'en': 'en',
     'de': 'de',
     'sq': 'sq',
     'el': 'el',

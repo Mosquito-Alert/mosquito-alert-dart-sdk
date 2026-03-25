@@ -162,10 +162,10 @@ class IdentificationTasksApi {
   /// * [decisionLevel] 
   /// * [isFavourite] 
   /// * [isFlagged] 
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
-  /// * [search] - Un término de búsqueda.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
+  /// * [search] - A search term.
   /// * [type] 
   /// * [updatedAtAfter] - Updated at
   /// * [updatedAtBefore] - Updated at
@@ -316,10 +316,10 @@ class IdentificationTasksApi {
   /// * [decisionLevel] 
   /// * [isFavourite] 
   /// * [isFlagged] 
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
-  /// * [search] - Un término de búsqueda.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
+  /// * [search] - A search term.
   /// * [type] 
   /// * [updatedAtAfter] - Updated at
   /// * [updatedAtBefore] - Updated at
@@ -457,7 +457,7 @@ class IdentificationTasksApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - Un valor de entero único que identifique este expert report annotation.
+  /// * [id] - A unique integer value identifying this expert report annotation.
   /// * [observationUuid] - UUID of the Observation
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -649,9 +649,9 @@ class IdentificationTasksApi {
   /// * [numAnnotationsMax] 
   /// * [numAnnotationsMin] 
   /// * [observationCountryIds] 
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [resultAgreementMax] 
   /// * [resultAgreementMin] 
   /// * [resultCharacteristicsIsBloodFed] 
@@ -664,7 +664,7 @@ class IdentificationTasksApi {
   /// * [resultUncertaintyMax] 
   /// * [resultUncertaintyMin] 
   /// * [reviewAction] 
-  /// * [search] - Un término de búsqueda.
+  /// * [search] - A search term.
   /// * [status] 
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -829,9 +829,9 @@ class IdentificationTasksApi {
   /// * [numAnnotationsMax] 
   /// * [numAnnotationsMin] 
   /// * [observationCountryIds] 
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [resultAgreementMax] 
   /// * [resultAgreementMin] 
   /// * [resultCharacteristicsIsBloodFed] 
@@ -844,7 +844,7 @@ class IdentificationTasksApi {
   /// * [resultUncertaintyMax] 
   /// * [resultUncertaintyMin] 
   /// * [reviewAction] 
-  /// * [search] - Un término de búsqueda.
+  /// * [search] - A search term.
   /// * [status] 
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
@@ -1178,8 +1178,8 @@ class IdentificationTasksApi {
   ///
   /// Parameters:
   /// * [observationUuid] - UUID of the Observation
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request

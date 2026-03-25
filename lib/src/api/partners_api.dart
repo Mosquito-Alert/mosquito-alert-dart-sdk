@@ -23,8 +23,8 @@ class PartnersApi {
   /// 
   ///
   /// Parameters:
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -122,7 +122,7 @@ class PartnersApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - Un valor de entero único que identifique este organization pin.
+  /// * [id] - A unique integer value identifying this organization pin.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request

@@ -18,7 +18,7 @@ abstract class UserRequest implements Built<UserRequest, UserRequestBuilder> {
   /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
   @BuiltValueField(wireName: r'locale')
   UserRequestLocaleEnum? get locale;
-  // enum localeEnum {  es,  ca,  eu,  bn,  sv,  en,  de,  sq,  el,  gl,  hu,  pt,  sl,  it,  fr,  bg,  ro,  hr,  mk,  sr,  lb,  nl,  tr,  zh-CN,  };
+  // enum localeEnum {  en,  es,  ca,  eu,  bn,  sv,  de,  sq,  el,  gl,  hu,  pt,  sl,  it,  fr,  bg,  ro,  hr,  mk,  sr,  lb,  nl,  tr,  zh-CN,  };
 
   UserRequest._();
 
@@ -113,6 +113,9 @@ class _$UserRequestSerializer implements PrimitiveSerializer<UserRequest> {
 class UserRequestLocaleEnum extends EnumClass {
 
   /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
+  @BuiltValueEnumConst(wireName: r'en')
+  static const UserRequestLocaleEnum en = _$userRequestLocaleEnum_en;
+  /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
   @BuiltValueEnumConst(wireName: r'es')
   static const UserRequestLocaleEnum es = _$userRequestLocaleEnum_es;
   /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
@@ -127,9 +130,6 @@ class UserRequestLocaleEnum extends EnumClass {
   /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
   @BuiltValueEnumConst(wireName: r'sv')
   static const UserRequestLocaleEnum sv = _$userRequestLocaleEnum_sv;
-  /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
-  @BuiltValueEnumConst(wireName: r'en')
-  static const UserRequestLocaleEnum en = _$userRequestLocaleEnum_en;
   /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
   @BuiltValueEnumConst(wireName: r'de')
   static const UserRequestLocaleEnum de = _$userRequestLocaleEnum_de;

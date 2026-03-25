@@ -6,6 +6,8 @@ part of 'minimal_user.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
+const MinimalUserLocaleEnum _$minimalUserLocaleEnum_en =
+    const MinimalUserLocaleEnum._('en');
 const MinimalUserLocaleEnum _$minimalUserLocaleEnum_es =
     const MinimalUserLocaleEnum._('es');
 const MinimalUserLocaleEnum _$minimalUserLocaleEnum_ca =
@@ -16,8 +18,6 @@ const MinimalUserLocaleEnum _$minimalUserLocaleEnum_bn =
     const MinimalUserLocaleEnum._('bn');
 const MinimalUserLocaleEnum _$minimalUserLocaleEnum_sv =
     const MinimalUserLocaleEnum._('sv');
-const MinimalUserLocaleEnum _$minimalUserLocaleEnum_en =
-    const MinimalUserLocaleEnum._('en');
 const MinimalUserLocaleEnum _$minimalUserLocaleEnum_de =
     const MinimalUserLocaleEnum._('de');
 const MinimalUserLocaleEnum _$minimalUserLocaleEnum_sq =
@@ -59,6 +59,8 @@ const MinimalUserLocaleEnum _$minimalUserLocaleEnum_unknownDefaultOpenApi =
 
 MinimalUserLocaleEnum _$minimalUserLocaleEnumValueOf(String name) {
   switch (name) {
+    case 'en':
+      return _$minimalUserLocaleEnum_en;
     case 'es':
       return _$minimalUserLocaleEnum_es;
     case 'ca':
@@ -69,8 +71,6 @@ MinimalUserLocaleEnum _$minimalUserLocaleEnumValueOf(String name) {
       return _$minimalUserLocaleEnum_bn;
     case 'sv':
       return _$minimalUserLocaleEnum_sv;
-    case 'en':
-      return _$minimalUserLocaleEnum_en;
     case 'de':
       return _$minimalUserLocaleEnum_de;
     case 'sq':
@@ -116,12 +116,12 @@ MinimalUserLocaleEnum _$minimalUserLocaleEnumValueOf(String name) {
 
 final BuiltSet<MinimalUserLocaleEnum> _$minimalUserLocaleEnumValues =
     new BuiltSet<MinimalUserLocaleEnum>(const <MinimalUserLocaleEnum>[
+  _$minimalUserLocaleEnum_en,
   _$minimalUserLocaleEnum_es,
   _$minimalUserLocaleEnum_ca,
   _$minimalUserLocaleEnum_eu,
   _$minimalUserLocaleEnum_bn,
   _$minimalUserLocaleEnum_sv,
-  _$minimalUserLocaleEnum_en,
   _$minimalUserLocaleEnum_de,
   _$minimalUserLocaleEnum_sq,
   _$minimalUserLocaleEnum_el,
@@ -149,12 +149,12 @@ Serializer<MinimalUserLocaleEnum> _$minimalUserLocaleEnumSerializer =
 class _$MinimalUserLocaleEnumSerializer
     implements PrimitiveSerializer<MinimalUserLocaleEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'en': 'en',
     'es': 'es',
     'ca': 'ca',
     'eu': 'eu',
     'bn': 'bn',
     'sv': 'sv',
-    'en': 'en',
     'de': 'de',
     'sq': 'sq',
     'el': 'el',
@@ -176,12 +176,12 @@ class _$MinimalUserLocaleEnumSerializer
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'en': 'en',
     'es': 'es',
     'ca': 'ca',
     'eu': 'eu',
     'bn': 'bn',
     'sv': 'sv',
-    'en': 'en',
     'de': 'de',
     'sq': 'sq',
     'el': 'el',

@@ -206,13 +206,13 @@ class BitesApi {
   /// * [createdAtBefore] - Created at
   /// * [dist] - Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
   /// * [geoPrecision] - Latitude/Longitude precision
-  /// * [orderBy] - Ordenamiento  
+  /// * [orderBy] - Ordering  
   /// * [point] - Point represented in **x,y** format. Represents **point** in **Distance to point filter**
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
-  /// * [search] - Un término de búsqueda.
+  /// * [search] - A search term.
   /// * [shortId] - Short ID
-  /// * [tags] - Múltiples valores separados por comas.
+  /// * [tags] - Multiple values may be separated by commas.
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
   /// * [userUuid] 
@@ -348,15 +348,15 @@ class BitesApi {
   /// * [dist] - Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
   /// * [format] 
   /// * [geoPrecision] - Latitude/Longitude precision
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [point] - Point represented in **x,y** format. Represents **point** in **Distance to point filter**
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
-  /// * [search] - Un término de búsqueda.
+  /// * [search] - A search term.
   /// * [shortId] - Short ID
-  /// * [tags] - Múltiples valores separados por comas.
+  /// * [tags] - Multiple values may be separated by commas.
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
   /// * [userUuid] 
@@ -498,15 +498,15 @@ class BitesApi {
   /// * [dist] - Represents **Distance** in **Distance to point** filter. Default value is used only if ***point*** is passed.
   /// * [format] 
   /// * [geoPrecision] - Latitude/Longitude precision
-  /// * [orderBy] - Ordenamiento  
-  /// * [page] - Un número de página dentro del conjunto de resultados paginado.
-  /// * [pageSize] - Número de resultados a devolver por página.
+  /// * [orderBy] - Ordering  
+  /// * [page] - A page number within the paginated result set.
+  /// * [pageSize] - Number of results to return per page.
   /// * [point] - Point represented in **x,y** format. Represents **point** in **Distance to point filter**
   /// * [receivedAtAfter] - Received at
   /// * [receivedAtBefore] - Received at
-  /// * [search] - Un término de búsqueda.
+  /// * [search] - A search term.
   /// * [shortId] - Short ID
-  /// * [tags] - Múltiples valores separados por comas.
+  /// * [tags] - Multiple values may be separated by commas.
   /// * [updatedAtAfter] - Update at
   /// * [updatedAtBefore] - Update at
   /// * [userUuid] 
