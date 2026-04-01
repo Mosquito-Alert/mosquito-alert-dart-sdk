@@ -13,6 +13,8 @@ class _$Permissions extends Permissions {
   final IdentificationTaskPermission identificationTask;
   @override
   final ReviewPermission review;
+  @override
+  final MessagePermission message;
 
   factory _$Permissions([void Function(PermissionsBuilder)? updates]) =>
       (new PermissionsBuilder()..update(updates))._build();
@@ -20,13 +22,15 @@ class _$Permissions extends Permissions {
   _$Permissions._(
       {required this.annotation,
       required this.identificationTask,
-      required this.review})
+      required this.review,
+      required this.message})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         annotation, r'Permissions', 'annotation');
     BuiltValueNullFieldError.checkNotNull(
         identificationTask, r'Permissions', 'identificationTask');
     BuiltValueNullFieldError.checkNotNull(review, r'Permissions', 'review');
+    BuiltValueNullFieldError.checkNotNull(message, r'Permissions', 'message');
   }
 
   @override
@@ -42,7 +46,8 @@ class _$Permissions extends Permissions {
     return other is Permissions &&
         annotation == other.annotation &&
         identificationTask == other.identificationTask &&
-        review == other.review;
+        review == other.review &&
+        message == other.message;
   }
 
   @override
@@ -51,6 +56,7 @@ class _$Permissions extends Permissions {
     _$hash = $jc(_$hash, annotation.hashCode);
     _$hash = $jc(_$hash, identificationTask.hashCode);
     _$hash = $jc(_$hash, review.hashCode);
+    _$hash = $jc(_$hash, message.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -60,7 +66,8 @@ class _$Permissions extends Permissions {
     return (newBuiltValueToStringHelper(r'Permissions')
           ..add('annotation', annotation)
           ..add('identificationTask', identificationTask)
-          ..add('review', review))
+          ..add('review', review)
+          ..add('message', message))
         .toString();
   }
 }
@@ -86,6 +93,11 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
       _$this._review ??= new ReviewPermissionBuilder();
   set review(ReviewPermissionBuilder? review) => _$this._review = review;
 
+  MessagePermissionBuilder? _message;
+  MessagePermissionBuilder get message =>
+      _$this._message ??= new MessagePermissionBuilder();
+  set message(MessagePermissionBuilder? message) => _$this._message = message;
+
   PermissionsBuilder() {
     Permissions._defaults(this);
   }
@@ -96,6 +108,7 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
       _annotation = $v.annotation.toBuilder();
       _identificationTask = $v.identificationTask.toBuilder();
       _review = $v.review.toBuilder();
+      _message = $v.message.toBuilder();
       _$v = null;
     }
     return this;
@@ -122,7 +135,8 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
           new _$Permissions._(
               annotation: annotation.build(),
               identificationTask: identificationTask.build(),
-              review: review.build());
+              review: review.build(),
+              message: message.build());
     } catch (_) {
       late String _$failedField;
       try {
@@ -132,6 +146,8 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
         identificationTask.build();
         _$failedField = 'review';
         review.build();
+        _$failedField = 'message';
+        message.build();
       } catch (e) {
         throw new BuiltValueNestedFieldError(
             r'Permissions', _$failedField, e.toString());

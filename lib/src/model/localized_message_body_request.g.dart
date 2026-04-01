@@ -18,7 +18,7 @@ class _$LocalizedMessageBodyRequest extends LocalizedMessageBodyRequest {
   @override
   final String? el;
   @override
-  final String en;
+  final String? en;
   @override
   final String? es;
   @override
@@ -66,7 +66,7 @@ class _$LocalizedMessageBodyRequest extends LocalizedMessageBodyRequest {
       this.ca,
       this.de,
       this.el,
-      required this.en,
+      this.en,
       this.es,
       this.eu,
       this.fr,
@@ -85,10 +85,7 @@ class _$LocalizedMessageBodyRequest extends LocalizedMessageBodyRequest {
       this.sv,
       this.tr,
       this.zhCN})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        en, r'LocalizedMessageBodyRequest', 'en');
-  }
+      : super._();
 
   @override
   LocalizedMessageBodyRequest rebuild(
@@ -351,8 +348,7 @@ class LocalizedMessageBodyRequestBuilder
             ca: ca,
             de: de,
             el: el,
-            en: BuiltValueNullFieldError.checkNotNull(
-                en, r'LocalizedMessageBodyRequest', 'en'),
+            en: en,
             es: es,
             eu: eu,
             fr: fr,

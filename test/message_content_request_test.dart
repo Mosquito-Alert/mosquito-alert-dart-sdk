@@ -1,0 +1,23 @@
+import 'package:test/test.dart';
+import 'package:mosquito_alert/mosquito_alert.dart';
+
+// tests for MessageContentRequest
+void main() {
+  final instance = MessageContentRequestBuilder();
+  // TODO add properties to the builder and call build()
+
+  group(MessageContentRequest, () {
+    // Provide the message's title in all supported languages
+    // LocalizedMessageTitleRequest title
+    test('to test the property `title`', () async {
+      // TODO
+    });
+
+    // Provide the message's body in all supported languages
+    // LocalizedMessageBodyRequest body
+    test('to test the property `body`', () async {
+      // TODO
+    });
+
+  });
+}

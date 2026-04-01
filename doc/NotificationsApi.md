@@ -9,62 +9,12 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create**](NotificationsApi.md#create) | **POST** /notifications/ | 
 [**list**](NotificationsApi.md#list) | **GET** /notifications/ | 
 [**listMine**](NotificationsApi.md#listmine) | **GET** /me/notifications/ | 
 [**partialUpdate**](NotificationsApi.md#partialupdate) | **PATCH** /notifications/{id}/ | 
 [**retrieve**](NotificationsApi.md#retrieve) | **GET** /notifications/{id}/ | 
 [**update**](NotificationsApi.md#update) | **PUT** /notifications/{id}/ | 
 
-
-# **create**
-> BuiltList<CreateNotification> create(metaNotificationRequest)
-
-
-
-### Example
-```dart
-import 'package:mosquito_alert/api.dart';
-// TODO Configure API key authorization: tokenAuth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
-// TODO Configure API key authorization: cookieAuth
-//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKey = 'YOUR_API_KEY';
-// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
-
-final api = MosquitoAlert().getNotificationsApi();
-final MetaNotificationRequest metaNotificationRequest = ; // MetaNotificationRequest | 
-
-try {
-    final response = api.create(metaNotificationRequest);
-    print(response);
-} on DioException catch (e) {
-    print('Exception when calling NotificationsApi->create: $e\n');
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **metaNotificationRequest** | [**MetaNotificationRequest**](MetaNotificationRequest.md)|  | [optional] 
-
-### Return type
-
-[**BuiltList&lt;CreateNotification&gt;**](CreateNotification.md)
-
-### Authorization
-
-[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
 > PaginatedNotificationList list(isRead, orderBy, page, pageSize)

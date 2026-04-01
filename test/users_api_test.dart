@@ -7,6 +7,11 @@ void main() {
   final instance = MosquitoAlert().getUsersApi();
 
   group(UsersApi, () {
+    //Future<PaginatedUserList> list({ int page, int pageSize, String search }) async
+    test('test list', () async {
+      // TODO
+    });
+
     //Future<User> partialUpdate(String uuid, { PatchedUserRequest patchedUserRequest }) async
     test('test partialUpdate', () async {
       // TODO

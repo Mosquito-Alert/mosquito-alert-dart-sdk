@@ -18,7 +18,7 @@ class _$LocalizedMessageBody extends LocalizedMessageBody {
   @override
   final String? el;
   @override
-  final String en;
+  final String? en;
   @override
   final String? es;
   @override
@@ -66,7 +66,7 @@ class _$LocalizedMessageBody extends LocalizedMessageBody {
       this.ca,
       this.de,
       this.el,
-      required this.en,
+      this.en,
       this.es,
       this.eu,
       this.fr,
@@ -85,9 +85,7 @@ class _$LocalizedMessageBody extends LocalizedMessageBody {
       this.sv,
       this.tr,
       this.zhCN})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(en, r'LocalizedMessageBody', 'en');
-  }
+      : super._();
 
   @override
   LocalizedMessageBody rebuild(
@@ -348,8 +346,7 @@ class LocalizedMessageBodyBuilder
             ca: ca,
             de: de,
             el: el,
-            en: BuiltValueNullFieldError.checkNotNull(
-                en, r'LocalizedMessageBody', 'en'),
+            en: en,
             es: es,
             eu: eu,
             fr: fr,

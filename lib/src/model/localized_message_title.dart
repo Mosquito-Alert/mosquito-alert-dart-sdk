@@ -59,7 +59,7 @@ abstract class LocalizedMessageTitle implements Built<LocalizedMessageTitle, Loc
 
   /// English
   @BuiltValueField(wireName: r'en')
-  String get en;
+  String? get en;
 
   /// Español
   @BuiltValueField(wireName: r'es')
@@ -191,11 +191,13 @@ class _$LocalizedMessageTitleSerializer implements PrimitiveSerializer<Localized
         specifiedType: const FullType(String),
       );
     }
-    yield r'en';
-    yield serializers.serialize(
-      object.en,
-      specifiedType: const FullType(String),
-    );
+    if (object.en != null) {
+      yield r'en';
+      yield serializers.serialize(
+        object.en,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.es != null) {
       yield r'es';
       yield serializers.serialize(

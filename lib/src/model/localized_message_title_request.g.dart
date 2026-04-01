@@ -18,7 +18,7 @@ class _$LocalizedMessageTitleRequest extends LocalizedMessageTitleRequest {
   @override
   final String? el;
   @override
-  final String en;
+  final String? en;
   @override
   final String? es;
   @override
@@ -66,7 +66,7 @@ class _$LocalizedMessageTitleRequest extends LocalizedMessageTitleRequest {
       this.ca,
       this.de,
       this.el,
-      required this.en,
+      this.en,
       this.es,
       this.eu,
       this.fr,
@@ -85,10 +85,7 @@ class _$LocalizedMessageTitleRequest extends LocalizedMessageTitleRequest {
       this.sv,
       this.tr,
       this.zhCN})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        en, r'LocalizedMessageTitleRequest', 'en');
-  }
+      : super._();
 
   @override
   LocalizedMessageTitleRequest rebuild(
@@ -351,8 +348,7 @@ class LocalizedMessageTitleRequestBuilder
             ca: ca,
             de: de,
             el: el,
-            en: BuiltValueNullFieldError.checkNotNull(
-                en, r'LocalizedMessageTitleRequest', 'en'),
+            en: en,
             es: es,
             eu: eu,
             fr: fr,

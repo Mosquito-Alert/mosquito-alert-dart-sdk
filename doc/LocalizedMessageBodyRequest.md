@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **ca** | **String** | Català | [optional] 
 **de** | **String** | Deutsch | [optional] 
 **el** | **String** | Ελληνικά | [optional] 
-**en** | **String** | English | 
+**en** | **String** | English | [optional] 
 **es** | **String** | Español | [optional] 
 **eu** | **String** | Euskara | [optional] 
 **fr** | **String** | Français | [optional] 

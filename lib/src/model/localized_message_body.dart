@@ -59,7 +59,7 @@ abstract class LocalizedMessageBody implements Built<LocalizedMessageBody, Local
 
   /// English
   @BuiltValueField(wireName: r'en')
-  String get en;
+  String? get en;
 
   /// Español
   @BuiltValueField(wireName: r'es')
@@ -191,11 +191,13 @@ class _$LocalizedMessageBodySerializer implements PrimitiveSerializer<LocalizedM
         specifiedType: const FullType(String),
       );
     }
-    yield r'en';
-    yield serializers.serialize(
-      object.en,
-      specifiedType: const FullType(String),
-    );
+    if (object.en != null) {
+      yield r'en';
+      yield serializers.serialize(
+        object.en,
+        specifiedType: const FullType(String),
+      );
+    }
     if (object.es != null) {
       yield r'es';
       yield serializers.serialize(

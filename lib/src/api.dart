@@ -18,6 +18,7 @@ import 'package:mosquito_alert/src/api/countries_api.dart';
 import 'package:mosquito_alert/src/api/devices_api.dart';
 import 'package:mosquito_alert/src/api/fixes_api.dart';
 import 'package:mosquito_alert/src/api/identification_tasks_api.dart';
+import 'package:mosquito_alert/src/api/messages_api.dart';
 import 'package:mosquito_alert/src/api/notifications_api.dart';
 import 'package:mosquito_alert/src/api/observations_api.dart';
 import 'package:mosquito_alert/src/api/partners_api.dart';
@@ -133,6 +134,12 @@ class MosquitoAlert {
   /// by doing that all interceptors will not be executed
   IdentificationTasksApi getIdentificationTasksApi() {
     return IdentificationTasksApi(dio, serializers);
+  }
+
+  /// Get MessagesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  MessagesApi getMessagesApi() {
+    return MessagesApi(dio, serializers);
   }
 
   /// Get NotificationsApi instance, base route and serializer can be overridden by a given but be careful,
