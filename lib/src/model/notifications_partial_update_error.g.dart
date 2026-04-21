@@ -33,6 +33,9 @@ final BuiltSet<NotificationsPartialUpdateErrorAttrEnum>
 ]);
 
 const NotificationsPartialUpdateErrorCodeEnum
+    _$notificationsPartialUpdateErrorCodeEnum_invalid =
+    const NotificationsPartialUpdateErrorCodeEnum._('invalid');
+const NotificationsPartialUpdateErrorCodeEnum
     _$notificationsPartialUpdateErrorCodeEnum_null_ =
     const NotificationsPartialUpdateErrorCodeEnum._('null_');
 const NotificationsPartialUpdateErrorCodeEnum
@@ -45,6 +48,8 @@ const NotificationsPartialUpdateErrorCodeEnum
 NotificationsPartialUpdateErrorCodeEnum
     _$notificationsPartialUpdateErrorCodeEnumValueOf(String name) {
   switch (name) {
+    case 'invalid':
+      return _$notificationsPartialUpdateErrorCodeEnum_invalid;
     case 'null_':
       return _$notificationsPartialUpdateErrorCodeEnum_null_;
     case 'required_':
@@ -59,6 +64,7 @@ NotificationsPartialUpdateErrorCodeEnum
 final BuiltSet<NotificationsPartialUpdateErrorCodeEnum>
     _$notificationsPartialUpdateErrorCodeEnumValues = new BuiltSet<
         NotificationsPartialUpdateErrorCodeEnum>(const <NotificationsPartialUpdateErrorCodeEnum>[
+  _$notificationsPartialUpdateErrorCodeEnum_invalid,
   _$notificationsPartialUpdateErrorCodeEnum_null_,
   _$notificationsPartialUpdateErrorCodeEnum_required_,
   _$notificationsPartialUpdateErrorCodeEnum_unknownDefaultOpenApi,
@@ -106,11 +112,13 @@ class _$NotificationsPartialUpdateErrorAttrEnumSerializer
 class _$NotificationsPartialUpdateErrorCodeEnumSerializer
     implements PrimitiveSerializer<NotificationsPartialUpdateErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',

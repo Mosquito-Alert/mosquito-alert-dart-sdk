@@ -34,6 +34,9 @@ final BuiltSet<NotificationsUpdateIsReadErrorComponentAttrEnum>
 ]);
 
 const NotificationsUpdateIsReadErrorComponentCodeEnum
+    _$notificationsUpdateIsReadErrorComponentCodeEnum_invalid =
+    const NotificationsUpdateIsReadErrorComponentCodeEnum._('invalid');
+const NotificationsUpdateIsReadErrorComponentCodeEnum
     _$notificationsUpdateIsReadErrorComponentCodeEnum_null_ =
     const NotificationsUpdateIsReadErrorComponentCodeEnum._('null_');
 const NotificationsUpdateIsReadErrorComponentCodeEnum
@@ -47,6 +50,8 @@ const NotificationsUpdateIsReadErrorComponentCodeEnum
 NotificationsUpdateIsReadErrorComponentCodeEnum
     _$notificationsUpdateIsReadErrorComponentCodeEnumValueOf(String name) {
   switch (name) {
+    case 'invalid':
+      return _$notificationsUpdateIsReadErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$notificationsUpdateIsReadErrorComponentCodeEnum_null_;
     case 'required_':
@@ -61,6 +66,7 @@ NotificationsUpdateIsReadErrorComponentCodeEnum
 final BuiltSet<NotificationsUpdateIsReadErrorComponentCodeEnum>
     _$notificationsUpdateIsReadErrorComponentCodeEnumValues = new BuiltSet<
         NotificationsUpdateIsReadErrorComponentCodeEnum>(const <NotificationsUpdateIsReadErrorComponentCodeEnum>[
+  _$notificationsUpdateIsReadErrorComponentCodeEnum_invalid,
   _$notificationsUpdateIsReadErrorComponentCodeEnum_null_,
   _$notificationsUpdateIsReadErrorComponentCodeEnum_required_,
   _$notificationsUpdateIsReadErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -110,11 +116,13 @@ class _$NotificationsUpdateIsReadErrorComponentCodeEnumSerializer
     implements
         PrimitiveSerializer<NotificationsUpdateIsReadErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',

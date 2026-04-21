@@ -55,7 +55,7 @@ class _$LocalizedTopicMessageBodyRequest
   @override
   final String? tr;
   @override
-  final String? zhCN;
+  final String? zhCn;
 
   factory _$LocalizedTopicMessageBodyRequest(
           [void Function(LocalizedTopicMessageBodyRequestBuilder)? updates]) =>
@@ -85,7 +85,7 @@ class _$LocalizedTopicMessageBodyRequest
       this.sr,
       this.sv,
       this.tr,
-      this.zhCN})
+      this.zhCn})
       : super._() {
     BuiltValueNullFieldError.checkNotNull(
         en, r'LocalizedTopicMessageBodyRequest', 'en');
@@ -127,7 +127,7 @@ class _$LocalizedTopicMessageBodyRequest
         sr == other.sr &&
         sv == other.sv &&
         tr == other.tr &&
-        zhCN == other.zhCN;
+        zhCn == other.zhCn;
   }
 
   @override
@@ -156,7 +156,7 @@ class _$LocalizedTopicMessageBodyRequest
     _$hash = $jc(_$hash, sr.hashCode);
     _$hash = $jc(_$hash, sv.hashCode);
     _$hash = $jc(_$hash, tr.hashCode);
-    _$hash = $jc(_$hash, zhCN.hashCode);
+    _$hash = $jc(_$hash, zhCn.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -187,7 +187,7 @@ class _$LocalizedTopicMessageBodyRequest
           ..add('sr', sr)
           ..add('sv', sv)
           ..add('tr', tr)
-          ..add('zhCN', zhCN))
+          ..add('zhCn', zhCn))
         .toString();
   }
 }
@@ -290,9 +290,9 @@ class LocalizedTopicMessageBodyRequestBuilder
   String? get tr => _$this._tr;
   set tr(String? tr) => _$this._tr = tr;
 
-  String? _zhCN;
-  String? get zhCN => _$this._zhCN;
-  set zhCN(String? zhCN) => _$this._zhCN = zhCN;
+  String? _zhCn;
+  String? get zhCn => _$this._zhCn;
+  set zhCn(String? zhCn) => _$this._zhCn = zhCn;
 
   LocalizedTopicMessageBodyRequestBuilder() {
     LocalizedTopicMessageBodyRequest._defaults(this);
@@ -324,7 +324,7 @@ class LocalizedTopicMessageBodyRequestBuilder
       _sr = $v.sr;
       _sv = $v.sv;
       _tr = $v.tr;
-      _zhCN = $v.zhCN;
+      _zhCn = $v.zhCn;
       _$v = null;
     }
     return this;
@@ -371,7 +371,7 @@ class LocalizedTopicMessageBodyRequestBuilder
             sr: sr,
             sv: sv,
             tr: tr,
-            zhCN: zhCN);
+            zhCn: zhCn);
     replace(_$result);
     return _$result;
   }

@@ -3,7 +3,7 @@
 //
 
 // ignore_for_file: unused_element
-import 'package:mosquito_alert/src/model/message_content.dart';
+import 'package:mosquito_alert/src/model/create_topic_message_content.dart';
 import 'package:mosquito_alert/src/model/simple_user.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -27,7 +27,7 @@ abstract class CreateTopicMessage implements Built<CreateTopicMessage, CreateTop
 
   /// The content of the message for the topic
   @BuiltValueField(wireName: r'content')
-  MessageContent get content;
+  CreateTopicMessageContent get content;
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
@@ -68,7 +68,7 @@ class _$CreateTopicMessageSerializer implements PrimitiveSerializer<CreateTopicM
     yield r'content';
     yield serializers.serialize(
       object.content,
-      specifiedType: const FullType(MessageContent),
+      specifiedType: const FullType(CreateTopicMessageContent),
     );
     yield r'created_at';
     yield serializers.serialize(
@@ -115,8 +115,8 @@ class _$CreateTopicMessageSerializer implements PrimitiveSerializer<CreateTopicM
         case r'content':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(MessageContent),
-          ) as MessageContent;
+            specifiedType: const FullType(CreateTopicMessageContent),
+          ) as CreateTopicMessageContent;
           result.content.replace(valueDes);
           break;
         case r'created_at':

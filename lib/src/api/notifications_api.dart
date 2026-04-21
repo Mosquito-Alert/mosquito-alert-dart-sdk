@@ -22,111 +22,6 @@ class NotificationsApi {
 
   const NotificationsApi(this._dio, this._serializers);
 
-  /// list
-  /// 
-  ///
-  /// Parameters:
-  /// * [isRead] 
-  /// * [orderBy] - Ordering  
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [PaginatedNotificationList] as data
-  /// Throws [DioException] if API call or serialization fails
-  Future<Response<PaginatedNotificationList>> list({ 
-    bool? isRead,
-    BuiltList<String>? orderBy,
-    int? page,
-    int? pageSize,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/notifications/';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[
-          {
-            'type': 'apiKey',
-            'name': 'tokenAuth',
-            'keyName': 'Authorization',
-            'where': 'header',
-          },{
-            'type': 'apiKey',
-            'name': 'cookieAuth',
-            'keyName': 'sessionid',
-            'where': '',
-          },{
-            'type': 'http',
-            'scheme': 'bearer',
-            'name': 'jwtAuth',
-          },
-        ],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (isRead != null) r'is_read': encodeQueryParameter(_serializers, isRead, const FullType(bool)),
-      if (orderBy != null) r'order_by': encodeCollectionQueryParameter<String>(_serializers, orderBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
-      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
-      if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    PaginatedNotificationList? _responseData;
-
-    try {
-      final rawResponse = _response.data;
-      _responseData = rawResponse == null ? null : _serializers.deserialize(
-        rawResponse,
-        specifiedType: const FullType(PaginatedNotificationList),
-      ) as PaginatedNotificationList;
-
-    } catch (error, stackTrace) {
-      throw DioException(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioExceptionType.unknown,
-        error: error,
-        stackTrace: stackTrace,
-      );
-    }
-
-    return Response<PaginatedNotificationList>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// listMine
   /// Get Current User&#39;s Notifications
   ///
@@ -236,7 +131,7 @@ class NotificationsApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - A unique integer value identifying this notification.
+  /// * [id] 
   /// * [patchedNotificationRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -349,7 +244,7 @@ class NotificationsApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - A unique integer value identifying this notification.
+  /// * [id] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request
@@ -440,7 +335,7 @@ class NotificationsApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - A unique integer value identifying this notification.
+  /// * [id] 
   /// * [notificationRequest] 
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request

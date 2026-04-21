@@ -7,8 +7,8 @@ part of 'messages_topics_send_error.dart';
 // **************************************************************************
 
 const MessagesTopicsSendErrorAttrEnum
-    _$messagesTopicsSendErrorAttrEnum_content =
-    const MessagesTopicsSendErrorAttrEnum._('content');
+    _$messagesTopicsSendErrorAttrEnum_contentPeriodBodyPeriodZhCn =
+    const MessagesTopicsSendErrorAttrEnum._('contentPeriodBodyPeriodZhCn');
 const MessagesTopicsSendErrorAttrEnum
     _$messagesTopicsSendErrorAttrEnum_unknownDefaultOpenApi =
     const MessagesTopicsSendErrorAttrEnum._('unknownDefaultOpenApi');
@@ -16,8 +16,8 @@ const MessagesTopicsSendErrorAttrEnum
 MessagesTopicsSendErrorAttrEnum _$messagesTopicsSendErrorAttrEnumValueOf(
     String name) {
   switch (name) {
-    case 'content':
-      return _$messagesTopicsSendErrorAttrEnum_content;
+    case 'contentPeriodBodyPeriodZhCn':
+      return _$messagesTopicsSendErrorAttrEnum_contentPeriodBodyPeriodZhCn;
     case 'unknownDefaultOpenApi':
       return _$messagesTopicsSendErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -28,15 +28,21 @@ MessagesTopicsSendErrorAttrEnum _$messagesTopicsSendErrorAttrEnumValueOf(
 final BuiltSet<MessagesTopicsSendErrorAttrEnum>
     _$messagesTopicsSendErrorAttrEnumValues = new BuiltSet<
         MessagesTopicsSendErrorAttrEnum>(const <MessagesTopicsSendErrorAttrEnum>[
-  _$messagesTopicsSendErrorAttrEnum_content,
+  _$messagesTopicsSendErrorAttrEnum_contentPeriodBodyPeriodZhCn,
   _$messagesTopicsSendErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
-const MessagesTopicsSendErrorCodeEnum _$messagesTopicsSendErrorCodeEnum_null_ =
-    const MessagesTopicsSendErrorCodeEnum._('null_');
+const MessagesTopicsSendErrorCodeEnum _$messagesTopicsSendErrorCodeEnum_blank =
+    const MessagesTopicsSendErrorCodeEnum._('blank');
 const MessagesTopicsSendErrorCodeEnum
-    _$messagesTopicsSendErrorCodeEnum_required_ =
-    const MessagesTopicsSendErrorCodeEnum._('required_');
+    _$messagesTopicsSendErrorCodeEnum_invalid =
+    const MessagesTopicsSendErrorCodeEnum._('invalid');
+const MessagesTopicsSendErrorCodeEnum
+    _$messagesTopicsSendErrorCodeEnum_nullCharactersNotAllowed =
+    const MessagesTopicsSendErrorCodeEnum._('nullCharactersNotAllowed');
+const MessagesTopicsSendErrorCodeEnum
+    _$messagesTopicsSendErrorCodeEnum_surrogateCharactersNotAllowed =
+    const MessagesTopicsSendErrorCodeEnum._('surrogateCharactersNotAllowed');
 const MessagesTopicsSendErrorCodeEnum
     _$messagesTopicsSendErrorCodeEnum_unknownDefaultOpenApi =
     const MessagesTopicsSendErrorCodeEnum._('unknownDefaultOpenApi');
@@ -44,10 +50,14 @@ const MessagesTopicsSendErrorCodeEnum
 MessagesTopicsSendErrorCodeEnum _$messagesTopicsSendErrorCodeEnumValueOf(
     String name) {
   switch (name) {
-    case 'null_':
-      return _$messagesTopicsSendErrorCodeEnum_null_;
-    case 'required_':
-      return _$messagesTopicsSendErrorCodeEnum_required_;
+    case 'blank':
+      return _$messagesTopicsSendErrorCodeEnum_blank;
+    case 'invalid':
+      return _$messagesTopicsSendErrorCodeEnum_invalid;
+    case 'nullCharactersNotAllowed':
+      return _$messagesTopicsSendErrorCodeEnum_nullCharactersNotAllowed;
+    case 'surrogateCharactersNotAllowed':
+      return _$messagesTopicsSendErrorCodeEnum_surrogateCharactersNotAllowed;
     case 'unknownDefaultOpenApi':
       return _$messagesTopicsSendErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -58,8 +68,10 @@ MessagesTopicsSendErrorCodeEnum _$messagesTopicsSendErrorCodeEnumValueOf(
 final BuiltSet<MessagesTopicsSendErrorCodeEnum>
     _$messagesTopicsSendErrorCodeEnumValues = new BuiltSet<
         MessagesTopicsSendErrorCodeEnum>(const <MessagesTopicsSendErrorCodeEnum>[
-  _$messagesTopicsSendErrorCodeEnum_null_,
-  _$messagesTopicsSendErrorCodeEnum_required_,
+  _$messagesTopicsSendErrorCodeEnum_blank,
+  _$messagesTopicsSendErrorCodeEnum_invalid,
+  _$messagesTopicsSendErrorCodeEnum_nullCharactersNotAllowed,
+  _$messagesTopicsSendErrorCodeEnum_surrogateCharactersNotAllowed,
   _$messagesTopicsSendErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -73,11 +85,11 @@ Serializer<MessagesTopicsSendErrorCodeEnum>
 class _$MessagesTopicsSendErrorAttrEnumSerializer
     implements PrimitiveSerializer<MessagesTopicsSendErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'content': 'content',
+    'contentPeriodBodyPeriodZhCn': 'content.body.zh-cn',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'content': 'content',
+    'content.body.zh-cn': 'contentPeriodBodyPeriodZhCn',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -103,13 +115,17 @@ class _$MessagesTopicsSendErrorAttrEnumSerializer
 class _$MessagesTopicsSendErrorCodeEnumSerializer
     implements PrimitiveSerializer<MessagesTopicsSendErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'null_': 'null',
-    'required_': 'required',
+    'blank': 'blank',
+    'invalid': 'invalid',
+    'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'null': 'null_',
-    'required': 'required_',
+    'blank': 'blank',
+    'invalid': 'invalid',
+    'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

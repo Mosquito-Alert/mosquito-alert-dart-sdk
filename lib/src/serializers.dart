@@ -195,6 +195,7 @@ import 'package:mosquito_alert/src/model/create_overwrite_review_request.dart';
 import 'package:mosquito_alert/src/model/create_photo_prediction.dart';
 import 'package:mosquito_alert/src/model/create_photo_prediction_request.dart';
 import 'package:mosquito_alert/src/model/create_topic_message.dart';
+import 'package:mosquito_alert/src/model/create_topic_message_content.dart';
 import 'package:mosquito_alert/src/model/create_topic_message_content_request.dart';
 import 'package:mosquito_alert/src/model/create_topic_message_request.dart';
 import 'package:mosquito_alert/src/model/create_user_message.dart';
@@ -441,7 +442,9 @@ import 'package:mosquito_alert/src/model/localized_message_body.dart';
 import 'package:mosquito_alert/src/model/localized_message_body_request.dart';
 import 'package:mosquito_alert/src/model/localized_message_title.dart';
 import 'package:mosquito_alert/src/model/localized_message_title_request.dart';
+import 'package:mosquito_alert/src/model/localized_topic_message_body.dart';
 import 'package:mosquito_alert/src/model/localized_topic_message_body_request.dart';
+import 'package:mosquito_alert/src/model/localized_topic_message_title.dart';
 import 'package:mosquito_alert/src/model/localized_topic_message_title_request.dart';
 import 'package:mosquito_alert/src/model/location.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
@@ -451,7 +454,57 @@ import 'package:mosquito_alert/src/model/message_content_request.dart';
 import 'package:mosquito_alert/src/model/message_permission.dart';
 import 'package:mosquito_alert/src/model/message_recipient.dart';
 import 'package:mosquito_alert/src/model/message_topic.dart';
-import 'package:mosquito_alert/src/model/messages_create_content_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_bg_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_bn_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_ca_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_de_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_el_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_en_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_es_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_eu_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_fr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_gl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_hr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_hu_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_it_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_lb_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_mk_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_nl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_pt_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_ro_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_sl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_sq_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_sr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_sv_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_tr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_body_zh_cn_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_bg_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_bn_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_ca_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_de_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_el_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_en_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_es_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_eu_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_fr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_gl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_hr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_hu_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_it_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_lb_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_mk_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_nl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_pt_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_ro_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_sl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_sq_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_sr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_sv_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_tr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_content_title_zh_cn_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_error.dart';
 import 'package:mosquito_alert/src/model/messages_create_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_user_uuids_error_component.dart';
@@ -465,7 +518,57 @@ import 'package:mosquito_alert/src/model/messages_list_mine_sent_validation_erro
 import 'package:mosquito_alert/src/model/messages_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_list_recipient_uuids_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_bg_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_bn_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_ca_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_de_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_el_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_en_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_es_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_eu_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_fr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_gl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_hr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_hu_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_it_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_lb_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_mk_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_nl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_pt_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_ro_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_sl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_sq_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_sr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_sv_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_tr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_body_zh_cn_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_bg_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_bn_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_ca_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_de_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_el_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_en_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_es_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_eu_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_fr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_gl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_hr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_hu_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_it_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_lb_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_mk_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_nl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_pt_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_ro_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_sl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_sq_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_sr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_sv_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_tr_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_topics_send_content_title_zh_cn_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_topics_send_error.dart';
 import 'package:mosquito_alert/src/model/messages_topics_send_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_topics_send_validation_error.dart';
@@ -480,8 +583,6 @@ import 'package:mosquito_alert/src/model/notification_message.dart';
 import 'package:mosquito_alert/src/model/notification_request.dart';
 import 'package:mosquito_alert/src/model/notifications_list_mine_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_list_mine_validation_error.dart';
-import 'package:mosquito_alert/src/model/notifications_list_order_by_error_component.dart';
-import 'package:mosquito_alert/src/model/notifications_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/notifications_partial_update_error.dart';
 import 'package:mosquito_alert/src/model/notifications_partial_update_is_read_error_component.dart';
 import 'package:mosquito_alert/src/model/notifications_partial_update_non_field_errors_error_component.dart';
@@ -854,6 +955,7 @@ part 'serializers.g.dart';
   CreatePhotoPrediction,
   CreatePhotoPredictionRequest,
   CreateTopicMessage,
+  CreateTopicMessageContent,
   CreateTopicMessageContentRequest,
   CreateTopicMessageRequest,
   CreateUserMessage,
@@ -1100,7 +1202,9 @@ part 'serializers.g.dart';
   LocalizedMessageBodyRequest,
   LocalizedMessageTitle,
   LocalizedMessageTitleRequest,
+  LocalizedTopicMessageBody,
   LocalizedTopicMessageBodyRequest,
+  LocalizedTopicMessageTitle,
   LocalizedTopicMessageTitleRequest,
   Location,
   LocationRequest,
@@ -1110,7 +1214,57 @@ part 'serializers.g.dart';
   MessagePermission,
   MessageRecipient,
   MessageTopic,
-  MessagesCreateContentErrorComponent,
+  MessagesCreateContentBodyBgErrorComponent,
+  MessagesCreateContentBodyBnErrorComponent,
+  MessagesCreateContentBodyCaErrorComponent,
+  MessagesCreateContentBodyDeErrorComponent,
+  MessagesCreateContentBodyElErrorComponent,
+  MessagesCreateContentBodyEnErrorComponent,
+  MessagesCreateContentBodyEsErrorComponent,
+  MessagesCreateContentBodyEuErrorComponent,
+  MessagesCreateContentBodyFrErrorComponent,
+  MessagesCreateContentBodyGlErrorComponent,
+  MessagesCreateContentBodyHrErrorComponent,
+  MessagesCreateContentBodyHuErrorComponent,
+  MessagesCreateContentBodyItErrorComponent,
+  MessagesCreateContentBodyLbErrorComponent,
+  MessagesCreateContentBodyMkErrorComponent,
+  MessagesCreateContentBodyNlErrorComponent,
+  MessagesCreateContentBodyNonFieldErrorsErrorComponent,
+  MessagesCreateContentBodyPtErrorComponent,
+  MessagesCreateContentBodyRoErrorComponent,
+  MessagesCreateContentBodySlErrorComponent,
+  MessagesCreateContentBodySqErrorComponent,
+  MessagesCreateContentBodySrErrorComponent,
+  MessagesCreateContentBodySvErrorComponent,
+  MessagesCreateContentBodyTrErrorComponent,
+  MessagesCreateContentBodyZhCnErrorComponent,
+  MessagesCreateContentNonFieldErrorsErrorComponent,
+  MessagesCreateContentTitleBgErrorComponent,
+  MessagesCreateContentTitleBnErrorComponent,
+  MessagesCreateContentTitleCaErrorComponent,
+  MessagesCreateContentTitleDeErrorComponent,
+  MessagesCreateContentTitleElErrorComponent,
+  MessagesCreateContentTitleEnErrorComponent,
+  MessagesCreateContentTitleEsErrorComponent,
+  MessagesCreateContentTitleEuErrorComponent,
+  MessagesCreateContentTitleFrErrorComponent,
+  MessagesCreateContentTitleGlErrorComponent,
+  MessagesCreateContentTitleHrErrorComponent,
+  MessagesCreateContentTitleHuErrorComponent,
+  MessagesCreateContentTitleItErrorComponent,
+  MessagesCreateContentTitleLbErrorComponent,
+  MessagesCreateContentTitleMkErrorComponent,
+  MessagesCreateContentTitleNlErrorComponent,
+  MessagesCreateContentTitleNonFieldErrorsErrorComponent,
+  MessagesCreateContentTitlePtErrorComponent,
+  MessagesCreateContentTitleRoErrorComponent,
+  MessagesCreateContentTitleSlErrorComponent,
+  MessagesCreateContentTitleSqErrorComponent,
+  MessagesCreateContentTitleSrErrorComponent,
+  MessagesCreateContentTitleSvErrorComponent,
+  MessagesCreateContentTitleTrErrorComponent,
+  MessagesCreateContentTitleZhCnErrorComponent,
   MessagesCreateError,
   MessagesCreateNonFieldErrorsErrorComponent,
   MessagesCreateUserUuidsErrorComponent,
@@ -1124,7 +1278,57 @@ part 'serializers.g.dart';
   MessagesListOrderByErrorComponent,
   MessagesListRecipientUuidsErrorComponent,
   MessagesListValidationError,
-  MessagesTopicsSendContentErrorComponent,
+  MessagesTopicsSendContentBodyBgErrorComponent,
+  MessagesTopicsSendContentBodyBnErrorComponent,
+  MessagesTopicsSendContentBodyCaErrorComponent,
+  MessagesTopicsSendContentBodyDeErrorComponent,
+  MessagesTopicsSendContentBodyElErrorComponent,
+  MessagesTopicsSendContentBodyEnErrorComponent,
+  MessagesTopicsSendContentBodyEsErrorComponent,
+  MessagesTopicsSendContentBodyEuErrorComponent,
+  MessagesTopicsSendContentBodyFrErrorComponent,
+  MessagesTopicsSendContentBodyGlErrorComponent,
+  MessagesTopicsSendContentBodyHrErrorComponent,
+  MessagesTopicsSendContentBodyHuErrorComponent,
+  MessagesTopicsSendContentBodyItErrorComponent,
+  MessagesTopicsSendContentBodyLbErrorComponent,
+  MessagesTopicsSendContentBodyMkErrorComponent,
+  MessagesTopicsSendContentBodyNlErrorComponent,
+  MessagesTopicsSendContentBodyNonFieldErrorsErrorComponent,
+  MessagesTopicsSendContentBodyPtErrorComponent,
+  MessagesTopicsSendContentBodyRoErrorComponent,
+  MessagesTopicsSendContentBodySlErrorComponent,
+  MessagesTopicsSendContentBodySqErrorComponent,
+  MessagesTopicsSendContentBodySrErrorComponent,
+  MessagesTopicsSendContentBodySvErrorComponent,
+  MessagesTopicsSendContentBodyTrErrorComponent,
+  MessagesTopicsSendContentBodyZhCnErrorComponent,
+  MessagesTopicsSendContentNonFieldErrorsErrorComponent,
+  MessagesTopicsSendContentTitleBgErrorComponent,
+  MessagesTopicsSendContentTitleBnErrorComponent,
+  MessagesTopicsSendContentTitleCaErrorComponent,
+  MessagesTopicsSendContentTitleDeErrorComponent,
+  MessagesTopicsSendContentTitleElErrorComponent,
+  MessagesTopicsSendContentTitleEnErrorComponent,
+  MessagesTopicsSendContentTitleEsErrorComponent,
+  MessagesTopicsSendContentTitleEuErrorComponent,
+  MessagesTopicsSendContentTitleFrErrorComponent,
+  MessagesTopicsSendContentTitleGlErrorComponent,
+  MessagesTopicsSendContentTitleHrErrorComponent,
+  MessagesTopicsSendContentTitleHuErrorComponent,
+  MessagesTopicsSendContentTitleItErrorComponent,
+  MessagesTopicsSendContentTitleLbErrorComponent,
+  MessagesTopicsSendContentTitleMkErrorComponent,
+  MessagesTopicsSendContentTitleNlErrorComponent,
+  MessagesTopicsSendContentTitleNonFieldErrorsErrorComponent,
+  MessagesTopicsSendContentTitlePtErrorComponent,
+  MessagesTopicsSendContentTitleRoErrorComponent,
+  MessagesTopicsSendContentTitleSlErrorComponent,
+  MessagesTopicsSendContentTitleSqErrorComponent,
+  MessagesTopicsSendContentTitleSrErrorComponent,
+  MessagesTopicsSendContentTitleSvErrorComponent,
+  MessagesTopicsSendContentTitleTrErrorComponent,
+  MessagesTopicsSendContentTitleZhCnErrorComponent,
   MessagesTopicsSendError,
   MessagesTopicsSendNonFieldErrorsErrorComponent,
   MessagesTopicsSendValidationError,
@@ -1139,8 +1343,6 @@ part 'serializers.g.dart';
   NotificationRequest,
   NotificationsListMineOrderByErrorComponent,
   NotificationsListMineValidationError,
-  NotificationsListOrderByErrorComponent,
-  NotificationsListValidationError,
   NotificationsPartialUpdateError,
   NotificationsPartialUpdateIsReadErrorComponent,
   NotificationsPartialUpdateNonFieldErrorsErrorComponent,

@@ -36,6 +36,9 @@ final BuiltSet<NotificationsPartialUpdateIsReadErrorComponentAttrEnum>
 ]);
 
 const NotificationsPartialUpdateIsReadErrorComponentCodeEnum
+    _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_invalid =
+    const NotificationsPartialUpdateIsReadErrorComponentCodeEnum._('invalid');
+const NotificationsPartialUpdateIsReadErrorComponentCodeEnum
     _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_null_ =
     const NotificationsPartialUpdateIsReadErrorComponentCodeEnum._('null_');
 const NotificationsPartialUpdateIsReadErrorComponentCodeEnum
@@ -50,6 +53,8 @@ NotificationsPartialUpdateIsReadErrorComponentCodeEnum
     _$notificationsPartialUpdateIsReadErrorComponentCodeEnumValueOf(
         String name) {
   switch (name) {
+    case 'invalid':
+      return _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_invalid;
     case 'null_':
       return _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_null_;
     case 'required_':
@@ -65,6 +70,7 @@ final BuiltSet<NotificationsPartialUpdateIsReadErrorComponentCodeEnum>
     _$notificationsPartialUpdateIsReadErrorComponentCodeEnumValues =
     new BuiltSet<
         NotificationsPartialUpdateIsReadErrorComponentCodeEnum>(const <NotificationsPartialUpdateIsReadErrorComponentCodeEnum>[
+  _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_invalid,
   _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_null_,
   _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_required_,
   _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -117,11 +123,13 @@ class _$NotificationsPartialUpdateIsReadErrorComponentCodeEnumSerializer
         PrimitiveSerializer<
             NotificationsPartialUpdateIsReadErrorComponentCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
+    'invalid': 'invalid',
     'null_': 'null',
     'required_': 'required',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
+    'invalid': 'invalid',
     'null': 'null_',
     'required': 'required_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',

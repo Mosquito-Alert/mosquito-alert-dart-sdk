@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **el** | **String** | Ελληνικά | [optional] 
 **en** | **String** | English | 
 **es** | **String** | Español | [optional] 
-**eu** | **String** | Euskara | [optional] 
+**eu** | **String** | Basque | [optional] 
 **fr** | **String** | Français | [optional] 
 **gl** | **String** | Galego | [optional] 
 **hr** | **String** | Hrvatski | [optional] 
@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **sr** | **String** | Српски | [optional] 
 **sv** | **String** | Svenska | [optional] 
 **tr** | **String** | Türkçe | [optional] 
-**zhCN** | **String** | 中文（中国） | [optional] 
+**zhCn** | **String** | 简体中文 | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

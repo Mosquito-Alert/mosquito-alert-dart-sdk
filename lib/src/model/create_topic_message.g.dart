@@ -12,7 +12,7 @@ class _$CreateTopicMessage extends CreateTopicMessage {
   @override
   final SimpleUser senderUser;
   @override
-  final MessageContent content;
+  final CreateTopicMessageContent content;
   @override
   final DateTime createdAt;
 
@@ -90,10 +90,11 @@ class CreateTopicMessageBuilder
   set senderUser(SimpleUserBuilder? senderUser) =>
       _$this._senderUser = senderUser;
 
-  MessageContentBuilder? _content;
-  MessageContentBuilder get content =>
-      _$this._content ??= new MessageContentBuilder();
-  set content(MessageContentBuilder? content) => _$this._content = content;
+  CreateTopicMessageContentBuilder? _content;
+  CreateTopicMessageContentBuilder get content =>
+      _$this._content ??= new CreateTopicMessageContentBuilder();
+  set content(CreateTopicMessageContentBuilder? content) =>
+      _$this._content = content;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;

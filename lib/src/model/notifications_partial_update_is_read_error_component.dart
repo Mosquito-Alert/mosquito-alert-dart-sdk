@@ -23,7 +23,7 @@ abstract class NotificationsPartialUpdateIsReadErrorComponent implements Built<N
 
   @BuiltValueField(wireName: r'code')
   NotificationsPartialUpdateIsReadErrorComponentCodeEnum get code;
-  // enum codeEnum {  null,  required,  };
+  // enum codeEnum {  invalid,  null,  required,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -156,6 +156,8 @@ class NotificationsPartialUpdateIsReadErrorComponentAttrEnum extends EnumClass {
 
 class NotificationsPartialUpdateIsReadErrorComponentCodeEnum extends EnumClass {
 
+  @BuiltValueEnumConst(wireName: r'invalid')
+  static const NotificationsPartialUpdateIsReadErrorComponentCodeEnum invalid = _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const NotificationsPartialUpdateIsReadErrorComponentCodeEnum null_ = _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')

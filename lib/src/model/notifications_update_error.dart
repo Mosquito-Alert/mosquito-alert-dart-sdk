@@ -143,6 +143,8 @@ class NotificationsUpdateErrorAttrEnum extends EnumClass {
 
 class NotificationsUpdateErrorCodeEnum extends EnumClass {
 
+  @BuiltValueEnumConst(wireName: r'invalid')
+  static const NotificationsUpdateErrorCodeEnum invalid = _$notificationsUpdateErrorCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const NotificationsUpdateErrorCodeEnum null_ = _$notificationsUpdateErrorCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'required')

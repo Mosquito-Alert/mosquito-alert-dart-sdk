@@ -6,16 +6,17 @@ part of 'messages_create_error.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const MessagesCreateErrorAttrEnum _$messagesCreateErrorAttrEnum_content =
-    const MessagesCreateErrorAttrEnum._('content');
+const MessagesCreateErrorAttrEnum
+    _$messagesCreateErrorAttrEnum_contentPeriodBodyPeriodZhCn =
+    const MessagesCreateErrorAttrEnum._('contentPeriodBodyPeriodZhCn');
 const MessagesCreateErrorAttrEnum
     _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi =
     const MessagesCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 MessagesCreateErrorAttrEnum _$messagesCreateErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'content':
-      return _$messagesCreateErrorAttrEnum_content;
+    case 'contentPeriodBodyPeriodZhCn':
+      return _$messagesCreateErrorAttrEnum_contentPeriodBodyPeriodZhCn;
     case 'unknownDefaultOpenApi':
       return _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -26,24 +27,34 @@ MessagesCreateErrorAttrEnum _$messagesCreateErrorAttrEnumValueOf(String name) {
 final BuiltSet<MessagesCreateErrorAttrEnum>
     _$messagesCreateErrorAttrEnumValues = new BuiltSet<
         MessagesCreateErrorAttrEnum>(const <MessagesCreateErrorAttrEnum>[
-  _$messagesCreateErrorAttrEnum_content,
+  _$messagesCreateErrorAttrEnum_contentPeriodBodyPeriodZhCn,
   _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
-const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_null_ =
-    const MessagesCreateErrorCodeEnum._('null_');
-const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_required_ =
-    const MessagesCreateErrorCodeEnum._('required_');
+const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_blank =
+    const MessagesCreateErrorCodeEnum._('blank');
+const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_invalid =
+    const MessagesCreateErrorCodeEnum._('invalid');
+const MessagesCreateErrorCodeEnum
+    _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed =
+    const MessagesCreateErrorCodeEnum._('nullCharactersNotAllowed');
+const MessagesCreateErrorCodeEnum
+    _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed =
+    const MessagesCreateErrorCodeEnum._('surrogateCharactersNotAllowed');
 const MessagesCreateErrorCodeEnum
     _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi =
     const MessagesCreateErrorCodeEnum._('unknownDefaultOpenApi');
 
 MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnumValueOf(String name) {
   switch (name) {
-    case 'null_':
-      return _$messagesCreateErrorCodeEnum_null_;
-    case 'required_':
-      return _$messagesCreateErrorCodeEnum_required_;
+    case 'blank':
+      return _$messagesCreateErrorCodeEnum_blank;
+    case 'invalid':
+      return _$messagesCreateErrorCodeEnum_invalid;
+    case 'nullCharactersNotAllowed':
+      return _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed;
+    case 'surrogateCharactersNotAllowed':
+      return _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed;
     case 'unknownDefaultOpenApi':
       return _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -54,8 +65,10 @@ MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnumValueOf(String name) {
 final BuiltSet<MessagesCreateErrorCodeEnum>
     _$messagesCreateErrorCodeEnumValues = new BuiltSet<
         MessagesCreateErrorCodeEnum>(const <MessagesCreateErrorCodeEnum>[
-  _$messagesCreateErrorCodeEnum_null_,
-  _$messagesCreateErrorCodeEnum_required_,
+  _$messagesCreateErrorCodeEnum_blank,
+  _$messagesCreateErrorCodeEnum_invalid,
+  _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed,
+  _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed,
   _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -69,11 +82,11 @@ Serializer<MessagesCreateErrorCodeEnum>
 class _$MessagesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<MessagesCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'content': 'content',
+    'contentPeriodBodyPeriodZhCn': 'content.body.zh-cn',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'content': 'content',
+    'content.body.zh-cn': 'contentPeriodBodyPeriodZhCn',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -98,13 +111,17 @@ class _$MessagesCreateErrorAttrEnumSerializer
 class _$MessagesCreateErrorCodeEnumSerializer
     implements PrimitiveSerializer<MessagesCreateErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'null_': 'null',
-    'required_': 'required',
+    'blank': 'blank',
+    'invalid': 'invalid',
+    'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'null': 'null_',
-    'required': 'required_',
+    'blank': 'blank',
+    'invalid': 'invalid',
+    'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

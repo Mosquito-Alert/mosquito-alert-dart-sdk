@@ -49,7 +49,7 @@ void main() {
       // TODO
     });
 
-    // Euskara
+    // Basque
     // String eu
     test('to test the property `eu`', () async {
       // TODO
@@ -145,9 +145,9 @@ void main() {
       // TODO
     });
 
-    // 中文（中国）
-    // String zhCN
-    test('to test the property `zhCN`', () async {
+    // 简体中文
+    // String zhCn
+    test('to test the property `zhCn`', () async {
       // TODO
     });
 

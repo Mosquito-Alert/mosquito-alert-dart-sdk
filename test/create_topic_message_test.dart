@@ -18,7 +18,7 @@ void main() {
     });
 
     // The content of the message for the topic
-    // MessageContent content
+    // CreateTopicMessageContent content
     test('to test the property `content`', () async {
       // TODO
     });
