@@ -456,8 +456,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CampaignsListValidationError.serializer)
       ..add(CampaignsListValidationErrorTypeEnum.serializer)
       ..add(Country.serializer)
-      ..add(CountryPermission.serializer)
-      ..add(CountryPermissionRoleEnum.serializer)
       ..add(CountryRequest.serializer)
       ..add(CreateAgreeReviewRequest.serializer)
       ..add(CreateAgreeReviewRequestActionEnum.serializer)
@@ -656,12 +654,11 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(FixesCreateSentAtErrorComponentCodeEnum.serializer)
       ..add(FixesCreateValidationError.serializer)
       ..add(FixesCreateValidationErrorTypeEnum.serializer)
-      ..add(GeneralPermission.serializer)
-      ..add(GeneralPermissionRoleEnum.serializer)
       ..add(GuestRegistration.serializer)
       ..add(GuestRegistrationRequest.serializer)
       ..add(Identification.serializer)
       ..add(IdentificationTask.serializer)
+      ..add(IdentificationTaskCapabilities.serializer)
       ..add(IdentificationTaskPermission.serializer)
       ..add(IdentificationTaskResult.serializer)
       ..add(IdentificationTaskResultSource_Enum.serializer)
@@ -2417,6 +2414,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PaginatedPhotoPredictionList.serializer)
       ..add(PaginatedTaxonList.serializer)
       ..add(PaginatedUserList.serializer)
+      ..add(PaginatedWorkspaceCollaborationGroupList.serializer)
+      ..add(PaginatedWorkspaceList.serializer)
       ..add(Partner.serializer)
       ..add(PartnerPoint.serializer)
       ..add(PasswordChangeRequest.serializer)
@@ -2675,6 +2674,7 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(SimpleTaxonRequest.serializer)
       ..add(SimpleTaxonRequestRankEnum.serializer)
       ..add(SimpleUser.serializer)
+      ..add(SimpleWorkspace.serializer)
       ..add(SimplifiedLocation.serializer)
       ..add(SimplifiedLocationTimezoneEnum.serializer)
       ..add(SimplifiedObservationWithPhotos.serializer)
@@ -2704,7 +2704,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(UserAssignment.serializer)
       ..add(UserAssignmentAnnotationTypeEnum.serializer)
       ..add(UserLocaleEnum.serializer)
-      ..add(UserPermission.serializer)
       ..add(UserRequest.serializer)
       ..add(UserRequestLocaleEnum.serializer)
       ..add(UserScore.serializer)
@@ -2726,6 +2725,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(UsersUpdateNonFieldErrorsErrorComponentCodeEnum.serializer)
       ..add(UsersUpdateValidationError.serializer)
       ..add(UsersUpdateValidationErrorTypeEnum.serializer)
+      ..add(Workspace.serializer)
+      ..add(WorkspaceCollaborationGroup.serializer)
+      ..add(WorkspaceMembership.serializer)
+      ..add(WorkspaceMembershipRoleEnum.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(AdmBoundary)]),
           () => new ListBuilder<AdmBoundary>())
@@ -2806,9 +2809,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Country)]),
           () => new ListBuilder<Country>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(CountryPermission)]),
-          () => new ListBuilder<CountryPermission>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(DevicesCreateError)]),
           () => new ListBuilder<DevicesCreateError>())
@@ -2957,6 +2957,12 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(BuiltList, const [const FullType(SimplePhoto)]),
           () => new ListBuilder<SimplePhoto>())
       ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(SimpleWorkspace)]),
+          () => new ListBuilder<SimpleWorkspace>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(SimpleUser)]),
+          () => new ListBuilder<SimpleUser>())
+      ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => new ListBuilder<String>())
       ..addBuilderFactory(
@@ -3006,6 +3012,17 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(UsersUpdateError)]),
           () => new ListBuilder<UsersUpdateError>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(Workspace)]),
+          () => new ListBuilder<Workspace>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(WorkspaceCollaborationGroup)]),
+          () => new ListBuilder<WorkspaceCollaborationGroup>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(WorkspaceMembership)]),
+          () => new ListBuilder<WorkspaceMembership>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(double)]),
           () => new ListBuilder<double>()))

@@ -82,7 +82,7 @@ import 'package:mosquito_alert/api.dart';
 //defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
 
 final api = MosquitoAlert().getCountriesApi();
-final int id = 56; // int | A unique integer value identifying this europe country.
+final int id = 56; // int | A unique integer value identifying this country.
 
 try {
     final response = api.retrieve(id);
@@ -96,7 +96,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this europe country. | 
+ **id** | **int**| A unique integer value identifying this country. | 
 
 ### Return type
 

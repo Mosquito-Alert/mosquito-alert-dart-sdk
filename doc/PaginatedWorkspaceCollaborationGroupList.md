@@ -1,4 +1,4 @@
-# mosquito_alert.model.AnnotationPermission
+# mosquito_alert.model.PaginatedWorkspaceCollaborationGroupList
 
 ## Load the model package
 ```dart
@@ -8,10 +8,10 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**add** | **bool** |  | 
-**change** | **bool** |  | 
-**view** | **bool** |  | 
-**delete** | **bool** |  | 
+**count** | **int** |  | 
+**next** | **String** |  | [optional] 
+**previous** | **String** |  | [optional] 
+**results** | [**BuiltList&lt;WorkspaceCollaborationGroup&gt;**](WorkspaceCollaborationGroup.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

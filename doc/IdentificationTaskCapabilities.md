@@ -1,4 +1,4 @@
-# mosquito_alert.model.CountryPermission
+# mosquito_alert.model.IdentificationTaskCapabilities
 
 ## Load the model package
 ```dart
@@ -8,9 +8,9 @@ import 'package:mosquito_alert/api.dart';
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**role** | **String** |  | 
-**permissions** | [**Permissions**](Permissions.md) |  | 
-**country** | [**Country**](Country.md) |  | 
+**review** | **bool** |  | 
+**annotate** | **bool** |  | 
+**annotateExecutive** | **bool** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

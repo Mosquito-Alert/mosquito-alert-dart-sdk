@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **retrieveMine**
-> UserPermission retrieveMine()
+> Permissions retrieveMine()
 
 
 
@@ -46,7 +46,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**UserPermission**](UserPermission.md)
+[**Permissions**](Permissions.md)
 
 ### Authorization
 

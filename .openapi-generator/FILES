@@ -181,7 +181,6 @@ doc/CampaignsListOrderByErrorComponent.md
 doc/CampaignsListValidationError.md
 doc/CountriesApi.md
 doc/Country.md
-doc/CountryPermission.md
 doc/CountryRequest.md
 doc/CreateAgreeReviewRequest.md
 doc/CreateOverwriteReviewRequest.md
@@ -261,11 +260,11 @@ doc/FixesCreatePointNonFieldErrorsErrorComponent.md
 doc/FixesCreatePowerErrorComponent.md
 doc/FixesCreateSentAtErrorComponent.md
 doc/FixesCreateValidationError.md
-doc/GeneralPermission.md
 doc/GuestRegistration.md
 doc/GuestRegistrationRequest.md
 doc/Identification.md
 doc/IdentificationTask.md
+doc/IdentificationTaskCapabilities.md
 doc/IdentificationTaskPermission.md
 doc/IdentificationTaskResult.md
 doc/IdentificationTaskReview.md
@@ -674,6 +673,8 @@ doc/PaginatedPartnerList.md
 doc/PaginatedPhotoPredictionList.md
 doc/PaginatedTaxonList.md
 doc/PaginatedUserList.md
+doc/PaginatedWorkspaceCollaborationGroupList.md
+doc/PaginatedWorkspaceList.md
 doc/Partner.md
 doc/PartnerPoint.md
 doc/PartnersApi.md
@@ -745,6 +746,7 @@ doc/SimplePhoto.md
 doc/SimpleTaxon.md
 doc/SimpleTaxonRequest.md
 doc/SimpleUser.md
+doc/SimpleWorkspace.md
 doc/SimplifiedLocation.md
 doc/SimplifiedObservationWithPhotos.md
 doc/SpeciesCharacteristics.md
@@ -763,7 +765,6 @@ doc/TokenRefreshRequest.md
 doc/TokenVerifyRequest.md
 doc/User.md
 doc/UserAssignment.md
-doc/UserPermission.md
 doc/UserRequest.md
 doc/UserScore.md
 doc/UsersApi.md
@@ -775,6 +776,10 @@ doc/UsersUpdateError.md
 doc/UsersUpdateLocaleErrorComponent.md
 doc/UsersUpdateNonFieldErrorsErrorComponent.md
 doc/UsersUpdateValidationError.md
+doc/Workspace.md
+doc/WorkspaceCollaborationGroup.md
+doc/WorkspaceMembership.md
+doc/WorkspacesApi.md
 lib/mosquito_alert.dart
 lib/src/api.dart
 lib/src/api/auth_api.dart
@@ -795,6 +800,7 @@ lib/src/api/photos_api.dart
 lib/src/api/ping_api.dart
 lib/src/api/taxa_api.dart
 lib/src/api/users_api.dart
+lib/src/api/workspaces_api.dart
 lib/src/api_util.dart
 lib/src/auth/api_key_auth.dart
 lib/src/auth/auth.dart
@@ -976,7 +982,6 @@ lib/src/model/campaigns_list_error.dart
 lib/src/model/campaigns_list_order_by_error_component.dart
 lib/src/model/campaigns_list_validation_error.dart
 lib/src/model/country.dart
-lib/src/model/country_permission.dart
 lib/src/model/country_request.dart
 lib/src/model/create_agree_review_request.dart
 lib/src/model/create_overwrite_review_request.dart
@@ -1055,11 +1060,11 @@ lib/src/model/fixes_create_point_non_field_errors_error_component.dart
 lib/src/model/fixes_create_power_error_component.dart
 lib/src/model/fixes_create_sent_at_error_component.dart
 lib/src/model/fixes_create_validation_error.dart
-lib/src/model/general_permission.dart
 lib/src/model/guest_registration.dart
 lib/src/model/guest_registration_request.dart
 lib/src/model/identification.dart
 lib/src/model/identification_task.dart
+lib/src/model/identification_task_capabilities.dart
 lib/src/model/identification_task_permission.dart
 lib/src/model/identification_task_result.dart
 lib/src/model/identification_task_review.dart
@@ -1464,6 +1469,8 @@ lib/src/model/paginated_partner_list.dart
 lib/src/model/paginated_photo_prediction_list.dart
 lib/src/model/paginated_taxon_list.dart
 lib/src/model/paginated_user_list.dart
+lib/src/model/paginated_workspace_collaboration_group_list.dart
+lib/src/model/paginated_workspace_list.dart
 lib/src/model/partner.dart
 lib/src/model/partner_point.dart
 lib/src/model/password_change_request.dart
@@ -1531,6 +1538,7 @@ lib/src/model/simple_photo.dart
 lib/src/model/simple_taxon.dart
 lib/src/model/simple_taxon_request.dart
 lib/src/model/simple_user.dart
+lib/src/model/simple_workspace.dart
 lib/src/model/simplified_location.dart
 lib/src/model/simplified_observation_with_photos.dart
 lib/src/model/species_characteristics.dart
@@ -1548,7 +1556,6 @@ lib/src/model/token_refresh_request.dart
 lib/src/model/token_verify_request.dart
 lib/src/model/user.dart
 lib/src/model/user_assignment.dart
-lib/src/model/user_permission.dart
 lib/src/model/user_request.dart
 lib/src/model/user_score.dart
 lib/src/model/users_partial_update_error.dart
@@ -1559,6 +1566,9 @@ lib/src/model/users_update_error.dart
 lib/src/model/users_update_locale_error_component.dart
 lib/src/model/users_update_non_field_errors_error_component.dart
 lib/src/model/users_update_validation_error.dart
+lib/src/model/workspace.dart
+lib/src/model/workspace_collaboration_group.dart
+lib/src/model/workspace_membership.dart
 lib/src/serializers.dart
 pubspec.yaml
 test/adm_boundary_request_test.dart
@@ -1740,7 +1750,6 @@ test/campaigns_list_error_test.dart
 test/campaigns_list_order_by_error_component_test.dart
 test/campaigns_list_validation_error_test.dart
 test/countries_api_test.dart
-test/country_permission_test.dart
 test/country_request_test.dart
 test/country_test.dart
 test/create_agree_review_request_test.dart
@@ -1821,9 +1830,9 @@ test/fixes_create_point_non_field_errors_error_component_test.dart
 test/fixes_create_power_error_component_test.dart
 test/fixes_create_sent_at_error_component_test.dart
 test/fixes_create_validation_error_test.dart
-test/general_permission_test.dart
 test/guest_registration_request_test.dart
 test/guest_registration_test.dart
+test/identification_task_capabilities_test.dart
 test/identification_task_permission_test.dart
 test/identification_task_result_test.dart
 test/identification_task_review_test.dart
@@ -2234,6 +2243,8 @@ test/paginated_partner_list_test.dart
 test/paginated_photo_prediction_list_test.dart
 test/paginated_taxon_list_test.dart
 test/paginated_user_list_test.dart
+test/paginated_workspace_collaboration_group_list_test.dart
+test/paginated_workspace_list_test.dart
 test/partner_point_test.dart
 test/partner_test.dart
 test/partners_api_test.dart
@@ -2305,6 +2316,7 @@ test/simple_photo_test.dart
 test/simple_taxon_request_test.dart
 test/simple_taxon_test.dart
 test/simple_user_test.dart
+test/simple_workspace_test.dart
 test/simplified_location_test.dart
 test/simplified_observation_with_photos_test.dart
 test/species_characteristics_request_test.dart
@@ -2322,7 +2334,6 @@ test/token_refresh_request_test.dart
 test/token_refresh_test.dart
 test/token_verify_request_test.dart
 test/user_assignment_test.dart
-test/user_permission_test.dart
 test/user_request_test.dart
 test/user_score_test.dart
 test/user_test.dart
@@ -2335,3 +2346,7 @@ test/users_update_error_test.dart
 test/users_update_locale_error_component_test.dart
 test/users_update_non_field_errors_error_component_test.dart
 test/users_update_validation_error_test.dart
+test/workspace_collaboration_group_test.dart
+test/workspace_membership_test.dart
+test/workspace_test.dart
+test/workspaces_api_test.dart

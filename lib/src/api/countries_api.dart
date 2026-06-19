@@ -4,6 +4,7 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
@@ -122,7 +123,7 @@ class CountriesApi {
   /// 
   ///
   /// Parameters:
-  /// * [id] - A unique integer value identifying this europe country.
+  /// * [id] - A unique integer value identifying this country.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
   /// * [extras] - Can be used to add flags to the request

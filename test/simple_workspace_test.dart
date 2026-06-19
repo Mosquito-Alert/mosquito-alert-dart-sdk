@@ -1,19 +1,19 @@
 import 'package:test/test.dart';
 import 'package:mosquito_alert/mosquito_alert.dart';
 
-// tests for CountryPermission
+// tests for SimpleWorkspace
 void main() {
-  final instance = CountryPermissionBuilder();
+  final instance = SimpleWorkspaceBuilder();
   // TODO add properties to the builder and call build()
 
-  group(CountryPermission, () {
-    // String role
-    test('to test the property `role`', () async {
+  group(SimpleWorkspace, () {
+    // int id
+    test('to test the property `id`', () async {
       // TODO
     });
 
-    // Permissions permissions
-    test('to test the property `permissions`', () async {
+    // String nameValue
+    test('to test the property `nameValue`', () async {
       // TODO
     });
 

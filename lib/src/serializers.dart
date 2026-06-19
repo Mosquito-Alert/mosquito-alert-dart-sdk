@@ -188,7 +188,6 @@ import 'package:mosquito_alert/src/model/campaigns_list_error.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/campaigns_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/country.dart';
-import 'package:mosquito_alert/src/model/country_permission.dart';
 import 'package:mosquito_alert/src/model/country_request.dart';
 import 'package:mosquito_alert/src/model/create_agree_review_request.dart';
 import 'package:mosquito_alert/src/model/create_overwrite_review_request.dart';
@@ -266,11 +265,11 @@ import 'package:mosquito_alert/src/model/fixes_create_point_non_field_errors_err
 import 'package:mosquito_alert/src/model/fixes_create_power_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_sent_at_error_component.dart';
 import 'package:mosquito_alert/src/model/fixes_create_validation_error.dart';
-import 'package:mosquito_alert/src/model/general_permission.dart';
 import 'package:mosquito_alert/src/model/guest_registration.dart';
 import 'package:mosquito_alert/src/model/guest_registration_request.dart';
 import 'package:mosquito_alert/src/model/identification.dart';
 import 'package:mosquito_alert/src/model/identification_task.dart';
+import 'package:mosquito_alert/src/model/identification_task_capabilities.dart';
 import 'package:mosquito_alert/src/model/identification_task_permission.dart';
 import 'package:mosquito_alert/src/model/identification_task_result.dart';
 import 'package:mosquito_alert/src/model/identification_task_review.dart';
@@ -675,6 +674,8 @@ import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
 import 'package:mosquito_alert/src/model/paginated_photo_prediction_list.dart';
 import 'package:mosquito_alert/src/model/paginated_taxon_list.dart';
 import 'package:mosquito_alert/src/model/paginated_user_list.dart';
+import 'package:mosquito_alert/src/model/paginated_workspace_collaboration_group_list.dart';
+import 'package:mosquito_alert/src/model/paginated_workspace_list.dart';
 import 'package:mosquito_alert/src/model/partner.dart';
 import 'package:mosquito_alert/src/model/partner_point.dart';
 import 'package:mosquito_alert/src/model/password_change_request.dart';
@@ -742,6 +743,7 @@ import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:mosquito_alert/src/model/simple_taxon.dart';
 import 'package:mosquito_alert/src/model/simple_taxon_request.dart';
 import 'package:mosquito_alert/src/model/simple_user.dart';
+import 'package:mosquito_alert/src/model/simple_workspace.dart';
 import 'package:mosquito_alert/src/model/simplified_location.dart';
 import 'package:mosquito_alert/src/model/simplified_observation_with_photos.dart';
 import 'package:mosquito_alert/src/model/species_characteristics.dart';
@@ -759,7 +761,6 @@ import 'package:mosquito_alert/src/model/token_refresh_request.dart';
 import 'package:mosquito_alert/src/model/token_verify_request.dart';
 import 'package:mosquito_alert/src/model/user.dart';
 import 'package:mosquito_alert/src/model/user_assignment.dart';
-import 'package:mosquito_alert/src/model/user_permission.dart';
 import 'package:mosquito_alert/src/model/user_request.dart';
 import 'package:mosquito_alert/src/model/user_score.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_error.dart';
@@ -770,6 +771,9 @@ import 'package:mosquito_alert/src/model/users_update_error.dart';
 import 'package:mosquito_alert/src/model/users_update_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_update_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/users_update_validation_error.dart';
+import 'package:mosquito_alert/src/model/workspace.dart';
+import 'package:mosquito_alert/src/model/workspace_collaboration_group.dart';
+import 'package:mosquito_alert/src/model/workspace_membership.dart';
 
 part 'serializers.g.dart';
 
@@ -948,7 +952,6 @@ part 'serializers.g.dart';
   CampaignsListOrderByErrorComponent,
   CampaignsListValidationError,
   Country,
-  CountryPermission,
   CountryRequest,
   CreateAgreeReviewRequest,
   CreateOverwriteReviewRequest,
@@ -1026,11 +1029,11 @@ part 'serializers.g.dart';
   FixesCreatePowerErrorComponent,
   FixesCreateSentAtErrorComponent,
   FixesCreateValidationError,
-  GeneralPermission,
   GuestRegistration,
   GuestRegistrationRequest,
   Identification,
   IdentificationTask,
+  IdentificationTaskCapabilities,
   IdentificationTaskPermission,
   IdentificationTaskResult,
   IdentificationTaskReview,
@@ -1435,6 +1438,8 @@ part 'serializers.g.dart';
   PaginatedPhotoPredictionList,
   PaginatedTaxonList,
   PaginatedUserList,
+  PaginatedWorkspaceCollaborationGroupList,
+  PaginatedWorkspaceList,
   Partner,
   PartnerPoint,
   PasswordChangeRequest,
@@ -1502,6 +1507,7 @@ part 'serializers.g.dart';
   SimpleTaxon,
   SimpleTaxonRequest,
   SimpleUser,
+  SimpleWorkspace,
   SimplifiedLocation,
   SimplifiedObservationWithPhotos,
   SpeciesCharacteristics,
@@ -1519,7 +1525,6 @@ part 'serializers.g.dart';
   TokenVerifyRequest,
   User,
   UserAssignment,
-  UserPermission,
   UserRequest,
   UserScore,
   UsersPartialUpdateError,
@@ -1530,6 +1535,9 @@ part 'serializers.g.dart';
   UsersUpdateLocaleErrorComponent,
   UsersUpdateNonFieldErrorsErrorComponent,
   UsersUpdateValidationError,
+  Workspace,
+  WorkspaceCollaborationGroup,
+  WorkspaceMembership,
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(

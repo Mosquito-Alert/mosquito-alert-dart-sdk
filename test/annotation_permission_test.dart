@@ -27,10 +27,5 @@ void main() {
       // TODO
     });
 
-    // bool markAsExecutive
-    test('to test the property `markAsExecutive`', () async {
-      // TODO
-    });
-
   });
 }

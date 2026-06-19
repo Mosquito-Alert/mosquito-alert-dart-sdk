@@ -9,7 +9,7 @@ void main() {
   group(PermissionsApi, () {
     // Get Current User's Permissions
     //
-    //Future<UserPermission> retrieveMine() async
+    //Future<Permissions> retrieveMine() async
     test('test retrieveMine', () async {
       // TODO
     });

@@ -27,6 +27,7 @@ import 'package:mosquito_alert/src/api/photos_api.dart';
 import 'package:mosquito_alert/src/api/ping_api.dart';
 import 'package:mosquito_alert/src/api/taxa_api.dart';
 import 'package:mosquito_alert/src/api/users_api.dart';
+import 'package:mosquito_alert/src/api/workspaces_api.dart';
 
 class MosquitoAlert {
   static const String basePath = r'https://api.mosquitoalert.com/v1';
@@ -188,5 +189,11 @@ class MosquitoAlert {
   /// by doing that all interceptors will not be executed
   UsersApi getUsersApi() {
     return UsersApi(dio, serializers);
+  }
+
+  /// Get WorkspacesApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  WorkspacesApi getWorkspacesApi() {
+    return WorkspacesApi(dio, serializers);
   }
 }

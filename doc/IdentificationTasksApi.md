@@ -14,6 +14,7 @@ Method | HTTP request | Description
 [**annotationsListMine**](IdentificationTasksApi.md#annotationslistmine) | **GET** /me/identification-tasks/annotations/ | 
 [**annotationsRetrieve**](IdentificationTasksApi.md#annotationsretrieve) | **GET** /identification-tasks/{observation_uuid}/annotations/{id}/ | 
 [**assignNext**](IdentificationTasksApi.md#assignnext) | **POST** /identification-tasks/assignments/next/ | 
+[**capabilitiesRetrieve**](IdentificationTasksApi.md#capabilitiesretrieve) | **GET** /identification-tasks/{observation_uuid}/capabilities/ | 
 [**list**](IdentificationTasksApi.md#list) | **GET** /identification-tasks/ | 
 [**listMine**](IdentificationTasksApi.md#listmine) | **GET** /me/identification-tasks/ | 
 [**predictionsCreate**](IdentificationTasksApi.md#predictionscreate) | **POST** /identification-tasks/{observation_uuid}/predictions/ | 
@@ -341,6 +342,55 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**Assignment**](Assignment.md)
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **capabilitiesRetrieve**
+> IdentificationTaskCapabilities capabilitiesRetrieve(observationUuid)
+
+
+
+### Example
+```dart
+import 'package:mosquito_alert/api.dart';
+// TODO Configure API key authorization: tokenAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
+// TODO Configure API key authorization: cookieAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
+
+final api = MosquitoAlert().getIdentificationTasksApi();
+final String observationUuid = observationUuid_example; // String | 
+
+try {
+    final response = api.capabilitiesRetrieve(observationUuid);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling IdentificationTasksApi->capabilitiesRetrieve: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **observationUuid** | **String**|  | 
+
+### Return type
+
+[**IdentificationTaskCapabilities**](IdentificationTaskCapabilities.md)
 
 ### Authorization
 

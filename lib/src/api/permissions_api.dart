@@ -4,10 +4,11 @@
 
 import 'dart:async';
 
+import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
-import 'package:mosquito_alert/src/model/user_permission.dart';
+import 'package:mosquito_alert/src/model/permissions.dart';
 
 class PermissionsApi {
 
@@ -28,9 +29,9 @@ class PermissionsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [UserPermission] as data
+  /// Returns a [Future] containing a [Response] with a [Permissions] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<UserPermission>> retrieveMine({ 
+  Future<Response<Permissions>> retrieveMine({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -75,14 +76,14 @@ class PermissionsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    UserPermission? _responseData;
+    Permissions? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(UserPermission),
-      ) as UserPermission;
+        specifiedType: const FullType(Permissions),
+      ) as Permissions;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -94,7 +95,7 @@ class PermissionsApi {
       );
     }
 
-    return Response<UserPermission>(
+    return Response<Permissions>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
