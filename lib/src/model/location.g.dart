@@ -809,8 +809,8 @@ const LocationTimezoneEnum _$locationTimezoneEnum_brazilSlashWest =
     const LocationTimezoneEnum._('brazilSlashWest');
 const LocationTimezoneEnum _$locationTimezoneEnum_CET =
     const LocationTimezoneEnum._('CET');
-const LocationTimezoneEnum _$locationTimezoneEnum_cST6CDT =
-    const LocationTimezoneEnum._('cST6CDT');
+const LocationTimezoneEnum _$locationTimezoneEnum_CST6CDT =
+    const LocationTimezoneEnum._('CST6CDT');
 const LocationTimezoneEnum _$locationTimezoneEnum_canadaSlashAtlantic =
     const LocationTimezoneEnum._('canadaSlashAtlantic');
 const LocationTimezoneEnum _$locationTimezoneEnum_canadaSlashCentral =
@@ -837,8 +837,8 @@ const LocationTimezoneEnum _$locationTimezoneEnum_EET =
     const LocationTimezoneEnum._('EET');
 const LocationTimezoneEnum _$locationTimezoneEnum_EST =
     const LocationTimezoneEnum._('EST');
-const LocationTimezoneEnum _$locationTimezoneEnum_eST5EDT =
-    const LocationTimezoneEnum._('eST5EDT');
+const LocationTimezoneEnum _$locationTimezoneEnum_EST5EDT =
+    const LocationTimezoneEnum._('EST5EDT');
 const LocationTimezoneEnum _$locationTimezoneEnum_egypt =
     const LocationTimezoneEnum._('egypt');
 const LocationTimezoneEnum _$locationTimezoneEnum_eire =
@@ -1049,10 +1049,10 @@ const LocationTimezoneEnum _$locationTimezoneEnum_GMT =
     const LocationTimezoneEnum._('GMT');
 const LocationTimezoneEnum _$locationTimezoneEnum_gMTPlus0 =
     const LocationTimezoneEnum._('gMTPlus0');
-const LocationTimezoneEnum _$locationTimezoneEnum_gMT0 =
-    const LocationTimezoneEnum._('gMT0');
-const LocationTimezoneEnum _$locationTimezoneEnum_gMT02 =
-    const LocationTimezoneEnum._('gMT02');
+const LocationTimezoneEnum _$locationTimezoneEnum_GMT_0 =
+    const LocationTimezoneEnum._('GMT_0');
+const LocationTimezoneEnum _$locationTimezoneEnum_GMT0 =
+    const LocationTimezoneEnum._('GMT0');
 const LocationTimezoneEnum _$locationTimezoneEnum_greenwich =
     const LocationTimezoneEnum._('greenwich');
 const LocationTimezoneEnum _$locationTimezoneEnum_HST =
@@ -1099,8 +1099,8 @@ const LocationTimezoneEnum _$locationTimezoneEnum_MET =
     const LocationTimezoneEnum._('MET');
 const LocationTimezoneEnum _$locationTimezoneEnum_MST =
     const LocationTimezoneEnum._('MST');
-const LocationTimezoneEnum _$locationTimezoneEnum_mST7MDT =
-    const LocationTimezoneEnum._('mST7MDT');
+const LocationTimezoneEnum _$locationTimezoneEnum_MST7MDT =
+    const LocationTimezoneEnum._('MST7MDT');
 const LocationTimezoneEnum _$locationTimezoneEnum_mexicoSlashBajaNorte =
     const LocationTimezoneEnum._('mexicoSlashBajaNorte');
 const LocationTimezoneEnum _$locationTimezoneEnum_mexicoSlashBajaSur =
@@ -1115,8 +1115,8 @@ const LocationTimezoneEnum _$locationTimezoneEnum_navajo =
     const LocationTimezoneEnum._('navajo');
 const LocationTimezoneEnum _$locationTimezoneEnum_PRC =
     const LocationTimezoneEnum._('PRC');
-const LocationTimezoneEnum _$locationTimezoneEnum_pST8PDT =
-    const LocationTimezoneEnum._('pST8PDT');
+const LocationTimezoneEnum _$locationTimezoneEnum_PST8PDT =
+    const LocationTimezoneEnum._('PST8PDT');
 const LocationTimezoneEnum _$locationTimezoneEnum_pacificSlashApia =
     const LocationTimezoneEnum._('pacificSlashApia');
 const LocationTimezoneEnum _$locationTimezoneEnum_pacificSlashAuckland =
@@ -2008,8 +2008,8 @@ LocationTimezoneEnum _$locationTimezoneEnumValueOf(String name) {
       return _$locationTimezoneEnum_brazilSlashWest;
     case 'CET':
       return _$locationTimezoneEnum_CET;
-    case 'cST6CDT':
-      return _$locationTimezoneEnum_cST6CDT;
+    case 'CST6CDT':
+      return _$locationTimezoneEnum_CST6CDT;
     case 'canadaSlashAtlantic':
       return _$locationTimezoneEnum_canadaSlashAtlantic;
     case 'canadaSlashCentral':
@@ -2036,8 +2036,8 @@ LocationTimezoneEnum _$locationTimezoneEnumValueOf(String name) {
       return _$locationTimezoneEnum_EET;
     case 'EST':
       return _$locationTimezoneEnum_EST;
-    case 'eST5EDT':
-      return _$locationTimezoneEnum_eST5EDT;
+    case 'EST5EDT':
+      return _$locationTimezoneEnum_EST5EDT;
     case 'egypt':
       return _$locationTimezoneEnum_egypt;
     case 'eire':
@@ -2248,10 +2248,10 @@ LocationTimezoneEnum _$locationTimezoneEnumValueOf(String name) {
       return _$locationTimezoneEnum_GMT;
     case 'gMTPlus0':
       return _$locationTimezoneEnum_gMTPlus0;
-    case 'gMT0':
-      return _$locationTimezoneEnum_gMT0;
-    case 'gMT02':
-      return _$locationTimezoneEnum_gMT02;
+    case 'GMT_0':
+      return _$locationTimezoneEnum_GMT_0;
+    case 'GMT0':
+      return _$locationTimezoneEnum_GMT0;
     case 'greenwich':
       return _$locationTimezoneEnum_greenwich;
     case 'HST':
@@ -2298,8 +2298,8 @@ LocationTimezoneEnum _$locationTimezoneEnumValueOf(String name) {
       return _$locationTimezoneEnum_MET;
     case 'MST':
       return _$locationTimezoneEnum_MST;
-    case 'mST7MDT':
-      return _$locationTimezoneEnum_mST7MDT;
+    case 'MST7MDT':
+      return _$locationTimezoneEnum_MST7MDT;
     case 'mexicoSlashBajaNorte':
       return _$locationTimezoneEnum_mexicoSlashBajaNorte;
     case 'mexicoSlashBajaSur':
@@ -2314,8 +2314,8 @@ LocationTimezoneEnum _$locationTimezoneEnumValueOf(String name) {
       return _$locationTimezoneEnum_navajo;
     case 'PRC':
       return _$locationTimezoneEnum_PRC;
-    case 'pST8PDT':
-      return _$locationTimezoneEnum_pST8PDT;
+    case 'PST8PDT':
+      return _$locationTimezoneEnum_PST8PDT;
     case 'pacificSlashApia':
       return _$locationTimezoneEnum_pacificSlashApia;
     case 'pacificSlashAuckland':
@@ -2836,7 +2836,7 @@ final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
   _$locationTimezoneEnum_brazilSlashEast,
   _$locationTimezoneEnum_brazilSlashWest,
   _$locationTimezoneEnum_CET,
-  _$locationTimezoneEnum_cST6CDT,
+  _$locationTimezoneEnum_CST6CDT,
   _$locationTimezoneEnum_canadaSlashAtlantic,
   _$locationTimezoneEnum_canadaSlashCentral,
   _$locationTimezoneEnum_canadaSlashEastern,
@@ -2850,7 +2850,7 @@ final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
   _$locationTimezoneEnum_cuba,
   _$locationTimezoneEnum_EET,
   _$locationTimezoneEnum_EST,
-  _$locationTimezoneEnum_eST5EDT,
+  _$locationTimezoneEnum_EST5EDT,
   _$locationTimezoneEnum_egypt,
   _$locationTimezoneEnum_eire,
   _$locationTimezoneEnum_etcSlashGMT,
@@ -2956,8 +2956,8 @@ final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
   _$locationTimezoneEnum_gBEire,
   _$locationTimezoneEnum_GMT,
   _$locationTimezoneEnum_gMTPlus0,
-  _$locationTimezoneEnum_gMT0,
-  _$locationTimezoneEnum_gMT02,
+  _$locationTimezoneEnum_GMT_0,
+  _$locationTimezoneEnum_GMT0,
   _$locationTimezoneEnum_greenwich,
   _$locationTimezoneEnum_HST,
   _$locationTimezoneEnum_hongkong,
@@ -2981,7 +2981,7 @@ final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
   _$locationTimezoneEnum_libya,
   _$locationTimezoneEnum_MET,
   _$locationTimezoneEnum_MST,
-  _$locationTimezoneEnum_mST7MDT,
+  _$locationTimezoneEnum_MST7MDT,
   _$locationTimezoneEnum_mexicoSlashBajaNorte,
   _$locationTimezoneEnum_mexicoSlashBajaSur,
   _$locationTimezoneEnum_mexicoSlashGeneral,
@@ -2989,7 +2989,7 @@ final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
   _$locationTimezoneEnum_NZ_CHAT,
   _$locationTimezoneEnum_navajo,
   _$locationTimezoneEnum_PRC,
-  _$locationTimezoneEnum_pST8PDT,
+  _$locationTimezoneEnum_PST8PDT,
   _$locationTimezoneEnum_pacificSlashApia,
   _$locationTimezoneEnum_pacificSlashAuckland,
   _$locationTimezoneEnum_pacificSlashBougainville,
@@ -3475,7 +3475,7 @@ class _$LocationTimezoneEnumSerializer
     'brazilSlashEast': 'Brazil/East',
     'brazilSlashWest': 'Brazil/West',
     'CET': 'CET',
-    'cST6CDT': 'CST6CDT',
+    'CST6CDT': 'CST6CDT',
     'canadaSlashAtlantic': 'Canada/Atlantic',
     'canadaSlashCentral': 'Canada/Central',
     'canadaSlashEastern': 'Canada/Eastern',
@@ -3489,7 +3489,7 @@ class _$LocationTimezoneEnumSerializer
     'cuba': 'Cuba',
     'EET': 'EET',
     'EST': 'EST',
-    'eST5EDT': 'EST5EDT',
+    'EST5EDT': 'EST5EDT',
     'egypt': 'Egypt',
     'eire': 'Eire',
     'etcSlashGMT': 'Etc/GMT',
@@ -3595,8 +3595,8 @@ class _$LocationTimezoneEnumSerializer
     'gBEire': 'GB-Eire',
     'GMT': 'GMT',
     'gMTPlus0': 'GMT+0',
-    'gMT0': 'GMT-0',
-    'gMT02': 'GMT0',
+    'GMT_0': 'GMT-0',
+    'GMT0': 'GMT0',
     'greenwich': 'Greenwich',
     'HST': 'HST',
     'hongkong': 'Hongkong',
@@ -3620,7 +3620,7 @@ class _$LocationTimezoneEnumSerializer
     'libya': 'Libya',
     'MET': 'MET',
     'MST': 'MST',
-    'mST7MDT': 'MST7MDT',
+    'MST7MDT': 'MST7MDT',
     'mexicoSlashBajaNorte': 'Mexico/BajaNorte',
     'mexicoSlashBajaSur': 'Mexico/BajaSur',
     'mexicoSlashGeneral': 'Mexico/General',
@@ -3628,7 +3628,7 @@ class _$LocationTimezoneEnumSerializer
     'NZ_CHAT': 'NZ-CHAT',
     'navajo': 'Navajo',
     'PRC': 'PRC',
-    'pST8PDT': 'PST8PDT',
+    'PST8PDT': 'PST8PDT',
     'pacificSlashApia': 'Pacific/Apia',
     'pacificSlashAuckland': 'Pacific/Auckland',
     'pacificSlashBougainville': 'Pacific/Bougainville',
@@ -4076,7 +4076,7 @@ class _$LocationTimezoneEnumSerializer
     'Brazil/East': 'brazilSlashEast',
     'Brazil/West': 'brazilSlashWest',
     'CET': 'CET',
-    'CST6CDT': 'cST6CDT',
+    'CST6CDT': 'CST6CDT',
     'Canada/Atlantic': 'canadaSlashAtlantic',
     'Canada/Central': 'canadaSlashCentral',
     'Canada/Eastern': 'canadaSlashEastern',
@@ -4090,7 +4090,7 @@ class _$LocationTimezoneEnumSerializer
     'Cuba': 'cuba',
     'EET': 'EET',
     'EST': 'EST',
-    'EST5EDT': 'eST5EDT',
+    'EST5EDT': 'EST5EDT',
     'Egypt': 'egypt',
     'Eire': 'eire',
     'Etc/GMT': 'etcSlashGMT',
@@ -4196,8 +4196,8 @@ class _$LocationTimezoneEnumSerializer
     'GB-Eire': 'gBEire',
     'GMT': 'GMT',
     'GMT+0': 'gMTPlus0',
-    'GMT-0': 'gMT0',
-    'GMT0': 'gMT02',
+    'GMT-0': 'GMT_0',
+    'GMT0': 'GMT0',
     'Greenwich': 'greenwich',
     'HST': 'HST',
     'Hongkong': 'hongkong',
@@ -4221,7 +4221,7 @@ class _$LocationTimezoneEnumSerializer
     'Libya': 'libya',
     'MET': 'MET',
     'MST': 'MST',
-    'MST7MDT': 'mST7MDT',
+    'MST7MDT': 'MST7MDT',
     'Mexico/BajaNorte': 'mexicoSlashBajaNorte',
     'Mexico/BajaSur': 'mexicoSlashBajaSur',
     'Mexico/General': 'mexicoSlashGeneral',
@@ -4229,7 +4229,7 @@ class _$LocationTimezoneEnumSerializer
     'NZ-CHAT': 'NZ_CHAT',
     'Navajo': 'navajo',
     'PRC': 'PRC',
-    'PST8PDT': 'pST8PDT',
+    'PST8PDT': 'PST8PDT',
     'Pacific/Apia': 'pacificSlashApia',
     'Pacific/Auckland': 'pacificSlashAuckland',
     'Pacific/Bougainville': 'pacificSlashBougainville',

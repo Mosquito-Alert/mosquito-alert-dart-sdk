@@ -1141,8 +1141,8 @@ const SimplifiedLocationTimezoneEnum
     const SimplifiedLocationTimezoneEnum._('brazilSlashWest');
 const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_CET =
     const SimplifiedLocationTimezoneEnum._('CET');
-const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_cST6CDT =
-    const SimplifiedLocationTimezoneEnum._('cST6CDT');
+const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_CST6CDT =
+    const SimplifiedLocationTimezoneEnum._('CST6CDT');
 const SimplifiedLocationTimezoneEnum
     _$simplifiedLocationTimezoneEnum_canadaSlashAtlantic =
     const SimplifiedLocationTimezoneEnum._('canadaSlashAtlantic');
@@ -1179,8 +1179,8 @@ const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_EET =
     const SimplifiedLocationTimezoneEnum._('EET');
 const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_EST =
     const SimplifiedLocationTimezoneEnum._('EST');
-const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_eST5EDT =
-    const SimplifiedLocationTimezoneEnum._('eST5EDT');
+const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_EST5EDT =
+    const SimplifiedLocationTimezoneEnum._('EST5EDT');
 const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_egypt =
     const SimplifiedLocationTimezoneEnum._('egypt');
 const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_eire =
@@ -1490,10 +1490,10 @@ const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_GMT =
     const SimplifiedLocationTimezoneEnum._('GMT');
 const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_gMTPlus0 =
     const SimplifiedLocationTimezoneEnum._('gMTPlus0');
-const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_gMT0 =
-    const SimplifiedLocationTimezoneEnum._('gMT0');
-const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_gMT02 =
-    const SimplifiedLocationTimezoneEnum._('gMT02');
+const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_GMT_0 =
+    const SimplifiedLocationTimezoneEnum._('GMT_0');
+const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_GMT0 =
+    const SimplifiedLocationTimezoneEnum._('GMT0');
 const SimplifiedLocationTimezoneEnum
     _$simplifiedLocationTimezoneEnum_greenwich =
     const SimplifiedLocationTimezoneEnum._('greenwich');
@@ -1553,8 +1553,8 @@ const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_MET =
     const SimplifiedLocationTimezoneEnum._('MET');
 const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_MST =
     const SimplifiedLocationTimezoneEnum._('MST');
-const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_mST7MDT =
-    const SimplifiedLocationTimezoneEnum._('mST7MDT');
+const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_MST7MDT =
+    const SimplifiedLocationTimezoneEnum._('MST7MDT');
 const SimplifiedLocationTimezoneEnum
     _$simplifiedLocationTimezoneEnum_mexicoSlashBajaNorte =
     const SimplifiedLocationTimezoneEnum._('mexicoSlashBajaNorte');
@@ -1572,8 +1572,8 @@ const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_navajo =
     const SimplifiedLocationTimezoneEnum._('navajo');
 const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_PRC =
     const SimplifiedLocationTimezoneEnum._('PRC');
-const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_pST8PDT =
-    const SimplifiedLocationTimezoneEnum._('pST8PDT');
+const SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnum_PST8PDT =
+    const SimplifiedLocationTimezoneEnum._('PST8PDT');
 const SimplifiedLocationTimezoneEnum
     _$simplifiedLocationTimezoneEnum_pacificSlashApia =
     const SimplifiedLocationTimezoneEnum._('pacificSlashApia');
@@ -2525,8 +2525,8 @@ SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnumValueOf(
       return _$simplifiedLocationTimezoneEnum_brazilSlashWest;
     case 'CET':
       return _$simplifiedLocationTimezoneEnum_CET;
-    case 'cST6CDT':
-      return _$simplifiedLocationTimezoneEnum_cST6CDT;
+    case 'CST6CDT':
+      return _$simplifiedLocationTimezoneEnum_CST6CDT;
     case 'canadaSlashAtlantic':
       return _$simplifiedLocationTimezoneEnum_canadaSlashAtlantic;
     case 'canadaSlashCentral':
@@ -2553,8 +2553,8 @@ SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnumValueOf(
       return _$simplifiedLocationTimezoneEnum_EET;
     case 'EST':
       return _$simplifiedLocationTimezoneEnum_EST;
-    case 'eST5EDT':
-      return _$simplifiedLocationTimezoneEnum_eST5EDT;
+    case 'EST5EDT':
+      return _$simplifiedLocationTimezoneEnum_EST5EDT;
     case 'egypt':
       return _$simplifiedLocationTimezoneEnum_egypt;
     case 'eire':
@@ -2765,10 +2765,10 @@ SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnumValueOf(
       return _$simplifiedLocationTimezoneEnum_GMT;
     case 'gMTPlus0':
       return _$simplifiedLocationTimezoneEnum_gMTPlus0;
-    case 'gMT0':
-      return _$simplifiedLocationTimezoneEnum_gMT0;
-    case 'gMT02':
-      return _$simplifiedLocationTimezoneEnum_gMT02;
+    case 'GMT_0':
+      return _$simplifiedLocationTimezoneEnum_GMT_0;
+    case 'GMT0':
+      return _$simplifiedLocationTimezoneEnum_GMT0;
     case 'greenwich':
       return _$simplifiedLocationTimezoneEnum_greenwich;
     case 'HST':
@@ -2815,8 +2815,8 @@ SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnumValueOf(
       return _$simplifiedLocationTimezoneEnum_MET;
     case 'MST':
       return _$simplifiedLocationTimezoneEnum_MST;
-    case 'mST7MDT':
-      return _$simplifiedLocationTimezoneEnum_mST7MDT;
+    case 'MST7MDT':
+      return _$simplifiedLocationTimezoneEnum_MST7MDT;
     case 'mexicoSlashBajaNorte':
       return _$simplifiedLocationTimezoneEnum_mexicoSlashBajaNorte;
     case 'mexicoSlashBajaSur':
@@ -2831,8 +2831,8 @@ SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnumValueOf(
       return _$simplifiedLocationTimezoneEnum_navajo;
     case 'PRC':
       return _$simplifiedLocationTimezoneEnum_PRC;
-    case 'pST8PDT':
-      return _$simplifiedLocationTimezoneEnum_pST8PDT;
+    case 'PST8PDT':
+      return _$simplifiedLocationTimezoneEnum_PST8PDT;
     case 'pacificSlashApia':
       return _$simplifiedLocationTimezoneEnum_pacificSlashApia;
     case 'pacificSlashAuckland':
@@ -3354,7 +3354,7 @@ final BuiltSet<SimplifiedLocationTimezoneEnum>
   _$simplifiedLocationTimezoneEnum_brazilSlashEast,
   _$simplifiedLocationTimezoneEnum_brazilSlashWest,
   _$simplifiedLocationTimezoneEnum_CET,
-  _$simplifiedLocationTimezoneEnum_cST6CDT,
+  _$simplifiedLocationTimezoneEnum_CST6CDT,
   _$simplifiedLocationTimezoneEnum_canadaSlashAtlantic,
   _$simplifiedLocationTimezoneEnum_canadaSlashCentral,
   _$simplifiedLocationTimezoneEnum_canadaSlashEastern,
@@ -3368,7 +3368,7 @@ final BuiltSet<SimplifiedLocationTimezoneEnum>
   _$simplifiedLocationTimezoneEnum_cuba,
   _$simplifiedLocationTimezoneEnum_EET,
   _$simplifiedLocationTimezoneEnum_EST,
-  _$simplifiedLocationTimezoneEnum_eST5EDT,
+  _$simplifiedLocationTimezoneEnum_EST5EDT,
   _$simplifiedLocationTimezoneEnum_egypt,
   _$simplifiedLocationTimezoneEnum_eire,
   _$simplifiedLocationTimezoneEnum_etcSlashGMT,
@@ -3474,8 +3474,8 @@ final BuiltSet<SimplifiedLocationTimezoneEnum>
   _$simplifiedLocationTimezoneEnum_gBEire,
   _$simplifiedLocationTimezoneEnum_GMT,
   _$simplifiedLocationTimezoneEnum_gMTPlus0,
-  _$simplifiedLocationTimezoneEnum_gMT0,
-  _$simplifiedLocationTimezoneEnum_gMT02,
+  _$simplifiedLocationTimezoneEnum_GMT_0,
+  _$simplifiedLocationTimezoneEnum_GMT0,
   _$simplifiedLocationTimezoneEnum_greenwich,
   _$simplifiedLocationTimezoneEnum_HST,
   _$simplifiedLocationTimezoneEnum_hongkong,
@@ -3499,7 +3499,7 @@ final BuiltSet<SimplifiedLocationTimezoneEnum>
   _$simplifiedLocationTimezoneEnum_libya,
   _$simplifiedLocationTimezoneEnum_MET,
   _$simplifiedLocationTimezoneEnum_MST,
-  _$simplifiedLocationTimezoneEnum_mST7MDT,
+  _$simplifiedLocationTimezoneEnum_MST7MDT,
   _$simplifiedLocationTimezoneEnum_mexicoSlashBajaNorte,
   _$simplifiedLocationTimezoneEnum_mexicoSlashBajaSur,
   _$simplifiedLocationTimezoneEnum_mexicoSlashGeneral,
@@ -3507,7 +3507,7 @@ final BuiltSet<SimplifiedLocationTimezoneEnum>
   _$simplifiedLocationTimezoneEnum_NZ_CHAT,
   _$simplifiedLocationTimezoneEnum_navajo,
   _$simplifiedLocationTimezoneEnum_PRC,
-  _$simplifiedLocationTimezoneEnum_pST8PDT,
+  _$simplifiedLocationTimezoneEnum_PST8PDT,
   _$simplifiedLocationTimezoneEnum_pacificSlashApia,
   _$simplifiedLocationTimezoneEnum_pacificSlashAuckland,
   _$simplifiedLocationTimezoneEnum_pacificSlashBougainville,
@@ -3962,7 +3962,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'brazilSlashEast': 'Brazil/East',
     'brazilSlashWest': 'Brazil/West',
     'CET': 'CET',
-    'cST6CDT': 'CST6CDT',
+    'CST6CDT': 'CST6CDT',
     'canadaSlashAtlantic': 'Canada/Atlantic',
     'canadaSlashCentral': 'Canada/Central',
     'canadaSlashEastern': 'Canada/Eastern',
@@ -3976,7 +3976,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'cuba': 'Cuba',
     'EET': 'EET',
     'EST': 'EST',
-    'eST5EDT': 'EST5EDT',
+    'EST5EDT': 'EST5EDT',
     'egypt': 'Egypt',
     'eire': 'Eire',
     'etcSlashGMT': 'Etc/GMT',
@@ -4082,8 +4082,8 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'gBEire': 'GB-Eire',
     'GMT': 'GMT',
     'gMTPlus0': 'GMT+0',
-    'gMT0': 'GMT-0',
-    'gMT02': 'GMT0',
+    'GMT_0': 'GMT-0',
+    'GMT0': 'GMT0',
     'greenwich': 'Greenwich',
     'HST': 'HST',
     'hongkong': 'Hongkong',
@@ -4107,7 +4107,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'libya': 'Libya',
     'MET': 'MET',
     'MST': 'MST',
-    'mST7MDT': 'MST7MDT',
+    'MST7MDT': 'MST7MDT',
     'mexicoSlashBajaNorte': 'Mexico/BajaNorte',
     'mexicoSlashBajaSur': 'Mexico/BajaSur',
     'mexicoSlashGeneral': 'Mexico/General',
@@ -4115,7 +4115,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'NZ_CHAT': 'NZ-CHAT',
     'navajo': 'Navajo',
     'PRC': 'PRC',
-    'pST8PDT': 'PST8PDT',
+    'PST8PDT': 'PST8PDT',
     'pacificSlashApia': 'Pacific/Apia',
     'pacificSlashAuckland': 'Pacific/Auckland',
     'pacificSlashBougainville': 'Pacific/Bougainville',
@@ -4563,7 +4563,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'Brazil/East': 'brazilSlashEast',
     'Brazil/West': 'brazilSlashWest',
     'CET': 'CET',
-    'CST6CDT': 'cST6CDT',
+    'CST6CDT': 'CST6CDT',
     'Canada/Atlantic': 'canadaSlashAtlantic',
     'Canada/Central': 'canadaSlashCentral',
     'Canada/Eastern': 'canadaSlashEastern',
@@ -4577,7 +4577,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'Cuba': 'cuba',
     'EET': 'EET',
     'EST': 'EST',
-    'EST5EDT': 'eST5EDT',
+    'EST5EDT': 'EST5EDT',
     'Egypt': 'egypt',
     'Eire': 'eire',
     'Etc/GMT': 'etcSlashGMT',
@@ -4683,8 +4683,8 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'GB-Eire': 'gBEire',
     'GMT': 'GMT',
     'GMT+0': 'gMTPlus0',
-    'GMT-0': 'gMT0',
-    'GMT0': 'gMT02',
+    'GMT-0': 'GMT_0',
+    'GMT0': 'GMT0',
     'Greenwich': 'greenwich',
     'HST': 'HST',
     'Hongkong': 'hongkong',
@@ -4708,7 +4708,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'Libya': 'libya',
     'MET': 'MET',
     'MST': 'MST',
-    'MST7MDT': 'mST7MDT',
+    'MST7MDT': 'MST7MDT',
     'Mexico/BajaNorte': 'mexicoSlashBajaNorte',
     'Mexico/BajaSur': 'mexicoSlashBajaSur',
     'Mexico/General': 'mexicoSlashGeneral',
@@ -4716,7 +4716,7 @@ class _$SimplifiedLocationTimezoneEnumSerializer
     'NZ-CHAT': 'NZ_CHAT',
     'Navajo': 'navajo',
     'PRC': 'PRC',
-    'PST8PDT': 'pST8PDT',
+    'PST8PDT': 'PST8PDT',
     'Pacific/Apia': 'pacificSlashApia',
     'Pacific/Auckland': 'pacificSlashAuckland',
     'Pacific/Bougainville': 'pacificSlashBougainville',

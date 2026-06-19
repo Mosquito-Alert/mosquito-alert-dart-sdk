@@ -4,7 +4,6 @@
 
 import 'dart:async';
 
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
@@ -791,7 +790,7 @@ class IdentificationTasksApi {
     String? resultCharacteristicsSex,
     double? resultConfidenceMax,
     double? resultConfidenceMin,
-    BuiltList<String>? resultSource,
+    BuiltList<String?>? resultSource,
     BuiltList<int>? resultTaxonIds,
     double? resultUncertaintyMax,
     double? resultUncertaintyMin,
@@ -971,7 +970,7 @@ class IdentificationTasksApi {
     String? resultCharacteristicsSex,
     double? resultConfidenceMax,
     double? resultConfidenceMin,
-    BuiltList<String>? resultSource,
+    BuiltList<String?>? resultSource,
     BuiltList<int>? resultTaxonIds,
     double? resultUncertaintyMax,
     double? resultUncertaintyMin,

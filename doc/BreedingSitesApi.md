@@ -168,7 +168,7 @@ final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Receiv
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final String search = search_example; // String | A search term.
 final String shortId = shortId_example; // String | Short ID
-final BuiltList<String> siteType = ; // BuiltList<String> | Breeding site type.  
+final BuiltList<String?> siteType = ; // BuiltList<String?> | Breeding site type.  
 final BuiltList<String> tags = ; // BuiltList<String> | Multiple values may be separated by commas.
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
@@ -202,7 +202,7 @@ Name | Type | Description  | Notes
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
  **search** | **String**| A search term. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
- **siteType** | [**BuiltList&lt;String&gt;**](String.md)| Breeding site type.   | [optional] 
+ **siteType** | [**BuiltList&lt;String?&gt;**](String.md)| Breeding site type.   | [optional] 
  **tags** | [**BuiltList&lt;String&gt;**](String.md)| Multiple values may be separated by commas. | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
@@ -260,7 +260,7 @@ final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Receiv
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final String search = search_example; // String | A search term.
 final String shortId = shortId_example; // String | Short ID
-final BuiltList<String> siteType = ; // BuiltList<String> | Breeding site type.  
+final BuiltList<String?> siteType = ; // BuiltList<String?> | Breeding site type.  
 final BuiltList<String> tags = ; // BuiltList<String> | Multiple values may be separated by commas.
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
@@ -297,7 +297,7 @@ Name | Type | Description  | Notes
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
  **search** | **String**| A search term. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
- **siteType** | [**BuiltList&lt;String&gt;**](String.md)| Breeding site type.   | [optional] 
+ **siteType** | [**BuiltList&lt;String?&gt;**](String.md)| Breeding site type.   | [optional] 
  **tags** | [**BuiltList&lt;String&gt;**](String.md)| Multiple values may be separated by commas. | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 
@@ -357,7 +357,7 @@ final DateTime receivedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Receiv
 final DateTime receivedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Received at
 final String search = search_example; // String | A search term.
 final String shortId = shortId_example; // String | Short ID
-final BuiltList<String> siteType = ; // BuiltList<String> | Breeding site type.  
+final BuiltList<String?> siteType = ; // BuiltList<String?> | Breeding site type.  
 final BuiltList<String> tags = ; // BuiltList<String> | Multiple values may be separated by commas.
 final DateTime updatedAtAfter = 2013-10-20T19:20:30+01:00; // DateTime | Update at
 final DateTime updatedAtBefore = 2013-10-20T19:20:30+01:00; // DateTime | Update at
@@ -394,7 +394,7 @@ Name | Type | Description  | Notes
  **receivedAtBefore** | **DateTime**| Received at | [optional] 
  **search** | **String**| A search term. | [optional] 
  **shortId** | **String**| Short ID | [optional] 
- **siteType** | [**BuiltList&lt;String&gt;**](String.md)| Breeding site type.   | [optional] 
+ **siteType** | [**BuiltList&lt;String?&gt;**](String.md)| Breeding site type.   | [optional] 
  **tags** | [**BuiltList&lt;String&gt;**](String.md)| Multiple values may be separated by commas. | [optional] 
  **updatedAtAfter** | **DateTime**| Update at | [optional] 
  **updatedAtBefore** | **DateTime**| Update at | [optional] 

@@ -4,7 +4,6 @@
 
 import 'dart:async';
 
-import 'package:built_value/json_object.dart';
 import 'package:built_value/serializer.dart';
 import 'package:dio/dio.dart';
 
@@ -279,7 +278,7 @@ class BreedingSitesApi {
     DateTime? receivedAtBefore,
     String? search,
     String? shortId,
-    BuiltList<String>? siteType,
+    BuiltList<String?>? siteType,
     BuiltList<String>? tags,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -441,7 +440,7 @@ class BreedingSitesApi {
     DateTime? receivedAtBefore,
     String? search,
     String? shortId,
-    BuiltList<String>? siteType,
+    BuiltList<String?>? siteType,
     BuiltList<String>? tags,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,
@@ -606,7 +605,7 @@ class BreedingSitesApi {
     DateTime? receivedAtBefore,
     String? search,
     String? shortId,
-    BuiltList<String>? siteType,
+    BuiltList<String?>? siteType,
     BuiltList<String>? tags,
     DateTime? updatedAtAfter,
     DateTime? updatedAtBefore,

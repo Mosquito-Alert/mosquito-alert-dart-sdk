@@ -912,7 +912,7 @@ class SimplifiedLocationTimezoneEnum extends EnumClass {
   @BuiltValueEnumConst(wireName: r'CET')
   static const SimplifiedLocationTimezoneEnum CET = _$simplifiedLocationTimezoneEnum_CET;
   @BuiltValueEnumConst(wireName: r'CST6CDT')
-  static const SimplifiedLocationTimezoneEnum cST6CDT = _$simplifiedLocationTimezoneEnum_cST6CDT;
+  static const SimplifiedLocationTimezoneEnum CST6CDT = _$simplifiedLocationTimezoneEnum_CST6CDT;
   @BuiltValueEnumConst(wireName: r'Canada/Atlantic')
   static const SimplifiedLocationTimezoneEnum canadaSlashAtlantic = _$simplifiedLocationTimezoneEnum_canadaSlashAtlantic;
   @BuiltValueEnumConst(wireName: r'Canada/Central')
@@ -940,7 +940,7 @@ class SimplifiedLocationTimezoneEnum extends EnumClass {
   @BuiltValueEnumConst(wireName: r'EST')
   static const SimplifiedLocationTimezoneEnum EST = _$simplifiedLocationTimezoneEnum_EST;
   @BuiltValueEnumConst(wireName: r'EST5EDT')
-  static const SimplifiedLocationTimezoneEnum eST5EDT = _$simplifiedLocationTimezoneEnum_eST5EDT;
+  static const SimplifiedLocationTimezoneEnum EST5EDT = _$simplifiedLocationTimezoneEnum_EST5EDT;
   @BuiltValueEnumConst(wireName: r'Egypt')
   static const SimplifiedLocationTimezoneEnum egypt = _$simplifiedLocationTimezoneEnum_egypt;
   @BuiltValueEnumConst(wireName: r'Eire')
@@ -1152,9 +1152,9 @@ class SimplifiedLocationTimezoneEnum extends EnumClass {
   @BuiltValueEnumConst(wireName: r'GMT+0')
   static const SimplifiedLocationTimezoneEnum gMTPlus0 = _$simplifiedLocationTimezoneEnum_gMTPlus0;
   @BuiltValueEnumConst(wireName: r'GMT-0')
-  static const SimplifiedLocationTimezoneEnum gMT0 = _$simplifiedLocationTimezoneEnum_gMT0;
+  static const SimplifiedLocationTimezoneEnum GMT_0 = _$simplifiedLocationTimezoneEnum_GMT_0;
   @BuiltValueEnumConst(wireName: r'GMT0')
-  static const SimplifiedLocationTimezoneEnum gMT02 = _$simplifiedLocationTimezoneEnum_gMT02;
+  static const SimplifiedLocationTimezoneEnum GMT0 = _$simplifiedLocationTimezoneEnum_GMT0;
   @BuiltValueEnumConst(wireName: r'Greenwich')
   static const SimplifiedLocationTimezoneEnum greenwich = _$simplifiedLocationTimezoneEnum_greenwich;
   @BuiltValueEnumConst(wireName: r'HST')
@@ -1202,7 +1202,7 @@ class SimplifiedLocationTimezoneEnum extends EnumClass {
   @BuiltValueEnumConst(wireName: r'MST')
   static const SimplifiedLocationTimezoneEnum MST = _$simplifiedLocationTimezoneEnum_MST;
   @BuiltValueEnumConst(wireName: r'MST7MDT')
-  static const SimplifiedLocationTimezoneEnum mST7MDT = _$simplifiedLocationTimezoneEnum_mST7MDT;
+  static const SimplifiedLocationTimezoneEnum MST7MDT = _$simplifiedLocationTimezoneEnum_MST7MDT;
   @BuiltValueEnumConst(wireName: r'Mexico/BajaNorte')
   static const SimplifiedLocationTimezoneEnum mexicoSlashBajaNorte = _$simplifiedLocationTimezoneEnum_mexicoSlashBajaNorte;
   @BuiltValueEnumConst(wireName: r'Mexico/BajaSur')
@@ -1218,7 +1218,7 @@ class SimplifiedLocationTimezoneEnum extends EnumClass {
   @BuiltValueEnumConst(wireName: r'PRC')
   static const SimplifiedLocationTimezoneEnum PRC = _$simplifiedLocationTimezoneEnum_PRC;
   @BuiltValueEnumConst(wireName: r'PST8PDT')
-  static const SimplifiedLocationTimezoneEnum pST8PDT = _$simplifiedLocationTimezoneEnum_pST8PDT;
+  static const SimplifiedLocationTimezoneEnum PST8PDT = _$simplifiedLocationTimezoneEnum_PST8PDT;
   @BuiltValueEnumConst(wireName: r'Pacific/Apia')
   static const SimplifiedLocationTimezoneEnum pacificSlashApia = _$simplifiedLocationTimezoneEnum_pacificSlashApia;
   @BuiltValueEnumConst(wireName: r'Pacific/Auckland')
