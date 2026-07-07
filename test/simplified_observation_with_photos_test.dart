@@ -17,8 +17,8 @@ void main() {
       // TODO
     });
 
-    // String userUuid
-    test('to test the property `userUuid`', () async {
+    // MinimalUser user
+    test('to test the property `user`', () async {
       // TODO
     });
 

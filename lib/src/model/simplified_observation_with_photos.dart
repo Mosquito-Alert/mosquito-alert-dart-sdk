@@ -3,6 +3,7 @@
 //
 
 // ignore_for_file: unused_element
+import 'package:mosquito_alert/src/model/minimal_user.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/simplified_location.dart';
@@ -16,7 +17,7 @@ part 'simplified_observation_with_photos.g.dart';
 /// Properties:
 /// * [uuid] 
 /// * [shortId] 
-/// * [userUuid] 
+/// * [user] 
 /// * [createdAt] 
 /// * [createdAtLocal] - The date and time when the record was created, displayed without timezone field.
 /// * [receivedAt] 
@@ -31,8 +32,8 @@ abstract class SimplifiedObservationWithPhotos implements Built<SimplifiedObserv
   @BuiltValueField(wireName: r'short_id')
   String get shortId;
 
-  @BuiltValueField(wireName: r'user_uuid')
-  String get userUuid;
+  @BuiltValueField(wireName: r'user')
+  MinimalUser get user;
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
@@ -86,10 +87,10 @@ class _$SimplifiedObservationWithPhotosSerializer implements PrimitiveSerializer
       object.shortId,
       specifiedType: const FullType(String),
     );
-    yield r'user_uuid';
+    yield r'user';
     yield serializers.serialize(
-      object.userUuid,
-      specifiedType: const FullType(String),
+      object.user,
+      specifiedType: const FullType(MinimalUser),
     );
     yield r'created_at';
     yield serializers.serialize(
@@ -158,12 +159,12 @@ class _$SimplifiedObservationWithPhotosSerializer implements PrimitiveSerializer
           ) as String;
           result.shortId = valueDes;
           break;
-        case r'user_uuid':
+        case r'user':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
-          result.userUuid = valueDes;
+            specifiedType: const FullType(MinimalUser),
+          ) as MinimalUser;
+          result.user.replace(valueDes);
           break;
         case r'created_at':
           final valueDes = serializers.deserialize(

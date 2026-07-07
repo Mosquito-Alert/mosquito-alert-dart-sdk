@@ -39,7 +39,6 @@ export 'package:mosquito_alert/src/model/annotation_permission.dart';
 export 'package:mosquito_alert/src/model/annotation_request.dart';
 export 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 export 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
-export 'package:mosquito_alert/src/model/assigned_observation.dart';
 export 'package:mosquito_alert/src/model/assignment.dart';
 export 'package:mosquito_alert/src/model/auth_change_password_error.dart';
 export 'package:mosquito_alert/src/model/auth_change_password_non_field_errors_error_component.dart';

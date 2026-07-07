@@ -13,7 +13,7 @@ class _$SimplifiedObservationWithPhotos
   @override
   final String shortId;
   @override
-  final String userUuid;
+  final MinimalUser user;
   @override
   final DateTime createdAt;
   @override
@@ -34,7 +34,7 @@ class _$SimplifiedObservationWithPhotos
   _$SimplifiedObservationWithPhotos._(
       {required this.uuid,
       required this.shortId,
-      required this.userUuid,
+      required this.user,
       required this.createdAt,
       required this.createdAtLocal,
       required this.receivedAt,
@@ -47,7 +47,7 @@ class _$SimplifiedObservationWithPhotos
     BuiltValueNullFieldError.checkNotNull(
         shortId, r'SimplifiedObservationWithPhotos', 'shortId');
     BuiltValueNullFieldError.checkNotNull(
-        userUuid, r'SimplifiedObservationWithPhotos', 'userUuid');
+        user, r'SimplifiedObservationWithPhotos', 'user');
     BuiltValueNullFieldError.checkNotNull(
         createdAt, r'SimplifiedObservationWithPhotos', 'createdAt');
     BuiltValueNullFieldError.checkNotNull(
@@ -75,7 +75,7 @@ class _$SimplifiedObservationWithPhotos
     return other is SimplifiedObservationWithPhotos &&
         uuid == other.uuid &&
         shortId == other.shortId &&
-        userUuid == other.userUuid &&
+        user == other.user &&
         createdAt == other.createdAt &&
         createdAtLocal == other.createdAtLocal &&
         receivedAt == other.receivedAt &&
@@ -89,7 +89,7 @@ class _$SimplifiedObservationWithPhotos
     var _$hash = 0;
     _$hash = $jc(_$hash, uuid.hashCode);
     _$hash = $jc(_$hash, shortId.hashCode);
-    _$hash = $jc(_$hash, userUuid.hashCode);
+    _$hash = $jc(_$hash, user.hashCode);
     _$hash = $jc(_$hash, createdAt.hashCode);
     _$hash = $jc(_$hash, createdAtLocal.hashCode);
     _$hash = $jc(_$hash, receivedAt.hashCode);
@@ -105,7 +105,7 @@ class _$SimplifiedObservationWithPhotos
     return (newBuiltValueToStringHelper(r'SimplifiedObservationWithPhotos')
           ..add('uuid', uuid)
           ..add('shortId', shortId)
-          ..add('userUuid', userUuid)
+          ..add('user', user)
           ..add('createdAt', createdAt)
           ..add('createdAtLocal', createdAtLocal)
           ..add('receivedAt', receivedAt)
@@ -130,9 +130,9 @@ class SimplifiedObservationWithPhotosBuilder
   String? get shortId => _$this._shortId;
   set shortId(String? shortId) => _$this._shortId = shortId;
 
-  String? _userUuid;
-  String? get userUuid => _$this._userUuid;
-  set userUuid(String? userUuid) => _$this._userUuid = userUuid;
+  MinimalUserBuilder? _user;
+  MinimalUserBuilder get user => _$this._user ??= new MinimalUserBuilder();
+  set user(MinimalUserBuilder? user) => _$this._user = user;
 
   DateTime? _createdAt;
   DateTime? get createdAt => _$this._createdAt;
@@ -171,7 +171,7 @@ class SimplifiedObservationWithPhotosBuilder
     if ($v != null) {
       _uuid = $v.uuid;
       _shortId = $v.shortId;
-      _userUuid = $v.userUuid;
+      _user = $v.user.toBuilder();
       _createdAt = $v.createdAt;
       _createdAtLocal = $v.createdAtLocal;
       _receivedAt = $v.receivedAt;
@@ -206,8 +206,7 @@ class SimplifiedObservationWithPhotosBuilder
                   uuid, r'SimplifiedObservationWithPhotos', 'uuid'),
               shortId: BuiltValueNullFieldError.checkNotNull(
                   shortId, r'SimplifiedObservationWithPhotos', 'shortId'),
-              userUuid: BuiltValueNullFieldError.checkNotNull(
-                  userUuid, r'SimplifiedObservationWithPhotos', 'userUuid'),
+              user: user.build(),
               createdAt: BuiltValueNullFieldError.checkNotNull(
                   createdAt, r'SimplifiedObservationWithPhotos', 'createdAt'),
               createdAtLocal: BuiltValueNullFieldError.checkNotNull(
@@ -222,6 +221,9 @@ class SimplifiedObservationWithPhotosBuilder
     } catch (_) {
       late String _$failedField;
       try {
+        _$failedField = 'user';
+        user.build();
+
         _$failedField = 'location';
         location.build();
 

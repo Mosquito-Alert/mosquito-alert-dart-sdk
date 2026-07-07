@@ -10,7 +10,6 @@ doc/AnnotationPermission.md
 doc/AnnotationRequest.md
 doc/AppUserTokenObtainPair.md
 doc/AppUserTokenObtainPairRequest.md
-doc/AssignedObservation.md
 doc/Assignment.md
 doc/AuthApi.md
 doc/AuthChangePasswordError.md
@@ -817,7 +816,6 @@ lib/src/model/annotation_permission.dart
 lib/src/model/annotation_request.dart
 lib/src/model/app_user_token_obtain_pair.dart
 lib/src/model/app_user_token_obtain_pair_request.dart
-lib/src/model/assigned_observation.dart
 lib/src/model/assignment.dart
 lib/src/model/auth_change_password_error.dart
 lib/src/model/auth_change_password_non_field_errors_error_component.dart
@@ -1580,7 +1578,6 @@ test/annotation_request_test.dart
 test/annotation_test.dart
 test/app_user_token_obtain_pair_request_test.dart
 test/app_user_token_obtain_pair_test.dart
-test/assigned_observation_test.dart
 test/assignment_test.dart
 test/auth_api_test.dart
 test/auth_change_password_error_test.dart

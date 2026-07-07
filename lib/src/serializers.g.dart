@@ -18,7 +18,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AnnotationTypeEnum.serializer)
       ..add(AppUserTokenObtainPair.serializer)
       ..add(AppUserTokenObtainPairRequest.serializer)
-      ..add(AssignedObservation.serializer)
       ..add(Assignment.serializer)
       ..add(AssignmentAnnotationTypeEnum.serializer)
       ..add(AuthChangePasswordError.serializer)
@@ -2950,9 +2949,6 @@ Serializers _$serializers = (new Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(PhotosPredictionUpdateError)]),
           () => new ListBuilder<PhotosPredictionUpdateError>())
-      ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(SimplePhoto)]),
-          () => new ListBuilder<SimplePhoto>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimplePhoto)]),
           () => new ListBuilder<SimplePhoto>())

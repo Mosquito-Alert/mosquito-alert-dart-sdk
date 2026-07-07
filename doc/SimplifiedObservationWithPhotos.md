@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **String** |  | 
 **shortId** | **String** |  | 
-**userUuid** | **String** |  | 
+**user** | [**MinimalUser**](MinimalUser.md) |  | 
 **createdAt** | [**DateTime**](DateTime.md) |  | 
 **createdAtLocal** | [**DateTime**](DateTime.md) | The date and time when the record was created, displayed without timezone field. | 
 **receivedAt** | [**DateTime**](DateTime.md) |  | 

@@ -7,7 +7,7 @@ void main() {
   // TODO add properties to the builder and call build()
 
   group(Assignment, () {
-    // AssignedObservation observation
+    // SimplifiedObservationWithPhotos observation
     test('to test the property `observation`', () async {
       // TODO
     });
