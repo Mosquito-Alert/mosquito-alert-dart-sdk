@@ -27,7 +27,7 @@ AnnotationTypeEnum _$annotationTypeEnumValueOf(String name) {
 }
 
 final BuiltSet<AnnotationTypeEnum> _$annotationTypeEnumValues =
-    new BuiltSet<AnnotationTypeEnum>(const <AnnotationTypeEnum>[
+    BuiltSet<AnnotationTypeEnum>(const <AnnotationTypeEnum>[
   _$annotationTypeEnum_short,
   _$annotationTypeEnum_long,
   _$annotationTypeEnum_unknownDefaultOpenApi,
@@ -59,8 +59,8 @@ AnnotationDecisionLevelEnum _$annotationDecisionLevelEnumValueOf(String name) {
 }
 
 final BuiltSet<AnnotationDecisionLevelEnum>
-    _$annotationDecisionLevelEnumValues = new BuiltSet<
-        AnnotationDecisionLevelEnum>(const <AnnotationDecisionLevelEnum>[
+    _$annotationDecisionLevelEnumValues =
+    BuiltSet<AnnotationDecisionLevelEnum>(const <AnnotationDecisionLevelEnum>[
   _$annotationDecisionLevelEnum_normal,
   _$annotationDecisionLevelEnum_executive,
   _$annotationDecisionLevelEnum_final_,
@@ -68,10 +68,10 @@ final BuiltSet<AnnotationDecisionLevelEnum>
 ]);
 
 Serializer<AnnotationTypeEnum> _$annotationTypeEnumSerializer =
-    new _$AnnotationTypeEnumSerializer();
+    _$AnnotationTypeEnumSerializer();
 Serializer<AnnotationDecisionLevelEnum>
     _$annotationDecisionLevelEnumSerializer =
-    new _$AnnotationDecisionLevelEnumSerializer();
+    _$AnnotationDecisionLevelEnumSerializer();
 
 class _$AnnotationTypeEnumSerializer
     implements PrimitiveSerializer<AnnotationTypeEnum> {
@@ -167,7 +167,7 @@ class _$Annotation extends Annotation {
   final DateTime updatedAt;
 
   factory _$Annotation([void Function(AnnotationBuilder)? updates]) =>
-      (new AnnotationBuilder()..update(updates))._build();
+      (AnnotationBuilder()..update(updates))._build();
 
   _$Annotation._(
       {required this.id,
@@ -184,28 +184,13 @@ class _$Annotation extends Annotation {
       this.tags,
       required this.createdAt,
       required this.updatedAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'Annotation', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        observationUuid, r'Annotation', 'observationUuid');
-    BuiltValueNullFieldError.checkNotNull(user, r'Annotation', 'user');
-    BuiltValueNullFieldError.checkNotNull(type, r'Annotation', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        isFlagged, r'Annotation', 'isFlagged');
-    BuiltValueNullFieldError.checkNotNull(
-        decisionLevel, r'Annotation', 'decisionLevel');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'Annotation', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, r'Annotation', 'updatedAt');
-  }
-
+      : super._();
   @override
   Annotation rebuild(void Function(AnnotationBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  AnnotationBuilder toBuilder() => new AnnotationBuilder()..replace(this);
+  AnnotationBuilder toBuilder() => AnnotationBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -283,29 +268,29 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
 
   SimpleAnnotatorUserBuilder? _user;
   SimpleAnnotatorUserBuilder get user =>
-      _$this._user ??= new SimpleAnnotatorUserBuilder();
+      _$this._user ??= SimpleAnnotatorUserBuilder();
   set user(SimpleAnnotatorUserBuilder? user) => _$this._user = user;
 
   SimplePhotoBuilder? _bestPhoto;
   SimplePhotoBuilder get bestPhoto =>
-      _$this._bestPhoto ??= new SimplePhotoBuilder();
+      _$this._bestPhoto ??= SimplePhotoBuilder();
   set bestPhoto(SimplePhotoBuilder? bestPhoto) => _$this._bestPhoto = bestPhoto;
 
   SpeciesClassificationBuilder? _classification;
   SpeciesClassificationBuilder get classification =>
-      _$this._classification ??= new SpeciesClassificationBuilder();
+      _$this._classification ??= SpeciesClassificationBuilder();
   set classification(SpeciesClassificationBuilder? classification) =>
       _$this._classification = classification;
 
   SpeciesCharacteristicsBuilder? _characteristics;
   SpeciesCharacteristicsBuilder get characteristics =>
-      _$this._characteristics ??= new SpeciesCharacteristicsBuilder();
+      _$this._characteristics ??= SpeciesCharacteristicsBuilder();
   set characteristics(SpeciesCharacteristicsBuilder? characteristics) =>
       _$this._characteristics = characteristics;
 
   AnnotationFeedbackBuilder? _feedback;
   AnnotationFeedbackBuilder get feedback =>
-      _$this._feedback ??= new AnnotationFeedbackBuilder();
+      _$this._feedback ??= AnnotationFeedbackBuilder();
   set feedback(AnnotationFeedbackBuilder? feedback) =>
       _$this._feedback = feedback;
 
@@ -324,12 +309,12 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
 
   ObservationFlagsBuilder? _observationFlags;
   ObservationFlagsBuilder get observationFlags =>
-      _$this._observationFlags ??= new ObservationFlagsBuilder();
+      _$this._observationFlags ??= ObservationFlagsBuilder();
   set observationFlags(ObservationFlagsBuilder? observationFlags) =>
       _$this._observationFlags = observationFlags;
 
   ListBuilder<String>? _tags;
-  ListBuilder<String> get tags => _$this._tags ??= new ListBuilder<String>();
+  ListBuilder<String> get tags => _$this._tags ??= ListBuilder<String>();
   set tags(ListBuilder<String>? tags) => _$this._tags = tags;
 
   DateTime? _createdAt;
@@ -368,7 +353,6 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
 
   @override
   void replace(Annotation other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Annotation;
   }
 
@@ -384,28 +368,28 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
     _$Annotation _$result;
     try {
       _$result = _$v ??
-          new _$Annotation._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'Annotation', 'id'),
-              observationUuid: BuiltValueNullFieldError.checkNotNull(
-                  observationUuid, r'Annotation', 'observationUuid'),
-              user: user.build(),
-              bestPhoto: _bestPhoto?.build(),
-              classification: _classification?.build(),
-              characteristics: _characteristics?.build(),
-              feedback: _feedback?.build(),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'Annotation', 'type'),
-              isFlagged: BuiltValueNullFieldError.checkNotNull(
-                  isFlagged, r'Annotation', 'isFlagged'),
-              decisionLevel: BuiltValueNullFieldError.checkNotNull(
-                  decisionLevel, r'Annotation', 'decisionLevel'),
-              observationFlags: _observationFlags?.build(),
-              tags: _tags?.build(),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'Annotation', 'createdAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'Annotation', 'updatedAt'));
+          _$Annotation._(
+            id: BuiltValueNullFieldError.checkNotNull(id, r'Annotation', 'id'),
+            observationUuid: BuiltValueNullFieldError.checkNotNull(
+                observationUuid, r'Annotation', 'observationUuid'),
+            user: user.build(),
+            bestPhoto: _bestPhoto?.build(),
+            classification: _classification?.build(),
+            characteristics: _characteristics?.build(),
+            feedback: _feedback?.build(),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'Annotation', 'type'),
+            isFlagged: BuiltValueNullFieldError.checkNotNull(
+                isFlagged, r'Annotation', 'isFlagged'),
+            decisionLevel: BuiltValueNullFieldError.checkNotNull(
+                decisionLevel, r'Annotation', 'decisionLevel'),
+            observationFlags: _observationFlags?.build(),
+            tags: _tags?.build(),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'Annotation', 'createdAt'),
+            updatedAt: BuiltValueNullFieldError.checkNotNull(
+                updatedAt, r'Annotation', 'updatedAt'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -425,7 +409,7 @@ class AnnotationBuilder implements Builder<Annotation, AnnotationBuilder> {
         _$failedField = 'tags';
         _tags?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'Annotation', _$failedField, e.toString());
       }
       rethrow;

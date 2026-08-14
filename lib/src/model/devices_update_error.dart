@@ -137,9 +137,7 @@ class _$DevicesUpdateErrorSerializer implements PrimitiveSerializer<DevicesUpdat
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    DevicesUpdateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    DevicesUpdateError object) sync* {
   }
 
   @override

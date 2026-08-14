@@ -26,7 +26,7 @@ AuthChangePasswordValidationErrorTypeEnum
 }
 
 final BuiltSet<AuthChangePasswordValidationErrorTypeEnum>
-    _$authChangePasswordValidationErrorTypeEnumValues = new BuiltSet<
+    _$authChangePasswordValidationErrorTypeEnumValues = BuiltSet<
         AuthChangePasswordValidationErrorTypeEnum>(const <AuthChangePasswordValidationErrorTypeEnum>[
   _$authChangePasswordValidationErrorTypeEnum_validationError,
   _$authChangePasswordValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<AuthChangePasswordValidationErrorTypeEnum>
 
 Serializer<AuthChangePasswordValidationErrorTypeEnum>
     _$authChangePasswordValidationErrorTypeEnumSerializer =
-    new _$AuthChangePasswordValidationErrorTypeEnumSerializer();
+    _$AuthChangePasswordValidationErrorTypeEnumSerializer();
 
 class _$AuthChangePasswordValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<AuthChangePasswordValidationErrorTypeEnum> {
@@ -77,18 +77,11 @@ class _$AuthChangePasswordValidationError
 
   factory _$AuthChangePasswordValidationError(
           [void Function(AuthChangePasswordValidationErrorBuilder)? updates]) =>
-      (new AuthChangePasswordValidationErrorBuilder()..update(updates))
-          ._build();
+      (AuthChangePasswordValidationErrorBuilder()..update(updates))._build();
 
   _$AuthChangePasswordValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'AuthChangePasswordValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'AuthChangePasswordValidationError', 'errors');
-  }
-
+      : super._();
   @override
   AuthChangePasswordValidationError rebuild(
           void Function(AuthChangePasswordValidationErrorBuilder) updates) =>
@@ -96,7 +89,7 @@ class _$AuthChangePasswordValidationError
 
   @override
   AuthChangePasswordValidationErrorBuilder toBuilder() =>
-      new AuthChangePasswordValidationErrorBuilder()..replace(this);
+      AuthChangePasswordValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -137,7 +130,7 @@ class AuthChangePasswordValidationErrorBuilder
 
   ListBuilder<AuthChangePasswordError>? _errors;
   ListBuilder<AuthChangePasswordError> get errors =>
-      _$this._errors ??= new ListBuilder<AuthChangePasswordError>();
+      _$this._errors ??= ListBuilder<AuthChangePasswordError>();
   set errors(ListBuilder<AuthChangePasswordError>? errors) =>
       _$this._errors = errors;
 
@@ -157,7 +150,6 @@ class AuthChangePasswordValidationErrorBuilder
 
   @override
   void replace(AuthChangePasswordValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthChangePasswordValidationError;
   }
 
@@ -174,17 +166,18 @@ class AuthChangePasswordValidationErrorBuilder
     _$AuthChangePasswordValidationError _$result;
     try {
       _$result = _$v ??
-          new _$AuthChangePasswordValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'AuthChangePasswordValidationError', 'type'),
-              errors: errors.build());
+          _$AuthChangePasswordValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'AuthChangePasswordValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'AuthChangePasswordValidationError', _$failedField, e.toString());
       }
       rethrow;

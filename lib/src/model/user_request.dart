@@ -77,8 +77,9 @@ class _$UserRequestSerializer implements PrimitiveSerializer<UserRequest> {
         case r'locale':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(UserRequestLocaleEnum),
-          ) as UserRequestLocaleEnum;
+            specifiedType: const FullType.nullable(UserRequestLocaleEnum),
+          ) as UserRequestLocaleEnum?;
+          if (valueDes == null) continue;
           result.locale = valueDes;
           break;
         default:

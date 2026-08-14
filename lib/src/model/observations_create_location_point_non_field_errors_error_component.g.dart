@@ -31,7 +31,7 @@ ObservationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnum
 final BuiltSet<
         ObservationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnum>
     _$observationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnum>(const <ObservationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnum>[
   _$observationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnum_locationPeriodPointPeriodNonFieldErrors,
   _$observationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ ObservationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnum
 final BuiltSet<
         ObservationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnum>
     _$observationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnum>(const <ObservationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnum>[
   _$observationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$observationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -84,10 +84,10 @@ final BuiltSet<
 
 Serializer<ObservationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnum>
     _$observationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnum>
     _$observationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateLocationPointNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateLocationPointNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -186,23 +186,13 @@ class _$ObservationsCreateLocationPointNonFieldErrorsErrorComponent
           [void Function(
                   ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder()
+      (ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsCreateLocationPointNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'ObservationsCreateLocationPointNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'ObservationsCreateLocationPointNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'ObservationsCreateLocationPointNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateLocationPointNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -213,7 +203,7 @@ class _$ObservationsCreateLocationPointNonFieldErrorsErrorComponent
   @override
   ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder()
+          ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -292,7 +282,6 @@ class ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder
   @override
   void replace(
       ObservationsCreateLocationPointNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$ObservationsCreateLocationPointNonFieldErrorsErrorComponent;
   }
@@ -311,19 +300,20 @@ class ObservationsCreateLocationPointNonFieldErrorsErrorComponentBuilder
 
   _$ObservationsCreateLocationPointNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateLocationPointNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsCreateLocationPointNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsCreateLocationPointNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsCreateLocationPointNonFieldErrorsErrorComponent',
-                'detail'));
+        _$ObservationsCreateLocationPointNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'ObservationsCreateLocationPointNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'ObservationsCreateLocationPointNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsCreateLocationPointNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

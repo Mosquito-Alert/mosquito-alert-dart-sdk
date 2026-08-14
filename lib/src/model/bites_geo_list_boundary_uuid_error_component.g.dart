@@ -27,7 +27,7 @@ BitesGeoListBoundaryUuidErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesGeoListBoundaryUuidErrorComponentAttrEnum>
-    _$bitesGeoListBoundaryUuidErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesGeoListBoundaryUuidErrorComponentAttrEnumValues = BuiltSet<
         BitesGeoListBoundaryUuidErrorComponentAttrEnum>(const <BitesGeoListBoundaryUuidErrorComponentAttrEnum>[
   _$bitesGeoListBoundaryUuidErrorComponentAttrEnum_boundaryUuid,
   _$bitesGeoListBoundaryUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ BitesGeoListBoundaryUuidErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesGeoListBoundaryUuidErrorComponentCodeEnum>
-    _$bitesGeoListBoundaryUuidErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesGeoListBoundaryUuidErrorComponentCodeEnumValues = BuiltSet<
         BitesGeoListBoundaryUuidErrorComponentCodeEnum>(const <BitesGeoListBoundaryUuidErrorComponentCodeEnum>[
   _$bitesGeoListBoundaryUuidErrorComponentCodeEnum_invalid,
   _$bitesGeoListBoundaryUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -69,10 +69,10 @@ final BuiltSet<BitesGeoListBoundaryUuidErrorComponentCodeEnum>
 
 Serializer<BitesGeoListBoundaryUuidErrorComponentAttrEnum>
     _$bitesGeoListBoundaryUuidErrorComponentAttrEnumSerializer =
-    new _$BitesGeoListBoundaryUuidErrorComponentAttrEnumSerializer();
+    _$BitesGeoListBoundaryUuidErrorComponentAttrEnumSerializer();
 Serializer<BitesGeoListBoundaryUuidErrorComponentCodeEnum>
     _$bitesGeoListBoundaryUuidErrorComponentCodeEnumSerializer =
-    new _$BitesGeoListBoundaryUuidErrorComponentCodeEnumSerializer();
+    _$BitesGeoListBoundaryUuidErrorComponentCodeEnumSerializer();
 
 class _$BitesGeoListBoundaryUuidErrorComponentAttrEnumSerializer
     implements
@@ -154,20 +154,12 @@ class _$BitesGeoListBoundaryUuidErrorComponent
   factory _$BitesGeoListBoundaryUuidErrorComponent(
           [void Function(BitesGeoListBoundaryUuidErrorComponentBuilder)?
               updates]) =>
-      (new BitesGeoListBoundaryUuidErrorComponentBuilder()..update(updates))
+      (BitesGeoListBoundaryUuidErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BitesGeoListBoundaryUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesGeoListBoundaryUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesGeoListBoundaryUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesGeoListBoundaryUuidErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesGeoListBoundaryUuidErrorComponent rebuild(
           void Function(BitesGeoListBoundaryUuidErrorComponentBuilder)
@@ -176,7 +168,7 @@ class _$BitesGeoListBoundaryUuidErrorComponent
 
   @override
   BitesGeoListBoundaryUuidErrorComponentBuilder toBuilder() =>
-      new BitesGeoListBoundaryUuidErrorComponentBuilder()..replace(this);
+      BitesGeoListBoundaryUuidErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -245,7 +237,6 @@ class BitesGeoListBoundaryUuidErrorComponentBuilder
 
   @override
   void replace(BitesGeoListBoundaryUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesGeoListBoundaryUuidErrorComponent;
   }
 
@@ -260,13 +251,14 @@ class BitesGeoListBoundaryUuidErrorComponentBuilder
 
   _$BitesGeoListBoundaryUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesGeoListBoundaryUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesGeoListBoundaryUuidErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesGeoListBoundaryUuidErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesGeoListBoundaryUuidErrorComponent', 'detail'));
+        _$BitesGeoListBoundaryUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesGeoListBoundaryUuidErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesGeoListBoundaryUuidErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesGeoListBoundaryUuidErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -26,7 +26,7 @@ ObservationsGeoListErrorAttrEnum _$observationsGeoListErrorAttrEnumValueOf(
 }
 
 final BuiltSet<ObservationsGeoListErrorAttrEnum>
-    _$observationsGeoListErrorAttrEnumValues = new BuiltSet<
+    _$observationsGeoListErrorAttrEnumValues = BuiltSet<
         ObservationsGeoListErrorAttrEnum>(const <ObservationsGeoListErrorAttrEnum>[
   _$observationsGeoListErrorAttrEnum_identificationTaxonIdsLookup,
   _$observationsGeoListErrorAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ ObservationsGeoListErrorCodeEnum _$observationsGeoListErrorCodeEnumValueOf(
 }
 
 final BuiltSet<ObservationsGeoListErrorCodeEnum>
-    _$observationsGeoListErrorCodeEnumValues = new BuiltSet<
+    _$observationsGeoListErrorCodeEnumValues = BuiltSet<
         ObservationsGeoListErrorCodeEnum>(const <ObservationsGeoListErrorCodeEnum>[
   _$observationsGeoListErrorCodeEnum_invalidChoice,
   _$observationsGeoListErrorCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<ObservationsGeoListErrorCodeEnum>
 
 Serializer<ObservationsGeoListErrorAttrEnum>
     _$observationsGeoListErrorAttrEnumSerializer =
-    new _$ObservationsGeoListErrorAttrEnumSerializer();
+    _$ObservationsGeoListErrorAttrEnumSerializer();
 Serializer<ObservationsGeoListErrorCodeEnum>
     _$observationsGeoListErrorCodeEnumSerializer =
-    new _$ObservationsGeoListErrorCodeEnumSerializer();
+    _$ObservationsGeoListErrorCodeEnumSerializer();
 
 class _$ObservationsGeoListErrorAttrEnumSerializer
     implements PrimitiveSerializer<ObservationsGeoListErrorAttrEnum> {
@@ -131,13 +131,9 @@ class _$ObservationsGeoListError extends ObservationsGeoListError {
 
   factory _$ObservationsGeoListError(
           [void Function(ObservationsGeoListErrorBuilder)? updates]) =>
-      (new ObservationsGeoListErrorBuilder()..update(updates))._build();
+      (ObservationsGeoListErrorBuilder()..update(updates))._build();
 
-  _$ObservationsGeoListError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'ObservationsGeoListError', 'oneOf');
-  }
-
+  _$ObservationsGeoListError._({required this.oneOf}) : super._();
   @override
   ObservationsGeoListError rebuild(
           void Function(ObservationsGeoListErrorBuilder) updates) =>
@@ -145,7 +141,7 @@ class _$ObservationsGeoListError extends ObservationsGeoListError {
 
   @override
   ObservationsGeoListErrorBuilder toBuilder() =>
-      new ObservationsGeoListErrorBuilder()..replace(this);
+      ObservationsGeoListErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -193,7 +189,6 @@ class ObservationsGeoListErrorBuilder
 
   @override
   void replace(ObservationsGeoListError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsGeoListError;
   }
 
@@ -207,9 +202,10 @@ class ObservationsGeoListErrorBuilder
 
   _$ObservationsGeoListError _build() {
     final _$result = _$v ??
-        new _$ObservationsGeoListError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'ObservationsGeoListError', 'oneOf'));
+        _$ObservationsGeoListError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'ObservationsGeoListError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

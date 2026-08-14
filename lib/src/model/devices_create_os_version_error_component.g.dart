@@ -27,7 +27,7 @@ DevicesCreateOsVersionErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesCreateOsVersionErrorComponentAttrEnum>
-    _$devicesCreateOsVersionErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesCreateOsVersionErrorComponentAttrEnumValues = BuiltSet<
         DevicesCreateOsVersionErrorComponentAttrEnum>(const <DevicesCreateOsVersionErrorComponentAttrEnum>[
   _$devicesCreateOsVersionErrorComponentAttrEnum_osPeriodVersion,
   _$devicesCreateOsVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -81,7 +81,7 @@ DevicesCreateOsVersionErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesCreateOsVersionErrorComponentCodeEnum>
-    _$devicesCreateOsVersionErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesCreateOsVersionErrorComponentCodeEnumValues = BuiltSet<
         DevicesCreateOsVersionErrorComponentCodeEnum>(const <DevicesCreateOsVersionErrorComponentCodeEnum>[
   _$devicesCreateOsVersionErrorComponentCodeEnum_invalid,
   _$devicesCreateOsVersionErrorComponentCodeEnum_maxLength,
@@ -94,10 +94,10 @@ final BuiltSet<DevicesCreateOsVersionErrorComponentCodeEnum>
 
 Serializer<DevicesCreateOsVersionErrorComponentAttrEnum>
     _$devicesCreateOsVersionErrorComponentAttrEnumSerializer =
-    new _$DevicesCreateOsVersionErrorComponentAttrEnumSerializer();
+    _$DevicesCreateOsVersionErrorComponentAttrEnumSerializer();
 Serializer<DevicesCreateOsVersionErrorComponentCodeEnum>
     _$devicesCreateOsVersionErrorComponentCodeEnumSerializer =
-    new _$DevicesCreateOsVersionErrorComponentCodeEnumSerializer();
+    _$DevicesCreateOsVersionErrorComponentCodeEnumSerializer();
 
 class _$DevicesCreateOsVersionErrorComponentAttrEnumSerializer
     implements
@@ -187,20 +187,11 @@ class _$DevicesCreateOsVersionErrorComponent
   factory _$DevicesCreateOsVersionErrorComponent(
           [void Function(DevicesCreateOsVersionErrorComponentBuilder)?
               updates]) =>
-      (new DevicesCreateOsVersionErrorComponentBuilder()..update(updates))
-          ._build();
+      (DevicesCreateOsVersionErrorComponentBuilder()..update(updates))._build();
 
   _$DevicesCreateOsVersionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesCreateOsVersionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesCreateOsVersionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesCreateOsVersionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesCreateOsVersionErrorComponent rebuild(
           void Function(DevicesCreateOsVersionErrorComponentBuilder) updates) =>
@@ -208,7 +199,7 @@ class _$DevicesCreateOsVersionErrorComponent
 
   @override
   DevicesCreateOsVersionErrorComponentBuilder toBuilder() =>
-      new DevicesCreateOsVersionErrorComponentBuilder()..replace(this);
+      DevicesCreateOsVersionErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -276,7 +267,6 @@ class DevicesCreateOsVersionErrorComponentBuilder
 
   @override
   void replace(DevicesCreateOsVersionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesCreateOsVersionErrorComponent;
   }
 
@@ -291,13 +281,14 @@ class DevicesCreateOsVersionErrorComponentBuilder
 
   _$DevicesCreateOsVersionErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesCreateOsVersionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesCreateOsVersionErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesCreateOsVersionErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesCreateOsVersionErrorComponent', 'detail'));
+        _$DevicesCreateOsVersionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesCreateOsVersionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesCreateOsVersionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesCreateOsVersionErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

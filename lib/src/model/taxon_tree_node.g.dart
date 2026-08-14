@@ -47,7 +47,7 @@ TaxonTreeNodeRankEnum _$taxonTreeNodeRankEnumValueOf(String name) {
 }
 
 final BuiltSet<TaxonTreeNodeRankEnum> _$taxonTreeNodeRankEnumValues =
-    new BuiltSet<TaxonTreeNodeRankEnum>(const <TaxonTreeNodeRankEnum>[
+    BuiltSet<TaxonTreeNodeRankEnum>(const <TaxonTreeNodeRankEnum>[
   _$taxonTreeNodeRankEnum_class_,
   _$taxonTreeNodeRankEnum_order,
   _$taxonTreeNodeRankEnum_family,
@@ -59,7 +59,7 @@ final BuiltSet<TaxonTreeNodeRankEnum> _$taxonTreeNodeRankEnumValues =
 ]);
 
 Serializer<TaxonTreeNodeRankEnum> _$taxonTreeNodeRankEnumSerializer =
-    new _$TaxonTreeNodeRankEnumSerializer();
+    _$TaxonTreeNodeRankEnumSerializer();
 
 class _$TaxonTreeNodeRankEnumSerializer
     implements PrimitiveSerializer<TaxonTreeNodeRankEnum> {
@@ -118,7 +118,7 @@ class _$TaxonTreeNode extends TaxonTreeNode {
   final BuiltList<TaxonTreeNode> children;
 
   factory _$TaxonTreeNode([void Function(TaxonTreeNodeBuilder)? updates]) =>
-      (new TaxonTreeNodeBuilder()..update(updates))._build();
+      (TaxonTreeNodeBuilder()..update(updates))._build();
 
   _$TaxonTreeNode._(
       {required this.id,
@@ -128,25 +128,13 @@ class _$TaxonTreeNode extends TaxonTreeNode {
       required this.italicize,
       required this.isRelevant,
       required this.children})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'TaxonTreeNode', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        nameValue, r'TaxonTreeNode', 'nameValue');
-    BuiltValueNullFieldError.checkNotNull(rank, r'TaxonTreeNode', 'rank');
-    BuiltValueNullFieldError.checkNotNull(
-        italicize, r'TaxonTreeNode', 'italicize');
-    BuiltValueNullFieldError.checkNotNull(
-        isRelevant, r'TaxonTreeNode', 'isRelevant');
-    BuiltValueNullFieldError.checkNotNull(
-        children, r'TaxonTreeNode', 'children');
-  }
-
+      : super._();
   @override
   TaxonTreeNode rebuild(void Function(TaxonTreeNodeBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  TaxonTreeNodeBuilder toBuilder() => new TaxonTreeNodeBuilder()..replace(this);
+  TaxonTreeNodeBuilder toBuilder() => TaxonTreeNodeBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -219,7 +207,7 @@ class TaxonTreeNodeBuilder
 
   ListBuilder<TaxonTreeNode>? _children;
   ListBuilder<TaxonTreeNode> get children =>
-      _$this._children ??= new ListBuilder<TaxonTreeNode>();
+      _$this._children ??= ListBuilder<TaxonTreeNode>();
   set children(ListBuilder<TaxonTreeNode>? children) =>
       _$this._children = children;
 
@@ -244,7 +232,6 @@ class TaxonTreeNodeBuilder
 
   @override
   void replace(TaxonTreeNode other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$TaxonTreeNode;
   }
 
@@ -260,26 +247,27 @@ class TaxonTreeNodeBuilder
     _$TaxonTreeNode _$result;
     try {
       _$result = _$v ??
-          new _$TaxonTreeNode._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'TaxonTreeNode', 'id'),
-              nameValue: BuiltValueNullFieldError.checkNotNull(
-                  nameValue, r'TaxonTreeNode', 'nameValue'),
-              commonName: commonName,
-              rank: BuiltValueNullFieldError.checkNotNull(
-                  rank, r'TaxonTreeNode', 'rank'),
-              italicize: BuiltValueNullFieldError.checkNotNull(
-                  italicize, r'TaxonTreeNode', 'italicize'),
-              isRelevant: BuiltValueNullFieldError.checkNotNull(
-                  isRelevant, r'TaxonTreeNode', 'isRelevant'),
-              children: children.build());
+          _$TaxonTreeNode._(
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'TaxonTreeNode', 'id'),
+            nameValue: BuiltValueNullFieldError.checkNotNull(
+                nameValue, r'TaxonTreeNode', 'nameValue'),
+            commonName: commonName,
+            rank: BuiltValueNullFieldError.checkNotNull(
+                rank, r'TaxonTreeNode', 'rank'),
+            italicize: BuiltValueNullFieldError.checkNotNull(
+                italicize, r'TaxonTreeNode', 'italicize'),
+            isRelevant: BuiltValueNullFieldError.checkNotNull(
+                isRelevant, r'TaxonTreeNode', 'isRelevant'),
+            children: children.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'children';
         children.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'TaxonTreeNode', _$failedField, e.toString());
       }
       rethrow;

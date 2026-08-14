@@ -26,7 +26,7 @@ AuthVerifyTokenTokenErrorComponentAttrEnum
 }
 
 final BuiltSet<AuthVerifyTokenTokenErrorComponentAttrEnum>
-    _$authVerifyTokenTokenErrorComponentAttrEnumValues = new BuiltSet<
+    _$authVerifyTokenTokenErrorComponentAttrEnumValues = BuiltSet<
         AuthVerifyTokenTokenErrorComponentAttrEnum>(const <AuthVerifyTokenTokenErrorComponentAttrEnum>[
   _$authVerifyTokenTokenErrorComponentAttrEnum_token,
   _$authVerifyTokenTokenErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -79,7 +79,7 @@ AuthVerifyTokenTokenErrorComponentCodeEnum
 }
 
 final BuiltSet<AuthVerifyTokenTokenErrorComponentCodeEnum>
-    _$authVerifyTokenTokenErrorComponentCodeEnumValues = new BuiltSet<
+    _$authVerifyTokenTokenErrorComponentCodeEnumValues = BuiltSet<
         AuthVerifyTokenTokenErrorComponentCodeEnum>(const <AuthVerifyTokenTokenErrorComponentCodeEnum>[
   _$authVerifyTokenTokenErrorComponentCodeEnum_blank,
   _$authVerifyTokenTokenErrorComponentCodeEnum_invalid,
@@ -92,10 +92,10 @@ final BuiltSet<AuthVerifyTokenTokenErrorComponentCodeEnum>
 
 Serializer<AuthVerifyTokenTokenErrorComponentAttrEnum>
     _$authVerifyTokenTokenErrorComponentAttrEnumSerializer =
-    new _$AuthVerifyTokenTokenErrorComponentAttrEnumSerializer();
+    _$AuthVerifyTokenTokenErrorComponentAttrEnumSerializer();
 Serializer<AuthVerifyTokenTokenErrorComponentCodeEnum>
     _$authVerifyTokenTokenErrorComponentCodeEnumSerializer =
-    new _$AuthVerifyTokenTokenErrorComponentCodeEnumSerializer();
+    _$AuthVerifyTokenTokenErrorComponentCodeEnumSerializer();
 
 class _$AuthVerifyTokenTokenErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<AuthVerifyTokenTokenErrorComponentAttrEnum> {
@@ -183,20 +183,11 @@ class _$AuthVerifyTokenTokenErrorComponent
   factory _$AuthVerifyTokenTokenErrorComponent(
           [void Function(AuthVerifyTokenTokenErrorComponentBuilder)?
               updates]) =>
-      (new AuthVerifyTokenTokenErrorComponentBuilder()..update(updates))
-          ._build();
+      (AuthVerifyTokenTokenErrorComponentBuilder()..update(updates))._build();
 
   _$AuthVerifyTokenTokenErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'AuthVerifyTokenTokenErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'AuthVerifyTokenTokenErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'AuthVerifyTokenTokenErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   AuthVerifyTokenTokenErrorComponent rebuild(
           void Function(AuthVerifyTokenTokenErrorComponentBuilder) updates) =>
@@ -204,7 +195,7 @@ class _$AuthVerifyTokenTokenErrorComponent
 
   @override
   AuthVerifyTokenTokenErrorComponentBuilder toBuilder() =>
-      new AuthVerifyTokenTokenErrorComponentBuilder()..replace(this);
+      AuthVerifyTokenTokenErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -272,7 +263,6 @@ class AuthVerifyTokenTokenErrorComponentBuilder
 
   @override
   void replace(AuthVerifyTokenTokenErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthVerifyTokenTokenErrorComponent;
   }
 
@@ -287,13 +277,14 @@ class AuthVerifyTokenTokenErrorComponentBuilder
 
   _$AuthVerifyTokenTokenErrorComponent _build() {
     final _$result = _$v ??
-        new _$AuthVerifyTokenTokenErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'AuthVerifyTokenTokenErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AuthVerifyTokenTokenErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'AuthVerifyTokenTokenErrorComponent', 'detail'));
+        _$AuthVerifyTokenTokenErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'AuthVerifyTokenTokenErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AuthVerifyTokenTokenErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'AuthVerifyTokenTokenErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

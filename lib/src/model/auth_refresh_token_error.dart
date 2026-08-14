@@ -73,9 +73,7 @@ class _$AuthRefreshTokenErrorSerializer implements PrimitiveSerializer<AuthRefre
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    AuthRefreshTokenError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    AuthRefreshTokenError object) sync* {
   }
 
   @override

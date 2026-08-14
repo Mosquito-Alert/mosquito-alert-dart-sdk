@@ -12,13 +12,9 @@ class _$TokenVerifyRequest extends TokenVerifyRequest {
 
   factory _$TokenVerifyRequest(
           [void Function(TokenVerifyRequestBuilder)? updates]) =>
-      (new TokenVerifyRequestBuilder()..update(updates))._build();
+      (TokenVerifyRequestBuilder()..update(updates))._build();
 
-  _$TokenVerifyRequest._({required this.token}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        token, r'TokenVerifyRequest', 'token');
-  }
-
+  _$TokenVerifyRequest._({required this.token}) : super._();
   @override
   TokenVerifyRequest rebuild(
           void Function(TokenVerifyRequestBuilder) updates) =>
@@ -26,7 +22,7 @@ class _$TokenVerifyRequest extends TokenVerifyRequest {
 
   @override
   TokenVerifyRequestBuilder toBuilder() =>
-      new TokenVerifyRequestBuilder()..replace(this);
+      TokenVerifyRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -73,7 +69,6 @@ class TokenVerifyRequestBuilder
 
   @override
   void replace(TokenVerifyRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$TokenVerifyRequest;
   }
 
@@ -87,9 +82,10 @@ class TokenVerifyRequestBuilder
 
   _$TokenVerifyRequest _build() {
     final _$result = _$v ??
-        new _$TokenVerifyRequest._(
-            token: BuiltValueNullFieldError.checkNotNull(
-                token, r'TokenVerifyRequest', 'token'));
+        _$TokenVerifyRequest._(
+          token: BuiltValueNullFieldError.checkNotNull(
+              token, r'TokenVerifyRequest', 'token'),
+        );
     replace(_$result);
     return _$result;
   }

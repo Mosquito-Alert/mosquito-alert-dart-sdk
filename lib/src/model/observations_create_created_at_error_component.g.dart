@@ -27,7 +27,7 @@ ObservationsCreateCreatedAtErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsCreateCreatedAtErrorComponentAttrEnum>
-    _$observationsCreateCreatedAtErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsCreateCreatedAtErrorComponentAttrEnumValues = BuiltSet<
         ObservationsCreateCreatedAtErrorComponentAttrEnum>(const <ObservationsCreateCreatedAtErrorComponentAttrEnum>[
   _$observationsCreateCreatedAtErrorComponentAttrEnum_createdAt,
   _$observationsCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -79,7 +79,7 @@ ObservationsCreateCreatedAtErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsCreateCreatedAtErrorComponentCodeEnum>
-    _$observationsCreateCreatedAtErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsCreateCreatedAtErrorComponentCodeEnumValues = BuiltSet<
         ObservationsCreateCreatedAtErrorComponentCodeEnum>(const <ObservationsCreateCreatedAtErrorComponentCodeEnum>[
   _$observationsCreateCreatedAtErrorComponentCodeEnum_date,
   _$observationsCreateCreatedAtErrorComponentCodeEnum_invalid,
@@ -92,10 +92,10 @@ final BuiltSet<ObservationsCreateCreatedAtErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateCreatedAtErrorComponentAttrEnum>
     _$observationsCreateCreatedAtErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateCreatedAtErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateCreatedAtErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateCreatedAtErrorComponentCodeEnum>
     _$observationsCreateCreatedAtErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateCreatedAtErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateCreatedAtErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateCreatedAtErrorComponentAttrEnumSerializer
     implements
@@ -185,20 +185,12 @@ class _$ObservationsCreateCreatedAtErrorComponent
   factory _$ObservationsCreateCreatedAtErrorComponent(
           [void Function(ObservationsCreateCreatedAtErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateCreatedAtErrorComponentBuilder()..update(updates))
+      (ObservationsCreateCreatedAtErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsCreateCreatedAtErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsCreateCreatedAtErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsCreateCreatedAtErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsCreateCreatedAtErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateCreatedAtErrorComponent rebuild(
           void Function(ObservationsCreateCreatedAtErrorComponentBuilder)
@@ -207,7 +199,7 @@ class _$ObservationsCreateCreatedAtErrorComponent
 
   @override
   ObservationsCreateCreatedAtErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateCreatedAtErrorComponentBuilder()..replace(this);
+      ObservationsCreateCreatedAtErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -276,7 +268,6 @@ class ObservationsCreateCreatedAtErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateCreatedAtErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateCreatedAtErrorComponent;
   }
 
@@ -292,13 +283,14 @@ class ObservationsCreateCreatedAtErrorComponentBuilder
 
   _$ObservationsCreateCreatedAtErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateCreatedAtErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsCreateCreatedAtErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsCreateCreatedAtErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsCreateCreatedAtErrorComponent', 'detail'));
+        _$ObservationsCreateCreatedAtErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsCreateCreatedAtErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsCreateCreatedAtErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsCreateCreatedAtErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

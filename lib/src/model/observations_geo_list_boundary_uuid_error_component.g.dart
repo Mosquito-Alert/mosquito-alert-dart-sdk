@@ -29,8 +29,7 @@ ObservationsGeoListBoundaryUuidErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsGeoListBoundaryUuidErrorComponentAttrEnum>
-    _$observationsGeoListBoundaryUuidErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$observationsGeoListBoundaryUuidErrorComponentAttrEnumValues = BuiltSet<
         ObservationsGeoListBoundaryUuidErrorComponentAttrEnum>(const <ObservationsGeoListBoundaryUuidErrorComponentAttrEnum>[
   _$observationsGeoListBoundaryUuidErrorComponentAttrEnum_boundaryUuid,
   _$observationsGeoListBoundaryUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,8 +63,7 @@ ObservationsGeoListBoundaryUuidErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsGeoListBoundaryUuidErrorComponentCodeEnum>
-    _$observationsGeoListBoundaryUuidErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$observationsGeoListBoundaryUuidErrorComponentCodeEnumValues = BuiltSet<
         ObservationsGeoListBoundaryUuidErrorComponentCodeEnum>(const <ObservationsGeoListBoundaryUuidErrorComponentCodeEnum>[
   _$observationsGeoListBoundaryUuidErrorComponentCodeEnum_invalid,
   _$observationsGeoListBoundaryUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -74,10 +72,10 @@ final BuiltSet<ObservationsGeoListBoundaryUuidErrorComponentCodeEnum>
 
 Serializer<ObservationsGeoListBoundaryUuidErrorComponentAttrEnum>
     _$observationsGeoListBoundaryUuidErrorComponentAttrEnumSerializer =
-    new _$ObservationsGeoListBoundaryUuidErrorComponentAttrEnumSerializer();
+    _$ObservationsGeoListBoundaryUuidErrorComponentAttrEnumSerializer();
 Serializer<ObservationsGeoListBoundaryUuidErrorComponentCodeEnum>
     _$observationsGeoListBoundaryUuidErrorComponentCodeEnumSerializer =
-    new _$ObservationsGeoListBoundaryUuidErrorComponentCodeEnumSerializer();
+    _$ObservationsGeoListBoundaryUuidErrorComponentCodeEnumSerializer();
 
 class _$ObservationsGeoListBoundaryUuidErrorComponentAttrEnumSerializer
     implements
@@ -163,21 +161,12 @@ class _$ObservationsGeoListBoundaryUuidErrorComponent
   factory _$ObservationsGeoListBoundaryUuidErrorComponent(
           [void Function(ObservationsGeoListBoundaryUuidErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsGeoListBoundaryUuidErrorComponentBuilder()
-            ..update(updates))
+      (ObservationsGeoListBoundaryUuidErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsGeoListBoundaryUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsGeoListBoundaryUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsGeoListBoundaryUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsGeoListBoundaryUuidErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsGeoListBoundaryUuidErrorComponent rebuild(
           void Function(ObservationsGeoListBoundaryUuidErrorComponentBuilder)
@@ -186,7 +175,7 @@ class _$ObservationsGeoListBoundaryUuidErrorComponent
 
   @override
   ObservationsGeoListBoundaryUuidErrorComponentBuilder toBuilder() =>
-      new ObservationsGeoListBoundaryUuidErrorComponentBuilder()..replace(this);
+      ObservationsGeoListBoundaryUuidErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -257,7 +246,6 @@ class ObservationsGeoListBoundaryUuidErrorComponentBuilder
 
   @override
   void replace(ObservationsGeoListBoundaryUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsGeoListBoundaryUuidErrorComponent;
   }
 
@@ -273,13 +261,14 @@ class ObservationsGeoListBoundaryUuidErrorComponentBuilder
 
   _$ObservationsGeoListBoundaryUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsGeoListBoundaryUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsGeoListBoundaryUuidErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsGeoListBoundaryUuidErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsGeoListBoundaryUuidErrorComponent', 'detail'));
+        _$ObservationsGeoListBoundaryUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsGeoListBoundaryUuidErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsGeoListBoundaryUuidErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'ObservationsGeoListBoundaryUuidErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

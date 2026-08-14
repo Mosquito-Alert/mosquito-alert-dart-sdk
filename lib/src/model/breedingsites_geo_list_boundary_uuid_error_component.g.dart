@@ -29,8 +29,7 @@ BreedingsitesGeoListBoundaryUuidErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesGeoListBoundaryUuidErrorComponentAttrEnum>
-    _$breedingsitesGeoListBoundaryUuidErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$breedingsitesGeoListBoundaryUuidErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesGeoListBoundaryUuidErrorComponentAttrEnum>(const <BreedingsitesGeoListBoundaryUuidErrorComponentAttrEnum>[
   _$breedingsitesGeoListBoundaryUuidErrorComponentAttrEnum_boundaryUuid,
   _$breedingsitesGeoListBoundaryUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,8 +63,7 @@ BreedingsitesGeoListBoundaryUuidErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesGeoListBoundaryUuidErrorComponentCodeEnum>
-    _$breedingsitesGeoListBoundaryUuidErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$breedingsitesGeoListBoundaryUuidErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesGeoListBoundaryUuidErrorComponentCodeEnum>(const <BreedingsitesGeoListBoundaryUuidErrorComponentCodeEnum>[
   _$breedingsitesGeoListBoundaryUuidErrorComponentCodeEnum_invalid,
   _$breedingsitesGeoListBoundaryUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -74,10 +72,10 @@ final BuiltSet<BreedingsitesGeoListBoundaryUuidErrorComponentCodeEnum>
 
 Serializer<BreedingsitesGeoListBoundaryUuidErrorComponentAttrEnum>
     _$breedingsitesGeoListBoundaryUuidErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesGeoListBoundaryUuidErrorComponentAttrEnumSerializer();
+    _$BreedingsitesGeoListBoundaryUuidErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesGeoListBoundaryUuidErrorComponentCodeEnum>
     _$breedingsitesGeoListBoundaryUuidErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesGeoListBoundaryUuidErrorComponentCodeEnumSerializer();
+    _$BreedingsitesGeoListBoundaryUuidErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesGeoListBoundaryUuidErrorComponentAttrEnumSerializer
     implements
@@ -163,21 +161,12 @@ class _$BreedingsitesGeoListBoundaryUuidErrorComponent
   factory _$BreedingsitesGeoListBoundaryUuidErrorComponent(
           [void Function(BreedingsitesGeoListBoundaryUuidErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesGeoListBoundaryUuidErrorComponentBuilder()
-            ..update(updates))
+      (BreedingsitesGeoListBoundaryUuidErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesGeoListBoundaryUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesGeoListBoundaryUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesGeoListBoundaryUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesGeoListBoundaryUuidErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesGeoListBoundaryUuidErrorComponent rebuild(
           void Function(BreedingsitesGeoListBoundaryUuidErrorComponentBuilder)
@@ -186,8 +175,7 @@ class _$BreedingsitesGeoListBoundaryUuidErrorComponent
 
   @override
   BreedingsitesGeoListBoundaryUuidErrorComponentBuilder toBuilder() =>
-      new BreedingsitesGeoListBoundaryUuidErrorComponentBuilder()
-        ..replace(this);
+      BreedingsitesGeoListBoundaryUuidErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -258,7 +246,6 @@ class BreedingsitesGeoListBoundaryUuidErrorComponentBuilder
 
   @override
   void replace(BreedingsitesGeoListBoundaryUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesGeoListBoundaryUuidErrorComponent;
   }
 
@@ -274,13 +261,14 @@ class BreedingsitesGeoListBoundaryUuidErrorComponentBuilder
 
   _$BreedingsitesGeoListBoundaryUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesGeoListBoundaryUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'BreedingsitesGeoListBoundaryUuidErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'BreedingsitesGeoListBoundaryUuidErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesGeoListBoundaryUuidErrorComponent', 'detail'));
+        _$BreedingsitesGeoListBoundaryUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesGeoListBoundaryUuidErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesGeoListBoundaryUuidErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'BreedingsitesGeoListBoundaryUuidErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

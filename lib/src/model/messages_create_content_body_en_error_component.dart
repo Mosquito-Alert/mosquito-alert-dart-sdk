@@ -23,7 +23,7 @@ abstract class MessagesCreateContentBodyEnErrorComponent implements Built<Messag
 
   @BuiltValueField(wireName: r'code')
   MessagesCreateContentBodyEnErrorComponentCodeEnum get code;
-  // enum codeEnum {  blank,  invalid,  null_characters_not_allowed,  surrogate_characters_not_allowed,  };
+  // enum codeEnum {  blank,  invalid,  null,  null_characters_not_allowed,  required,  surrogate_characters_not_allowed,  };
 
   @BuiltValueField(wireName: r'detail')
   String get detail;
@@ -160,8 +160,12 @@ class MessagesCreateContentBodyEnErrorComponentCodeEnum extends EnumClass {
   static const MessagesCreateContentBodyEnErrorComponentCodeEnum blank = _$messagesCreateContentBodyEnErrorComponentCodeEnum_blank;
   @BuiltValueEnumConst(wireName: r'invalid')
   static const MessagesCreateContentBodyEnErrorComponentCodeEnum invalid = _$messagesCreateContentBodyEnErrorComponentCodeEnum_invalid;
+  @BuiltValueEnumConst(wireName: r'null')
+  static const MessagesCreateContentBodyEnErrorComponentCodeEnum null_ = _$messagesCreateContentBodyEnErrorComponentCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
   static const MessagesCreateContentBodyEnErrorComponentCodeEnum nullCharactersNotAllowed = _$messagesCreateContentBodyEnErrorComponentCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'required')
+  static const MessagesCreateContentBodyEnErrorComponentCodeEnum required_ = _$messagesCreateContentBodyEnErrorComponentCodeEnum_required_;
   @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
   static const MessagesCreateContentBodyEnErrorComponentCodeEnum surrogateCharactersNotAllowed = _$messagesCreateContentBodyEnErrorComponentCodeEnum_surrogateCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)

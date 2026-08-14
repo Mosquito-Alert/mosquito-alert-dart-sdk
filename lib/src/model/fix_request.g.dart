@@ -19,7 +19,7 @@ class _$FixRequest extends FixRequest {
   final double? power;
 
   factory _$FixRequest([void Function(FixRequestBuilder)? updates]) =>
-      (new FixRequestBuilder()..update(updates))._build();
+      (FixRequestBuilder()..update(updates))._build();
 
   _$FixRequest._(
       {required this.coverageUuid,
@@ -27,21 +27,13 @@ class _$FixRequest extends FixRequest {
       required this.sentAt,
       required this.point,
       this.power})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        coverageUuid, r'FixRequest', 'coverageUuid');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'FixRequest', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(sentAt, r'FixRequest', 'sentAt');
-    BuiltValueNullFieldError.checkNotNull(point, r'FixRequest', 'point');
-  }
-
+      : super._();
   @override
   FixRequest rebuild(void Function(FixRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  FixRequestBuilder toBuilder() => new FixRequestBuilder()..replace(this);
+  FixRequestBuilder toBuilder() => FixRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -95,7 +87,7 @@ class FixRequestBuilder implements Builder<FixRequest, FixRequestBuilder> {
 
   FixLocationRequestBuilder? _point;
   FixLocationRequestBuilder get point =>
-      _$this._point ??= new FixLocationRequestBuilder();
+      _$this._point ??= FixLocationRequestBuilder();
   set point(FixLocationRequestBuilder? point) => _$this._point = point;
 
   double? _power;
@@ -121,7 +113,6 @@ class FixRequestBuilder implements Builder<FixRequest, FixRequestBuilder> {
 
   @override
   void replace(FixRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixRequest;
   }
 
@@ -137,22 +128,23 @@ class FixRequestBuilder implements Builder<FixRequest, FixRequestBuilder> {
     _$FixRequest _$result;
     try {
       _$result = _$v ??
-          new _$FixRequest._(
-              coverageUuid: BuiltValueNullFieldError.checkNotNull(
-                  coverageUuid, r'FixRequest', 'coverageUuid'),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'FixRequest', 'createdAt'),
-              sentAt: BuiltValueNullFieldError.checkNotNull(
-                  sentAt, r'FixRequest', 'sentAt'),
-              point: point.build(),
-              power: power);
+          _$FixRequest._(
+            coverageUuid: BuiltValueNullFieldError.checkNotNull(
+                coverageUuid, r'FixRequest', 'coverageUuid'),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'FixRequest', 'createdAt'),
+            sentAt: BuiltValueNullFieldError.checkNotNull(
+                sentAt, r'FixRequest', 'sentAt'),
+            point: point.build(),
+            power: power,
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'point';
         point.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'FixRequest', _$failedField, e.toString());
       }
       rethrow;

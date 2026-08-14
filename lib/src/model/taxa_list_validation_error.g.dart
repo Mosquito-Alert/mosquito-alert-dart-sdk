@@ -26,7 +26,7 @@ TaxaListValidationErrorTypeEnum _$taxaListValidationErrorTypeEnumValueOf(
 }
 
 final BuiltSet<TaxaListValidationErrorTypeEnum>
-    _$taxaListValidationErrorTypeEnumValues = new BuiltSet<
+    _$taxaListValidationErrorTypeEnumValues = BuiltSet<
         TaxaListValidationErrorTypeEnum>(const <TaxaListValidationErrorTypeEnum>[
   _$taxaListValidationErrorTypeEnum_validationError,
   _$taxaListValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<TaxaListValidationErrorTypeEnum>
 
 Serializer<TaxaListValidationErrorTypeEnum>
     _$taxaListValidationErrorTypeEnumSerializer =
-    new _$TaxaListValidationErrorTypeEnumSerializer();
+    _$TaxaListValidationErrorTypeEnumSerializer();
 
 class _$TaxaListValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<TaxaListValidationErrorTypeEnum> {
@@ -74,16 +74,10 @@ class _$TaxaListValidationError extends TaxaListValidationError {
 
   factory _$TaxaListValidationError(
           [void Function(TaxaListValidationErrorBuilder)? updates]) =>
-      (new TaxaListValidationErrorBuilder()..update(updates))._build();
+      (TaxaListValidationErrorBuilder()..update(updates))._build();
 
   _$TaxaListValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'TaxaListValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'TaxaListValidationError', 'errors');
-  }
-
+      : super._();
   @override
   TaxaListValidationError rebuild(
           void Function(TaxaListValidationErrorBuilder) updates) =>
@@ -91,7 +85,7 @@ class _$TaxaListValidationError extends TaxaListValidationError {
 
   @override
   TaxaListValidationErrorBuilder toBuilder() =>
-      new TaxaListValidationErrorBuilder()..replace(this);
+      TaxaListValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -130,7 +124,7 @@ class TaxaListValidationErrorBuilder
 
   ListBuilder<TaxaListRankErrorComponent>? _errors;
   ListBuilder<TaxaListRankErrorComponent> get errors =>
-      _$this._errors ??= new ListBuilder<TaxaListRankErrorComponent>();
+      _$this._errors ??= ListBuilder<TaxaListRankErrorComponent>();
   set errors(ListBuilder<TaxaListRankErrorComponent>? errors) =>
       _$this._errors = errors;
 
@@ -150,7 +144,6 @@ class TaxaListValidationErrorBuilder
 
   @override
   void replace(TaxaListValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$TaxaListValidationError;
   }
 
@@ -166,17 +159,18 @@ class TaxaListValidationErrorBuilder
     _$TaxaListValidationError _$result;
     try {
       _$result = _$v ??
-          new _$TaxaListValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'TaxaListValidationError', 'type'),
-              errors: errors.build());
+          _$TaxaListValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'TaxaListValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'TaxaListValidationError', _$failedField, e.toString());
       }
       rethrow;

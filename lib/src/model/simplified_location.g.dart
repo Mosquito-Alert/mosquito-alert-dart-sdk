@@ -2977,7 +2977,7 @@ SimplifiedLocationTimezoneEnum _$simplifiedLocationTimezoneEnumValueOf(
 }
 
 final BuiltSet<SimplifiedLocationTimezoneEnum>
-    _$simplifiedLocationTimezoneEnumValues = new BuiltSet<
+    _$simplifiedLocationTimezoneEnumValues = BuiltSet<
         SimplifiedLocationTimezoneEnum>(const <SimplifiedLocationTimezoneEnum>[
   _$simplifiedLocationTimezoneEnum_africaSlashAbidjan,
   _$simplifiedLocationTimezoneEnum_africaSlashAccra,
@@ -3581,7 +3581,7 @@ final BuiltSet<SimplifiedLocationTimezoneEnum>
 
 Serializer<SimplifiedLocationTimezoneEnum>
     _$simplifiedLocationTimezoneEnumSerializer =
-    new _$SimplifiedLocationTimezoneEnumSerializer();
+    _$SimplifiedLocationTimezoneEnumSerializer();
 
 class _$SimplifiedLocationTimezoneEnumSerializer
     implements PrimitiveSerializer<SimplifiedLocationTimezoneEnum> {
@@ -4819,15 +4819,11 @@ class _$SimplifiedLocation extends SimplifiedLocation {
 
   factory _$SimplifiedLocation(
           [void Function(SimplifiedLocationBuilder)? updates]) =>
-      (new SimplifiedLocationBuilder()..update(updates))._build();
+      (SimplifiedLocationBuilder()..update(updates))._build();
 
   _$SimplifiedLocation._(
       {required this.point, this.timezone, this.displayName, this.country})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        point, r'SimplifiedLocation', 'point');
-  }
-
+      : super._();
   @override
   SimplifiedLocation rebuild(
           void Function(SimplifiedLocationBuilder) updates) =>
@@ -4835,7 +4831,7 @@ class _$SimplifiedLocation extends SimplifiedLocation {
 
   @override
   SimplifiedLocationBuilder toBuilder() =>
-      new SimplifiedLocationBuilder()..replace(this);
+      SimplifiedLocationBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -4874,7 +4870,7 @@ class SimplifiedLocationBuilder
   _$SimplifiedLocation? _$v;
 
   PointBuilder? _point;
-  PointBuilder get point => _$this._point ??= new PointBuilder();
+  PointBuilder get point => _$this._point ??= PointBuilder();
   set point(PointBuilder? point) => _$this._point = point;
 
   SimplifiedLocationTimezoneEnum? _timezone;
@@ -4887,7 +4883,7 @@ class SimplifiedLocationBuilder
   set displayName(String? displayName) => _$this._displayName = displayName;
 
   CountryBuilder? _country;
-  CountryBuilder get country => _$this._country ??= new CountryBuilder();
+  CountryBuilder get country => _$this._country ??= CountryBuilder();
   set country(CountryBuilder? country) => _$this._country = country;
 
   SimplifiedLocationBuilder() {
@@ -4908,7 +4904,6 @@ class SimplifiedLocationBuilder
 
   @override
   void replace(SimplifiedLocation other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SimplifiedLocation;
   }
 
@@ -4924,11 +4919,12 @@ class SimplifiedLocationBuilder
     _$SimplifiedLocation _$result;
     try {
       _$result = _$v ??
-          new _$SimplifiedLocation._(
-              point: point.build(),
-              timezone: timezone,
-              displayName: displayName,
-              country: _country?.build());
+          _$SimplifiedLocation._(
+            point: point.build(),
+            timezone: timezone,
+            displayName: displayName,
+            country: _country?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -4938,7 +4934,7 @@ class SimplifiedLocationBuilder
         _$failedField = 'country';
         _country?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'SimplifiedLocation', _$failedField, e.toString());
       }
       rethrow;

@@ -99,22 +99,25 @@ class _$BreedingSiteGeoJsonModelSerializer implements PrimitiveSerializer<Breedi
         case r'type':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BreedingSiteGeoJsonModelTypeEnum),
-          ) as BreedingSiteGeoJsonModelTypeEnum;
+            specifiedType: const FullType.nullable(BreedingSiteGeoJsonModelTypeEnum),
+          ) as BreedingSiteGeoJsonModelTypeEnum?;
+          if (valueDes == null) continue;
           result.type = valueDes;
           break;
         case r'geometry':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BiteGeoJsonModelGeometry),
-          ) as BiteGeoJsonModelGeometry;
+            specifiedType: const FullType.nullable(BiteGeoJsonModelGeometry),
+          ) as BiteGeoJsonModelGeometry?;
+          if (valueDes == null) continue;
           result.geometry.replace(valueDes);
           break;
         case r'properties':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BreedingSiteGeoJsonModelProperties),
-          ) as BreedingSiteGeoJsonModelProperties;
+            specifiedType: const FullType.nullable(BreedingSiteGeoJsonModelProperties),
+          ) as BreedingSiteGeoJsonModelProperties?;
+          if (valueDes == null) continue;
           result.properties.replace(valueDes);
           break;
         default:

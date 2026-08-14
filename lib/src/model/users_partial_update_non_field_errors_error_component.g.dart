@@ -29,8 +29,7 @@ UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum>
-    _$usersPartialUpdateNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$usersPartialUpdateNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum>(const <UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum>[
   _$usersPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$usersPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -63,8 +62,7 @@ UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum>
-    _$usersPartialUpdateNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$usersPartialUpdateNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum>(const <UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$usersPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$usersPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -73,10 +71,10 @@ final BuiltSet<UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum>
     _$usersPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum>
     _$usersPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -162,21 +160,12 @@ class _$UsersPartialUpdateNonFieldErrorsErrorComponent
   factory _$UsersPartialUpdateNonFieldErrorsErrorComponent(
           [void Function(UsersPartialUpdateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new UsersPartialUpdateNonFieldErrorsErrorComponentBuilder()
-            ..update(updates))
+      (UsersPartialUpdateNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$UsersPartialUpdateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'UsersPartialUpdateNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'UsersPartialUpdateNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'UsersPartialUpdateNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   UsersPartialUpdateNonFieldErrorsErrorComponent rebuild(
           void Function(UsersPartialUpdateNonFieldErrorsErrorComponentBuilder)
@@ -185,8 +174,7 @@ class _$UsersPartialUpdateNonFieldErrorsErrorComponent
 
   @override
   UsersPartialUpdateNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new UsersPartialUpdateNonFieldErrorsErrorComponentBuilder()
-        ..replace(this);
+      UsersPartialUpdateNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -257,7 +245,6 @@ class UsersPartialUpdateNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(UsersPartialUpdateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UsersPartialUpdateNonFieldErrorsErrorComponent;
   }
 
@@ -273,13 +260,14 @@ class UsersPartialUpdateNonFieldErrorsErrorComponentBuilder
 
   _$UsersPartialUpdateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$UsersPartialUpdateNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'UsersPartialUpdateNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'UsersPartialUpdateNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'UsersPartialUpdateNonFieldErrorsErrorComponent', 'detail'));
+        _$UsersPartialUpdateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'UsersPartialUpdateNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'UsersPartialUpdateNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'UsersPartialUpdateNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

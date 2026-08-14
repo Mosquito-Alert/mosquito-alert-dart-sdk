@@ -17,27 +17,20 @@ class _$Partner extends Partner {
   final String url;
 
   factory _$Partner([void Function(PartnerBuilder)? updates]) =>
-      (new PartnerBuilder()..update(updates))._build();
+      (PartnerBuilder()..update(updates))._build();
 
   _$Partner._(
       {required this.id,
       required this.point,
       required this.description,
       required this.url})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'Partner', 'id');
-    BuiltValueNullFieldError.checkNotNull(point, r'Partner', 'point');
-    BuiltValueNullFieldError.checkNotNull(
-        description, r'Partner', 'description');
-    BuiltValueNullFieldError.checkNotNull(url, r'Partner', 'url');
-  }
-
+      : super._();
   @override
   Partner rebuild(void Function(PartnerBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  PartnerBuilder toBuilder() => new PartnerBuilder()..replace(this);
+  PartnerBuilder toBuilder() => PartnerBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -79,7 +72,7 @@ class PartnerBuilder implements Builder<Partner, PartnerBuilder> {
   set id(int? id) => _$this._id = id;
 
   PartnerPointBuilder? _point;
-  PartnerPointBuilder get point => _$this._point ??= new PartnerPointBuilder();
+  PartnerPointBuilder get point => _$this._point ??= PartnerPointBuilder();
   set point(PartnerPointBuilder? point) => _$this._point = point;
 
   String? _description;
@@ -108,7 +101,6 @@ class PartnerBuilder implements Builder<Partner, PartnerBuilder> {
 
   @override
   void replace(Partner other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Partner;
   }
 
@@ -124,20 +116,20 @@ class PartnerBuilder implements Builder<Partner, PartnerBuilder> {
     _$Partner _$result;
     try {
       _$result = _$v ??
-          new _$Partner._(
-              id: BuiltValueNullFieldError.checkNotNull(id, r'Partner', 'id'),
-              point: point.build(),
-              description: BuiltValueNullFieldError.checkNotNull(
-                  description, r'Partner', 'description'),
-              url: BuiltValueNullFieldError.checkNotNull(
-                  url, r'Partner', 'url'));
+          _$Partner._(
+            id: BuiltValueNullFieldError.checkNotNull(id, r'Partner', 'id'),
+            point: point.build(),
+            description: BuiltValueNullFieldError.checkNotNull(
+                description, r'Partner', 'description'),
+            url: BuiltValueNullFieldError.checkNotNull(url, r'Partner', 'url'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'point';
         point.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'Partner', _$failedField, e.toString());
       }
       rethrow;

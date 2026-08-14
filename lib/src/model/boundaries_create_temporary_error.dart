@@ -73,9 +73,7 @@ class _$BoundariesCreateTemporaryErrorSerializer implements PrimitiveSerializer<
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    BoundariesCreateTemporaryError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    BoundariesCreateTemporaryError object) sync* {
   }
 
   @override

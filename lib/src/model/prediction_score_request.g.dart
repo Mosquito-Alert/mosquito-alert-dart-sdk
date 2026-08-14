@@ -28,7 +28,7 @@ class _$PredictionScoreRequest extends PredictionScoreRequest {
 
   factory _$PredictionScoreRequest(
           [void Function(PredictionScoreRequestBuilder)? updates]) =>
-      (new PredictionScoreRequestBuilder()..update(updates))._build();
+      (PredictionScoreRequestBuilder()..update(updates))._build();
 
   _$PredictionScoreRequest._(
       {required this.aeAlbopictus,
@@ -40,27 +40,7 @@ class _$PredictionScoreRequest extends PredictionScoreRequest {
       required this.culiseta,
       required this.otherSpecies,
       required this.notSure})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        aeAlbopictus, r'PredictionScoreRequest', 'aeAlbopictus');
-    BuiltValueNullFieldError.checkNotNull(
-        aeAegypti, r'PredictionScoreRequest', 'aeAegypti');
-    BuiltValueNullFieldError.checkNotNull(
-        aeJaponicus, r'PredictionScoreRequest', 'aeJaponicus');
-    BuiltValueNullFieldError.checkNotNull(
-        aeKoreicus, r'PredictionScoreRequest', 'aeKoreicus');
-    BuiltValueNullFieldError.checkNotNull(
-        culex, r'PredictionScoreRequest', 'culex');
-    BuiltValueNullFieldError.checkNotNull(
-        anopheles, r'PredictionScoreRequest', 'anopheles');
-    BuiltValueNullFieldError.checkNotNull(
-        culiseta, r'PredictionScoreRequest', 'culiseta');
-    BuiltValueNullFieldError.checkNotNull(
-        otherSpecies, r'PredictionScoreRequest', 'otherSpecies');
-    BuiltValueNullFieldError.checkNotNull(
-        notSure, r'PredictionScoreRequest', 'notSure');
-  }
-
+      : super._();
   @override
   PredictionScoreRequest rebuild(
           void Function(PredictionScoreRequestBuilder) updates) =>
@@ -68,7 +48,7 @@ class _$PredictionScoreRequest extends PredictionScoreRequest {
 
   @override
   PredictionScoreRequestBuilder toBuilder() =>
-      new PredictionScoreRequestBuilder()..replace(this);
+      PredictionScoreRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -180,7 +160,6 @@ class PredictionScoreRequestBuilder
 
   @override
   void replace(PredictionScoreRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PredictionScoreRequest;
   }
 
@@ -194,24 +173,26 @@ class PredictionScoreRequestBuilder
 
   _$PredictionScoreRequest _build() {
     final _$result = _$v ??
-        new _$PredictionScoreRequest._(
-            aeAlbopictus: BuiltValueNullFieldError.checkNotNull(
-                aeAlbopictus, r'PredictionScoreRequest', 'aeAlbopictus'),
-            aeAegypti: BuiltValueNullFieldError.checkNotNull(
-                aeAegypti, r'PredictionScoreRequest', 'aeAegypti'),
-            aeJaponicus: BuiltValueNullFieldError.checkNotNull(
-                aeJaponicus, r'PredictionScoreRequest', 'aeJaponicus'),
-            aeKoreicus: BuiltValueNullFieldError.checkNotNull(
-                aeKoreicus, r'PredictionScoreRequest', 'aeKoreicus'),
-            culex: BuiltValueNullFieldError.checkNotNull(
-                culex, r'PredictionScoreRequest', 'culex'),
-            anopheles: BuiltValueNullFieldError.checkNotNull(
-                anopheles, r'PredictionScoreRequest', 'anopheles'),
-            culiseta: BuiltValueNullFieldError.checkNotNull(
-                culiseta, r'PredictionScoreRequest', 'culiseta'),
-            otherSpecies: BuiltValueNullFieldError.checkNotNull(
-                otherSpecies, r'PredictionScoreRequest', 'otherSpecies'),
-            notSure: BuiltValueNullFieldError.checkNotNull(notSure, r'PredictionScoreRequest', 'notSure'));
+        _$PredictionScoreRequest._(
+          aeAlbopictus: BuiltValueNullFieldError.checkNotNull(
+              aeAlbopictus, r'PredictionScoreRequest', 'aeAlbopictus'),
+          aeAegypti: BuiltValueNullFieldError.checkNotNull(
+              aeAegypti, r'PredictionScoreRequest', 'aeAegypti'),
+          aeJaponicus: BuiltValueNullFieldError.checkNotNull(
+              aeJaponicus, r'PredictionScoreRequest', 'aeJaponicus'),
+          aeKoreicus: BuiltValueNullFieldError.checkNotNull(
+              aeKoreicus, r'PredictionScoreRequest', 'aeKoreicus'),
+          culex: BuiltValueNullFieldError.checkNotNull(
+              culex, r'PredictionScoreRequest', 'culex'),
+          anopheles: BuiltValueNullFieldError.checkNotNull(
+              anopheles, r'PredictionScoreRequest', 'anopheles'),
+          culiseta: BuiltValueNullFieldError.checkNotNull(
+              culiseta, r'PredictionScoreRequest', 'culiseta'),
+          otherSpecies: BuiltValueNullFieldError.checkNotNull(
+              otherSpecies, r'PredictionScoreRequest', 'otherSpecies'),
+          notSure: BuiltValueNullFieldError.checkNotNull(
+              notSure, r'PredictionScoreRequest', 'notSure'),
+        );
     replace(_$result);
     return _$result;
   }

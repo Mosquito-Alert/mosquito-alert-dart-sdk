@@ -29,8 +29,7 @@ ObservationsGeoListGeoPrecisionErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsGeoListGeoPrecisionErrorComponentAttrEnum>
-    _$observationsGeoListGeoPrecisionErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$observationsGeoListGeoPrecisionErrorComponentAttrEnumValues = BuiltSet<
         ObservationsGeoListGeoPrecisionErrorComponentAttrEnum>(const <ObservationsGeoListGeoPrecisionErrorComponentAttrEnum>[
   _$observationsGeoListGeoPrecisionErrorComponentAttrEnum_geoPrecision,
   _$observationsGeoListGeoPrecisionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,8 +67,7 @@ ObservationsGeoListGeoPrecisionErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsGeoListGeoPrecisionErrorComponentCodeEnum>
-    _$observationsGeoListGeoPrecisionErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$observationsGeoListGeoPrecisionErrorComponentCodeEnumValues = BuiltSet<
         ObservationsGeoListGeoPrecisionErrorComponentCodeEnum>(const <ObservationsGeoListGeoPrecisionErrorComponentCodeEnum>[
   _$observationsGeoListGeoPrecisionErrorComponentCodeEnum_invalid,
   _$observationsGeoListGeoPrecisionErrorComponentCodeEnum_maxValue,
@@ -79,10 +77,10 @@ final BuiltSet<ObservationsGeoListGeoPrecisionErrorComponentCodeEnum>
 
 Serializer<ObservationsGeoListGeoPrecisionErrorComponentAttrEnum>
     _$observationsGeoListGeoPrecisionErrorComponentAttrEnumSerializer =
-    new _$ObservationsGeoListGeoPrecisionErrorComponentAttrEnumSerializer();
+    _$ObservationsGeoListGeoPrecisionErrorComponentAttrEnumSerializer();
 Serializer<ObservationsGeoListGeoPrecisionErrorComponentCodeEnum>
     _$observationsGeoListGeoPrecisionErrorComponentCodeEnumSerializer =
-    new _$ObservationsGeoListGeoPrecisionErrorComponentCodeEnumSerializer();
+    _$ObservationsGeoListGeoPrecisionErrorComponentCodeEnumSerializer();
 
 class _$ObservationsGeoListGeoPrecisionErrorComponentAttrEnumSerializer
     implements
@@ -170,21 +168,12 @@ class _$ObservationsGeoListGeoPrecisionErrorComponent
   factory _$ObservationsGeoListGeoPrecisionErrorComponent(
           [void Function(ObservationsGeoListGeoPrecisionErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsGeoListGeoPrecisionErrorComponentBuilder()
-            ..update(updates))
+      (ObservationsGeoListGeoPrecisionErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsGeoListGeoPrecisionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsGeoListGeoPrecisionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsGeoListGeoPrecisionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsGeoListGeoPrecisionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsGeoListGeoPrecisionErrorComponent rebuild(
           void Function(ObservationsGeoListGeoPrecisionErrorComponentBuilder)
@@ -193,7 +182,7 @@ class _$ObservationsGeoListGeoPrecisionErrorComponent
 
   @override
   ObservationsGeoListGeoPrecisionErrorComponentBuilder toBuilder() =>
-      new ObservationsGeoListGeoPrecisionErrorComponentBuilder()..replace(this);
+      ObservationsGeoListGeoPrecisionErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -264,7 +253,6 @@ class ObservationsGeoListGeoPrecisionErrorComponentBuilder
 
   @override
   void replace(ObservationsGeoListGeoPrecisionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsGeoListGeoPrecisionErrorComponent;
   }
 
@@ -280,13 +268,14 @@ class ObservationsGeoListGeoPrecisionErrorComponentBuilder
 
   _$ObservationsGeoListGeoPrecisionErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsGeoListGeoPrecisionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsGeoListGeoPrecisionErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsGeoListGeoPrecisionErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsGeoListGeoPrecisionErrorComponent', 'detail'));
+        _$ObservationsGeoListGeoPrecisionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsGeoListGeoPrecisionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsGeoListGeoPrecisionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'ObservationsGeoListGeoPrecisionErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

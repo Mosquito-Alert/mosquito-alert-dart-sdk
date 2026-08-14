@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnum_characteristicsSex,
   _$identificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentBuilder()
+      (IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent rebuild(
           void Function(
@@ -199,7 +185,7 @@ class _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent
   @override
   IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentBuilder()
+          IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -283,7 +269,6 @@ class IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentBuil
   void replace(
       IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent;
   }
@@ -303,20 +288,21 @@ class IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponentBuil
   _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent
+        _$IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsListMineCharacteristicsSexErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

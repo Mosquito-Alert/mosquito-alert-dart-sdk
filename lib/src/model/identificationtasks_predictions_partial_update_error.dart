@@ -225,9 +225,7 @@ class _$IdentificationtasksPredictionsPartialUpdateErrorSerializer implements Pr
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    IdentificationtasksPredictionsPartialUpdateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    IdentificationtasksPredictionsPartialUpdateError object) sync* {
   }
 
   @override

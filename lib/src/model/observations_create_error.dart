@@ -209,9 +209,7 @@ class _$ObservationsCreateErrorSerializer implements PrimitiveSerializer<Observa
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    ObservationsCreateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    ObservationsCreateError object) sync* {
   }
 
   @override

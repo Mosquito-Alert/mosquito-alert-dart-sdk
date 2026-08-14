@@ -17,26 +17,20 @@ class _$Identification extends Identification {
   final String? publicNote;
 
   factory _$Identification([void Function(IdentificationBuilder)? updates]) =>
-      (new IdentificationBuilder()..update(updates))._build();
+      (IdentificationBuilder()..update(updates))._build();
 
   _$Identification._(
       {required this.photo,
       required this.numAnnotations,
       this.result,
       this.publicNote})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(photo, r'Identification', 'photo');
-    BuiltValueNullFieldError.checkNotNull(
-        numAnnotations, r'Identification', 'numAnnotations');
-  }
-
+      : super._();
   @override
   Identification rebuild(void Function(IdentificationBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  IdentificationBuilder toBuilder() =>
-      new IdentificationBuilder()..replace(this);
+  IdentificationBuilder toBuilder() => IdentificationBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -75,7 +69,7 @@ class IdentificationBuilder
   _$Identification? _$v;
 
   SimplePhotoBuilder? _photo;
-  SimplePhotoBuilder get photo => _$this._photo ??= new SimplePhotoBuilder();
+  SimplePhotoBuilder get photo => _$this._photo ??= SimplePhotoBuilder();
   set photo(SimplePhotoBuilder? photo) => _$this._photo = photo;
 
   int? _numAnnotations;
@@ -85,7 +79,7 @@ class IdentificationBuilder
 
   IdentificationTaskResultBuilder? _result;
   IdentificationTaskResultBuilder get result =>
-      _$this._result ??= new IdentificationTaskResultBuilder();
+      _$this._result ??= IdentificationTaskResultBuilder();
   set result(IdentificationTaskResultBuilder? result) =>
       _$this._result = result;
 
@@ -111,7 +105,6 @@ class IdentificationBuilder
 
   @override
   void replace(Identification other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Identification;
   }
 
@@ -127,12 +120,13 @@ class IdentificationBuilder
     _$Identification _$result;
     try {
       _$result = _$v ??
-          new _$Identification._(
-              photo: photo.build(),
-              numAnnotations: BuiltValueNullFieldError.checkNotNull(
-                  numAnnotations, r'Identification', 'numAnnotations'),
-              result: _result?.build(),
-              publicNote: publicNote);
+          _$Identification._(
+            photo: photo.build(),
+            numAnnotations: BuiltValueNullFieldError.checkNotNull(
+                numAnnotations, r'Identification', 'numAnnotations'),
+            result: _result?.build(),
+            publicNote: publicNote,
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -142,7 +136,7 @@ class IdentificationBuilder
         _$failedField = 'result';
         _result?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'Identification', _$failedField, e.toString());
       }
       rethrow;

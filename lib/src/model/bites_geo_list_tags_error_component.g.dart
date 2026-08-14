@@ -26,7 +26,7 @@ BitesGeoListTagsErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesGeoListTagsErrorComponentAttrEnum>
-    _$bitesGeoListTagsErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesGeoListTagsErrorComponentAttrEnumValues = BuiltSet<
         BitesGeoListTagsErrorComponentAttrEnum>(const <BitesGeoListTagsErrorComponentAttrEnum>[
   _$bitesGeoListTagsErrorComponentAttrEnum_tags,
   _$bitesGeoListTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ BitesGeoListTagsErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesGeoListTagsErrorComponentCodeEnum>
-    _$bitesGeoListTagsErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesGeoListTagsErrorComponentCodeEnumValues = BuiltSet<
         BitesGeoListTagsErrorComponentCodeEnum>(const <BitesGeoListTagsErrorComponentCodeEnum>[
   _$bitesGeoListTagsErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$bitesGeoListTagsErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<BitesGeoListTagsErrorComponentCodeEnum>
 
 Serializer<BitesGeoListTagsErrorComponentAttrEnum>
     _$bitesGeoListTagsErrorComponentAttrEnumSerializer =
-    new _$BitesGeoListTagsErrorComponentAttrEnumSerializer();
+    _$BitesGeoListTagsErrorComponentAttrEnumSerializer();
 Serializer<BitesGeoListTagsErrorComponentCodeEnum>
     _$bitesGeoListTagsErrorComponentCodeEnumSerializer =
-    new _$BitesGeoListTagsErrorComponentCodeEnumSerializer();
+    _$BitesGeoListTagsErrorComponentCodeEnumSerializer();
 
 class _$BitesGeoListTagsErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesGeoListTagsErrorComponentAttrEnum> {
@@ -139,19 +139,11 @@ class _$BitesGeoListTagsErrorComponent extends BitesGeoListTagsErrorComponent {
 
   factory _$BitesGeoListTagsErrorComponent(
           [void Function(BitesGeoListTagsErrorComponentBuilder)? updates]) =>
-      (new BitesGeoListTagsErrorComponentBuilder()..update(updates))._build();
+      (BitesGeoListTagsErrorComponentBuilder()..update(updates))._build();
 
   _$BitesGeoListTagsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesGeoListTagsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesGeoListTagsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesGeoListTagsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesGeoListTagsErrorComponent rebuild(
           void Function(BitesGeoListTagsErrorComponentBuilder) updates) =>
@@ -159,7 +151,7 @@ class _$BitesGeoListTagsErrorComponent extends BitesGeoListTagsErrorComponent {
 
   @override
   BitesGeoListTagsErrorComponentBuilder toBuilder() =>
-      new BitesGeoListTagsErrorComponentBuilder()..replace(this);
+      BitesGeoListTagsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -225,7 +217,6 @@ class BitesGeoListTagsErrorComponentBuilder
 
   @override
   void replace(BitesGeoListTagsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesGeoListTagsErrorComponent;
   }
 
@@ -239,13 +230,14 @@ class BitesGeoListTagsErrorComponentBuilder
 
   _$BitesGeoListTagsErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesGeoListTagsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesGeoListTagsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesGeoListTagsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesGeoListTagsErrorComponent', 'detail'));
+        _$BitesGeoListTagsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesGeoListTagsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesGeoListTagsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesGeoListTagsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

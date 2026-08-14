@@ -17,27 +17,20 @@ class _$Notification extends Notification {
   final DateTime createdAt;
 
   factory _$Notification([void Function(NotificationBuilder)? updates]) =>
-      (new NotificationBuilder()..update(updates))._build();
+      (NotificationBuilder()..update(updates))._build();
 
   _$Notification._(
       {required this.id,
       required this.message,
       required this.isRead,
       required this.createdAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'Notification', 'id');
-    BuiltValueNullFieldError.checkNotNull(message, r'Notification', 'message');
-    BuiltValueNullFieldError.checkNotNull(isRead, r'Notification', 'isRead');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'Notification', 'createdAt');
-  }
-
+      : super._();
   @override
   Notification rebuild(void Function(NotificationBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  NotificationBuilder toBuilder() => new NotificationBuilder()..replace(this);
+  NotificationBuilder toBuilder() => NotificationBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -81,7 +74,7 @@ class NotificationBuilder
 
   NotificationMessageBuilder? _message;
   NotificationMessageBuilder get message =>
-      _$this._message ??= new NotificationMessageBuilder();
+      _$this._message ??= NotificationMessageBuilder();
   set message(NotificationMessageBuilder? message) => _$this._message = message;
 
   bool? _isRead;
@@ -110,7 +103,6 @@ class NotificationBuilder
 
   @override
   void replace(Notification other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Notification;
   }
 
@@ -126,21 +118,22 @@ class NotificationBuilder
     _$Notification _$result;
     try {
       _$result = _$v ??
-          new _$Notification._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'Notification', 'id'),
-              message: message.build(),
-              isRead: BuiltValueNullFieldError.checkNotNull(
-                  isRead, r'Notification', 'isRead'),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'Notification', 'createdAt'));
+          _$Notification._(
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'Notification', 'id'),
+            message: message.build(),
+            isRead: BuiltValueNullFieldError.checkNotNull(
+                isRead, r'Notification', 'isRead'),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'Notification', 'createdAt'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'message';
         message.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'Notification', _$failedField, e.toString());
       }
       rethrow;

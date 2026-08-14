@@ -18,17 +18,11 @@ class _$PaginatedPartnerList extends PaginatedPartnerList {
 
   factory _$PaginatedPartnerList(
           [void Function(PaginatedPartnerListBuilder)? updates]) =>
-      (new PaginatedPartnerListBuilder()..update(updates))._build();
+      (PaginatedPartnerListBuilder()..update(updates))._build();
 
   _$PaginatedPartnerList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedPartnerList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedPartnerList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedPartnerList rebuild(
           void Function(PaginatedPartnerListBuilder) updates) =>
@@ -36,7 +30,7 @@ class _$PaginatedPartnerList extends PaginatedPartnerList {
 
   @override
   PaginatedPartnerListBuilder toBuilder() =>
-      new PaginatedPartnerListBuilder()..replace(this);
+      PaginatedPartnerListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -88,7 +82,7 @@ class PaginatedPartnerListBuilder
 
   ListBuilder<Partner>? _results;
   ListBuilder<Partner> get results =>
-      _$this._results ??= new ListBuilder<Partner>();
+      _$this._results ??= ListBuilder<Partner>();
   set results(ListBuilder<Partner>? results) => _$this._results = results;
 
   PaginatedPartnerListBuilder() {
@@ -109,7 +103,6 @@ class PaginatedPartnerListBuilder
 
   @override
   void replace(PaginatedPartnerList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedPartnerList;
   }
 
@@ -125,19 +118,20 @@ class PaginatedPartnerListBuilder
     _$PaginatedPartnerList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedPartnerList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedPartnerList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedPartnerList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedPartnerList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedPartnerList', _$failedField, e.toString());
       }
       rethrow;

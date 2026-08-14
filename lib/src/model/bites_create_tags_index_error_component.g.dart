@@ -26,7 +26,7 @@ BitesCreateTagsINDEXErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateTagsINDEXErrorComponentAttrEnum>
-    _$bitesCreateTagsINDEXErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateTagsINDEXErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateTagsINDEXErrorComponentAttrEnum>(const <BitesCreateTagsINDEXErrorComponentAttrEnum>[
   _$bitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX,
   _$bitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -79,7 +79,7 @@ BitesCreateTagsINDEXErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateTagsINDEXErrorComponentCodeEnum>
-    _$bitesCreateTagsINDEXErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateTagsINDEXErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateTagsINDEXErrorComponentCodeEnum>(const <BitesCreateTagsINDEXErrorComponentCodeEnum>[
   _$bitesCreateTagsINDEXErrorComponentCodeEnum_blank,
   _$bitesCreateTagsINDEXErrorComponentCodeEnum_invalid,
@@ -92,10 +92,10 @@ final BuiltSet<BitesCreateTagsINDEXErrorComponentCodeEnum>
 
 Serializer<BitesCreateTagsINDEXErrorComponentAttrEnum>
     _$bitesCreateTagsINDEXErrorComponentAttrEnumSerializer =
-    new _$BitesCreateTagsINDEXErrorComponentAttrEnumSerializer();
+    _$BitesCreateTagsINDEXErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateTagsINDEXErrorComponentCodeEnum>
     _$bitesCreateTagsINDEXErrorComponentCodeEnumSerializer =
-    new _$BitesCreateTagsINDEXErrorComponentCodeEnumSerializer();
+    _$BitesCreateTagsINDEXErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateTagsINDEXErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesCreateTagsINDEXErrorComponentAttrEnum> {
@@ -183,20 +183,11 @@ class _$BitesCreateTagsINDEXErrorComponent
   factory _$BitesCreateTagsINDEXErrorComponent(
           [void Function(BitesCreateTagsINDEXErrorComponentBuilder)?
               updates]) =>
-      (new BitesCreateTagsINDEXErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesCreateTagsINDEXErrorComponentBuilder()..update(updates))._build();
 
   _$BitesCreateTagsINDEXErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateTagsINDEXErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateTagsINDEXErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateTagsINDEXErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateTagsINDEXErrorComponent rebuild(
           void Function(BitesCreateTagsINDEXErrorComponentBuilder) updates) =>
@@ -204,7 +195,7 @@ class _$BitesCreateTagsINDEXErrorComponent
 
   @override
   BitesCreateTagsINDEXErrorComponentBuilder toBuilder() =>
-      new BitesCreateTagsINDEXErrorComponentBuilder()..replace(this);
+      BitesCreateTagsINDEXErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -272,7 +263,6 @@ class BitesCreateTagsINDEXErrorComponentBuilder
 
   @override
   void replace(BitesCreateTagsINDEXErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateTagsINDEXErrorComponent;
   }
 
@@ -287,13 +277,14 @@ class BitesCreateTagsINDEXErrorComponentBuilder
 
   _$BitesCreateTagsINDEXErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateTagsINDEXErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateTagsINDEXErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateTagsINDEXErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateTagsINDEXErrorComponent', 'detail'));
+        _$BitesCreateTagsINDEXErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateTagsINDEXErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateTagsINDEXErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateTagsINDEXErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

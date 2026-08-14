@@ -126,8 +126,9 @@ class _$DeviceUpdateRequestSerializer implements PrimitiveSerializer<DeviceUpdat
         case r'mobile_app':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(MobileAppRequest),
-          ) as MobileAppRequest;
+            specifiedType: const FullType.nullable(MobileAppRequest),
+          ) as MobileAppRequest?;
+          if (valueDes == null) continue;
           result.mobileApp.replace(valueDes);
           break;
         default:

@@ -153,9 +153,7 @@ class _$ObservationsGeoListErrorSerializer implements PrimitiveSerializer<Observ
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    ObservationsGeoListError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    ObservationsGeoListError object) sync* {
   }
 
   @override

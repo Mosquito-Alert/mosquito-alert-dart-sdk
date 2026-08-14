@@ -30,7 +30,7 @@ DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum
 
 final BuiltSet<DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum>
     _$devicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum>(const <DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum>[
   _$devicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum_mobileAppPeriodNonFieldErrors,
   _$devicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -65,7 +65,7 @@ DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum
 
 final BuiltSet<DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum>
     _$devicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum>(const <DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum>[
   _$devicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$devicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -74,10 +74,10 @@ final BuiltSet<DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum>
     _$devicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnum>
     _$devicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$DevicesUpdateMobileAppNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$DevicesUpdateMobileAppNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -164,21 +164,13 @@ class _$DevicesUpdateMobileAppNonFieldErrorsErrorComponent
           [void Function(
                   DevicesUpdateMobileAppNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new DevicesUpdateMobileAppNonFieldErrorsErrorComponentBuilder()
+      (DevicesUpdateMobileAppNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$DevicesUpdateMobileAppNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesUpdateMobileAppNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesUpdateMobileAppNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'DevicesUpdateMobileAppNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesUpdateMobileAppNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -188,7 +180,7 @@ class _$DevicesUpdateMobileAppNonFieldErrorsErrorComponent
 
   @override
   DevicesUpdateMobileAppNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new DevicesUpdateMobileAppNonFieldErrorsErrorComponentBuilder()
+      DevicesUpdateMobileAppNonFieldErrorsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -260,7 +252,6 @@ class DevicesUpdateMobileAppNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(DevicesUpdateMobileAppNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesUpdateMobileAppNonFieldErrorsErrorComponent;
   }
 
@@ -276,15 +267,14 @@ class DevicesUpdateMobileAppNonFieldErrorsErrorComponentBuilder
 
   _$DevicesUpdateMobileAppNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesUpdateMobileAppNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'DevicesUpdateMobileAppNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'DevicesUpdateMobileAppNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'DevicesUpdateMobileAppNonFieldErrorsErrorComponent',
-                'detail'));
+        _$DevicesUpdateMobileAppNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'DevicesUpdateMobileAppNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'DevicesUpdateMobileAppNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'DevicesUpdateMobileAppNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -29,8 +29,7 @@ IdentificationtasksPredictionsPartialUpdateErrorAttrEnum
 }
 
 final BuiltSet<IdentificationtasksPredictionsPartialUpdateErrorAttrEnum>
-    _$identificationtasksPredictionsPartialUpdateErrorAttrEnumValues =
-    new BuiltSet<
+    _$identificationtasksPredictionsPartialUpdateErrorAttrEnumValues = BuiltSet<
         IdentificationtasksPredictionsPartialUpdateErrorAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateErrorAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateErrorAttrEnum_classifierVersion,
   _$identificationtasksPredictionsPartialUpdateErrorAttrEnum_unknownDefaultOpenApi,
@@ -70,8 +69,7 @@ IdentificationtasksPredictionsPartialUpdateErrorCodeEnum
 }
 
 final BuiltSet<IdentificationtasksPredictionsPartialUpdateErrorCodeEnum>
-    _$identificationtasksPredictionsPartialUpdateErrorCodeEnumValues =
-    new BuiltSet<
+    _$identificationtasksPredictionsPartialUpdateErrorCodeEnumValues = BuiltSet<
         IdentificationtasksPredictionsPartialUpdateErrorCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateErrorCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateErrorCodeEnum_invalidChoice,
   _$identificationtasksPredictionsPartialUpdateErrorCodeEnum_null_,
@@ -81,10 +79,10 @@ final BuiltSet<IdentificationtasksPredictionsPartialUpdateErrorCodeEnum>
 
 Serializer<IdentificationtasksPredictionsPartialUpdateErrorAttrEnum>
     _$identificationtasksPredictionsPartialUpdateErrorAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateErrorAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateErrorAttrEnumSerializer();
 Serializer<IdentificationtasksPredictionsPartialUpdateErrorCodeEnum>
     _$identificationtasksPredictionsPartialUpdateErrorCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateErrorCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateErrorCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateErrorAttrEnumSerializer
     implements
@@ -169,16 +167,12 @@ class _$IdentificationtasksPredictionsPartialUpdateError
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateErrorBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateErrorBuilder()
+      (IdentificationtasksPredictionsPartialUpdateErrorBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateError._({required this.oneOf})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'IdentificationtasksPredictionsPartialUpdateError', 'oneOf');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateError rebuild(
           void Function(IdentificationtasksPredictionsPartialUpdateErrorBuilder)
@@ -187,8 +181,7 @@ class _$IdentificationtasksPredictionsPartialUpdateError
 
   @override
   IdentificationtasksPredictionsPartialUpdateErrorBuilder toBuilder() =>
-      new IdentificationtasksPredictionsPartialUpdateErrorBuilder()
-        ..replace(this);
+      IdentificationtasksPredictionsPartialUpdateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -239,7 +232,6 @@ class IdentificationtasksPredictionsPartialUpdateErrorBuilder
 
   @override
   void replace(IdentificationtasksPredictionsPartialUpdateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksPredictionsPartialUpdateError;
   }
 
@@ -255,9 +247,10 @@ class IdentificationtasksPredictionsPartialUpdateErrorBuilder
 
   _$IdentificationtasksPredictionsPartialUpdateError _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(oneOf,
-                r'IdentificationtasksPredictionsPartialUpdateError', 'oneOf'));
+        _$IdentificationtasksPredictionsPartialUpdateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(oneOf,
+              r'IdentificationtasksPredictionsPartialUpdateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

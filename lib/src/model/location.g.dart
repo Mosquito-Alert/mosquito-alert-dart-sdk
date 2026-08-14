@@ -27,7 +27,7 @@ LocationSource_Enum _$locationSourceEnumValueOf(String name) {
 }
 
 final BuiltSet<LocationSource_Enum> _$locationSourceEnumValues =
-    new BuiltSet<LocationSource_Enum>(const <LocationSource_Enum>[
+    BuiltSet<LocationSource_Enum>(const <LocationSource_Enum>[
   _$locationSourceEnum_auto,
   _$locationSourceEnum_manual,
   _$locationSourceEnum_unknownDefaultOpenApi,
@@ -2460,7 +2460,7 @@ LocationTimezoneEnum _$locationTimezoneEnumValueOf(String name) {
 }
 
 final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
-    new BuiltSet<LocationTimezoneEnum>(const <LocationTimezoneEnum>[
+    BuiltSet<LocationTimezoneEnum>(const <LocationTimezoneEnum>[
   _$locationTimezoneEnum_africaSlashAbidjan,
   _$locationTimezoneEnum_africaSlashAccra,
   _$locationTimezoneEnum_africaSlashAddisAbaba,
@@ -3062,9 +3062,9 @@ final BuiltSet<LocationTimezoneEnum> _$locationTimezoneEnumValues =
 ]);
 
 Serializer<LocationSource_Enum> _$locationSourceEnumSerializer =
-    new _$LocationSource_EnumSerializer();
+    _$LocationSource_EnumSerializer();
 Serializer<LocationTimezoneEnum> _$locationTimezoneEnumSerializer =
-    new _$LocationTimezoneEnumSerializer();
+    _$LocationTimezoneEnumSerializer();
 
 class _$LocationSource_EnumSerializer
     implements PrimitiveSerializer<LocationSource_Enum> {
@@ -4333,7 +4333,7 @@ class _$Location extends Location {
   final BuiltList<AdmBoundary> admBoundaries;
 
   factory _$Location([void Function(LocationBuilder)? updates]) =>
-      (new LocationBuilder()..update(updates))._build();
+      (LocationBuilder()..update(updates))._build();
 
   _$Location._(
       {required this.source_,
@@ -4342,19 +4342,13 @@ class _$Location extends Location {
       this.displayName,
       this.country,
       required this.admBoundaries})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(source_, r'Location', 'source_');
-    BuiltValueNullFieldError.checkNotNull(point, r'Location', 'point');
-    BuiltValueNullFieldError.checkNotNull(
-        admBoundaries, r'Location', 'admBoundaries');
-  }
-
+      : super._();
   @override
   Location rebuild(void Function(LocationBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  LocationBuilder toBuilder() => new LocationBuilder()..replace(this);
+  LocationBuilder toBuilder() => LocationBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -4402,7 +4396,7 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
   set source_(LocationSource_Enum? source_) => _$this._source_ = source_;
 
   PointBuilder? _point;
-  PointBuilder get point => _$this._point ??= new PointBuilder();
+  PointBuilder get point => _$this._point ??= PointBuilder();
   set point(PointBuilder? point) => _$this._point = point;
 
   LocationTimezoneEnum? _timezone;
@@ -4414,12 +4408,12 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
   set displayName(String? displayName) => _$this._displayName = displayName;
 
   CountryBuilder? _country;
-  CountryBuilder get country => _$this._country ??= new CountryBuilder();
+  CountryBuilder get country => _$this._country ??= CountryBuilder();
   set country(CountryBuilder? country) => _$this._country = country;
 
   ListBuilder<AdmBoundary>? _admBoundaries;
   ListBuilder<AdmBoundary> get admBoundaries =>
-      _$this._admBoundaries ??= new ListBuilder<AdmBoundary>();
+      _$this._admBoundaries ??= ListBuilder<AdmBoundary>();
   set admBoundaries(ListBuilder<AdmBoundary>? admBoundaries) =>
       _$this._admBoundaries = admBoundaries;
 
@@ -4443,7 +4437,6 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
 
   @override
   void replace(Location other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Location;
   }
 
@@ -4459,14 +4452,15 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
     _$Location _$result;
     try {
       _$result = _$v ??
-          new _$Location._(
-              source_: BuiltValueNullFieldError.checkNotNull(
-                  source_, r'Location', 'source_'),
-              point: point.build(),
-              timezone: timezone,
-              displayName: displayName,
-              country: _country?.build(),
-              admBoundaries: admBoundaries.build());
+          _$Location._(
+            source_: BuiltValueNullFieldError.checkNotNull(
+                source_, r'Location', 'source_'),
+            point: point.build(),
+            timezone: timezone,
+            displayName: displayName,
+            country: _country?.build(),
+            admBoundaries: admBoundaries.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -4478,7 +4472,7 @@ class LocationBuilder implements Builder<Location, LocationBuilder> {
         _$failedField = 'admBoundaries';
         admBoundaries.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'Location', _$failedField, e.toString());
       }
       rethrow;

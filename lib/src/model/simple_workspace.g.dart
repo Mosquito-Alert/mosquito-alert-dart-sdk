@@ -15,20 +15,16 @@ class _$SimpleWorkspace extends SimpleWorkspace {
   final Country? country;
 
   factory _$SimpleWorkspace([void Function(SimpleWorkspaceBuilder)? updates]) =>
-      (new SimpleWorkspaceBuilder()..update(updates))._build();
+      (SimpleWorkspaceBuilder()..update(updates))._build();
 
   _$SimpleWorkspace._({required this.id, this.nameValue, this.country})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'SimpleWorkspace', 'id');
-  }
-
+      : super._();
   @override
   SimpleWorkspace rebuild(void Function(SimpleWorkspaceBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  SimpleWorkspaceBuilder toBuilder() =>
-      new SimpleWorkspaceBuilder()..replace(this);
+  SimpleWorkspaceBuilder toBuilder() => SimpleWorkspaceBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -72,7 +68,7 @@ class SimpleWorkspaceBuilder
   set nameValue(String? nameValue) => _$this._nameValue = nameValue;
 
   CountryBuilder? _country;
-  CountryBuilder get country => _$this._country ??= new CountryBuilder();
+  CountryBuilder get country => _$this._country ??= CountryBuilder();
   set country(CountryBuilder? country) => _$this._country = country;
 
   SimpleWorkspaceBuilder() {
@@ -92,7 +88,6 @@ class SimpleWorkspaceBuilder
 
   @override
   void replace(SimpleWorkspace other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SimpleWorkspace;
   }
 
@@ -108,18 +103,19 @@ class SimpleWorkspaceBuilder
     _$SimpleWorkspace _$result;
     try {
       _$result = _$v ??
-          new _$SimpleWorkspace._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'SimpleWorkspace', 'id'),
-              nameValue: nameValue,
-              country: _country?.build());
+          _$SimpleWorkspace._(
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'SimpleWorkspace', 'id'),
+            nameValue: nameValue,
+            country: _country?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'country';
         _country?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'SimpleWorkspace', _$failedField, e.toString());
       }
       rethrow;

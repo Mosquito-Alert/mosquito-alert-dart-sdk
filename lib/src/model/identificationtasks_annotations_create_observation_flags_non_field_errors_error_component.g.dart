@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
 final BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnum_observationFlagsPeriodNonFieldErrors,
   _$identificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
 final BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -179,27 +179,13 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorC
           [void Function(
                   IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
       rebuild(
@@ -211,7 +197,7 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorC
   @override
   IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -296,7 +282,6 @@ class IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorCom
   void replace(
       IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent;
   }
@@ -316,20 +301,21 @@ class IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorCom
   _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
+        _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

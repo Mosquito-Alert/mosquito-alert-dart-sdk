@@ -73,9 +73,7 @@ class _$NotificationsPartialUpdateErrorSerializer implements PrimitiveSerializer
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    NotificationsPartialUpdateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    NotificationsPartialUpdateError object) sync* {
   }
 
   @override

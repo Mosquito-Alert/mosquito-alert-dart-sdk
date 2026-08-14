@@ -26,7 +26,7 @@ BitesListUserUuidErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesListUserUuidErrorComponentAttrEnum>
-    _$bitesListUserUuidErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesListUserUuidErrorComponentAttrEnumValues = BuiltSet<
         BitesListUserUuidErrorComponentAttrEnum>(const <BitesListUserUuidErrorComponentAttrEnum>[
   _$bitesListUserUuidErrorComponentAttrEnum_userUuid,
   _$bitesListUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -57,7 +57,7 @@ BitesListUserUuidErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesListUserUuidErrorComponentCodeEnum>
-    _$bitesListUserUuidErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesListUserUuidErrorComponentCodeEnumValues = BuiltSet<
         BitesListUserUuidErrorComponentCodeEnum>(const <BitesListUserUuidErrorComponentCodeEnum>[
   _$bitesListUserUuidErrorComponentCodeEnum_invalid,
   _$bitesListUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -66,10 +66,10 @@ final BuiltSet<BitesListUserUuidErrorComponentCodeEnum>
 
 Serializer<BitesListUserUuidErrorComponentAttrEnum>
     _$bitesListUserUuidErrorComponentAttrEnumSerializer =
-    new _$BitesListUserUuidErrorComponentAttrEnumSerializer();
+    _$BitesListUserUuidErrorComponentAttrEnumSerializer();
 Serializer<BitesListUserUuidErrorComponentCodeEnum>
     _$bitesListUserUuidErrorComponentCodeEnumSerializer =
-    new _$BitesListUserUuidErrorComponentCodeEnumSerializer();
+    _$BitesListUserUuidErrorComponentCodeEnumSerializer();
 
 class _$BitesListUserUuidErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesListUserUuidErrorComponentAttrEnum> {
@@ -148,19 +148,11 @@ class _$BitesListUserUuidErrorComponent
 
   factory _$BitesListUserUuidErrorComponent(
           [void Function(BitesListUserUuidErrorComponentBuilder)? updates]) =>
-      (new BitesListUserUuidErrorComponentBuilder()..update(updates))._build();
+      (BitesListUserUuidErrorComponentBuilder()..update(updates))._build();
 
   _$BitesListUserUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesListUserUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesListUserUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesListUserUuidErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesListUserUuidErrorComponent rebuild(
           void Function(BitesListUserUuidErrorComponentBuilder) updates) =>
@@ -168,7 +160,7 @@ class _$BitesListUserUuidErrorComponent
 
   @override
   BitesListUserUuidErrorComponentBuilder toBuilder() =>
-      new BitesListUserUuidErrorComponentBuilder()..replace(this);
+      BitesListUserUuidErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -236,7 +228,6 @@ class BitesListUserUuidErrorComponentBuilder
 
   @override
   void replace(BitesListUserUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListUserUuidErrorComponent;
   }
 
@@ -250,13 +241,14 @@ class BitesListUserUuidErrorComponentBuilder
 
   _$BitesListUserUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesListUserUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesListUserUuidErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesListUserUuidErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesListUserUuidErrorComponent', 'detail'));
+        _$BitesListUserUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesListUserUuidErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesListUserUuidErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesListUserUuidErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

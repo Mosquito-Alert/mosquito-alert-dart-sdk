@@ -26,7 +26,7 @@ BreedingsitesListMineErrorAttrEnum _$breedingsitesListMineErrorAttrEnumValueOf(
 }
 
 final BuiltSet<BreedingsitesListMineErrorAttrEnum>
-    _$breedingsitesListMineErrorAttrEnumValues = new BuiltSet<
+    _$breedingsitesListMineErrorAttrEnumValues = BuiltSet<
         BreedingsitesListMineErrorAttrEnum>(const <BreedingsitesListMineErrorAttrEnum>[
   _$breedingsitesListMineErrorAttrEnum_siteType,
   _$breedingsitesListMineErrorAttrEnum_unknownDefaultOpenApi,
@@ -57,7 +57,7 @@ BreedingsitesListMineErrorCodeEnum _$breedingsitesListMineErrorCodeEnumValueOf(
 }
 
 final BuiltSet<BreedingsitesListMineErrorCodeEnum>
-    _$breedingsitesListMineErrorCodeEnumValues = new BuiltSet<
+    _$breedingsitesListMineErrorCodeEnumValues = BuiltSet<
         BreedingsitesListMineErrorCodeEnum>(const <BreedingsitesListMineErrorCodeEnum>[
   _$breedingsitesListMineErrorCodeEnum_invalidChoice,
   _$breedingsitesListMineErrorCodeEnum_invalidList,
@@ -66,10 +66,10 @@ final BuiltSet<BreedingsitesListMineErrorCodeEnum>
 
 Serializer<BreedingsitesListMineErrorAttrEnum>
     _$breedingsitesListMineErrorAttrEnumSerializer =
-    new _$BreedingsitesListMineErrorAttrEnumSerializer();
+    _$BreedingsitesListMineErrorAttrEnumSerializer();
 Serializer<BreedingsitesListMineErrorCodeEnum>
     _$breedingsitesListMineErrorCodeEnumSerializer =
-    new _$BreedingsitesListMineErrorCodeEnumSerializer();
+    _$BreedingsitesListMineErrorCodeEnumSerializer();
 
 class _$BreedingsitesListMineErrorAttrEnumSerializer
     implements PrimitiveSerializer<BreedingsitesListMineErrorAttrEnum> {
@@ -139,13 +139,9 @@ class _$BreedingsitesListMineError extends BreedingsitesListMineError {
 
   factory _$BreedingsitesListMineError(
           [void Function(BreedingsitesListMineErrorBuilder)? updates]) =>
-      (new BreedingsitesListMineErrorBuilder()..update(updates))._build();
+      (BreedingsitesListMineErrorBuilder()..update(updates))._build();
 
-  _$BreedingsitesListMineError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'BreedingsitesListMineError', 'oneOf');
-  }
-
+  _$BreedingsitesListMineError._({required this.oneOf}) : super._();
   @override
   BreedingsitesListMineError rebuild(
           void Function(BreedingsitesListMineErrorBuilder) updates) =>
@@ -153,7 +149,7 @@ class _$BreedingsitesListMineError extends BreedingsitesListMineError {
 
   @override
   BreedingsitesListMineErrorBuilder toBuilder() =>
-      new BreedingsitesListMineErrorBuilder()..replace(this);
+      BreedingsitesListMineErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -201,7 +197,6 @@ class BreedingsitesListMineErrorBuilder
 
   @override
   void replace(BreedingsitesListMineError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesListMineError;
   }
 
@@ -215,9 +210,10 @@ class BreedingsitesListMineErrorBuilder
 
   _$BreedingsitesListMineError _build() {
     final _$result = _$v ??
-        new _$BreedingsitesListMineError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'BreedingsitesListMineError', 'oneOf'));
+        _$BreedingsitesListMineError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'BreedingsitesListMineError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

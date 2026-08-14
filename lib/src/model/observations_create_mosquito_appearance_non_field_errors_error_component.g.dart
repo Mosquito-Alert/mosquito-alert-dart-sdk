@@ -31,7 +31,7 @@ ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum
 final BuiltSet<
         ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum>
     _$observationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum>(const <ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum>[
   _$observationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum_mosquitoAppearancePeriodNonFieldErrors,
   _$observationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum
 final BuiltSet<
         ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum>
     _$observationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum>(const <ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum>[
   _$observationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$observationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum>
     _$observationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<
         ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnum>
     _$observationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -170,27 +170,13 @@ class _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
           [void Function(
                   ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentBuilder()
+      (ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -201,7 +187,7 @@ class _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
   @override
   ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentBuilder()
+          ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -284,7 +270,6 @@ class ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentBuilder
   @override
   void replace(
       ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent;
   }
@@ -303,20 +288,20 @@ class ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentBuilder
 
   _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent',
-                'detail'));
+        _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

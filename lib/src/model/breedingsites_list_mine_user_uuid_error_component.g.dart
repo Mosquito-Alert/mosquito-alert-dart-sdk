@@ -27,7 +27,7 @@ BreedingsitesListMineUserUuidErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesListMineUserUuidErrorComponentAttrEnum>
-    _$breedingsitesListMineUserUuidErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesListMineUserUuidErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesListMineUserUuidErrorComponentAttrEnum>(const <BreedingsitesListMineUserUuidErrorComponentAttrEnum>[
   _$breedingsitesListMineUserUuidErrorComponentAttrEnum_userUuid,
   _$breedingsitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ BreedingsitesListMineUserUuidErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesListMineUserUuidErrorComponentCodeEnum>
-    _$breedingsitesListMineUserUuidErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesListMineUserUuidErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesListMineUserUuidErrorComponentCodeEnum>(const <BreedingsitesListMineUserUuidErrorComponentCodeEnum>[
   _$breedingsitesListMineUserUuidErrorComponentCodeEnum_invalid,
   _$breedingsitesListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -69,10 +69,10 @@ final BuiltSet<BreedingsitesListMineUserUuidErrorComponentCodeEnum>
 
 Serializer<BreedingsitesListMineUserUuidErrorComponentAttrEnum>
     _$breedingsitesListMineUserUuidErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesListMineUserUuidErrorComponentAttrEnumSerializer();
+    _$BreedingsitesListMineUserUuidErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesListMineUserUuidErrorComponentCodeEnum>
     _$breedingsitesListMineUserUuidErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesListMineUserUuidErrorComponentCodeEnumSerializer();
+    _$BreedingsitesListMineUserUuidErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesListMineUserUuidErrorComponentAttrEnumSerializer
     implements
@@ -156,21 +156,12 @@ class _$BreedingsitesListMineUserUuidErrorComponent
   factory _$BreedingsitesListMineUserUuidErrorComponent(
           [void Function(BreedingsitesListMineUserUuidErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesListMineUserUuidErrorComponentBuilder()
-            ..update(updates))
+      (BreedingsitesListMineUserUuidErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesListMineUserUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesListMineUserUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesListMineUserUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesListMineUserUuidErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesListMineUserUuidErrorComponent rebuild(
           void Function(BreedingsitesListMineUserUuidErrorComponentBuilder)
@@ -179,7 +170,7 @@ class _$BreedingsitesListMineUserUuidErrorComponent
 
   @override
   BreedingsitesListMineUserUuidErrorComponentBuilder toBuilder() =>
-      new BreedingsitesListMineUserUuidErrorComponentBuilder()..replace(this);
+      BreedingsitesListMineUserUuidErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -248,7 +239,6 @@ class BreedingsitesListMineUserUuidErrorComponentBuilder
 
   @override
   void replace(BreedingsitesListMineUserUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesListMineUserUuidErrorComponent;
   }
 
@@ -264,13 +254,14 @@ class BreedingsitesListMineUserUuidErrorComponentBuilder
 
   _$BreedingsitesListMineUserUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesListMineUserUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesListMineUserUuidErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesListMineUserUuidErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesListMineUserUuidErrorComponent', 'detail'));
+        _$BreedingsitesListMineUserUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesListMineUserUuidErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesListMineUserUuidErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BreedingsitesListMineUserUuidErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

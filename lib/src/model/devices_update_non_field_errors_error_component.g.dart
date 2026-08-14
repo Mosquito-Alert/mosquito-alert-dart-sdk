@@ -27,7 +27,7 @@ DevicesUpdateNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesUpdateNonFieldErrorsErrorComponentAttrEnum>
-    _$devicesUpdateNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesUpdateNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         DevicesUpdateNonFieldErrorsErrorComponentAttrEnum>(const <DevicesUpdateNonFieldErrorsErrorComponentAttrEnum>[
   _$devicesUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$devicesUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,7 +64,7 @@ DevicesUpdateNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesUpdateNonFieldErrorsErrorComponentCodeEnum>
-    _$devicesUpdateNonFieldErrorsErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesUpdateNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         DevicesUpdateNonFieldErrorsErrorComponentCodeEnum>(const <DevicesUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$devicesUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -74,10 +74,10 @@ final BuiltSet<DevicesUpdateNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<DevicesUpdateNonFieldErrorsErrorComponentAttrEnum>
     _$devicesUpdateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$DevicesUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$DevicesUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<DevicesUpdateNonFieldErrorsErrorComponentCodeEnum>
     _$devicesUpdateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$DevicesUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$DevicesUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$DevicesUpdateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -161,20 +161,12 @@ class _$DevicesUpdateNonFieldErrorsErrorComponent
   factory _$DevicesUpdateNonFieldErrorsErrorComponent(
           [void Function(DevicesUpdateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new DevicesUpdateNonFieldErrorsErrorComponentBuilder()..update(updates))
+      (DevicesUpdateNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$DevicesUpdateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesUpdateNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesUpdateNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesUpdateNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesUpdateNonFieldErrorsErrorComponent rebuild(
           void Function(DevicesUpdateNonFieldErrorsErrorComponentBuilder)
@@ -183,7 +175,7 @@ class _$DevicesUpdateNonFieldErrorsErrorComponent
 
   @override
   DevicesUpdateNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new DevicesUpdateNonFieldErrorsErrorComponentBuilder()..replace(this);
+      DevicesUpdateNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -252,7 +244,6 @@ class DevicesUpdateNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(DevicesUpdateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesUpdateNonFieldErrorsErrorComponent;
   }
 
@@ -268,13 +259,14 @@ class DevicesUpdateNonFieldErrorsErrorComponentBuilder
 
   _$DevicesUpdateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesUpdateNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesUpdateNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesUpdateNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'DevicesUpdateNonFieldErrorsErrorComponent', 'detail'));
+        _$DevicesUpdateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesUpdateNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesUpdateNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesUpdateNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

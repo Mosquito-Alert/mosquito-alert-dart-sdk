@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEn
 final BuiltSet<
         IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnum_classificationTaxonIds,
   _$identificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEn
 final BuiltSet<
         IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnum_invalidList,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorCompone
           [void Function(
                   IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentBuilder()
+      (IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
       rebuild(
@@ -218,7 +204,7 @@ class _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorCompone
   @override
   IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentBuilder()
+          IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -303,7 +289,6 @@ class IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
   void replace(
       IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent;
   }
@@ -323,20 +308,21 @@ class IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
   _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
+        _$IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsListMineClassificationTaxonIdsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

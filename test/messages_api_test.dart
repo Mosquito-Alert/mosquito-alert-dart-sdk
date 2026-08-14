@@ -7,25 +7,32 @@ void main() {
   final instance = MosquitoAlert().getMessagesApi();
 
   group(MessagesApi, () {
-    //Future<CreateUserMessage> create(CreateUserMessageRequest createUserMessageRequest) async
+    //Future<Message> create({ MetaCreateMessageRequest metaCreateMessageRequest }) async
     test('test create', () async {
       // TODO
     });
 
-    //Future<PaginatedMessageList> list({ BuiltList<String> orderBy, int page, int pageSize, BuiltList<String> recipientUuids }) async
+    // Get all messages sent by the current user. The content of the message is truncated to 100 words and the body is returned as plain text, without images or HTML tags. To retrieve the full content of a message, use the GET /messages/{id}/ endpoint.
+    //
+    //Future<PaginatedMessageListList> list({ BuiltList<String> orderBy, int page, int pageSize, BuiltList<String> recipientUuids, String target }) async
     test('test list', () async {
       // TODO
     });
 
     // Get current user's sent messages
     //
-    //Future<PaginatedMessageList> listMineSent({ BuiltList<String> orderBy, int page, int pageSize, BuiltList<String> recipientUuids }) async
+    //Future<PaginatedMessageListList> listMineSent({ BuiltList<String> orderBy, int page, int pageSize, BuiltList<String> recipientUuids, String target }) async
     test('test listMineSent', () async {
       // TODO
     });
 
-    //Future<BuiltList<MessageRecipient>> recipientsList(int id) async
+    //Future<PaginatedMessageRecipientList> recipientsList(int id, { int page, int pageSize }) async
     test('test recipientsList', () async {
+      // TODO
+    });
+
+    //Future<MessageRecipientStats> recipientsStatsRetrieve(int id) async
+    test('test recipientsStatsRetrieve', () async {
       // TODO
     });
 
@@ -34,20 +41,8 @@ void main() {
       // TODO
     });
 
-    //Future<PaginatedMessageTopicList> topicsList({ int page, int pageSize, String search }) async
-    test('test topicsList', () async {
-      // TODO
-    });
-
-    //Future<MessageTopic> topicsRetrieve(String code) async
-    test('test topicsRetrieve', () async {
-      // TODO
-    });
-
-    // Send a message to a specific topic
-    //
-    //Future<CreateTopicMessage> topicsSend(String code, CreateTopicMessageRequest createTopicMessageRequest) async
-    test('test topicsSend', () async {
+    //Future<MessageTargeting> targetingRetrieve(int id) async
+    test('test targetingRetrieve', () async {
       // TODO
     });
 

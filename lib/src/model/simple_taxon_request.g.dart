@@ -48,7 +48,7 @@ SimpleTaxonRequestRankEnum _$simpleTaxonRequestRankEnumValueOf(String name) {
 }
 
 final BuiltSet<SimpleTaxonRequestRankEnum> _$simpleTaxonRequestRankEnumValues =
-    new BuiltSet<SimpleTaxonRequestRankEnum>(const <SimpleTaxonRequestRankEnum>[
+    BuiltSet<SimpleTaxonRequestRankEnum>(const <SimpleTaxonRequestRankEnum>[
   _$simpleTaxonRequestRankEnum_class_,
   _$simpleTaxonRequestRankEnum_order,
   _$simpleTaxonRequestRankEnum_family,
@@ -60,7 +60,7 @@ final BuiltSet<SimpleTaxonRequestRankEnum> _$simpleTaxonRequestRankEnumValues =
 ]);
 
 Serializer<SimpleTaxonRequestRankEnum> _$simpleTaxonRequestRankEnumSerializer =
-    new _$SimpleTaxonRequestRankEnumSerializer();
+    _$SimpleTaxonRequestRankEnumSerializer();
 
 class _$SimpleTaxonRequestRankEnumSerializer
     implements PrimitiveSerializer<SimpleTaxonRequestRankEnum> {
@@ -113,16 +113,11 @@ class _$SimpleTaxonRequest extends SimpleTaxonRequest {
 
   factory _$SimpleTaxonRequest(
           [void Function(SimpleTaxonRequestBuilder)? updates]) =>
-      (new SimpleTaxonRequestBuilder()..update(updates))._build();
+      (SimpleTaxonRequestBuilder()..update(updates))._build();
 
   _$SimpleTaxonRequest._(
       {required this.nameValue, this.commonName, required this.rank})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        nameValue, r'SimpleTaxonRequest', 'nameValue');
-    BuiltValueNullFieldError.checkNotNull(rank, r'SimpleTaxonRequest', 'rank');
-  }
-
+      : super._();
   @override
   SimpleTaxonRequest rebuild(
           void Function(SimpleTaxonRequestBuilder) updates) =>
@@ -130,7 +125,7 @@ class _$SimpleTaxonRequest extends SimpleTaxonRequest {
 
   @override
   SimpleTaxonRequestBuilder toBuilder() =>
-      new SimpleTaxonRequestBuilder()..replace(this);
+      SimpleTaxonRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -194,7 +189,6 @@ class SimpleTaxonRequestBuilder
 
   @override
   void replace(SimpleTaxonRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SimpleTaxonRequest;
   }
 
@@ -208,12 +202,13 @@ class SimpleTaxonRequestBuilder
 
   _$SimpleTaxonRequest _build() {
     final _$result = _$v ??
-        new _$SimpleTaxonRequest._(
-            nameValue: BuiltValueNullFieldError.checkNotNull(
-                nameValue, r'SimpleTaxonRequest', 'nameValue'),
-            commonName: commonName,
-            rank: BuiltValueNullFieldError.checkNotNull(
-                rank, r'SimpleTaxonRequest', 'rank'));
+        _$SimpleTaxonRequest._(
+          nameValue: BuiltValueNullFieldError.checkNotNull(
+              nameValue, r'SimpleTaxonRequest', 'nameValue'),
+          commonName: commonName,
+          rank: BuiltValueNullFieldError.checkNotNull(
+              rank, r'SimpleTaxonRequest', 'rank'),
+        );
     replace(_$result);
     return _$result;
   }

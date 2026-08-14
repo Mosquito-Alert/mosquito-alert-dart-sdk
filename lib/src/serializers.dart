@@ -24,6 +24,8 @@ import 'package:mosquito_alert/src/model/annotation_request.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
 import 'package:mosquito_alert/src/model/assignment.dart';
+import 'package:mosquito_alert/src/model/audience_filter.dart';
+import 'package:mosquito_alert/src/model/audience_filter_request.dart';
 import 'package:mosquito_alert/src/model/auth_change_password_error.dart';
 import 'package:mosquito_alert/src/model/auth_change_password_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/auth_change_password_password_error_component.dart';
@@ -189,14 +191,11 @@ import 'package:mosquito_alert/src/model/campaigns_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/country.dart';
 import 'package:mosquito_alert/src/model/country_request.dart';
 import 'package:mosquito_alert/src/model/create_agree_review_request.dart';
+import 'package:mosquito_alert/src/model/create_audience_message_content_request.dart';
+import 'package:mosquito_alert/src/model/create_audience_message_request.dart';
 import 'package:mosquito_alert/src/model/create_overwrite_review_request.dart';
 import 'package:mosquito_alert/src/model/create_photo_prediction.dart';
 import 'package:mosquito_alert/src/model/create_photo_prediction_request.dart';
-import 'package:mosquito_alert/src/model/create_topic_message.dart';
-import 'package:mosquito_alert/src/model/create_topic_message_content.dart';
-import 'package:mosquito_alert/src/model/create_topic_message_content_request.dart';
-import 'package:mosquito_alert/src/model/create_topic_message_request.dart';
-import 'package:mosquito_alert/src/model/create_user_message.dart';
 import 'package:mosquito_alert/src/model/create_user_message_request.dart';
 import 'package:mosquito_alert/src/model/device.dart';
 import 'package:mosquito_alert/src/model/device_os.dart';
@@ -436,22 +435,29 @@ import 'package:mosquito_alert/src/model/identificationtasks_review_create_non_f
 import 'package:mosquito_alert/src/model/identificationtasks_review_create_public_note_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_review_create_public_photo_uuid_error_component.dart';
 import 'package:mosquito_alert/src/model/identificationtasks_review_create_validation_error.dart';
+import 'package:mosquito_alert/src/model/localized_audience_message_body_request.dart';
+import 'package:mosquito_alert/src/model/localized_audience_message_title_request.dart';
 import 'package:mosquito_alert/src/model/localized_message_body.dart';
+import 'package:mosquito_alert/src/model/localized_message_body_preview.dart';
 import 'package:mosquito_alert/src/model/localized_message_body_request.dart';
 import 'package:mosquito_alert/src/model/localized_message_title.dart';
 import 'package:mosquito_alert/src/model/localized_message_title_request.dart';
-import 'package:mosquito_alert/src/model/localized_topic_message_body.dart';
-import 'package:mosquito_alert/src/model/localized_topic_message_body_request.dart';
-import 'package:mosquito_alert/src/model/localized_topic_message_title.dart';
-import 'package:mosquito_alert/src/model/localized_topic_message_title_request.dart';
 import 'package:mosquito_alert/src/model/location.dart';
 import 'package:mosquito_alert/src/model/location_request.dart';
 import 'package:mosquito_alert/src/model/message.dart';
 import 'package:mosquito_alert/src/model/message_content.dart';
 import 'package:mosquito_alert/src/model/message_content_request.dart';
+import 'package:mosquito_alert/src/model/message_list.dart';
+import 'package:mosquito_alert/src/model/message_list_content.dart';
 import 'package:mosquito_alert/src/model/message_permission.dart';
 import 'package:mosquito_alert/src/model/message_recipient.dart';
-import 'package:mosquito_alert/src/model/message_topic.dart';
+import 'package:mosquito_alert/src/model/message_recipient_stats.dart';
+import 'package:mosquito_alert/src/model/message_targeting.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_in_area_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_last_login_after_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_last_login_before_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_locale_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_bg_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_bn_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_ca_error_component.dart';
@@ -505,6 +511,7 @@ import 'package:mosquito_alert/src/model/messages_create_content_title_tr_error_
 import 'package:mosquito_alert/src/model/messages_create_content_title_zh_cn_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_error.dart';
 import 'package:mosquito_alert/src/model/messages_create_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_target_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_user_uuids_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_user_uuids_index_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_validation_error.dart';
@@ -512,65 +519,14 @@ import 'package:mosquito_alert/src/model/messages_list_error.dart';
 import 'package:mosquito_alert/src/model/messages_list_mine_sent_error.dart';
 import 'package:mosquito_alert/src/model/messages_list_mine_sent_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_list_mine_sent_recipient_uuids_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_list_mine_sent_target_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_list_mine_sent_validation_error.dart';
 import 'package:mosquito_alert/src/model/messages_list_order_by_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_list_recipient_uuids_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_list_target_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_list_validation_error.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_bg_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_bn_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_ca_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_de_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_el_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_en_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_es_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_eu_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_fr_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_gl_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_hr_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_hu_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_it_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_lb_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_mk_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_nl_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_pt_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_ro_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_sl_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_sq_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_sr_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_sv_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_tr_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_body_zh_cn_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_bg_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_bn_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_ca_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_de_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_el_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_en_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_es_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_eu_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_fr_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_gl_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_hr_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_hu_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_it_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_lb_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_mk_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_nl_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_pt_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_ro_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_sl_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_sq_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_sr_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_sv_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_tr_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_content_title_zh_cn_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_error.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_non_field_errors_error_component.dart';
-import 'package:mosquito_alert/src/model/messages_topics_send_validation_error.dart';
 import 'package:mosquito_alert/src/model/meta_create_identification_task_review_request.dart';
+import 'package:mosquito_alert/src/model/meta_create_message_request.dart';
 import 'package:mosquito_alert/src/model/minimal_user.dart';
 import 'package:mosquito_alert/src/model/mobile_app.dart';
 import 'package:mosquito_alert/src/model/mobile_app_request.dart';
@@ -665,8 +621,8 @@ import 'package:mosquito_alert/src/model/paginated_breeding_site_list.dart';
 import 'package:mosquito_alert/src/model/paginated_campaign_list.dart';
 import 'package:mosquito_alert/src/model/paginated_country_list.dart';
 import 'package:mosquito_alert/src/model/paginated_identification_task_list.dart';
-import 'package:mosquito_alert/src/model/paginated_message_list.dart';
-import 'package:mosquito_alert/src/model/paginated_message_topic_list.dart';
+import 'package:mosquito_alert/src/model/paginated_message_list_list.dart';
+import 'package:mosquito_alert/src/model/paginated_message_recipient_list.dart';
 import 'package:mosquito_alert/src/model/paginated_notification_list.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
@@ -762,6 +718,13 @@ import 'package:mosquito_alert/src/model/user.dart';
 import 'package:mosquito_alert/src/model/user_assignment.dart';
 import 'package:mosquito_alert/src/model/user_request.dart';
 import 'package:mosquito_alert/src/model/user_score.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_error.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_in_area_error_component.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_last_login_after_error_component.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_last_login_before_error_component.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_locale_error_component.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_validation_error.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_error.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_non_field_errors_error_component.dart';
@@ -787,6 +750,8 @@ part 'serializers.g.dart';
   AppUserTokenObtainPair,
   AppUserTokenObtainPairRequest,
   Assignment,
+  AudienceFilter,
+  AudienceFilterRequest,
   AuthChangePasswordError,
   AuthChangePasswordNonFieldErrorsErrorComponent,
   AuthChangePasswordPasswordErrorComponent,
@@ -952,14 +917,11 @@ part 'serializers.g.dart';
   Country,
   CountryRequest,
   CreateAgreeReviewRequest,
+  CreateAudienceMessageContentRequest,
+  CreateAudienceMessageRequest,
   CreateOverwriteReviewRequest,
   CreatePhotoPrediction,
   CreatePhotoPredictionRequest,
-  CreateTopicMessage,
-  CreateTopicMessageContent,
-  CreateTopicMessageContentRequest,
-  CreateTopicMessageRequest,
-  CreateUserMessage,
   CreateUserMessageRequest,
   Device,
   DeviceOs,
@@ -1199,22 +1161,29 @@ part 'serializers.g.dart';
   IdentificationtasksReviewCreatePublicNoteErrorComponent,
   IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent,
   IdentificationtasksReviewCreateValidationError,
+  LocalizedAudienceMessageBodyRequest,
+  LocalizedAudienceMessageTitleRequest,
   LocalizedMessageBody,
+  LocalizedMessageBodyPreview,
   LocalizedMessageBodyRequest,
   LocalizedMessageTitle,
   LocalizedMessageTitleRequest,
-  LocalizedTopicMessageBody,
-  LocalizedTopicMessageBodyRequest,
-  LocalizedTopicMessageTitle,
-  LocalizedTopicMessageTitleRequest,
   Location,
   LocationRequest,
   Message,
   MessageContent,
   MessageContentRequest,
+  MessageList,
+  MessageListContent,
   MessagePermission,
   MessageRecipient,
-  MessageTopic,
+  MessageRecipientStats,
+  MessageTargeting,
+  MessagesCreateAudienceInAreaErrorComponent,
+  MessagesCreateAudienceLastLoginAfterErrorComponent,
+  MessagesCreateAudienceLastLoginBeforeErrorComponent,
+  MessagesCreateAudienceLocaleErrorComponent,
+  MessagesCreateAudienceNonFieldErrorsErrorComponent,
   MessagesCreateContentBodyBgErrorComponent,
   MessagesCreateContentBodyBnErrorComponent,
   MessagesCreateContentBodyCaErrorComponent,
@@ -1268,6 +1237,7 @@ part 'serializers.g.dart';
   MessagesCreateContentTitleZhCnErrorComponent,
   MessagesCreateError,
   MessagesCreateNonFieldErrorsErrorComponent,
+  MessagesCreateTargetErrorComponent,
   MessagesCreateUserUuidsErrorComponent,
   MessagesCreateUserUuidsINDEXErrorComponent,
   MessagesCreateValidationError,
@@ -1275,65 +1245,14 @@ part 'serializers.g.dart';
   MessagesListMineSentError,
   MessagesListMineSentOrderByErrorComponent,
   MessagesListMineSentRecipientUuidsErrorComponent,
+  MessagesListMineSentTargetErrorComponent,
   MessagesListMineSentValidationError,
   MessagesListOrderByErrorComponent,
   MessagesListRecipientUuidsErrorComponent,
+  MessagesListTargetErrorComponent,
   MessagesListValidationError,
-  MessagesTopicsSendContentBodyBgErrorComponent,
-  MessagesTopicsSendContentBodyBnErrorComponent,
-  MessagesTopicsSendContentBodyCaErrorComponent,
-  MessagesTopicsSendContentBodyDeErrorComponent,
-  MessagesTopicsSendContentBodyElErrorComponent,
-  MessagesTopicsSendContentBodyEnErrorComponent,
-  MessagesTopicsSendContentBodyEsErrorComponent,
-  MessagesTopicsSendContentBodyEuErrorComponent,
-  MessagesTopicsSendContentBodyFrErrorComponent,
-  MessagesTopicsSendContentBodyGlErrorComponent,
-  MessagesTopicsSendContentBodyHrErrorComponent,
-  MessagesTopicsSendContentBodyHuErrorComponent,
-  MessagesTopicsSendContentBodyItErrorComponent,
-  MessagesTopicsSendContentBodyLbErrorComponent,
-  MessagesTopicsSendContentBodyMkErrorComponent,
-  MessagesTopicsSendContentBodyNlErrorComponent,
-  MessagesTopicsSendContentBodyNonFieldErrorsErrorComponent,
-  MessagesTopicsSendContentBodyPtErrorComponent,
-  MessagesTopicsSendContentBodyRoErrorComponent,
-  MessagesTopicsSendContentBodySlErrorComponent,
-  MessagesTopicsSendContentBodySqErrorComponent,
-  MessagesTopicsSendContentBodySrErrorComponent,
-  MessagesTopicsSendContentBodySvErrorComponent,
-  MessagesTopicsSendContentBodyTrErrorComponent,
-  MessagesTopicsSendContentBodyZhCnErrorComponent,
-  MessagesTopicsSendContentNonFieldErrorsErrorComponent,
-  MessagesTopicsSendContentTitleBgErrorComponent,
-  MessagesTopicsSendContentTitleBnErrorComponent,
-  MessagesTopicsSendContentTitleCaErrorComponent,
-  MessagesTopicsSendContentTitleDeErrorComponent,
-  MessagesTopicsSendContentTitleElErrorComponent,
-  MessagesTopicsSendContentTitleEnErrorComponent,
-  MessagesTopicsSendContentTitleEsErrorComponent,
-  MessagesTopicsSendContentTitleEuErrorComponent,
-  MessagesTopicsSendContentTitleFrErrorComponent,
-  MessagesTopicsSendContentTitleGlErrorComponent,
-  MessagesTopicsSendContentTitleHrErrorComponent,
-  MessagesTopicsSendContentTitleHuErrorComponent,
-  MessagesTopicsSendContentTitleItErrorComponent,
-  MessagesTopicsSendContentTitleLbErrorComponent,
-  MessagesTopicsSendContentTitleMkErrorComponent,
-  MessagesTopicsSendContentTitleNlErrorComponent,
-  MessagesTopicsSendContentTitleNonFieldErrorsErrorComponent,
-  MessagesTopicsSendContentTitlePtErrorComponent,
-  MessagesTopicsSendContentTitleRoErrorComponent,
-  MessagesTopicsSendContentTitleSlErrorComponent,
-  MessagesTopicsSendContentTitleSqErrorComponent,
-  MessagesTopicsSendContentTitleSrErrorComponent,
-  MessagesTopicsSendContentTitleSvErrorComponent,
-  MessagesTopicsSendContentTitleTrErrorComponent,
-  MessagesTopicsSendContentTitleZhCnErrorComponent,
-  MessagesTopicsSendError,
-  MessagesTopicsSendNonFieldErrorsErrorComponent,
-  MessagesTopicsSendValidationError,
   MetaCreateIdentificationTaskReviewRequest,
+  MetaCreateMessageRequest,
   MinimalUser,
   MobileApp,
   MobileAppRequest,
@@ -1428,8 +1347,8 @@ part 'serializers.g.dart';
   PaginatedCampaignList,
   PaginatedCountryList,
   PaginatedIdentificationTaskList,
-  PaginatedMessageList,
-  PaginatedMessageTopicList,
+  PaginatedMessageListList,
+  PaginatedMessageRecipientList,
   PaginatedNotificationList,
   PaginatedObservationList,
   PaginatedPartnerList,
@@ -1525,6 +1444,13 @@ part 'serializers.g.dart';
   UserAssignment,
   UserRequest,
   UserScore,
+  UsersAudienceFilterError,
+  UsersAudienceFilterInAreaErrorComponent,
+  UsersAudienceFilterLastLoginAfterErrorComponent,
+  UsersAudienceFilterLastLoginBeforeErrorComponent,
+  UsersAudienceFilterLocaleErrorComponent,
+  UsersAudienceFilterNonFieldErrorsErrorComponent,
+  UsersAudienceFilterValidationError,
   UsersPartialUpdateError,
   UsersPartialUpdateLocaleErrorComponent,
   UsersPartialUpdateNonFieldErrorsErrorComponent,
@@ -1539,40 +1465,328 @@ part 'serializers.g.dart';
 ])
 Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(BreedingSiteGeoModel)]),
-        () => ListBuilder<BreedingSiteGeoModel>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(MessageRecipient)]),
         () => ListBuilder<MessageRecipient>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType.nullable(int)]),
-        () => ListBuilder<int>(),
+        const FullType(BuiltList, [FullType(AuthChangePasswordError)]),
+        () => ListBuilder<AuthChangePasswordError>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(int)]),
-        () => ListBuilder<int>(),
+        const FullType(BuiltList, [FullType(BitesGeoListError)]),
+        () => ListBuilder<BitesGeoListError>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType.nullable(String)]),
-        () => ListBuilder<String>(),
+        const FullType(BuiltList, [FullType(BreedingSite)]),
+        () => ListBuilder<BreedingSite>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Workspace)]),
+        () => ListBuilder<Workspace>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationtasksPredictionsCreateError)]),
+        () => ListBuilder<IdentificationtasksPredictionsCreateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Taxon)]),
+        () => ListBuilder<Taxon>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BitesCreateError)]),
+        () => ListBuilder<BitesCreateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BreedingSiteGeoJsonModel)]),
+        () => ListBuilder<BreedingSiteGeoJsonModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationtasksPredictionsUpdateError)]),
+        () => ListBuilder<IdentificationtasksPredictionsUpdateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(CampaignsListError)]),
+        () => ListBuilder<CampaignsListError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Observation)]),
+        () => ListBuilder<Observation>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(TaxonTreeNode)]),
+        () => ListBuilder<TaxonTreeNode>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(ObservationGeoModel)]),
         () => ListBuilder<ObservationGeoModel>(),
       )
       ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(WorkspaceMembership)]),
+        () => ListBuilder<WorkspaceMembership>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationtasksListError)]),
+        () => ListBuilder<IdentificationtasksListError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(AuthVerifyTokenError)]),
+        () => ListBuilder<AuthVerifyTokenError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(double)]),
+        () => ListBuilder<double>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationtasksAnnotationsListError)]),
+        () => ListBuilder<IdentificationtasksAnnotationsListError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(MessagesListError)]),
+        () => ListBuilder<MessagesListError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BoundariesCreateTemporaryError)]),
+        () => ListBuilder<BoundariesCreateTemporaryError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationtasksAnnotationsListMineError)]),
+        () => ListBuilder<IdentificationtasksAnnotationsListMineError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(User)]),
+        () => ListBuilder<User>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BitesListError)]),
+        () => ListBuilder<BitesListError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationtasksReviewCreateError)]),
+        () => ListBuilder<IdentificationtasksReviewCreateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType.nullable(String)]),
+        () => ListBuilder<String>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ObservationsListError)]),
+        () => ListBuilder<ObservationsListError>(),
+      )
+      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(BiteGeoModel)]),
         () => ListBuilder<BiteGeoModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BiteGeoJsonModel)]),
+        () => ListBuilder<BiteGeoJsonModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(NotificationsPartialUpdateError)]),
+        () => ListBuilder<NotificationsPartialUpdateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Bite)]),
+        () => ListBuilder<Bite>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(SimpleUser)]),
+        () => ListBuilder<SimpleUser>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BreedingsitesCreateError)]),
+        () => ListBuilder<BreedingsitesCreateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(PhotosPredictionPartialUpdateError)]),
+        () => ListBuilder<PhotosPredictionPartialUpdateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType.nullable(int)]),
+        () => ListBuilder<int>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Partner)]),
+        () => ListBuilder<Partner>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(AuthSignupGuestError)]),
+        () => ListBuilder<AuthSignupGuestError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BreedingsitesListMineError)]),
+        () => ListBuilder<BreedingsitesListMineError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UsersPartialUpdateError)]),
+        () => ListBuilder<UsersPartialUpdateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UsersUpdateError)]),
+        () => ListBuilder<UsersUpdateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(FixesCreateError)]),
+        () => ListBuilder<FixesCreateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationtasksListMineError)]),
+        () => ListBuilder<IdentificationtasksListMineError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(MessagesListMineSentError)]),
+        () => ListBuilder<MessagesListMineSentError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(TaxaListRankErrorComponent)]),
+        () => ListBuilder<TaxaListRankErrorComponent>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ObservationGeoJsonModel)]),
+        () => ListBuilder<ObservationGeoJsonModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Country)]),
+        () => ListBuilder<Country>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(AuthRefreshTokenError)]),
+        () => ListBuilder<AuthRefreshTokenError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(DevicesCreateError)]),
+        () => ListBuilder<DevicesCreateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Campaign)]),
+        () => ListBuilder<Campaign>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(AdmBoundary)]),
+        () => ListBuilder<AdmBoundary>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationTask)]),
+        () => ListBuilder<IdentificationTask>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(AuthObtainTokenError)]),
+        () => ListBuilder<AuthObtainTokenError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ObservationsListMineError)]),
+        () => ListBuilder<ObservationsListMineError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UsersAudienceFilterError)]),
+        () => ListBuilder<UsersAudienceFilterError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(UserAssignment)]),
+        () => ListBuilder<UserAssignment>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(DevicesUpdateError)]),
+        () => ListBuilder<DevicesUpdateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(NotificationsListMineOrderByErrorComponent)]),
+        () => ListBuilder<NotificationsListMineOrderByErrorComponent>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(SimplePhoto)]),
+        () => ListBuilder<SimplePhoto>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BreedingsitesListError)]),
+        () => ListBuilder<BreedingsitesListError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationtasksAnnotationsCreateError)]),
+        () => ListBuilder<IdentificationtasksAnnotationsCreateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Error404)]),
+        () => ListBuilder<Error404>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BitesListMineError)]),
+        () => ListBuilder<BitesListMineError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Error403)]),
+        () => ListBuilder<Error403>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(SimpleWorkspace)]),
+        () => ListBuilder<SimpleWorkspace>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(MessageList)]),
+        () => ListBuilder<MessageList>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Notification)]),
+        () => ListBuilder<Notification>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ObservationsGeoListError)]),
+        () => ListBuilder<ObservationsGeoListError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(NotificationsUpdateError)]),
+        () => ListBuilder<NotificationsUpdateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(DevicesPartialUpdateError)]),
+        () => ListBuilder<DevicesPartialUpdateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Error401)]),
+        () => ListBuilder<Error401>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ObservationsCreateError)]),
+        () => ListBuilder<ObservationsCreateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(BreedingSiteGeoModel)]),
+        () => ListBuilder<BreedingSiteGeoModel>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(PhotoPrediction)]),
+        () => ListBuilder<PhotoPrediction>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(MessagesCreateError)]),
+        () => ListBuilder<MessagesCreateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(Annotation)]),
+        () => ListBuilder<Annotation>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(int)]),
+        () => ListBuilder<int>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(WorkspaceCollaborationGroup)]),
+        () => ListBuilder<WorkspaceCollaborationGroup>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(PhotosPredictionUpdateError)]),
+        () => ListBuilder<PhotosPredictionUpdateError>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(String)]),
         () => ListBuilder<String>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(double)]),
-        () => ListBuilder<double>(),
+        const FullType(BuiltList, [FullType(BreedingsitesGeoListError)]),
+        () => ListBuilder<BreedingsitesGeoListError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(IdentificationtasksPredictionsPartialUpdateError)]),
+        () => ListBuilder<IdentificationtasksPredictionsPartialUpdateError>(),
       )
       ..add(const OneOfSerializer())
       ..add(const AnyOfSerializer())

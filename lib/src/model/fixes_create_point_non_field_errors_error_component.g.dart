@@ -28,7 +28,7 @@ FixesCreatePointNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<FixesCreatePointNonFieldErrorsErrorComponentAttrEnum>
-    _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
+    _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         FixesCreatePointNonFieldErrorsErrorComponentAttrEnum>(const <FixesCreatePointNonFieldErrorsErrorComponentAttrEnum>[
   _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_pointPeriodNonFieldErrors,
   _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -65,7 +65,7 @@ FixesCreatePointNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<FixesCreatePointNonFieldErrorsErrorComponentCodeEnum>
-    _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnumValues = new BuiltSet<
+    _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         FixesCreatePointNonFieldErrorsErrorComponentCodeEnum>(const <FixesCreatePointNonFieldErrorsErrorComponentCodeEnum>[
   _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -75,10 +75,10 @@ final BuiltSet<FixesCreatePointNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<FixesCreatePointNonFieldErrorsErrorComponentAttrEnum>
     _$fixesCreatePointNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$FixesCreatePointNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$FixesCreatePointNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<FixesCreatePointNonFieldErrorsErrorComponentCodeEnum>
     _$fixesCreatePointNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$FixesCreatePointNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$FixesCreatePointNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$FixesCreatePointNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -166,21 +166,12 @@ class _$FixesCreatePointNonFieldErrorsErrorComponent
   factory _$FixesCreatePointNonFieldErrorsErrorComponent(
           [void Function(FixesCreatePointNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new FixesCreatePointNonFieldErrorsErrorComponentBuilder()
-            ..update(updates))
+      (FixesCreatePointNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$FixesCreatePointNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'FixesCreatePointNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'FixesCreatePointNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'FixesCreatePointNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   FixesCreatePointNonFieldErrorsErrorComponent rebuild(
           void Function(FixesCreatePointNonFieldErrorsErrorComponentBuilder)
@@ -189,7 +180,7 @@ class _$FixesCreatePointNonFieldErrorsErrorComponent
 
   @override
   FixesCreatePointNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new FixesCreatePointNonFieldErrorsErrorComponentBuilder()..replace(this);
+      FixesCreatePointNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -260,7 +251,6 @@ class FixesCreatePointNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(FixesCreatePointNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixesCreatePointNonFieldErrorsErrorComponent;
   }
 
@@ -276,13 +266,14 @@ class FixesCreatePointNonFieldErrorsErrorComponentBuilder
 
   _$FixesCreatePointNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$FixesCreatePointNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'FixesCreatePointNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'FixesCreatePointNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'FixesCreatePointNonFieldErrorsErrorComponent', 'detail'));
+        _$FixesCreatePointNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'FixesCreatePointNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'FixesCreatePointNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'FixesCreatePointNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -27,7 +27,7 @@ AuthObtainTokenPasswordErrorComponentAttrEnum
 }
 
 final BuiltSet<AuthObtainTokenPasswordErrorComponentAttrEnum>
-    _$authObtainTokenPasswordErrorComponentAttrEnumValues = new BuiltSet<
+    _$authObtainTokenPasswordErrorComponentAttrEnumValues = BuiltSet<
         AuthObtainTokenPasswordErrorComponentAttrEnum>(const <AuthObtainTokenPasswordErrorComponentAttrEnum>[
   _$authObtainTokenPasswordErrorComponentAttrEnum_password,
   _$authObtainTokenPasswordErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -81,7 +81,7 @@ AuthObtainTokenPasswordErrorComponentCodeEnum
 }
 
 final BuiltSet<AuthObtainTokenPasswordErrorComponentCodeEnum>
-    _$authObtainTokenPasswordErrorComponentCodeEnumValues = new BuiltSet<
+    _$authObtainTokenPasswordErrorComponentCodeEnumValues = BuiltSet<
         AuthObtainTokenPasswordErrorComponentCodeEnum>(const <AuthObtainTokenPasswordErrorComponentCodeEnum>[
   _$authObtainTokenPasswordErrorComponentCodeEnum_blank,
   _$authObtainTokenPasswordErrorComponentCodeEnum_invalid,
@@ -94,10 +94,10 @@ final BuiltSet<AuthObtainTokenPasswordErrorComponentCodeEnum>
 
 Serializer<AuthObtainTokenPasswordErrorComponentAttrEnum>
     _$authObtainTokenPasswordErrorComponentAttrEnumSerializer =
-    new _$AuthObtainTokenPasswordErrorComponentAttrEnumSerializer();
+    _$AuthObtainTokenPasswordErrorComponentAttrEnumSerializer();
 Serializer<AuthObtainTokenPasswordErrorComponentCodeEnum>
     _$authObtainTokenPasswordErrorComponentCodeEnumSerializer =
-    new _$AuthObtainTokenPasswordErrorComponentCodeEnumSerializer();
+    _$AuthObtainTokenPasswordErrorComponentCodeEnumSerializer();
 
 class _$AuthObtainTokenPasswordErrorComponentAttrEnumSerializer
     implements
@@ -187,20 +187,12 @@ class _$AuthObtainTokenPasswordErrorComponent
   factory _$AuthObtainTokenPasswordErrorComponent(
           [void Function(AuthObtainTokenPasswordErrorComponentBuilder)?
               updates]) =>
-      (new AuthObtainTokenPasswordErrorComponentBuilder()..update(updates))
+      (AuthObtainTokenPasswordErrorComponentBuilder()..update(updates))
           ._build();
 
   _$AuthObtainTokenPasswordErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'AuthObtainTokenPasswordErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'AuthObtainTokenPasswordErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'AuthObtainTokenPasswordErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   AuthObtainTokenPasswordErrorComponent rebuild(
           void Function(AuthObtainTokenPasswordErrorComponentBuilder)
@@ -209,7 +201,7 @@ class _$AuthObtainTokenPasswordErrorComponent
 
   @override
   AuthObtainTokenPasswordErrorComponentBuilder toBuilder() =>
-      new AuthObtainTokenPasswordErrorComponentBuilder()..replace(this);
+      AuthObtainTokenPasswordErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -278,7 +270,6 @@ class AuthObtainTokenPasswordErrorComponentBuilder
 
   @override
   void replace(AuthObtainTokenPasswordErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthObtainTokenPasswordErrorComponent;
   }
 
@@ -293,13 +284,14 @@ class AuthObtainTokenPasswordErrorComponentBuilder
 
   _$AuthObtainTokenPasswordErrorComponent _build() {
     final _$result = _$v ??
-        new _$AuthObtainTokenPasswordErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'AuthObtainTokenPasswordErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AuthObtainTokenPasswordErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'AuthObtainTokenPasswordErrorComponent', 'detail'));
+        _$AuthObtainTokenPasswordErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'AuthObtainTokenPasswordErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AuthObtainTokenPasswordErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'AuthObtainTokenPasswordErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

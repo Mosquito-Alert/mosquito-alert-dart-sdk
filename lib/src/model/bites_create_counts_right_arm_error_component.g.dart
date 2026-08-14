@@ -28,7 +28,7 @@ BitesCreateCountsRightArmErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateCountsRightArmErrorComponentAttrEnum>
-    _$bitesCreateCountsRightArmErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateCountsRightArmErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateCountsRightArmErrorComponentAttrEnum>(const <BitesCreateCountsRightArmErrorComponentAttrEnum>[
   _$bitesCreateCountsRightArmErrorComponentAttrEnum_countsPeriodRightArm,
   _$bitesCreateCountsRightArmErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -65,7 +65,7 @@ BitesCreateCountsRightArmErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateCountsRightArmErrorComponentCodeEnum>
-    _$bitesCreateCountsRightArmErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateCountsRightArmErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateCountsRightArmErrorComponentCodeEnum>(const <BitesCreateCountsRightArmErrorComponentCodeEnum>[
   _$bitesCreateCountsRightArmErrorComponentCodeEnum_invalid,
   _$bitesCreateCountsRightArmErrorComponentCodeEnum_maxStringLength,
@@ -75,10 +75,10 @@ final BuiltSet<BitesCreateCountsRightArmErrorComponentCodeEnum>
 
 Serializer<BitesCreateCountsRightArmErrorComponentAttrEnum>
     _$bitesCreateCountsRightArmErrorComponentAttrEnumSerializer =
-    new _$BitesCreateCountsRightArmErrorComponentAttrEnumSerializer();
+    _$BitesCreateCountsRightArmErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateCountsRightArmErrorComponentCodeEnum>
     _$bitesCreateCountsRightArmErrorComponentCodeEnumSerializer =
-    new _$BitesCreateCountsRightArmErrorComponentCodeEnumSerializer();
+    _$BitesCreateCountsRightArmErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateCountsRightArmErrorComponentAttrEnumSerializer
     implements
@@ -162,20 +162,12 @@ class _$BitesCreateCountsRightArmErrorComponent
   factory _$BitesCreateCountsRightArmErrorComponent(
           [void Function(BitesCreateCountsRightArmErrorComponentBuilder)?
               updates]) =>
-      (new BitesCreateCountsRightArmErrorComponentBuilder()..update(updates))
+      (BitesCreateCountsRightArmErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BitesCreateCountsRightArmErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateCountsRightArmErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateCountsRightArmErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateCountsRightArmErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateCountsRightArmErrorComponent rebuild(
           void Function(BitesCreateCountsRightArmErrorComponentBuilder)
@@ -184,7 +176,7 @@ class _$BitesCreateCountsRightArmErrorComponent
 
   @override
   BitesCreateCountsRightArmErrorComponentBuilder toBuilder() =>
-      new BitesCreateCountsRightArmErrorComponentBuilder()..replace(this);
+      BitesCreateCountsRightArmErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -253,7 +245,6 @@ class BitesCreateCountsRightArmErrorComponentBuilder
 
   @override
   void replace(BitesCreateCountsRightArmErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateCountsRightArmErrorComponent;
   }
 
@@ -268,13 +259,14 @@ class BitesCreateCountsRightArmErrorComponentBuilder
 
   _$BitesCreateCountsRightArmErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateCountsRightArmErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateCountsRightArmErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateCountsRightArmErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateCountsRightArmErrorComponent', 'detail'));
+        _$BitesCreateCountsRightArmErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateCountsRightArmErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateCountsRightArmErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateCountsRightArmErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -31,7 +31,7 @@ IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnum>
     _$identificationtasksListMineObservationCountryIdsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnum>(const <IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnum>[
   _$identificationtasksListMineObservationCountryIdsErrorComponentAttrEnum_observationCountryIds,
   _$identificationtasksListMineObservationCountryIdsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksListMineObservationCountryIdsErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksListMineObservationCountryIdsErrorComponentCodeEnum>
     _$identificationtasksListMineObservationCountryIdsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineObservationCountryIdsErrorComponentCodeEnum>(const <IdentificationtasksListMineObservationCountryIdsErrorComponentCodeEnum>[
   _$identificationtasksListMineObservationCountryIdsErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksListMineObservationCountryIdsErrorComponentCodeEnum_invalidList,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnum>
     _$identificationtasksListMineObservationCountryIdsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksListMineObservationCountryIdsErrorComponentCodeEnum>
     _$identificationtasksListMineObservationCountryIdsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListMineObservationCountryIdsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListMineObservationCountryIdsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksListMineObservationCountryIdsErrorComponent
           [void Function(
                   IdentificationtasksListMineObservationCountryIdsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListMineObservationCountryIdsErrorComponentBuilder()
+      (IdentificationtasksListMineObservationCountryIdsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksListMineObservationCountryIdsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksListMineObservationCountryIdsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksListMineObservationCountryIdsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksListMineObservationCountryIdsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListMineObservationCountryIdsErrorComponent rebuild(
           void Function(
@@ -217,7 +203,7 @@ class _$IdentificationtasksListMineObservationCountryIdsErrorComponent
   @override
   IdentificationtasksListMineObservationCountryIdsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksListMineObservationCountryIdsErrorComponentBuilder()
+          IdentificationtasksListMineObservationCountryIdsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -297,7 +283,6 @@ class IdentificationtasksListMineObservationCountryIdsErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksListMineObservationCountryIdsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksListMineObservationCountryIdsErrorComponent;
   }
@@ -316,19 +301,20 @@ class IdentificationtasksListMineObservationCountryIdsErrorComponentBuilder
 
   _$IdentificationtasksListMineObservationCountryIdsErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListMineObservationCountryIdsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksListMineObservationCountryIdsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksListMineObservationCountryIdsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksListMineObservationCountryIdsErrorComponent',
-                'detail'));
+        _$IdentificationtasksListMineObservationCountryIdsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksListMineObservationCountryIdsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksListMineObservationCountryIdsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksListMineObservationCountryIdsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

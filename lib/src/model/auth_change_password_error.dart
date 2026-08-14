@@ -73,9 +73,7 @@ class _$AuthChangePasswordErrorSerializer implements PrimitiveSerializer<AuthCha
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    AuthChangePasswordError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    AuthChangePasswordError object) sync* {
   }
 
   @override

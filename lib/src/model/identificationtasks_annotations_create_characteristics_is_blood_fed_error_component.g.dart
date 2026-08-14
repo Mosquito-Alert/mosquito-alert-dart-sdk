@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrE
 final BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnum_characteristicsPeriodIsBloodFed,
   _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeE
 final BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorCompon
           [void Function(
                   IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
       rebuild(
@@ -200,7 +186,7 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorCompon
   @override
   IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -285,7 +271,6 @@ class IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponen
   void replace(
       IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent;
   }
@@ -305,20 +290,21 @@ class IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponen
   _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
+        _$IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateCharacteristicsIsBloodFedErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -29,8 +29,8 @@ AssignmentAnnotationTypeEnum _$assignmentAnnotationTypeEnumValueOf(
 }
 
 final BuiltSet<AssignmentAnnotationTypeEnum>
-    _$assignmentAnnotationTypeEnumValues = new BuiltSet<
-        AssignmentAnnotationTypeEnum>(const <AssignmentAnnotationTypeEnum>[
+    _$assignmentAnnotationTypeEnumValues =
+    BuiltSet<AssignmentAnnotationTypeEnum>(const <AssignmentAnnotationTypeEnum>[
   _$assignmentAnnotationTypeEnum_short,
   _$assignmentAnnotationTypeEnum_long,
   _$assignmentAnnotationTypeEnum_unknownDefaultOpenApi,
@@ -38,7 +38,7 @@ final BuiltSet<AssignmentAnnotationTypeEnum>
 
 Serializer<AssignmentAnnotationTypeEnum>
     _$assignmentAnnotationTypeEnumSerializer =
-    new _$AssignmentAnnotationTypeEnumSerializer();
+    _$AssignmentAnnotationTypeEnumSerializer();
 
 class _$AssignmentAnnotationTypeEnumSerializer
     implements PrimitiveSerializer<AssignmentAnnotationTypeEnum> {
@@ -78,22 +78,16 @@ class _$Assignment extends Assignment {
   final AssignmentAnnotationTypeEnum annotationType;
 
   factory _$Assignment([void Function(AssignmentBuilder)? updates]) =>
-      (new AssignmentBuilder()..update(updates))._build();
+      (AssignmentBuilder()..update(updates))._build();
 
   _$Assignment._({required this.observation, required this.annotationType})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        observation, r'Assignment', 'observation');
-    BuiltValueNullFieldError.checkNotNull(
-        annotationType, r'Assignment', 'annotationType');
-  }
-
+      : super._();
   @override
   Assignment rebuild(void Function(AssignmentBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  AssignmentBuilder toBuilder() => new AssignmentBuilder()..replace(this);
+  AssignmentBuilder toBuilder() => AssignmentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -126,7 +120,7 @@ class AssignmentBuilder implements Builder<Assignment, AssignmentBuilder> {
 
   SimplifiedObservationWithPhotosBuilder? _observation;
   SimplifiedObservationWithPhotosBuilder get observation =>
-      _$this._observation ??= new SimplifiedObservationWithPhotosBuilder();
+      _$this._observation ??= SimplifiedObservationWithPhotosBuilder();
   set observation(SimplifiedObservationWithPhotosBuilder? observation) =>
       _$this._observation = observation;
 
@@ -151,7 +145,6 @@ class AssignmentBuilder implements Builder<Assignment, AssignmentBuilder> {
 
   @override
   void replace(Assignment other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Assignment;
   }
 
@@ -167,17 +160,18 @@ class AssignmentBuilder implements Builder<Assignment, AssignmentBuilder> {
     _$Assignment _$result;
     try {
       _$result = _$v ??
-          new _$Assignment._(
-              observation: observation.build(),
-              annotationType: BuiltValueNullFieldError.checkNotNull(
-                  annotationType, r'Assignment', 'annotationType'));
+          _$Assignment._(
+            observation: observation.build(),
+            annotationType: BuiltValueNullFieldError.checkNotNull(
+                annotationType, r'Assignment', 'annotationType'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'observation';
         observation.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'Assignment', _$failedField, e.toString());
       }
       rethrow;

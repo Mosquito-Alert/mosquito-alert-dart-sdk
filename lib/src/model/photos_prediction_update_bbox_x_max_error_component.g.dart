@@ -28,7 +28,7 @@ PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnum
 }
 
 final BuiltSet<PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnum>
-    _$photosPredictionUpdateBboxXMaxErrorComponentAttrEnumValues = new BuiltSet<
+    _$photosPredictionUpdateBboxXMaxErrorComponentAttrEnumValues = BuiltSet<
         PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnum>(const <PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnum>[
   _$photosPredictionUpdateBboxXMaxErrorComponentAttrEnum_bboxPeriodXMax,
   _$photosPredictionUpdateBboxXMaxErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -81,7 +81,7 @@ PhotosPredictionUpdateBboxXMaxErrorComponentCodeEnum
 }
 
 final BuiltSet<PhotosPredictionUpdateBboxXMaxErrorComponentCodeEnum>
-    _$photosPredictionUpdateBboxXMaxErrorComponentCodeEnumValues = new BuiltSet<
+    _$photosPredictionUpdateBboxXMaxErrorComponentCodeEnumValues = BuiltSet<
         PhotosPredictionUpdateBboxXMaxErrorComponentCodeEnum>(const <PhotosPredictionUpdateBboxXMaxErrorComponentCodeEnum>[
   _$photosPredictionUpdateBboxXMaxErrorComponentCodeEnum_invalid,
   _$photosPredictionUpdateBboxXMaxErrorComponentCodeEnum_maxStringLength,
@@ -94,10 +94,10 @@ final BuiltSet<PhotosPredictionUpdateBboxXMaxErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnum>
     _$photosPredictionUpdateBboxXMaxErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionUpdateBboxXMaxErrorComponentCodeEnum>
     _$photosPredictionUpdateBboxXMaxErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionUpdateBboxXMaxErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionUpdateBboxXMaxErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnumSerializer
     implements
@@ -191,21 +191,12 @@ class _$PhotosPredictionUpdateBboxXMaxErrorComponent
   factory _$PhotosPredictionUpdateBboxXMaxErrorComponent(
           [void Function(PhotosPredictionUpdateBboxXMaxErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdateBboxXMaxErrorComponentBuilder()
-            ..update(updates))
+      (PhotosPredictionUpdateBboxXMaxErrorComponentBuilder()..update(updates))
           ._build();
 
   _$PhotosPredictionUpdateBboxXMaxErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionUpdateBboxXMaxErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionUpdateBboxXMaxErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'PhotosPredictionUpdateBboxXMaxErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdateBboxXMaxErrorComponent rebuild(
           void Function(PhotosPredictionUpdateBboxXMaxErrorComponentBuilder)
@@ -214,7 +205,7 @@ class _$PhotosPredictionUpdateBboxXMaxErrorComponent
 
   @override
   PhotosPredictionUpdateBboxXMaxErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionUpdateBboxXMaxErrorComponentBuilder()..replace(this);
+      PhotosPredictionUpdateBboxXMaxErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -285,7 +276,6 @@ class PhotosPredictionUpdateBboxXMaxErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionUpdateBboxXMaxErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateBboxXMaxErrorComponent;
   }
 
@@ -301,13 +291,14 @@ class PhotosPredictionUpdateBboxXMaxErrorComponentBuilder
 
   _$PhotosPredictionUpdateBboxXMaxErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdateBboxXMaxErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'PhotosPredictionUpdateBboxXMaxErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'PhotosPredictionUpdateBboxXMaxErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'PhotosPredictionUpdateBboxXMaxErrorComponent', 'detail'));
+        _$PhotosPredictionUpdateBboxXMaxErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'PhotosPredictionUpdateBboxXMaxErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'PhotosPredictionUpdateBboxXMaxErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'PhotosPredictionUpdateBboxXMaxErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

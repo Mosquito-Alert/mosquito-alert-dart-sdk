@@ -30,7 +30,7 @@ UserAssignmentAnnotationTypeEnum _$userAssignmentAnnotationTypeEnumValueOf(
 }
 
 final BuiltSet<UserAssignmentAnnotationTypeEnum>
-    _$userAssignmentAnnotationTypeEnumValues = new BuiltSet<
+    _$userAssignmentAnnotationTypeEnumValues = BuiltSet<
         UserAssignmentAnnotationTypeEnum>(const <UserAssignmentAnnotationTypeEnum>[
   _$userAssignmentAnnotationTypeEnum_short,
   _$userAssignmentAnnotationTypeEnum_long,
@@ -39,7 +39,7 @@ final BuiltSet<UserAssignmentAnnotationTypeEnum>
 
 Serializer<UserAssignmentAnnotationTypeEnum>
     _$userAssignmentAnnotationTypeEnumSerializer =
-    new _$UserAssignmentAnnotationTypeEnumSerializer();
+    _$UserAssignmentAnnotationTypeEnumSerializer();
 
 class _$UserAssignmentAnnotationTypeEnumSerializer
     implements PrimitiveSerializer<UserAssignmentAnnotationTypeEnum> {
@@ -82,23 +82,17 @@ class _$UserAssignment extends UserAssignment {
   final UserAssignmentAnnotationTypeEnum annotationType;
 
   factory _$UserAssignment([void Function(UserAssignmentBuilder)? updates]) =>
-      (new UserAssignmentBuilder()..update(updates))._build();
+      (UserAssignmentBuilder()..update(updates))._build();
 
   _$UserAssignment._(
       {required this.user, this.annotationId, required this.annotationType})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(user, r'UserAssignment', 'user');
-    BuiltValueNullFieldError.checkNotNull(
-        annotationType, r'UserAssignment', 'annotationType');
-  }
-
+      : super._();
   @override
   UserAssignment rebuild(void Function(UserAssignmentBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  UserAssignmentBuilder toBuilder() =>
-      new UserAssignmentBuilder()..replace(this);
+  UserAssignmentBuilder toBuilder() => UserAssignmentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -135,7 +129,7 @@ class UserAssignmentBuilder
 
   SimpleAnnotatorUserBuilder? _user;
   SimpleAnnotatorUserBuilder get user =>
-      _$this._user ??= new SimpleAnnotatorUserBuilder();
+      _$this._user ??= SimpleAnnotatorUserBuilder();
   set user(SimpleAnnotatorUserBuilder? user) => _$this._user = user;
 
   int? _annotationId;
@@ -165,7 +159,6 @@ class UserAssignmentBuilder
 
   @override
   void replace(UserAssignment other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UserAssignment;
   }
 
@@ -181,18 +174,19 @@ class UserAssignmentBuilder
     _$UserAssignment _$result;
     try {
       _$result = _$v ??
-          new _$UserAssignment._(
-              user: user.build(),
-              annotationId: annotationId,
-              annotationType: BuiltValueNullFieldError.checkNotNull(
-                  annotationType, r'UserAssignment', 'annotationType'));
+          _$UserAssignment._(
+            user: user.build(),
+            annotationId: annotationId,
+            annotationType: BuiltValueNullFieldError.checkNotNull(
+                annotationType, r'UserAssignment', 'annotationType'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'user';
         user.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'UserAssignment', _$failedField, e.toString());
       }
       rethrow;

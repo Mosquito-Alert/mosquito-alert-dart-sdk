@@ -29,8 +29,7 @@ NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum>
-    _$notificationsUpdateNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$notificationsUpdateNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum>(const <NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum>[
   _$notificationsUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$notificationsUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -63,8 +62,7 @@ NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum>
-    _$notificationsUpdateNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$notificationsUpdateNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum>(const <NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$notificationsUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$notificationsUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -73,10 +71,10 @@ final BuiltSet<NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum>
     _$notificationsUpdateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$NotificationsUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$NotificationsUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<NotificationsUpdateNonFieldErrorsErrorComponentCodeEnum>
     _$notificationsUpdateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$NotificationsUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$NotificationsUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$NotificationsUpdateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -163,21 +161,13 @@ class _$NotificationsUpdateNonFieldErrorsErrorComponent
           [void Function(
                   NotificationsUpdateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new NotificationsUpdateNonFieldErrorsErrorComponentBuilder()
+      (NotificationsUpdateNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$NotificationsUpdateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'NotificationsUpdateNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'NotificationsUpdateNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'NotificationsUpdateNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   NotificationsUpdateNonFieldErrorsErrorComponent rebuild(
           void Function(NotificationsUpdateNonFieldErrorsErrorComponentBuilder)
@@ -186,8 +176,7 @@ class _$NotificationsUpdateNonFieldErrorsErrorComponent
 
   @override
   NotificationsUpdateNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new NotificationsUpdateNonFieldErrorsErrorComponentBuilder()
-        ..replace(this);
+      NotificationsUpdateNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -258,7 +247,6 @@ class NotificationsUpdateNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(NotificationsUpdateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationsUpdateNonFieldErrorsErrorComponent;
   }
 
@@ -274,13 +262,14 @@ class NotificationsUpdateNonFieldErrorsErrorComponentBuilder
 
   _$NotificationsUpdateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$NotificationsUpdateNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'NotificationsUpdateNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'NotificationsUpdateNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'NotificationsUpdateNonFieldErrorsErrorComponent', 'detail'));
+        _$NotificationsUpdateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'NotificationsUpdateNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'NotificationsUpdateNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'NotificationsUpdateNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

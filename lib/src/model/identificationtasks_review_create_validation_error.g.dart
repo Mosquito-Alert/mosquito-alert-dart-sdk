@@ -29,8 +29,7 @@ IdentificationtasksReviewCreateValidationErrorTypeEnum
 }
 
 final BuiltSet<IdentificationtasksReviewCreateValidationErrorTypeEnum>
-    _$identificationtasksReviewCreateValidationErrorTypeEnumValues =
-    new BuiltSet<
+    _$identificationtasksReviewCreateValidationErrorTypeEnumValues = BuiltSet<
         IdentificationtasksReviewCreateValidationErrorTypeEnum>(const <IdentificationtasksReviewCreateValidationErrorTypeEnum>[
   _$identificationtasksReviewCreateValidationErrorTypeEnum_validationError,
   _$identificationtasksReviewCreateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -38,7 +37,7 @@ final BuiltSet<IdentificationtasksReviewCreateValidationErrorTypeEnum>
 
 Serializer<IdentificationtasksReviewCreateValidationErrorTypeEnum>
     _$identificationtasksReviewCreateValidationErrorTypeEnumSerializer =
-    new _$IdentificationtasksReviewCreateValidationErrorTypeEnumSerializer();
+    _$IdentificationtasksReviewCreateValidationErrorTypeEnumSerializer();
 
 class _$IdentificationtasksReviewCreateValidationErrorTypeEnumSerializer
     implements
@@ -85,19 +84,12 @@ class _$IdentificationtasksReviewCreateValidationError
   factory _$IdentificationtasksReviewCreateValidationError(
           [void Function(IdentificationtasksReviewCreateValidationErrorBuilder)?
               updates]) =>
-      (new IdentificationtasksReviewCreateValidationErrorBuilder()
-            ..update(updates))
+      (IdentificationtasksReviewCreateValidationErrorBuilder()..update(updates))
           ._build();
 
   _$IdentificationtasksReviewCreateValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'IdentificationtasksReviewCreateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'IdentificationtasksReviewCreateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   IdentificationtasksReviewCreateValidationError rebuild(
           void Function(IdentificationtasksReviewCreateValidationErrorBuilder)
@@ -106,8 +98,7 @@ class _$IdentificationtasksReviewCreateValidationError
 
   @override
   IdentificationtasksReviewCreateValidationErrorBuilder toBuilder() =>
-      new IdentificationtasksReviewCreateValidationErrorBuilder()
-        ..replace(this);
+      IdentificationtasksReviewCreateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -150,8 +141,7 @@ class IdentificationtasksReviewCreateValidationErrorBuilder
 
   ListBuilder<IdentificationtasksReviewCreateError>? _errors;
   ListBuilder<IdentificationtasksReviewCreateError> get errors =>
-      _$this._errors ??=
-          new ListBuilder<IdentificationtasksReviewCreateError>();
+      _$this._errors ??= ListBuilder<IdentificationtasksReviewCreateError>();
   set errors(ListBuilder<IdentificationtasksReviewCreateError>? errors) =>
       _$this._errors = errors;
 
@@ -171,7 +161,6 @@ class IdentificationtasksReviewCreateValidationErrorBuilder
 
   @override
   void replace(IdentificationtasksReviewCreateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksReviewCreateValidationError;
   }
 
@@ -189,17 +178,18 @@ class IdentificationtasksReviewCreateValidationErrorBuilder
     _$IdentificationtasksReviewCreateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$IdentificationtasksReviewCreateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(type,
-                  r'IdentificationtasksReviewCreateValidationError', 'type'),
-              errors: errors.build());
+          _$IdentificationtasksReviewCreateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(type,
+                r'IdentificationtasksReviewCreateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'IdentificationtasksReviewCreateValidationError',
             _$failedField,
             e.toString());

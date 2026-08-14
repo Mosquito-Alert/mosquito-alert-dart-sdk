@@ -26,7 +26,7 @@ MessagesListOrderByErrorComponentAttrEnum
 }
 
 final BuiltSet<MessagesListOrderByErrorComponentAttrEnum>
-    _$messagesListOrderByErrorComponentAttrEnumValues = new BuiltSet<
+    _$messagesListOrderByErrorComponentAttrEnumValues = BuiltSet<
         MessagesListOrderByErrorComponentAttrEnum>(const <MessagesListOrderByErrorComponentAttrEnum>[
   _$messagesListOrderByErrorComponentAttrEnum_orderBy,
   _$messagesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ MessagesListOrderByErrorComponentCodeEnum
 }
 
 final BuiltSet<MessagesListOrderByErrorComponentCodeEnum>
-    _$messagesListOrderByErrorComponentCodeEnumValues = new BuiltSet<
+    _$messagesListOrderByErrorComponentCodeEnumValues = BuiltSet<
         MessagesListOrderByErrorComponentCodeEnum>(const <MessagesListOrderByErrorComponentCodeEnum>[
   _$messagesListOrderByErrorComponentCodeEnum_invalidChoice,
   _$messagesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<MessagesListOrderByErrorComponentCodeEnum>
 
 Serializer<MessagesListOrderByErrorComponentAttrEnum>
     _$messagesListOrderByErrorComponentAttrEnumSerializer =
-    new _$MessagesListOrderByErrorComponentAttrEnumSerializer();
+    _$MessagesListOrderByErrorComponentAttrEnumSerializer();
 Serializer<MessagesListOrderByErrorComponentCodeEnum>
     _$messagesListOrderByErrorComponentCodeEnumSerializer =
-    new _$MessagesListOrderByErrorComponentCodeEnumSerializer();
+    _$MessagesListOrderByErrorComponentCodeEnumSerializer();
 
 class _$MessagesListOrderByErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<MessagesListOrderByErrorComponentAttrEnum> {
@@ -140,20 +140,11 @@ class _$MessagesListOrderByErrorComponent
 
   factory _$MessagesListOrderByErrorComponent(
           [void Function(MessagesListOrderByErrorComponentBuilder)? updates]) =>
-      (new MessagesListOrderByErrorComponentBuilder()..update(updates))
-          ._build();
+      (MessagesListOrderByErrorComponentBuilder()..update(updates))._build();
 
   _$MessagesListOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'MessagesListOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'MessagesListOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'MessagesListOrderByErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   MessagesListOrderByErrorComponent rebuild(
           void Function(MessagesListOrderByErrorComponentBuilder) updates) =>
@@ -161,7 +152,7 @@ class _$MessagesListOrderByErrorComponent
 
   @override
   MessagesListOrderByErrorComponentBuilder toBuilder() =>
-      new MessagesListOrderByErrorComponentBuilder()..replace(this);
+      MessagesListOrderByErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -229,7 +220,6 @@ class MessagesListOrderByErrorComponentBuilder
 
   @override
   void replace(MessagesListOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesListOrderByErrorComponent;
   }
 
@@ -244,13 +234,14 @@ class MessagesListOrderByErrorComponentBuilder
 
   _$MessagesListOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$MessagesListOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'MessagesListOrderByErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'MessagesListOrderByErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'MessagesListOrderByErrorComponent', 'detail'));
+        _$MessagesListOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'MessagesListOrderByErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'MessagesListOrderByErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'MessagesListOrderByErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

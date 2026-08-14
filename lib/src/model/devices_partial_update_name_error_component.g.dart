@@ -27,7 +27,7 @@ DevicesPartialUpdateNameErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesPartialUpdateNameErrorComponentAttrEnum>
-    _$devicesPartialUpdateNameErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesPartialUpdateNameErrorComponentAttrEnumValues = BuiltSet<
         DevicesPartialUpdateNameErrorComponentAttrEnum>(const <DevicesPartialUpdateNameErrorComponentAttrEnum>[
   _$devicesPartialUpdateNameErrorComponentAttrEnum_nameValue,
   _$devicesPartialUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -71,7 +71,7 @@ DevicesPartialUpdateNameErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesPartialUpdateNameErrorComponentCodeEnum>
-    _$devicesPartialUpdateNameErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesPartialUpdateNameErrorComponentCodeEnumValues = BuiltSet<
         DevicesPartialUpdateNameErrorComponentCodeEnum>(const <DevicesPartialUpdateNameErrorComponentCodeEnum>[
   _$devicesPartialUpdateNameErrorComponentCodeEnum_invalid,
   _$devicesPartialUpdateNameErrorComponentCodeEnum_maxLength,
@@ -82,10 +82,10 @@ final BuiltSet<DevicesPartialUpdateNameErrorComponentCodeEnum>
 
 Serializer<DevicesPartialUpdateNameErrorComponentAttrEnum>
     _$devicesPartialUpdateNameErrorComponentAttrEnumSerializer =
-    new _$DevicesPartialUpdateNameErrorComponentAttrEnumSerializer();
+    _$DevicesPartialUpdateNameErrorComponentAttrEnumSerializer();
 Serializer<DevicesPartialUpdateNameErrorComponentCodeEnum>
     _$devicesPartialUpdateNameErrorComponentCodeEnumSerializer =
-    new _$DevicesPartialUpdateNameErrorComponentCodeEnumSerializer();
+    _$DevicesPartialUpdateNameErrorComponentCodeEnumSerializer();
 
 class _$DevicesPartialUpdateNameErrorComponentAttrEnumSerializer
     implements
@@ -171,20 +171,12 @@ class _$DevicesPartialUpdateNameErrorComponent
   factory _$DevicesPartialUpdateNameErrorComponent(
           [void Function(DevicesPartialUpdateNameErrorComponentBuilder)?
               updates]) =>
-      (new DevicesPartialUpdateNameErrorComponentBuilder()..update(updates))
+      (DevicesPartialUpdateNameErrorComponentBuilder()..update(updates))
           ._build();
 
   _$DevicesPartialUpdateNameErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesPartialUpdateNameErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesPartialUpdateNameErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesPartialUpdateNameErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesPartialUpdateNameErrorComponent rebuild(
           void Function(DevicesPartialUpdateNameErrorComponentBuilder)
@@ -193,7 +185,7 @@ class _$DevicesPartialUpdateNameErrorComponent
 
   @override
   DevicesPartialUpdateNameErrorComponentBuilder toBuilder() =>
-      new DevicesPartialUpdateNameErrorComponentBuilder()..replace(this);
+      DevicesPartialUpdateNameErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -262,7 +254,6 @@ class DevicesPartialUpdateNameErrorComponentBuilder
 
   @override
   void replace(DevicesPartialUpdateNameErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesPartialUpdateNameErrorComponent;
   }
 
@@ -277,13 +268,14 @@ class DevicesPartialUpdateNameErrorComponentBuilder
 
   _$DevicesPartialUpdateNameErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesPartialUpdateNameErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesPartialUpdateNameErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesPartialUpdateNameErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesPartialUpdateNameErrorComponent', 'detail'));
+        _$DevicesPartialUpdateNameErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesPartialUpdateNameErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesPartialUpdateNameErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesPartialUpdateNameErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

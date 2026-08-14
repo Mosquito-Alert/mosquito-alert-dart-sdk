@@ -31,7 +31,7 @@ SpeciesCharacteristicsRequestSexEnum
 }
 
 final BuiltSet<SpeciesCharacteristicsRequestSexEnum>
-    _$speciesCharacteristicsRequestSexEnumValues = new BuiltSet<
+    _$speciesCharacteristicsRequestSexEnumValues = BuiltSet<
         SpeciesCharacteristicsRequestSexEnum>(const <SpeciesCharacteristicsRequestSexEnum>[
   _$speciesCharacteristicsRequestSexEnum_male,
   _$speciesCharacteristicsRequestSexEnum_female,
@@ -40,7 +40,7 @@ final BuiltSet<SpeciesCharacteristicsRequestSexEnum>
 
 Serializer<SpeciesCharacteristicsRequestSexEnum>
     _$speciesCharacteristicsRequestSexEnumSerializer =
-    new _$SpeciesCharacteristicsRequestSexEnumSerializer();
+    _$SpeciesCharacteristicsRequestSexEnumSerializer();
 
 class _$SpeciesCharacteristicsRequestSexEnumSerializer
     implements PrimitiveSerializer<SpeciesCharacteristicsRequestSexEnum> {
@@ -86,15 +86,11 @@ class _$SpeciesCharacteristicsRequest extends SpeciesCharacteristicsRequest {
 
   factory _$SpeciesCharacteristicsRequest(
           [void Function(SpeciesCharacteristicsRequestBuilder)? updates]) =>
-      (new SpeciesCharacteristicsRequestBuilder()..update(updates))._build();
+      (SpeciesCharacteristicsRequestBuilder()..update(updates))._build();
 
   _$SpeciesCharacteristicsRequest._(
       {required this.sex, this.isBloodFed, this.isGravid})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        sex, r'SpeciesCharacteristicsRequest', 'sex');
-  }
-
+      : super._();
   @override
   SpeciesCharacteristicsRequest rebuild(
           void Function(SpeciesCharacteristicsRequestBuilder) updates) =>
@@ -102,7 +98,7 @@ class _$SpeciesCharacteristicsRequest extends SpeciesCharacteristicsRequest {
 
   @override
   SpeciesCharacteristicsRequestBuilder toBuilder() =>
-      new SpeciesCharacteristicsRequestBuilder()..replace(this);
+      SpeciesCharacteristicsRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -168,7 +164,6 @@ class SpeciesCharacteristicsRequestBuilder
 
   @override
   void replace(SpeciesCharacteristicsRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SpeciesCharacteristicsRequest;
   }
 
@@ -182,11 +177,12 @@ class SpeciesCharacteristicsRequestBuilder
 
   _$SpeciesCharacteristicsRequest _build() {
     final _$result = _$v ??
-        new _$SpeciesCharacteristicsRequest._(
-            sex: BuiltValueNullFieldError.checkNotNull(
-                sex, r'SpeciesCharacteristicsRequest', 'sex'),
-            isBloodFed: isBloodFed,
-            isGravid: isGravid);
+        _$SpeciesCharacteristicsRequest._(
+          sex: BuiltValueNullFieldError.checkNotNull(
+              sex, r'SpeciesCharacteristicsRequest', 'sex'),
+          isBloodFed: isBloodFed,
+          isGravid: isGravid,
+        );
     replace(_$result);
     return _$result;
   }

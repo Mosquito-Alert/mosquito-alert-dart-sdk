@@ -27,7 +27,7 @@ ObservationsListCountryIdErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsListCountryIdErrorComponentAttrEnum>
-    _$observationsListCountryIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsListCountryIdErrorComponentAttrEnumValues = BuiltSet<
         ObservationsListCountryIdErrorComponentAttrEnum>(const <ObservationsListCountryIdErrorComponentAttrEnum>[
   _$observationsListCountryIdErrorComponentAttrEnum_countryId,
   _$observationsListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ ObservationsListCountryIdErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsListCountryIdErrorComponentCodeEnum>
-    _$observationsListCountryIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsListCountryIdErrorComponentCodeEnumValues = BuiltSet<
         ObservationsListCountryIdErrorComponentCodeEnum>(const <ObservationsListCountryIdErrorComponentCodeEnum>[
   _$observationsListCountryIdErrorComponentCodeEnum_invalidChoice,
   _$observationsListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<ObservationsListCountryIdErrorComponentCodeEnum>
 
 Serializer<ObservationsListCountryIdErrorComponentAttrEnum>
     _$observationsListCountryIdErrorComponentAttrEnumSerializer =
-    new _$ObservationsListCountryIdErrorComponentAttrEnumSerializer();
+    _$ObservationsListCountryIdErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListCountryIdErrorComponentCodeEnum>
     _$observationsListCountryIdErrorComponentCodeEnumSerializer =
-    new _$ObservationsListCountryIdErrorComponentCodeEnumSerializer();
+    _$ObservationsListCountryIdErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListCountryIdErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,12 @@ class _$ObservationsListCountryIdErrorComponent
   factory _$ObservationsListCountryIdErrorComponent(
           [void Function(ObservationsListCountryIdErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListCountryIdErrorComponentBuilder()..update(updates))
+      (ObservationsListCountryIdErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsListCountryIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsListCountryIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsListCountryIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsListCountryIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsListCountryIdErrorComponent rebuild(
           void Function(ObservationsListCountryIdErrorComponentBuilder)
@@ -167,7 +159,7 @@ class _$ObservationsListCountryIdErrorComponent
 
   @override
   ObservationsListCountryIdErrorComponentBuilder toBuilder() =>
-      new ObservationsListCountryIdErrorComponentBuilder()..replace(this);
+      ObservationsListCountryIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -236,7 +228,6 @@ class ObservationsListCountryIdErrorComponentBuilder
 
   @override
   void replace(ObservationsListCountryIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListCountryIdErrorComponent;
   }
 
@@ -251,13 +242,14 @@ class ObservationsListCountryIdErrorComponentBuilder
 
   _$ObservationsListCountryIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListCountryIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsListCountryIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsListCountryIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'ObservationsListCountryIdErrorComponent', 'detail'));
+        _$ObservationsListCountryIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsListCountryIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsListCountryIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsListCountryIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateValidationErrorTypeEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateValidationErrorTypeEnum>
     _$identificationtasksPredictionsPartialUpdateValidationErrorTypeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateValidationErrorTypeEnum>(const <IdentificationtasksPredictionsPartialUpdateValidationErrorTypeEnum>[
   _$identificationtasksPredictionsPartialUpdateValidationErrorTypeEnum_validationError,
   _$identificationtasksPredictionsPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -39,7 +39,7 @@ final BuiltSet<
 
 Serializer<IdentificationtasksPredictionsPartialUpdateValidationErrorTypeEnum>
     _$identificationtasksPredictionsPartialUpdateValidationErrorTypeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateValidationErrorTypeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateValidationErrorTypeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateValidationErrorTypeEnumSerializer
     implements
@@ -90,21 +90,13 @@ class _$IdentificationtasksPredictionsPartialUpdateValidationError
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateValidationErrorBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateValidationErrorBuilder()
+      (IdentificationtasksPredictionsPartialUpdateValidationErrorBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(type,
-        r'IdentificationtasksPredictionsPartialUpdateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors,
-        r'IdentificationtasksPredictionsPartialUpdateValidationError',
-        'errors');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateValidationError rebuild(
           void Function(
@@ -115,7 +107,7 @@ class _$IdentificationtasksPredictionsPartialUpdateValidationError
   @override
   IdentificationtasksPredictionsPartialUpdateValidationErrorBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateValidationErrorBuilder()
+          IdentificationtasksPredictionsPartialUpdateValidationErrorBuilder()
             ..replace(this);
 
   @override
@@ -163,7 +155,7 @@ class IdentificationtasksPredictionsPartialUpdateValidationErrorBuilder
   ListBuilder<IdentificationtasksPredictionsPartialUpdateError>? _errors;
   ListBuilder<IdentificationtasksPredictionsPartialUpdateError> get errors =>
       _$this._errors ??=
-          new ListBuilder<IdentificationtasksPredictionsPartialUpdateError>();
+          ListBuilder<IdentificationtasksPredictionsPartialUpdateError>();
   set errors(
           ListBuilder<IdentificationtasksPredictionsPartialUpdateError>?
               errors) =>
@@ -186,7 +178,6 @@ class IdentificationtasksPredictionsPartialUpdateValidationErrorBuilder
   @override
   void replace(
       IdentificationtasksPredictionsPartialUpdateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksPredictionsPartialUpdateValidationError;
   }
 
@@ -206,19 +197,20 @@ class IdentificationtasksPredictionsPartialUpdateValidationErrorBuilder
     _$IdentificationtasksPredictionsPartialUpdateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$IdentificationtasksPredictionsPartialUpdateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type,
-                  r'IdentificationtasksPredictionsPartialUpdateValidationError',
-                  'type'),
-              errors: errors.build());
+          _$IdentificationtasksPredictionsPartialUpdateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type,
+                r'IdentificationtasksPredictionsPartialUpdateValidationError',
+                'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'IdentificationtasksPredictionsPartialUpdateValidationError',
             _$failedField,
             e.toString());

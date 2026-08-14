@@ -30,7 +30,7 @@ ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum
 
 final BuiltSet<ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum>
     _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum>(const <ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum>[
   _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_locationPeriodNonFieldErrors,
   _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum
 
 final BuiltSet<ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum>
     _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum>(const <ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum>[
   _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -82,10 +82,10 @@ final BuiltSet<ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum>
     _$observationsCreateLocationNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnum>
     _$observationsCreateLocationNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateLocationNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -174,21 +174,13 @@ class _$ObservationsCreateLocationNonFieldErrorsErrorComponent
           [void Function(
                   ObservationsCreateLocationNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateLocationNonFieldErrorsErrorComponentBuilder()
+      (ObservationsCreateLocationNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsCreateLocationNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'ObservationsCreateLocationNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'ObservationsCreateLocationNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'ObservationsCreateLocationNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateLocationNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -198,7 +190,7 @@ class _$ObservationsCreateLocationNonFieldErrorsErrorComponent
 
   @override
   ObservationsCreateLocationNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateLocationNonFieldErrorsErrorComponentBuilder()
+      ObservationsCreateLocationNonFieldErrorsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -274,7 +266,6 @@ class ObservationsCreateLocationNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateLocationNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateLocationNonFieldErrorsErrorComponent;
   }
 
@@ -291,19 +282,20 @@ class ObservationsCreateLocationNonFieldErrorsErrorComponentBuilder
 
   _$ObservationsCreateLocationNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateLocationNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsCreateLocationNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsCreateLocationNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsCreateLocationNonFieldErrorsErrorComponent',
-                'detail'));
+        _$ObservationsCreateLocationNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'ObservationsCreateLocationNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'ObservationsCreateLocationNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsCreateLocationNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

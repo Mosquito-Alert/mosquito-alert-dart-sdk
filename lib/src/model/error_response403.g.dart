@@ -24,13 +24,13 @@ ErrorResponse403TypeEnum _$errorResponse403TypeEnumValueOf(String name) {
 }
 
 final BuiltSet<ErrorResponse403TypeEnum> _$errorResponse403TypeEnumValues =
-    new BuiltSet<ErrorResponse403TypeEnum>(const <ErrorResponse403TypeEnum>[
+    BuiltSet<ErrorResponse403TypeEnum>(const <ErrorResponse403TypeEnum>[
   _$errorResponse403TypeEnum_clientError,
   _$errorResponse403TypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<ErrorResponse403TypeEnum> _$errorResponse403TypeEnumSerializer =
-    new _$ErrorResponse403TypeEnumSerializer();
+    _$ErrorResponse403TypeEnumSerializer();
 
 class _$ErrorResponse403TypeEnumSerializer
     implements PrimitiveSerializer<ErrorResponse403TypeEnum> {
@@ -69,21 +69,16 @@ class _$ErrorResponse403 extends ErrorResponse403 {
 
   factory _$ErrorResponse403(
           [void Function(ErrorResponse403Builder)? updates]) =>
-      (new ErrorResponse403Builder()..update(updates))._build();
+      (ErrorResponse403Builder()..update(updates))._build();
 
-  _$ErrorResponse403._({required this.type, required this.errors}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(type, r'ErrorResponse403', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'ErrorResponse403', 'errors');
-  }
-
+  _$ErrorResponse403._({required this.type, required this.errors}) : super._();
   @override
   ErrorResponse403 rebuild(void Function(ErrorResponse403Builder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   ErrorResponse403Builder toBuilder() =>
-      new ErrorResponse403Builder()..replace(this);
+      ErrorResponse403Builder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -121,7 +116,7 @@ class ErrorResponse403Builder
 
   ListBuilder<Error403>? _errors;
   ListBuilder<Error403> get errors =>
-      _$this._errors ??= new ListBuilder<Error403>();
+      _$this._errors ??= ListBuilder<Error403>();
   set errors(ListBuilder<Error403>? errors) => _$this._errors = errors;
 
   ErrorResponse403Builder() {
@@ -140,7 +135,6 @@ class ErrorResponse403Builder
 
   @override
   void replace(ErrorResponse403 other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ErrorResponse403;
   }
 
@@ -156,17 +150,18 @@ class ErrorResponse403Builder
     _$ErrorResponse403 _$result;
     try {
       _$result = _$v ??
-          new _$ErrorResponse403._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'ErrorResponse403', 'type'),
-              errors: errors.build());
+          _$ErrorResponse403._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'ErrorResponse403', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'ErrorResponse403', _$failedField, e.toString());
       }
       rethrow;

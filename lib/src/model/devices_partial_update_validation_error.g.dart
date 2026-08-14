@@ -27,7 +27,7 @@ DevicesPartialUpdateValidationErrorTypeEnum
 }
 
 final BuiltSet<DevicesPartialUpdateValidationErrorTypeEnum>
-    _$devicesPartialUpdateValidationErrorTypeEnumValues = new BuiltSet<
+    _$devicesPartialUpdateValidationErrorTypeEnumValues = BuiltSet<
         DevicesPartialUpdateValidationErrorTypeEnum>(const <DevicesPartialUpdateValidationErrorTypeEnum>[
   _$devicesPartialUpdateValidationErrorTypeEnum_validationError,
   _$devicesPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -35,7 +35,7 @@ final BuiltSet<DevicesPartialUpdateValidationErrorTypeEnum>
 
 Serializer<DevicesPartialUpdateValidationErrorTypeEnum>
     _$devicesPartialUpdateValidationErrorTypeEnumSerializer =
-    new _$DevicesPartialUpdateValidationErrorTypeEnumSerializer();
+    _$DevicesPartialUpdateValidationErrorTypeEnumSerializer();
 
 class _$DevicesPartialUpdateValidationErrorTypeEnumSerializer
     implements
@@ -80,18 +80,11 @@ class _$DevicesPartialUpdateValidationError
   factory _$DevicesPartialUpdateValidationError(
           [void Function(DevicesPartialUpdateValidationErrorBuilder)?
               updates]) =>
-      (new DevicesPartialUpdateValidationErrorBuilder()..update(updates))
-          ._build();
+      (DevicesPartialUpdateValidationErrorBuilder()..update(updates))._build();
 
   _$DevicesPartialUpdateValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'DevicesPartialUpdateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'DevicesPartialUpdateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   DevicesPartialUpdateValidationError rebuild(
           void Function(DevicesPartialUpdateValidationErrorBuilder) updates) =>
@@ -99,7 +92,7 @@ class _$DevicesPartialUpdateValidationError
 
   @override
   DevicesPartialUpdateValidationErrorBuilder toBuilder() =>
-      new DevicesPartialUpdateValidationErrorBuilder()..replace(this);
+      DevicesPartialUpdateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -140,7 +133,7 @@ class DevicesPartialUpdateValidationErrorBuilder
 
   ListBuilder<DevicesPartialUpdateError>? _errors;
   ListBuilder<DevicesPartialUpdateError> get errors =>
-      _$this._errors ??= new ListBuilder<DevicesPartialUpdateError>();
+      _$this._errors ??= ListBuilder<DevicesPartialUpdateError>();
   set errors(ListBuilder<DevicesPartialUpdateError>? errors) =>
       _$this._errors = errors;
 
@@ -160,7 +153,6 @@ class DevicesPartialUpdateValidationErrorBuilder
 
   @override
   void replace(DevicesPartialUpdateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesPartialUpdateValidationError;
   }
 
@@ -177,20 +169,19 @@ class DevicesPartialUpdateValidationErrorBuilder
     _$DevicesPartialUpdateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$DevicesPartialUpdateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'DevicesPartialUpdateValidationError', 'type'),
-              errors: errors.build());
+          _$DevicesPartialUpdateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'DevicesPartialUpdateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'DevicesPartialUpdateValidationError',
-            _$failedField,
-            e.toString());
+        throw BuiltValueNestedFieldError(r'DevicesPartialUpdateValidationError',
+            _$failedField, e.toString());
       }
       rethrow;
     }

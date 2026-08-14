@@ -25,7 +25,7 @@ AuthRefreshTokenErrorAttrEnum _$authRefreshTokenErrorAttrEnumValueOf(
 }
 
 final BuiltSet<AuthRefreshTokenErrorAttrEnum>
-    _$authRefreshTokenErrorAttrEnumValues = new BuiltSet<
+    _$authRefreshTokenErrorAttrEnumValues = BuiltSet<
         AuthRefreshTokenErrorAttrEnum>(const <AuthRefreshTokenErrorAttrEnum>[
   _$authRefreshTokenErrorAttrEnum_refresh,
   _$authRefreshTokenErrorAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ AuthRefreshTokenErrorCodeEnum _$authRefreshTokenErrorCodeEnumValueOf(
 }
 
 final BuiltSet<AuthRefreshTokenErrorCodeEnum>
-    _$authRefreshTokenErrorCodeEnumValues = new BuiltSet<
+    _$authRefreshTokenErrorCodeEnumValues = BuiltSet<
         AuthRefreshTokenErrorCodeEnum>(const <AuthRefreshTokenErrorCodeEnum>[
   _$authRefreshTokenErrorCodeEnum_blank,
   _$authRefreshTokenErrorCodeEnum_invalid,
@@ -85,10 +85,10 @@ final BuiltSet<AuthRefreshTokenErrorCodeEnum>
 
 Serializer<AuthRefreshTokenErrorAttrEnum>
     _$authRefreshTokenErrorAttrEnumSerializer =
-    new _$AuthRefreshTokenErrorAttrEnumSerializer();
+    _$AuthRefreshTokenErrorAttrEnumSerializer();
 Serializer<AuthRefreshTokenErrorCodeEnum>
     _$authRefreshTokenErrorCodeEnumSerializer =
-    new _$AuthRefreshTokenErrorCodeEnumSerializer();
+    _$AuthRefreshTokenErrorCodeEnumSerializer();
 
 class _$AuthRefreshTokenErrorAttrEnumSerializer
     implements PrimitiveSerializer<AuthRefreshTokenErrorAttrEnum> {
@@ -166,13 +166,9 @@ class _$AuthRefreshTokenError extends AuthRefreshTokenError {
 
   factory _$AuthRefreshTokenError(
           [void Function(AuthRefreshTokenErrorBuilder)? updates]) =>
-      (new AuthRefreshTokenErrorBuilder()..update(updates))._build();
+      (AuthRefreshTokenErrorBuilder()..update(updates))._build();
 
-  _$AuthRefreshTokenError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'AuthRefreshTokenError', 'oneOf');
-  }
-
+  _$AuthRefreshTokenError._({required this.oneOf}) : super._();
   @override
   AuthRefreshTokenError rebuild(
           void Function(AuthRefreshTokenErrorBuilder) updates) =>
@@ -180,7 +176,7 @@ class _$AuthRefreshTokenError extends AuthRefreshTokenError {
 
   @override
   AuthRefreshTokenErrorBuilder toBuilder() =>
-      new AuthRefreshTokenErrorBuilder()..replace(this);
+      AuthRefreshTokenErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -227,7 +223,6 @@ class AuthRefreshTokenErrorBuilder
 
   @override
   void replace(AuthRefreshTokenError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthRefreshTokenError;
   }
 
@@ -241,9 +236,10 @@ class AuthRefreshTokenErrorBuilder
 
   _$AuthRefreshTokenError _build() {
     final _$result = _$v ??
-        new _$AuthRefreshTokenError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'AuthRefreshTokenError', 'oneOf'));
+        _$AuthRefreshTokenError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'AuthRefreshTokenError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

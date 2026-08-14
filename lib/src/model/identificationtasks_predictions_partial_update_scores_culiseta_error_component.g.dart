@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnum_scoresPeriodCuliseta,
   _$identificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent
   @override
   IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -329,7 +315,6 @@ class IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentBui
   void replace(
       IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent;
   }
@@ -349,20 +334,21 @@ class IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentBui
   _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

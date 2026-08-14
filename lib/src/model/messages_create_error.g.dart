@@ -7,16 +7,16 @@ part of 'messages_create_error.dart';
 // **************************************************************************
 
 const MessagesCreateErrorAttrEnum
-    _$messagesCreateErrorAttrEnum_contentPeriodBodyPeriodZhCn =
-    const MessagesCreateErrorAttrEnum._('contentPeriodBodyPeriodZhCn');
+    _$messagesCreateErrorAttrEnum_audiencePeriodLocale =
+    const MessagesCreateErrorAttrEnum._('audiencePeriodLocale');
 const MessagesCreateErrorAttrEnum
     _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi =
     const MessagesCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 MessagesCreateErrorAttrEnum _$messagesCreateErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'contentPeriodBodyPeriodZhCn':
-      return _$messagesCreateErrorAttrEnum_contentPeriodBodyPeriodZhCn;
+    case 'audiencePeriodLocale':
+      return _$messagesCreateErrorAttrEnum_audiencePeriodLocale;
     case 'unknownDefaultOpenApi':
       return _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -25,36 +25,26 @@ MessagesCreateErrorAttrEnum _$messagesCreateErrorAttrEnumValueOf(String name) {
 }
 
 final BuiltSet<MessagesCreateErrorAttrEnum>
-    _$messagesCreateErrorAttrEnumValues = new BuiltSet<
-        MessagesCreateErrorAttrEnum>(const <MessagesCreateErrorAttrEnum>[
-  _$messagesCreateErrorAttrEnum_contentPeriodBodyPeriodZhCn,
+    _$messagesCreateErrorAttrEnumValues =
+    BuiltSet<MessagesCreateErrorAttrEnum>(const <MessagesCreateErrorAttrEnum>[
+  _$messagesCreateErrorAttrEnum_audiencePeriodLocale,
   _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
-const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_blank =
-    const MessagesCreateErrorCodeEnum._('blank');
-const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_invalid =
-    const MessagesCreateErrorCodeEnum._('invalid');
-const MessagesCreateErrorCodeEnum
-    _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed =
-    const MessagesCreateErrorCodeEnum._('nullCharactersNotAllowed');
-const MessagesCreateErrorCodeEnum
-    _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed =
-    const MessagesCreateErrorCodeEnum._('surrogateCharactersNotAllowed');
+const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_invalidChoice =
+    const MessagesCreateErrorCodeEnum._('invalidChoice');
+const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_null_ =
+    const MessagesCreateErrorCodeEnum._('null_');
 const MessagesCreateErrorCodeEnum
     _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi =
     const MessagesCreateErrorCodeEnum._('unknownDefaultOpenApi');
 
 MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnumValueOf(String name) {
   switch (name) {
-    case 'blank':
-      return _$messagesCreateErrorCodeEnum_blank;
-    case 'invalid':
-      return _$messagesCreateErrorCodeEnum_invalid;
-    case 'nullCharactersNotAllowed':
-      return _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed;
-    case 'surrogateCharactersNotAllowed':
-      return _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed;
+    case 'invalidChoice':
+      return _$messagesCreateErrorCodeEnum_invalidChoice;
+    case 'null_':
+      return _$messagesCreateErrorCodeEnum_null_;
     case 'unknownDefaultOpenApi':
       return _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -63,30 +53,28 @@ MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnumValueOf(String name) {
 }
 
 final BuiltSet<MessagesCreateErrorCodeEnum>
-    _$messagesCreateErrorCodeEnumValues = new BuiltSet<
-        MessagesCreateErrorCodeEnum>(const <MessagesCreateErrorCodeEnum>[
-  _$messagesCreateErrorCodeEnum_blank,
-  _$messagesCreateErrorCodeEnum_invalid,
-  _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed,
-  _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed,
+    _$messagesCreateErrorCodeEnumValues =
+    BuiltSet<MessagesCreateErrorCodeEnum>(const <MessagesCreateErrorCodeEnum>[
+  _$messagesCreateErrorCodeEnum_invalidChoice,
+  _$messagesCreateErrorCodeEnum_null_,
   _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<MessagesCreateErrorAttrEnum>
     _$messagesCreateErrorAttrEnumSerializer =
-    new _$MessagesCreateErrorAttrEnumSerializer();
+    _$MessagesCreateErrorAttrEnumSerializer();
 Serializer<MessagesCreateErrorCodeEnum>
     _$messagesCreateErrorCodeEnumSerializer =
-    new _$MessagesCreateErrorCodeEnumSerializer();
+    _$MessagesCreateErrorCodeEnumSerializer();
 
 class _$MessagesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<MessagesCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'contentPeriodBodyPeriodZhCn': 'content.body.zh-cn',
+    'audiencePeriodLocale': 'audience.locale',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'content.body.zh-cn': 'contentPeriodBodyPeriodZhCn',
+    'audience.locale': 'audiencePeriodLocale',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -111,17 +99,13 @@ class _$MessagesCreateErrorAttrEnumSerializer
 class _$MessagesCreateErrorCodeEnumSerializer
     implements PrimitiveSerializer<MessagesCreateErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'blank': 'blank',
-    'invalid': 'invalid',
-    'nullCharactersNotAllowed': 'null_characters_not_allowed',
-    'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
+    'invalidChoice': 'invalid_choice',
+    'null_': 'null',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'blank': 'blank',
-    'invalid': 'invalid',
-    'null_characters_not_allowed': 'nullCharactersNotAllowed',
-    'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
+    'invalid_choice': 'invalidChoice',
+    'null': 'null_',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -149,13 +133,9 @@ class _$MessagesCreateError extends MessagesCreateError {
 
   factory _$MessagesCreateError(
           [void Function(MessagesCreateErrorBuilder)? updates]) =>
-      (new MessagesCreateErrorBuilder()..update(updates))._build();
+      (MessagesCreateErrorBuilder()..update(updates))._build();
 
-  _$MessagesCreateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'MessagesCreateError', 'oneOf');
-  }
-
+  _$MessagesCreateError._({required this.oneOf}) : super._();
   @override
   MessagesCreateError rebuild(
           void Function(MessagesCreateErrorBuilder) updates) =>
@@ -163,7 +143,7 @@ class _$MessagesCreateError extends MessagesCreateError {
 
   @override
   MessagesCreateErrorBuilder toBuilder() =>
-      new MessagesCreateErrorBuilder()..replace(this);
+      MessagesCreateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -210,7 +190,6 @@ class MessagesCreateErrorBuilder
 
   @override
   void replace(MessagesCreateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesCreateError;
   }
 
@@ -224,9 +203,10 @@ class MessagesCreateErrorBuilder
 
   _$MessagesCreateError _build() {
     final _$result = _$v ??
-        new _$MessagesCreateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'MessagesCreateError', 'oneOf'));
+        _$MessagesCreateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'MessagesCreateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

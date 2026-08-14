@@ -58,7 +58,7 @@ class _$LocalizedMessageTitle extends LocalizedMessageTitle {
 
   factory _$LocalizedMessageTitle(
           [void Function(LocalizedMessageTitleBuilder)? updates]) =>
-      (new LocalizedMessageTitleBuilder()..update(updates))._build();
+      (LocalizedMessageTitleBuilder()..update(updates))._build();
 
   _$LocalizedMessageTitle._(
       {this.bg,
@@ -86,7 +86,6 @@ class _$LocalizedMessageTitle extends LocalizedMessageTitle {
       this.tr,
       this.zhCn})
       : super._();
-
   @override
   LocalizedMessageTitle rebuild(
           void Function(LocalizedMessageTitleBuilder) updates) =>
@@ -94,7 +93,7 @@ class _$LocalizedMessageTitle extends LocalizedMessageTitle {
 
   @override
   LocalizedMessageTitleBuilder toBuilder() =>
-      new LocalizedMessageTitleBuilder()..replace(this);
+      LocalizedMessageTitleBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -326,7 +325,6 @@ class LocalizedMessageTitleBuilder
 
   @override
   void replace(LocalizedMessageTitle other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$LocalizedMessageTitle;
   }
 
@@ -340,31 +338,32 @@ class LocalizedMessageTitleBuilder
 
   _$LocalizedMessageTitle _build() {
     final _$result = _$v ??
-        new _$LocalizedMessageTitle._(
-            bg: bg,
-            bn: bn,
-            ca: ca,
-            de: de,
-            el: el,
-            en: en,
-            es: es,
-            eu: eu,
-            fr: fr,
-            gl: gl,
-            hr: hr,
-            hu: hu,
-            it: it,
-            lb: lb,
-            mk: mk,
-            nl: nl,
-            pt: pt,
-            ro: ro,
-            sl: sl,
-            sq: sq,
-            sr: sr,
-            sv: sv,
-            tr: tr,
-            zhCn: zhCn);
+        _$LocalizedMessageTitle._(
+          bg: bg,
+          bn: bn,
+          ca: ca,
+          de: de,
+          el: el,
+          en: en,
+          es: es,
+          eu: eu,
+          fr: fr,
+          gl: gl,
+          hr: hr,
+          hu: hu,
+          it: it,
+          lb: lb,
+          mk: mk,
+          nl: nl,
+          pt: pt,
+          ro: ro,
+          sl: sl,
+          sq: sq,
+          sr: sr,
+          sv: sv,
+          tr: tr,
+          zhCn: zhCn,
+        );
     replace(_$result);
     return _$result;
   }

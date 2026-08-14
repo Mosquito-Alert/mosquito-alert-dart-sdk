@@ -26,7 +26,7 @@ BitesListMineOrderByErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesListMineOrderByErrorComponentAttrEnum>
-    _$bitesListMineOrderByErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesListMineOrderByErrorComponentAttrEnumValues = BuiltSet<
         BitesListMineOrderByErrorComponentAttrEnum>(const <BitesListMineOrderByErrorComponentAttrEnum>[
   _$bitesListMineOrderByErrorComponentAttrEnum_orderBy,
   _$bitesListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ BitesListMineOrderByErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesListMineOrderByErrorComponentCodeEnum>
-    _$bitesListMineOrderByErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesListMineOrderByErrorComponentCodeEnumValues = BuiltSet<
         BitesListMineOrderByErrorComponentCodeEnum>(const <BitesListMineOrderByErrorComponentCodeEnum>[
   _$bitesListMineOrderByErrorComponentCodeEnum_invalidChoice,
   _$bitesListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<BitesListMineOrderByErrorComponentCodeEnum>
 
 Serializer<BitesListMineOrderByErrorComponentAttrEnum>
     _$bitesListMineOrderByErrorComponentAttrEnumSerializer =
-    new _$BitesListMineOrderByErrorComponentAttrEnumSerializer();
+    _$BitesListMineOrderByErrorComponentAttrEnumSerializer();
 Serializer<BitesListMineOrderByErrorComponentCodeEnum>
     _$bitesListMineOrderByErrorComponentCodeEnumSerializer =
-    new _$BitesListMineOrderByErrorComponentCodeEnumSerializer();
+    _$BitesListMineOrderByErrorComponentCodeEnumSerializer();
 
 class _$BitesListMineOrderByErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesListMineOrderByErrorComponentAttrEnum> {
@@ -141,20 +141,11 @@ class _$BitesListMineOrderByErrorComponent
   factory _$BitesListMineOrderByErrorComponent(
           [void Function(BitesListMineOrderByErrorComponentBuilder)?
               updates]) =>
-      (new BitesListMineOrderByErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesListMineOrderByErrorComponentBuilder()..update(updates))._build();
 
   _$BitesListMineOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesListMineOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesListMineOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesListMineOrderByErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesListMineOrderByErrorComponent rebuild(
           void Function(BitesListMineOrderByErrorComponentBuilder) updates) =>
@@ -162,7 +153,7 @@ class _$BitesListMineOrderByErrorComponent
 
   @override
   BitesListMineOrderByErrorComponentBuilder toBuilder() =>
-      new BitesListMineOrderByErrorComponentBuilder()..replace(this);
+      BitesListMineOrderByErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -230,7 +221,6 @@ class BitesListMineOrderByErrorComponentBuilder
 
   @override
   void replace(BitesListMineOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListMineOrderByErrorComponent;
   }
 
@@ -245,13 +235,14 @@ class BitesListMineOrderByErrorComponentBuilder
 
   _$BitesListMineOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesListMineOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesListMineOrderByErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesListMineOrderByErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesListMineOrderByErrorComponent', 'detail'));
+        _$BitesListMineOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesListMineOrderByErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesListMineOrderByErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesListMineOrderByErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

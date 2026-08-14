@@ -25,8 +25,8 @@ AuthObtainTokenErrorAttrEnum _$authObtainTokenErrorAttrEnumValueOf(
 }
 
 final BuiltSet<AuthObtainTokenErrorAttrEnum>
-    _$authObtainTokenErrorAttrEnumValues = new BuiltSet<
-        AuthObtainTokenErrorAttrEnum>(const <AuthObtainTokenErrorAttrEnum>[
+    _$authObtainTokenErrorAttrEnumValues =
+    BuiltSet<AuthObtainTokenErrorAttrEnum>(const <AuthObtainTokenErrorAttrEnum>[
   _$authObtainTokenErrorAttrEnum_deviceId,
   _$authObtainTokenErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -68,8 +68,8 @@ AuthObtainTokenErrorCodeEnum _$authObtainTokenErrorCodeEnumValueOf(
 }
 
 final BuiltSet<AuthObtainTokenErrorCodeEnum>
-    _$authObtainTokenErrorCodeEnumValues = new BuiltSet<
-        AuthObtainTokenErrorCodeEnum>(const <AuthObtainTokenErrorCodeEnum>[
+    _$authObtainTokenErrorCodeEnumValues =
+    BuiltSet<AuthObtainTokenErrorCodeEnum>(const <AuthObtainTokenErrorCodeEnum>[
   _$authObtainTokenErrorCodeEnum_blank,
   _$authObtainTokenErrorCodeEnum_invalid,
   _$authObtainTokenErrorCodeEnum_null_,
@@ -80,10 +80,10 @@ final BuiltSet<AuthObtainTokenErrorCodeEnum>
 
 Serializer<AuthObtainTokenErrorAttrEnum>
     _$authObtainTokenErrorAttrEnumSerializer =
-    new _$AuthObtainTokenErrorAttrEnumSerializer();
+    _$AuthObtainTokenErrorAttrEnumSerializer();
 Serializer<AuthObtainTokenErrorCodeEnum>
     _$authObtainTokenErrorCodeEnumSerializer =
-    new _$AuthObtainTokenErrorCodeEnumSerializer();
+    _$AuthObtainTokenErrorCodeEnumSerializer();
 
 class _$AuthObtainTokenErrorAttrEnumSerializer
     implements PrimitiveSerializer<AuthObtainTokenErrorAttrEnum> {
@@ -157,13 +157,9 @@ class _$AuthObtainTokenError extends AuthObtainTokenError {
 
   factory _$AuthObtainTokenError(
           [void Function(AuthObtainTokenErrorBuilder)? updates]) =>
-      (new AuthObtainTokenErrorBuilder()..update(updates))._build();
+      (AuthObtainTokenErrorBuilder()..update(updates))._build();
 
-  _$AuthObtainTokenError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'AuthObtainTokenError', 'oneOf');
-  }
-
+  _$AuthObtainTokenError._({required this.oneOf}) : super._();
   @override
   AuthObtainTokenError rebuild(
           void Function(AuthObtainTokenErrorBuilder) updates) =>
@@ -171,7 +167,7 @@ class _$AuthObtainTokenError extends AuthObtainTokenError {
 
   @override
   AuthObtainTokenErrorBuilder toBuilder() =>
-      new AuthObtainTokenErrorBuilder()..replace(this);
+      AuthObtainTokenErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -218,7 +214,6 @@ class AuthObtainTokenErrorBuilder
 
   @override
   void replace(AuthObtainTokenError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthObtainTokenError;
   }
 
@@ -232,9 +227,10 @@ class AuthObtainTokenErrorBuilder
 
   _$AuthObtainTokenError _build() {
     final _$result = _$v ??
-        new _$AuthObtainTokenError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'AuthObtainTokenError', 'oneOf'));
+        _$AuthObtainTokenError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'AuthObtainTokenError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

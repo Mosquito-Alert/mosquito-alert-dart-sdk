@@ -27,7 +27,7 @@ MetaCreateIdentificationTaskReviewRequestActionEnum
 }
 
 final BuiltSet<MetaCreateIdentificationTaskReviewRequestActionEnum>
-    _$metaCreateIdentificationTaskReviewRequestActionEnumValues = new BuiltSet<
+    _$metaCreateIdentificationTaskReviewRequestActionEnumValues = BuiltSet<
         MetaCreateIdentificationTaskReviewRequestActionEnum>(const <MetaCreateIdentificationTaskReviewRequestActionEnum>[
   _$metaCreateIdentificationTaskReviewRequestActionEnum_overwrite,
   _$metaCreateIdentificationTaskReviewRequestActionEnum_unknownDefaultOpenApi,
@@ -35,7 +35,7 @@ final BuiltSet<MetaCreateIdentificationTaskReviewRequestActionEnum>
 
 Serializer<MetaCreateIdentificationTaskReviewRequestActionEnum>
     _$metaCreateIdentificationTaskReviewRequestActionEnumSerializer =
-    new _$MetaCreateIdentificationTaskReviewRequestActionEnumSerializer();
+    _$MetaCreateIdentificationTaskReviewRequestActionEnumSerializer();
 
 class _$MetaCreateIdentificationTaskReviewRequestActionEnumSerializer
     implements
@@ -79,15 +79,11 @@ class _$MetaCreateIdentificationTaskReviewRequest
   factory _$MetaCreateIdentificationTaskReviewRequest(
           [void Function(MetaCreateIdentificationTaskReviewRequestBuilder)?
               updates]) =>
-      (new MetaCreateIdentificationTaskReviewRequestBuilder()..update(updates))
+      (MetaCreateIdentificationTaskReviewRequestBuilder()..update(updates))
           ._build();
 
   _$MetaCreateIdentificationTaskReviewRequest._({required this.oneOf})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'MetaCreateIdentificationTaskReviewRequest', 'oneOf');
-  }
-
+      : super._();
   @override
   MetaCreateIdentificationTaskReviewRequest rebuild(
           void Function(MetaCreateIdentificationTaskReviewRequestBuilder)
@@ -96,7 +92,7 @@ class _$MetaCreateIdentificationTaskReviewRequest
 
   @override
   MetaCreateIdentificationTaskReviewRequestBuilder toBuilder() =>
-      new MetaCreateIdentificationTaskReviewRequestBuilder()..replace(this);
+      MetaCreateIdentificationTaskReviewRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -147,7 +143,6 @@ class MetaCreateIdentificationTaskReviewRequestBuilder
 
   @override
   void replace(MetaCreateIdentificationTaskReviewRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MetaCreateIdentificationTaskReviewRequest;
   }
 
@@ -163,9 +158,10 @@ class MetaCreateIdentificationTaskReviewRequestBuilder
 
   _$MetaCreateIdentificationTaskReviewRequest _build() {
     final _$result = _$v ??
-        new _$MetaCreateIdentificationTaskReviewRequest._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'MetaCreateIdentificationTaskReviewRequest', 'oneOf'));
+        _$MetaCreateIdentificationTaskReviewRequest._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'MetaCreateIdentificationTaskReviewRequest', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

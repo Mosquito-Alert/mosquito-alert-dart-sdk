@@ -29,8 +29,7 @@ BreedingsitesCreateInPublicAreaErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesCreateInPublicAreaErrorComponentAttrEnum>
-    _$breedingsitesCreateInPublicAreaErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$breedingsitesCreateInPublicAreaErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesCreateInPublicAreaErrorComponentAttrEnum>(const <BreedingsitesCreateInPublicAreaErrorComponentAttrEnum>[
   _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_inPublicArea,
   _$breedingsitesCreateInPublicAreaErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -58,8 +57,7 @@ BreedingsitesCreateInPublicAreaErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesCreateInPublicAreaErrorComponentCodeEnum>
-    _$breedingsitesCreateInPublicAreaErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$breedingsitesCreateInPublicAreaErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesCreateInPublicAreaErrorComponentCodeEnum>(const <BreedingsitesCreateInPublicAreaErrorComponentCodeEnum>[
   _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_invalid,
   _$breedingsitesCreateInPublicAreaErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -67,10 +65,10 @@ final BuiltSet<BreedingsitesCreateInPublicAreaErrorComponentCodeEnum>
 
 Serializer<BreedingsitesCreateInPublicAreaErrorComponentAttrEnum>
     _$breedingsitesCreateInPublicAreaErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesCreateInPublicAreaErrorComponentAttrEnumSerializer();
+    _$BreedingsitesCreateInPublicAreaErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesCreateInPublicAreaErrorComponentCodeEnum>
     _$breedingsitesCreateInPublicAreaErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesCreateInPublicAreaErrorComponentCodeEnumSerializer();
+    _$BreedingsitesCreateInPublicAreaErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesCreateInPublicAreaErrorComponentAttrEnumSerializer
     implements
@@ -154,21 +152,12 @@ class _$BreedingsitesCreateInPublicAreaErrorComponent
   factory _$BreedingsitesCreateInPublicAreaErrorComponent(
           [void Function(BreedingsitesCreateInPublicAreaErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesCreateInPublicAreaErrorComponentBuilder()
-            ..update(updates))
+      (BreedingsitesCreateInPublicAreaErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesCreateInPublicAreaErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesCreateInPublicAreaErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesCreateInPublicAreaErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesCreateInPublicAreaErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesCreateInPublicAreaErrorComponent rebuild(
           void Function(BreedingsitesCreateInPublicAreaErrorComponentBuilder)
@@ -177,7 +166,7 @@ class _$BreedingsitesCreateInPublicAreaErrorComponent
 
   @override
   BreedingsitesCreateInPublicAreaErrorComponentBuilder toBuilder() =>
-      new BreedingsitesCreateInPublicAreaErrorComponentBuilder()..replace(this);
+      BreedingsitesCreateInPublicAreaErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -248,7 +237,6 @@ class BreedingsitesCreateInPublicAreaErrorComponentBuilder
 
   @override
   void replace(BreedingsitesCreateInPublicAreaErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesCreateInPublicAreaErrorComponent;
   }
 
@@ -264,13 +252,14 @@ class BreedingsitesCreateInPublicAreaErrorComponentBuilder
 
   _$BreedingsitesCreateInPublicAreaErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesCreateInPublicAreaErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesCreateInPublicAreaErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesCreateInPublicAreaErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesCreateInPublicAreaErrorComponent', 'detail'));
+        _$BreedingsitesCreateInPublicAreaErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesCreateInPublicAreaErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesCreateInPublicAreaErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'BreedingsitesCreateInPublicAreaErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

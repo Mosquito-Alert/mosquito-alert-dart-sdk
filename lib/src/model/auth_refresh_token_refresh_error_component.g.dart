@@ -27,7 +27,7 @@ AuthRefreshTokenRefreshErrorComponentAttrEnum
 }
 
 final BuiltSet<AuthRefreshTokenRefreshErrorComponentAttrEnum>
-    _$authRefreshTokenRefreshErrorComponentAttrEnumValues = new BuiltSet<
+    _$authRefreshTokenRefreshErrorComponentAttrEnumValues = BuiltSet<
         AuthRefreshTokenRefreshErrorComponentAttrEnum>(const <AuthRefreshTokenRefreshErrorComponentAttrEnum>[
   _$authRefreshTokenRefreshErrorComponentAttrEnum_refresh,
   _$authRefreshTokenRefreshErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -81,7 +81,7 @@ AuthRefreshTokenRefreshErrorComponentCodeEnum
 }
 
 final BuiltSet<AuthRefreshTokenRefreshErrorComponentCodeEnum>
-    _$authRefreshTokenRefreshErrorComponentCodeEnumValues = new BuiltSet<
+    _$authRefreshTokenRefreshErrorComponentCodeEnumValues = BuiltSet<
         AuthRefreshTokenRefreshErrorComponentCodeEnum>(const <AuthRefreshTokenRefreshErrorComponentCodeEnum>[
   _$authRefreshTokenRefreshErrorComponentCodeEnum_blank,
   _$authRefreshTokenRefreshErrorComponentCodeEnum_invalid,
@@ -94,10 +94,10 @@ final BuiltSet<AuthRefreshTokenRefreshErrorComponentCodeEnum>
 
 Serializer<AuthRefreshTokenRefreshErrorComponentAttrEnum>
     _$authRefreshTokenRefreshErrorComponentAttrEnumSerializer =
-    new _$AuthRefreshTokenRefreshErrorComponentAttrEnumSerializer();
+    _$AuthRefreshTokenRefreshErrorComponentAttrEnumSerializer();
 Serializer<AuthRefreshTokenRefreshErrorComponentCodeEnum>
     _$authRefreshTokenRefreshErrorComponentCodeEnumSerializer =
-    new _$AuthRefreshTokenRefreshErrorComponentCodeEnumSerializer();
+    _$AuthRefreshTokenRefreshErrorComponentCodeEnumSerializer();
 
 class _$AuthRefreshTokenRefreshErrorComponentAttrEnumSerializer
     implements
@@ -187,20 +187,12 @@ class _$AuthRefreshTokenRefreshErrorComponent
   factory _$AuthRefreshTokenRefreshErrorComponent(
           [void Function(AuthRefreshTokenRefreshErrorComponentBuilder)?
               updates]) =>
-      (new AuthRefreshTokenRefreshErrorComponentBuilder()..update(updates))
+      (AuthRefreshTokenRefreshErrorComponentBuilder()..update(updates))
           ._build();
 
   _$AuthRefreshTokenRefreshErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'AuthRefreshTokenRefreshErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'AuthRefreshTokenRefreshErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'AuthRefreshTokenRefreshErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   AuthRefreshTokenRefreshErrorComponent rebuild(
           void Function(AuthRefreshTokenRefreshErrorComponentBuilder)
@@ -209,7 +201,7 @@ class _$AuthRefreshTokenRefreshErrorComponent
 
   @override
   AuthRefreshTokenRefreshErrorComponentBuilder toBuilder() =>
-      new AuthRefreshTokenRefreshErrorComponentBuilder()..replace(this);
+      AuthRefreshTokenRefreshErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -278,7 +270,6 @@ class AuthRefreshTokenRefreshErrorComponentBuilder
 
   @override
   void replace(AuthRefreshTokenRefreshErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthRefreshTokenRefreshErrorComponent;
   }
 
@@ -293,13 +284,14 @@ class AuthRefreshTokenRefreshErrorComponentBuilder
 
   _$AuthRefreshTokenRefreshErrorComponent _build() {
     final _$result = _$v ??
-        new _$AuthRefreshTokenRefreshErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'AuthRefreshTokenRefreshErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AuthRefreshTokenRefreshErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'AuthRefreshTokenRefreshErrorComponent', 'detail'));
+        _$AuthRefreshTokenRefreshErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'AuthRefreshTokenRefreshErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AuthRefreshTokenRefreshErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'AuthRefreshTokenRefreshErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

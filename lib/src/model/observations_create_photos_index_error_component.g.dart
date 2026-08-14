@@ -28,7 +28,7 @@ ObservationsCreatePhotosINDEXErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsCreatePhotosINDEXErrorComponentAttrEnum>
-    _$observationsCreatePhotosINDEXErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsCreatePhotosINDEXErrorComponentAttrEnumValues = BuiltSet<
         ObservationsCreatePhotosINDEXErrorComponentAttrEnum>(const <ObservationsCreatePhotosINDEXErrorComponentAttrEnum>[
   _$observationsCreatePhotosINDEXErrorComponentAttrEnum_photosPeriodINDEX,
   _$observationsCreatePhotosINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -80,7 +80,7 @@ ObservationsCreatePhotosINDEXErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsCreatePhotosINDEXErrorComponentCodeEnum>
-    _$observationsCreatePhotosINDEXErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsCreatePhotosINDEXErrorComponentCodeEnumValues = BuiltSet<
         ObservationsCreatePhotosINDEXErrorComponentCodeEnum>(const <ObservationsCreatePhotosINDEXErrorComponentCodeEnum>[
   _$observationsCreatePhotosINDEXErrorComponentCodeEnum_empty,
   _$observationsCreatePhotosINDEXErrorComponentCodeEnum_invalid,
@@ -93,10 +93,10 @@ final BuiltSet<ObservationsCreatePhotosINDEXErrorComponentCodeEnum>
 
 Serializer<ObservationsCreatePhotosINDEXErrorComponentAttrEnum>
     _$observationsCreatePhotosINDEXErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreatePhotosINDEXErrorComponentAttrEnumSerializer();
+    _$ObservationsCreatePhotosINDEXErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreatePhotosINDEXErrorComponentCodeEnum>
     _$observationsCreatePhotosINDEXErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreatePhotosINDEXErrorComponentCodeEnumSerializer();
+    _$ObservationsCreatePhotosINDEXErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreatePhotosINDEXErrorComponentAttrEnumSerializer
     implements
@@ -188,21 +188,12 @@ class _$ObservationsCreatePhotosINDEXErrorComponent
   factory _$ObservationsCreatePhotosINDEXErrorComponent(
           [void Function(ObservationsCreatePhotosINDEXErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreatePhotosINDEXErrorComponentBuilder()
-            ..update(updates))
+      (ObservationsCreatePhotosINDEXErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsCreatePhotosINDEXErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsCreatePhotosINDEXErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsCreatePhotosINDEXErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsCreatePhotosINDEXErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreatePhotosINDEXErrorComponent rebuild(
           void Function(ObservationsCreatePhotosINDEXErrorComponentBuilder)
@@ -211,7 +202,7 @@ class _$ObservationsCreatePhotosINDEXErrorComponent
 
   @override
   ObservationsCreatePhotosINDEXErrorComponentBuilder toBuilder() =>
-      new ObservationsCreatePhotosINDEXErrorComponentBuilder()..replace(this);
+      ObservationsCreatePhotosINDEXErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -280,7 +271,6 @@ class ObservationsCreatePhotosINDEXErrorComponentBuilder
 
   @override
   void replace(ObservationsCreatePhotosINDEXErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreatePhotosINDEXErrorComponent;
   }
 
@@ -296,13 +286,14 @@ class ObservationsCreatePhotosINDEXErrorComponentBuilder
 
   _$ObservationsCreatePhotosINDEXErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreatePhotosINDEXErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsCreatePhotosINDEXErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsCreatePhotosINDEXErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsCreatePhotosINDEXErrorComponent', 'detail'));
+        _$ObservationsCreatePhotosINDEXErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsCreatePhotosINDEXErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsCreatePhotosINDEXErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsCreatePhotosINDEXErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

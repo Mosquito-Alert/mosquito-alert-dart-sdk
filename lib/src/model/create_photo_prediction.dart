@@ -216,8 +216,9 @@ class _$CreatePhotoPredictionSerializer implements PrimitiveSerializer<CreatePho
         case r'is_decisive':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(bool),
-          ) as bool;
+            specifiedType: const FullType.nullable(bool),
+          ) as bool?;
+          if (valueDes == null) continue;
           result.isDecisive = valueDes;
           break;
         case r'scores':

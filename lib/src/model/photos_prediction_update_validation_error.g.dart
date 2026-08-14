@@ -27,7 +27,7 @@ PhotosPredictionUpdateValidationErrorTypeEnum
 }
 
 final BuiltSet<PhotosPredictionUpdateValidationErrorTypeEnum>
-    _$photosPredictionUpdateValidationErrorTypeEnumValues = new BuiltSet<
+    _$photosPredictionUpdateValidationErrorTypeEnumValues = BuiltSet<
         PhotosPredictionUpdateValidationErrorTypeEnum>(const <PhotosPredictionUpdateValidationErrorTypeEnum>[
   _$photosPredictionUpdateValidationErrorTypeEnum_validationError,
   _$photosPredictionUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -35,7 +35,7 @@ final BuiltSet<PhotosPredictionUpdateValidationErrorTypeEnum>
 
 Serializer<PhotosPredictionUpdateValidationErrorTypeEnum>
     _$photosPredictionUpdateValidationErrorTypeEnumSerializer =
-    new _$PhotosPredictionUpdateValidationErrorTypeEnumSerializer();
+    _$PhotosPredictionUpdateValidationErrorTypeEnumSerializer();
 
 class _$PhotosPredictionUpdateValidationErrorTypeEnumSerializer
     implements
@@ -80,18 +80,12 @@ class _$PhotosPredictionUpdateValidationError
   factory _$PhotosPredictionUpdateValidationError(
           [void Function(PhotosPredictionUpdateValidationErrorBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdateValidationErrorBuilder()..update(updates))
+      (PhotosPredictionUpdateValidationErrorBuilder()..update(updates))
           ._build();
 
   _$PhotosPredictionUpdateValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'PhotosPredictionUpdateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'PhotosPredictionUpdateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdateValidationError rebuild(
           void Function(PhotosPredictionUpdateValidationErrorBuilder)
@@ -100,7 +94,7 @@ class _$PhotosPredictionUpdateValidationError
 
   @override
   PhotosPredictionUpdateValidationErrorBuilder toBuilder() =>
-      new PhotosPredictionUpdateValidationErrorBuilder()..replace(this);
+      PhotosPredictionUpdateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -142,7 +136,7 @@ class PhotosPredictionUpdateValidationErrorBuilder
 
   ListBuilder<PhotosPredictionUpdateError>? _errors;
   ListBuilder<PhotosPredictionUpdateError> get errors =>
-      _$this._errors ??= new ListBuilder<PhotosPredictionUpdateError>();
+      _$this._errors ??= ListBuilder<PhotosPredictionUpdateError>();
   set errors(ListBuilder<PhotosPredictionUpdateError>? errors) =>
       _$this._errors = errors;
 
@@ -162,7 +156,6 @@ class PhotosPredictionUpdateValidationErrorBuilder
 
   @override
   void replace(PhotosPredictionUpdateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateValidationError;
   }
 
@@ -179,17 +172,18 @@ class PhotosPredictionUpdateValidationErrorBuilder
     _$PhotosPredictionUpdateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$PhotosPredictionUpdateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'PhotosPredictionUpdateValidationError', 'type'),
-              errors: errors.build());
+          _$PhotosPredictionUpdateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'PhotosPredictionUpdateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PhotosPredictionUpdateValidationError',
             _$failedField,
             e.toString());

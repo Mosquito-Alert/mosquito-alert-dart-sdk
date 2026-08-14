@@ -29,8 +29,7 @@ BreedingsitesCreateLocationSourceErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesCreateLocationSourceErrorComponentAttrEnum>
-    _$breedingsitesCreateLocationSourceErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$breedingsitesCreateLocationSourceErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesCreateLocationSourceErrorComponentAttrEnum>(const <BreedingsitesCreateLocationSourceErrorComponentAttrEnum>[
   _$breedingsitesCreateLocationSourceErrorComponentAttrEnum_locationPeriodSource,
   _$breedingsitesCreateLocationSourceErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -70,8 +69,7 @@ BreedingsitesCreateLocationSourceErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesCreateLocationSourceErrorComponentCodeEnum>
-    _$breedingsitesCreateLocationSourceErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$breedingsitesCreateLocationSourceErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesCreateLocationSourceErrorComponentCodeEnum>(const <BreedingsitesCreateLocationSourceErrorComponentCodeEnum>[
   _$breedingsitesCreateLocationSourceErrorComponentCodeEnum_invalidChoice,
   _$breedingsitesCreateLocationSourceErrorComponentCodeEnum_null_,
@@ -81,10 +79,10 @@ final BuiltSet<BreedingsitesCreateLocationSourceErrorComponentCodeEnum>
 
 Serializer<BreedingsitesCreateLocationSourceErrorComponentAttrEnum>
     _$breedingsitesCreateLocationSourceErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesCreateLocationSourceErrorComponentAttrEnumSerializer();
+    _$BreedingsitesCreateLocationSourceErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesCreateLocationSourceErrorComponentCodeEnum>
     _$breedingsitesCreateLocationSourceErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesCreateLocationSourceErrorComponentCodeEnumSerializer();
+    _$BreedingsitesCreateLocationSourceErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesCreateLocationSourceErrorComponentAttrEnumSerializer
     implements
@@ -173,21 +171,13 @@ class _$BreedingsitesCreateLocationSourceErrorComponent
           [void Function(
                   BreedingsitesCreateLocationSourceErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesCreateLocationSourceErrorComponentBuilder()
+      (BreedingsitesCreateLocationSourceErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$BreedingsitesCreateLocationSourceErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesCreateLocationSourceErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesCreateLocationSourceErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesCreateLocationSourceErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesCreateLocationSourceErrorComponent rebuild(
           void Function(BreedingsitesCreateLocationSourceErrorComponentBuilder)
@@ -196,8 +186,7 @@ class _$BreedingsitesCreateLocationSourceErrorComponent
 
   @override
   BreedingsitesCreateLocationSourceErrorComponentBuilder toBuilder() =>
-      new BreedingsitesCreateLocationSourceErrorComponentBuilder()
-        ..replace(this);
+      BreedingsitesCreateLocationSourceErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -268,7 +257,6 @@ class BreedingsitesCreateLocationSourceErrorComponentBuilder
 
   @override
   void replace(BreedingsitesCreateLocationSourceErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesCreateLocationSourceErrorComponent;
   }
 
@@ -284,13 +272,14 @@ class BreedingsitesCreateLocationSourceErrorComponentBuilder
 
   _$BreedingsitesCreateLocationSourceErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesCreateLocationSourceErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'BreedingsitesCreateLocationSourceErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'BreedingsitesCreateLocationSourceErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesCreateLocationSourceErrorComponent', 'detail'));
+        _$BreedingsitesCreateLocationSourceErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesCreateLocationSourceErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesCreateLocationSourceErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'BreedingsitesCreateLocationSourceErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

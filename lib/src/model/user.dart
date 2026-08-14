@@ -204,8 +204,9 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
         case r'locale':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(UserLocaleEnum),
-          ) as UserLocaleEnum;
+            specifiedType: const FullType.nullable(UserLocaleEnum),
+          ) as UserLocaleEnum?;
+          if (valueDes == null) continue;
           result.locale = valueDes;
           break;
         case r'language_iso':

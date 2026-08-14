@@ -27,7 +27,7 @@ BitesGeoListCountryIdErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesGeoListCountryIdErrorComponentAttrEnum>
-    _$bitesGeoListCountryIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesGeoListCountryIdErrorComponentAttrEnumValues = BuiltSet<
         BitesGeoListCountryIdErrorComponentAttrEnum>(const <BitesGeoListCountryIdErrorComponentAttrEnum>[
   _$bitesGeoListCountryIdErrorComponentAttrEnum_countryId,
   _$bitesGeoListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ BitesGeoListCountryIdErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesGeoListCountryIdErrorComponentCodeEnum>
-    _$bitesGeoListCountryIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesGeoListCountryIdErrorComponentCodeEnumValues = BuiltSet<
         BitesGeoListCountryIdErrorComponentCodeEnum>(const <BitesGeoListCountryIdErrorComponentCodeEnum>[
   _$bitesGeoListCountryIdErrorComponentCodeEnum_invalidChoice,
   _$bitesGeoListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<BitesGeoListCountryIdErrorComponentCodeEnum>
 
 Serializer<BitesGeoListCountryIdErrorComponentAttrEnum>
     _$bitesGeoListCountryIdErrorComponentAttrEnumSerializer =
-    new _$BitesGeoListCountryIdErrorComponentAttrEnumSerializer();
+    _$BitesGeoListCountryIdErrorComponentAttrEnumSerializer();
 Serializer<BitesGeoListCountryIdErrorComponentCodeEnum>
     _$bitesGeoListCountryIdErrorComponentCodeEnumSerializer =
-    new _$BitesGeoListCountryIdErrorComponentCodeEnumSerializer();
+    _$BitesGeoListCountryIdErrorComponentCodeEnumSerializer();
 
 class _$BitesGeoListCountryIdErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,11 @@ class _$BitesGeoListCountryIdErrorComponent
   factory _$BitesGeoListCountryIdErrorComponent(
           [void Function(BitesGeoListCountryIdErrorComponentBuilder)?
               updates]) =>
-      (new BitesGeoListCountryIdErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesGeoListCountryIdErrorComponentBuilder()..update(updates))._build();
 
   _$BitesGeoListCountryIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesGeoListCountryIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesGeoListCountryIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesGeoListCountryIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesGeoListCountryIdErrorComponent rebuild(
           void Function(BitesGeoListCountryIdErrorComponentBuilder) updates) =>
@@ -166,7 +157,7 @@ class _$BitesGeoListCountryIdErrorComponent
 
   @override
   BitesGeoListCountryIdErrorComponentBuilder toBuilder() =>
-      new BitesGeoListCountryIdErrorComponentBuilder()..replace(this);
+      BitesGeoListCountryIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -234,7 +225,6 @@ class BitesGeoListCountryIdErrorComponentBuilder
 
   @override
   void replace(BitesGeoListCountryIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesGeoListCountryIdErrorComponent;
   }
 
@@ -249,13 +239,14 @@ class BitesGeoListCountryIdErrorComponentBuilder
 
   _$BitesGeoListCountryIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesGeoListCountryIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesGeoListCountryIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesGeoListCountryIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesGeoListCountryIdErrorComponent', 'detail'));
+        _$BitesGeoListCountryIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesGeoListCountryIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesGeoListCountryIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesGeoListCountryIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

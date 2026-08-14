@@ -30,7 +30,7 @@ PhotosPredictionUpdateScoresNotSureErrorComponentAttrEnum
 
 final BuiltSet<PhotosPredictionUpdateScoresNotSureErrorComponentAttrEnum>
     _$photosPredictionUpdateScoresNotSureErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateScoresNotSureErrorComponentAttrEnum>(const <PhotosPredictionUpdateScoresNotSureErrorComponentAttrEnum>[
   _$photosPredictionUpdateScoresNotSureErrorComponentAttrEnum_scoresPeriodNotSure,
   _$photosPredictionUpdateScoresNotSureErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -89,7 +89,7 @@ PhotosPredictionUpdateScoresNotSureErrorComponentCodeEnum
 
 final BuiltSet<PhotosPredictionUpdateScoresNotSureErrorComponentCodeEnum>
     _$photosPredictionUpdateScoresNotSureErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateScoresNotSureErrorComponentCodeEnum>(const <PhotosPredictionUpdateScoresNotSureErrorComponentCodeEnum>[
   _$photosPredictionUpdateScoresNotSureErrorComponentCodeEnum_invalid,
   _$photosPredictionUpdateScoresNotSureErrorComponentCodeEnum_maxStringLength,
@@ -102,10 +102,10 @@ final BuiltSet<PhotosPredictionUpdateScoresNotSureErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionUpdateScoresNotSureErrorComponentAttrEnum>
     _$photosPredictionUpdateScoresNotSureErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionUpdateScoresNotSureErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionUpdateScoresNotSureErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionUpdateScoresNotSureErrorComponentCodeEnum>
     _$photosPredictionUpdateScoresNotSureErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionUpdateScoresNotSureErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionUpdateScoresNotSureErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionUpdateScoresNotSureErrorComponentAttrEnumSerializer
     implements
@@ -200,21 +200,13 @@ class _$PhotosPredictionUpdateScoresNotSureErrorComponent
           [void Function(
                   PhotosPredictionUpdateScoresNotSureErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdateScoresNotSureErrorComponentBuilder()
+      (PhotosPredictionUpdateScoresNotSureErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionUpdateScoresNotSureErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionUpdateScoresNotSureErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionUpdateScoresNotSureErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'PhotosPredictionUpdateScoresNotSureErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdateScoresNotSureErrorComponent rebuild(
           void Function(
@@ -224,8 +216,7 @@ class _$PhotosPredictionUpdateScoresNotSureErrorComponent
 
   @override
   PhotosPredictionUpdateScoresNotSureErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionUpdateScoresNotSureErrorComponentBuilder()
-        ..replace(this);
+      PhotosPredictionUpdateScoresNotSureErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -296,7 +287,6 @@ class PhotosPredictionUpdateScoresNotSureErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionUpdateScoresNotSureErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateScoresNotSureErrorComponent;
   }
 
@@ -312,15 +302,14 @@ class PhotosPredictionUpdateScoresNotSureErrorComponentBuilder
 
   _$PhotosPredictionUpdateScoresNotSureErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdateScoresNotSureErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'PhotosPredictionUpdateScoresNotSureErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'PhotosPredictionUpdateScoresNotSureErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionUpdateScoresNotSureErrorComponent',
-                'detail'));
+        _$PhotosPredictionUpdateScoresNotSureErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'PhotosPredictionUpdateScoresNotSureErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'PhotosPredictionUpdateScoresNotSureErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'PhotosPredictionUpdateScoresNotSureErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

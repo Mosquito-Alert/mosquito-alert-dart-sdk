@@ -30,7 +30,7 @@ IdentificationtasksListMineReviewActionErrorComponentAttrEnum
 
 final BuiltSet<IdentificationtasksListMineReviewActionErrorComponentAttrEnum>
     _$identificationtasksListMineReviewActionErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineReviewActionErrorComponentAttrEnum>(const <IdentificationtasksListMineReviewActionErrorComponentAttrEnum>[
   _$identificationtasksListMineReviewActionErrorComponentAttrEnum_reviewAction,
   _$identificationtasksListMineReviewActionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ IdentificationtasksListMineReviewActionErrorComponentCodeEnum
 
 final BuiltSet<IdentificationtasksListMineReviewActionErrorComponentCodeEnum>
     _$identificationtasksListMineReviewActionErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineReviewActionErrorComponentCodeEnum>(const <IdentificationtasksListMineReviewActionErrorComponentCodeEnum>[
   _$identificationtasksListMineReviewActionErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksListMineReviewActionErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -68,10 +68,10 @@ final BuiltSet<IdentificationtasksListMineReviewActionErrorComponentCodeEnum>
 
 Serializer<IdentificationtasksListMineReviewActionErrorComponentAttrEnum>
     _$identificationtasksListMineReviewActionErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListMineReviewActionErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListMineReviewActionErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksListMineReviewActionErrorComponentCodeEnum>
     _$identificationtasksListMineReviewActionErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListMineReviewActionErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListMineReviewActionErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListMineReviewActionErrorComponentAttrEnumSerializer
     implements
@@ -156,21 +156,13 @@ class _$IdentificationtasksListMineReviewActionErrorComponent
           [void Function(
                   IdentificationtasksListMineReviewActionErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListMineReviewActionErrorComponentBuilder()
+      (IdentificationtasksListMineReviewActionErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksListMineReviewActionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'IdentificationtasksListMineReviewActionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'IdentificationtasksListMineReviewActionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'IdentificationtasksListMineReviewActionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListMineReviewActionErrorComponent rebuild(
           void Function(
@@ -180,7 +172,7 @@ class _$IdentificationtasksListMineReviewActionErrorComponent
 
   @override
   IdentificationtasksListMineReviewActionErrorComponentBuilder toBuilder() =>
-      new IdentificationtasksListMineReviewActionErrorComponentBuilder()
+      IdentificationtasksListMineReviewActionErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -256,7 +248,6 @@ class IdentificationtasksListMineReviewActionErrorComponentBuilder
 
   @override
   void replace(IdentificationtasksListMineReviewActionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListMineReviewActionErrorComponent;
   }
 
@@ -273,19 +264,16 @@ class IdentificationtasksListMineReviewActionErrorComponentBuilder
 
   _$IdentificationtasksListMineReviewActionErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListMineReviewActionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksListMineReviewActionErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksListMineReviewActionErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksListMineReviewActionErrorComponent',
-                'detail'));
+        _$IdentificationtasksListMineReviewActionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'IdentificationtasksListMineReviewActionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'IdentificationtasksListMineReviewActionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksListMineReviewActionErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

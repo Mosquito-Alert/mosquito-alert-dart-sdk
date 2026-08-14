@@ -14,24 +14,18 @@ class _$MobileAppRequest extends MobileAppRequest {
 
   factory _$MobileAppRequest(
           [void Function(MobileAppRequestBuilder)? updates]) =>
-      (new MobileAppRequestBuilder()..update(updates))._build();
+      (MobileAppRequestBuilder()..update(updates))._build();
 
   _$MobileAppRequest._(
       {required this.packageName, required this.packageVersion})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        packageName, r'MobileAppRequest', 'packageName');
-    BuiltValueNullFieldError.checkNotNull(
-        packageVersion, r'MobileAppRequest', 'packageVersion');
-  }
-
+      : super._();
   @override
   MobileAppRequest rebuild(void Function(MobileAppRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   MobileAppRequestBuilder toBuilder() =>
-      new MobileAppRequestBuilder()..replace(this);
+      MobileAppRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -88,7 +82,6 @@ class MobileAppRequestBuilder
 
   @override
   void replace(MobileAppRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MobileAppRequest;
   }
 
@@ -102,11 +95,12 @@ class MobileAppRequestBuilder
 
   _$MobileAppRequest _build() {
     final _$result = _$v ??
-        new _$MobileAppRequest._(
-            packageName: BuiltValueNullFieldError.checkNotNull(
-                packageName, r'MobileAppRequest', 'packageName'),
-            packageVersion: BuiltValueNullFieldError.checkNotNull(
-                packageVersion, r'MobileAppRequest', 'packageVersion'));
+        _$MobileAppRequest._(
+          packageName: BuiltValueNullFieldError.checkNotNull(
+              packageName, r'MobileAppRequest', 'packageName'),
+          packageVersion: BuiltValueNullFieldError.checkNotNull(
+              packageVersion, r'MobileAppRequest', 'packageVersion'),
+        );
     replace(_$result);
     return _$result;
   }

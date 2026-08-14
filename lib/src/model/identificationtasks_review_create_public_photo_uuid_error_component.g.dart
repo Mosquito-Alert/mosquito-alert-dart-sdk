@@ -31,7 +31,7 @@ IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum>
     _$identificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum>(const <IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum>[
   _$identificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum_publicPhotoUuid,
   _$identificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnum>
     _$identificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnum>(const <IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnum>[
   _$identificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnum_invalid,
   _$identificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnum_null_,
@@ -84,10 +84,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum>
     _$identificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnum>
     _$identificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnumSerializer
     implements
@@ -184,27 +184,13 @@ class _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent
           [void Function(
                   IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentBuilder()
+      (IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent rebuild(
           void Function(
@@ -215,7 +201,7 @@ class _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent
   @override
   IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentBuilder()
+          IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -295,7 +281,6 @@ class IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent;
   }
@@ -314,19 +299,20 @@ class IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentBuilder
 
   _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent',
-                'detail'));
+        _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksReviewCreatePublicPhotoUuidErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

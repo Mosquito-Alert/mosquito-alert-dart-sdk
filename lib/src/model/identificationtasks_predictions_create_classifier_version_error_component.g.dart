@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnum_classifierVersion,
   _$identificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnum_null_,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreateClassifierVersionErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreateClassifierVersionErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreateClassifierVersionErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreateClassifierVersionErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreateClassifierVersionErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreateClassifierVersionErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreateClassifierVersionErrorComponent rebuild(
           void Function(
@@ -217,7 +203,7 @@ class _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponent
   @override
   IdentificationtasksPredictionsCreateClassifierVersionErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreateClassifierVersionErrorComponentBuilder()
+          IdentificationtasksPredictionsCreateClassifierVersionErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -301,7 +287,6 @@ class IdentificationtasksPredictionsCreateClassifierVersionErrorComponentBuilder
   void replace(
       IdentificationtasksPredictionsCreateClassifierVersionErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponent;
   }
@@ -321,20 +306,20 @@ class IdentificationtasksPredictionsCreateClassifierVersionErrorComponentBuilder
   _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreateClassifierVersionErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreateClassifierVersionErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreateClassifierVersionErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreateClassifierVersionErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreateClassifierVersionErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreateClassifierVersionErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

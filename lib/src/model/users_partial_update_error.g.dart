@@ -25,7 +25,7 @@ UsersPartialUpdateErrorAttrEnum _$usersPartialUpdateErrorAttrEnumValueOf(
 }
 
 final BuiltSet<UsersPartialUpdateErrorAttrEnum>
-    _$usersPartialUpdateErrorAttrEnumValues = new BuiltSet<
+    _$usersPartialUpdateErrorAttrEnumValues = BuiltSet<
         UsersPartialUpdateErrorAttrEnum>(const <UsersPartialUpdateErrorAttrEnum>[
   _$usersPartialUpdateErrorAttrEnum_locale,
   _$usersPartialUpdateErrorAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ UsersPartialUpdateErrorCodeEnum _$usersPartialUpdateErrorCodeEnumValueOf(
 }
 
 final BuiltSet<UsersPartialUpdateErrorCodeEnum>
-    _$usersPartialUpdateErrorCodeEnumValues = new BuiltSet<
+    _$usersPartialUpdateErrorCodeEnumValues = BuiltSet<
         UsersPartialUpdateErrorCodeEnum>(const <UsersPartialUpdateErrorCodeEnum>[
   _$usersPartialUpdateErrorCodeEnum_invalidChoice,
   _$usersPartialUpdateErrorCodeEnum_null_,
@@ -64,10 +64,10 @@ final BuiltSet<UsersPartialUpdateErrorCodeEnum>
 
 Serializer<UsersPartialUpdateErrorAttrEnum>
     _$usersPartialUpdateErrorAttrEnumSerializer =
-    new _$UsersPartialUpdateErrorAttrEnumSerializer();
+    _$UsersPartialUpdateErrorAttrEnumSerializer();
 Serializer<UsersPartialUpdateErrorCodeEnum>
     _$usersPartialUpdateErrorCodeEnumSerializer =
-    new _$UsersPartialUpdateErrorCodeEnumSerializer();
+    _$UsersPartialUpdateErrorCodeEnumSerializer();
 
 class _$UsersPartialUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<UsersPartialUpdateErrorAttrEnum> {
@@ -137,13 +137,9 @@ class _$UsersPartialUpdateError extends UsersPartialUpdateError {
 
   factory _$UsersPartialUpdateError(
           [void Function(UsersPartialUpdateErrorBuilder)? updates]) =>
-      (new UsersPartialUpdateErrorBuilder()..update(updates))._build();
+      (UsersPartialUpdateErrorBuilder()..update(updates))._build();
 
-  _$UsersPartialUpdateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'UsersPartialUpdateError', 'oneOf');
-  }
-
+  _$UsersPartialUpdateError._({required this.oneOf}) : super._();
   @override
   UsersPartialUpdateError rebuild(
           void Function(UsersPartialUpdateErrorBuilder) updates) =>
@@ -151,7 +147,7 @@ class _$UsersPartialUpdateError extends UsersPartialUpdateError {
 
   @override
   UsersPartialUpdateErrorBuilder toBuilder() =>
-      new UsersPartialUpdateErrorBuilder()..replace(this);
+      UsersPartialUpdateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -199,7 +195,6 @@ class UsersPartialUpdateErrorBuilder
 
   @override
   void replace(UsersPartialUpdateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UsersPartialUpdateError;
   }
 
@@ -213,9 +208,10 @@ class UsersPartialUpdateErrorBuilder
 
   _$UsersPartialUpdateError _build() {
     final _$result = _$v ??
-        new _$UsersPartialUpdateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'UsersPartialUpdateError', 'oneOf'));
+        _$UsersPartialUpdateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'UsersPartialUpdateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

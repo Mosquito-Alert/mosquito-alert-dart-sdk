@@ -209,9 +209,7 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    BitesCreateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    BitesCreateError object) sync* {
   }
 
   @override

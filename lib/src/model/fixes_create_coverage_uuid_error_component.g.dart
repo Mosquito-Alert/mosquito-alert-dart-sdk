@@ -27,7 +27,7 @@ FixesCreateCoverageUuidErrorComponentAttrEnum
 }
 
 final BuiltSet<FixesCreateCoverageUuidErrorComponentAttrEnum>
-    _$fixesCreateCoverageUuidErrorComponentAttrEnumValues = new BuiltSet<
+    _$fixesCreateCoverageUuidErrorComponentAttrEnumValues = BuiltSet<
         FixesCreateCoverageUuidErrorComponentAttrEnum>(const <FixesCreateCoverageUuidErrorComponentAttrEnum>[
   _$fixesCreateCoverageUuidErrorComponentAttrEnum_coverageUuid,
   _$fixesCreateCoverageUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,7 +64,7 @@ FixesCreateCoverageUuidErrorComponentCodeEnum
 }
 
 final BuiltSet<FixesCreateCoverageUuidErrorComponentCodeEnum>
-    _$fixesCreateCoverageUuidErrorComponentCodeEnumValues = new BuiltSet<
+    _$fixesCreateCoverageUuidErrorComponentCodeEnumValues = BuiltSet<
         FixesCreateCoverageUuidErrorComponentCodeEnum>(const <FixesCreateCoverageUuidErrorComponentCodeEnum>[
   _$fixesCreateCoverageUuidErrorComponentCodeEnum_invalid,
   _$fixesCreateCoverageUuidErrorComponentCodeEnum_null_,
@@ -74,10 +74,10 @@ final BuiltSet<FixesCreateCoverageUuidErrorComponentCodeEnum>
 
 Serializer<FixesCreateCoverageUuidErrorComponentAttrEnum>
     _$fixesCreateCoverageUuidErrorComponentAttrEnumSerializer =
-    new _$FixesCreateCoverageUuidErrorComponentAttrEnumSerializer();
+    _$FixesCreateCoverageUuidErrorComponentAttrEnumSerializer();
 Serializer<FixesCreateCoverageUuidErrorComponentCodeEnum>
     _$fixesCreateCoverageUuidErrorComponentCodeEnumSerializer =
-    new _$FixesCreateCoverageUuidErrorComponentCodeEnumSerializer();
+    _$FixesCreateCoverageUuidErrorComponentCodeEnumSerializer();
 
 class _$FixesCreateCoverageUuidErrorComponentAttrEnumSerializer
     implements
@@ -161,20 +161,12 @@ class _$FixesCreateCoverageUuidErrorComponent
   factory _$FixesCreateCoverageUuidErrorComponent(
           [void Function(FixesCreateCoverageUuidErrorComponentBuilder)?
               updates]) =>
-      (new FixesCreateCoverageUuidErrorComponentBuilder()..update(updates))
+      (FixesCreateCoverageUuidErrorComponentBuilder()..update(updates))
           ._build();
 
   _$FixesCreateCoverageUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'FixesCreateCoverageUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'FixesCreateCoverageUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'FixesCreateCoverageUuidErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   FixesCreateCoverageUuidErrorComponent rebuild(
           void Function(FixesCreateCoverageUuidErrorComponentBuilder)
@@ -183,7 +175,7 @@ class _$FixesCreateCoverageUuidErrorComponent
 
   @override
   FixesCreateCoverageUuidErrorComponentBuilder toBuilder() =>
-      new FixesCreateCoverageUuidErrorComponentBuilder()..replace(this);
+      FixesCreateCoverageUuidErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -252,7 +244,6 @@ class FixesCreateCoverageUuidErrorComponentBuilder
 
   @override
   void replace(FixesCreateCoverageUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixesCreateCoverageUuidErrorComponent;
   }
 
@@ -267,13 +258,14 @@ class FixesCreateCoverageUuidErrorComponentBuilder
 
   _$FixesCreateCoverageUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$FixesCreateCoverageUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'FixesCreateCoverageUuidErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'FixesCreateCoverageUuidErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'FixesCreateCoverageUuidErrorComponent', 'detail'));
+        _$FixesCreateCoverageUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'FixesCreateCoverageUuidErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'FixesCreateCoverageUuidErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'FixesCreateCoverageUuidErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

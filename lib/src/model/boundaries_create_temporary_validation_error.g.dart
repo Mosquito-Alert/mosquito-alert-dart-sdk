@@ -27,7 +27,7 @@ BoundariesCreateTemporaryValidationErrorTypeEnum
 }
 
 final BuiltSet<BoundariesCreateTemporaryValidationErrorTypeEnum>
-    _$boundariesCreateTemporaryValidationErrorTypeEnumValues = new BuiltSet<
+    _$boundariesCreateTemporaryValidationErrorTypeEnumValues = BuiltSet<
         BoundariesCreateTemporaryValidationErrorTypeEnum>(const <BoundariesCreateTemporaryValidationErrorTypeEnum>[
   _$boundariesCreateTemporaryValidationErrorTypeEnum_validationError,
   _$boundariesCreateTemporaryValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -35,7 +35,7 @@ final BuiltSet<BoundariesCreateTemporaryValidationErrorTypeEnum>
 
 Serializer<BoundariesCreateTemporaryValidationErrorTypeEnum>
     _$boundariesCreateTemporaryValidationErrorTypeEnumSerializer =
-    new _$BoundariesCreateTemporaryValidationErrorTypeEnumSerializer();
+    _$BoundariesCreateTemporaryValidationErrorTypeEnumSerializer();
 
 class _$BoundariesCreateTemporaryValidationErrorTypeEnumSerializer
     implements
@@ -80,18 +80,12 @@ class _$BoundariesCreateTemporaryValidationError
   factory _$BoundariesCreateTemporaryValidationError(
           [void Function(BoundariesCreateTemporaryValidationErrorBuilder)?
               updates]) =>
-      (new BoundariesCreateTemporaryValidationErrorBuilder()..update(updates))
+      (BoundariesCreateTemporaryValidationErrorBuilder()..update(updates))
           ._build();
 
   _$BoundariesCreateTemporaryValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'BoundariesCreateTemporaryValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'BoundariesCreateTemporaryValidationError', 'errors');
-  }
-
+      : super._();
   @override
   BoundariesCreateTemporaryValidationError rebuild(
           void Function(BoundariesCreateTemporaryValidationErrorBuilder)
@@ -100,7 +94,7 @@ class _$BoundariesCreateTemporaryValidationError
 
   @override
   BoundariesCreateTemporaryValidationErrorBuilder toBuilder() =>
-      new BoundariesCreateTemporaryValidationErrorBuilder()..replace(this);
+      BoundariesCreateTemporaryValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -142,7 +136,7 @@ class BoundariesCreateTemporaryValidationErrorBuilder
 
   ListBuilder<BoundariesCreateTemporaryError>? _errors;
   ListBuilder<BoundariesCreateTemporaryError> get errors =>
-      _$this._errors ??= new ListBuilder<BoundariesCreateTemporaryError>();
+      _$this._errors ??= ListBuilder<BoundariesCreateTemporaryError>();
   set errors(ListBuilder<BoundariesCreateTemporaryError>? errors) =>
       _$this._errors = errors;
 
@@ -162,7 +156,6 @@ class BoundariesCreateTemporaryValidationErrorBuilder
 
   @override
   void replace(BoundariesCreateTemporaryValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BoundariesCreateTemporaryValidationError;
   }
 
@@ -179,17 +172,18 @@ class BoundariesCreateTemporaryValidationErrorBuilder
     _$BoundariesCreateTemporaryValidationError _$result;
     try {
       _$result = _$v ??
-          new _$BoundariesCreateTemporaryValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'BoundariesCreateTemporaryValidationError', 'type'),
-              errors: errors.build());
+          _$BoundariesCreateTemporaryValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'BoundariesCreateTemporaryValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BoundariesCreateTemporaryValidationError',
             _$failedField,
             e.toString());

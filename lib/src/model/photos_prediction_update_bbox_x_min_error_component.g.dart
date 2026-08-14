@@ -28,7 +28,7 @@ PhotosPredictionUpdateBboxXMinErrorComponentAttrEnum
 }
 
 final BuiltSet<PhotosPredictionUpdateBboxXMinErrorComponentAttrEnum>
-    _$photosPredictionUpdateBboxXMinErrorComponentAttrEnumValues = new BuiltSet<
+    _$photosPredictionUpdateBboxXMinErrorComponentAttrEnumValues = BuiltSet<
         PhotosPredictionUpdateBboxXMinErrorComponentAttrEnum>(const <PhotosPredictionUpdateBboxXMinErrorComponentAttrEnum>[
   _$photosPredictionUpdateBboxXMinErrorComponentAttrEnum_bboxPeriodXMin,
   _$photosPredictionUpdateBboxXMinErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -81,7 +81,7 @@ PhotosPredictionUpdateBboxXMinErrorComponentCodeEnum
 }
 
 final BuiltSet<PhotosPredictionUpdateBboxXMinErrorComponentCodeEnum>
-    _$photosPredictionUpdateBboxXMinErrorComponentCodeEnumValues = new BuiltSet<
+    _$photosPredictionUpdateBboxXMinErrorComponentCodeEnumValues = BuiltSet<
         PhotosPredictionUpdateBboxXMinErrorComponentCodeEnum>(const <PhotosPredictionUpdateBboxXMinErrorComponentCodeEnum>[
   _$photosPredictionUpdateBboxXMinErrorComponentCodeEnum_invalid,
   _$photosPredictionUpdateBboxXMinErrorComponentCodeEnum_maxStringLength,
@@ -94,10 +94,10 @@ final BuiltSet<PhotosPredictionUpdateBboxXMinErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionUpdateBboxXMinErrorComponentAttrEnum>
     _$photosPredictionUpdateBboxXMinErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionUpdateBboxXMinErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionUpdateBboxXMinErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionUpdateBboxXMinErrorComponentCodeEnum>
     _$photosPredictionUpdateBboxXMinErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionUpdateBboxXMinErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionUpdateBboxXMinErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionUpdateBboxXMinErrorComponentAttrEnumSerializer
     implements
@@ -191,21 +191,12 @@ class _$PhotosPredictionUpdateBboxXMinErrorComponent
   factory _$PhotosPredictionUpdateBboxXMinErrorComponent(
           [void Function(PhotosPredictionUpdateBboxXMinErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdateBboxXMinErrorComponentBuilder()
-            ..update(updates))
+      (PhotosPredictionUpdateBboxXMinErrorComponentBuilder()..update(updates))
           ._build();
 
   _$PhotosPredictionUpdateBboxXMinErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionUpdateBboxXMinErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionUpdateBboxXMinErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'PhotosPredictionUpdateBboxXMinErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdateBboxXMinErrorComponent rebuild(
           void Function(PhotosPredictionUpdateBboxXMinErrorComponentBuilder)
@@ -214,7 +205,7 @@ class _$PhotosPredictionUpdateBboxXMinErrorComponent
 
   @override
   PhotosPredictionUpdateBboxXMinErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionUpdateBboxXMinErrorComponentBuilder()..replace(this);
+      PhotosPredictionUpdateBboxXMinErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -285,7 +276,6 @@ class PhotosPredictionUpdateBboxXMinErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionUpdateBboxXMinErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateBboxXMinErrorComponent;
   }
 
@@ -301,13 +291,14 @@ class PhotosPredictionUpdateBboxXMinErrorComponentBuilder
 
   _$PhotosPredictionUpdateBboxXMinErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdateBboxXMinErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'PhotosPredictionUpdateBboxXMinErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'PhotosPredictionUpdateBboxXMinErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'PhotosPredictionUpdateBboxXMinErrorComponent', 'detail'));
+        _$PhotosPredictionUpdateBboxXMinErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'PhotosPredictionUpdateBboxXMinErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'PhotosPredictionUpdateBboxXMinErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'PhotosPredictionUpdateBboxXMinErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

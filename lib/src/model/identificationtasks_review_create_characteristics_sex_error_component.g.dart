@@ -31,7 +31,7 @@ IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnum>
     _$identificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnum>(const <IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnum>[
   _$identificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnum_characteristicsPeriodSex,
   _$identificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnum>
     _$identificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnum>(const <IdentificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnum>[
   _$identificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnum_null_,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnum>
     _$identificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnum>
     _$identificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponent
           [void Function(
                   IdentificationtasksReviewCreateCharacteristicsSexErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksReviewCreateCharacteristicsSexErrorComponentBuilder()
+      (IdentificationtasksReviewCreateCharacteristicsSexErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksReviewCreateCharacteristicsSexErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksReviewCreateCharacteristicsSexErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksReviewCreateCharacteristicsSexErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksReviewCreateCharacteristicsSexErrorComponent rebuild(
           void Function(
@@ -217,7 +203,7 @@ class _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponent
   @override
   IdentificationtasksReviewCreateCharacteristicsSexErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksReviewCreateCharacteristicsSexErrorComponentBuilder()
+          IdentificationtasksReviewCreateCharacteristicsSexErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -299,7 +285,6 @@ class IdentificationtasksReviewCreateCharacteristicsSexErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksReviewCreateCharacteristicsSexErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponent;
   }
@@ -318,19 +303,20 @@ class IdentificationtasksReviewCreateCharacteristicsSexErrorComponentBuilder
 
   _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksReviewCreateCharacteristicsSexErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksReviewCreateCharacteristicsSexErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksReviewCreateCharacteristicsSexErrorComponent',
-                'detail'));
+        _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksReviewCreateCharacteristicsSexErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksReviewCreateCharacteristicsSexErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksReviewCreateCharacteristicsSexErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

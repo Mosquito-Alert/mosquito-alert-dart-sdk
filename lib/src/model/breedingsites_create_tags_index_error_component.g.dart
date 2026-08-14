@@ -28,7 +28,7 @@ BreedingsitesCreateTagsINDEXErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesCreateTagsINDEXErrorComponentAttrEnum>
-    _$breedingsitesCreateTagsINDEXErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesCreateTagsINDEXErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesCreateTagsINDEXErrorComponentAttrEnum>(const <BreedingsitesCreateTagsINDEXErrorComponentAttrEnum>[
   _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX,
   _$breedingsitesCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -82,7 +82,7 @@ BreedingsitesCreateTagsINDEXErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesCreateTagsINDEXErrorComponentCodeEnum>
-    _$breedingsitesCreateTagsINDEXErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesCreateTagsINDEXErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesCreateTagsINDEXErrorComponentCodeEnum>(const <BreedingsitesCreateTagsINDEXErrorComponentCodeEnum>[
   _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_blank,
   _$breedingsitesCreateTagsINDEXErrorComponentCodeEnum_invalid,
@@ -95,10 +95,10 @@ final BuiltSet<BreedingsitesCreateTagsINDEXErrorComponentCodeEnum>
 
 Serializer<BreedingsitesCreateTagsINDEXErrorComponentAttrEnum>
     _$breedingsitesCreateTagsINDEXErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesCreateTagsINDEXErrorComponentAttrEnumSerializer();
+    _$BreedingsitesCreateTagsINDEXErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesCreateTagsINDEXErrorComponentCodeEnum>
     _$breedingsitesCreateTagsINDEXErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesCreateTagsINDEXErrorComponentCodeEnumSerializer();
+    _$BreedingsitesCreateTagsINDEXErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesCreateTagsINDEXErrorComponentAttrEnumSerializer
     implements
@@ -190,20 +190,12 @@ class _$BreedingsitesCreateTagsINDEXErrorComponent
   factory _$BreedingsitesCreateTagsINDEXErrorComponent(
           [void Function(BreedingsitesCreateTagsINDEXErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesCreateTagsINDEXErrorComponentBuilder()..update(updates))
+      (BreedingsitesCreateTagsINDEXErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesCreateTagsINDEXErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesCreateTagsINDEXErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesCreateTagsINDEXErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesCreateTagsINDEXErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesCreateTagsINDEXErrorComponent rebuild(
           void Function(BreedingsitesCreateTagsINDEXErrorComponentBuilder)
@@ -212,7 +204,7 @@ class _$BreedingsitesCreateTagsINDEXErrorComponent
 
   @override
   BreedingsitesCreateTagsINDEXErrorComponentBuilder toBuilder() =>
-      new BreedingsitesCreateTagsINDEXErrorComponentBuilder()..replace(this);
+      BreedingsitesCreateTagsINDEXErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -281,7 +273,6 @@ class BreedingsitesCreateTagsINDEXErrorComponentBuilder
 
   @override
   void replace(BreedingsitesCreateTagsINDEXErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesCreateTagsINDEXErrorComponent;
   }
 
@@ -297,13 +288,14 @@ class BreedingsitesCreateTagsINDEXErrorComponentBuilder
 
   _$BreedingsitesCreateTagsINDEXErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesCreateTagsINDEXErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesCreateTagsINDEXErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesCreateTagsINDEXErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesCreateTagsINDEXErrorComponent', 'detail'));
+        _$BreedingsitesCreateTagsINDEXErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesCreateTagsINDEXErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesCreateTagsINDEXErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BreedingsitesCreateTagsINDEXErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

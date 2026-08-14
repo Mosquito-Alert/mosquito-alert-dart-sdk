@@ -30,7 +30,7 @@ IdentificationtasksAnnotationsListValidationErrorTypeEnum
 
 final BuiltSet<IdentificationtasksAnnotationsListValidationErrorTypeEnum>
     _$identificationtasksAnnotationsListValidationErrorTypeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListValidationErrorTypeEnum>(const <IdentificationtasksAnnotationsListValidationErrorTypeEnum>[
   _$identificationtasksAnnotationsListValidationErrorTypeEnum_validationError,
   _$identificationtasksAnnotationsListValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -38,7 +38,7 @@ final BuiltSet<IdentificationtasksAnnotationsListValidationErrorTypeEnum>
 
 Serializer<IdentificationtasksAnnotationsListValidationErrorTypeEnum>
     _$identificationtasksAnnotationsListValidationErrorTypeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListValidationErrorTypeEnumSerializer();
+    _$IdentificationtasksAnnotationsListValidationErrorTypeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListValidationErrorTypeEnumSerializer
     implements
@@ -86,19 +86,13 @@ class _$IdentificationtasksAnnotationsListValidationError
           [void Function(
                   IdentificationtasksAnnotationsListValidationErrorBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListValidationErrorBuilder()
+      (IdentificationtasksAnnotationsListValidationErrorBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'IdentificationtasksAnnotationsListValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'IdentificationtasksAnnotationsListValidationError', 'errors');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListValidationError rebuild(
           void Function(
@@ -108,8 +102,7 @@ class _$IdentificationtasksAnnotationsListValidationError
 
   @override
   IdentificationtasksAnnotationsListValidationErrorBuilder toBuilder() =>
-      new IdentificationtasksAnnotationsListValidationErrorBuilder()
-        ..replace(this);
+      IdentificationtasksAnnotationsListValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -152,8 +145,7 @@ class IdentificationtasksAnnotationsListValidationErrorBuilder
 
   ListBuilder<IdentificationtasksAnnotationsListError>? _errors;
   ListBuilder<IdentificationtasksAnnotationsListError> get errors =>
-      _$this._errors ??=
-          new ListBuilder<IdentificationtasksAnnotationsListError>();
+      _$this._errors ??= ListBuilder<IdentificationtasksAnnotationsListError>();
   set errors(ListBuilder<IdentificationtasksAnnotationsListError>? errors) =>
       _$this._errors = errors;
 
@@ -173,7 +165,6 @@ class IdentificationtasksAnnotationsListValidationErrorBuilder
 
   @override
   void replace(IdentificationtasksAnnotationsListValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksAnnotationsListValidationError;
   }
 
@@ -191,17 +182,18 @@ class IdentificationtasksAnnotationsListValidationErrorBuilder
     _$IdentificationtasksAnnotationsListValidationError _$result;
     try {
       _$result = _$v ??
-          new _$IdentificationtasksAnnotationsListValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(type,
-                  r'IdentificationtasksAnnotationsListValidationError', 'type'),
-              errors: errors.build());
+          _$IdentificationtasksAnnotationsListValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(type,
+                r'IdentificationtasksAnnotationsListValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'IdentificationtasksAnnotationsListValidationError',
             _$failedField,
             e.toString());

@@ -31,7 +31,7 @@ IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnum>
     _$identificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnum>(const <IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnum>[
   _$identificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnum_characteristicsPeriodIsBloodFed,
   _$identificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>
     _$identificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>(const <IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>[
   _$identificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_invalid,
   _$identificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnum>
     _$identificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnum>
     _$identificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent
           [void Function(
                   IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentBuilder()
+      (IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent rebuild(
           void Function(
@@ -199,7 +185,7 @@ class _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent
   @override
   IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentBuilder()
+          IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -283,7 +269,6 @@ class IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentBuil
   void replace(
       IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent;
   }
@@ -303,20 +288,21 @@ class IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentBuil
   _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent
+        _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

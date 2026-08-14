@@ -27,7 +27,7 @@ DevicesCreateDeviceIdErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesCreateDeviceIdErrorComponentAttrEnum>
-    _$devicesCreateDeviceIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesCreateDeviceIdErrorComponentAttrEnumValues = BuiltSet<
         DevicesCreateDeviceIdErrorComponentAttrEnum>(const <DevicesCreateDeviceIdErrorComponentAttrEnum>[
   _$devicesCreateDeviceIdErrorComponentAttrEnum_deviceId,
   _$devicesCreateDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -86,7 +86,7 @@ DevicesCreateDeviceIdErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesCreateDeviceIdErrorComponentCodeEnum>
-    _$devicesCreateDeviceIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesCreateDeviceIdErrorComponentCodeEnumValues = BuiltSet<
         DevicesCreateDeviceIdErrorComponentCodeEnum>(const <DevicesCreateDeviceIdErrorComponentCodeEnum>[
   _$devicesCreateDeviceIdErrorComponentCodeEnum_blank,
   _$devicesCreateDeviceIdErrorComponentCodeEnum_invalid,
@@ -100,10 +100,10 @@ final BuiltSet<DevicesCreateDeviceIdErrorComponentCodeEnum>
 
 Serializer<DevicesCreateDeviceIdErrorComponentAttrEnum>
     _$devicesCreateDeviceIdErrorComponentAttrEnumSerializer =
-    new _$DevicesCreateDeviceIdErrorComponentAttrEnumSerializer();
+    _$DevicesCreateDeviceIdErrorComponentAttrEnumSerializer();
 Serializer<DevicesCreateDeviceIdErrorComponentCodeEnum>
     _$devicesCreateDeviceIdErrorComponentCodeEnumSerializer =
-    new _$DevicesCreateDeviceIdErrorComponentCodeEnumSerializer();
+    _$DevicesCreateDeviceIdErrorComponentCodeEnumSerializer();
 
 class _$DevicesCreateDeviceIdErrorComponentAttrEnumSerializer
     implements
@@ -195,20 +195,11 @@ class _$DevicesCreateDeviceIdErrorComponent
   factory _$DevicesCreateDeviceIdErrorComponent(
           [void Function(DevicesCreateDeviceIdErrorComponentBuilder)?
               updates]) =>
-      (new DevicesCreateDeviceIdErrorComponentBuilder()..update(updates))
-          ._build();
+      (DevicesCreateDeviceIdErrorComponentBuilder()..update(updates))._build();
 
   _$DevicesCreateDeviceIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesCreateDeviceIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesCreateDeviceIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesCreateDeviceIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesCreateDeviceIdErrorComponent rebuild(
           void Function(DevicesCreateDeviceIdErrorComponentBuilder) updates) =>
@@ -216,7 +207,7 @@ class _$DevicesCreateDeviceIdErrorComponent
 
   @override
   DevicesCreateDeviceIdErrorComponentBuilder toBuilder() =>
-      new DevicesCreateDeviceIdErrorComponentBuilder()..replace(this);
+      DevicesCreateDeviceIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -284,7 +275,6 @@ class DevicesCreateDeviceIdErrorComponentBuilder
 
   @override
   void replace(DevicesCreateDeviceIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesCreateDeviceIdErrorComponent;
   }
 
@@ -299,13 +289,14 @@ class DevicesCreateDeviceIdErrorComponentBuilder
 
   _$DevicesCreateDeviceIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesCreateDeviceIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesCreateDeviceIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesCreateDeviceIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesCreateDeviceIdErrorComponent', 'detail'));
+        _$DevicesCreateDeviceIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesCreateDeviceIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesCreateDeviceIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesCreateDeviceIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

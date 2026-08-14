@@ -30,7 +30,7 @@ PhotosPredictionUpdatePredictedClassErrorComponentAttrEnum
 
 final BuiltSet<PhotosPredictionUpdatePredictedClassErrorComponentAttrEnum>
     _$photosPredictionUpdatePredictedClassErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdatePredictedClassErrorComponentAttrEnum>(const <PhotosPredictionUpdatePredictedClassErrorComponentAttrEnum>[
   _$photosPredictionUpdatePredictedClassErrorComponentAttrEnum_predictedClass,
   _$photosPredictionUpdatePredictedClassErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -66,7 +66,7 @@ PhotosPredictionUpdatePredictedClassErrorComponentCodeEnum
 
 final BuiltSet<PhotosPredictionUpdatePredictedClassErrorComponentCodeEnum>
     _$photosPredictionUpdatePredictedClassErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdatePredictedClassErrorComponentCodeEnum>(const <PhotosPredictionUpdatePredictedClassErrorComponentCodeEnum>[
   _$photosPredictionUpdatePredictedClassErrorComponentCodeEnum_invalidChoice,
   _$photosPredictionUpdatePredictedClassErrorComponentCodeEnum_required_,
@@ -75,10 +75,10 @@ final BuiltSet<PhotosPredictionUpdatePredictedClassErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionUpdatePredictedClassErrorComponentAttrEnum>
     _$photosPredictionUpdatePredictedClassErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionUpdatePredictedClassErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionUpdatePredictedClassErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionUpdatePredictedClassErrorComponentCodeEnum>
     _$photosPredictionUpdatePredictedClassErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionUpdatePredictedClassErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionUpdatePredictedClassErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionUpdatePredictedClassErrorComponentAttrEnumSerializer
     implements
@@ -165,21 +165,13 @@ class _$PhotosPredictionUpdatePredictedClassErrorComponent
           [void Function(
                   PhotosPredictionUpdatePredictedClassErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdatePredictedClassErrorComponentBuilder()
+      (PhotosPredictionUpdatePredictedClassErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionUpdatePredictedClassErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionUpdatePredictedClassErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionUpdatePredictedClassErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'PhotosPredictionUpdatePredictedClassErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdatePredictedClassErrorComponent rebuild(
           void Function(
@@ -189,7 +181,7 @@ class _$PhotosPredictionUpdatePredictedClassErrorComponent
 
   @override
   PhotosPredictionUpdatePredictedClassErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionUpdatePredictedClassErrorComponentBuilder()
+      PhotosPredictionUpdatePredictedClassErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -261,7 +253,6 @@ class PhotosPredictionUpdatePredictedClassErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionUpdatePredictedClassErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdatePredictedClassErrorComponent;
   }
 
@@ -277,15 +268,14 @@ class PhotosPredictionUpdatePredictedClassErrorComponentBuilder
 
   _$PhotosPredictionUpdatePredictedClassErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdatePredictedClassErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'PhotosPredictionUpdatePredictedClassErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'PhotosPredictionUpdatePredictedClassErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionUpdatePredictedClassErrorComponent',
-                'detail'));
+        _$PhotosPredictionUpdatePredictedClassErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'PhotosPredictionUpdatePredictedClassErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'PhotosPredictionUpdatePredictedClassErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'PhotosPredictionUpdatePredictedClassErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

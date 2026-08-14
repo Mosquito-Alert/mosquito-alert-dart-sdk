@@ -28,7 +28,7 @@ MessagesCreateContentTitleRoErrorComponentAttrEnum
 }
 
 final BuiltSet<MessagesCreateContentTitleRoErrorComponentAttrEnum>
-    _$messagesCreateContentTitleRoErrorComponentAttrEnumValues = new BuiltSet<
+    _$messagesCreateContentTitleRoErrorComponentAttrEnumValues = BuiltSet<
         MessagesCreateContentTitleRoErrorComponentAttrEnum>(const <MessagesCreateContentTitleRoErrorComponentAttrEnum>[
   _$messagesCreateContentTitleRoErrorComponentAttrEnum_contentPeriodTitlePeriodRo,
   _$messagesCreateContentTitleRoErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -77,7 +77,7 @@ MessagesCreateContentTitleRoErrorComponentCodeEnum
 }
 
 final BuiltSet<MessagesCreateContentTitleRoErrorComponentCodeEnum>
-    _$messagesCreateContentTitleRoErrorComponentCodeEnumValues = new BuiltSet<
+    _$messagesCreateContentTitleRoErrorComponentCodeEnumValues = BuiltSet<
         MessagesCreateContentTitleRoErrorComponentCodeEnum>(const <MessagesCreateContentTitleRoErrorComponentCodeEnum>[
   _$messagesCreateContentTitleRoErrorComponentCodeEnum_blank,
   _$messagesCreateContentTitleRoErrorComponentCodeEnum_invalid,
@@ -89,10 +89,10 @@ final BuiltSet<MessagesCreateContentTitleRoErrorComponentCodeEnum>
 
 Serializer<MessagesCreateContentTitleRoErrorComponentAttrEnum>
     _$messagesCreateContentTitleRoErrorComponentAttrEnumSerializer =
-    new _$MessagesCreateContentTitleRoErrorComponentAttrEnumSerializer();
+    _$MessagesCreateContentTitleRoErrorComponentAttrEnumSerializer();
 Serializer<MessagesCreateContentTitleRoErrorComponentCodeEnum>
     _$messagesCreateContentTitleRoErrorComponentCodeEnumSerializer =
-    new _$MessagesCreateContentTitleRoErrorComponentCodeEnumSerializer();
+    _$MessagesCreateContentTitleRoErrorComponentCodeEnumSerializer();
 
 class _$MessagesCreateContentTitleRoErrorComponentAttrEnumSerializer
     implements
@@ -182,20 +182,12 @@ class _$MessagesCreateContentTitleRoErrorComponent
   factory _$MessagesCreateContentTitleRoErrorComponent(
           [void Function(MessagesCreateContentTitleRoErrorComponentBuilder)?
               updates]) =>
-      (new MessagesCreateContentTitleRoErrorComponentBuilder()..update(updates))
+      (MessagesCreateContentTitleRoErrorComponentBuilder()..update(updates))
           ._build();
 
   _$MessagesCreateContentTitleRoErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'MessagesCreateContentTitleRoErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'MessagesCreateContentTitleRoErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'MessagesCreateContentTitleRoErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   MessagesCreateContentTitleRoErrorComponent rebuild(
           void Function(MessagesCreateContentTitleRoErrorComponentBuilder)
@@ -204,7 +196,7 @@ class _$MessagesCreateContentTitleRoErrorComponent
 
   @override
   MessagesCreateContentTitleRoErrorComponentBuilder toBuilder() =>
-      new MessagesCreateContentTitleRoErrorComponentBuilder()..replace(this);
+      MessagesCreateContentTitleRoErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -273,7 +265,6 @@ class MessagesCreateContentTitleRoErrorComponentBuilder
 
   @override
   void replace(MessagesCreateContentTitleRoErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesCreateContentTitleRoErrorComponent;
   }
 
@@ -289,13 +280,14 @@ class MessagesCreateContentTitleRoErrorComponentBuilder
 
   _$MessagesCreateContentTitleRoErrorComponent _build() {
     final _$result = _$v ??
-        new _$MessagesCreateContentTitleRoErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'MessagesCreateContentTitleRoErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'MessagesCreateContentTitleRoErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'MessagesCreateContentTitleRoErrorComponent', 'detail'));
+        _$MessagesCreateContentTitleRoErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'MessagesCreateContentTitleRoErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'MessagesCreateContentTitleRoErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'MessagesCreateContentTitleRoErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

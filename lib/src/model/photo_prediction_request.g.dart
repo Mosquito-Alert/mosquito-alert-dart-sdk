@@ -66,7 +66,7 @@ PhotoPredictionRequestPredictedClassEnum
 }
 
 final BuiltSet<PhotoPredictionRequestPredictedClassEnum>
-    _$photoPredictionRequestPredictedClassEnumValues = new BuiltSet<
+    _$photoPredictionRequestPredictedClassEnumValues = BuiltSet<
         PhotoPredictionRequestPredictedClassEnum>(const <PhotoPredictionRequestPredictedClassEnum>[
   _$photoPredictionRequestPredictedClassEnum_aeAlbopictus,
   _$photoPredictionRequestPredictedClassEnum_aeAegypti,
@@ -126,7 +126,7 @@ PhotoPredictionRequestClassifierVersionEnum
 }
 
 final BuiltSet<PhotoPredictionRequestClassifierVersionEnum>
-    _$photoPredictionRequestClassifierVersionEnumValues = new BuiltSet<
+    _$photoPredictionRequestClassifierVersionEnumValues = BuiltSet<
         PhotoPredictionRequestClassifierVersionEnum>(const <PhotoPredictionRequestClassifierVersionEnum>[
   _$photoPredictionRequestClassifierVersionEnum_v2023Period1,
   _$photoPredictionRequestClassifierVersionEnum_v2024Period1,
@@ -139,10 +139,10 @@ final BuiltSet<PhotoPredictionRequestClassifierVersionEnum>
 
 Serializer<PhotoPredictionRequestPredictedClassEnum>
     _$photoPredictionRequestPredictedClassEnumSerializer =
-    new _$PhotoPredictionRequestPredictedClassEnumSerializer();
+    _$PhotoPredictionRequestPredictedClassEnumSerializer();
 Serializer<PhotoPredictionRequestClassifierVersionEnum>
     _$photoPredictionRequestClassifierVersionEnumSerializer =
-    new _$PhotoPredictionRequestClassifierVersionEnumSerializer();
+    _$PhotoPredictionRequestClassifierVersionEnumSerializer();
 
 class _$PhotoPredictionRequestPredictedClassEnumSerializer
     implements PrimitiveSerializer<PhotoPredictionRequestPredictedClassEnum> {
@@ -253,7 +253,7 @@ class _$PhotoPredictionRequest extends PhotoPredictionRequest {
 
   factory _$PhotoPredictionRequest(
           [void Function(PhotoPredictionRequestBuilder)? updates]) =>
-      (new PhotoPredictionRequestBuilder()..update(updates))._build();
+      (PhotoPredictionRequestBuilder()..update(updates))._build();
 
   _$PhotoPredictionRequest._(
       {required this.bbox,
@@ -263,19 +263,7 @@ class _$PhotoPredictionRequest extends PhotoPredictionRequest {
       this.isDecisive,
       required this.scores,
       required this.classifierVersion})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        bbox, r'PhotoPredictionRequest', 'bbox');
-    BuiltValueNullFieldError.checkNotNull(
-        insectConfidence, r'PhotoPredictionRequest', 'insectConfidence');
-    BuiltValueNullFieldError.checkNotNull(
-        thresholdDeviation, r'PhotoPredictionRequest', 'thresholdDeviation');
-    BuiltValueNullFieldError.checkNotNull(
-        scores, r'PhotoPredictionRequest', 'scores');
-    BuiltValueNullFieldError.checkNotNull(
-        classifierVersion, r'PhotoPredictionRequest', 'classifierVersion');
-  }
-
+      : super._();
   @override
   PhotoPredictionRequest rebuild(
           void Function(PhotoPredictionRequestBuilder) updates) =>
@@ -283,7 +271,7 @@ class _$PhotoPredictionRequest extends PhotoPredictionRequest {
 
   @override
   PhotoPredictionRequestBuilder toBuilder() =>
-      new PhotoPredictionRequestBuilder()..replace(this);
+      PhotoPredictionRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -332,7 +320,7 @@ class PhotoPredictionRequestBuilder
 
   BoundingBoxRequestBuilder? _bbox;
   BoundingBoxRequestBuilder get bbox =>
-      _$this._bbox ??= new BoundingBoxRequestBuilder();
+      _$this._bbox ??= BoundingBoxRequestBuilder();
   set bbox(BoundingBoxRequestBuilder? bbox) => _$this._bbox = bbox;
 
   double? _insectConfidence;
@@ -358,7 +346,7 @@ class PhotoPredictionRequestBuilder
 
   PredictionScoreRequestBuilder? _scores;
   PredictionScoreRequestBuilder get scores =>
-      _$this._scores ??= new PredictionScoreRequestBuilder();
+      _$this._scores ??= PredictionScoreRequestBuilder();
   set scores(PredictionScoreRequestBuilder? scores) => _$this._scores = scores;
 
   PhotoPredictionRequestClassifierVersionEnum? _classifierVersion;
@@ -389,7 +377,6 @@ class PhotoPredictionRequestBuilder
 
   @override
   void replace(PhotoPredictionRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotoPredictionRequest;
   }
 
@@ -405,23 +392,24 @@ class PhotoPredictionRequestBuilder
     _$PhotoPredictionRequest _$result;
     try {
       _$result = _$v ??
-          new _$PhotoPredictionRequest._(
-              bbox: bbox.build(),
-              insectConfidence: BuiltValueNullFieldError.checkNotNull(
-                  insectConfidence,
-                  r'PhotoPredictionRequest',
-                  'insectConfidence'),
-              predictedClass: predictedClass,
-              thresholdDeviation: BuiltValueNullFieldError.checkNotNull(
-                  thresholdDeviation,
-                  r'PhotoPredictionRequest',
-                  'thresholdDeviation'),
-              isDecisive: isDecisive,
-              scores: scores.build(),
-              classifierVersion: BuiltValueNullFieldError.checkNotNull(
-                  classifierVersion,
-                  r'PhotoPredictionRequest',
-                  'classifierVersion'));
+          _$PhotoPredictionRequest._(
+            bbox: bbox.build(),
+            insectConfidence: BuiltValueNullFieldError.checkNotNull(
+                insectConfidence,
+                r'PhotoPredictionRequest',
+                'insectConfidence'),
+            predictedClass: predictedClass,
+            thresholdDeviation: BuiltValueNullFieldError.checkNotNull(
+                thresholdDeviation,
+                r'PhotoPredictionRequest',
+                'thresholdDeviation'),
+            isDecisive: isDecisive,
+            scores: scores.build(),
+            classifierVersion: BuiltValueNullFieldError.checkNotNull(
+                classifierVersion,
+                r'PhotoPredictionRequest',
+                'classifierVersion'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -431,7 +419,7 @@ class PhotoPredictionRequestBuilder
         _$failedField = 'scores';
         scores.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PhotoPredictionRequest', _$failedField, e.toString());
       }
       rethrow;

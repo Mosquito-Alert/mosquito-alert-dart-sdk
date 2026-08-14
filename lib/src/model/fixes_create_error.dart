@@ -121,9 +121,7 @@ class _$FixesCreateErrorSerializer implements PrimitiveSerializer<FixesCreateErr
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    FixesCreateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    FixesCreateError object) sync* {
   }
 
   @override

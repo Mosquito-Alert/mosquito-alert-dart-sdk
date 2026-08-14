@@ -27,7 +27,7 @@ ObservationsListMineValidationErrorTypeEnum
 }
 
 final BuiltSet<ObservationsListMineValidationErrorTypeEnum>
-    _$observationsListMineValidationErrorTypeEnumValues = new BuiltSet<
+    _$observationsListMineValidationErrorTypeEnumValues = BuiltSet<
         ObservationsListMineValidationErrorTypeEnum>(const <ObservationsListMineValidationErrorTypeEnum>[
   _$observationsListMineValidationErrorTypeEnum_validationError,
   _$observationsListMineValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -35,7 +35,7 @@ final BuiltSet<ObservationsListMineValidationErrorTypeEnum>
 
 Serializer<ObservationsListMineValidationErrorTypeEnum>
     _$observationsListMineValidationErrorTypeEnumSerializer =
-    new _$ObservationsListMineValidationErrorTypeEnumSerializer();
+    _$ObservationsListMineValidationErrorTypeEnumSerializer();
 
 class _$ObservationsListMineValidationErrorTypeEnumSerializer
     implements
@@ -80,18 +80,11 @@ class _$ObservationsListMineValidationError
   factory _$ObservationsListMineValidationError(
           [void Function(ObservationsListMineValidationErrorBuilder)?
               updates]) =>
-      (new ObservationsListMineValidationErrorBuilder()..update(updates))
-          ._build();
+      (ObservationsListMineValidationErrorBuilder()..update(updates))._build();
 
   _$ObservationsListMineValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'ObservationsListMineValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'ObservationsListMineValidationError', 'errors');
-  }
-
+      : super._();
   @override
   ObservationsListMineValidationError rebuild(
           void Function(ObservationsListMineValidationErrorBuilder) updates) =>
@@ -99,7 +92,7 @@ class _$ObservationsListMineValidationError
 
   @override
   ObservationsListMineValidationErrorBuilder toBuilder() =>
-      new ObservationsListMineValidationErrorBuilder()..replace(this);
+      ObservationsListMineValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -140,7 +133,7 @@ class ObservationsListMineValidationErrorBuilder
 
   ListBuilder<ObservationsListMineError>? _errors;
   ListBuilder<ObservationsListMineError> get errors =>
-      _$this._errors ??= new ListBuilder<ObservationsListMineError>();
+      _$this._errors ??= ListBuilder<ObservationsListMineError>();
   set errors(ListBuilder<ObservationsListMineError>? errors) =>
       _$this._errors = errors;
 
@@ -160,7 +153,6 @@ class ObservationsListMineValidationErrorBuilder
 
   @override
   void replace(ObservationsListMineValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListMineValidationError;
   }
 
@@ -177,20 +169,19 @@ class ObservationsListMineValidationErrorBuilder
     _$ObservationsListMineValidationError _$result;
     try {
       _$result = _$v ??
-          new _$ObservationsListMineValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'ObservationsListMineValidationError', 'type'),
-              errors: errors.build());
+          _$ObservationsListMineValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'ObservationsListMineValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'ObservationsListMineValidationError',
-            _$failedField,
-            e.toString());
+        throw BuiltValueNestedFieldError(r'ObservationsListMineValidationError',
+            _$failedField, e.toString());
       }
       rethrow;
     }

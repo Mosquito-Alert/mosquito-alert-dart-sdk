@@ -67,7 +67,7 @@ CreatePhotoPredictionRequestPredictedClassEnum
 }
 
 final BuiltSet<CreatePhotoPredictionRequestPredictedClassEnum>
-    _$createPhotoPredictionRequestPredictedClassEnumValues = new BuiltSet<
+    _$createPhotoPredictionRequestPredictedClassEnumValues = BuiltSet<
         CreatePhotoPredictionRequestPredictedClassEnum>(const <CreatePhotoPredictionRequestPredictedClassEnum>[
   _$createPhotoPredictionRequestPredictedClassEnum_aeAlbopictus,
   _$createPhotoPredictionRequestPredictedClassEnum_aeAegypti,
@@ -127,7 +127,7 @@ CreatePhotoPredictionRequestClassifierVersionEnum
 }
 
 final BuiltSet<CreatePhotoPredictionRequestClassifierVersionEnum>
-    _$createPhotoPredictionRequestClassifierVersionEnumValues = new BuiltSet<
+    _$createPhotoPredictionRequestClassifierVersionEnumValues = BuiltSet<
         CreatePhotoPredictionRequestClassifierVersionEnum>(const <CreatePhotoPredictionRequestClassifierVersionEnum>[
   _$createPhotoPredictionRequestClassifierVersionEnum_v2023Period1,
   _$createPhotoPredictionRequestClassifierVersionEnum_v2024Period1,
@@ -140,10 +140,10 @@ final BuiltSet<CreatePhotoPredictionRequestClassifierVersionEnum>
 
 Serializer<CreatePhotoPredictionRequestPredictedClassEnum>
     _$createPhotoPredictionRequestPredictedClassEnumSerializer =
-    new _$CreatePhotoPredictionRequestPredictedClassEnumSerializer();
+    _$CreatePhotoPredictionRequestPredictedClassEnumSerializer();
 Serializer<CreatePhotoPredictionRequestClassifierVersionEnum>
     _$createPhotoPredictionRequestClassifierVersionEnumSerializer =
-    new _$CreatePhotoPredictionRequestClassifierVersionEnumSerializer();
+    _$CreatePhotoPredictionRequestClassifierVersionEnumSerializer();
 
 class _$CreatePhotoPredictionRequestPredictedClassEnumSerializer
     implements
@@ -257,7 +257,7 @@ class _$CreatePhotoPredictionRequest extends CreatePhotoPredictionRequest {
 
   factory _$CreatePhotoPredictionRequest(
           [void Function(CreatePhotoPredictionRequestBuilder)? updates]) =>
-      (new CreatePhotoPredictionRequestBuilder()..update(updates))._build();
+      (CreatePhotoPredictionRequestBuilder()..update(updates))._build();
 
   _$CreatePhotoPredictionRequest._(
       {required this.photoUuid,
@@ -268,21 +268,7 @@ class _$CreatePhotoPredictionRequest extends CreatePhotoPredictionRequest {
       this.isDecisive,
       required this.scores,
       required this.classifierVersion})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        photoUuid, r'CreatePhotoPredictionRequest', 'photoUuid');
-    BuiltValueNullFieldError.checkNotNull(
-        bbox, r'CreatePhotoPredictionRequest', 'bbox');
-    BuiltValueNullFieldError.checkNotNull(
-        insectConfidence, r'CreatePhotoPredictionRequest', 'insectConfidence');
-    BuiltValueNullFieldError.checkNotNull(thresholdDeviation,
-        r'CreatePhotoPredictionRequest', 'thresholdDeviation');
-    BuiltValueNullFieldError.checkNotNull(
-        scores, r'CreatePhotoPredictionRequest', 'scores');
-    BuiltValueNullFieldError.checkNotNull(classifierVersion,
-        r'CreatePhotoPredictionRequest', 'classifierVersion');
-  }
-
+      : super._();
   @override
   CreatePhotoPredictionRequest rebuild(
           void Function(CreatePhotoPredictionRequestBuilder) updates) =>
@@ -290,7 +276,7 @@ class _$CreatePhotoPredictionRequest extends CreatePhotoPredictionRequest {
 
   @override
   CreatePhotoPredictionRequestBuilder toBuilder() =>
-      new CreatePhotoPredictionRequestBuilder()..replace(this);
+      CreatePhotoPredictionRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -348,7 +334,7 @@ class CreatePhotoPredictionRequestBuilder
 
   BoundingBoxRequestBuilder? _bbox;
   BoundingBoxRequestBuilder get bbox =>
-      _$this._bbox ??= new BoundingBoxRequestBuilder();
+      _$this._bbox ??= BoundingBoxRequestBuilder();
   set bbox(BoundingBoxRequestBuilder? bbox) => _$this._bbox = bbox;
 
   double? _insectConfidence;
@@ -374,7 +360,7 @@ class CreatePhotoPredictionRequestBuilder
 
   PredictionScoreRequestBuilder? _scores;
   PredictionScoreRequestBuilder get scores =>
-      _$this._scores ??= new PredictionScoreRequestBuilder();
+      _$this._scores ??= PredictionScoreRequestBuilder();
   set scores(PredictionScoreRequestBuilder? scores) => _$this._scores = scores;
 
   CreatePhotoPredictionRequestClassifierVersionEnum? _classifierVersion;
@@ -407,7 +393,6 @@ class CreatePhotoPredictionRequestBuilder
 
   @override
   void replace(CreatePhotoPredictionRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CreatePhotoPredictionRequest;
   }
 
@@ -423,25 +408,26 @@ class CreatePhotoPredictionRequestBuilder
     _$CreatePhotoPredictionRequest _$result;
     try {
       _$result = _$v ??
-          new _$CreatePhotoPredictionRequest._(
-              photoUuid: BuiltValueNullFieldError.checkNotNull(
-                  photoUuid, r'CreatePhotoPredictionRequest', 'photoUuid'),
-              bbox: bbox.build(),
-              insectConfidence: BuiltValueNullFieldError.checkNotNull(
-                  insectConfidence,
-                  r'CreatePhotoPredictionRequest',
-                  'insectConfidence'),
-              predictedClass: predictedClass,
-              thresholdDeviation: BuiltValueNullFieldError.checkNotNull(
-                  thresholdDeviation,
-                  r'CreatePhotoPredictionRequest',
-                  'thresholdDeviation'),
-              isDecisive: isDecisive,
-              scores: scores.build(),
-              classifierVersion: BuiltValueNullFieldError.checkNotNull(
-                  classifierVersion,
-                  r'CreatePhotoPredictionRequest',
-                  'classifierVersion'));
+          _$CreatePhotoPredictionRequest._(
+            photoUuid: BuiltValueNullFieldError.checkNotNull(
+                photoUuid, r'CreatePhotoPredictionRequest', 'photoUuid'),
+            bbox: bbox.build(),
+            insectConfidence: BuiltValueNullFieldError.checkNotNull(
+                insectConfidence,
+                r'CreatePhotoPredictionRequest',
+                'insectConfidence'),
+            predictedClass: predictedClass,
+            thresholdDeviation: BuiltValueNullFieldError.checkNotNull(
+                thresholdDeviation,
+                r'CreatePhotoPredictionRequest',
+                'thresholdDeviation'),
+            isDecisive: isDecisive,
+            scores: scores.build(),
+            classifierVersion: BuiltValueNullFieldError.checkNotNull(
+                classifierVersion,
+                r'CreatePhotoPredictionRequest',
+                'classifierVersion'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -451,7 +437,7 @@ class CreatePhotoPredictionRequestBuilder
         _$failedField = 'scores';
         scores.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'CreatePhotoPredictionRequest', _$failedField, e.toString());
       }
       rethrow;

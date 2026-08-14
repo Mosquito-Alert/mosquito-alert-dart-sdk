@@ -166,15 +166,17 @@ class _$WorkspaceSerializer implements PrimitiveSerializer<Workspace> {
         case r'is_public':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(bool),
-          ) as bool;
+            specifiedType: const FullType.nullable(bool),
+          ) as bool?;
+          if (valueDes == null) continue;
           result.isPublic = valueDes;
           break;
         case r'supervisor_exclusivity_days':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(int),
-          ) as int;
+            specifiedType: const FullType.nullable(int),
+          ) as int?;
+          if (valueDes == null) continue;
           result.supervisorExclusivityDays = valueDes;
           break;
         case r'updated_at':

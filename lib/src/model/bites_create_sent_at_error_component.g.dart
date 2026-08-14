@@ -26,7 +26,7 @@ BitesCreateSentAtErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateSentAtErrorComponentAttrEnum>
-    _$bitesCreateSentAtErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateSentAtErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateSentAtErrorComponentAttrEnum>(const <BitesCreateSentAtErrorComponentAttrEnum>[
   _$bitesCreateSentAtErrorComponentAttrEnum_sentAt,
   _$bitesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -77,7 +77,7 @@ BitesCreateSentAtErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateSentAtErrorComponentCodeEnum>
-    _$bitesCreateSentAtErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateSentAtErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateSentAtErrorComponentCodeEnum>(const <BitesCreateSentAtErrorComponentCodeEnum>[
   _$bitesCreateSentAtErrorComponentCodeEnum_date,
   _$bitesCreateSentAtErrorComponentCodeEnum_invalid,
@@ -90,10 +90,10 @@ final BuiltSet<BitesCreateSentAtErrorComponentCodeEnum>
 
 Serializer<BitesCreateSentAtErrorComponentAttrEnum>
     _$bitesCreateSentAtErrorComponentAttrEnumSerializer =
-    new _$BitesCreateSentAtErrorComponentAttrEnumSerializer();
+    _$BitesCreateSentAtErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateSentAtErrorComponentCodeEnum>
     _$bitesCreateSentAtErrorComponentCodeEnumSerializer =
-    new _$BitesCreateSentAtErrorComponentCodeEnumSerializer();
+    _$BitesCreateSentAtErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateSentAtErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesCreateSentAtErrorComponentAttrEnum> {
@@ -180,19 +180,11 @@ class _$BitesCreateSentAtErrorComponent
 
   factory _$BitesCreateSentAtErrorComponent(
           [void Function(BitesCreateSentAtErrorComponentBuilder)? updates]) =>
-      (new BitesCreateSentAtErrorComponentBuilder()..update(updates))._build();
+      (BitesCreateSentAtErrorComponentBuilder()..update(updates))._build();
 
   _$BitesCreateSentAtErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateSentAtErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateSentAtErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateSentAtErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateSentAtErrorComponent rebuild(
           void Function(BitesCreateSentAtErrorComponentBuilder) updates) =>
@@ -200,7 +192,7 @@ class _$BitesCreateSentAtErrorComponent
 
   @override
   BitesCreateSentAtErrorComponentBuilder toBuilder() =>
-      new BitesCreateSentAtErrorComponentBuilder()..replace(this);
+      BitesCreateSentAtErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -268,7 +260,6 @@ class BitesCreateSentAtErrorComponentBuilder
 
   @override
   void replace(BitesCreateSentAtErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateSentAtErrorComponent;
   }
 
@@ -282,13 +273,14 @@ class BitesCreateSentAtErrorComponentBuilder
 
   _$BitesCreateSentAtErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateSentAtErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateSentAtErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateSentAtErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateSentAtErrorComponent', 'detail'));
+        _$BitesCreateSentAtErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateSentAtErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateSentAtErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateSentAtErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

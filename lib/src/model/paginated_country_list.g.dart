@@ -18,17 +18,11 @@ class _$PaginatedCountryList extends PaginatedCountryList {
 
   factory _$PaginatedCountryList(
           [void Function(PaginatedCountryListBuilder)? updates]) =>
-      (new PaginatedCountryListBuilder()..update(updates))._build();
+      (PaginatedCountryListBuilder()..update(updates))._build();
 
   _$PaginatedCountryList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedCountryList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedCountryList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedCountryList rebuild(
           void Function(PaginatedCountryListBuilder) updates) =>
@@ -36,7 +30,7 @@ class _$PaginatedCountryList extends PaginatedCountryList {
 
   @override
   PaginatedCountryListBuilder toBuilder() =>
-      new PaginatedCountryListBuilder()..replace(this);
+      PaginatedCountryListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -88,7 +82,7 @@ class PaginatedCountryListBuilder
 
   ListBuilder<Country>? _results;
   ListBuilder<Country> get results =>
-      _$this._results ??= new ListBuilder<Country>();
+      _$this._results ??= ListBuilder<Country>();
   set results(ListBuilder<Country>? results) => _$this._results = results;
 
   PaginatedCountryListBuilder() {
@@ -109,7 +103,6 @@ class PaginatedCountryListBuilder
 
   @override
   void replace(PaginatedCountryList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedCountryList;
   }
 
@@ -125,19 +118,20 @@ class PaginatedCountryListBuilder
     _$PaginatedCountryList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedCountryList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedCountryList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedCountryList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedCountryList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedCountryList', _$failedField, e.toString());
       }
       rethrow;

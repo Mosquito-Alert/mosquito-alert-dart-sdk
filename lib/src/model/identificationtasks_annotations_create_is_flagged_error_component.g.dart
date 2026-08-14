@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum_isFlagged,
   _$identificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnum_null_,
   _$identificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -70,10 +70,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnumSerializer
     implements
@@ -166,23 +166,13 @@ class _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent rebuild(
           void Function(
@@ -193,7 +183,7 @@ class _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent
   @override
   IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -272,7 +262,6 @@ class IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent;
   }
@@ -291,19 +280,20 @@ class IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentBuilder
 
   _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent',
-                'detail'));
+        _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateIsFlaggedErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

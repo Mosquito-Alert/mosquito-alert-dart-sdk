@@ -27,7 +27,7 @@ BitesCreateEventMomentErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateEventMomentErrorComponentAttrEnum>
-    _$bitesCreateEventMomentErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateEventMomentErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateEventMomentErrorComponentAttrEnum>(const <BitesCreateEventMomentErrorComponentAttrEnum>[
   _$bitesCreateEventMomentErrorComponentAttrEnum_eventMoment,
   _$bitesCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ BitesCreateEventMomentErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateEventMomentErrorComponentCodeEnum>
-    _$bitesCreateEventMomentErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateEventMomentErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateEventMomentErrorComponentCodeEnum>(const <BitesCreateEventMomentErrorComponentCodeEnum>[
   _$bitesCreateEventMomentErrorComponentCodeEnum_invalidChoice,
   _$bitesCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<BitesCreateEventMomentErrorComponentCodeEnum>
 
 Serializer<BitesCreateEventMomentErrorComponentAttrEnum>
     _$bitesCreateEventMomentErrorComponentAttrEnumSerializer =
-    new _$BitesCreateEventMomentErrorComponentAttrEnumSerializer();
+    _$BitesCreateEventMomentErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateEventMomentErrorComponentCodeEnum>
     _$bitesCreateEventMomentErrorComponentCodeEnumSerializer =
-    new _$BitesCreateEventMomentErrorComponentCodeEnumSerializer();
+    _$BitesCreateEventMomentErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateEventMomentErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,11 @@ class _$BitesCreateEventMomentErrorComponent
   factory _$BitesCreateEventMomentErrorComponent(
           [void Function(BitesCreateEventMomentErrorComponentBuilder)?
               updates]) =>
-      (new BitesCreateEventMomentErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesCreateEventMomentErrorComponentBuilder()..update(updates))._build();
 
   _$BitesCreateEventMomentErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateEventMomentErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateEventMomentErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateEventMomentErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateEventMomentErrorComponent rebuild(
           void Function(BitesCreateEventMomentErrorComponentBuilder) updates) =>
@@ -166,7 +157,7 @@ class _$BitesCreateEventMomentErrorComponent
 
   @override
   BitesCreateEventMomentErrorComponentBuilder toBuilder() =>
-      new BitesCreateEventMomentErrorComponentBuilder()..replace(this);
+      BitesCreateEventMomentErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -234,7 +225,6 @@ class BitesCreateEventMomentErrorComponentBuilder
 
   @override
   void replace(BitesCreateEventMomentErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateEventMomentErrorComponent;
   }
 
@@ -249,13 +239,14 @@ class BitesCreateEventMomentErrorComponentBuilder
 
   _$BitesCreateEventMomentErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateEventMomentErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateEventMomentErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateEventMomentErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateEventMomentErrorComponent', 'detail'));
+        _$BitesCreateEventMomentErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateEventMomentErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateEventMomentErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateEventMomentErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

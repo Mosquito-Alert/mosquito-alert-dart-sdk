@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrE
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnum_bboxPeriodNonFieldErrors,
   _$identificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeE
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorCompon
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent
       rebuild(
@@ -218,7 +204,7 @@ class _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorCompon
   @override
   IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -303,7 +289,6 @@ class IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponen
   void replace(
       IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent;
   }
@@ -323,20 +308,21 @@ class IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponen
   _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

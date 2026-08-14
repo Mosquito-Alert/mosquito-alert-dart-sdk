@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAtt
 final BuiltSet<
         IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnum_classificationConfidenceLabel,
   _$identificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCod
 final BuiltSet<
         IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComp
           [void Function(
                   IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentBuilder()
+      (IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent
       rebuild(
@@ -200,7 +186,7 @@ class _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComp
   @override
   IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentBuilder()
+          IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -285,7 +271,6 @@ class IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorCompon
   void replace(
       IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent;
   }
@@ -305,20 +290,21 @@ class IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorCompon
   _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent
+        _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

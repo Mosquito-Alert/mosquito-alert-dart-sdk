@@ -9,12 +9,68 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**audienceFilter**](UsersApi.md#audiencefilter) | **POST** /users/audience/ | 
 [**list**](UsersApi.md#list) | **GET** /users/ | 
 [**partialUpdate**](UsersApi.md#partialupdate) | **PATCH** /users/{uuid}/ | 
 [**retrieve**](UsersApi.md#retrieve) | **GET** /users/{uuid}/ | 
 [**retrieveMine**](UsersApi.md#retrievemine) | **GET** /me/ | 
 [**update**](UsersApi.md#update) | **PUT** /users/{uuid}/ | 
 
+
+# **audienceFilter**
+> PaginatedUserList audienceFilter(page, pageSize, audienceFilterRequest)
+
+
+
+Returns the users matching the provided audience criteria.
+
+### Example
+```dart
+import 'package:mosquito_alert/api.dart';
+// TODO Configure API key authorization: tokenAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('tokenAuth').apiKeyPrefix = 'Bearer';
+// TODO Configure API key authorization: cookieAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('cookieAuth').apiKeyPrefix = 'Bearer';
+
+final api = MosquitoAlert().getUsersApi();
+final int page = 56; // int | A page number within the paginated result set.
+final int pageSize = 56; // int | Number of results to return per page.
+final AudienceFilterRequest audienceFilterRequest = ; // AudienceFilterRequest | 
+
+try {
+    final response = api.audienceFilter(page, pageSize, audienceFilterRequest);
+    print(response);
+} on DioException catch (e) {
+    print('Exception when calling UsersApi->audienceFilter: $e\n');
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **pageSize** | **int**| Number of results to return per page. | [optional] 
+ **audienceFilterRequest** | [**AudienceFilterRequest**](AudienceFilterRequest.md)|  | [optional] 
+
+### Return type
+
+[**PaginatedUserList**](PaginatedUserList.md)
+
+### Authorization
+
+[tokenAuth](../README.md#tokenAuth), [cookieAuth](../README.md#cookieAuth), [jwtAuth](../README.md#jwtAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
 > PaginatedUserList list(page, pageSize, search)

@@ -26,7 +26,7 @@ FixesCreatePowerErrorComponentAttrEnum
 }
 
 final BuiltSet<FixesCreatePowerErrorComponentAttrEnum>
-    _$fixesCreatePowerErrorComponentAttrEnumValues = new BuiltSet<
+    _$fixesCreatePowerErrorComponentAttrEnumValues = BuiltSet<
         FixesCreatePowerErrorComponentAttrEnum>(const <FixesCreatePowerErrorComponentAttrEnum>[
   _$fixesCreatePowerErrorComponentAttrEnum_power,
   _$fixesCreatePowerErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -57,7 +57,7 @@ FixesCreatePowerErrorComponentCodeEnum
 }
 
 final BuiltSet<FixesCreatePowerErrorComponentCodeEnum>
-    _$fixesCreatePowerErrorComponentCodeEnumValues = new BuiltSet<
+    _$fixesCreatePowerErrorComponentCodeEnumValues = BuiltSet<
         FixesCreatePowerErrorComponentCodeEnum>(const <FixesCreatePowerErrorComponentCodeEnum>[
   _$fixesCreatePowerErrorComponentCodeEnum_invalid,
   _$fixesCreatePowerErrorComponentCodeEnum_maxStringLength,
@@ -66,10 +66,10 @@ final BuiltSet<FixesCreatePowerErrorComponentCodeEnum>
 
 Serializer<FixesCreatePowerErrorComponentAttrEnum>
     _$fixesCreatePowerErrorComponentAttrEnumSerializer =
-    new _$FixesCreatePowerErrorComponentAttrEnumSerializer();
+    _$FixesCreatePowerErrorComponentAttrEnumSerializer();
 Serializer<FixesCreatePowerErrorComponentCodeEnum>
     _$fixesCreatePowerErrorComponentCodeEnumSerializer =
-    new _$FixesCreatePowerErrorComponentCodeEnumSerializer();
+    _$FixesCreatePowerErrorComponentCodeEnumSerializer();
 
 class _$FixesCreatePowerErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<FixesCreatePowerErrorComponentAttrEnum> {
@@ -147,19 +147,11 @@ class _$FixesCreatePowerErrorComponent extends FixesCreatePowerErrorComponent {
 
   factory _$FixesCreatePowerErrorComponent(
           [void Function(FixesCreatePowerErrorComponentBuilder)? updates]) =>
-      (new FixesCreatePowerErrorComponentBuilder()..update(updates))._build();
+      (FixesCreatePowerErrorComponentBuilder()..update(updates))._build();
 
   _$FixesCreatePowerErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'FixesCreatePowerErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'FixesCreatePowerErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'FixesCreatePowerErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   FixesCreatePowerErrorComponent rebuild(
           void Function(FixesCreatePowerErrorComponentBuilder) updates) =>
@@ -167,7 +159,7 @@ class _$FixesCreatePowerErrorComponent extends FixesCreatePowerErrorComponent {
 
   @override
   FixesCreatePowerErrorComponentBuilder toBuilder() =>
-      new FixesCreatePowerErrorComponentBuilder()..replace(this);
+      FixesCreatePowerErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -233,7 +225,6 @@ class FixesCreatePowerErrorComponentBuilder
 
   @override
   void replace(FixesCreatePowerErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixesCreatePowerErrorComponent;
   }
 
@@ -247,13 +238,14 @@ class FixesCreatePowerErrorComponentBuilder
 
   _$FixesCreatePowerErrorComponent _build() {
     final _$result = _$v ??
-        new _$FixesCreatePowerErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'FixesCreatePowerErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'FixesCreatePowerErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'FixesCreatePowerErrorComponent', 'detail'));
+        _$FixesCreatePowerErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'FixesCreatePowerErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'FixesCreatePowerErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'FixesCreatePowerErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -18,17 +18,11 @@ class _$PaginatedAnnotationList extends PaginatedAnnotationList {
 
   factory _$PaginatedAnnotationList(
           [void Function(PaginatedAnnotationListBuilder)? updates]) =>
-      (new PaginatedAnnotationListBuilder()..update(updates))._build();
+      (PaginatedAnnotationListBuilder()..update(updates))._build();
 
   _$PaginatedAnnotationList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedAnnotationList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedAnnotationList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedAnnotationList rebuild(
           void Function(PaginatedAnnotationListBuilder) updates) =>
@@ -36,7 +30,7 @@ class _$PaginatedAnnotationList extends PaginatedAnnotationList {
 
   @override
   PaginatedAnnotationListBuilder toBuilder() =>
-      new PaginatedAnnotationListBuilder()..replace(this);
+      PaginatedAnnotationListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -89,7 +83,7 @@ class PaginatedAnnotationListBuilder
 
   ListBuilder<Annotation>? _results;
   ListBuilder<Annotation> get results =>
-      _$this._results ??= new ListBuilder<Annotation>();
+      _$this._results ??= ListBuilder<Annotation>();
   set results(ListBuilder<Annotation>? results) => _$this._results = results;
 
   PaginatedAnnotationListBuilder() {
@@ -110,7 +104,6 @@ class PaginatedAnnotationListBuilder
 
   @override
   void replace(PaginatedAnnotationList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedAnnotationList;
   }
 
@@ -126,19 +119,20 @@ class PaginatedAnnotationListBuilder
     _$PaginatedAnnotationList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedAnnotationList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedAnnotationList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedAnnotationList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedAnnotationList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedAnnotationList', _$failedField, e.toString());
       }
       rethrow;

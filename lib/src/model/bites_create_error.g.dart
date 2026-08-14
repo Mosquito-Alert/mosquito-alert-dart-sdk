@@ -24,7 +24,7 @@ BitesCreateErrorAttrEnum _$bitesCreateErrorAttrEnumValueOf(String name) {
 }
 
 final BuiltSet<BitesCreateErrorAttrEnum> _$bitesCreateErrorAttrEnumValues =
-    new BuiltSet<BitesCreateErrorAttrEnum>(const <BitesCreateErrorAttrEnum>[
+    BuiltSet<BitesCreateErrorAttrEnum>(const <BitesCreateErrorAttrEnum>[
   _$bitesCreateErrorAttrEnum_countsPeriodRightLeg,
   _$bitesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -55,7 +55,7 @@ BitesCreateErrorCodeEnum _$bitesCreateErrorCodeEnumValueOf(String name) {
 }
 
 final BuiltSet<BitesCreateErrorCodeEnum> _$bitesCreateErrorCodeEnumValues =
-    new BuiltSet<BitesCreateErrorCodeEnum>(const <BitesCreateErrorCodeEnum>[
+    BuiltSet<BitesCreateErrorCodeEnum>(const <BitesCreateErrorCodeEnum>[
   _$bitesCreateErrorCodeEnum_invalid,
   _$bitesCreateErrorCodeEnum_maxStringLength,
   _$bitesCreateErrorCodeEnum_null_,
@@ -63,9 +63,9 @@ final BuiltSet<BitesCreateErrorCodeEnum> _$bitesCreateErrorCodeEnumValues =
 ]);
 
 Serializer<BitesCreateErrorAttrEnum> _$bitesCreateErrorAttrEnumSerializer =
-    new _$BitesCreateErrorAttrEnumSerializer();
+    _$BitesCreateErrorAttrEnumSerializer();
 Serializer<BitesCreateErrorCodeEnum> _$bitesCreateErrorCodeEnumSerializer =
-    new _$BitesCreateErrorCodeEnumSerializer();
+    _$BitesCreateErrorCodeEnumSerializer();
 
 class _$BitesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<BitesCreateErrorAttrEnum> {
@@ -135,19 +135,16 @@ class _$BitesCreateError extends BitesCreateError {
 
   factory _$BitesCreateError(
           [void Function(BitesCreateErrorBuilder)? updates]) =>
-      (new BitesCreateErrorBuilder()..update(updates))._build();
+      (BitesCreateErrorBuilder()..update(updates))._build();
 
-  _$BitesCreateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(oneOf, r'BitesCreateError', 'oneOf');
-  }
-
+  _$BitesCreateError._({required this.oneOf}) : super._();
   @override
   BitesCreateError rebuild(void Function(BitesCreateErrorBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   BitesCreateErrorBuilder toBuilder() =>
-      new BitesCreateErrorBuilder()..replace(this);
+      BitesCreateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -194,7 +191,6 @@ class BitesCreateErrorBuilder
 
   @override
   void replace(BitesCreateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateError;
   }
 
@@ -208,9 +204,10 @@ class BitesCreateErrorBuilder
 
   _$BitesCreateError _build() {
     final _$result = _$v ??
-        new _$BitesCreateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'BitesCreateError', 'oneOf'));
+        _$BitesCreateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'BitesCreateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

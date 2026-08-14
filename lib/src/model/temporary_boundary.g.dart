@@ -14,22 +14,17 @@ class _$TemporaryBoundary extends TemporaryBoundary {
 
   factory _$TemporaryBoundary(
           [void Function(TemporaryBoundaryBuilder)? updates]) =>
-      (new TemporaryBoundaryBuilder()..update(updates))._build();
+      (TemporaryBoundaryBuilder()..update(updates))._build();
 
   _$TemporaryBoundary._({required this.uuid, required this.expiresIn})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'TemporaryBoundary', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(
-        expiresIn, r'TemporaryBoundary', 'expiresIn');
-  }
-
+      : super._();
   @override
   TemporaryBoundary rebuild(void Function(TemporaryBoundaryBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   TemporaryBoundaryBuilder toBuilder() =>
-      new TemporaryBoundaryBuilder()..replace(this);
+      TemporaryBoundaryBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -85,7 +80,6 @@ class TemporaryBoundaryBuilder
 
   @override
   void replace(TemporaryBoundary other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$TemporaryBoundary;
   }
 
@@ -99,11 +93,12 @@ class TemporaryBoundaryBuilder
 
   _$TemporaryBoundary _build() {
     final _$result = _$v ??
-        new _$TemporaryBoundary._(
-            uuid: BuiltValueNullFieldError.checkNotNull(
-                uuid, r'TemporaryBoundary', 'uuid'),
-            expiresIn: BuiltValueNullFieldError.checkNotNull(
-                expiresIn, r'TemporaryBoundary', 'expiresIn'));
+        _$TemporaryBoundary._(
+          uuid: BuiltValueNullFieldError.checkNotNull(
+              uuid, r'TemporaryBoundary', 'uuid'),
+          expiresIn: BuiltValueNullFieldError.checkNotNull(
+              expiresIn, r'TemporaryBoundary', 'expiresIn'),
+        );
     replace(_$result);
     return _$result;
   }

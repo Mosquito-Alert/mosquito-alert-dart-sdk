@@ -25,7 +25,7 @@ DevicesUpdateErrorAttrEnum _$devicesUpdateErrorAttrEnumValueOf(String name) {
 }
 
 final BuiltSet<DevicesUpdateErrorAttrEnum> _$devicesUpdateErrorAttrEnumValues =
-    new BuiltSet<DevicesUpdateErrorAttrEnum>(const <DevicesUpdateErrorAttrEnum>[
+    BuiltSet<DevicesUpdateErrorAttrEnum>(const <DevicesUpdateErrorAttrEnum>[
   _$devicesUpdateErrorAttrEnum_mobileAppPeriodPackageVersion,
   _$devicesUpdateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -78,7 +78,7 @@ DevicesUpdateErrorCodeEnum _$devicesUpdateErrorCodeEnumValueOf(String name) {
 }
 
 final BuiltSet<DevicesUpdateErrorCodeEnum> _$devicesUpdateErrorCodeEnumValues =
-    new BuiltSet<DevicesUpdateErrorCodeEnum>(const <DevicesUpdateErrorCodeEnum>[
+    BuiltSet<DevicesUpdateErrorCodeEnum>(const <DevicesUpdateErrorCodeEnum>[
   _$devicesUpdateErrorCodeEnum_blank,
   _$devicesUpdateErrorCodeEnum_invalid,
   _$devicesUpdateErrorCodeEnum_invalidVersion,
@@ -91,9 +91,9 @@ final BuiltSet<DevicesUpdateErrorCodeEnum> _$devicesUpdateErrorCodeEnumValues =
 ]);
 
 Serializer<DevicesUpdateErrorAttrEnum> _$devicesUpdateErrorAttrEnumSerializer =
-    new _$DevicesUpdateErrorAttrEnumSerializer();
+    _$DevicesUpdateErrorAttrEnumSerializer();
 Serializer<DevicesUpdateErrorCodeEnum> _$devicesUpdateErrorCodeEnumSerializer =
-    new _$DevicesUpdateErrorCodeEnumSerializer();
+    _$DevicesUpdateErrorCodeEnumSerializer();
 
 class _$DevicesUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<DevicesUpdateErrorAttrEnum> {
@@ -173,13 +173,9 @@ class _$DevicesUpdateError extends DevicesUpdateError {
 
   factory _$DevicesUpdateError(
           [void Function(DevicesUpdateErrorBuilder)? updates]) =>
-      (new DevicesUpdateErrorBuilder()..update(updates))._build();
+      (DevicesUpdateErrorBuilder()..update(updates))._build();
 
-  _$DevicesUpdateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'DevicesUpdateError', 'oneOf');
-  }
-
+  _$DevicesUpdateError._({required this.oneOf}) : super._();
   @override
   DevicesUpdateError rebuild(
           void Function(DevicesUpdateErrorBuilder) updates) =>
@@ -187,7 +183,7 @@ class _$DevicesUpdateError extends DevicesUpdateError {
 
   @override
   DevicesUpdateErrorBuilder toBuilder() =>
-      new DevicesUpdateErrorBuilder()..replace(this);
+      DevicesUpdateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -234,7 +230,6 @@ class DevicesUpdateErrorBuilder
 
   @override
   void replace(DevicesUpdateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesUpdateError;
   }
 
@@ -248,9 +243,10 @@ class DevicesUpdateErrorBuilder
 
   _$DevicesUpdateError _build() {
     final _$result = _$v ??
-        new _$DevicesUpdateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'DevicesUpdateError', 'oneOf'));
+        _$DevicesUpdateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'DevicesUpdateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

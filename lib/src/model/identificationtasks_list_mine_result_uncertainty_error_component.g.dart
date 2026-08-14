@@ -31,7 +31,7 @@ IdentificationtasksListMineResultUncertaintyErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksListMineResultUncertaintyErrorComponentAttrEnum>
     _$identificationtasksListMineResultUncertaintyErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineResultUncertaintyErrorComponentAttrEnum>(const <IdentificationtasksListMineResultUncertaintyErrorComponentAttrEnum>[
   _$identificationtasksListMineResultUncertaintyErrorComponentAttrEnum_resultUncertainty,
   _$identificationtasksListMineResultUncertaintyErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksListMineResultUncertaintyErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksListMineResultUncertaintyErrorComponentCodeEnum>
     _$identificationtasksListMineResultUncertaintyErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineResultUncertaintyErrorComponentCodeEnum>(const <IdentificationtasksListMineResultUncertaintyErrorComponentCodeEnum>[
   _$identificationtasksListMineResultUncertaintyErrorComponentCodeEnum_invalid,
   _$identificationtasksListMineResultUncertaintyErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -70,10 +70,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksListMineResultUncertaintyErrorComponentAttrEnum>
     _$identificationtasksListMineResultUncertaintyErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListMineResultUncertaintyErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListMineResultUncertaintyErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksListMineResultUncertaintyErrorComponentCodeEnum>
     _$identificationtasksListMineResultUncertaintyErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListMineResultUncertaintyErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListMineResultUncertaintyErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListMineResultUncertaintyErrorComponentAttrEnumSerializer
     implements
@@ -164,23 +164,13 @@ class _$IdentificationtasksListMineResultUncertaintyErrorComponent
           [void Function(
                   IdentificationtasksListMineResultUncertaintyErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListMineResultUncertaintyErrorComponentBuilder()
+      (IdentificationtasksListMineResultUncertaintyErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksListMineResultUncertaintyErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksListMineResultUncertaintyErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksListMineResultUncertaintyErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksListMineResultUncertaintyErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListMineResultUncertaintyErrorComponent rebuild(
           void Function(
@@ -191,7 +181,7 @@ class _$IdentificationtasksListMineResultUncertaintyErrorComponent
   @override
   IdentificationtasksListMineResultUncertaintyErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksListMineResultUncertaintyErrorComponentBuilder()
+          IdentificationtasksListMineResultUncertaintyErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -269,7 +259,6 @@ class IdentificationtasksListMineResultUncertaintyErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksListMineResultUncertaintyErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListMineResultUncertaintyErrorComponent;
   }
 
@@ -287,19 +276,20 @@ class IdentificationtasksListMineResultUncertaintyErrorComponentBuilder
 
   _$IdentificationtasksListMineResultUncertaintyErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListMineResultUncertaintyErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksListMineResultUncertaintyErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksListMineResultUncertaintyErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksListMineResultUncertaintyErrorComponent',
-                'detail'));
+        _$IdentificationtasksListMineResultUncertaintyErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksListMineResultUncertaintyErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksListMineResultUncertaintyErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksListMineResultUncertaintyErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

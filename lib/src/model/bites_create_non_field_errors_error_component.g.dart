@@ -27,7 +27,7 @@ BitesCreateNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateNonFieldErrorsErrorComponentAttrEnum>
-    _$bitesCreateNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateNonFieldErrorsErrorComponentAttrEnum>(const <BitesCreateNonFieldErrorsErrorComponentAttrEnum>[
   _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$bitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -59,7 +59,7 @@ BitesCreateNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateNonFieldErrorsErrorComponentCodeEnum>
-    _$bitesCreateNonFieldErrorsErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateNonFieldErrorsErrorComponentCodeEnum>(const <BitesCreateNonFieldErrorsErrorComponentCodeEnum>[
   _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$bitesCreateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -68,10 +68,10 @@ final BuiltSet<BitesCreateNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<BitesCreateNonFieldErrorsErrorComponentAttrEnum>
     _$bitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$BitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$BitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateNonFieldErrorsErrorComponentCodeEnum>
     _$bitesCreateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$BitesCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$BitesCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -153,20 +153,12 @@ class _$BitesCreateNonFieldErrorsErrorComponent
   factory _$BitesCreateNonFieldErrorsErrorComponent(
           [void Function(BitesCreateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new BitesCreateNonFieldErrorsErrorComponentBuilder()..update(updates))
+      (BitesCreateNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BitesCreateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateNonFieldErrorsErrorComponent rebuild(
           void Function(BitesCreateNonFieldErrorsErrorComponentBuilder)
@@ -175,7 +167,7 @@ class _$BitesCreateNonFieldErrorsErrorComponent
 
   @override
   BitesCreateNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new BitesCreateNonFieldErrorsErrorComponentBuilder()..replace(this);
+      BitesCreateNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -244,7 +236,6 @@ class BitesCreateNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(BitesCreateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateNonFieldErrorsErrorComponent;
   }
 
@@ -259,13 +250,14 @@ class BitesCreateNonFieldErrorsErrorComponentBuilder
 
   _$BitesCreateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateNonFieldErrorsErrorComponent', 'detail'));
+        _$BitesCreateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

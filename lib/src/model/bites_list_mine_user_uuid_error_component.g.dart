@@ -27,7 +27,7 @@ BitesListMineUserUuidErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesListMineUserUuidErrorComponentAttrEnum>
-    _$bitesListMineUserUuidErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesListMineUserUuidErrorComponentAttrEnumValues = BuiltSet<
         BitesListMineUserUuidErrorComponentAttrEnum>(const <BitesListMineUserUuidErrorComponentAttrEnum>[
   _$bitesListMineUserUuidErrorComponentAttrEnum_userUuid,
   _$bitesListMineUserUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ BitesListMineUserUuidErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesListMineUserUuidErrorComponentCodeEnum>
-    _$bitesListMineUserUuidErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesListMineUserUuidErrorComponentCodeEnumValues = BuiltSet<
         BitesListMineUserUuidErrorComponentCodeEnum>(const <BitesListMineUserUuidErrorComponentCodeEnum>[
   _$bitesListMineUserUuidErrorComponentCodeEnum_invalid,
   _$bitesListMineUserUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -69,10 +69,10 @@ final BuiltSet<BitesListMineUserUuidErrorComponentCodeEnum>
 
 Serializer<BitesListMineUserUuidErrorComponentAttrEnum>
     _$bitesListMineUserUuidErrorComponentAttrEnumSerializer =
-    new _$BitesListMineUserUuidErrorComponentAttrEnumSerializer();
+    _$BitesListMineUserUuidErrorComponentAttrEnumSerializer();
 Serializer<BitesListMineUserUuidErrorComponentCodeEnum>
     _$bitesListMineUserUuidErrorComponentCodeEnumSerializer =
-    new _$BitesListMineUserUuidErrorComponentCodeEnumSerializer();
+    _$BitesListMineUserUuidErrorComponentCodeEnumSerializer();
 
 class _$BitesListMineUserUuidErrorComponentAttrEnumSerializer
     implements
@@ -154,20 +154,11 @@ class _$BitesListMineUserUuidErrorComponent
   factory _$BitesListMineUserUuidErrorComponent(
           [void Function(BitesListMineUserUuidErrorComponentBuilder)?
               updates]) =>
-      (new BitesListMineUserUuidErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesListMineUserUuidErrorComponentBuilder()..update(updates))._build();
 
   _$BitesListMineUserUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesListMineUserUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesListMineUserUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesListMineUserUuidErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesListMineUserUuidErrorComponent rebuild(
           void Function(BitesListMineUserUuidErrorComponentBuilder) updates) =>
@@ -175,7 +166,7 @@ class _$BitesListMineUserUuidErrorComponent
 
   @override
   BitesListMineUserUuidErrorComponentBuilder toBuilder() =>
-      new BitesListMineUserUuidErrorComponentBuilder()..replace(this);
+      BitesListMineUserUuidErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -243,7 +234,6 @@ class BitesListMineUserUuidErrorComponentBuilder
 
   @override
   void replace(BitesListMineUserUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListMineUserUuidErrorComponent;
   }
 
@@ -258,13 +248,14 @@ class BitesListMineUserUuidErrorComponentBuilder
 
   _$BitesListMineUserUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesListMineUserUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesListMineUserUuidErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesListMineUserUuidErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesListMineUserUuidErrorComponent', 'detail'));
+        _$BitesListMineUserUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesListMineUserUuidErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesListMineUserUuidErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesListMineUserUuidErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

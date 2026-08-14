@@ -55,7 +55,7 @@ BreedingSiteGeoModelSiteTypeEnum _$breedingSiteGeoModelSiteTypeEnumValueOf(
 }
 
 final BuiltSet<BreedingSiteGeoModelSiteTypeEnum>
-    _$breedingSiteGeoModelSiteTypeEnumValues = new BuiltSet<
+    _$breedingSiteGeoModelSiteTypeEnumValues = BuiltSet<
         BreedingSiteGeoModelSiteTypeEnum>(const <BreedingSiteGeoModelSiteTypeEnum>[
   _$breedingSiteGeoModelSiteTypeEnum_basin,
   _$breedingSiteGeoModelSiteTypeEnum_bucket,
@@ -69,7 +69,7 @@ final BuiltSet<BreedingSiteGeoModelSiteTypeEnum>
 
 Serializer<BreedingSiteGeoModelSiteTypeEnum>
     _$breedingSiteGeoModelSiteTypeEnumSerializer =
-    new _$BreedingSiteGeoModelSiteTypeEnumSerializer();
+    _$BreedingSiteGeoModelSiteTypeEnumSerializer();
 
 class _$BreedingSiteGeoModelSiteTypeEnumSerializer
     implements PrimitiveSerializer<BreedingSiteGeoModelSiteTypeEnum> {
@@ -127,7 +127,7 @@ class _$BreedingSiteGeoModel extends BreedingSiteGeoModel {
 
   factory _$BreedingSiteGeoModel(
           [void Function(BreedingSiteGeoModelBuilder)? updates]) =>
-      (new BreedingSiteGeoModelBuilder()..update(updates))._build();
+      (BreedingSiteGeoModelBuilder()..update(updates))._build();
 
   _$BreedingSiteGeoModel._(
       {required this.uuid,
@@ -135,17 +135,7 @@ class _$BreedingSiteGeoModel extends BreedingSiteGeoModel {
       required this.receivedAt,
       required this.siteType,
       this.hasWater})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        uuid, r'BreedingSiteGeoModel', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(
-        point, r'BreedingSiteGeoModel', 'point');
-    BuiltValueNullFieldError.checkNotNull(
-        receivedAt, r'BreedingSiteGeoModel', 'receivedAt');
-    BuiltValueNullFieldError.checkNotNull(
-        siteType, r'BreedingSiteGeoModel', 'siteType');
-  }
-
+      : super._();
   @override
   BreedingSiteGeoModel rebuild(
           void Function(BreedingSiteGeoModelBuilder) updates) =>
@@ -153,7 +143,7 @@ class _$BreedingSiteGeoModel extends BreedingSiteGeoModel {
 
   @override
   BreedingSiteGeoModelBuilder toBuilder() =>
-      new BreedingSiteGeoModelBuilder()..replace(this);
+      BreedingSiteGeoModelBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -199,7 +189,7 @@ class BreedingSiteGeoModelBuilder
   set uuid(String? uuid) => _$this._uuid = uuid;
 
   PointBuilder? _point;
-  PointBuilder get point => _$this._point ??= new PointBuilder();
+  PointBuilder get point => _$this._point ??= PointBuilder();
   set point(PointBuilder? point) => _$this._point = point;
 
   DateTime? _receivedAt;
@@ -234,7 +224,6 @@ class BreedingSiteGeoModelBuilder
 
   @override
   void replace(BreedingSiteGeoModel other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingSiteGeoModel;
   }
 
@@ -250,22 +239,23 @@ class BreedingSiteGeoModelBuilder
     _$BreedingSiteGeoModel _$result;
     try {
       _$result = _$v ??
-          new _$BreedingSiteGeoModel._(
-              uuid: BuiltValueNullFieldError.checkNotNull(
-                  uuid, r'BreedingSiteGeoModel', 'uuid'),
-              point: point.build(),
-              receivedAt: BuiltValueNullFieldError.checkNotNull(
-                  receivedAt, r'BreedingSiteGeoModel', 'receivedAt'),
-              siteType: BuiltValueNullFieldError.checkNotNull(
-                  siteType, r'BreedingSiteGeoModel', 'siteType'),
-              hasWater: hasWater);
+          _$BreedingSiteGeoModel._(
+            uuid: BuiltValueNullFieldError.checkNotNull(
+                uuid, r'BreedingSiteGeoModel', 'uuid'),
+            point: point.build(),
+            receivedAt: BuiltValueNullFieldError.checkNotNull(
+                receivedAt, r'BreedingSiteGeoModel', 'receivedAt'),
+            siteType: BuiltValueNullFieldError.checkNotNull(
+                siteType, r'BreedingSiteGeoModel', 'siteType'),
+            hasWater: hasWater,
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'point';
         point.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BreedingSiteGeoModel', _$failedField, e.toString());
       }
       rethrow;

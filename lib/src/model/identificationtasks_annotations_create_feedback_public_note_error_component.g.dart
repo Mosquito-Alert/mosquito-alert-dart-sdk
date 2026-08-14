@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnum_feedbackPeriodPublicNote,
   _$identificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent rebuild(
           void Function(
@@ -217,7 +203,7 @@ class _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent
   @override
   IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -301,7 +287,6 @@ class IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentBuilde
   void replace(
       IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent;
   }
@@ -321,20 +306,21 @@ class IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentBuilde
   _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent
+        _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

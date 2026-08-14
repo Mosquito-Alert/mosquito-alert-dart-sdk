@@ -26,7 +26,7 @@ BitesListCountryIdErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesListCountryIdErrorComponentAttrEnum>
-    _$bitesListCountryIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesListCountryIdErrorComponentAttrEnumValues = BuiltSet<
         BitesListCountryIdErrorComponentAttrEnum>(const <BitesListCountryIdErrorComponentAttrEnum>[
   _$bitesListCountryIdErrorComponentAttrEnum_countryId,
   _$bitesListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ BitesListCountryIdErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesListCountryIdErrorComponentCodeEnum>
-    _$bitesListCountryIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesListCountryIdErrorComponentCodeEnumValues = BuiltSet<
         BitesListCountryIdErrorComponentCodeEnum>(const <BitesListCountryIdErrorComponentCodeEnum>[
   _$bitesListCountryIdErrorComponentCodeEnum_invalidChoice,
   _$bitesListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<BitesListCountryIdErrorComponentCodeEnum>
 
 Serializer<BitesListCountryIdErrorComponentAttrEnum>
     _$bitesListCountryIdErrorComponentAttrEnumSerializer =
-    new _$BitesListCountryIdErrorComponentAttrEnumSerializer();
+    _$BitesListCountryIdErrorComponentAttrEnumSerializer();
 Serializer<BitesListCountryIdErrorComponentCodeEnum>
     _$bitesListCountryIdErrorComponentCodeEnumSerializer =
-    new _$BitesListCountryIdErrorComponentCodeEnumSerializer();
+    _$BitesListCountryIdErrorComponentCodeEnumSerializer();
 
 class _$BitesListCountryIdErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesListCountryIdErrorComponentAttrEnum> {
@@ -140,19 +140,11 @@ class _$BitesListCountryIdErrorComponent
 
   factory _$BitesListCountryIdErrorComponent(
           [void Function(BitesListCountryIdErrorComponentBuilder)? updates]) =>
-      (new BitesListCountryIdErrorComponentBuilder()..update(updates))._build();
+      (BitesListCountryIdErrorComponentBuilder()..update(updates))._build();
 
   _$BitesListCountryIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesListCountryIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesListCountryIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesListCountryIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesListCountryIdErrorComponent rebuild(
           void Function(BitesListCountryIdErrorComponentBuilder) updates) =>
@@ -160,7 +152,7 @@ class _$BitesListCountryIdErrorComponent
 
   @override
   BitesListCountryIdErrorComponentBuilder toBuilder() =>
-      new BitesListCountryIdErrorComponentBuilder()..replace(this);
+      BitesListCountryIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -228,7 +220,6 @@ class BitesListCountryIdErrorComponentBuilder
 
   @override
   void replace(BitesListCountryIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListCountryIdErrorComponent;
   }
 
@@ -242,13 +233,14 @@ class BitesListCountryIdErrorComponentBuilder
 
   _$BitesListCountryIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesListCountryIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesListCountryIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesListCountryIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesListCountryIdErrorComponent', 'detail'));
+        _$BitesListCountryIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesListCountryIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesListCountryIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesListCountryIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

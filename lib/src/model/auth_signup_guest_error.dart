@@ -73,9 +73,7 @@ class _$AuthSignupGuestErrorSerializer implements PrimitiveSerializer<AuthSignup
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    AuthSignupGuestError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    AuthSignupGuestError object) sync* {
   }
 
   @override

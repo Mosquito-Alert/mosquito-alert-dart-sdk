@@ -18,24 +18,14 @@ class _$IdentificationTaskPermission extends IdentificationTaskPermission {
 
   factory _$IdentificationTaskPermission(
           [void Function(IdentificationTaskPermissionBuilder)? updates]) =>
-      (new IdentificationTaskPermissionBuilder()..update(updates))._build();
+      (IdentificationTaskPermissionBuilder()..update(updates))._build();
 
   _$IdentificationTaskPermission._(
       {required this.add,
       required this.change,
       required this.view,
       required this.delete})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        add, r'IdentificationTaskPermission', 'add');
-    BuiltValueNullFieldError.checkNotNull(
-        change, r'IdentificationTaskPermission', 'change');
-    BuiltValueNullFieldError.checkNotNull(
-        view, r'IdentificationTaskPermission', 'view');
-    BuiltValueNullFieldError.checkNotNull(
-        delete, r'IdentificationTaskPermission', 'delete');
-  }
-
+      : super._();
   @override
   IdentificationTaskPermission rebuild(
           void Function(IdentificationTaskPermissionBuilder) updates) =>
@@ -43,7 +33,7 @@ class _$IdentificationTaskPermission extends IdentificationTaskPermission {
 
   @override
   IdentificationTaskPermissionBuilder toBuilder() =>
-      new IdentificationTaskPermissionBuilder()..replace(this);
+      IdentificationTaskPermissionBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -117,7 +107,6 @@ class IdentificationTaskPermissionBuilder
 
   @override
   void replace(IdentificationTaskPermission other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationTaskPermission;
   }
 
@@ -131,15 +120,16 @@ class IdentificationTaskPermissionBuilder
 
   _$IdentificationTaskPermission _build() {
     final _$result = _$v ??
-        new _$IdentificationTaskPermission._(
-            add: BuiltValueNullFieldError.checkNotNull(
-                add, r'IdentificationTaskPermission', 'add'),
-            change: BuiltValueNullFieldError.checkNotNull(
-                change, r'IdentificationTaskPermission', 'change'),
-            view: BuiltValueNullFieldError.checkNotNull(
-                view, r'IdentificationTaskPermission', 'view'),
-            delete: BuiltValueNullFieldError.checkNotNull(
-                delete, r'IdentificationTaskPermission', 'delete'));
+        _$IdentificationTaskPermission._(
+          add: BuiltValueNullFieldError.checkNotNull(
+              add, r'IdentificationTaskPermission', 'add'),
+          change: BuiltValueNullFieldError.checkNotNull(
+              change, r'IdentificationTaskPermission', 'change'),
+          view: BuiltValueNullFieldError.checkNotNull(
+              view, r'IdentificationTaskPermission', 'view'),
+          delete: BuiltValueNullFieldError.checkNotNull(
+              delete, r'IdentificationTaskPermission', 'delete'),
+        );
     replace(_$result);
     return _$result;
   }

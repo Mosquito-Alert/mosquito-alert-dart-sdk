@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnum_insectConfidence,
   _$identificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
   @override
   IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentBuilder()
+          IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -328,7 +314,6 @@ class IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentBuilder
   void replace(
       IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent;
   }
@@ -348,20 +333,20 @@ class IdentificationtasksPredictionsCreateInsectConfidenceErrorComponentBuilder
   _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreateInsectConfidenceErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -26,7 +26,7 @@ FixesCreateCreatedAtErrorComponentAttrEnum
 }
 
 final BuiltSet<FixesCreateCreatedAtErrorComponentAttrEnum>
-    _$fixesCreateCreatedAtErrorComponentAttrEnumValues = new BuiltSet<
+    _$fixesCreateCreatedAtErrorComponentAttrEnumValues = BuiltSet<
         FixesCreateCreatedAtErrorComponentAttrEnum>(const <FixesCreateCreatedAtErrorComponentAttrEnum>[
   _$fixesCreateCreatedAtErrorComponentAttrEnum_createdAt,
   _$fixesCreateCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -77,7 +77,7 @@ FixesCreateCreatedAtErrorComponentCodeEnum
 }
 
 final BuiltSet<FixesCreateCreatedAtErrorComponentCodeEnum>
-    _$fixesCreateCreatedAtErrorComponentCodeEnumValues = new BuiltSet<
+    _$fixesCreateCreatedAtErrorComponentCodeEnumValues = BuiltSet<
         FixesCreateCreatedAtErrorComponentCodeEnum>(const <FixesCreateCreatedAtErrorComponentCodeEnum>[
   _$fixesCreateCreatedAtErrorComponentCodeEnum_date,
   _$fixesCreateCreatedAtErrorComponentCodeEnum_invalid,
@@ -90,10 +90,10 @@ final BuiltSet<FixesCreateCreatedAtErrorComponentCodeEnum>
 
 Serializer<FixesCreateCreatedAtErrorComponentAttrEnum>
     _$fixesCreateCreatedAtErrorComponentAttrEnumSerializer =
-    new _$FixesCreateCreatedAtErrorComponentAttrEnumSerializer();
+    _$FixesCreateCreatedAtErrorComponentAttrEnumSerializer();
 Serializer<FixesCreateCreatedAtErrorComponentCodeEnum>
     _$fixesCreateCreatedAtErrorComponentCodeEnumSerializer =
-    new _$FixesCreateCreatedAtErrorComponentCodeEnumSerializer();
+    _$FixesCreateCreatedAtErrorComponentCodeEnumSerializer();
 
 class _$FixesCreateCreatedAtErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<FixesCreateCreatedAtErrorComponentAttrEnum> {
@@ -181,20 +181,11 @@ class _$FixesCreateCreatedAtErrorComponent
   factory _$FixesCreateCreatedAtErrorComponent(
           [void Function(FixesCreateCreatedAtErrorComponentBuilder)?
               updates]) =>
-      (new FixesCreateCreatedAtErrorComponentBuilder()..update(updates))
-          ._build();
+      (FixesCreateCreatedAtErrorComponentBuilder()..update(updates))._build();
 
   _$FixesCreateCreatedAtErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'FixesCreateCreatedAtErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'FixesCreateCreatedAtErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'FixesCreateCreatedAtErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   FixesCreateCreatedAtErrorComponent rebuild(
           void Function(FixesCreateCreatedAtErrorComponentBuilder) updates) =>
@@ -202,7 +193,7 @@ class _$FixesCreateCreatedAtErrorComponent
 
   @override
   FixesCreateCreatedAtErrorComponentBuilder toBuilder() =>
-      new FixesCreateCreatedAtErrorComponentBuilder()..replace(this);
+      FixesCreateCreatedAtErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -270,7 +261,6 @@ class FixesCreateCreatedAtErrorComponentBuilder
 
   @override
   void replace(FixesCreateCreatedAtErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixesCreateCreatedAtErrorComponent;
   }
 
@@ -285,13 +275,14 @@ class FixesCreateCreatedAtErrorComponentBuilder
 
   _$FixesCreateCreatedAtErrorComponent _build() {
     final _$result = _$v ??
-        new _$FixesCreateCreatedAtErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'FixesCreateCreatedAtErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'FixesCreateCreatedAtErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'FixesCreateCreatedAtErrorComponent', 'detail'));
+        _$FixesCreateCreatedAtErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'FixesCreateCreatedAtErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'FixesCreateCreatedAtErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'FixesCreateCreatedAtErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

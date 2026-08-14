@@ -16,12 +16,11 @@ class _$AnnotationFeedbackRequest extends AnnotationFeedbackRequest {
 
   factory _$AnnotationFeedbackRequest(
           [void Function(AnnotationFeedbackRequestBuilder)? updates]) =>
-      (new AnnotationFeedbackRequestBuilder()..update(updates))._build();
+      (AnnotationFeedbackRequestBuilder()..update(updates))._build();
 
   _$AnnotationFeedbackRequest._(
       {this.publicNote, this.internalNote, this.userNote})
       : super._();
-
   @override
   AnnotationFeedbackRequest rebuild(
           void Function(AnnotationFeedbackRequestBuilder) updates) =>
@@ -29,7 +28,7 @@ class _$AnnotationFeedbackRequest extends AnnotationFeedbackRequest {
 
   @override
   AnnotationFeedbackRequestBuilder toBuilder() =>
-      new AnnotationFeedbackRequestBuilder()..replace(this);
+      AnnotationFeedbackRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -94,7 +93,6 @@ class AnnotationFeedbackRequestBuilder
 
   @override
   void replace(AnnotationFeedbackRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AnnotationFeedbackRequest;
   }
 
@@ -108,10 +106,11 @@ class AnnotationFeedbackRequestBuilder
 
   _$AnnotationFeedbackRequest _build() {
     final _$result = _$v ??
-        new _$AnnotationFeedbackRequest._(
-            publicNote: publicNote,
-            internalNote: internalNote,
-            userNote: userNote);
+        _$AnnotationFeedbackRequest._(
+          publicNote: publicNote,
+          internalNote: internalNote,
+          userNote: userNote,
+        );
     replace(_$result);
     return _$result;
   }

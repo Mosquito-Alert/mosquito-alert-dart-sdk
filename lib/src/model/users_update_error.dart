@@ -73,9 +73,7 @@ class _$UsersUpdateErrorSerializer implements PrimitiveSerializer<UsersUpdateErr
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    UsersUpdateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    UsersUpdateError object) sync* {
   }
 
   @override

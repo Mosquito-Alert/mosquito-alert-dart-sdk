@@ -26,7 +26,7 @@ BitesGeoListValidationErrorTypeEnum
 }
 
 final BuiltSet<BitesGeoListValidationErrorTypeEnum>
-    _$bitesGeoListValidationErrorTypeEnumValues = new BuiltSet<
+    _$bitesGeoListValidationErrorTypeEnumValues = BuiltSet<
         BitesGeoListValidationErrorTypeEnum>(const <BitesGeoListValidationErrorTypeEnum>[
   _$bitesGeoListValidationErrorTypeEnum_validationError,
   _$bitesGeoListValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<BitesGeoListValidationErrorTypeEnum>
 
 Serializer<BitesGeoListValidationErrorTypeEnum>
     _$bitesGeoListValidationErrorTypeEnumSerializer =
-    new _$BitesGeoListValidationErrorTypeEnumSerializer();
+    _$BitesGeoListValidationErrorTypeEnumSerializer();
 
 class _$BitesGeoListValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<BitesGeoListValidationErrorTypeEnum> {
@@ -76,16 +76,10 @@ class _$BitesGeoListValidationError extends BitesGeoListValidationError {
 
   factory _$BitesGeoListValidationError(
           [void Function(BitesGeoListValidationErrorBuilder)? updates]) =>
-      (new BitesGeoListValidationErrorBuilder()..update(updates))._build();
+      (BitesGeoListValidationErrorBuilder()..update(updates))._build();
 
   _$BitesGeoListValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'BitesGeoListValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'BitesGeoListValidationError', 'errors');
-  }
-
+      : super._();
   @override
   BitesGeoListValidationError rebuild(
           void Function(BitesGeoListValidationErrorBuilder) updates) =>
@@ -93,7 +87,7 @@ class _$BitesGeoListValidationError extends BitesGeoListValidationError {
 
   @override
   BitesGeoListValidationErrorBuilder toBuilder() =>
-      new BitesGeoListValidationErrorBuilder()..replace(this);
+      BitesGeoListValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -133,7 +127,7 @@ class BitesGeoListValidationErrorBuilder
 
   ListBuilder<BitesGeoListError>? _errors;
   ListBuilder<BitesGeoListError> get errors =>
-      _$this._errors ??= new ListBuilder<BitesGeoListError>();
+      _$this._errors ??= ListBuilder<BitesGeoListError>();
   set errors(ListBuilder<BitesGeoListError>? errors) => _$this._errors = errors;
 
   BitesGeoListValidationErrorBuilder() {
@@ -152,7 +146,6 @@ class BitesGeoListValidationErrorBuilder
 
   @override
   void replace(BitesGeoListValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesGeoListValidationError;
   }
 
@@ -168,17 +161,18 @@ class BitesGeoListValidationErrorBuilder
     _$BitesGeoListValidationError _$result;
     try {
       _$result = _$v ??
-          new _$BitesGeoListValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'BitesGeoListValidationError', 'type'),
-              errors: errors.build());
+          _$BitesGeoListValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'BitesGeoListValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BitesGeoListValidationError', _$failedField, e.toString());
       }
       rethrow;

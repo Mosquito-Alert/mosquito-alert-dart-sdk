@@ -31,7 +31,7 @@ PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnum
 final BuiltSet<
         PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnum>(const <PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnum>[
   _$photosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnum_insectConfidence,
   _$photosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ PhotosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnum
 final BuiltSet<
         PhotosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnum>(const <PhotosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnum>[
   _$photosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnum_invalid,
   _$photosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnum_maxStringLength,
@@ -105,10 +105,10 @@ final BuiltSet<
 
 Serializer<PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnumSerializer
     implements
@@ -211,23 +211,13 @@ class _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponent
           [void Function(
                   PhotosPredictionPartialUpdateInsectConfidenceErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionPartialUpdateInsectConfidenceErrorComponentBuilder()
+      (PhotosPredictionPartialUpdateInsectConfidenceErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'PhotosPredictionPartialUpdateInsectConfidenceErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'PhotosPredictionPartialUpdateInsectConfidenceErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'PhotosPredictionPartialUpdateInsectConfidenceErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionPartialUpdateInsectConfidenceErrorComponent rebuild(
           void Function(
@@ -238,7 +228,7 @@ class _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponent
   @override
   PhotosPredictionPartialUpdateInsectConfidenceErrorComponentBuilder
       toBuilder() =>
-          new PhotosPredictionPartialUpdateInsectConfidenceErrorComponentBuilder()
+          PhotosPredictionPartialUpdateInsectConfidenceErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -317,7 +307,6 @@ class PhotosPredictionPartialUpdateInsectConfidenceErrorComponentBuilder
   @override
   void replace(
       PhotosPredictionPartialUpdateInsectConfidenceErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponent;
   }
@@ -336,19 +325,20 @@ class PhotosPredictionPartialUpdateInsectConfidenceErrorComponentBuilder
 
   _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'PhotosPredictionPartialUpdateInsectConfidenceErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'PhotosPredictionPartialUpdateInsectConfidenceErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionPartialUpdateInsectConfidenceErrorComponent',
-                'detail'));
+        _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'PhotosPredictionPartialUpdateInsectConfidenceErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'PhotosPredictionPartialUpdateInsectConfidenceErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'PhotosPredictionPartialUpdateInsectConfidenceErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

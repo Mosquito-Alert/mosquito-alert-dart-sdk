@@ -15,21 +15,16 @@ class _$Country extends Country {
   final String iso3Code;
 
   factory _$Country([void Function(CountryBuilder)? updates]) =>
-      (new CountryBuilder()..update(updates))._build();
+      (CountryBuilder()..update(updates))._build();
 
   _$Country._({required this.id, required this.nameEn, required this.iso3Code})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'Country', 'id');
-    BuiltValueNullFieldError.checkNotNull(nameEn, r'Country', 'nameEn');
-    BuiltValueNullFieldError.checkNotNull(iso3Code, r'Country', 'iso3Code');
-  }
-
+      : super._();
   @override
   Country rebuild(void Function(CountryBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  CountryBuilder toBuilder() => new CountryBuilder()..replace(this);
+  CountryBuilder toBuilder() => CountryBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -92,7 +87,6 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
 
   @override
   void replace(Country other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Country;
   }
 
@@ -106,12 +100,13 @@ class CountryBuilder implements Builder<Country, CountryBuilder> {
 
   _$Country _build() {
     final _$result = _$v ??
-        new _$Country._(
-            id: BuiltValueNullFieldError.checkNotNull(id, r'Country', 'id'),
-            nameEn: BuiltValueNullFieldError.checkNotNull(
-                nameEn, r'Country', 'nameEn'),
-            iso3Code: BuiltValueNullFieldError.checkNotNull(
-                iso3Code, r'Country', 'iso3Code'));
+        _$Country._(
+          id: BuiltValueNullFieldError.checkNotNull(id, r'Country', 'id'),
+          nameEn: BuiltValueNullFieldError.checkNotNull(
+              nameEn, r'Country', 'nameEn'),
+          iso3Code: BuiltValueNullFieldError.checkNotNull(
+              iso3Code, r'Country', 'iso3Code'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -26,7 +26,7 @@ BitesCreateTagsErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateTagsErrorComponentAttrEnum>
-    _$bitesCreateTagsErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateTagsErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateTagsErrorComponentAttrEnum>(const <BitesCreateTagsErrorComponentAttrEnum>[
   _$bitesCreateTagsErrorComponentAttrEnum_tags,
   _$bitesCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -67,7 +67,7 @@ BitesCreateTagsErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateTagsErrorComponentCodeEnum>
-    _$bitesCreateTagsErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateTagsErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateTagsErrorComponentCodeEnum>(const <BitesCreateTagsErrorComponentCodeEnum>[
   _$bitesCreateTagsErrorComponentCodeEnum_invalidJson,
   _$bitesCreateTagsErrorComponentCodeEnum_notAList,
@@ -78,10 +78,10 @@ final BuiltSet<BitesCreateTagsErrorComponentCodeEnum>
 
 Serializer<BitesCreateTagsErrorComponentAttrEnum>
     _$bitesCreateTagsErrorComponentAttrEnumSerializer =
-    new _$BitesCreateTagsErrorComponentAttrEnumSerializer();
+    _$BitesCreateTagsErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateTagsErrorComponentCodeEnum>
     _$bitesCreateTagsErrorComponentCodeEnumSerializer =
-    new _$BitesCreateTagsErrorComponentCodeEnumSerializer();
+    _$BitesCreateTagsErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateTagsErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesCreateTagsErrorComponentAttrEnum> {
@@ -163,19 +163,11 @@ class _$BitesCreateTagsErrorComponent extends BitesCreateTagsErrorComponent {
 
   factory _$BitesCreateTagsErrorComponent(
           [void Function(BitesCreateTagsErrorComponentBuilder)? updates]) =>
-      (new BitesCreateTagsErrorComponentBuilder()..update(updates))._build();
+      (BitesCreateTagsErrorComponentBuilder()..update(updates))._build();
 
   _$BitesCreateTagsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateTagsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateTagsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateTagsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateTagsErrorComponent rebuild(
           void Function(BitesCreateTagsErrorComponentBuilder) updates) =>
@@ -183,7 +175,7 @@ class _$BitesCreateTagsErrorComponent extends BitesCreateTagsErrorComponent {
 
   @override
   BitesCreateTagsErrorComponentBuilder toBuilder() =>
-      new BitesCreateTagsErrorComponentBuilder()..replace(this);
+      BitesCreateTagsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -249,7 +241,6 @@ class BitesCreateTagsErrorComponentBuilder
 
   @override
   void replace(BitesCreateTagsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateTagsErrorComponent;
   }
 
@@ -263,13 +254,14 @@ class BitesCreateTagsErrorComponentBuilder
 
   _$BitesCreateTagsErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateTagsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateTagsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateTagsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateTagsErrorComponent', 'detail'));
+        _$BitesCreateTagsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateTagsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateTagsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateTagsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

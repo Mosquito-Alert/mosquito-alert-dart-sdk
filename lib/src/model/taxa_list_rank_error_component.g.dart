@@ -26,7 +26,7 @@ TaxaListRankErrorComponentAttrEnum _$taxaListRankErrorComponentAttrEnumValueOf(
 }
 
 final BuiltSet<TaxaListRankErrorComponentAttrEnum>
-    _$taxaListRankErrorComponentAttrEnumValues = new BuiltSet<
+    _$taxaListRankErrorComponentAttrEnumValues = BuiltSet<
         TaxaListRankErrorComponentAttrEnum>(const <TaxaListRankErrorComponentAttrEnum>[
   _$taxaListRankErrorComponentAttrEnum_rank,
   _$taxaListRankErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -57,7 +57,7 @@ TaxaListRankErrorComponentCodeEnum _$taxaListRankErrorComponentCodeEnumValueOf(
 }
 
 final BuiltSet<TaxaListRankErrorComponentCodeEnum>
-    _$taxaListRankErrorComponentCodeEnumValues = new BuiltSet<
+    _$taxaListRankErrorComponentCodeEnumValues = BuiltSet<
         TaxaListRankErrorComponentCodeEnum>(const <TaxaListRankErrorComponentCodeEnum>[
   _$taxaListRankErrorComponentCodeEnum_invalidChoice,
   _$taxaListRankErrorComponentCodeEnum_invalidList,
@@ -66,10 +66,10 @@ final BuiltSet<TaxaListRankErrorComponentCodeEnum>
 
 Serializer<TaxaListRankErrorComponentAttrEnum>
     _$taxaListRankErrorComponentAttrEnumSerializer =
-    new _$TaxaListRankErrorComponentAttrEnumSerializer();
+    _$TaxaListRankErrorComponentAttrEnumSerializer();
 Serializer<TaxaListRankErrorComponentCodeEnum>
     _$taxaListRankErrorComponentCodeEnumSerializer =
-    new _$TaxaListRankErrorComponentCodeEnumSerializer();
+    _$TaxaListRankErrorComponentCodeEnumSerializer();
 
 class _$TaxaListRankErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<TaxaListRankErrorComponentAttrEnum> {
@@ -143,19 +143,11 @@ class _$TaxaListRankErrorComponent extends TaxaListRankErrorComponent {
 
   factory _$TaxaListRankErrorComponent(
           [void Function(TaxaListRankErrorComponentBuilder)? updates]) =>
-      (new TaxaListRankErrorComponentBuilder()..update(updates))._build();
+      (TaxaListRankErrorComponentBuilder()..update(updates))._build();
 
   _$TaxaListRankErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'TaxaListRankErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'TaxaListRankErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'TaxaListRankErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   TaxaListRankErrorComponent rebuild(
           void Function(TaxaListRankErrorComponentBuilder) updates) =>
@@ -163,7 +155,7 @@ class _$TaxaListRankErrorComponent extends TaxaListRankErrorComponent {
 
   @override
   TaxaListRankErrorComponentBuilder toBuilder() =>
-      new TaxaListRankErrorComponentBuilder()..replace(this);
+      TaxaListRankErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -228,7 +220,6 @@ class TaxaListRankErrorComponentBuilder
 
   @override
   void replace(TaxaListRankErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$TaxaListRankErrorComponent;
   }
 
@@ -242,13 +233,14 @@ class TaxaListRankErrorComponentBuilder
 
   _$TaxaListRankErrorComponent _build() {
     final _$result = _$v ??
-        new _$TaxaListRankErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'TaxaListRankErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'TaxaListRankErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'TaxaListRankErrorComponent', 'detail'));
+        _$TaxaListRankErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'TaxaListRankErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'TaxaListRankErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'TaxaListRankErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

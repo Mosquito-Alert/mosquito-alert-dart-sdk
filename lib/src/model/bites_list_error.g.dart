@@ -23,7 +23,7 @@ BitesListErrorAttrEnum _$bitesListErrorAttrEnumValueOf(String name) {
 }
 
 final BuiltSet<BitesListErrorAttrEnum> _$bitesListErrorAttrEnumValues =
-    new BuiltSet<BitesListErrorAttrEnum>(const <BitesListErrorAttrEnum>[
+    BuiltSet<BitesListErrorAttrEnum>(const <BitesListErrorAttrEnum>[
   _$bitesListErrorAttrEnum_boundaryUuid,
   _$bitesListErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -49,16 +49,16 @@ BitesListErrorCodeEnum _$bitesListErrorCodeEnumValueOf(String name) {
 }
 
 final BuiltSet<BitesListErrorCodeEnum> _$bitesListErrorCodeEnumValues =
-    new BuiltSet<BitesListErrorCodeEnum>(const <BitesListErrorCodeEnum>[
+    BuiltSet<BitesListErrorCodeEnum>(const <BitesListErrorCodeEnum>[
   _$bitesListErrorCodeEnum_invalid,
   _$bitesListErrorCodeEnum_nullCharactersNotAllowed,
   _$bitesListErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesListErrorAttrEnum> _$bitesListErrorAttrEnumSerializer =
-    new _$BitesListErrorAttrEnumSerializer();
+    _$BitesListErrorAttrEnumSerializer();
 Serializer<BitesListErrorCodeEnum> _$bitesListErrorCodeEnumSerializer =
-    new _$BitesListErrorCodeEnumSerializer();
+    _$BitesListErrorCodeEnumSerializer();
 
 class _$BitesListErrorAttrEnumSerializer
     implements PrimitiveSerializer<BitesListErrorAttrEnum> {
@@ -123,19 +123,15 @@ class _$BitesListError extends BitesListError {
   final OneOf oneOf;
 
   factory _$BitesListError([void Function(BitesListErrorBuilder)? updates]) =>
-      (new BitesListErrorBuilder()..update(updates))._build();
+      (BitesListErrorBuilder()..update(updates))._build();
 
-  _$BitesListError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(oneOf, r'BitesListError', 'oneOf');
-  }
-
+  _$BitesListError._({required this.oneOf}) : super._();
   @override
   BitesListError rebuild(void Function(BitesListErrorBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  BitesListErrorBuilder toBuilder() =>
-      new BitesListErrorBuilder()..replace(this);
+  BitesListErrorBuilder toBuilder() => BitesListErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -181,7 +177,6 @@ class BitesListErrorBuilder
 
   @override
   void replace(BitesListError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListError;
   }
 
@@ -195,9 +190,10 @@ class BitesListErrorBuilder
 
   _$BitesListError _build() {
     final _$result = _$v ??
-        new _$BitesListError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'BitesListError', 'oneOf'));
+        _$BitesListError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'BitesListError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -27,7 +27,7 @@ AuthSignupGuestPasswordErrorComponentAttrEnum
 }
 
 final BuiltSet<AuthSignupGuestPasswordErrorComponentAttrEnum>
-    _$authSignupGuestPasswordErrorComponentAttrEnumValues = new BuiltSet<
+    _$authSignupGuestPasswordErrorComponentAttrEnumValues = BuiltSet<
         AuthSignupGuestPasswordErrorComponentAttrEnum>(const <AuthSignupGuestPasswordErrorComponentAttrEnum>[
   _$authSignupGuestPasswordErrorComponentAttrEnum_password,
   _$authSignupGuestPasswordErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -86,7 +86,7 @@ AuthSignupGuestPasswordErrorComponentCodeEnum
 }
 
 final BuiltSet<AuthSignupGuestPasswordErrorComponentCodeEnum>
-    _$authSignupGuestPasswordErrorComponentCodeEnumValues = new BuiltSet<
+    _$authSignupGuestPasswordErrorComponentCodeEnumValues = BuiltSet<
         AuthSignupGuestPasswordErrorComponentCodeEnum>(const <AuthSignupGuestPasswordErrorComponentCodeEnum>[
   _$authSignupGuestPasswordErrorComponentCodeEnum_blank,
   _$authSignupGuestPasswordErrorComponentCodeEnum_invalid,
@@ -100,10 +100,10 @@ final BuiltSet<AuthSignupGuestPasswordErrorComponentCodeEnum>
 
 Serializer<AuthSignupGuestPasswordErrorComponentAttrEnum>
     _$authSignupGuestPasswordErrorComponentAttrEnumSerializer =
-    new _$AuthSignupGuestPasswordErrorComponentAttrEnumSerializer();
+    _$AuthSignupGuestPasswordErrorComponentAttrEnumSerializer();
 Serializer<AuthSignupGuestPasswordErrorComponentCodeEnum>
     _$authSignupGuestPasswordErrorComponentCodeEnumSerializer =
-    new _$AuthSignupGuestPasswordErrorComponentCodeEnumSerializer();
+    _$AuthSignupGuestPasswordErrorComponentCodeEnumSerializer();
 
 class _$AuthSignupGuestPasswordErrorComponentAttrEnumSerializer
     implements
@@ -195,20 +195,12 @@ class _$AuthSignupGuestPasswordErrorComponent
   factory _$AuthSignupGuestPasswordErrorComponent(
           [void Function(AuthSignupGuestPasswordErrorComponentBuilder)?
               updates]) =>
-      (new AuthSignupGuestPasswordErrorComponentBuilder()..update(updates))
+      (AuthSignupGuestPasswordErrorComponentBuilder()..update(updates))
           ._build();
 
   _$AuthSignupGuestPasswordErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'AuthSignupGuestPasswordErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'AuthSignupGuestPasswordErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'AuthSignupGuestPasswordErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   AuthSignupGuestPasswordErrorComponent rebuild(
           void Function(AuthSignupGuestPasswordErrorComponentBuilder)
@@ -217,7 +209,7 @@ class _$AuthSignupGuestPasswordErrorComponent
 
   @override
   AuthSignupGuestPasswordErrorComponentBuilder toBuilder() =>
-      new AuthSignupGuestPasswordErrorComponentBuilder()..replace(this);
+      AuthSignupGuestPasswordErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -286,7 +278,6 @@ class AuthSignupGuestPasswordErrorComponentBuilder
 
   @override
   void replace(AuthSignupGuestPasswordErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthSignupGuestPasswordErrorComponent;
   }
 
@@ -301,13 +292,14 @@ class AuthSignupGuestPasswordErrorComponentBuilder
 
   _$AuthSignupGuestPasswordErrorComponent _build() {
     final _$result = _$v ??
-        new _$AuthSignupGuestPasswordErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'AuthSignupGuestPasswordErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AuthSignupGuestPasswordErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'AuthSignupGuestPasswordErrorComponent', 'detail'));
+        _$AuthSignupGuestPasswordErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'AuthSignupGuestPasswordErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AuthSignupGuestPasswordErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'AuthSignupGuestPasswordErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

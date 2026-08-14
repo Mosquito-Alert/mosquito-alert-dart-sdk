@@ -18,23 +18,18 @@ class _$PaginatedUserList extends PaginatedUserList {
 
   factory _$PaginatedUserList(
           [void Function(PaginatedUserListBuilder)? updates]) =>
-      (new PaginatedUserListBuilder()..update(updates))._build();
+      (PaginatedUserListBuilder()..update(updates))._build();
 
   _$PaginatedUserList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(count, r'PaginatedUserList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedUserList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedUserList rebuild(void Function(PaginatedUserListBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   PaginatedUserListBuilder toBuilder() =>
-      new PaginatedUserListBuilder()..replace(this);
+      PaginatedUserListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -85,7 +80,7 @@ class PaginatedUserListBuilder
   set previous(String? previous) => _$this._previous = previous;
 
   ListBuilder<User>? _results;
-  ListBuilder<User> get results => _$this._results ??= new ListBuilder<User>();
+  ListBuilder<User> get results => _$this._results ??= ListBuilder<User>();
   set results(ListBuilder<User>? results) => _$this._results = results;
 
   PaginatedUserListBuilder() {
@@ -106,7 +101,6 @@ class PaginatedUserListBuilder
 
   @override
   void replace(PaginatedUserList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedUserList;
   }
 
@@ -122,19 +116,20 @@ class PaginatedUserListBuilder
     _$PaginatedUserList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedUserList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedUserList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedUserList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedUserList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedUserList', _$failedField, e.toString());
       }
       rethrow;

@@ -30,7 +30,7 @@ IdentificationtasksPredictionsUpdateValidationErrorTypeEnum
 
 final BuiltSet<IdentificationtasksPredictionsUpdateValidationErrorTypeEnum>
     _$identificationtasksPredictionsUpdateValidationErrorTypeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateValidationErrorTypeEnum>(const <IdentificationtasksPredictionsUpdateValidationErrorTypeEnum>[
   _$identificationtasksPredictionsUpdateValidationErrorTypeEnum_validationError,
   _$identificationtasksPredictionsUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -38,7 +38,7 @@ final BuiltSet<IdentificationtasksPredictionsUpdateValidationErrorTypeEnum>
 
 Serializer<IdentificationtasksPredictionsUpdateValidationErrorTypeEnum>
     _$identificationtasksPredictionsUpdateValidationErrorTypeEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateValidationErrorTypeEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateValidationErrorTypeEnumSerializer();
 
 class _$IdentificationtasksPredictionsUpdateValidationErrorTypeEnumSerializer
     implements
@@ -86,19 +86,13 @@ class _$IdentificationtasksPredictionsUpdateValidationError
           [void Function(
                   IdentificationtasksPredictionsUpdateValidationErrorBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsUpdateValidationErrorBuilder()
+      (IdentificationtasksPredictionsUpdateValidationErrorBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsUpdateValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'IdentificationtasksPredictionsUpdateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(errors,
-        r'IdentificationtasksPredictionsUpdateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsUpdateValidationError rebuild(
           void Function(
@@ -108,7 +102,7 @@ class _$IdentificationtasksPredictionsUpdateValidationError
 
   @override
   IdentificationtasksPredictionsUpdateValidationErrorBuilder toBuilder() =>
-      new IdentificationtasksPredictionsUpdateValidationErrorBuilder()
+      IdentificationtasksPredictionsUpdateValidationErrorBuilder()
         ..replace(this);
 
   @override
@@ -153,7 +147,7 @@ class IdentificationtasksPredictionsUpdateValidationErrorBuilder
   ListBuilder<IdentificationtasksPredictionsUpdateError>? _errors;
   ListBuilder<IdentificationtasksPredictionsUpdateError> get errors =>
       _$this._errors ??=
-          new ListBuilder<IdentificationtasksPredictionsUpdateError>();
+          ListBuilder<IdentificationtasksPredictionsUpdateError>();
   set errors(ListBuilder<IdentificationtasksPredictionsUpdateError>? errors) =>
       _$this._errors = errors;
 
@@ -173,7 +167,6 @@ class IdentificationtasksPredictionsUpdateValidationErrorBuilder
 
   @override
   void replace(IdentificationtasksPredictionsUpdateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksPredictionsUpdateValidationError;
   }
 
@@ -191,19 +184,18 @@ class IdentificationtasksPredictionsUpdateValidationErrorBuilder
     _$IdentificationtasksPredictionsUpdateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$IdentificationtasksPredictionsUpdateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type,
-                  r'IdentificationtasksPredictionsUpdateValidationError',
-                  'type'),
-              errors: errors.build());
+          _$IdentificationtasksPredictionsUpdateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(type,
+                r'IdentificationtasksPredictionsUpdateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'IdentificationtasksPredictionsUpdateValidationError',
             _$failedField,
             e.toString());

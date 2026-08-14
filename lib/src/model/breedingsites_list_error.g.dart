@@ -25,7 +25,7 @@ BreedingsitesListErrorAttrEnum _$breedingsitesListErrorAttrEnumValueOf(
 }
 
 final BuiltSet<BreedingsitesListErrorAttrEnum>
-    _$breedingsitesListErrorAttrEnumValues = new BuiltSet<
+    _$breedingsitesListErrorAttrEnumValues = BuiltSet<
         BreedingsitesListErrorAttrEnum>(const <BreedingsitesListErrorAttrEnum>[
   _$breedingsitesListErrorAttrEnum_siteType,
   _$breedingsitesListErrorAttrEnum_unknownDefaultOpenApi,
@@ -56,7 +56,7 @@ BreedingsitesListErrorCodeEnum _$breedingsitesListErrorCodeEnumValueOf(
 }
 
 final BuiltSet<BreedingsitesListErrorCodeEnum>
-    _$breedingsitesListErrorCodeEnumValues = new BuiltSet<
+    _$breedingsitesListErrorCodeEnumValues = BuiltSet<
         BreedingsitesListErrorCodeEnum>(const <BreedingsitesListErrorCodeEnum>[
   _$breedingsitesListErrorCodeEnum_invalidChoice,
   _$breedingsitesListErrorCodeEnum_invalidList,
@@ -65,10 +65,10 @@ final BuiltSet<BreedingsitesListErrorCodeEnum>
 
 Serializer<BreedingsitesListErrorAttrEnum>
     _$breedingsitesListErrorAttrEnumSerializer =
-    new _$BreedingsitesListErrorAttrEnumSerializer();
+    _$BreedingsitesListErrorAttrEnumSerializer();
 Serializer<BreedingsitesListErrorCodeEnum>
     _$breedingsitesListErrorCodeEnumSerializer =
-    new _$BreedingsitesListErrorCodeEnumSerializer();
+    _$BreedingsitesListErrorCodeEnumSerializer();
 
 class _$BreedingsitesListErrorAttrEnumSerializer
     implements PrimitiveSerializer<BreedingsitesListErrorAttrEnum> {
@@ -138,13 +138,9 @@ class _$BreedingsitesListError extends BreedingsitesListError {
 
   factory _$BreedingsitesListError(
           [void Function(BreedingsitesListErrorBuilder)? updates]) =>
-      (new BreedingsitesListErrorBuilder()..update(updates))._build();
+      (BreedingsitesListErrorBuilder()..update(updates))._build();
 
-  _$BreedingsitesListError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'BreedingsitesListError', 'oneOf');
-  }
-
+  _$BreedingsitesListError._({required this.oneOf}) : super._();
   @override
   BreedingsitesListError rebuild(
           void Function(BreedingsitesListErrorBuilder) updates) =>
@@ -152,7 +148,7 @@ class _$BreedingsitesListError extends BreedingsitesListError {
 
   @override
   BreedingsitesListErrorBuilder toBuilder() =>
-      new BreedingsitesListErrorBuilder()..replace(this);
+      BreedingsitesListErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -199,7 +195,6 @@ class BreedingsitesListErrorBuilder
 
   @override
   void replace(BreedingsitesListError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesListError;
   }
 
@@ -213,9 +208,10 @@ class BreedingsitesListErrorBuilder
 
   _$BreedingsitesListError _build() {
     final _$result = _$v ??
-        new _$BreedingsitesListError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'BreedingsitesListError', 'oneOf'));
+        _$BreedingsitesListError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'BreedingsitesListError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

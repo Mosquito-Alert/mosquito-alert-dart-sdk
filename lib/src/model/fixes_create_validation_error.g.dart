@@ -26,7 +26,7 @@ FixesCreateValidationErrorTypeEnum _$fixesCreateValidationErrorTypeEnumValueOf(
 }
 
 final BuiltSet<FixesCreateValidationErrorTypeEnum>
-    _$fixesCreateValidationErrorTypeEnumValues = new BuiltSet<
+    _$fixesCreateValidationErrorTypeEnumValues = BuiltSet<
         FixesCreateValidationErrorTypeEnum>(const <FixesCreateValidationErrorTypeEnum>[
   _$fixesCreateValidationErrorTypeEnum_validationError,
   _$fixesCreateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<FixesCreateValidationErrorTypeEnum>
 
 Serializer<FixesCreateValidationErrorTypeEnum>
     _$fixesCreateValidationErrorTypeEnumSerializer =
-    new _$FixesCreateValidationErrorTypeEnumSerializer();
+    _$FixesCreateValidationErrorTypeEnumSerializer();
 
 class _$FixesCreateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<FixesCreateValidationErrorTypeEnum> {
@@ -74,16 +74,10 @@ class _$FixesCreateValidationError extends FixesCreateValidationError {
 
   factory _$FixesCreateValidationError(
           [void Function(FixesCreateValidationErrorBuilder)? updates]) =>
-      (new FixesCreateValidationErrorBuilder()..update(updates))._build();
+      (FixesCreateValidationErrorBuilder()..update(updates))._build();
 
   _$FixesCreateValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'FixesCreateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'FixesCreateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   FixesCreateValidationError rebuild(
           void Function(FixesCreateValidationErrorBuilder) updates) =>
@@ -91,7 +85,7 @@ class _$FixesCreateValidationError extends FixesCreateValidationError {
 
   @override
   FixesCreateValidationErrorBuilder toBuilder() =>
-      new FixesCreateValidationErrorBuilder()..replace(this);
+      FixesCreateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -130,7 +124,7 @@ class FixesCreateValidationErrorBuilder
 
   ListBuilder<FixesCreateError>? _errors;
   ListBuilder<FixesCreateError> get errors =>
-      _$this._errors ??= new ListBuilder<FixesCreateError>();
+      _$this._errors ??= ListBuilder<FixesCreateError>();
   set errors(ListBuilder<FixesCreateError>? errors) => _$this._errors = errors;
 
   FixesCreateValidationErrorBuilder() {
@@ -149,7 +143,6 @@ class FixesCreateValidationErrorBuilder
 
   @override
   void replace(FixesCreateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixesCreateValidationError;
   }
 
@@ -165,17 +158,18 @@ class FixesCreateValidationErrorBuilder
     _$FixesCreateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$FixesCreateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'FixesCreateValidationError', 'type'),
-              errors: errors.build());
+          _$FixesCreateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'FixesCreateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'FixesCreateValidationError', _$failedField, e.toString());
       }
       rethrow;

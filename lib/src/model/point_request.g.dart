@@ -13,22 +13,16 @@ class _$PointRequest extends PointRequest {
   final double longitude;
 
   factory _$PointRequest([void Function(PointRequestBuilder)? updates]) =>
-      (new PointRequestBuilder()..update(updates))._build();
+      (PointRequestBuilder()..update(updates))._build();
 
   _$PointRequest._({required this.latitude, required this.longitude})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        latitude, r'PointRequest', 'latitude');
-    BuiltValueNullFieldError.checkNotNull(
-        longitude, r'PointRequest', 'longitude');
-  }
-
+      : super._();
   @override
   PointRequest rebuild(void Function(PointRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  PointRequestBuilder toBuilder() => new PointRequestBuilder()..replace(this);
+  PointRequestBuilder toBuilder() => PointRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -84,7 +78,6 @@ class PointRequestBuilder
 
   @override
   void replace(PointRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PointRequest;
   }
 
@@ -98,11 +91,12 @@ class PointRequestBuilder
 
   _$PointRequest _build() {
     final _$result = _$v ??
-        new _$PointRequest._(
-            latitude: BuiltValueNullFieldError.checkNotNull(
-                latitude, r'PointRequest', 'latitude'),
-            longitude: BuiltValueNullFieldError.checkNotNull(
-                longitude, r'PointRequest', 'longitude'));
+        _$PointRequest._(
+          latitude: BuiltValueNullFieldError.checkNotNull(
+              latitude, r'PointRequest', 'latitude'),
+          longitude: BuiltValueNullFieldError.checkNotNull(
+              longitude, r'PointRequest', 'longitude'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -14,16 +14,10 @@ class _$MessageContentRequest extends MessageContentRequest {
 
   factory _$MessageContentRequest(
           [void Function(MessageContentRequestBuilder)? updates]) =>
-      (new MessageContentRequestBuilder()..update(updates))._build();
+      (MessageContentRequestBuilder()..update(updates))._build();
 
   _$MessageContentRequest._({required this.title, required this.body})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        title, r'MessageContentRequest', 'title');
-    BuiltValueNullFieldError.checkNotNull(
-        body, r'MessageContentRequest', 'body');
-  }
-
+      : super._();
   @override
   MessageContentRequest rebuild(
           void Function(MessageContentRequestBuilder) updates) =>
@@ -31,7 +25,7 @@ class _$MessageContentRequest extends MessageContentRequest {
 
   @override
   MessageContentRequestBuilder toBuilder() =>
-      new MessageContentRequestBuilder()..replace(this);
+      MessageContentRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -65,13 +59,13 @@ class MessageContentRequestBuilder
 
   LocalizedMessageTitleRequestBuilder? _title;
   LocalizedMessageTitleRequestBuilder get title =>
-      _$this._title ??= new LocalizedMessageTitleRequestBuilder();
+      _$this._title ??= LocalizedMessageTitleRequestBuilder();
   set title(LocalizedMessageTitleRequestBuilder? title) =>
       _$this._title = title;
 
   LocalizedMessageBodyRequestBuilder? _body;
   LocalizedMessageBodyRequestBuilder get body =>
-      _$this._body ??= new LocalizedMessageBodyRequestBuilder();
+      _$this._body ??= LocalizedMessageBodyRequestBuilder();
   set body(LocalizedMessageBodyRequestBuilder? body) => _$this._body = body;
 
   MessageContentRequestBuilder() {
@@ -90,7 +84,6 @@ class MessageContentRequestBuilder
 
   @override
   void replace(MessageContentRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessageContentRequest;
   }
 
@@ -106,8 +99,10 @@ class MessageContentRequestBuilder
     _$MessageContentRequest _$result;
     try {
       _$result = _$v ??
-          new _$MessageContentRequest._(
-              title: title.build(), body: body.build());
+          _$MessageContentRequest._(
+            title: title.build(),
+            body: body.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -116,7 +111,7 @@ class MessageContentRequestBuilder
         _$failedField = 'body';
         body.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'MessageContentRequest', _$failedField, e.toString());
       }
       rethrow;

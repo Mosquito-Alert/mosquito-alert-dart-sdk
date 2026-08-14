@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnu
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnum_insectConfidence,
   _$identificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnu
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponen
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponen
   @override
   IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -329,7 +315,6 @@ class IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentB
   void replace(
       IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent;
   }
@@ -349,20 +334,21 @@ class IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponentB
   _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateInsectConfidenceErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

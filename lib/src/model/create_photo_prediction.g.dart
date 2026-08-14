@@ -66,7 +66,7 @@ CreatePhotoPredictionPredictedClassEnum
 }
 
 final BuiltSet<CreatePhotoPredictionPredictedClassEnum>
-    _$createPhotoPredictionPredictedClassEnumValues = new BuiltSet<
+    _$createPhotoPredictionPredictedClassEnumValues = BuiltSet<
         CreatePhotoPredictionPredictedClassEnum>(const <CreatePhotoPredictionPredictedClassEnum>[
   _$createPhotoPredictionPredictedClassEnum_aeAlbopictus,
   _$createPhotoPredictionPredictedClassEnum_aeAegypti,
@@ -125,7 +125,7 @@ CreatePhotoPredictionClassifierVersionEnum
 }
 
 final BuiltSet<CreatePhotoPredictionClassifierVersionEnum>
-    _$createPhotoPredictionClassifierVersionEnumValues = new BuiltSet<
+    _$createPhotoPredictionClassifierVersionEnumValues = BuiltSet<
         CreatePhotoPredictionClassifierVersionEnum>(const <CreatePhotoPredictionClassifierVersionEnum>[
   _$createPhotoPredictionClassifierVersionEnum_v2023Period1,
   _$createPhotoPredictionClassifierVersionEnum_v2024Period1,
@@ -138,10 +138,10 @@ final BuiltSet<CreatePhotoPredictionClassifierVersionEnum>
 
 Serializer<CreatePhotoPredictionPredictedClassEnum>
     _$createPhotoPredictionPredictedClassEnumSerializer =
-    new _$CreatePhotoPredictionPredictedClassEnumSerializer();
+    _$CreatePhotoPredictionPredictedClassEnumSerializer();
 Serializer<CreatePhotoPredictionClassifierVersionEnum>
     _$createPhotoPredictionClassifierVersionEnumSerializer =
-    new _$CreatePhotoPredictionClassifierVersionEnumSerializer();
+    _$CreatePhotoPredictionClassifierVersionEnumSerializer();
 
 class _$CreatePhotoPredictionPredictedClassEnumSerializer
     implements PrimitiveSerializer<CreatePhotoPredictionPredictedClassEnum> {
@@ -259,7 +259,7 @@ class _$CreatePhotoPrediction extends CreatePhotoPrediction {
 
   factory _$CreatePhotoPrediction(
           [void Function(CreatePhotoPredictionBuilder)? updates]) =>
-      (new CreatePhotoPredictionBuilder()..update(updates))._build();
+      (CreatePhotoPredictionBuilder()..update(updates))._build();
 
   _$CreatePhotoPrediction._(
       {required this.photo,
@@ -273,25 +273,7 @@ class _$CreatePhotoPrediction extends CreatePhotoPrediction {
       required this.classifierVersion,
       required this.createdAt,
       required this.updatedAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        photo, r'CreatePhotoPrediction', 'photo');
-    BuiltValueNullFieldError.checkNotNull(
-        bbox, r'CreatePhotoPrediction', 'bbox');
-    BuiltValueNullFieldError.checkNotNull(
-        insectConfidence, r'CreatePhotoPrediction', 'insectConfidence');
-    BuiltValueNullFieldError.checkNotNull(
-        thresholdDeviation, r'CreatePhotoPrediction', 'thresholdDeviation');
-    BuiltValueNullFieldError.checkNotNull(
-        scores, r'CreatePhotoPrediction', 'scores');
-    BuiltValueNullFieldError.checkNotNull(
-        classifierVersion, r'CreatePhotoPrediction', 'classifierVersion');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'CreatePhotoPrediction', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, r'CreatePhotoPrediction', 'updatedAt');
-  }
-
+      : super._();
   @override
   CreatePhotoPrediction rebuild(
           void Function(CreatePhotoPredictionBuilder) updates) =>
@@ -299,7 +281,7 @@ class _$CreatePhotoPrediction extends CreatePhotoPrediction {
 
   @override
   CreatePhotoPredictionBuilder toBuilder() =>
-      new CreatePhotoPredictionBuilder()..replace(this);
+      CreatePhotoPredictionBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -359,11 +341,11 @@ class CreatePhotoPredictionBuilder
   _$CreatePhotoPrediction? _$v;
 
   SimplePhotoBuilder? _photo;
-  SimplePhotoBuilder get photo => _$this._photo ??= new SimplePhotoBuilder();
+  SimplePhotoBuilder get photo => _$this._photo ??= SimplePhotoBuilder();
   set photo(SimplePhotoBuilder? photo) => _$this._photo = photo;
 
   BoundingBoxBuilder? _bbox;
-  BoundingBoxBuilder get bbox => _$this._bbox ??= new BoundingBoxBuilder();
+  BoundingBoxBuilder get bbox => _$this._bbox ??= BoundingBoxBuilder();
   set bbox(BoundingBoxBuilder? bbox) => _$this._bbox = bbox;
 
   double? _insectConfidence;
@@ -378,7 +360,7 @@ class CreatePhotoPredictionBuilder
       _$this._predictedClass = predictedClass;
 
   SimpleTaxonBuilder? _taxon;
-  SimpleTaxonBuilder get taxon => _$this._taxon ??= new SimpleTaxonBuilder();
+  SimpleTaxonBuilder get taxon => _$this._taxon ??= SimpleTaxonBuilder();
   set taxon(SimpleTaxonBuilder? taxon) => _$this._taxon = taxon;
 
   double? _thresholdDeviation;
@@ -392,7 +374,7 @@ class CreatePhotoPredictionBuilder
 
   PredictionScoreBuilder? _scores;
   PredictionScoreBuilder get scores =>
-      _$this._scores ??= new PredictionScoreBuilder();
+      _$this._scores ??= PredictionScoreBuilder();
   set scores(PredictionScoreBuilder? scores) => _$this._scores = scores;
 
   CreatePhotoPredictionClassifierVersionEnum? _classifierVersion;
@@ -435,7 +417,6 @@ class CreatePhotoPredictionBuilder
 
   @override
   void replace(CreatePhotoPrediction other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CreatePhotoPrediction;
   }
 
@@ -451,29 +432,28 @@ class CreatePhotoPredictionBuilder
     _$CreatePhotoPrediction _$result;
     try {
       _$result = _$v ??
-          new _$CreatePhotoPrediction._(
-              photo: photo.build(),
-              bbox: bbox.build(),
-              insectConfidence: BuiltValueNullFieldError.checkNotNull(
-                  insectConfidence,
-                  r'CreatePhotoPrediction',
-                  'insectConfidence'),
-              predictedClass: predictedClass,
-              taxon: _taxon?.build(),
-              thresholdDeviation: BuiltValueNullFieldError.checkNotNull(
-                  thresholdDeviation,
-                  r'CreatePhotoPrediction',
-                  'thresholdDeviation'),
-              isDecisive: isDecisive,
-              scores: scores.build(),
-              classifierVersion: BuiltValueNullFieldError.checkNotNull(
-                  classifierVersion,
-                  r'CreatePhotoPrediction',
-                  'classifierVersion'),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'CreatePhotoPrediction', 'createdAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'CreatePhotoPrediction', 'updatedAt'));
+          _$CreatePhotoPrediction._(
+            photo: photo.build(),
+            bbox: bbox.build(),
+            insectConfidence: BuiltValueNullFieldError.checkNotNull(
+                insectConfidence, r'CreatePhotoPrediction', 'insectConfidence'),
+            predictedClass: predictedClass,
+            taxon: _taxon?.build(),
+            thresholdDeviation: BuiltValueNullFieldError.checkNotNull(
+                thresholdDeviation,
+                r'CreatePhotoPrediction',
+                'thresholdDeviation'),
+            isDecisive: isDecisive,
+            scores: scores.build(),
+            classifierVersion: BuiltValueNullFieldError.checkNotNull(
+                classifierVersion,
+                r'CreatePhotoPrediction',
+                'classifierVersion'),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'CreatePhotoPrediction', 'createdAt'),
+            updatedAt: BuiltValueNullFieldError.checkNotNull(
+                updatedAt, r'CreatePhotoPrediction', 'updatedAt'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -488,7 +468,7 @@ class CreatePhotoPredictionBuilder
         _$failedField = 'scores';
         scores.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'CreatePhotoPrediction', _$failedField, e.toString());
       }
       rethrow;

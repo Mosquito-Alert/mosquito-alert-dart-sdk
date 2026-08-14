@@ -28,7 +28,7 @@ MessagesCreateContentBodyDeErrorComponentAttrEnum
 }
 
 final BuiltSet<MessagesCreateContentBodyDeErrorComponentAttrEnum>
-    _$messagesCreateContentBodyDeErrorComponentAttrEnumValues = new BuiltSet<
+    _$messagesCreateContentBodyDeErrorComponentAttrEnumValues = BuiltSet<
         MessagesCreateContentBodyDeErrorComponentAttrEnum>(const <MessagesCreateContentBodyDeErrorComponentAttrEnum>[
   _$messagesCreateContentBodyDeErrorComponentAttrEnum_contentPeriodBodyPeriodDe,
   _$messagesCreateContentBodyDeErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ MessagesCreateContentBodyDeErrorComponentCodeEnum
 }
 
 final BuiltSet<MessagesCreateContentBodyDeErrorComponentCodeEnum>
-    _$messagesCreateContentBodyDeErrorComponentCodeEnumValues = new BuiltSet<
+    _$messagesCreateContentBodyDeErrorComponentCodeEnumValues = BuiltSet<
         MessagesCreateContentBodyDeErrorComponentCodeEnum>(const <MessagesCreateContentBodyDeErrorComponentCodeEnum>[
   _$messagesCreateContentBodyDeErrorComponentCodeEnum_blank,
   _$messagesCreateContentBodyDeErrorComponentCodeEnum_invalid,
@@ -83,10 +83,10 @@ final BuiltSet<MessagesCreateContentBodyDeErrorComponentCodeEnum>
 
 Serializer<MessagesCreateContentBodyDeErrorComponentAttrEnum>
     _$messagesCreateContentBodyDeErrorComponentAttrEnumSerializer =
-    new _$MessagesCreateContentBodyDeErrorComponentAttrEnumSerializer();
+    _$MessagesCreateContentBodyDeErrorComponentAttrEnumSerializer();
 Serializer<MessagesCreateContentBodyDeErrorComponentCodeEnum>
     _$messagesCreateContentBodyDeErrorComponentCodeEnumSerializer =
-    new _$MessagesCreateContentBodyDeErrorComponentCodeEnumSerializer();
+    _$MessagesCreateContentBodyDeErrorComponentCodeEnumSerializer();
 
 class _$MessagesCreateContentBodyDeErrorComponentAttrEnumSerializer
     implements
@@ -172,20 +172,12 @@ class _$MessagesCreateContentBodyDeErrorComponent
   factory _$MessagesCreateContentBodyDeErrorComponent(
           [void Function(MessagesCreateContentBodyDeErrorComponentBuilder)?
               updates]) =>
-      (new MessagesCreateContentBodyDeErrorComponentBuilder()..update(updates))
+      (MessagesCreateContentBodyDeErrorComponentBuilder()..update(updates))
           ._build();
 
   _$MessagesCreateContentBodyDeErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'MessagesCreateContentBodyDeErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'MessagesCreateContentBodyDeErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'MessagesCreateContentBodyDeErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   MessagesCreateContentBodyDeErrorComponent rebuild(
           void Function(MessagesCreateContentBodyDeErrorComponentBuilder)
@@ -194,7 +186,7 @@ class _$MessagesCreateContentBodyDeErrorComponent
 
   @override
   MessagesCreateContentBodyDeErrorComponentBuilder toBuilder() =>
-      new MessagesCreateContentBodyDeErrorComponentBuilder()..replace(this);
+      MessagesCreateContentBodyDeErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -263,7 +255,6 @@ class MessagesCreateContentBodyDeErrorComponentBuilder
 
   @override
   void replace(MessagesCreateContentBodyDeErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesCreateContentBodyDeErrorComponent;
   }
 
@@ -279,13 +270,14 @@ class MessagesCreateContentBodyDeErrorComponentBuilder
 
   _$MessagesCreateContentBodyDeErrorComponent _build() {
     final _$result = _$v ??
-        new _$MessagesCreateContentBodyDeErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'MessagesCreateContentBodyDeErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'MessagesCreateContentBodyDeErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'MessagesCreateContentBodyDeErrorComponent', 'detail'));
+        _$MessagesCreateContentBodyDeErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'MessagesCreateContentBodyDeErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'MessagesCreateContentBodyDeErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'MessagesCreateContentBodyDeErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

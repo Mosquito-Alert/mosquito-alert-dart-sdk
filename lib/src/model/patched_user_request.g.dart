@@ -117,8 +117,8 @@ PatchedUserRequestLocaleEnum _$patchedUserRequestLocaleEnumValueOf(
 }
 
 final BuiltSet<PatchedUserRequestLocaleEnum>
-    _$patchedUserRequestLocaleEnumValues = new BuiltSet<
-        PatchedUserRequestLocaleEnum>(const <PatchedUserRequestLocaleEnum>[
+    _$patchedUserRequestLocaleEnumValues =
+    BuiltSet<PatchedUserRequestLocaleEnum>(const <PatchedUserRequestLocaleEnum>[
   _$patchedUserRequestLocaleEnum_en,
   _$patchedUserRequestLocaleEnum_es,
   _$patchedUserRequestLocaleEnum_ca,
@@ -148,7 +148,7 @@ final BuiltSet<PatchedUserRequestLocaleEnum>
 
 Serializer<PatchedUserRequestLocaleEnum>
     _$patchedUserRequestLocaleEnumSerializer =
-    new _$PatchedUserRequestLocaleEnumSerializer();
+    _$PatchedUserRequestLocaleEnumSerializer();
 
 class _$PatchedUserRequestLocaleEnumSerializer
     implements PrimitiveSerializer<PatchedUserRequestLocaleEnum> {
@@ -231,10 +231,9 @@ class _$PatchedUserRequest extends PatchedUserRequest {
 
   factory _$PatchedUserRequest(
           [void Function(PatchedUserRequestBuilder)? updates]) =>
-      (new PatchedUserRequestBuilder()..update(updates))._build();
+      (PatchedUserRequestBuilder()..update(updates))._build();
 
   _$PatchedUserRequest._({this.locale}) : super._();
-
   @override
   PatchedUserRequest rebuild(
           void Function(PatchedUserRequestBuilder) updates) =>
@@ -242,7 +241,7 @@ class _$PatchedUserRequest extends PatchedUserRequest {
 
   @override
   PatchedUserRequestBuilder toBuilder() =>
-      new PatchedUserRequestBuilder()..replace(this);
+      PatchedUserRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -289,7 +288,6 @@ class PatchedUserRequestBuilder
 
   @override
   void replace(PatchedUserRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PatchedUserRequest;
   }
 
@@ -302,7 +300,10 @@ class PatchedUserRequestBuilder
   PatchedUserRequest build() => _build();
 
   _$PatchedUserRequest _build() {
-    final _$result = _$v ?? new _$PatchedUserRequest._(locale: locale);
+    final _$result = _$v ??
+        _$PatchedUserRequest._(
+          locale: locale,
+        );
     replace(_$result);
     return _$result;
   }

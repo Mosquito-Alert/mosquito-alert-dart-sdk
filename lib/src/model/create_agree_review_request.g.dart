@@ -26,7 +26,7 @@ CreateAgreeReviewRequestActionEnum _$createAgreeReviewRequestActionEnumValueOf(
 }
 
 final BuiltSet<CreateAgreeReviewRequestActionEnum>
-    _$createAgreeReviewRequestActionEnumValues = new BuiltSet<
+    _$createAgreeReviewRequestActionEnumValues = BuiltSet<
         CreateAgreeReviewRequestActionEnum>(const <CreateAgreeReviewRequestActionEnum>[
   _$createAgreeReviewRequestActionEnum_agree,
   _$createAgreeReviewRequestActionEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<CreateAgreeReviewRequestActionEnum>
 
 Serializer<CreateAgreeReviewRequestActionEnum>
     _$createAgreeReviewRequestActionEnumSerializer =
-    new _$CreateAgreeReviewRequestActionEnumSerializer();
+    _$CreateAgreeReviewRequestActionEnumSerializer();
 
 class _$CreateAgreeReviewRequestActionEnumSerializer
     implements PrimitiveSerializer<CreateAgreeReviewRequestActionEnum> {
@@ -72,13 +72,9 @@ class _$CreateAgreeReviewRequest extends CreateAgreeReviewRequest {
 
   factory _$CreateAgreeReviewRequest(
           [void Function(CreateAgreeReviewRequestBuilder)? updates]) =>
-      (new CreateAgreeReviewRequestBuilder()..update(updates))._build();
+      (CreateAgreeReviewRequestBuilder()..update(updates))._build();
 
-  _$CreateAgreeReviewRequest._({required this.action}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        action, r'CreateAgreeReviewRequest', 'action');
-  }
-
+  _$CreateAgreeReviewRequest._({required this.action}) : super._();
   @override
   CreateAgreeReviewRequest rebuild(
           void Function(CreateAgreeReviewRequestBuilder) updates) =>
@@ -86,7 +82,7 @@ class _$CreateAgreeReviewRequest extends CreateAgreeReviewRequest {
 
   @override
   CreateAgreeReviewRequestBuilder toBuilder() =>
-      new CreateAgreeReviewRequestBuilder()..replace(this);
+      CreateAgreeReviewRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -135,7 +131,6 @@ class CreateAgreeReviewRequestBuilder
 
   @override
   void replace(CreateAgreeReviewRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CreateAgreeReviewRequest;
   }
 
@@ -149,9 +144,10 @@ class CreateAgreeReviewRequestBuilder
 
   _$CreateAgreeReviewRequest _build() {
     final _$result = _$v ??
-        new _$CreateAgreeReviewRequest._(
-            action: BuiltValueNullFieldError.checkNotNull(
-                action, r'CreateAgreeReviewRequest', 'action'));
+        _$CreateAgreeReviewRequest._(
+          action: BuiltValueNullFieldError.checkNotNull(
+              action, r'CreateAgreeReviewRequest', 'action'),
+        );
     replace(_$result);
     return _$result;
   }

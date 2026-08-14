@@ -31,7 +31,7 @@ PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum
 final BuiltSet<
         PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum>(const <PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum>[
   _$photosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum_scoresPeriodAeAlbopictus,
   _$photosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum
 final BuiltSet<
         PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum>(const <PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum>[
   _$photosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum_invalid,
   _$photosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumSerializer();
 Serializer<
         PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumSerializer
     implements
@@ -215,27 +215,13 @@ class _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent
           [void Function(
                   PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentBuilder()
+      (PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent rebuild(
           void Function(
@@ -246,7 +232,7 @@ class _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent
   @override
   PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentBuilder
       toBuilder() =>
-          new PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentBuilder()
+          PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -326,7 +312,6 @@ class PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentBuilder
   @override
   void replace(
       PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent;
   }
@@ -345,19 +330,20 @@ class PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponentBuilder
 
   _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent',
-                'detail'));
+        _$PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'PhotosPredictionPartialUpdateScoresAeAlbopictusErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

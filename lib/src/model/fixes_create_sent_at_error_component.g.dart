@@ -26,7 +26,7 @@ FixesCreateSentAtErrorComponentAttrEnum
 }
 
 final BuiltSet<FixesCreateSentAtErrorComponentAttrEnum>
-    _$fixesCreateSentAtErrorComponentAttrEnumValues = new BuiltSet<
+    _$fixesCreateSentAtErrorComponentAttrEnumValues = BuiltSet<
         FixesCreateSentAtErrorComponentAttrEnum>(const <FixesCreateSentAtErrorComponentAttrEnum>[
   _$fixesCreateSentAtErrorComponentAttrEnum_sentAt,
   _$fixesCreateSentAtErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -77,7 +77,7 @@ FixesCreateSentAtErrorComponentCodeEnum
 }
 
 final BuiltSet<FixesCreateSentAtErrorComponentCodeEnum>
-    _$fixesCreateSentAtErrorComponentCodeEnumValues = new BuiltSet<
+    _$fixesCreateSentAtErrorComponentCodeEnumValues = BuiltSet<
         FixesCreateSentAtErrorComponentCodeEnum>(const <FixesCreateSentAtErrorComponentCodeEnum>[
   _$fixesCreateSentAtErrorComponentCodeEnum_date,
   _$fixesCreateSentAtErrorComponentCodeEnum_invalid,
@@ -90,10 +90,10 @@ final BuiltSet<FixesCreateSentAtErrorComponentCodeEnum>
 
 Serializer<FixesCreateSentAtErrorComponentAttrEnum>
     _$fixesCreateSentAtErrorComponentAttrEnumSerializer =
-    new _$FixesCreateSentAtErrorComponentAttrEnumSerializer();
+    _$FixesCreateSentAtErrorComponentAttrEnumSerializer();
 Serializer<FixesCreateSentAtErrorComponentCodeEnum>
     _$fixesCreateSentAtErrorComponentCodeEnumSerializer =
-    new _$FixesCreateSentAtErrorComponentCodeEnumSerializer();
+    _$FixesCreateSentAtErrorComponentCodeEnumSerializer();
 
 class _$FixesCreateSentAtErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<FixesCreateSentAtErrorComponentAttrEnum> {
@@ -180,19 +180,11 @@ class _$FixesCreateSentAtErrorComponent
 
   factory _$FixesCreateSentAtErrorComponent(
           [void Function(FixesCreateSentAtErrorComponentBuilder)? updates]) =>
-      (new FixesCreateSentAtErrorComponentBuilder()..update(updates))._build();
+      (FixesCreateSentAtErrorComponentBuilder()..update(updates))._build();
 
   _$FixesCreateSentAtErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'FixesCreateSentAtErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'FixesCreateSentAtErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'FixesCreateSentAtErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   FixesCreateSentAtErrorComponent rebuild(
           void Function(FixesCreateSentAtErrorComponentBuilder) updates) =>
@@ -200,7 +192,7 @@ class _$FixesCreateSentAtErrorComponent
 
   @override
   FixesCreateSentAtErrorComponentBuilder toBuilder() =>
-      new FixesCreateSentAtErrorComponentBuilder()..replace(this);
+      FixesCreateSentAtErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -268,7 +260,6 @@ class FixesCreateSentAtErrorComponentBuilder
 
   @override
   void replace(FixesCreateSentAtErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixesCreateSentAtErrorComponent;
   }
 
@@ -282,13 +273,14 @@ class FixesCreateSentAtErrorComponentBuilder
 
   _$FixesCreateSentAtErrorComponent _build() {
     final _$result = _$v ??
-        new _$FixesCreateSentAtErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'FixesCreateSentAtErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'FixesCreateSentAtErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'FixesCreateSentAtErrorComponent', 'detail'));
+        _$FixesCreateSentAtErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'FixesCreateSentAtErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'FixesCreateSentAtErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'FixesCreateSentAtErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

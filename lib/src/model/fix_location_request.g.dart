@@ -14,16 +14,10 @@ class _$FixLocationRequest extends FixLocationRequest {
 
   factory _$FixLocationRequest(
           [void Function(FixLocationRequestBuilder)? updates]) =>
-      (new FixLocationRequestBuilder()..update(updates))._build();
+      (FixLocationRequestBuilder()..update(updates))._build();
 
   _$FixLocationRequest._({required this.latitude, required this.longitude})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        latitude, r'FixLocationRequest', 'latitude');
-    BuiltValueNullFieldError.checkNotNull(
-        longitude, r'FixLocationRequest', 'longitude');
-  }
-
+      : super._();
   @override
   FixLocationRequest rebuild(
           void Function(FixLocationRequestBuilder) updates) =>
@@ -31,7 +25,7 @@ class _$FixLocationRequest extends FixLocationRequest {
 
   @override
   FixLocationRequestBuilder toBuilder() =>
-      new FixLocationRequestBuilder()..replace(this);
+      FixLocationRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -87,7 +81,6 @@ class FixLocationRequestBuilder
 
   @override
   void replace(FixLocationRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixLocationRequest;
   }
 
@@ -101,11 +94,12 @@ class FixLocationRequestBuilder
 
   _$FixLocationRequest _build() {
     final _$result = _$v ??
-        new _$FixLocationRequest._(
-            latitude: BuiltValueNullFieldError.checkNotNull(
-                latitude, r'FixLocationRequest', 'latitude'),
-            longitude: BuiltValueNullFieldError.checkNotNull(
-                longitude, r'FixLocationRequest', 'longitude'));
+        _$FixLocationRequest._(
+          latitude: BuiltValueNullFieldError.checkNotNull(
+              latitude, r'FixLocationRequest', 'latitude'),
+          longitude: BuiltValueNullFieldError.checkNotNull(
+              longitude, r'FixLocationRequest', 'longitude'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -26,7 +26,7 @@ AuthRefreshTokenValidationErrorTypeEnum
 }
 
 final BuiltSet<AuthRefreshTokenValidationErrorTypeEnum>
-    _$authRefreshTokenValidationErrorTypeEnumValues = new BuiltSet<
+    _$authRefreshTokenValidationErrorTypeEnumValues = BuiltSet<
         AuthRefreshTokenValidationErrorTypeEnum>(const <AuthRefreshTokenValidationErrorTypeEnum>[
   _$authRefreshTokenValidationErrorTypeEnum_validationError,
   _$authRefreshTokenValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<AuthRefreshTokenValidationErrorTypeEnum>
 
 Serializer<AuthRefreshTokenValidationErrorTypeEnum>
     _$authRefreshTokenValidationErrorTypeEnumSerializer =
-    new _$AuthRefreshTokenValidationErrorTypeEnumSerializer();
+    _$AuthRefreshTokenValidationErrorTypeEnumSerializer();
 
 class _$AuthRefreshTokenValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<AuthRefreshTokenValidationErrorTypeEnum> {
@@ -77,17 +77,11 @@ class _$AuthRefreshTokenValidationError
 
   factory _$AuthRefreshTokenValidationError(
           [void Function(AuthRefreshTokenValidationErrorBuilder)? updates]) =>
-      (new AuthRefreshTokenValidationErrorBuilder()..update(updates))._build();
+      (AuthRefreshTokenValidationErrorBuilder()..update(updates))._build();
 
   _$AuthRefreshTokenValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'AuthRefreshTokenValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'AuthRefreshTokenValidationError', 'errors');
-  }
-
+      : super._();
   @override
   AuthRefreshTokenValidationError rebuild(
           void Function(AuthRefreshTokenValidationErrorBuilder) updates) =>
@@ -95,7 +89,7 @@ class _$AuthRefreshTokenValidationError
 
   @override
   AuthRefreshTokenValidationErrorBuilder toBuilder() =>
-      new AuthRefreshTokenValidationErrorBuilder()..replace(this);
+      AuthRefreshTokenValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -136,7 +130,7 @@ class AuthRefreshTokenValidationErrorBuilder
 
   ListBuilder<AuthRefreshTokenError>? _errors;
   ListBuilder<AuthRefreshTokenError> get errors =>
-      _$this._errors ??= new ListBuilder<AuthRefreshTokenError>();
+      _$this._errors ??= ListBuilder<AuthRefreshTokenError>();
   set errors(ListBuilder<AuthRefreshTokenError>? errors) =>
       _$this._errors = errors;
 
@@ -156,7 +150,6 @@ class AuthRefreshTokenValidationErrorBuilder
 
   @override
   void replace(AuthRefreshTokenValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthRefreshTokenValidationError;
   }
 
@@ -172,17 +165,18 @@ class AuthRefreshTokenValidationErrorBuilder
     _$AuthRefreshTokenValidationError _$result;
     try {
       _$result = _$v ??
-          new _$AuthRefreshTokenValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'AuthRefreshTokenValidationError', 'type'),
-              errors: errors.build());
+          _$AuthRefreshTokenValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'AuthRefreshTokenValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'AuthRefreshTokenValidationError', _$failedField, e.toString());
       }
       rethrow;

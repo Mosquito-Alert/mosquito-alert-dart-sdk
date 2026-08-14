@@ -12,10 +12,9 @@ class _$PatchedNotificationRequest extends PatchedNotificationRequest {
 
   factory _$PatchedNotificationRequest(
           [void Function(PatchedNotificationRequestBuilder)? updates]) =>
-      (new PatchedNotificationRequestBuilder()..update(updates))._build();
+      (PatchedNotificationRequestBuilder()..update(updates))._build();
 
   _$PatchedNotificationRequest._({this.isRead}) : super._();
-
   @override
   PatchedNotificationRequest rebuild(
           void Function(PatchedNotificationRequestBuilder) updates) =>
@@ -23,7 +22,7 @@ class _$PatchedNotificationRequest extends PatchedNotificationRequest {
 
   @override
   PatchedNotificationRequestBuilder toBuilder() =>
-      new PatchedNotificationRequestBuilder()..replace(this);
+      PatchedNotificationRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -71,7 +70,6 @@ class PatchedNotificationRequestBuilder
 
   @override
   void replace(PatchedNotificationRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PatchedNotificationRequest;
   }
 
@@ -84,7 +82,10 @@ class PatchedNotificationRequestBuilder
   PatchedNotificationRequest build() => _build();
 
   _$PatchedNotificationRequest _build() {
-    final _$result = _$v ?? new _$PatchedNotificationRequest._(isRead: isRead);
+    final _$result = _$v ??
+        _$PatchedNotificationRequest._(
+          isRead: isRead,
+        );
     replace(_$result);
     return _$result;
   }

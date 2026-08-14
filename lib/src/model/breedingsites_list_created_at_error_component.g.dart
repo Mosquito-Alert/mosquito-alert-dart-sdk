@@ -27,7 +27,7 @@ BreedingsitesListCreatedAtErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesListCreatedAtErrorComponentAttrEnum>
-    _$breedingsitesListCreatedAtErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesListCreatedAtErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesListCreatedAtErrorComponentAttrEnum>(const <BreedingsitesListCreatedAtErrorComponentAttrEnum>[
   _$breedingsitesListCreatedAtErrorComponentAttrEnum_createdAt,
   _$breedingsitesListCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ BreedingsitesListCreatedAtErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesListCreatedAtErrorComponentCodeEnum>
-    _$breedingsitesListCreatedAtErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesListCreatedAtErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesListCreatedAtErrorComponentCodeEnum>(const <BreedingsitesListCreatedAtErrorComponentCodeEnum>[
   _$breedingsitesListCreatedAtErrorComponentCodeEnum_invalid,
   _$breedingsitesListCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<BreedingsitesListCreatedAtErrorComponentCodeEnum>
 
 Serializer<BreedingsitesListCreatedAtErrorComponentAttrEnum>
     _$breedingsitesListCreatedAtErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesListCreatedAtErrorComponentAttrEnumSerializer();
+    _$BreedingsitesListCreatedAtErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesListCreatedAtErrorComponentCodeEnum>
     _$breedingsitesListCreatedAtErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesListCreatedAtErrorComponentCodeEnumSerializer();
+    _$BreedingsitesListCreatedAtErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesListCreatedAtErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,12 @@ class _$BreedingsitesListCreatedAtErrorComponent
   factory _$BreedingsitesListCreatedAtErrorComponent(
           [void Function(BreedingsitesListCreatedAtErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesListCreatedAtErrorComponentBuilder()..update(updates))
+      (BreedingsitesListCreatedAtErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesListCreatedAtErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesListCreatedAtErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesListCreatedAtErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesListCreatedAtErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesListCreatedAtErrorComponent rebuild(
           void Function(BreedingsitesListCreatedAtErrorComponentBuilder)
@@ -167,7 +159,7 @@ class _$BreedingsitesListCreatedAtErrorComponent
 
   @override
   BreedingsitesListCreatedAtErrorComponentBuilder toBuilder() =>
-      new BreedingsitesListCreatedAtErrorComponentBuilder()..replace(this);
+      BreedingsitesListCreatedAtErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -236,7 +228,6 @@ class BreedingsitesListCreatedAtErrorComponentBuilder
 
   @override
   void replace(BreedingsitesListCreatedAtErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesListCreatedAtErrorComponent;
   }
 
@@ -251,13 +242,14 @@ class BreedingsitesListCreatedAtErrorComponentBuilder
 
   _$BreedingsitesListCreatedAtErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesListCreatedAtErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesListCreatedAtErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesListCreatedAtErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BreedingsitesListCreatedAtErrorComponent', 'detail'));
+        _$BreedingsitesListCreatedAtErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesListCreatedAtErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesListCreatedAtErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BreedingsitesListCreatedAtErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

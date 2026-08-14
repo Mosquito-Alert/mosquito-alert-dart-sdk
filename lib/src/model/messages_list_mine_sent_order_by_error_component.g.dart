@@ -27,7 +27,7 @@ MessagesListMineSentOrderByErrorComponentAttrEnum
 }
 
 final BuiltSet<MessagesListMineSentOrderByErrorComponentAttrEnum>
-    _$messagesListMineSentOrderByErrorComponentAttrEnumValues = new BuiltSet<
+    _$messagesListMineSentOrderByErrorComponentAttrEnumValues = BuiltSet<
         MessagesListMineSentOrderByErrorComponentAttrEnum>(const <MessagesListMineSentOrderByErrorComponentAttrEnum>[
   _$messagesListMineSentOrderByErrorComponentAttrEnum_orderBy,
   _$messagesListMineSentOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ MessagesListMineSentOrderByErrorComponentCodeEnum
 }
 
 final BuiltSet<MessagesListMineSentOrderByErrorComponentCodeEnum>
-    _$messagesListMineSentOrderByErrorComponentCodeEnumValues = new BuiltSet<
+    _$messagesListMineSentOrderByErrorComponentCodeEnumValues = BuiltSet<
         MessagesListMineSentOrderByErrorComponentCodeEnum>(const <MessagesListMineSentOrderByErrorComponentCodeEnum>[
   _$messagesListMineSentOrderByErrorComponentCodeEnum_invalidChoice,
   _$messagesListMineSentOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<MessagesListMineSentOrderByErrorComponentCodeEnum>
 
 Serializer<MessagesListMineSentOrderByErrorComponentAttrEnum>
     _$messagesListMineSentOrderByErrorComponentAttrEnumSerializer =
-    new _$MessagesListMineSentOrderByErrorComponentAttrEnumSerializer();
+    _$MessagesListMineSentOrderByErrorComponentAttrEnumSerializer();
 Serializer<MessagesListMineSentOrderByErrorComponentCodeEnum>
     _$messagesListMineSentOrderByErrorComponentCodeEnumSerializer =
-    new _$MessagesListMineSentOrderByErrorComponentCodeEnumSerializer();
+    _$MessagesListMineSentOrderByErrorComponentCodeEnumSerializer();
 
 class _$MessagesListMineSentOrderByErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,12 @@ class _$MessagesListMineSentOrderByErrorComponent
   factory _$MessagesListMineSentOrderByErrorComponent(
           [void Function(MessagesListMineSentOrderByErrorComponentBuilder)?
               updates]) =>
-      (new MessagesListMineSentOrderByErrorComponentBuilder()..update(updates))
+      (MessagesListMineSentOrderByErrorComponentBuilder()..update(updates))
           ._build();
 
   _$MessagesListMineSentOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'MessagesListMineSentOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'MessagesListMineSentOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'MessagesListMineSentOrderByErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   MessagesListMineSentOrderByErrorComponent rebuild(
           void Function(MessagesListMineSentOrderByErrorComponentBuilder)
@@ -167,7 +159,7 @@ class _$MessagesListMineSentOrderByErrorComponent
 
   @override
   MessagesListMineSentOrderByErrorComponentBuilder toBuilder() =>
-      new MessagesListMineSentOrderByErrorComponentBuilder()..replace(this);
+      MessagesListMineSentOrderByErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -236,7 +228,6 @@ class MessagesListMineSentOrderByErrorComponentBuilder
 
   @override
   void replace(MessagesListMineSentOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesListMineSentOrderByErrorComponent;
   }
 
@@ -252,13 +243,14 @@ class MessagesListMineSentOrderByErrorComponentBuilder
 
   _$MessagesListMineSentOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$MessagesListMineSentOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'MessagesListMineSentOrderByErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'MessagesListMineSentOrderByErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'MessagesListMineSentOrderByErrorComponent', 'detail'));
+        _$MessagesListMineSentOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'MessagesListMineSentOrderByErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'MessagesListMineSentOrderByErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'MessagesListMineSentOrderByErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

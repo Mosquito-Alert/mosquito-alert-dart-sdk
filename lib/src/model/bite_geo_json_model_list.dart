@@ -87,15 +87,17 @@ class _$BiteGeoJsonModelListSerializer implements PrimitiveSerializer<BiteGeoJso
         case r'type':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BiteGeoJsonModelListTypeEnum),
-          ) as BiteGeoJsonModelListTypeEnum;
+            specifiedType: const FullType.nullable(BiteGeoJsonModelListTypeEnum),
+          ) as BiteGeoJsonModelListTypeEnum?;
+          if (valueDes == null) continue;
           result.type = valueDes;
           break;
         case r'features':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(BiteGeoJsonModel)]),
-          ) as BuiltList<BiteGeoJsonModel>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(BiteGeoJsonModel)]),
+          ) as BuiltList<BiteGeoJsonModel>?;
+          if (valueDes == null) continue;
           result.features.replace(valueDes);
           break;
         default:

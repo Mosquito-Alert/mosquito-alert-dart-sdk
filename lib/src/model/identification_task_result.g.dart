@@ -31,7 +31,7 @@ IdentificationTaskResultSource_Enum _$identificationTaskResultSourceEnumValueOf(
 }
 
 final BuiltSet<IdentificationTaskResultSource_Enum>
-    _$identificationTaskResultSourceEnumValues = new BuiltSet<
+    _$identificationTaskResultSourceEnumValues = BuiltSet<
         IdentificationTaskResultSource_Enum>(const <IdentificationTaskResultSource_Enum>[
   _$identificationTaskResultSourceEnum_expert,
   _$identificationTaskResultSourceEnum_ai,
@@ -40,7 +40,7 @@ final BuiltSet<IdentificationTaskResultSource_Enum>
 
 Serializer<IdentificationTaskResultSource_Enum>
     _$identificationTaskResultSourceEnumSerializer =
-    new _$IdentificationTaskResultSource_EnumSerializer();
+    _$IdentificationTaskResultSource_EnumSerializer();
 
 class _$IdentificationTaskResultSource_EnumSerializer
     implements PrimitiveSerializer<IdentificationTaskResultSource_Enum> {
@@ -96,7 +96,7 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
 
   factory _$IdentificationTaskResult(
           [void Function(IdentificationTaskResultBuilder)? updates]) =>
-      (new IdentificationTaskResultBuilder()..update(updates))._build();
+      (IdentificationTaskResultBuilder()..update(updates))._build();
 
   _$IdentificationTaskResult._(
       {required this.source_,
@@ -107,21 +107,7 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
       required this.uncertainty,
       required this.agreement,
       this.characteristics})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        source_, r'IdentificationTaskResult', 'source_');
-    BuiltValueNullFieldError.checkNotNull(
-        isHighConfidence, r'IdentificationTaskResult', 'isHighConfidence');
-    BuiltValueNullFieldError.checkNotNull(
-        confidence, r'IdentificationTaskResult', 'confidence');
-    BuiltValueNullFieldError.checkNotNull(
-        confidenceLabel, r'IdentificationTaskResult', 'confidenceLabel');
-    BuiltValueNullFieldError.checkNotNull(
-        uncertainty, r'IdentificationTaskResult', 'uncertainty');
-    BuiltValueNullFieldError.checkNotNull(
-        agreement, r'IdentificationTaskResult', 'agreement');
-  }
-
+      : super._();
   @override
   IdentificationTaskResult rebuild(
           void Function(IdentificationTaskResultBuilder) updates) =>
@@ -129,7 +115,7 @@ class _$IdentificationTaskResult extends IdentificationTaskResult {
 
   @override
   IdentificationTaskResultBuilder toBuilder() =>
-      new IdentificationTaskResultBuilder()..replace(this);
+      IdentificationTaskResultBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -186,7 +172,7 @@ class IdentificationTaskResultBuilder
       _$this._source_ = source_;
 
   SimpleTaxonBuilder? _taxon;
-  SimpleTaxonBuilder get taxon => _$this._taxon ??= new SimpleTaxonBuilder();
+  SimpleTaxonBuilder get taxon => _$this._taxon ??= SimpleTaxonBuilder();
   set taxon(SimpleTaxonBuilder? taxon) => _$this._taxon = taxon;
 
   bool? _isHighConfidence;
@@ -213,7 +199,7 @@ class IdentificationTaskResultBuilder
 
   SpeciesCharacteristicsBuilder? _characteristics;
   SpeciesCharacteristicsBuilder get characteristics =>
-      _$this._characteristics ??= new SpeciesCharacteristicsBuilder();
+      _$this._characteristics ??= SpeciesCharacteristicsBuilder();
   set characteristics(SpeciesCharacteristicsBuilder? characteristics) =>
       _$this._characteristics = characteristics;
 
@@ -239,7 +225,6 @@ class IdentificationTaskResultBuilder
 
   @override
   void replace(IdentificationTaskResult other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationTaskResult;
   }
 
@@ -255,25 +240,26 @@ class IdentificationTaskResultBuilder
     _$IdentificationTaskResult _$result;
     try {
       _$result = _$v ??
-          new _$IdentificationTaskResult._(
-              source_: BuiltValueNullFieldError.checkNotNull(
-                  source_, r'IdentificationTaskResult', 'source_'),
-              taxon: _taxon?.build(),
-              isHighConfidence: BuiltValueNullFieldError.checkNotNull(
-                  isHighConfidence,
-                  r'IdentificationTaskResult',
-                  'isHighConfidence'),
-              confidence: BuiltValueNullFieldError.checkNotNull(
-                  confidence, r'IdentificationTaskResult', 'confidence'),
-              confidenceLabel: BuiltValueNullFieldError.checkNotNull(
-                  confidenceLabel,
-                  r'IdentificationTaskResult',
-                  'confidenceLabel'),
-              uncertainty: BuiltValueNullFieldError.checkNotNull(
-                  uncertainty, r'IdentificationTaskResult', 'uncertainty'),
-              agreement: BuiltValueNullFieldError.checkNotNull(
-                  agreement, r'IdentificationTaskResult', 'agreement'),
-              characteristics: _characteristics?.build());
+          _$IdentificationTaskResult._(
+            source_: BuiltValueNullFieldError.checkNotNull(
+                source_, r'IdentificationTaskResult', 'source_'),
+            taxon: _taxon?.build(),
+            isHighConfidence: BuiltValueNullFieldError.checkNotNull(
+                isHighConfidence,
+                r'IdentificationTaskResult',
+                'isHighConfidence'),
+            confidence: BuiltValueNullFieldError.checkNotNull(
+                confidence, r'IdentificationTaskResult', 'confidence'),
+            confidenceLabel: BuiltValueNullFieldError.checkNotNull(
+                confidenceLabel,
+                r'IdentificationTaskResult',
+                'confidenceLabel'),
+            uncertainty: BuiltValueNullFieldError.checkNotNull(
+                uncertainty, r'IdentificationTaskResult', 'uncertainty'),
+            agreement: BuiltValueNullFieldError.checkNotNull(
+                agreement, r'IdentificationTaskResult', 'agreement'),
+            characteristics: _characteristics?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -283,7 +269,7 @@ class IdentificationTaskResultBuilder
         _$failedField = 'characteristics';
         _characteristics?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'IdentificationTaskResult', _$failedField, e.toString());
       }
       rethrow;

@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnum_classificationPeriodTaxonId,
   _$identificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -80,7 +80,7 @@ IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnum_doesNotExist,
   _$identificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnum_incorrectType,
@@ -92,11 +92,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentAttrEnumSerializer
     implements
@@ -195,27 +195,13 @@ class _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent rebuild(
           void Function(
@@ -226,7 +212,7 @@ class _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent
   @override
   IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -311,7 +297,6 @@ class IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentBui
   void replace(
       IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent;
   }
@@ -331,20 +316,21 @@ class IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponentBui
   _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent
+        _$IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateClassificationTaxonIdErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -28,7 +28,7 @@ ObservationsCreateTagsINDEXErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsCreateTagsINDEXErrorComponentAttrEnum>
-    _$observationsCreateTagsINDEXErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsCreateTagsINDEXErrorComponentAttrEnumValues = BuiltSet<
         ObservationsCreateTagsINDEXErrorComponentAttrEnum>(const <ObservationsCreateTagsINDEXErrorComponentAttrEnum>[
   _$observationsCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX,
   _$observationsCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -82,7 +82,7 @@ ObservationsCreateTagsINDEXErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsCreateTagsINDEXErrorComponentCodeEnum>
-    _$observationsCreateTagsINDEXErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsCreateTagsINDEXErrorComponentCodeEnumValues = BuiltSet<
         ObservationsCreateTagsINDEXErrorComponentCodeEnum>(const <ObservationsCreateTagsINDEXErrorComponentCodeEnum>[
   _$observationsCreateTagsINDEXErrorComponentCodeEnum_blank,
   _$observationsCreateTagsINDEXErrorComponentCodeEnum_invalid,
@@ -95,10 +95,10 @@ final BuiltSet<ObservationsCreateTagsINDEXErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateTagsINDEXErrorComponentAttrEnum>
     _$observationsCreateTagsINDEXErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateTagsINDEXErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateTagsINDEXErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateTagsINDEXErrorComponentCodeEnum>
     _$observationsCreateTagsINDEXErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateTagsINDEXErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateTagsINDEXErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateTagsINDEXErrorComponentAttrEnumSerializer
     implements
@@ -188,20 +188,12 @@ class _$ObservationsCreateTagsINDEXErrorComponent
   factory _$ObservationsCreateTagsINDEXErrorComponent(
           [void Function(ObservationsCreateTagsINDEXErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateTagsINDEXErrorComponentBuilder()..update(updates))
+      (ObservationsCreateTagsINDEXErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsCreateTagsINDEXErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsCreateTagsINDEXErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsCreateTagsINDEXErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsCreateTagsINDEXErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateTagsINDEXErrorComponent rebuild(
           void Function(ObservationsCreateTagsINDEXErrorComponentBuilder)
@@ -210,7 +202,7 @@ class _$ObservationsCreateTagsINDEXErrorComponent
 
   @override
   ObservationsCreateTagsINDEXErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateTagsINDEXErrorComponentBuilder()..replace(this);
+      ObservationsCreateTagsINDEXErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -279,7 +271,6 @@ class ObservationsCreateTagsINDEXErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateTagsINDEXErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateTagsINDEXErrorComponent;
   }
 
@@ -295,13 +286,14 @@ class ObservationsCreateTagsINDEXErrorComponentBuilder
 
   _$ObservationsCreateTagsINDEXErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateTagsINDEXErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsCreateTagsINDEXErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsCreateTagsINDEXErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsCreateTagsINDEXErrorComponent', 'detail'));
+        _$ObservationsCreateTagsINDEXErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsCreateTagsINDEXErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsCreateTagsINDEXErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsCreateTagsINDEXErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

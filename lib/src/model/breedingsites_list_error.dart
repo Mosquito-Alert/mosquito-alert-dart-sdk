@@ -145,9 +145,7 @@ class _$BreedingsitesListErrorSerializer implements PrimitiveSerializer<Breeding
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    BreedingsitesListError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    BreedingsitesListError object) sync* {
   }
 
   @override

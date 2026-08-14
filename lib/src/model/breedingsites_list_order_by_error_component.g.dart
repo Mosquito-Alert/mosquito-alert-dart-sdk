@@ -27,7 +27,7 @@ BreedingsitesListOrderByErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesListOrderByErrorComponentAttrEnum>
-    _$breedingsitesListOrderByErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesListOrderByErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesListOrderByErrorComponentAttrEnum>(const <BreedingsitesListOrderByErrorComponentAttrEnum>[
   _$breedingsitesListOrderByErrorComponentAttrEnum_orderBy,
   _$breedingsitesListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ BreedingsitesListOrderByErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesListOrderByErrorComponentCodeEnum>
-    _$breedingsitesListOrderByErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesListOrderByErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesListOrderByErrorComponentCodeEnum>(const <BreedingsitesListOrderByErrorComponentCodeEnum>[
   _$breedingsitesListOrderByErrorComponentCodeEnum_invalidChoice,
   _$breedingsitesListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<BreedingsitesListOrderByErrorComponentCodeEnum>
 
 Serializer<BreedingsitesListOrderByErrorComponentAttrEnum>
     _$breedingsitesListOrderByErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesListOrderByErrorComponentAttrEnumSerializer();
+    _$BreedingsitesListOrderByErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesListOrderByErrorComponentCodeEnum>
     _$breedingsitesListOrderByErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesListOrderByErrorComponentCodeEnumSerializer();
+    _$BreedingsitesListOrderByErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesListOrderByErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,12 @@ class _$BreedingsitesListOrderByErrorComponent
   factory _$BreedingsitesListOrderByErrorComponent(
           [void Function(BreedingsitesListOrderByErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesListOrderByErrorComponentBuilder()..update(updates))
+      (BreedingsitesListOrderByErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesListOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesListOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesListOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesListOrderByErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesListOrderByErrorComponent rebuild(
           void Function(BreedingsitesListOrderByErrorComponentBuilder)
@@ -167,7 +159,7 @@ class _$BreedingsitesListOrderByErrorComponent
 
   @override
   BreedingsitesListOrderByErrorComponentBuilder toBuilder() =>
-      new BreedingsitesListOrderByErrorComponentBuilder()..replace(this);
+      BreedingsitesListOrderByErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -236,7 +228,6 @@ class BreedingsitesListOrderByErrorComponentBuilder
 
   @override
   void replace(BreedingsitesListOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesListOrderByErrorComponent;
   }
 
@@ -251,13 +242,14 @@ class BreedingsitesListOrderByErrorComponentBuilder
 
   _$BreedingsitesListOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesListOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesListOrderByErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesListOrderByErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BreedingsitesListOrderByErrorComponent', 'detail'));
+        _$BreedingsitesListOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesListOrderByErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesListOrderByErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BreedingsitesListOrderByErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

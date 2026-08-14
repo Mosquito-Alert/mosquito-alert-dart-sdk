@@ -14,15 +14,10 @@ class _$NotificationMessage extends NotificationMessage {
 
   factory _$NotificationMessage(
           [void Function(NotificationMessageBuilder)? updates]) =>
-      (new NotificationMessageBuilder()..update(updates))._build();
+      (NotificationMessageBuilder()..update(updates))._build();
 
   _$NotificationMessage._({required this.title, required this.body})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        title, r'NotificationMessage', 'title');
-    BuiltValueNullFieldError.checkNotNull(body, r'NotificationMessage', 'body');
-  }
-
+      : super._();
   @override
   NotificationMessage rebuild(
           void Function(NotificationMessageBuilder) updates) =>
@@ -30,7 +25,7 @@ class _$NotificationMessage extends NotificationMessage {
 
   @override
   NotificationMessageBuilder toBuilder() =>
-      new NotificationMessageBuilder()..replace(this);
+      NotificationMessageBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -86,7 +81,6 @@ class NotificationMessageBuilder
 
   @override
   void replace(NotificationMessage other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationMessage;
   }
 
@@ -100,11 +94,12 @@ class NotificationMessageBuilder
 
   _$NotificationMessage _build() {
     final _$result = _$v ??
-        new _$NotificationMessage._(
-            title: BuiltValueNullFieldError.checkNotNull(
-                title, r'NotificationMessage', 'title'),
-            body: BuiltValueNullFieldError.checkNotNull(
-                body, r'NotificationMessage', 'body'));
+        _$NotificationMessage._(
+          title: BuiltValueNullFieldError.checkNotNull(
+              title, r'NotificationMessage', 'title'),
+          body: BuiltValueNullFieldError.checkNotNull(
+              body, r'NotificationMessage', 'body'),
+        );
     replace(_$result);
     return _$result;
   }

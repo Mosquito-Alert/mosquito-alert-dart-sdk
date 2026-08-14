@@ -28,7 +28,7 @@ DevicesPartialUpdateOsVersionErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesPartialUpdateOsVersionErrorComponentAttrEnum>
-    _$devicesPartialUpdateOsVersionErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesPartialUpdateOsVersionErrorComponentAttrEnumValues = BuiltSet<
         DevicesPartialUpdateOsVersionErrorComponentAttrEnum>(const <DevicesPartialUpdateOsVersionErrorComponentAttrEnum>[
   _$devicesPartialUpdateOsVersionErrorComponentAttrEnum_osPeriodVersion,
   _$devicesPartialUpdateOsVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -82,7 +82,7 @@ DevicesPartialUpdateOsVersionErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesPartialUpdateOsVersionErrorComponentCodeEnum>
-    _$devicesPartialUpdateOsVersionErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesPartialUpdateOsVersionErrorComponentCodeEnumValues = BuiltSet<
         DevicesPartialUpdateOsVersionErrorComponentCodeEnum>(const <DevicesPartialUpdateOsVersionErrorComponentCodeEnum>[
   _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_invalid,
   _$devicesPartialUpdateOsVersionErrorComponentCodeEnum_maxLength,
@@ -95,10 +95,10 @@ final BuiltSet<DevicesPartialUpdateOsVersionErrorComponentCodeEnum>
 
 Serializer<DevicesPartialUpdateOsVersionErrorComponentAttrEnum>
     _$devicesPartialUpdateOsVersionErrorComponentAttrEnumSerializer =
-    new _$DevicesPartialUpdateOsVersionErrorComponentAttrEnumSerializer();
+    _$DevicesPartialUpdateOsVersionErrorComponentAttrEnumSerializer();
 Serializer<DevicesPartialUpdateOsVersionErrorComponentCodeEnum>
     _$devicesPartialUpdateOsVersionErrorComponentCodeEnumSerializer =
-    new _$DevicesPartialUpdateOsVersionErrorComponentCodeEnumSerializer();
+    _$DevicesPartialUpdateOsVersionErrorComponentCodeEnumSerializer();
 
 class _$DevicesPartialUpdateOsVersionErrorComponentAttrEnumSerializer
     implements
@@ -190,21 +190,12 @@ class _$DevicesPartialUpdateOsVersionErrorComponent
   factory _$DevicesPartialUpdateOsVersionErrorComponent(
           [void Function(DevicesPartialUpdateOsVersionErrorComponentBuilder)?
               updates]) =>
-      (new DevicesPartialUpdateOsVersionErrorComponentBuilder()
-            ..update(updates))
+      (DevicesPartialUpdateOsVersionErrorComponentBuilder()..update(updates))
           ._build();
 
   _$DevicesPartialUpdateOsVersionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesPartialUpdateOsVersionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesPartialUpdateOsVersionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesPartialUpdateOsVersionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesPartialUpdateOsVersionErrorComponent rebuild(
           void Function(DevicesPartialUpdateOsVersionErrorComponentBuilder)
@@ -213,7 +204,7 @@ class _$DevicesPartialUpdateOsVersionErrorComponent
 
   @override
   DevicesPartialUpdateOsVersionErrorComponentBuilder toBuilder() =>
-      new DevicesPartialUpdateOsVersionErrorComponentBuilder()..replace(this);
+      DevicesPartialUpdateOsVersionErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -282,7 +273,6 @@ class DevicesPartialUpdateOsVersionErrorComponentBuilder
 
   @override
   void replace(DevicesPartialUpdateOsVersionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesPartialUpdateOsVersionErrorComponent;
   }
 
@@ -298,13 +288,14 @@ class DevicesPartialUpdateOsVersionErrorComponentBuilder
 
   _$DevicesPartialUpdateOsVersionErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesPartialUpdateOsVersionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesPartialUpdateOsVersionErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesPartialUpdateOsVersionErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'DevicesPartialUpdateOsVersionErrorComponent', 'detail'));
+        _$DevicesPartialUpdateOsVersionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesPartialUpdateOsVersionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesPartialUpdateOsVersionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesPartialUpdateOsVersionErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

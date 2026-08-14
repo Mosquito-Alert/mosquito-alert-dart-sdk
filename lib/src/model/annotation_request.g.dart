@@ -26,7 +26,7 @@ class _$AnnotationRequest extends AnnotationRequest {
 
   factory _$AnnotationRequest(
           [void Function(AnnotationRequestBuilder)? updates]) =>
-      (new AnnotationRequestBuilder()..update(updates))._build();
+      (AnnotationRequestBuilder()..update(updates))._build();
 
   _$AnnotationRequest._(
       {this.bestPhotoUuid,
@@ -38,14 +38,13 @@ class _$AnnotationRequest extends AnnotationRequest {
       this.observationFlags,
       this.tags})
       : super._();
-
   @override
   AnnotationRequest rebuild(void Function(AnnotationRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   AnnotationRequestBuilder toBuilder() =>
-      new AnnotationRequestBuilder()..replace(this);
+      AnnotationRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -102,19 +101,19 @@ class AnnotationRequestBuilder
 
   SpeciesClassificationRequestBuilder? _classification;
   SpeciesClassificationRequestBuilder get classification =>
-      _$this._classification ??= new SpeciesClassificationRequestBuilder();
+      _$this._classification ??= SpeciesClassificationRequestBuilder();
   set classification(SpeciesClassificationRequestBuilder? classification) =>
       _$this._classification = classification;
 
   SpeciesCharacteristicsRequestBuilder? _characteristics;
   SpeciesCharacteristicsRequestBuilder get characteristics =>
-      _$this._characteristics ??= new SpeciesCharacteristicsRequestBuilder();
+      _$this._characteristics ??= SpeciesCharacteristicsRequestBuilder();
   set characteristics(SpeciesCharacteristicsRequestBuilder? characteristics) =>
       _$this._characteristics = characteristics;
 
   AnnotationFeedbackRequestBuilder? _feedback;
   AnnotationFeedbackRequestBuilder get feedback =>
-      _$this._feedback ??= new AnnotationFeedbackRequestBuilder();
+      _$this._feedback ??= AnnotationFeedbackRequestBuilder();
   set feedback(AnnotationFeedbackRequestBuilder? feedback) =>
       _$this._feedback = feedback;
 
@@ -128,12 +127,12 @@ class AnnotationRequestBuilder
 
   ObservationFlagsRequestBuilder? _observationFlags;
   ObservationFlagsRequestBuilder get observationFlags =>
-      _$this._observationFlags ??= new ObservationFlagsRequestBuilder();
+      _$this._observationFlags ??= ObservationFlagsRequestBuilder();
   set observationFlags(ObservationFlagsRequestBuilder? observationFlags) =>
       _$this._observationFlags = observationFlags;
 
   ListBuilder<String>? _tags;
-  ListBuilder<String> get tags => _$this._tags ??= new ListBuilder<String>();
+  ListBuilder<String> get tags => _$this._tags ??= ListBuilder<String>();
   set tags(ListBuilder<String>? tags) => _$this._tags = tags;
 
   AnnotationRequestBuilder() {
@@ -158,7 +157,6 @@ class AnnotationRequestBuilder
 
   @override
   void replace(AnnotationRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AnnotationRequest;
   }
 
@@ -174,15 +172,16 @@ class AnnotationRequestBuilder
     _$AnnotationRequest _$result;
     try {
       _$result = _$v ??
-          new _$AnnotationRequest._(
-              bestPhotoUuid: bestPhotoUuid,
-              classification: _classification?.build(),
-              characteristics: _characteristics?.build(),
-              feedback: _feedback?.build(),
-              isFlagged: isFlagged,
-              isExecutive: isExecutive,
-              observationFlags: _observationFlags?.build(),
-              tags: _tags?.build());
+          _$AnnotationRequest._(
+            bestPhotoUuid: bestPhotoUuid,
+            classification: _classification?.build(),
+            characteristics: _characteristics?.build(),
+            feedback: _feedback?.build(),
+            isFlagged: isFlagged,
+            isExecutive: isExecutive,
+            observationFlags: _observationFlags?.build(),
+            tags: _tags?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -198,7 +197,7 @@ class AnnotationRequestBuilder
         _$failedField = 'tags';
         _tags?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'AnnotationRequest', _$failedField, e.toString());
       }
       rethrow;

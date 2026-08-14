@@ -27,7 +27,7 @@ DevicesUpdateOsVersionErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesUpdateOsVersionErrorComponentAttrEnum>
-    _$devicesUpdateOsVersionErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesUpdateOsVersionErrorComponentAttrEnumValues = BuiltSet<
         DevicesUpdateOsVersionErrorComponentAttrEnum>(const <DevicesUpdateOsVersionErrorComponentAttrEnum>[
   _$devicesUpdateOsVersionErrorComponentAttrEnum_osPeriodVersion,
   _$devicesUpdateOsVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -81,7 +81,7 @@ DevicesUpdateOsVersionErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesUpdateOsVersionErrorComponentCodeEnum>
-    _$devicesUpdateOsVersionErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesUpdateOsVersionErrorComponentCodeEnumValues = BuiltSet<
         DevicesUpdateOsVersionErrorComponentCodeEnum>(const <DevicesUpdateOsVersionErrorComponentCodeEnum>[
   _$devicesUpdateOsVersionErrorComponentCodeEnum_invalid,
   _$devicesUpdateOsVersionErrorComponentCodeEnum_maxLength,
@@ -94,10 +94,10 @@ final BuiltSet<DevicesUpdateOsVersionErrorComponentCodeEnum>
 
 Serializer<DevicesUpdateOsVersionErrorComponentAttrEnum>
     _$devicesUpdateOsVersionErrorComponentAttrEnumSerializer =
-    new _$DevicesUpdateOsVersionErrorComponentAttrEnumSerializer();
+    _$DevicesUpdateOsVersionErrorComponentAttrEnumSerializer();
 Serializer<DevicesUpdateOsVersionErrorComponentCodeEnum>
     _$devicesUpdateOsVersionErrorComponentCodeEnumSerializer =
-    new _$DevicesUpdateOsVersionErrorComponentCodeEnumSerializer();
+    _$DevicesUpdateOsVersionErrorComponentCodeEnumSerializer();
 
 class _$DevicesUpdateOsVersionErrorComponentAttrEnumSerializer
     implements
@@ -187,20 +187,11 @@ class _$DevicesUpdateOsVersionErrorComponent
   factory _$DevicesUpdateOsVersionErrorComponent(
           [void Function(DevicesUpdateOsVersionErrorComponentBuilder)?
               updates]) =>
-      (new DevicesUpdateOsVersionErrorComponentBuilder()..update(updates))
-          ._build();
+      (DevicesUpdateOsVersionErrorComponentBuilder()..update(updates))._build();
 
   _$DevicesUpdateOsVersionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesUpdateOsVersionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesUpdateOsVersionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesUpdateOsVersionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesUpdateOsVersionErrorComponent rebuild(
           void Function(DevicesUpdateOsVersionErrorComponentBuilder) updates) =>
@@ -208,7 +199,7 @@ class _$DevicesUpdateOsVersionErrorComponent
 
   @override
   DevicesUpdateOsVersionErrorComponentBuilder toBuilder() =>
-      new DevicesUpdateOsVersionErrorComponentBuilder()..replace(this);
+      DevicesUpdateOsVersionErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -276,7 +267,6 @@ class DevicesUpdateOsVersionErrorComponentBuilder
 
   @override
   void replace(DevicesUpdateOsVersionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesUpdateOsVersionErrorComponent;
   }
 
@@ -291,13 +281,14 @@ class DevicesUpdateOsVersionErrorComponentBuilder
 
   _$DevicesUpdateOsVersionErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesUpdateOsVersionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesUpdateOsVersionErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesUpdateOsVersionErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesUpdateOsVersionErrorComponent', 'detail'));
+        _$DevicesUpdateOsVersionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesUpdateOsVersionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesUpdateOsVersionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesUpdateOsVersionErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

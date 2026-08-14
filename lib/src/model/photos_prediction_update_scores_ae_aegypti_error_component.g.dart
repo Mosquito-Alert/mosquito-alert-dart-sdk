@@ -30,7 +30,7 @@ PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnum
 
 final BuiltSet<PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnum>
     _$photosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnum>(const <PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnum>[
   _$photosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnum_scoresPeriodAeAegypti,
   _$photosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -90,7 +90,7 @@ PhotosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnum
 
 final BuiltSet<PhotosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnum>
     _$photosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnum>(const <PhotosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnum>[
   _$photosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnum_invalid,
   _$photosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnum_maxStringLength,
@@ -103,10 +103,10 @@ final BuiltSet<PhotosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnum>
     _$photosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnum>
     _$photosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionUpdateScoresAeAegyptiErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnumSerializer
     implements
@@ -201,21 +201,13 @@ class _$PhotosPredictionUpdateScoresAeAegyptiErrorComponent
           [void Function(
                   PhotosPredictionUpdateScoresAeAegyptiErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdateScoresAeAegyptiErrorComponentBuilder()
+      (PhotosPredictionUpdateScoresAeAegyptiErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionUpdateScoresAeAegyptiErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionUpdateScoresAeAegyptiErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionUpdateScoresAeAegyptiErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'PhotosPredictionUpdateScoresAeAegyptiErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdateScoresAeAegyptiErrorComponent rebuild(
           void Function(
@@ -225,7 +217,7 @@ class _$PhotosPredictionUpdateScoresAeAegyptiErrorComponent
 
   @override
   PhotosPredictionUpdateScoresAeAegyptiErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionUpdateScoresAeAegyptiErrorComponentBuilder()
+      PhotosPredictionUpdateScoresAeAegyptiErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -297,7 +289,6 @@ class PhotosPredictionUpdateScoresAeAegyptiErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionUpdateScoresAeAegyptiErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateScoresAeAegyptiErrorComponent;
   }
 
@@ -313,15 +304,14 @@ class PhotosPredictionUpdateScoresAeAegyptiErrorComponentBuilder
 
   _$PhotosPredictionUpdateScoresAeAegyptiErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdateScoresAeAegyptiErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'PhotosPredictionUpdateScoresAeAegyptiErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'PhotosPredictionUpdateScoresAeAegyptiErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionUpdateScoresAeAegyptiErrorComponent',
-                'detail'));
+        _$PhotosPredictionUpdateScoresAeAegyptiErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'PhotosPredictionUpdateScoresAeAegyptiErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'PhotosPredictionUpdateScoresAeAegyptiErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'PhotosPredictionUpdateScoresAeAegyptiErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

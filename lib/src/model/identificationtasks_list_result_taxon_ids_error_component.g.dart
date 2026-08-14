@@ -30,7 +30,7 @@ IdentificationtasksListResultTaxonIdsErrorComponentAttrEnum
 
 final BuiltSet<IdentificationtasksListResultTaxonIdsErrorComponentAttrEnum>
     _$identificationtasksListResultTaxonIdsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListResultTaxonIdsErrorComponentAttrEnum>(const <IdentificationtasksListResultTaxonIdsErrorComponentAttrEnum>[
   _$identificationtasksListResultTaxonIdsErrorComponentAttrEnum_resultTaxonIds,
   _$identificationtasksListResultTaxonIdsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ IdentificationtasksListResultTaxonIdsErrorComponentCodeEnum
 
 final BuiltSet<IdentificationtasksListResultTaxonIdsErrorComponentCodeEnum>
     _$identificationtasksListResultTaxonIdsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListResultTaxonIdsErrorComponentCodeEnum>(const <IdentificationtasksListResultTaxonIdsErrorComponentCodeEnum>[
   _$identificationtasksListResultTaxonIdsErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksListResultTaxonIdsErrorComponentCodeEnum_invalidList,
@@ -82,10 +82,10 @@ final BuiltSet<IdentificationtasksListResultTaxonIdsErrorComponentCodeEnum>
 
 Serializer<IdentificationtasksListResultTaxonIdsErrorComponentAttrEnum>
     _$identificationtasksListResultTaxonIdsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListResultTaxonIdsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListResultTaxonIdsErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksListResultTaxonIdsErrorComponentCodeEnum>
     _$identificationtasksListResultTaxonIdsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListResultTaxonIdsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListResultTaxonIdsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListResultTaxonIdsErrorComponentAttrEnumSerializer
     implements
@@ -174,21 +174,13 @@ class _$IdentificationtasksListResultTaxonIdsErrorComponent
           [void Function(
                   IdentificationtasksListResultTaxonIdsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListResultTaxonIdsErrorComponentBuilder()
+      (IdentificationtasksListResultTaxonIdsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksListResultTaxonIdsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'IdentificationtasksListResultTaxonIdsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'IdentificationtasksListResultTaxonIdsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'IdentificationtasksListResultTaxonIdsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListResultTaxonIdsErrorComponent rebuild(
           void Function(
@@ -198,7 +190,7 @@ class _$IdentificationtasksListResultTaxonIdsErrorComponent
 
   @override
   IdentificationtasksListResultTaxonIdsErrorComponentBuilder toBuilder() =>
-      new IdentificationtasksListResultTaxonIdsErrorComponentBuilder()
+      IdentificationtasksListResultTaxonIdsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -270,7 +262,6 @@ class IdentificationtasksListResultTaxonIdsErrorComponentBuilder
 
   @override
   void replace(IdentificationtasksListResultTaxonIdsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListResultTaxonIdsErrorComponent;
   }
 
@@ -286,15 +277,14 @@ class IdentificationtasksListResultTaxonIdsErrorComponentBuilder
 
   _$IdentificationtasksListResultTaxonIdsErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListResultTaxonIdsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'IdentificationtasksListResultTaxonIdsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'IdentificationtasksListResultTaxonIdsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksListResultTaxonIdsErrorComponent',
-                'detail'));
+        _$IdentificationtasksListResultTaxonIdsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'IdentificationtasksListResultTaxonIdsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'IdentificationtasksListResultTaxonIdsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'IdentificationtasksListResultTaxonIdsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

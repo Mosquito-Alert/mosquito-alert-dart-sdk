@@ -28,7 +28,7 @@ PhotosPredictionPartialUpdateValidationErrorTypeEnum
 }
 
 final BuiltSet<PhotosPredictionPartialUpdateValidationErrorTypeEnum>
-    _$photosPredictionPartialUpdateValidationErrorTypeEnumValues = new BuiltSet<
+    _$photosPredictionPartialUpdateValidationErrorTypeEnumValues = BuiltSet<
         PhotosPredictionPartialUpdateValidationErrorTypeEnum>(const <PhotosPredictionPartialUpdateValidationErrorTypeEnum>[
   _$photosPredictionPartialUpdateValidationErrorTypeEnum_validationError,
   _$photosPredictionPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -36,7 +36,7 @@ final BuiltSet<PhotosPredictionPartialUpdateValidationErrorTypeEnum>
 
 Serializer<PhotosPredictionPartialUpdateValidationErrorTypeEnum>
     _$photosPredictionPartialUpdateValidationErrorTypeEnumSerializer =
-    new _$PhotosPredictionPartialUpdateValidationErrorTypeEnumSerializer();
+    _$PhotosPredictionPartialUpdateValidationErrorTypeEnumSerializer();
 
 class _$PhotosPredictionPartialUpdateValidationErrorTypeEnumSerializer
     implements
@@ -83,19 +83,12 @@ class _$PhotosPredictionPartialUpdateValidationError
   factory _$PhotosPredictionPartialUpdateValidationError(
           [void Function(PhotosPredictionPartialUpdateValidationErrorBuilder)?
               updates]) =>
-      (new PhotosPredictionPartialUpdateValidationErrorBuilder()
-            ..update(updates))
+      (PhotosPredictionPartialUpdateValidationErrorBuilder()..update(updates))
           ._build();
 
   _$PhotosPredictionPartialUpdateValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'PhotosPredictionPartialUpdateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'PhotosPredictionPartialUpdateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   PhotosPredictionPartialUpdateValidationError rebuild(
           void Function(PhotosPredictionPartialUpdateValidationErrorBuilder)
@@ -104,7 +97,7 @@ class _$PhotosPredictionPartialUpdateValidationError
 
   @override
   PhotosPredictionPartialUpdateValidationErrorBuilder toBuilder() =>
-      new PhotosPredictionPartialUpdateValidationErrorBuilder()..replace(this);
+      PhotosPredictionPartialUpdateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -147,7 +140,7 @@ class PhotosPredictionPartialUpdateValidationErrorBuilder
 
   ListBuilder<PhotosPredictionPartialUpdateError>? _errors;
   ListBuilder<PhotosPredictionPartialUpdateError> get errors =>
-      _$this._errors ??= new ListBuilder<PhotosPredictionPartialUpdateError>();
+      _$this._errors ??= ListBuilder<PhotosPredictionPartialUpdateError>();
   set errors(ListBuilder<PhotosPredictionPartialUpdateError>? errors) =>
       _$this._errors = errors;
 
@@ -167,7 +160,6 @@ class PhotosPredictionPartialUpdateValidationErrorBuilder
 
   @override
   void replace(PhotosPredictionPartialUpdateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionPartialUpdateValidationError;
   }
 
@@ -185,17 +177,18 @@ class PhotosPredictionPartialUpdateValidationErrorBuilder
     _$PhotosPredictionPartialUpdateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$PhotosPredictionPartialUpdateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(type,
-                  r'PhotosPredictionPartialUpdateValidationError', 'type'),
-              errors: errors.build());
+          _$PhotosPredictionPartialUpdateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'PhotosPredictionPartialUpdateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PhotosPredictionPartialUpdateValidationError',
             _$failedField,
             e.toString());

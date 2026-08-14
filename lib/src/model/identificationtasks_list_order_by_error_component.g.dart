@@ -27,7 +27,7 @@ IdentificationtasksListOrderByErrorComponentAttrEnum
 }
 
 final BuiltSet<IdentificationtasksListOrderByErrorComponentAttrEnum>
-    _$identificationtasksListOrderByErrorComponentAttrEnumValues = new BuiltSet<
+    _$identificationtasksListOrderByErrorComponentAttrEnumValues = BuiltSet<
         IdentificationtasksListOrderByErrorComponentAttrEnum>(const <IdentificationtasksListOrderByErrorComponentAttrEnum>[
   _$identificationtasksListOrderByErrorComponentAttrEnum_orderBy,
   _$identificationtasksListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ IdentificationtasksListOrderByErrorComponentCodeEnum
 }
 
 final BuiltSet<IdentificationtasksListOrderByErrorComponentCodeEnum>
-    _$identificationtasksListOrderByErrorComponentCodeEnumValues = new BuiltSet<
+    _$identificationtasksListOrderByErrorComponentCodeEnumValues = BuiltSet<
         IdentificationtasksListOrderByErrorComponentCodeEnum>(const <IdentificationtasksListOrderByErrorComponentCodeEnum>[
   _$identificationtasksListOrderByErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -63,10 +63,10 @@ final BuiltSet<IdentificationtasksListOrderByErrorComponentCodeEnum>
 
 Serializer<IdentificationtasksListOrderByErrorComponentAttrEnum>
     _$identificationtasksListOrderByErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListOrderByErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListOrderByErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksListOrderByErrorComponentCodeEnum>
     _$identificationtasksListOrderByErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListOrderByErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListOrderByErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListOrderByErrorComponentAttrEnumSerializer
     implements
@@ -150,21 +150,12 @@ class _$IdentificationtasksListOrderByErrorComponent
   factory _$IdentificationtasksListOrderByErrorComponent(
           [void Function(IdentificationtasksListOrderByErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListOrderByErrorComponentBuilder()
-            ..update(updates))
+      (IdentificationtasksListOrderByErrorComponentBuilder()..update(updates))
           ._build();
 
   _$IdentificationtasksListOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'IdentificationtasksListOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'IdentificationtasksListOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'IdentificationtasksListOrderByErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListOrderByErrorComponent rebuild(
           void Function(IdentificationtasksListOrderByErrorComponentBuilder)
@@ -173,7 +164,7 @@ class _$IdentificationtasksListOrderByErrorComponent
 
   @override
   IdentificationtasksListOrderByErrorComponentBuilder toBuilder() =>
-      new IdentificationtasksListOrderByErrorComponentBuilder()..replace(this);
+      IdentificationtasksListOrderByErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -244,7 +235,6 @@ class IdentificationtasksListOrderByErrorComponentBuilder
 
   @override
   void replace(IdentificationtasksListOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListOrderByErrorComponent;
   }
 
@@ -260,13 +250,14 @@ class IdentificationtasksListOrderByErrorComponentBuilder
 
   _$IdentificationtasksListOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'IdentificationtasksListOrderByErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'IdentificationtasksListOrderByErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'IdentificationtasksListOrderByErrorComponent', 'detail'));
+        _$IdentificationtasksListOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'IdentificationtasksListOrderByErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'IdentificationtasksListOrderByErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'IdentificationtasksListOrderByErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -18,17 +18,11 @@ class _$PaginatedWorkspaceList extends PaginatedWorkspaceList {
 
   factory _$PaginatedWorkspaceList(
           [void Function(PaginatedWorkspaceListBuilder)? updates]) =>
-      (new PaginatedWorkspaceListBuilder()..update(updates))._build();
+      (PaginatedWorkspaceListBuilder()..update(updates))._build();
 
   _$PaginatedWorkspaceList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedWorkspaceList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedWorkspaceList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedWorkspaceList rebuild(
           void Function(PaginatedWorkspaceListBuilder) updates) =>
@@ -36,7 +30,7 @@ class _$PaginatedWorkspaceList extends PaginatedWorkspaceList {
 
   @override
   PaginatedWorkspaceListBuilder toBuilder() =>
-      new PaginatedWorkspaceListBuilder()..replace(this);
+      PaginatedWorkspaceListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -88,7 +82,7 @@ class PaginatedWorkspaceListBuilder
 
   ListBuilder<Workspace>? _results;
   ListBuilder<Workspace> get results =>
-      _$this._results ??= new ListBuilder<Workspace>();
+      _$this._results ??= ListBuilder<Workspace>();
   set results(ListBuilder<Workspace>? results) => _$this._results = results;
 
   PaginatedWorkspaceListBuilder() {
@@ -109,7 +103,6 @@ class PaginatedWorkspaceListBuilder
 
   @override
   void replace(PaginatedWorkspaceList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedWorkspaceList;
   }
 
@@ -125,19 +118,20 @@ class PaginatedWorkspaceListBuilder
     _$PaginatedWorkspaceList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedWorkspaceList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedWorkspaceList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedWorkspaceList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedWorkspaceList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedWorkspaceList', _$failedField, e.toString());
       }
       rethrow;

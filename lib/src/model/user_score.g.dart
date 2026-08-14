@@ -13,18 +13,15 @@ class _$UserScore extends UserScore {
   final DateTime? updatedAt;
 
   factory _$UserScore([void Function(UserScoreBuilder)? updates]) =>
-      (new UserScoreBuilder()..update(updates))._build();
+      (UserScoreBuilder()..update(updates))._build();
 
-  _$UserScore._({required this.value, this.updatedAt}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(value, r'UserScore', 'value');
-  }
-
+  _$UserScore._({required this.value, this.updatedAt}) : super._();
   @override
   UserScore rebuild(void Function(UserScoreBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  UserScoreBuilder toBuilder() => new UserScoreBuilder()..replace(this);
+  UserScoreBuilder toBuilder() => UserScoreBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -79,7 +76,6 @@ class UserScoreBuilder implements Builder<UserScore, UserScoreBuilder> {
 
   @override
   void replace(UserScore other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UserScore;
   }
 
@@ -93,10 +89,11 @@ class UserScoreBuilder implements Builder<UserScore, UserScoreBuilder> {
 
   _$UserScore _build() {
     final _$result = _$v ??
-        new _$UserScore._(
-            value: BuiltValueNullFieldError.checkNotNull(
-                value, r'UserScore', 'value'),
-            updatedAt: updatedAt);
+        _$UserScore._(
+          value: BuiltValueNullFieldError.checkNotNull(
+              value, r'UserScore', 'value'),
+          updatedAt: updatedAt,
+        );
     replace(_$result);
     return _$result;
   }

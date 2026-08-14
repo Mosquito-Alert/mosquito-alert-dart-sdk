@@ -26,7 +26,7 @@ DevicesCreateOsNameErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesCreateOsNameErrorComponentAttrEnum>
-    _$devicesCreateOsNameErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesCreateOsNameErrorComponentAttrEnumValues = BuiltSet<
         DevicesCreateOsNameErrorComponentAttrEnum>(const <DevicesCreateOsNameErrorComponentAttrEnum>[
   _$devicesCreateOsNameErrorComponentAttrEnum_osPeriodName,
   _$devicesCreateOsNameErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -79,7 +79,7 @@ DevicesCreateOsNameErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesCreateOsNameErrorComponentCodeEnum>
-    _$devicesCreateOsNameErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesCreateOsNameErrorComponentCodeEnumValues = BuiltSet<
         DevicesCreateOsNameErrorComponentCodeEnum>(const <DevicesCreateOsNameErrorComponentCodeEnum>[
   _$devicesCreateOsNameErrorComponentCodeEnum_invalid,
   _$devicesCreateOsNameErrorComponentCodeEnum_maxLength,
@@ -92,10 +92,10 @@ final BuiltSet<DevicesCreateOsNameErrorComponentCodeEnum>
 
 Serializer<DevicesCreateOsNameErrorComponentAttrEnum>
     _$devicesCreateOsNameErrorComponentAttrEnumSerializer =
-    new _$DevicesCreateOsNameErrorComponentAttrEnumSerializer();
+    _$DevicesCreateOsNameErrorComponentAttrEnumSerializer();
 Serializer<DevicesCreateOsNameErrorComponentCodeEnum>
     _$devicesCreateOsNameErrorComponentCodeEnumSerializer =
-    new _$DevicesCreateOsNameErrorComponentCodeEnumSerializer();
+    _$DevicesCreateOsNameErrorComponentCodeEnumSerializer();
 
 class _$DevicesCreateOsNameErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<DevicesCreateOsNameErrorComponentAttrEnum> {
@@ -182,20 +182,11 @@ class _$DevicesCreateOsNameErrorComponent
 
   factory _$DevicesCreateOsNameErrorComponent(
           [void Function(DevicesCreateOsNameErrorComponentBuilder)? updates]) =>
-      (new DevicesCreateOsNameErrorComponentBuilder()..update(updates))
-          ._build();
+      (DevicesCreateOsNameErrorComponentBuilder()..update(updates))._build();
 
   _$DevicesCreateOsNameErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesCreateOsNameErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesCreateOsNameErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesCreateOsNameErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesCreateOsNameErrorComponent rebuild(
           void Function(DevicesCreateOsNameErrorComponentBuilder) updates) =>
@@ -203,7 +194,7 @@ class _$DevicesCreateOsNameErrorComponent
 
   @override
   DevicesCreateOsNameErrorComponentBuilder toBuilder() =>
-      new DevicesCreateOsNameErrorComponentBuilder()..replace(this);
+      DevicesCreateOsNameErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -271,7 +262,6 @@ class DevicesCreateOsNameErrorComponentBuilder
 
   @override
   void replace(DevicesCreateOsNameErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesCreateOsNameErrorComponent;
   }
 
@@ -286,13 +276,14 @@ class DevicesCreateOsNameErrorComponentBuilder
 
   _$DevicesCreateOsNameErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesCreateOsNameErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesCreateOsNameErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesCreateOsNameErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesCreateOsNameErrorComponent', 'detail'));
+        _$DevicesCreateOsNameErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesCreateOsNameErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesCreateOsNameErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesCreateOsNameErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

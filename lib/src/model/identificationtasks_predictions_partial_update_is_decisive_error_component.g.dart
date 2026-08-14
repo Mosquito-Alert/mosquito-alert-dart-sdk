@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnum_isDecisive,
   _$identificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnum_null_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent rebuild(
           void Function(
@@ -208,7 +194,7 @@ class _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
   @override
   IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -292,7 +278,6 @@ class IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentBuilder
   void replace(
       IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent;
   }
@@ -312,20 +297,20 @@ class IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentBuilder
   _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

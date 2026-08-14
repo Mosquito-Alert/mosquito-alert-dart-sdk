@@ -26,7 +26,7 @@ ObservationsListErrorAttrEnum _$observationsListErrorAttrEnumValueOf(
 }
 
 final BuiltSet<ObservationsListErrorAttrEnum>
-    _$observationsListErrorAttrEnumValues = new BuiltSet<
+    _$observationsListErrorAttrEnumValues = BuiltSet<
         ObservationsListErrorAttrEnum>(const <ObservationsListErrorAttrEnum>[
   _$observationsListErrorAttrEnum_identificationTaxonIdsLookup,
   _$observationsListErrorAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ ObservationsListErrorCodeEnum _$observationsListErrorCodeEnumValueOf(
 }
 
 final BuiltSet<ObservationsListErrorCodeEnum>
-    _$observationsListErrorCodeEnumValues = new BuiltSet<
+    _$observationsListErrorCodeEnumValues = BuiltSet<
         ObservationsListErrorCodeEnum>(const <ObservationsListErrorCodeEnum>[
   _$observationsListErrorCodeEnum_invalidChoice,
   _$observationsListErrorCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<ObservationsListErrorCodeEnum>
 
 Serializer<ObservationsListErrorAttrEnum>
     _$observationsListErrorAttrEnumSerializer =
-    new _$ObservationsListErrorAttrEnumSerializer();
+    _$ObservationsListErrorAttrEnumSerializer();
 Serializer<ObservationsListErrorCodeEnum>
     _$observationsListErrorCodeEnumSerializer =
-    new _$ObservationsListErrorCodeEnumSerializer();
+    _$ObservationsListErrorCodeEnumSerializer();
 
 class _$ObservationsListErrorAttrEnumSerializer
     implements PrimitiveSerializer<ObservationsListErrorAttrEnum> {
@@ -131,13 +131,9 @@ class _$ObservationsListError extends ObservationsListError {
 
   factory _$ObservationsListError(
           [void Function(ObservationsListErrorBuilder)? updates]) =>
-      (new ObservationsListErrorBuilder()..update(updates))._build();
+      (ObservationsListErrorBuilder()..update(updates))._build();
 
-  _$ObservationsListError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'ObservationsListError', 'oneOf');
-  }
-
+  _$ObservationsListError._({required this.oneOf}) : super._();
   @override
   ObservationsListError rebuild(
           void Function(ObservationsListErrorBuilder) updates) =>
@@ -145,7 +141,7 @@ class _$ObservationsListError extends ObservationsListError {
 
   @override
   ObservationsListErrorBuilder toBuilder() =>
-      new ObservationsListErrorBuilder()..replace(this);
+      ObservationsListErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -192,7 +188,6 @@ class ObservationsListErrorBuilder
 
   @override
   void replace(ObservationsListError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListError;
   }
 
@@ -206,9 +201,10 @@ class ObservationsListErrorBuilder
 
   _$ObservationsListError _build() {
     final _$result = _$v ??
-        new _$ObservationsListError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'ObservationsListError', 'oneOf'));
+        _$ObservationsListError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'ObservationsListError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

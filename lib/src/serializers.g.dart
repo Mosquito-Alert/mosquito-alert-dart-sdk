@@ -6,7 +6,7 @@ part of 'serializers.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-Serializers _$serializers = (new Serializers().toBuilder()
+Serializers _$serializers = (Serializers().toBuilder()
       ..add(AdmBoundary.serializer)
       ..add(AdmBoundaryRequest.serializer)
       ..add(Annotation.serializer)
@@ -20,6 +20,10 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(AppUserTokenObtainPairRequest.serializer)
       ..add(Assignment.serializer)
       ..add(AssignmentAnnotationTypeEnum.serializer)
+      ..add(AudienceFilter.serializer)
+      ..add(AudienceFilterLocaleEnum.serializer)
+      ..add(AudienceFilterRequest.serializer)
+      ..add(AudienceFilterRequestLocaleEnum.serializer)
       ..add(AuthChangePasswordError.serializer)
       ..add(AuthChangePasswordNonFieldErrorsErrorComponent.serializer)
       ..add(AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum.serializer)
@@ -458,6 +462,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CountryRequest.serializer)
       ..add(CreateAgreeReviewRequest.serializer)
       ..add(CreateAgreeReviewRequestActionEnum.serializer)
+      ..add(CreateAudienceMessageContentRequest.serializer)
+      ..add(CreateAudienceMessageRequest.serializer)
+      ..add(CreateAudienceMessageRequestTargetEnum.serializer)
       ..add(CreateOverwriteReviewRequest.serializer)
       ..add(CreateOverwriteReviewRequestActionEnum.serializer)
       ..add(CreatePhotoPrediction.serializer)
@@ -466,12 +473,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(CreatePhotoPredictionRequest.serializer)
       ..add(CreatePhotoPredictionRequestClassifierVersionEnum.serializer)
       ..add(CreatePhotoPredictionRequestPredictedClassEnum.serializer)
-      ..add(CreateTopicMessage.serializer)
-      ..add(CreateTopicMessageContent.serializer)
-      ..add(CreateTopicMessageContentRequest.serializer)
-      ..add(CreateTopicMessageRequest.serializer)
-      ..add(CreateUserMessage.serializer)
       ..add(CreateUserMessageRequest.serializer)
+      ..add(CreateUserMessageRequestTargetEnum.serializer)
       ..add(Device.serializer)
       ..add(DeviceOs.serializer)
       ..add(DeviceOsRequest.serializer)
@@ -1751,14 +1754,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
           .serializer)
       ..add(IdentificationtasksReviewCreateValidationError.serializer)
       ..add(IdentificationtasksReviewCreateValidationErrorTypeEnum.serializer)
+      ..add(LocalizedAudienceMessageBodyRequest.serializer)
+      ..add(LocalizedAudienceMessageTitleRequest.serializer)
       ..add(LocalizedMessageBody.serializer)
+      ..add(LocalizedMessageBodyPreview.serializer)
       ..add(LocalizedMessageBodyRequest.serializer)
       ..add(LocalizedMessageTitle.serializer)
       ..add(LocalizedMessageTitleRequest.serializer)
-      ..add(LocalizedTopicMessageBody.serializer)
-      ..add(LocalizedTopicMessageBodyRequest.serializer)
-      ..add(LocalizedTopicMessageTitle.serializer)
-      ..add(LocalizedTopicMessageTitleRequest.serializer)
       ..add(Location.serializer)
       ..add(LocationRequest.serializer)
       ..add(LocationRequestSource_Enum.serializer)
@@ -1767,9 +1769,36 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(Message.serializer)
       ..add(MessageContent.serializer)
       ..add(MessageContentRequest.serializer)
+      ..add(MessageList.serializer)
+      ..add(MessageListContent.serializer)
+      ..add(MessageListTargetEnum.serializer)
       ..add(MessagePermission.serializer)
       ..add(MessageRecipient.serializer)
-      ..add(MessageTopic.serializer)
+      ..add(MessageRecipientStats.serializer)
+      ..add(MessageTargetEnum.serializer)
+      ..add(MessageTargeting.serializer)
+      ..add(MessageTargetingTargetEnum.serializer)
+      ..add(MessagesCreateAudienceInAreaErrorComponent.serializer)
+      ..add(MessagesCreateAudienceInAreaErrorComponentAttrEnum.serializer)
+      ..add(MessagesCreateAudienceInAreaErrorComponentCodeEnum.serializer)
+      ..add(MessagesCreateAudienceLastLoginAfterErrorComponent.serializer)
+      ..add(
+          MessagesCreateAudienceLastLoginAfterErrorComponentAttrEnum.serializer)
+      ..add(
+          MessagesCreateAudienceLastLoginAfterErrorComponentCodeEnum.serializer)
+      ..add(MessagesCreateAudienceLastLoginBeforeErrorComponent.serializer)
+      ..add(MessagesCreateAudienceLastLoginBeforeErrorComponentAttrEnum
+          .serializer)
+      ..add(MessagesCreateAudienceLastLoginBeforeErrorComponentCodeEnum
+          .serializer)
+      ..add(MessagesCreateAudienceLocaleErrorComponent.serializer)
+      ..add(MessagesCreateAudienceLocaleErrorComponentAttrEnum.serializer)
+      ..add(MessagesCreateAudienceLocaleErrorComponentCodeEnum.serializer)
+      ..add(MessagesCreateAudienceNonFieldErrorsErrorComponent.serializer)
+      ..add(
+          MessagesCreateAudienceNonFieldErrorsErrorComponentAttrEnum.serializer)
+      ..add(
+          MessagesCreateAudienceNonFieldErrorsErrorComponentCodeEnum.serializer)
       ..add(MessagesCreateContentBodyBgErrorComponent.serializer)
       ..add(MessagesCreateContentBodyBgErrorComponentAttrEnum.serializer)
       ..add(MessagesCreateContentBodyBgErrorComponentCodeEnum.serializer)
@@ -1933,6 +1962,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(MessagesCreateNonFieldErrorsErrorComponent.serializer)
       ..add(MessagesCreateNonFieldErrorsErrorComponentAttrEnum.serializer)
       ..add(MessagesCreateNonFieldErrorsErrorComponentCodeEnum.serializer)
+      ..add(MessagesCreateTargetErrorComponent.serializer)
+      ..add(MessagesCreateTargetErrorComponentAttrEnum.serializer)
+      ..add(MessagesCreateTargetErrorComponentCodeEnum.serializer)
       ..add(MessagesCreateUserUuidsErrorComponent.serializer)
       ..add(MessagesCreateUserUuidsErrorComponentAttrEnum.serializer)
       ..add(MessagesCreateUserUuidsErrorComponentCodeEnum.serializer)
@@ -1949,6 +1981,9 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(MessagesListMineSentRecipientUuidsErrorComponent.serializer)
       ..add(MessagesListMineSentRecipientUuidsErrorComponentAttrEnum.serializer)
       ..add(MessagesListMineSentRecipientUuidsErrorComponentCodeEnum.serializer)
+      ..add(MessagesListMineSentTargetErrorComponent.serializer)
+      ..add(MessagesListMineSentTargetErrorComponentAttrEnum.serializer)
+      ..add(MessagesListMineSentTargetErrorComponentCodeEnum.serializer)
       ..add(MessagesListMineSentValidationError.serializer)
       ..add(MessagesListMineSentValidationErrorTypeEnum.serializer)
       ..add(MessagesListOrderByErrorComponent.serializer)
@@ -1957,176 +1992,13 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(MessagesListRecipientUuidsErrorComponent.serializer)
       ..add(MessagesListRecipientUuidsErrorComponentAttrEnum.serializer)
       ..add(MessagesListRecipientUuidsErrorComponentCodeEnum.serializer)
+      ..add(MessagesListTargetErrorComponent.serializer)
+      ..add(MessagesListTargetErrorComponentAttrEnum.serializer)
+      ..add(MessagesListTargetErrorComponentCodeEnum.serializer)
       ..add(MessagesListValidationError.serializer)
       ..add(MessagesListValidationErrorTypeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyBgErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyBgErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyBgErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyBnErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyBnErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyBnErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyCaErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyCaErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyCaErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyDeErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyDeErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyDeErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyElErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyElErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyElErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyEnErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyEnErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyEnErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyEsErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyEsErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyEsErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyEuErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyEuErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyEuErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyFrErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyFrErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyFrErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyGlErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyGlErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyGlErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyHrErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyHrErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyHrErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyHuErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyHuErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyHuErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyItErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyItErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyItErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyLbErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyLbErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyLbErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyMkErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyMkErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyMkErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyNlErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyNlErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyNlErrorComponentCodeEnum.serializer)
-      ..add(
-          MessagesTopicsSendContentBodyNonFieldErrorsErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyNonFieldErrorsErrorComponentAttrEnum
-          .serializer)
-      ..add(MessagesTopicsSendContentBodyNonFieldErrorsErrorComponentCodeEnum
-          .serializer)
-      ..add(MessagesTopicsSendContentBodyPtErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyPtErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyPtErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyRoErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyRoErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyRoErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodySlErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodySlErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodySlErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodySqErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodySqErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodySqErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodySrErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodySrErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodySrErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodySvErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodySvErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodySvErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyTrErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyTrErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyTrErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyZhCnErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentBodyZhCnErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentBodyZhCnErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentNonFieldErrorsErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentNonFieldErrorsErrorComponentAttrEnum
-          .serializer)
-      ..add(MessagesTopicsSendContentNonFieldErrorsErrorComponentCodeEnum
-          .serializer)
-      ..add(MessagesTopicsSendContentTitleBgErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleBgErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleBgErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleBnErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleBnErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleBnErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleCaErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleCaErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleCaErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleDeErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleDeErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleDeErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleElErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleElErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleElErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleEnErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleEnErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleEnErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleEsErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleEsErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleEsErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleEuErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleEuErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleEuErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleFrErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleFrErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleFrErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleGlErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleGlErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleGlErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleHrErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleHrErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleHrErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleHuErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleHuErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleHuErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleItErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleItErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleItErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleLbErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleLbErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleLbErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleMkErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleMkErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleMkErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleNlErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleNlErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleNlErrorComponentCodeEnum.serializer)
-      ..add(
-          MessagesTopicsSendContentTitleNonFieldErrorsErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleNonFieldErrorsErrorComponentAttrEnum
-          .serializer)
-      ..add(MessagesTopicsSendContentTitleNonFieldErrorsErrorComponentCodeEnum
-          .serializer)
-      ..add(MessagesTopicsSendContentTitlePtErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitlePtErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitlePtErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleRoErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleRoErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleRoErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleSlErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleSlErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleSlErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleSqErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleSqErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleSqErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleSrErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleSrErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleSrErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleSvErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleSvErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleSvErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleTrErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleTrErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleTrErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleZhCnErrorComponent.serializer)
-      ..add(MessagesTopicsSendContentTitleZhCnErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendContentTitleZhCnErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendError.serializer)
-      ..add(MessagesTopicsSendNonFieldErrorsErrorComponent.serializer)
-      ..add(MessagesTopicsSendNonFieldErrorsErrorComponentAttrEnum.serializer)
-      ..add(MessagesTopicsSendNonFieldErrorsErrorComponentCodeEnum.serializer)
-      ..add(MessagesTopicsSendValidationError.serializer)
-      ..add(MessagesTopicsSendValidationErrorTypeEnum.serializer)
       ..add(MetaCreateIdentificationTaskReviewRequest.serializer)
+      ..add(MetaCreateMessageRequest.serializer)
       ..add(MinimalUser.serializer)
       ..add(MinimalUserLocaleEnum.serializer)
       ..add(MobileApp.serializer)
@@ -2405,8 +2277,8 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(PaginatedCampaignList.serializer)
       ..add(PaginatedCountryList.serializer)
       ..add(PaginatedIdentificationTaskList.serializer)
-      ..add(PaginatedMessageList.serializer)
-      ..add(PaginatedMessageTopicList.serializer)
+      ..add(PaginatedMessageListList.serializer)
+      ..add(PaginatedMessageRecipientList.serializer)
       ..add(PaginatedNotificationList.serializer)
       ..add(PaginatedObservationList.serializer)
       ..add(PaginatedPartnerList.serializer)
@@ -2706,6 +2578,24 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(UserRequest.serializer)
       ..add(UserRequestLocaleEnum.serializer)
       ..add(UserScore.serializer)
+      ..add(UsersAudienceFilterError.serializer)
+      ..add(UsersAudienceFilterInAreaErrorComponent.serializer)
+      ..add(UsersAudienceFilterInAreaErrorComponentAttrEnum.serializer)
+      ..add(UsersAudienceFilterInAreaErrorComponentCodeEnum.serializer)
+      ..add(UsersAudienceFilterLastLoginAfterErrorComponent.serializer)
+      ..add(UsersAudienceFilterLastLoginAfterErrorComponentAttrEnum.serializer)
+      ..add(UsersAudienceFilterLastLoginAfterErrorComponentCodeEnum.serializer)
+      ..add(UsersAudienceFilterLastLoginBeforeErrorComponent.serializer)
+      ..add(UsersAudienceFilterLastLoginBeforeErrorComponentAttrEnum.serializer)
+      ..add(UsersAudienceFilterLastLoginBeforeErrorComponentCodeEnum.serializer)
+      ..add(UsersAudienceFilterLocaleErrorComponent.serializer)
+      ..add(UsersAudienceFilterLocaleErrorComponentAttrEnum.serializer)
+      ..add(UsersAudienceFilterLocaleErrorComponentCodeEnum.serializer)
+      ..add(UsersAudienceFilterNonFieldErrorsErrorComponent.serializer)
+      ..add(UsersAudienceFilterNonFieldErrorsErrorComponentAttrEnum.serializer)
+      ..add(UsersAudienceFilterNonFieldErrorsErrorComponentCodeEnum.serializer)
+      ..add(UsersAudienceFilterValidationError.serializer)
+      ..add(UsersAudienceFilterValidationErrorTypeEnum.serializer)
       ..add(UsersPartialUpdateError.serializer)
       ..add(UsersPartialUpdateLocaleErrorComponent.serializer)
       ..add(UsersPartialUpdateLocaleErrorComponentAttrEnum.serializer)
@@ -2730,298 +2620,297 @@ Serializers _$serializers = (new Serializers().toBuilder()
       ..add(WorkspaceMembershipRoleEnum.serializer)
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(AdmBoundary)]),
-          () => new ListBuilder<AdmBoundary>())
+          () => ListBuilder<AdmBoundary>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Annotation)]),
-          () => new ListBuilder<Annotation>())
+          () => ListBuilder<Annotation>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(AuthChangePasswordError)]),
-          () => new ListBuilder<AuthChangePasswordError>())
+          () => ListBuilder<AuthChangePasswordError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(AuthObtainTokenError)]),
-          () => new ListBuilder<AuthObtainTokenError>())
+          () => ListBuilder<AuthObtainTokenError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(AuthRefreshTokenError)]),
-          () => new ListBuilder<AuthRefreshTokenError>())
+          () => ListBuilder<AuthRefreshTokenError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(AuthSignupGuestError)]),
-          () => new ListBuilder<AuthSignupGuestError>())
+          () => ListBuilder<AuthSignupGuestError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(AuthVerifyTokenError)]),
-          () => new ListBuilder<AuthVerifyTokenError>())
+          () => ListBuilder<AuthVerifyTokenError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Bite)]),
-          () => new ListBuilder<Bite>())
+          () => ListBuilder<Bite>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BiteGeoJsonModel)]),
-          () => new ListBuilder<BiteGeoJsonModel>())
+          () => ListBuilder<BiteGeoJsonModel>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BitesCreateError)]),
-          () => new ListBuilder<BitesCreateError>())
+          () => ListBuilder<BitesCreateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BitesGeoListError)]),
-          () => new ListBuilder<BitesGeoListError>())
+          () => ListBuilder<BitesGeoListError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BitesListError)]),
-          () => new ListBuilder<BitesListError>())
+          () => ListBuilder<BitesListError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BitesListMineError)]),
-          () => new ListBuilder<BitesListMineError>())
+          () => ListBuilder<BitesListMineError>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(BoundariesCreateTemporaryError)]),
-          () => new ListBuilder<BoundariesCreateTemporaryError>())
+          () => ListBuilder<BoundariesCreateTemporaryError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(BreedingSite)]),
-          () => new ListBuilder<BreedingSite>())
+          () => ListBuilder<BreedingSite>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(BreedingSiteGeoJsonModel)]),
-          () => new ListBuilder<BreedingSiteGeoJsonModel>())
+          () => ListBuilder<BreedingSiteGeoJsonModel>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(BreedingsitesCreateError)]),
-          () => new ListBuilder<BreedingsitesCreateError>())
+          () => ListBuilder<BreedingsitesCreateError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(BreedingsitesGeoListError)]),
-          () => new ListBuilder<BreedingsitesGeoListError>())
+          () => ListBuilder<BreedingsitesGeoListError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(BreedingsitesListError)]),
-          () => new ListBuilder<BreedingsitesListError>())
+          () => ListBuilder<BreedingsitesListError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(BreedingsitesListMineError)]),
-          () => new ListBuilder<BreedingsitesListMineError>())
+          () => ListBuilder<BreedingsitesListMineError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Campaign)]),
-          () => new ListBuilder<Campaign>())
+          () => ListBuilder<Campaign>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(CampaignsListError)]),
-          () => new ListBuilder<CampaignsListError>())
+          () => ListBuilder<CampaignsListError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Country)]),
-          () => new ListBuilder<Country>())
+          () => ListBuilder<Country>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(DevicesCreateError)]),
-          () => new ListBuilder<DevicesCreateError>())
+          () => ListBuilder<DevicesCreateError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(DevicesPartialUpdateError)]),
-          () => new ListBuilder<DevicesPartialUpdateError>())
+          () => ListBuilder<DevicesPartialUpdateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(DevicesUpdateError)]),
-          () => new ListBuilder<DevicesUpdateError>())
+          () => ListBuilder<DevicesUpdateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Error401)]),
-          () => new ListBuilder<Error401>())
+          () => ListBuilder<Error401>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Error403)]),
-          () => new ListBuilder<Error403>())
+          () => ListBuilder<Error403>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Error404)]),
-          () => new ListBuilder<Error404>())
+          () => ListBuilder<Error404>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(FixesCreateError)]),
-          () => new ListBuilder<FixesCreateError>())
+          () => ListBuilder<FixesCreateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(IdentificationTask)]),
-          () => new ListBuilder<IdentificationTask>())
+          () => ListBuilder<IdentificationTask>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(IdentificationtasksAnnotationsCreateError)
           ]),
-          () => new ListBuilder<IdentificationtasksAnnotationsCreateError>())
+          () => ListBuilder<IdentificationtasksAnnotationsCreateError>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(IdentificationtasksAnnotationsListError)]),
-          () => new ListBuilder<IdentificationtasksAnnotationsListError>())
+          () => ListBuilder<IdentificationtasksAnnotationsListError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(IdentificationtasksAnnotationsListMineError)
           ]),
-          () => new ListBuilder<IdentificationtasksAnnotationsListMineError>())
+          () => ListBuilder<IdentificationtasksAnnotationsListMineError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(IdentificationtasksListError)]),
-          () => new ListBuilder<IdentificationtasksListError>())
+          () => ListBuilder<IdentificationtasksListError>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(IdentificationtasksListMineError)]),
-          () => new ListBuilder<IdentificationtasksListMineError>())
+          () => ListBuilder<IdentificationtasksListMineError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(IdentificationtasksPredictionsCreateError)
           ]),
-          () => new ListBuilder<IdentificationtasksPredictionsCreateError>())
+          () => ListBuilder<IdentificationtasksPredictionsCreateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(IdentificationtasksPredictionsPartialUpdateError)
           ]),
-          () => new ListBuilder<
-              IdentificationtasksPredictionsPartialUpdateError>())
+          () => ListBuilder<IdentificationtasksPredictionsPartialUpdateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(IdentificationtasksPredictionsUpdateError)
           ]),
-          () => new ListBuilder<IdentificationtasksPredictionsUpdateError>())
+          () => ListBuilder<IdentificationtasksPredictionsUpdateError>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(IdentificationtasksReviewCreateError)]),
-          () => new ListBuilder<IdentificationtasksReviewCreateError>())
+          () => ListBuilder<IdentificationtasksReviewCreateError>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(Message)]),
-          () => new ListBuilder<Message>())
+          const FullType(BuiltList, const [const FullType(MessageList)]),
+          () => ListBuilder<MessageList>())
       ..addBuilderFactory(
-          const FullType(BuiltList, const [const FullType(MessageTopic)]),
-          () => new ListBuilder<MessageTopic>())
+          const FullType(BuiltList, const [const FullType(MessageRecipient)]),
+          () => ListBuilder<MessageRecipient>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(MessagesCreateError)]),
-          () => new ListBuilder<MessagesCreateError>())
+          () => ListBuilder<MessagesCreateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(MessagesListError)]),
-          () => new ListBuilder<MessagesListError>())
+          () => ListBuilder<MessagesListError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(MessagesListMineSentError)]),
-          () => new ListBuilder<MessagesListMineSentError>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(MessagesTopicsSendError)]),
-          () => new ListBuilder<MessagesTopicsSendError>())
+          () => ListBuilder<MessagesListMineSentError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Notification)]),
-          () => new ListBuilder<Notification>())
+          () => ListBuilder<Notification>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [
             const FullType(NotificationsListMineOrderByErrorComponent)
           ]),
-          () => new ListBuilder<NotificationsListMineOrderByErrorComponent>())
+          () => ListBuilder<NotificationsListMineOrderByErrorComponent>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(NotificationsPartialUpdateError)]),
-          () => new ListBuilder<NotificationsPartialUpdateError>())
+          () => ListBuilder<NotificationsPartialUpdateError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(NotificationsUpdateError)]),
-          () => new ListBuilder<NotificationsUpdateError>())
+          () => ListBuilder<NotificationsUpdateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Observation)]),
-          () => new ListBuilder<Observation>())
+          () => ListBuilder<Observation>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(ObservationGeoJsonModel)]),
-          () => new ListBuilder<ObservationGeoJsonModel>())
+          () => ListBuilder<ObservationGeoJsonModel>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(ObservationsCreateError)]),
-          () => new ListBuilder<ObservationsCreateError>())
+          () => ListBuilder<ObservationsCreateError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(ObservationsGeoListError)]),
-          () => new ListBuilder<ObservationsGeoListError>())
+          () => ListBuilder<ObservationsGeoListError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(ObservationsListError)]),
-          () => new ListBuilder<ObservationsListError>())
+          () => ListBuilder<ObservationsListError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(ObservationsListMineError)]),
-          () => new ListBuilder<ObservationsListMineError>())
+          () => ListBuilder<ObservationsListMineError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Partner)]),
-          () => new ListBuilder<Partner>())
+          () => ListBuilder<Partner>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(PhotoPrediction)]),
-          () => new ListBuilder<PhotoPrediction>())
+          () => ListBuilder<PhotoPrediction>())
       ..addBuilderFactory(
           const FullType(BuiltList,
               const [const FullType(PhotosPredictionPartialUpdateError)]),
-          () => new ListBuilder<PhotosPredictionPartialUpdateError>())
+          () => ListBuilder<PhotosPredictionPartialUpdateError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(PhotosPredictionUpdateError)]),
-          () => new ListBuilder<PhotosPredictionUpdateError>())
+          () => ListBuilder<PhotosPredictionUpdateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimplePhoto)]),
-          () => new ListBuilder<SimplePhoto>())
+          () => ListBuilder<SimplePhoto>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimpleWorkspace)]),
-          () => new ListBuilder<SimpleWorkspace>())
+          () => ListBuilder<SimpleWorkspace>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimpleUser)]),
-          () => new ListBuilder<SimpleUser>())
+          () => ListBuilder<SimpleUser>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          () => ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          () => ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          () => ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          () => ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          () => ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          () => ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimplePhoto)]),
-          () => new ListBuilder<SimplePhoto>())
+          () => ListBuilder<SimplePhoto>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
-          () => new ListBuilder<String>())
+          () => ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimplePhoto)]),
-          () => new ListBuilder<SimplePhoto>())
+          () => ListBuilder<SimplePhoto>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(TaxaListRankErrorComponent)]),
-          () => new ListBuilder<TaxaListRankErrorComponent>())
+          () => ListBuilder<TaxaListRankErrorComponent>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Taxon)]),
-          () => new ListBuilder<Taxon>())
+          () => ListBuilder<Taxon>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(TaxonTreeNode)]),
-          () => new ListBuilder<TaxonTreeNode>())
+          () => ListBuilder<TaxonTreeNode>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(User)]),
-          () => new ListBuilder<User>())
+          () => ListBuilder<User>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(UserAssignment)]),
-          () => new ListBuilder<UserAssignment>())
+          () => ListBuilder<UserAssignment>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(UsersAudienceFilterError)]),
+          () => ListBuilder<UsersAudienceFilterError>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(UsersPartialUpdateError)]),
-          () => new ListBuilder<UsersPartialUpdateError>())
+          () => ListBuilder<UsersPartialUpdateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(UsersUpdateError)]),
-          () => new ListBuilder<UsersUpdateError>())
+          () => ListBuilder<UsersUpdateError>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(Workspace)]),
-          () => new ListBuilder<Workspace>())
+          () => ListBuilder<Workspace>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(WorkspaceCollaborationGroup)]),
-          () => new ListBuilder<WorkspaceCollaborationGroup>())
+          () => ListBuilder<WorkspaceCollaborationGroup>())
       ..addBuilderFactory(
           const FullType(
               BuiltList, const [const FullType(WorkspaceMembership)]),
-          () => new ListBuilder<WorkspaceMembership>())
+          () => ListBuilder<WorkspaceMembership>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(double)]),
-          () => new ListBuilder<double>()))
+          () => ListBuilder<double>()))
     .build();
 
 // ignore_for_file: deprecated_member_use_from_same_package,type=lint

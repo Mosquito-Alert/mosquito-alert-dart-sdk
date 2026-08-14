@@ -115,7 +115,7 @@ MinimalUserLocaleEnum _$minimalUserLocaleEnumValueOf(String name) {
 }
 
 final BuiltSet<MinimalUserLocaleEnum> _$minimalUserLocaleEnumValues =
-    new BuiltSet<MinimalUserLocaleEnum>(const <MinimalUserLocaleEnum>[
+    BuiltSet<MinimalUserLocaleEnum>(const <MinimalUserLocaleEnum>[
   _$minimalUserLocaleEnum_en,
   _$minimalUserLocaleEnum_es,
   _$minimalUserLocaleEnum_ca,
@@ -144,7 +144,7 @@ final BuiltSet<MinimalUserLocaleEnum> _$minimalUserLocaleEnumValues =
 ]);
 
 Serializer<MinimalUserLocaleEnum> _$minimalUserLocaleEnumSerializer =
-    new _$MinimalUserLocaleEnumSerializer();
+    _$MinimalUserLocaleEnumSerializer();
 
 class _$MinimalUserLocaleEnumSerializer
     implements PrimitiveSerializer<MinimalUserLocaleEnum> {
@@ -227,18 +227,15 @@ class _$MinimalUser extends MinimalUser {
   final MinimalUserLocaleEnum? locale;
 
   factory _$MinimalUser([void Function(MinimalUserBuilder)? updates]) =>
-      (new MinimalUserBuilder()..update(updates))._build();
+      (MinimalUserBuilder()..update(updates))._build();
 
-  _$MinimalUser._({required this.uuid, this.locale}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'MinimalUser', 'uuid');
-  }
-
+  _$MinimalUser._({required this.uuid, this.locale}) : super._();
   @override
   MinimalUser rebuild(void Function(MinimalUserBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  MinimalUserBuilder toBuilder() => new MinimalUserBuilder()..replace(this);
+  MinimalUserBuilder toBuilder() => MinimalUserBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -291,7 +288,6 @@ class MinimalUserBuilder implements Builder<MinimalUser, MinimalUserBuilder> {
 
   @override
   void replace(MinimalUser other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MinimalUser;
   }
 
@@ -305,10 +301,11 @@ class MinimalUserBuilder implements Builder<MinimalUser, MinimalUserBuilder> {
 
   _$MinimalUser _build() {
     final _$result = _$v ??
-        new _$MinimalUser._(
-            uuid: BuiltValueNullFieldError.checkNotNull(
-                uuid, r'MinimalUser', 'uuid'),
-            locale: locale);
+        _$MinimalUser._(
+          uuid: BuiltValueNullFieldError.checkNotNull(
+              uuid, r'MinimalUser', 'uuid'),
+          locale: locale,
+        );
     replace(_$result);
     return _$result;
   }

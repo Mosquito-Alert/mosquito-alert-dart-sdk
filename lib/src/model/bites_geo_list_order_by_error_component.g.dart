@@ -26,7 +26,7 @@ BitesGeoListOrderByErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesGeoListOrderByErrorComponentAttrEnum>
-    _$bitesGeoListOrderByErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesGeoListOrderByErrorComponentAttrEnumValues = BuiltSet<
         BitesGeoListOrderByErrorComponentAttrEnum>(const <BitesGeoListOrderByErrorComponentAttrEnum>[
   _$bitesGeoListOrderByErrorComponentAttrEnum_orderBy,
   _$bitesGeoListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ BitesGeoListOrderByErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesGeoListOrderByErrorComponentCodeEnum>
-    _$bitesGeoListOrderByErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesGeoListOrderByErrorComponentCodeEnumValues = BuiltSet<
         BitesGeoListOrderByErrorComponentCodeEnum>(const <BitesGeoListOrderByErrorComponentCodeEnum>[
   _$bitesGeoListOrderByErrorComponentCodeEnum_invalidChoice,
   _$bitesGeoListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<BitesGeoListOrderByErrorComponentCodeEnum>
 
 Serializer<BitesGeoListOrderByErrorComponentAttrEnum>
     _$bitesGeoListOrderByErrorComponentAttrEnumSerializer =
-    new _$BitesGeoListOrderByErrorComponentAttrEnumSerializer();
+    _$BitesGeoListOrderByErrorComponentAttrEnumSerializer();
 Serializer<BitesGeoListOrderByErrorComponentCodeEnum>
     _$bitesGeoListOrderByErrorComponentCodeEnumSerializer =
-    new _$BitesGeoListOrderByErrorComponentCodeEnumSerializer();
+    _$BitesGeoListOrderByErrorComponentCodeEnumSerializer();
 
 class _$BitesGeoListOrderByErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesGeoListOrderByErrorComponentAttrEnum> {
@@ -140,20 +140,11 @@ class _$BitesGeoListOrderByErrorComponent
 
   factory _$BitesGeoListOrderByErrorComponent(
           [void Function(BitesGeoListOrderByErrorComponentBuilder)? updates]) =>
-      (new BitesGeoListOrderByErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesGeoListOrderByErrorComponentBuilder()..update(updates))._build();
 
   _$BitesGeoListOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesGeoListOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesGeoListOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesGeoListOrderByErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesGeoListOrderByErrorComponent rebuild(
           void Function(BitesGeoListOrderByErrorComponentBuilder) updates) =>
@@ -161,7 +152,7 @@ class _$BitesGeoListOrderByErrorComponent
 
   @override
   BitesGeoListOrderByErrorComponentBuilder toBuilder() =>
-      new BitesGeoListOrderByErrorComponentBuilder()..replace(this);
+      BitesGeoListOrderByErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -229,7 +220,6 @@ class BitesGeoListOrderByErrorComponentBuilder
 
   @override
   void replace(BitesGeoListOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesGeoListOrderByErrorComponent;
   }
 
@@ -244,13 +234,14 @@ class BitesGeoListOrderByErrorComponentBuilder
 
   _$BitesGeoListOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesGeoListOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesGeoListOrderByErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesGeoListOrderByErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesGeoListOrderByErrorComponent', 'detail'));
+        _$BitesGeoListOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesGeoListOrderByErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesGeoListOrderByErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesGeoListOrderByErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

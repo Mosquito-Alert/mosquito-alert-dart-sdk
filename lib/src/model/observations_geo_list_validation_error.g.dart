@@ -26,7 +26,7 @@ ObservationsGeoListValidationErrorTypeEnum
 }
 
 final BuiltSet<ObservationsGeoListValidationErrorTypeEnum>
-    _$observationsGeoListValidationErrorTypeEnumValues = new BuiltSet<
+    _$observationsGeoListValidationErrorTypeEnumValues = BuiltSet<
         ObservationsGeoListValidationErrorTypeEnum>(const <ObservationsGeoListValidationErrorTypeEnum>[
   _$observationsGeoListValidationErrorTypeEnum_validationError,
   _$observationsGeoListValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<ObservationsGeoListValidationErrorTypeEnum>
 
 Serializer<ObservationsGeoListValidationErrorTypeEnum>
     _$observationsGeoListValidationErrorTypeEnumSerializer =
-    new _$ObservationsGeoListValidationErrorTypeEnumSerializer();
+    _$ObservationsGeoListValidationErrorTypeEnumSerializer();
 
 class _$ObservationsGeoListValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<ObservationsGeoListValidationErrorTypeEnum> {
@@ -78,18 +78,11 @@ class _$ObservationsGeoListValidationError
   factory _$ObservationsGeoListValidationError(
           [void Function(ObservationsGeoListValidationErrorBuilder)?
               updates]) =>
-      (new ObservationsGeoListValidationErrorBuilder()..update(updates))
-          ._build();
+      (ObservationsGeoListValidationErrorBuilder()..update(updates))._build();
 
   _$ObservationsGeoListValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'ObservationsGeoListValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'ObservationsGeoListValidationError', 'errors');
-  }
-
+      : super._();
   @override
   ObservationsGeoListValidationError rebuild(
           void Function(ObservationsGeoListValidationErrorBuilder) updates) =>
@@ -97,7 +90,7 @@ class _$ObservationsGeoListValidationError
 
   @override
   ObservationsGeoListValidationErrorBuilder toBuilder() =>
-      new ObservationsGeoListValidationErrorBuilder()..replace(this);
+      ObservationsGeoListValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -138,7 +131,7 @@ class ObservationsGeoListValidationErrorBuilder
 
   ListBuilder<ObservationsGeoListError>? _errors;
   ListBuilder<ObservationsGeoListError> get errors =>
-      _$this._errors ??= new ListBuilder<ObservationsGeoListError>();
+      _$this._errors ??= ListBuilder<ObservationsGeoListError>();
   set errors(ListBuilder<ObservationsGeoListError>? errors) =>
       _$this._errors = errors;
 
@@ -158,7 +151,6 @@ class ObservationsGeoListValidationErrorBuilder
 
   @override
   void replace(ObservationsGeoListValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsGeoListValidationError;
   }
 
@@ -175,17 +167,18 @@ class ObservationsGeoListValidationErrorBuilder
     _$ObservationsGeoListValidationError _$result;
     try {
       _$result = _$v ??
-          new _$ObservationsGeoListValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'ObservationsGeoListValidationError', 'type'),
-              errors: errors.build());
+          _$ObservationsGeoListValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'ObservationsGeoListValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'ObservationsGeoListValidationError', _$failedField, e.toString());
       }
       rethrow;

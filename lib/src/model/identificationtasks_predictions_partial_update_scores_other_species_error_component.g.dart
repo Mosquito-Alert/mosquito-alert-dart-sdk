@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrE
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnum_scoresPeriodOtherSpecies,
   _$identificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeE
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorCompon
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent
       rebuild(
@@ -245,7 +231,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorCompon
   @override
   IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -330,7 +316,6 @@ class IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponen
   void replace(
       IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent;
   }
@@ -350,20 +335,21 @@ class IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponen
   _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateScoresOtherSpeciesErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

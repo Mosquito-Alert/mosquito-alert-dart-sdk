@@ -26,7 +26,7 @@ BoundariesCreateTemporaryErrorAttrEnum
 }
 
 final BuiltSet<BoundariesCreateTemporaryErrorAttrEnum>
-    _$boundariesCreateTemporaryErrorAttrEnumValues = new BuiltSet<
+    _$boundariesCreateTemporaryErrorAttrEnumValues = BuiltSet<
         BoundariesCreateTemporaryErrorAttrEnum>(const <BoundariesCreateTemporaryErrorAttrEnum>[
   _$boundariesCreateTemporaryErrorAttrEnum_geojson,
   _$boundariesCreateTemporaryErrorAttrEnum_unknownDefaultOpenApi,
@@ -57,7 +57,7 @@ BoundariesCreateTemporaryErrorCodeEnum
 }
 
 final BuiltSet<BoundariesCreateTemporaryErrorCodeEnum>
-    _$boundariesCreateTemporaryErrorCodeEnumValues = new BuiltSet<
+    _$boundariesCreateTemporaryErrorCodeEnumValues = BuiltSet<
         BoundariesCreateTemporaryErrorCodeEnum>(const <BoundariesCreateTemporaryErrorCodeEnum>[
   _$boundariesCreateTemporaryErrorCodeEnum_null_,
   _$boundariesCreateTemporaryErrorCodeEnum_required_,
@@ -66,10 +66,10 @@ final BuiltSet<BoundariesCreateTemporaryErrorCodeEnum>
 
 Serializer<BoundariesCreateTemporaryErrorAttrEnum>
     _$boundariesCreateTemporaryErrorAttrEnumSerializer =
-    new _$BoundariesCreateTemporaryErrorAttrEnumSerializer();
+    _$BoundariesCreateTemporaryErrorAttrEnumSerializer();
 Serializer<BoundariesCreateTemporaryErrorCodeEnum>
     _$boundariesCreateTemporaryErrorCodeEnumSerializer =
-    new _$BoundariesCreateTemporaryErrorCodeEnumSerializer();
+    _$BoundariesCreateTemporaryErrorCodeEnumSerializer();
 
 class _$BoundariesCreateTemporaryErrorAttrEnumSerializer
     implements PrimitiveSerializer<BoundariesCreateTemporaryErrorAttrEnum> {
@@ -143,13 +143,9 @@ class _$BoundariesCreateTemporaryError extends BoundariesCreateTemporaryError {
 
   factory _$BoundariesCreateTemporaryError(
           [void Function(BoundariesCreateTemporaryErrorBuilder)? updates]) =>
-      (new BoundariesCreateTemporaryErrorBuilder()..update(updates))._build();
+      (BoundariesCreateTemporaryErrorBuilder()..update(updates))._build();
 
-  _$BoundariesCreateTemporaryError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'BoundariesCreateTemporaryError', 'oneOf');
-  }
-
+  _$BoundariesCreateTemporaryError._({required this.oneOf}) : super._();
   @override
   BoundariesCreateTemporaryError rebuild(
           void Function(BoundariesCreateTemporaryErrorBuilder) updates) =>
@@ -157,7 +153,7 @@ class _$BoundariesCreateTemporaryError extends BoundariesCreateTemporaryError {
 
   @override
   BoundariesCreateTemporaryErrorBuilder toBuilder() =>
-      new BoundariesCreateTemporaryErrorBuilder()..replace(this);
+      BoundariesCreateTemporaryErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -206,7 +202,6 @@ class BoundariesCreateTemporaryErrorBuilder
 
   @override
   void replace(BoundariesCreateTemporaryError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BoundariesCreateTemporaryError;
   }
 
@@ -220,9 +215,10 @@ class BoundariesCreateTemporaryErrorBuilder
 
   _$BoundariesCreateTemporaryError _build() {
     final _$result = _$v ??
-        new _$BoundariesCreateTemporaryError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'BoundariesCreateTemporaryError', 'oneOf'));
+        _$BoundariesCreateTemporaryError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'BoundariesCreateTemporaryError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

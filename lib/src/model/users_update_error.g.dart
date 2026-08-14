@@ -24,7 +24,7 @@ UsersUpdateErrorAttrEnum _$usersUpdateErrorAttrEnumValueOf(String name) {
 }
 
 final BuiltSet<UsersUpdateErrorAttrEnum> _$usersUpdateErrorAttrEnumValues =
-    new BuiltSet<UsersUpdateErrorAttrEnum>(const <UsersUpdateErrorAttrEnum>[
+    BuiltSet<UsersUpdateErrorAttrEnum>(const <UsersUpdateErrorAttrEnum>[
   _$usersUpdateErrorAttrEnum_locale,
   _$usersUpdateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -51,16 +51,16 @@ UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnumValueOf(String name) {
 }
 
 final BuiltSet<UsersUpdateErrorCodeEnum> _$usersUpdateErrorCodeEnumValues =
-    new BuiltSet<UsersUpdateErrorCodeEnum>(const <UsersUpdateErrorCodeEnum>[
+    BuiltSet<UsersUpdateErrorCodeEnum>(const <UsersUpdateErrorCodeEnum>[
   _$usersUpdateErrorCodeEnum_invalidChoice,
   _$usersUpdateErrorCodeEnum_null_,
   _$usersUpdateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<UsersUpdateErrorAttrEnum> _$usersUpdateErrorAttrEnumSerializer =
-    new _$UsersUpdateErrorAttrEnumSerializer();
+    _$UsersUpdateErrorAttrEnumSerializer();
 Serializer<UsersUpdateErrorCodeEnum> _$usersUpdateErrorCodeEnumSerializer =
-    new _$UsersUpdateErrorCodeEnumSerializer();
+    _$UsersUpdateErrorCodeEnumSerializer();
 
 class _$UsersUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<UsersUpdateErrorAttrEnum> {
@@ -128,19 +128,16 @@ class _$UsersUpdateError extends UsersUpdateError {
 
   factory _$UsersUpdateError(
           [void Function(UsersUpdateErrorBuilder)? updates]) =>
-      (new UsersUpdateErrorBuilder()..update(updates))._build();
+      (UsersUpdateErrorBuilder()..update(updates))._build();
 
-  _$UsersUpdateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(oneOf, r'UsersUpdateError', 'oneOf');
-  }
-
+  _$UsersUpdateError._({required this.oneOf}) : super._();
   @override
   UsersUpdateError rebuild(void Function(UsersUpdateErrorBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   UsersUpdateErrorBuilder toBuilder() =>
-      new UsersUpdateErrorBuilder()..replace(this);
+      UsersUpdateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -187,7 +184,6 @@ class UsersUpdateErrorBuilder
 
   @override
   void replace(UsersUpdateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UsersUpdateError;
   }
 
@@ -201,9 +197,10 @@ class UsersUpdateErrorBuilder
 
   _$UsersUpdateError _build() {
     final _$result = _$v ??
-        new _$UsersUpdateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'UsersUpdateError', 'oneOf'));
+        _$UsersUpdateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'UsersUpdateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

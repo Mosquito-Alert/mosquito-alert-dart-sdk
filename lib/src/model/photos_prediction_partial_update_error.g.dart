@@ -26,7 +26,7 @@ PhotosPredictionPartialUpdateErrorAttrEnum
 }
 
 final BuiltSet<PhotosPredictionPartialUpdateErrorAttrEnum>
-    _$photosPredictionPartialUpdateErrorAttrEnumValues = new BuiltSet<
+    _$photosPredictionPartialUpdateErrorAttrEnumValues = BuiltSet<
         PhotosPredictionPartialUpdateErrorAttrEnum>(const <PhotosPredictionPartialUpdateErrorAttrEnum>[
   _$photosPredictionPartialUpdateErrorAttrEnum_classifierVersion,
   _$photosPredictionPartialUpdateErrorAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ PhotosPredictionPartialUpdateErrorCodeEnum
 }
 
 final BuiltSet<PhotosPredictionPartialUpdateErrorCodeEnum>
-    _$photosPredictionPartialUpdateErrorCodeEnumValues = new BuiltSet<
+    _$photosPredictionPartialUpdateErrorCodeEnumValues = BuiltSet<
         PhotosPredictionPartialUpdateErrorCodeEnum>(const <PhotosPredictionPartialUpdateErrorCodeEnum>[
   _$photosPredictionPartialUpdateErrorCodeEnum_invalidChoice,
   _$photosPredictionPartialUpdateErrorCodeEnum_null_,
@@ -72,10 +72,10 @@ final BuiltSet<PhotosPredictionPartialUpdateErrorCodeEnum>
 
 Serializer<PhotosPredictionPartialUpdateErrorAttrEnum>
     _$photosPredictionPartialUpdateErrorAttrEnumSerializer =
-    new _$PhotosPredictionPartialUpdateErrorAttrEnumSerializer();
+    _$PhotosPredictionPartialUpdateErrorAttrEnumSerializer();
 Serializer<PhotosPredictionPartialUpdateErrorCodeEnum>
     _$photosPredictionPartialUpdateErrorCodeEnumSerializer =
-    new _$PhotosPredictionPartialUpdateErrorCodeEnumSerializer();
+    _$PhotosPredictionPartialUpdateErrorCodeEnumSerializer();
 
 class _$PhotosPredictionPartialUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<PhotosPredictionPartialUpdateErrorAttrEnum> {
@@ -153,14 +153,9 @@ class _$PhotosPredictionPartialUpdateError
   factory _$PhotosPredictionPartialUpdateError(
           [void Function(PhotosPredictionPartialUpdateErrorBuilder)?
               updates]) =>
-      (new PhotosPredictionPartialUpdateErrorBuilder()..update(updates))
-          ._build();
+      (PhotosPredictionPartialUpdateErrorBuilder()..update(updates))._build();
 
-  _$PhotosPredictionPartialUpdateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'PhotosPredictionPartialUpdateError', 'oneOf');
-  }
-
+  _$PhotosPredictionPartialUpdateError._({required this.oneOf}) : super._();
   @override
   PhotosPredictionPartialUpdateError rebuild(
           void Function(PhotosPredictionPartialUpdateErrorBuilder) updates) =>
@@ -168,7 +163,7 @@ class _$PhotosPredictionPartialUpdateError
 
   @override
   PhotosPredictionPartialUpdateErrorBuilder toBuilder() =>
-      new PhotosPredictionPartialUpdateErrorBuilder()..replace(this);
+      PhotosPredictionPartialUpdateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -217,7 +212,6 @@ class PhotosPredictionPartialUpdateErrorBuilder
 
   @override
   void replace(PhotosPredictionPartialUpdateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionPartialUpdateError;
   }
 
@@ -232,9 +226,10 @@ class PhotosPredictionPartialUpdateErrorBuilder
 
   _$PhotosPredictionPartialUpdateError _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionPartialUpdateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'PhotosPredictionPartialUpdateError', 'oneOf'));
+        _$PhotosPredictionPartialUpdateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'PhotosPredictionPartialUpdateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

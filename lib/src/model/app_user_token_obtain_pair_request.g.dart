@@ -16,17 +16,11 @@ class _$AppUserTokenObtainPairRequest extends AppUserTokenObtainPairRequest {
 
   factory _$AppUserTokenObtainPairRequest(
           [void Function(AppUserTokenObtainPairRequestBuilder)? updates]) =>
-      (new AppUserTokenObtainPairRequestBuilder()..update(updates))._build();
+      (AppUserTokenObtainPairRequestBuilder()..update(updates))._build();
 
   _$AppUserTokenObtainPairRequest._(
       {required this.username, required this.password, this.deviceId})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        username, r'AppUserTokenObtainPairRequest', 'username');
-    BuiltValueNullFieldError.checkNotNull(
-        password, r'AppUserTokenObtainPairRequest', 'password');
-  }
-
+      : super._();
   @override
   AppUserTokenObtainPairRequest rebuild(
           void Function(AppUserTokenObtainPairRequestBuilder) updates) =>
@@ -34,7 +28,7 @@ class _$AppUserTokenObtainPairRequest extends AppUserTokenObtainPairRequest {
 
   @override
   AppUserTokenObtainPairRequestBuilder toBuilder() =>
-      new AppUserTokenObtainPairRequestBuilder()..replace(this);
+      AppUserTokenObtainPairRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -100,7 +94,6 @@ class AppUserTokenObtainPairRequestBuilder
 
   @override
   void replace(AppUserTokenObtainPairRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AppUserTokenObtainPairRequest;
   }
 
@@ -114,12 +107,13 @@ class AppUserTokenObtainPairRequestBuilder
 
   _$AppUserTokenObtainPairRequest _build() {
     final _$result = _$v ??
-        new _$AppUserTokenObtainPairRequest._(
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, r'AppUserTokenObtainPairRequest', 'username'),
-            password: BuiltValueNullFieldError.checkNotNull(
-                password, r'AppUserTokenObtainPairRequest', 'password'),
-            deviceId: deviceId);
+        _$AppUserTokenObtainPairRequest._(
+          username: BuiltValueNullFieldError.checkNotNull(
+              username, r'AppUserTokenObtainPairRequest', 'username'),
+          password: BuiltValueNullFieldError.checkNotNull(
+              password, r'AppUserTokenObtainPairRequest', 'password'),
+          deviceId: deviceId,
+        );
     replace(_$result);
     return _$result;
   }

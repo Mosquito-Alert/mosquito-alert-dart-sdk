@@ -29,8 +29,7 @@ ObservationsCreateEventEnvironmentErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsCreateEventEnvironmentErrorComponentAttrEnum>
-    _$observationsCreateEventEnvironmentErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$observationsCreateEventEnvironmentErrorComponentAttrEnumValues = BuiltSet<
         ObservationsCreateEventEnvironmentErrorComponentAttrEnum>(const <ObservationsCreateEventEnvironmentErrorComponentAttrEnum>[
   _$observationsCreateEventEnvironmentErrorComponentAttrEnum_eventEnvironment,
   _$observationsCreateEventEnvironmentErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -59,8 +58,7 @@ ObservationsCreateEventEnvironmentErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsCreateEventEnvironmentErrorComponentCodeEnum>
-    _$observationsCreateEventEnvironmentErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$observationsCreateEventEnvironmentErrorComponentCodeEnumValues = BuiltSet<
         ObservationsCreateEventEnvironmentErrorComponentCodeEnum>(const <ObservationsCreateEventEnvironmentErrorComponentCodeEnum>[
   _$observationsCreateEventEnvironmentErrorComponentCodeEnum_invalidChoice,
   _$observationsCreateEventEnvironmentErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -68,10 +66,10 @@ final BuiltSet<ObservationsCreateEventEnvironmentErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateEventEnvironmentErrorComponentAttrEnum>
     _$observationsCreateEventEnvironmentErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateEventEnvironmentErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateEventEnvironmentErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateEventEnvironmentErrorComponentCodeEnum>
     _$observationsCreateEventEnvironmentErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateEventEnvironmentErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateEventEnvironmentErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateEventEnvironmentErrorComponentAttrEnumSerializer
     implements
@@ -156,21 +154,13 @@ class _$ObservationsCreateEventEnvironmentErrorComponent
           [void Function(
                   ObservationsCreateEventEnvironmentErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateEventEnvironmentErrorComponentBuilder()
+      (ObservationsCreateEventEnvironmentErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsCreateEventEnvironmentErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsCreateEventEnvironmentErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsCreateEventEnvironmentErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsCreateEventEnvironmentErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateEventEnvironmentErrorComponent rebuild(
           void Function(ObservationsCreateEventEnvironmentErrorComponentBuilder)
@@ -179,8 +169,7 @@ class _$ObservationsCreateEventEnvironmentErrorComponent
 
   @override
   ObservationsCreateEventEnvironmentErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateEventEnvironmentErrorComponentBuilder()
-        ..replace(this);
+      ObservationsCreateEventEnvironmentErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -251,7 +240,6 @@ class ObservationsCreateEventEnvironmentErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateEventEnvironmentErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateEventEnvironmentErrorComponent;
   }
 
@@ -267,13 +255,14 @@ class ObservationsCreateEventEnvironmentErrorComponentBuilder
 
   _$ObservationsCreateEventEnvironmentErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateEventEnvironmentErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'ObservationsCreateEventEnvironmentErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'ObservationsCreateEventEnvironmentErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsCreateEventEnvironmentErrorComponent', 'detail'));
+        _$ObservationsCreateEventEnvironmentErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'ObservationsCreateEventEnvironmentErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'ObservationsCreateEventEnvironmentErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'ObservationsCreateEventEnvironmentErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnum_bestPhotoUuid,
   _$identificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnum_null_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent rebuild(
           void Function(
@@ -208,7 +194,7 @@ class _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent
   @override
   IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -290,7 +276,6 @@ class IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent;
   }
@@ -309,19 +294,20 @@ class IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentBuilder
 
   _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent',
-                'detail'));
+        _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

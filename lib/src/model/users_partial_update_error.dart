@@ -73,9 +73,7 @@ class _$UsersPartialUpdateErrorSerializer implements PrimitiveSerializer<UsersPa
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    UsersPartialUpdateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    UsersPartialUpdateError object) sync* {
   }
 
   @override

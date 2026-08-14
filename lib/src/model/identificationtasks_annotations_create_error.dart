@@ -217,9 +217,7 @@ class _$IdentificationtasksAnnotationsCreateErrorSerializer implements Primitive
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    IdentificationtasksAnnotationsCreateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    IdentificationtasksAnnotationsCreateError object) sync* {
   }
 
   @override

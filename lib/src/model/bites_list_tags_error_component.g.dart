@@ -26,7 +26,7 @@ BitesListTagsErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesListTagsErrorComponentAttrEnum>
-    _$bitesListTagsErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesListTagsErrorComponentAttrEnumValues = BuiltSet<
         BitesListTagsErrorComponentAttrEnum>(const <BitesListTagsErrorComponentAttrEnum>[
   _$bitesListTagsErrorComponentAttrEnum_tags,
   _$bitesListTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ BitesListTagsErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesListTagsErrorComponentCodeEnum>
-    _$bitesListTagsErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesListTagsErrorComponentCodeEnumValues = BuiltSet<
         BitesListTagsErrorComponentCodeEnum>(const <BitesListTagsErrorComponentCodeEnum>[
   _$bitesListTagsErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$bitesListTagsErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<BitesListTagsErrorComponentCodeEnum>
 
 Serializer<BitesListTagsErrorComponentAttrEnum>
     _$bitesListTagsErrorComponentAttrEnumSerializer =
-    new _$BitesListTagsErrorComponentAttrEnumSerializer();
+    _$BitesListTagsErrorComponentAttrEnumSerializer();
 Serializer<BitesListTagsErrorComponentCodeEnum>
     _$bitesListTagsErrorComponentCodeEnumSerializer =
-    new _$BitesListTagsErrorComponentCodeEnumSerializer();
+    _$BitesListTagsErrorComponentCodeEnumSerializer();
 
 class _$BitesListTagsErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesListTagsErrorComponentAttrEnum> {
@@ -139,19 +139,11 @@ class _$BitesListTagsErrorComponent extends BitesListTagsErrorComponent {
 
   factory _$BitesListTagsErrorComponent(
           [void Function(BitesListTagsErrorComponentBuilder)? updates]) =>
-      (new BitesListTagsErrorComponentBuilder()..update(updates))._build();
+      (BitesListTagsErrorComponentBuilder()..update(updates))._build();
 
   _$BitesListTagsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesListTagsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesListTagsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesListTagsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesListTagsErrorComponent rebuild(
           void Function(BitesListTagsErrorComponentBuilder) updates) =>
@@ -159,7 +151,7 @@ class _$BitesListTagsErrorComponent extends BitesListTagsErrorComponent {
 
   @override
   BitesListTagsErrorComponentBuilder toBuilder() =>
-      new BitesListTagsErrorComponentBuilder()..replace(this);
+      BitesListTagsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -225,7 +217,6 @@ class BitesListTagsErrorComponentBuilder
 
   @override
   void replace(BitesListTagsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListTagsErrorComponent;
   }
 
@@ -239,13 +230,14 @@ class BitesListTagsErrorComponentBuilder
 
   _$BitesListTagsErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesListTagsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesListTagsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesListTagsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesListTagsErrorComponent', 'detail'));
+        _$BitesListTagsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesListTagsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesListTagsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesListTagsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

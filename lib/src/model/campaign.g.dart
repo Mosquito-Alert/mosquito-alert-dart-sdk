@@ -19,7 +19,7 @@ class _$Campaign extends Campaign {
   final DateTime endDate;
 
   factory _$Campaign([void Function(CampaignBuilder)? updates]) =>
-      (new CampaignBuilder()..update(updates))._build();
+      (CampaignBuilder()..update(updates))._build();
 
   _$Campaign._(
       {required this.id,
@@ -27,21 +27,13 @@ class _$Campaign extends Campaign {
       required this.postingAddress,
       required this.startDate,
       required this.endDate})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'Campaign', 'id');
-    BuiltValueNullFieldError.checkNotNull(countryId, r'Campaign', 'countryId');
-    BuiltValueNullFieldError.checkNotNull(
-        postingAddress, r'Campaign', 'postingAddress');
-    BuiltValueNullFieldError.checkNotNull(startDate, r'Campaign', 'startDate');
-    BuiltValueNullFieldError.checkNotNull(endDate, r'Campaign', 'endDate');
-  }
-
+      : super._();
   @override
   Campaign rebuild(void Function(CampaignBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  CampaignBuilder toBuilder() => new CampaignBuilder()..replace(this);
+  CampaignBuilder toBuilder() => CampaignBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -121,7 +113,6 @@ class CampaignBuilder implements Builder<Campaign, CampaignBuilder> {
 
   @override
   void replace(Campaign other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Campaign;
   }
 
@@ -135,16 +126,17 @@ class CampaignBuilder implements Builder<Campaign, CampaignBuilder> {
 
   _$Campaign _build() {
     final _$result = _$v ??
-        new _$Campaign._(
-            id: BuiltValueNullFieldError.checkNotNull(id, r'Campaign', 'id'),
-            countryId: BuiltValueNullFieldError.checkNotNull(
-                countryId, r'Campaign', 'countryId'),
-            postingAddress: BuiltValueNullFieldError.checkNotNull(
-                postingAddress, r'Campaign', 'postingAddress'),
-            startDate: BuiltValueNullFieldError.checkNotNull(
-                startDate, r'Campaign', 'startDate'),
-            endDate: BuiltValueNullFieldError.checkNotNull(
-                endDate, r'Campaign', 'endDate'));
+        _$Campaign._(
+          id: BuiltValueNullFieldError.checkNotNull(id, r'Campaign', 'id'),
+          countryId: BuiltValueNullFieldError.checkNotNull(
+              countryId, r'Campaign', 'countryId'),
+          postingAddress: BuiltValueNullFieldError.checkNotNull(
+              postingAddress, r'Campaign', 'postingAddress'),
+          startDate: BuiltValueNullFieldError.checkNotNull(
+              startDate, r'Campaign', 'startDate'),
+          endDate: BuiltValueNullFieldError.checkNotNull(
+              endDate, r'Campaign', 'endDate'),
+        );
     replace(_$result);
     return _$result;
   }

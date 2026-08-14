@@ -137,9 +137,7 @@ class _$DevicesPartialUpdateErrorSerializer implements PrimitiveSerializer<Devic
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    DevicesPartialUpdateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    DevicesPartialUpdateError object) sync* {
   }
 
   @override

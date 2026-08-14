@@ -25,8 +25,8 @@ AuthVerifyTokenErrorAttrEnum _$authVerifyTokenErrorAttrEnumValueOf(
 }
 
 final BuiltSet<AuthVerifyTokenErrorAttrEnum>
-    _$authVerifyTokenErrorAttrEnumValues = new BuiltSet<
-        AuthVerifyTokenErrorAttrEnum>(const <AuthVerifyTokenErrorAttrEnum>[
+    _$authVerifyTokenErrorAttrEnumValues =
+    BuiltSet<AuthVerifyTokenErrorAttrEnum>(const <AuthVerifyTokenErrorAttrEnum>[
   _$authVerifyTokenErrorAttrEnum_token,
   _$authVerifyTokenErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -72,8 +72,8 @@ AuthVerifyTokenErrorCodeEnum _$authVerifyTokenErrorCodeEnumValueOf(
 }
 
 final BuiltSet<AuthVerifyTokenErrorCodeEnum>
-    _$authVerifyTokenErrorCodeEnumValues = new BuiltSet<
-        AuthVerifyTokenErrorCodeEnum>(const <AuthVerifyTokenErrorCodeEnum>[
+    _$authVerifyTokenErrorCodeEnumValues =
+    BuiltSet<AuthVerifyTokenErrorCodeEnum>(const <AuthVerifyTokenErrorCodeEnum>[
   _$authVerifyTokenErrorCodeEnum_blank,
   _$authVerifyTokenErrorCodeEnum_invalid,
   _$authVerifyTokenErrorCodeEnum_null_,
@@ -85,10 +85,10 @@ final BuiltSet<AuthVerifyTokenErrorCodeEnum>
 
 Serializer<AuthVerifyTokenErrorAttrEnum>
     _$authVerifyTokenErrorAttrEnumSerializer =
-    new _$AuthVerifyTokenErrorAttrEnumSerializer();
+    _$AuthVerifyTokenErrorAttrEnumSerializer();
 Serializer<AuthVerifyTokenErrorCodeEnum>
     _$authVerifyTokenErrorCodeEnumSerializer =
-    new _$AuthVerifyTokenErrorCodeEnumSerializer();
+    _$AuthVerifyTokenErrorCodeEnumSerializer();
 
 class _$AuthVerifyTokenErrorAttrEnumSerializer
     implements PrimitiveSerializer<AuthVerifyTokenErrorAttrEnum> {
@@ -164,13 +164,9 @@ class _$AuthVerifyTokenError extends AuthVerifyTokenError {
 
   factory _$AuthVerifyTokenError(
           [void Function(AuthVerifyTokenErrorBuilder)? updates]) =>
-      (new AuthVerifyTokenErrorBuilder()..update(updates))._build();
+      (AuthVerifyTokenErrorBuilder()..update(updates))._build();
 
-  _$AuthVerifyTokenError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'AuthVerifyTokenError', 'oneOf');
-  }
-
+  _$AuthVerifyTokenError._({required this.oneOf}) : super._();
   @override
   AuthVerifyTokenError rebuild(
           void Function(AuthVerifyTokenErrorBuilder) updates) =>
@@ -178,7 +174,7 @@ class _$AuthVerifyTokenError extends AuthVerifyTokenError {
 
   @override
   AuthVerifyTokenErrorBuilder toBuilder() =>
-      new AuthVerifyTokenErrorBuilder()..replace(this);
+      AuthVerifyTokenErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -225,7 +221,6 @@ class AuthVerifyTokenErrorBuilder
 
   @override
   void replace(AuthVerifyTokenError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthVerifyTokenError;
   }
 
@@ -239,9 +234,10 @@ class AuthVerifyTokenErrorBuilder
 
   _$AuthVerifyTokenError _build() {
     final _$result = _$v ??
-        new _$AuthVerifyTokenError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'AuthVerifyTokenError', 'oneOf'));
+        _$AuthVerifyTokenError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'AuthVerifyTokenError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

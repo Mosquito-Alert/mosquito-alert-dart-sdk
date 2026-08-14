@@ -36,7 +36,7 @@ BiteEventEnvironmentEnum _$biteEventEnvironmentEnumValueOf(String name) {
 }
 
 final BuiltSet<BiteEventEnvironmentEnum> _$biteEventEnvironmentEnumValues =
-    new BuiltSet<BiteEventEnvironmentEnum>(const <BiteEventEnvironmentEnum>[
+    BuiltSet<BiteEventEnvironmentEnum>(const <BiteEventEnvironmentEnum>[
   _$biteEventEnvironmentEnum_indoors,
   _$biteEventEnvironmentEnum_outdoors,
   _$biteEventEnvironmentEnum_vehicle,
@@ -81,7 +81,7 @@ BiteEventMomentEnum _$biteEventMomentEnumValueOf(String name) {
 }
 
 final BuiltSet<BiteEventMomentEnum> _$biteEventMomentEnumValues =
-    new BuiltSet<BiteEventMomentEnum>(const <BiteEventMomentEnum>[
+    BuiltSet<BiteEventMomentEnum>(const <BiteEventMomentEnum>[
   _$biteEventMomentEnum_now,
   _$biteEventMomentEnum_lastMorning,
   _$biteEventMomentEnum_lastMidday,
@@ -92,9 +92,9 @@ final BuiltSet<BiteEventMomentEnum> _$biteEventMomentEnumValues =
 ]);
 
 Serializer<BiteEventEnvironmentEnum> _$biteEventEnvironmentEnumSerializer =
-    new _$BiteEventEnvironmentEnumSerializer();
+    _$BiteEventEnvironmentEnumSerializer();
 Serializer<BiteEventMomentEnum> _$biteEventMomentEnumSerializer =
-    new _$BiteEventMomentEnumSerializer();
+    _$BiteEventMomentEnumSerializer();
 
 class _$BiteEventEnvironmentEnumSerializer
     implements PrimitiveSerializer<BiteEventEnvironmentEnum> {
@@ -202,7 +202,7 @@ class _$Bite extends Bite {
   final BiteCounts counts;
 
   factory _$Bite([void Function(BiteBuilder)? updates]) =>
-      (new BiteBuilder()..update(updates))._build();
+      (BiteBuilder()..update(updates))._build();
 
   _$Bite._(
       {required this.uuid,
@@ -220,27 +220,13 @@ class _$Bite extends Bite {
       this.eventEnvironment,
       this.eventMoment,
       required this.counts})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'Bite', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(shortId, r'Bite', 'shortId');
-    BuiltValueNullFieldError.checkNotNull(userUuid, r'Bite', 'userUuid');
-    BuiltValueNullFieldError.checkNotNull(createdAt, r'Bite', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAtLocal, r'Bite', 'createdAtLocal');
-    BuiltValueNullFieldError.checkNotNull(sentAt, r'Bite', 'sentAt');
-    BuiltValueNullFieldError.checkNotNull(receivedAt, r'Bite', 'receivedAt');
-    BuiltValueNullFieldError.checkNotNull(updatedAt, r'Bite', 'updatedAt');
-    BuiltValueNullFieldError.checkNotNull(location, r'Bite', 'location');
-    BuiltValueNullFieldError.checkNotNull(published, r'Bite', 'published');
-    BuiltValueNullFieldError.checkNotNull(counts, r'Bite', 'counts');
-  }
-
+      : super._();
   @override
   Bite rebuild(void Function(BiteBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  BiteBuilder toBuilder() => new BiteBuilder()..replace(this);
+  BiteBuilder toBuilder() => BiteBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -344,7 +330,7 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   LocationBuilder? _location;
-  LocationBuilder get location => _$this._location ??= new LocationBuilder();
+  LocationBuilder get location => _$this._location ??= LocationBuilder();
   set location(LocationBuilder? location) => _$this._location = location;
 
   String? _note;
@@ -352,7 +338,7 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
   set note(String? note) => _$this._note = note;
 
   ListBuilder<String>? _tags;
-  ListBuilder<String> get tags => _$this._tags ??= new ListBuilder<String>();
+  ListBuilder<String> get tags => _$this._tags ??= ListBuilder<String>();
   set tags(ListBuilder<String>? tags) => _$this._tags = tags;
 
   bool? _published;
@@ -370,7 +356,7 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
       _$this._eventMoment = eventMoment;
 
   BiteCountsBuilder? _counts;
-  BiteCountsBuilder get counts => _$this._counts ??= new BiteCountsBuilder();
+  BiteCountsBuilder get counts => _$this._counts ??= BiteCountsBuilder();
   set counts(BiteCountsBuilder? counts) => _$this._counts = counts;
 
   BiteBuilder() {
@@ -402,7 +388,6 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
 
   @override
   void replace(Bite other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Bite;
   }
 
@@ -418,31 +403,31 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
     _$Bite _$result;
     try {
       _$result = _$v ??
-          new _$Bite._(
-              uuid:
-                  BuiltValueNullFieldError.checkNotNull(uuid, r'Bite', 'uuid'),
-              shortId: BuiltValueNullFieldError.checkNotNull(
-                  shortId, r'Bite', 'shortId'),
-              userUuid: BuiltValueNullFieldError.checkNotNull(
-                  userUuid, r'Bite', 'userUuid'),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'Bite', 'createdAt'),
-              createdAtLocal: BuiltValueNullFieldError.checkNotNull(
-                  createdAtLocal, r'Bite', 'createdAtLocal'),
-              sentAt: BuiltValueNullFieldError.checkNotNull(
-                  sentAt, r'Bite', 'sentAt'),
-              receivedAt: BuiltValueNullFieldError.checkNotNull(
-                  receivedAt, r'Bite', 'receivedAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'Bite', 'updatedAt'),
-              location: location.build(),
-              note: note,
-              tags: _tags?.build(),
-              published: BuiltValueNullFieldError.checkNotNull(
-                  published, r'Bite', 'published'),
-              eventEnvironment: eventEnvironment,
-              eventMoment: eventMoment,
-              counts: counts.build());
+          _$Bite._(
+            uuid: BuiltValueNullFieldError.checkNotNull(uuid, r'Bite', 'uuid'),
+            shortId: BuiltValueNullFieldError.checkNotNull(
+                shortId, r'Bite', 'shortId'),
+            userUuid: BuiltValueNullFieldError.checkNotNull(
+                userUuid, r'Bite', 'userUuid'),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'Bite', 'createdAt'),
+            createdAtLocal: BuiltValueNullFieldError.checkNotNull(
+                createdAtLocal, r'Bite', 'createdAtLocal'),
+            sentAt: BuiltValueNullFieldError.checkNotNull(
+                sentAt, r'Bite', 'sentAt'),
+            receivedAt: BuiltValueNullFieldError.checkNotNull(
+                receivedAt, r'Bite', 'receivedAt'),
+            updatedAt: BuiltValueNullFieldError.checkNotNull(
+                updatedAt, r'Bite', 'updatedAt'),
+            location: location.build(),
+            note: note,
+            tags: _tags?.build(),
+            published: BuiltValueNullFieldError.checkNotNull(
+                published, r'Bite', 'published'),
+            eventEnvironment: eventEnvironment,
+            eventMoment: eventMoment,
+            counts: counts.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -455,8 +440,7 @@ class BiteBuilder implements Builder<Bite, BiteBuilder> {
         _$failedField = 'counts';
         counts.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Bite', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(r'Bite', _$failedField, e.toString());
       }
       rethrow;
     }

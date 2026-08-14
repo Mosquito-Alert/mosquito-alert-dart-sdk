@@ -27,7 +27,7 @@ ObservationsGeoListShortIdErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsGeoListShortIdErrorComponentAttrEnum>
-    _$observationsGeoListShortIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsGeoListShortIdErrorComponentAttrEnumValues = BuiltSet<
         ObservationsGeoListShortIdErrorComponentAttrEnum>(const <ObservationsGeoListShortIdErrorComponentAttrEnum>[
   _$observationsGeoListShortIdErrorComponentAttrEnum_shortId,
   _$observationsGeoListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ ObservationsGeoListShortIdErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsGeoListShortIdErrorComponentCodeEnum>
-    _$observationsGeoListShortIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsGeoListShortIdErrorComponentCodeEnumValues = BuiltSet<
         ObservationsGeoListShortIdErrorComponentCodeEnum>(const <ObservationsGeoListShortIdErrorComponentCodeEnum>[
   _$observationsGeoListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$observationsGeoListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -63,10 +63,10 @@ final BuiltSet<ObservationsGeoListShortIdErrorComponentCodeEnum>
 
 Serializer<ObservationsGeoListShortIdErrorComponentAttrEnum>
     _$observationsGeoListShortIdErrorComponentAttrEnumSerializer =
-    new _$ObservationsGeoListShortIdErrorComponentAttrEnumSerializer();
+    _$ObservationsGeoListShortIdErrorComponentAttrEnumSerializer();
 Serializer<ObservationsGeoListShortIdErrorComponentCodeEnum>
     _$observationsGeoListShortIdErrorComponentCodeEnumSerializer =
-    new _$ObservationsGeoListShortIdErrorComponentCodeEnumSerializer();
+    _$ObservationsGeoListShortIdErrorComponentCodeEnumSerializer();
 
 class _$ObservationsGeoListShortIdErrorComponentAttrEnumSerializer
     implements
@@ -146,20 +146,12 @@ class _$ObservationsGeoListShortIdErrorComponent
   factory _$ObservationsGeoListShortIdErrorComponent(
           [void Function(ObservationsGeoListShortIdErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsGeoListShortIdErrorComponentBuilder()..update(updates))
+      (ObservationsGeoListShortIdErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsGeoListShortIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsGeoListShortIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsGeoListShortIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsGeoListShortIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsGeoListShortIdErrorComponent rebuild(
           void Function(ObservationsGeoListShortIdErrorComponentBuilder)
@@ -168,7 +160,7 @@ class _$ObservationsGeoListShortIdErrorComponent
 
   @override
   ObservationsGeoListShortIdErrorComponentBuilder toBuilder() =>
-      new ObservationsGeoListShortIdErrorComponentBuilder()..replace(this);
+      ObservationsGeoListShortIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -237,7 +229,6 @@ class ObservationsGeoListShortIdErrorComponentBuilder
 
   @override
   void replace(ObservationsGeoListShortIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsGeoListShortIdErrorComponent;
   }
 
@@ -252,13 +243,14 @@ class ObservationsGeoListShortIdErrorComponentBuilder
 
   _$ObservationsGeoListShortIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsGeoListShortIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsGeoListShortIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsGeoListShortIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'ObservationsGeoListShortIdErrorComponent', 'detail'));
+        _$ObservationsGeoListShortIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsGeoListShortIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsGeoListShortIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsGeoListShortIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

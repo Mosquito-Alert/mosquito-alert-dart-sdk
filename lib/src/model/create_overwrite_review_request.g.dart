@@ -26,7 +26,7 @@ CreateOverwriteReviewRequestActionEnum
 }
 
 final BuiltSet<CreateOverwriteReviewRequestActionEnum>
-    _$createOverwriteReviewRequestActionEnumValues = new BuiltSet<
+    _$createOverwriteReviewRequestActionEnumValues = BuiltSet<
         CreateOverwriteReviewRequestActionEnum>(const <CreateOverwriteReviewRequestActionEnum>[
   _$createOverwriteReviewRequestActionEnum_overwrite,
   _$createOverwriteReviewRequestActionEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<CreateOverwriteReviewRequestActionEnum>
 
 Serializer<CreateOverwriteReviewRequestActionEnum>
     _$createOverwriteReviewRequestActionEnumSerializer =
-    new _$CreateOverwriteReviewRequestActionEnumSerializer();
+    _$CreateOverwriteReviewRequestActionEnumSerializer();
 
 class _$CreateOverwriteReviewRequestActionEnumSerializer
     implements PrimitiveSerializer<CreateOverwriteReviewRequestActionEnum> {
@@ -84,7 +84,7 @@ class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
 
   factory _$CreateOverwriteReviewRequest(
           [void Function(CreateOverwriteReviewRequestBuilder)? updates]) =>
-      (new CreateOverwriteReviewRequestBuilder()..update(updates))._build();
+      (CreateOverwriteReviewRequestBuilder()..update(updates))._build();
 
   _$CreateOverwriteReviewRequest._(
       {required this.action,
@@ -93,15 +93,7 @@ class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
       this.publicNote,
       this.classification,
       this.characteristics})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        action, r'CreateOverwriteReviewRequest', 'action');
-    BuiltValueNullFieldError.checkNotNull(
-        publicPhotoUuid, r'CreateOverwriteReviewRequest', 'publicPhotoUuid');
-    BuiltValueNullFieldError.checkNotNull(
-        isSafe, r'CreateOverwriteReviewRequest', 'isSafe');
-  }
-
+      : super._();
   @override
   CreateOverwriteReviewRequest rebuild(
           void Function(CreateOverwriteReviewRequestBuilder) updates) =>
@@ -109,7 +101,7 @@ class _$CreateOverwriteReviewRequest extends CreateOverwriteReviewRequest {
 
   @override
   CreateOverwriteReviewRequestBuilder toBuilder() =>
-      new CreateOverwriteReviewRequestBuilder()..replace(this);
+      CreateOverwriteReviewRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -175,13 +167,13 @@ class CreateOverwriteReviewRequestBuilder
 
   SpeciesClassificationRequestBuilder? _classification;
   SpeciesClassificationRequestBuilder get classification =>
-      _$this._classification ??= new SpeciesClassificationRequestBuilder();
+      _$this._classification ??= SpeciesClassificationRequestBuilder();
   set classification(SpeciesClassificationRequestBuilder? classification) =>
       _$this._classification = classification;
 
   SpeciesCharacteristicsRequestBuilder? _characteristics;
   SpeciesCharacteristicsRequestBuilder get characteristics =>
-      _$this._characteristics ??= new SpeciesCharacteristicsRequestBuilder();
+      _$this._characteristics ??= SpeciesCharacteristicsRequestBuilder();
   set characteristics(SpeciesCharacteristicsRequestBuilder? characteristics) =>
       _$this._characteristics = characteristics;
 
@@ -205,7 +197,6 @@ class CreateOverwriteReviewRequestBuilder
 
   @override
   void replace(CreateOverwriteReviewRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CreateOverwriteReviewRequest;
   }
 
@@ -221,18 +212,19 @@ class CreateOverwriteReviewRequestBuilder
     _$CreateOverwriteReviewRequest _$result;
     try {
       _$result = _$v ??
-          new _$CreateOverwriteReviewRequest._(
-              action: BuiltValueNullFieldError.checkNotNull(
-                  action, r'CreateOverwriteReviewRequest', 'action'),
-              publicPhotoUuid: BuiltValueNullFieldError.checkNotNull(
-                  publicPhotoUuid,
-                  r'CreateOverwriteReviewRequest',
-                  'publicPhotoUuid'),
-              isSafe: BuiltValueNullFieldError.checkNotNull(
-                  isSafe, r'CreateOverwriteReviewRequest', 'isSafe'),
-              publicNote: publicNote,
-              classification: _classification?.build(),
-              characteristics: _characteristics?.build());
+          _$CreateOverwriteReviewRequest._(
+            action: BuiltValueNullFieldError.checkNotNull(
+                action, r'CreateOverwriteReviewRequest', 'action'),
+            publicPhotoUuid: BuiltValueNullFieldError.checkNotNull(
+                publicPhotoUuid,
+                r'CreateOverwriteReviewRequest',
+                'publicPhotoUuid'),
+            isSafe: BuiltValueNullFieldError.checkNotNull(
+                isSafe, r'CreateOverwriteReviewRequest', 'isSafe'),
+            publicNote: publicNote,
+            classification: _classification?.build(),
+            characteristics: _characteristics?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -241,7 +233,7 @@ class CreateOverwriteReviewRequestBuilder
         _$failedField = 'characteristics';
         _characteristics?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'CreateOverwriteReviewRequest', _$failedField, e.toString());
       }
       rethrow;

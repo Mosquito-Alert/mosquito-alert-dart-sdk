@@ -73,9 +73,7 @@ class _$CampaignsListErrorSerializer implements PrimitiveSerializer<CampaignsLis
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    CampaignsListError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    CampaignsListError object) sync* {
   }
 
   @override

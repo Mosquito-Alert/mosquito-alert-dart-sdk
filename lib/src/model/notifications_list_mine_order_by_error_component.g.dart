@@ -27,7 +27,7 @@ NotificationsListMineOrderByErrorComponentAttrEnum
 }
 
 final BuiltSet<NotificationsListMineOrderByErrorComponentAttrEnum>
-    _$notificationsListMineOrderByErrorComponentAttrEnumValues = new BuiltSet<
+    _$notificationsListMineOrderByErrorComponentAttrEnumValues = BuiltSet<
         NotificationsListMineOrderByErrorComponentAttrEnum>(const <NotificationsListMineOrderByErrorComponentAttrEnum>[
   _$notificationsListMineOrderByErrorComponentAttrEnum_orderBy,
   _$notificationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ NotificationsListMineOrderByErrorComponentCodeEnum
 }
 
 final BuiltSet<NotificationsListMineOrderByErrorComponentCodeEnum>
-    _$notificationsListMineOrderByErrorComponentCodeEnumValues = new BuiltSet<
+    _$notificationsListMineOrderByErrorComponentCodeEnumValues = BuiltSet<
         NotificationsListMineOrderByErrorComponentCodeEnum>(const <NotificationsListMineOrderByErrorComponentCodeEnum>[
   _$notificationsListMineOrderByErrorComponentCodeEnum_invalidChoice,
   _$notificationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<NotificationsListMineOrderByErrorComponentCodeEnum>
 
 Serializer<NotificationsListMineOrderByErrorComponentAttrEnum>
     _$notificationsListMineOrderByErrorComponentAttrEnumSerializer =
-    new _$NotificationsListMineOrderByErrorComponentAttrEnumSerializer();
+    _$NotificationsListMineOrderByErrorComponentAttrEnumSerializer();
 Serializer<NotificationsListMineOrderByErrorComponentCodeEnum>
     _$notificationsListMineOrderByErrorComponentCodeEnumSerializer =
-    new _$NotificationsListMineOrderByErrorComponentCodeEnumSerializer();
+    _$NotificationsListMineOrderByErrorComponentCodeEnumSerializer();
 
 class _$NotificationsListMineOrderByErrorComponentAttrEnumSerializer
     implements
@@ -147,20 +147,12 @@ class _$NotificationsListMineOrderByErrorComponent
   factory _$NotificationsListMineOrderByErrorComponent(
           [void Function(NotificationsListMineOrderByErrorComponentBuilder)?
               updates]) =>
-      (new NotificationsListMineOrderByErrorComponentBuilder()..update(updates))
+      (NotificationsListMineOrderByErrorComponentBuilder()..update(updates))
           ._build();
 
   _$NotificationsListMineOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'NotificationsListMineOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'NotificationsListMineOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'NotificationsListMineOrderByErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   NotificationsListMineOrderByErrorComponent rebuild(
           void Function(NotificationsListMineOrderByErrorComponentBuilder)
@@ -169,7 +161,7 @@ class _$NotificationsListMineOrderByErrorComponent
 
   @override
   NotificationsListMineOrderByErrorComponentBuilder toBuilder() =>
-      new NotificationsListMineOrderByErrorComponentBuilder()..replace(this);
+      NotificationsListMineOrderByErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -238,7 +230,6 @@ class NotificationsListMineOrderByErrorComponentBuilder
 
   @override
   void replace(NotificationsListMineOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationsListMineOrderByErrorComponent;
   }
 
@@ -254,13 +245,14 @@ class NotificationsListMineOrderByErrorComponentBuilder
 
   _$NotificationsListMineOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$NotificationsListMineOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'NotificationsListMineOrderByErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'NotificationsListMineOrderByErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'NotificationsListMineOrderByErrorComponent', 'detail'));
+        _$NotificationsListMineOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'NotificationsListMineOrderByErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'NotificationsListMineOrderByErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'NotificationsListMineOrderByErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

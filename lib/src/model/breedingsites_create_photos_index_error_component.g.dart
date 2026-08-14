@@ -28,7 +28,7 @@ BreedingsitesCreatePhotosINDEXErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesCreatePhotosINDEXErrorComponentAttrEnum>
-    _$breedingsitesCreatePhotosINDEXErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesCreatePhotosINDEXErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesCreatePhotosINDEXErrorComponentAttrEnum>(const <BreedingsitesCreatePhotosINDEXErrorComponentAttrEnum>[
   _$breedingsitesCreatePhotosINDEXErrorComponentAttrEnum_photosPeriodINDEX,
   _$breedingsitesCreatePhotosINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -81,7 +81,7 @@ BreedingsitesCreatePhotosINDEXErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesCreatePhotosINDEXErrorComponentCodeEnum>
-    _$breedingsitesCreatePhotosINDEXErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesCreatePhotosINDEXErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesCreatePhotosINDEXErrorComponentCodeEnum>(const <BreedingsitesCreatePhotosINDEXErrorComponentCodeEnum>[
   _$breedingsitesCreatePhotosINDEXErrorComponentCodeEnum_empty,
   _$breedingsitesCreatePhotosINDEXErrorComponentCodeEnum_invalid,
@@ -94,10 +94,10 @@ final BuiltSet<BreedingsitesCreatePhotosINDEXErrorComponentCodeEnum>
 
 Serializer<BreedingsitesCreatePhotosINDEXErrorComponentAttrEnum>
     _$breedingsitesCreatePhotosINDEXErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesCreatePhotosINDEXErrorComponentAttrEnumSerializer();
+    _$BreedingsitesCreatePhotosINDEXErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesCreatePhotosINDEXErrorComponentCodeEnum>
     _$breedingsitesCreatePhotosINDEXErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesCreatePhotosINDEXErrorComponentCodeEnumSerializer();
+    _$BreedingsitesCreatePhotosINDEXErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesCreatePhotosINDEXErrorComponentAttrEnumSerializer
     implements
@@ -191,21 +191,12 @@ class _$BreedingsitesCreatePhotosINDEXErrorComponent
   factory _$BreedingsitesCreatePhotosINDEXErrorComponent(
           [void Function(BreedingsitesCreatePhotosINDEXErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesCreatePhotosINDEXErrorComponentBuilder()
-            ..update(updates))
+      (BreedingsitesCreatePhotosINDEXErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesCreatePhotosINDEXErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesCreatePhotosINDEXErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesCreatePhotosINDEXErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesCreatePhotosINDEXErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesCreatePhotosINDEXErrorComponent rebuild(
           void Function(BreedingsitesCreatePhotosINDEXErrorComponentBuilder)
@@ -214,7 +205,7 @@ class _$BreedingsitesCreatePhotosINDEXErrorComponent
 
   @override
   BreedingsitesCreatePhotosINDEXErrorComponentBuilder toBuilder() =>
-      new BreedingsitesCreatePhotosINDEXErrorComponentBuilder()..replace(this);
+      BreedingsitesCreatePhotosINDEXErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -285,7 +276,6 @@ class BreedingsitesCreatePhotosINDEXErrorComponentBuilder
 
   @override
   void replace(BreedingsitesCreatePhotosINDEXErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesCreatePhotosINDEXErrorComponent;
   }
 
@@ -301,13 +291,14 @@ class BreedingsitesCreatePhotosINDEXErrorComponentBuilder
 
   _$BreedingsitesCreatePhotosINDEXErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesCreatePhotosINDEXErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesCreatePhotosINDEXErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesCreatePhotosINDEXErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesCreatePhotosINDEXErrorComponent', 'detail'));
+        _$BreedingsitesCreatePhotosINDEXErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesCreatePhotosINDEXErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesCreatePhotosINDEXErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'BreedingsitesCreatePhotosINDEXErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

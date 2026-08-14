@@ -27,7 +27,7 @@ BreedingsitesGeoListCountryIdErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesGeoListCountryIdErrorComponentAttrEnum>
-    _$breedingsitesGeoListCountryIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesGeoListCountryIdErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesGeoListCountryIdErrorComponentAttrEnum>(const <BreedingsitesGeoListCountryIdErrorComponentAttrEnum>[
   _$breedingsitesGeoListCountryIdErrorComponentAttrEnum_countryId,
   _$breedingsitesGeoListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ BreedingsitesGeoListCountryIdErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesGeoListCountryIdErrorComponentCodeEnum>
-    _$breedingsitesGeoListCountryIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesGeoListCountryIdErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesGeoListCountryIdErrorComponentCodeEnum>(const <BreedingsitesGeoListCountryIdErrorComponentCodeEnum>[
   _$breedingsitesGeoListCountryIdErrorComponentCodeEnum_invalidChoice,
   _$breedingsitesGeoListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -63,10 +63,10 @@ final BuiltSet<BreedingsitesGeoListCountryIdErrorComponentCodeEnum>
 
 Serializer<BreedingsitesGeoListCountryIdErrorComponentAttrEnum>
     _$breedingsitesGeoListCountryIdErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesGeoListCountryIdErrorComponentAttrEnumSerializer();
+    _$BreedingsitesGeoListCountryIdErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesGeoListCountryIdErrorComponentCodeEnum>
     _$breedingsitesGeoListCountryIdErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesGeoListCountryIdErrorComponentCodeEnumSerializer();
+    _$BreedingsitesGeoListCountryIdErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesGeoListCountryIdErrorComponentAttrEnumSerializer
     implements
@@ -148,21 +148,12 @@ class _$BreedingsitesGeoListCountryIdErrorComponent
   factory _$BreedingsitesGeoListCountryIdErrorComponent(
           [void Function(BreedingsitesGeoListCountryIdErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesGeoListCountryIdErrorComponentBuilder()
-            ..update(updates))
+      (BreedingsitesGeoListCountryIdErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesGeoListCountryIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesGeoListCountryIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesGeoListCountryIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesGeoListCountryIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesGeoListCountryIdErrorComponent rebuild(
           void Function(BreedingsitesGeoListCountryIdErrorComponentBuilder)
@@ -171,7 +162,7 @@ class _$BreedingsitesGeoListCountryIdErrorComponent
 
   @override
   BreedingsitesGeoListCountryIdErrorComponentBuilder toBuilder() =>
-      new BreedingsitesGeoListCountryIdErrorComponentBuilder()..replace(this);
+      BreedingsitesGeoListCountryIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -240,7 +231,6 @@ class BreedingsitesGeoListCountryIdErrorComponentBuilder
 
   @override
   void replace(BreedingsitesGeoListCountryIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesGeoListCountryIdErrorComponent;
   }
 
@@ -256,13 +246,14 @@ class BreedingsitesGeoListCountryIdErrorComponentBuilder
 
   _$BreedingsitesGeoListCountryIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesGeoListCountryIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesGeoListCountryIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesGeoListCountryIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesGeoListCountryIdErrorComponent', 'detail'));
+        _$BreedingsitesGeoListCountryIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesGeoListCountryIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesGeoListCountryIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BreedingsitesGeoListCountryIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

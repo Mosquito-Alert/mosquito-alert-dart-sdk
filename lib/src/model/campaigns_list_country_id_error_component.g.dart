@@ -27,7 +27,7 @@ CampaignsListCountryIdErrorComponentAttrEnum
 }
 
 final BuiltSet<CampaignsListCountryIdErrorComponentAttrEnum>
-    _$campaignsListCountryIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$campaignsListCountryIdErrorComponentAttrEnumValues = BuiltSet<
         CampaignsListCountryIdErrorComponentAttrEnum>(const <CampaignsListCountryIdErrorComponentAttrEnum>[
   _$campaignsListCountryIdErrorComponentAttrEnum_countryId,
   _$campaignsListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ CampaignsListCountryIdErrorComponentCodeEnum
 }
 
 final BuiltSet<CampaignsListCountryIdErrorComponentCodeEnum>
-    _$campaignsListCountryIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$campaignsListCountryIdErrorComponentCodeEnumValues = BuiltSet<
         CampaignsListCountryIdErrorComponentCodeEnum>(const <CampaignsListCountryIdErrorComponentCodeEnum>[
   _$campaignsListCountryIdErrorComponentCodeEnum_invalidChoice,
   _$campaignsListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<CampaignsListCountryIdErrorComponentCodeEnum>
 
 Serializer<CampaignsListCountryIdErrorComponentAttrEnum>
     _$campaignsListCountryIdErrorComponentAttrEnumSerializer =
-    new _$CampaignsListCountryIdErrorComponentAttrEnumSerializer();
+    _$CampaignsListCountryIdErrorComponentAttrEnumSerializer();
 Serializer<CampaignsListCountryIdErrorComponentCodeEnum>
     _$campaignsListCountryIdErrorComponentCodeEnumSerializer =
-    new _$CampaignsListCountryIdErrorComponentCodeEnumSerializer();
+    _$CampaignsListCountryIdErrorComponentCodeEnumSerializer();
 
 class _$CampaignsListCountryIdErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,11 @@ class _$CampaignsListCountryIdErrorComponent
   factory _$CampaignsListCountryIdErrorComponent(
           [void Function(CampaignsListCountryIdErrorComponentBuilder)?
               updates]) =>
-      (new CampaignsListCountryIdErrorComponentBuilder()..update(updates))
-          ._build();
+      (CampaignsListCountryIdErrorComponentBuilder()..update(updates))._build();
 
   _$CampaignsListCountryIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'CampaignsListCountryIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'CampaignsListCountryIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'CampaignsListCountryIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   CampaignsListCountryIdErrorComponent rebuild(
           void Function(CampaignsListCountryIdErrorComponentBuilder) updates) =>
@@ -166,7 +157,7 @@ class _$CampaignsListCountryIdErrorComponent
 
   @override
   CampaignsListCountryIdErrorComponentBuilder toBuilder() =>
-      new CampaignsListCountryIdErrorComponentBuilder()..replace(this);
+      CampaignsListCountryIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -234,7 +225,6 @@ class CampaignsListCountryIdErrorComponentBuilder
 
   @override
   void replace(CampaignsListCountryIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CampaignsListCountryIdErrorComponent;
   }
 
@@ -249,13 +239,14 @@ class CampaignsListCountryIdErrorComponentBuilder
 
   _$CampaignsListCountryIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$CampaignsListCountryIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'CampaignsListCountryIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'CampaignsListCountryIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'CampaignsListCountryIdErrorComponent', 'detail'));
+        _$CampaignsListCountryIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'CampaignsListCountryIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'CampaignsListCountryIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'CampaignsListCountryIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

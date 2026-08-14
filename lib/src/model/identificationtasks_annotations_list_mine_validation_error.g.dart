@@ -30,7 +30,7 @@ IdentificationtasksAnnotationsListMineValidationErrorTypeEnum
 
 final BuiltSet<IdentificationtasksAnnotationsListMineValidationErrorTypeEnum>
     _$identificationtasksAnnotationsListMineValidationErrorTypeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineValidationErrorTypeEnum>(const <IdentificationtasksAnnotationsListMineValidationErrorTypeEnum>[
   _$identificationtasksAnnotationsListMineValidationErrorTypeEnum_validationError,
   _$identificationtasksAnnotationsListMineValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -38,7 +38,7 @@ final BuiltSet<IdentificationtasksAnnotationsListMineValidationErrorTypeEnum>
 
 Serializer<IdentificationtasksAnnotationsListMineValidationErrorTypeEnum>
     _$identificationtasksAnnotationsListMineValidationErrorTypeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineValidationErrorTypeEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineValidationErrorTypeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListMineValidationErrorTypeEnumSerializer
     implements
@@ -86,19 +86,13 @@ class _$IdentificationtasksAnnotationsListMineValidationError
           [void Function(
                   IdentificationtasksAnnotationsListMineValidationErrorBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListMineValidationErrorBuilder()
+      (IdentificationtasksAnnotationsListMineValidationErrorBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListMineValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'IdentificationtasksAnnotationsListMineValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(errors,
-        r'IdentificationtasksAnnotationsListMineValidationError', 'errors');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListMineValidationError rebuild(
           void Function(
@@ -108,7 +102,7 @@ class _$IdentificationtasksAnnotationsListMineValidationError
 
   @override
   IdentificationtasksAnnotationsListMineValidationErrorBuilder toBuilder() =>
-      new IdentificationtasksAnnotationsListMineValidationErrorBuilder()
+      IdentificationtasksAnnotationsListMineValidationErrorBuilder()
         ..replace(this);
 
   @override
@@ -155,7 +149,7 @@ class IdentificationtasksAnnotationsListMineValidationErrorBuilder
   ListBuilder<IdentificationtasksAnnotationsListMineError>? _errors;
   ListBuilder<IdentificationtasksAnnotationsListMineError> get errors =>
       _$this._errors ??=
-          new ListBuilder<IdentificationtasksAnnotationsListMineError>();
+          ListBuilder<IdentificationtasksAnnotationsListMineError>();
   set errors(
           ListBuilder<IdentificationtasksAnnotationsListMineError>? errors) =>
       _$this._errors = errors;
@@ -176,7 +170,6 @@ class IdentificationtasksAnnotationsListMineValidationErrorBuilder
 
   @override
   void replace(IdentificationtasksAnnotationsListMineValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksAnnotationsListMineValidationError;
   }
 
@@ -195,19 +188,20 @@ class IdentificationtasksAnnotationsListMineValidationErrorBuilder
     _$IdentificationtasksAnnotationsListMineValidationError _$result;
     try {
       _$result = _$v ??
-          new _$IdentificationtasksAnnotationsListMineValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type,
-                  r'IdentificationtasksAnnotationsListMineValidationError',
-                  'type'),
-              errors: errors.build());
+          _$IdentificationtasksAnnotationsListMineValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type,
+                r'IdentificationtasksAnnotationsListMineValidationError',
+                'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'IdentificationtasksAnnotationsListMineValidationError',
             _$failedField,
             e.toString());

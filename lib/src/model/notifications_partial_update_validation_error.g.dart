@@ -28,7 +28,7 @@ NotificationsPartialUpdateValidationErrorTypeEnum
 }
 
 final BuiltSet<NotificationsPartialUpdateValidationErrorTypeEnum>
-    _$notificationsPartialUpdateValidationErrorTypeEnumValues = new BuiltSet<
+    _$notificationsPartialUpdateValidationErrorTypeEnumValues = BuiltSet<
         NotificationsPartialUpdateValidationErrorTypeEnum>(const <NotificationsPartialUpdateValidationErrorTypeEnum>[
   _$notificationsPartialUpdateValidationErrorTypeEnum_validationError,
   _$notificationsPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -36,7 +36,7 @@ final BuiltSet<NotificationsPartialUpdateValidationErrorTypeEnum>
 
 Serializer<NotificationsPartialUpdateValidationErrorTypeEnum>
     _$notificationsPartialUpdateValidationErrorTypeEnumSerializer =
-    new _$NotificationsPartialUpdateValidationErrorTypeEnumSerializer();
+    _$NotificationsPartialUpdateValidationErrorTypeEnumSerializer();
 
 class _$NotificationsPartialUpdateValidationErrorTypeEnumSerializer
     implements
@@ -81,18 +81,12 @@ class _$NotificationsPartialUpdateValidationError
   factory _$NotificationsPartialUpdateValidationError(
           [void Function(NotificationsPartialUpdateValidationErrorBuilder)?
               updates]) =>
-      (new NotificationsPartialUpdateValidationErrorBuilder()..update(updates))
+      (NotificationsPartialUpdateValidationErrorBuilder()..update(updates))
           ._build();
 
   _$NotificationsPartialUpdateValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'NotificationsPartialUpdateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'NotificationsPartialUpdateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   NotificationsPartialUpdateValidationError rebuild(
           void Function(NotificationsPartialUpdateValidationErrorBuilder)
@@ -101,7 +95,7 @@ class _$NotificationsPartialUpdateValidationError
 
   @override
   NotificationsPartialUpdateValidationErrorBuilder toBuilder() =>
-      new NotificationsPartialUpdateValidationErrorBuilder()..replace(this);
+      NotificationsPartialUpdateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -143,7 +137,7 @@ class NotificationsPartialUpdateValidationErrorBuilder
 
   ListBuilder<NotificationsPartialUpdateError>? _errors;
   ListBuilder<NotificationsPartialUpdateError> get errors =>
-      _$this._errors ??= new ListBuilder<NotificationsPartialUpdateError>();
+      _$this._errors ??= ListBuilder<NotificationsPartialUpdateError>();
   set errors(ListBuilder<NotificationsPartialUpdateError>? errors) =>
       _$this._errors = errors;
 
@@ -163,7 +157,6 @@ class NotificationsPartialUpdateValidationErrorBuilder
 
   @override
   void replace(NotificationsPartialUpdateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationsPartialUpdateValidationError;
   }
 
@@ -181,17 +174,18 @@ class NotificationsPartialUpdateValidationErrorBuilder
     _$NotificationsPartialUpdateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$NotificationsPartialUpdateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'NotificationsPartialUpdateValidationError', 'type'),
-              errors: errors.build());
+          _$NotificationsPartialUpdateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'NotificationsPartialUpdateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'NotificationsPartialUpdateValidationError',
             _$failedField,
             e.toString());

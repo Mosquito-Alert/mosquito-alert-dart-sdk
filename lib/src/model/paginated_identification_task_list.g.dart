@@ -19,17 +19,11 @@ class _$PaginatedIdentificationTaskList
 
   factory _$PaginatedIdentificationTaskList(
           [void Function(PaginatedIdentificationTaskListBuilder)? updates]) =>
-      (new PaginatedIdentificationTaskListBuilder()..update(updates))._build();
+      (PaginatedIdentificationTaskListBuilder()..update(updates))._build();
 
   _$PaginatedIdentificationTaskList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedIdentificationTaskList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedIdentificationTaskList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedIdentificationTaskList rebuild(
           void Function(PaginatedIdentificationTaskListBuilder) updates) =>
@@ -37,7 +31,7 @@ class _$PaginatedIdentificationTaskList
 
   @override
   PaginatedIdentificationTaskListBuilder toBuilder() =>
-      new PaginatedIdentificationTaskListBuilder()..replace(this);
+      PaginatedIdentificationTaskListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -91,7 +85,7 @@ class PaginatedIdentificationTaskListBuilder
 
   ListBuilder<IdentificationTask>? _results;
   ListBuilder<IdentificationTask> get results =>
-      _$this._results ??= new ListBuilder<IdentificationTask>();
+      _$this._results ??= ListBuilder<IdentificationTask>();
   set results(ListBuilder<IdentificationTask>? results) =>
       _$this._results = results;
 
@@ -113,7 +107,6 @@ class PaginatedIdentificationTaskListBuilder
 
   @override
   void replace(PaginatedIdentificationTaskList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedIdentificationTaskList;
   }
 
@@ -129,19 +122,20 @@ class PaginatedIdentificationTaskListBuilder
     _$PaginatedIdentificationTaskList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedIdentificationTaskList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedIdentificationTaskList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedIdentificationTaskList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedIdentificationTaskList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedIdentificationTaskList', _$failedField, e.toString());
       }
       rethrow;

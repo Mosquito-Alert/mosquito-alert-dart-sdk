@@ -58,7 +58,7 @@ class _$LocalizedMessageBodyRequest extends LocalizedMessageBodyRequest {
 
   factory _$LocalizedMessageBodyRequest(
           [void Function(LocalizedMessageBodyRequestBuilder)? updates]) =>
-      (new LocalizedMessageBodyRequestBuilder()..update(updates))._build();
+      (LocalizedMessageBodyRequestBuilder()..update(updates))._build();
 
   _$LocalizedMessageBodyRequest._(
       {this.bg,
@@ -86,7 +86,6 @@ class _$LocalizedMessageBodyRequest extends LocalizedMessageBodyRequest {
       this.tr,
       this.zhCn})
       : super._();
-
   @override
   LocalizedMessageBodyRequest rebuild(
           void Function(LocalizedMessageBodyRequestBuilder) updates) =>
@@ -94,7 +93,7 @@ class _$LocalizedMessageBodyRequest extends LocalizedMessageBodyRequest {
 
   @override
   LocalizedMessageBodyRequestBuilder toBuilder() =>
-      new LocalizedMessageBodyRequestBuilder()..replace(this);
+      LocalizedMessageBodyRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -328,7 +327,6 @@ class LocalizedMessageBodyRequestBuilder
 
   @override
   void replace(LocalizedMessageBodyRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$LocalizedMessageBodyRequest;
   }
 
@@ -342,31 +340,32 @@ class LocalizedMessageBodyRequestBuilder
 
   _$LocalizedMessageBodyRequest _build() {
     final _$result = _$v ??
-        new _$LocalizedMessageBodyRequest._(
-            bg: bg,
-            bn: bn,
-            ca: ca,
-            de: de,
-            el: el,
-            en: en,
-            es: es,
-            eu: eu,
-            fr: fr,
-            gl: gl,
-            hr: hr,
-            hu: hu,
-            it: it,
-            lb: lb,
-            mk: mk,
-            nl: nl,
-            pt: pt,
-            ro: ro,
-            sl: sl,
-            sq: sq,
-            sr: sr,
-            sv: sv,
-            tr: tr,
-            zhCn: zhCn);
+        _$LocalizedMessageBodyRequest._(
+          bg: bg,
+          bn: bn,
+          ca: ca,
+          de: de,
+          el: el,
+          en: en,
+          es: es,
+          eu: eu,
+          fr: fr,
+          gl: gl,
+          hr: hr,
+          hu: hu,
+          it: it,
+          lb: lb,
+          mk: mk,
+          nl: nl,
+          pt: pt,
+          ro: ro,
+          sl: sl,
+          sq: sq,
+          sr: sr,
+          sv: sv,
+          tr: tr,
+          zhCn: zhCn,
+        );
     replace(_$result);
     return _$result;
   }

@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnum_scoresPeriodNotSure,
   _$identificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent
   @override
   IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -328,7 +314,6 @@ class IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentBuil
   void replace(
       IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent;
   }
@@ -348,20 +333,21 @@ class IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponentBuil
   _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateScoresNotSureErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -11,18 +11,15 @@ class _$TokenRefresh extends TokenRefresh {
   final String access;
 
   factory _$TokenRefresh([void Function(TokenRefreshBuilder)? updates]) =>
-      (new TokenRefreshBuilder()..update(updates))._build();
+      (TokenRefreshBuilder()..update(updates))._build();
 
-  _$TokenRefresh._({required this.access}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(access, r'TokenRefresh', 'access');
-  }
-
+  _$TokenRefresh._({required this.access}) : super._();
   @override
   TokenRefresh rebuild(void Function(TokenRefreshBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  TokenRefreshBuilder toBuilder() => new TokenRefreshBuilder()..replace(this);
+  TokenRefreshBuilder toBuilder() => TokenRefreshBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -68,7 +65,6 @@ class TokenRefreshBuilder
 
   @override
   void replace(TokenRefresh other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$TokenRefresh;
   }
 
@@ -82,9 +78,10 @@ class TokenRefreshBuilder
 
   _$TokenRefresh _build() {
     final _$result = _$v ??
-        new _$TokenRefresh._(
-            access: BuiltValueNullFieldError.checkNotNull(
-                access, r'TokenRefresh', 'access'));
+        _$TokenRefresh._(
+          access: BuiltValueNullFieldError.checkNotNull(
+              access, r'TokenRefresh', 'access'),
+        );
     replace(_$result);
     return _$result;
   }

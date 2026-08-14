@@ -115,7 +115,7 @@ UserRequestLocaleEnum _$userRequestLocaleEnumValueOf(String name) {
 }
 
 final BuiltSet<UserRequestLocaleEnum> _$userRequestLocaleEnumValues =
-    new BuiltSet<UserRequestLocaleEnum>(const <UserRequestLocaleEnum>[
+    BuiltSet<UserRequestLocaleEnum>(const <UserRequestLocaleEnum>[
   _$userRequestLocaleEnum_en,
   _$userRequestLocaleEnum_es,
   _$userRequestLocaleEnum_ca,
@@ -144,7 +144,7 @@ final BuiltSet<UserRequestLocaleEnum> _$userRequestLocaleEnumValues =
 ]);
 
 Serializer<UserRequestLocaleEnum> _$userRequestLocaleEnumSerializer =
-    new _$UserRequestLocaleEnumSerializer();
+    _$UserRequestLocaleEnumSerializer();
 
 class _$UserRequestLocaleEnumSerializer
     implements PrimitiveSerializer<UserRequestLocaleEnum> {
@@ -225,16 +225,15 @@ class _$UserRequest extends UserRequest {
   final UserRequestLocaleEnum? locale;
 
   factory _$UserRequest([void Function(UserRequestBuilder)? updates]) =>
-      (new UserRequestBuilder()..update(updates))._build();
+      (UserRequestBuilder()..update(updates))._build();
 
   _$UserRequest._({this.locale}) : super._();
-
   @override
   UserRequest rebuild(void Function(UserRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  UserRequestBuilder toBuilder() => new UserRequestBuilder()..replace(this);
+  UserRequestBuilder toBuilder() => UserRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -279,7 +278,6 @@ class UserRequestBuilder implements Builder<UserRequest, UserRequestBuilder> {
 
   @override
   void replace(UserRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UserRequest;
   }
 
@@ -292,7 +290,10 @@ class UserRequestBuilder implements Builder<UserRequest, UserRequestBuilder> {
   UserRequest build() => _build();
 
   _$UserRequest _build() {
-    final _$result = _$v ?? new _$UserRequest._(locale: locale);
+    final _$result = _$v ??
+        _$UserRequest._(
+          locale: locale,
+        );
     replace(_$result);
     return _$result;
   }

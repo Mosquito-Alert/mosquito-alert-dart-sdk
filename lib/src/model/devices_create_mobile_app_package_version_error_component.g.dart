@@ -30,7 +30,7 @@ DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum
 
 final BuiltSet<DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum>
     _$devicesCreateMobileAppPackageVersionErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum>(const <DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum>[
   _$devicesCreateMobileAppPackageVersionErrorComponentAttrEnum_mobileAppPeriodPackageVersion,
   _$devicesCreateMobileAppPackageVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -100,7 +100,7 @@ DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum
 
 final BuiltSet<DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum>
     _$devicesCreateMobileAppPackageVersionErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum>(const <DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum>[
   _$devicesCreateMobileAppPackageVersionErrorComponentCodeEnum_blank,
   _$devicesCreateMobileAppPackageVersionErrorComponentCodeEnum_invalid,
@@ -115,10 +115,10 @@ final BuiltSet<DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum>
 
 Serializer<DevicesCreateMobileAppPackageVersionErrorComponentAttrEnum>
     _$devicesCreateMobileAppPackageVersionErrorComponentAttrEnumSerializer =
-    new _$DevicesCreateMobileAppPackageVersionErrorComponentAttrEnumSerializer();
+    _$DevicesCreateMobileAppPackageVersionErrorComponentAttrEnumSerializer();
 Serializer<DevicesCreateMobileAppPackageVersionErrorComponentCodeEnum>
     _$devicesCreateMobileAppPackageVersionErrorComponentCodeEnumSerializer =
-    new _$DevicesCreateMobileAppPackageVersionErrorComponentCodeEnumSerializer();
+    _$DevicesCreateMobileAppPackageVersionErrorComponentCodeEnumSerializer();
 
 class _$DevicesCreateMobileAppPackageVersionErrorComponentAttrEnumSerializer
     implements
@@ -217,21 +217,13 @@ class _$DevicesCreateMobileAppPackageVersionErrorComponent
           [void Function(
                   DevicesCreateMobileAppPackageVersionErrorComponentBuilder)?
               updates]) =>
-      (new DevicesCreateMobileAppPackageVersionErrorComponentBuilder()
+      (DevicesCreateMobileAppPackageVersionErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$DevicesCreateMobileAppPackageVersionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesCreateMobileAppPackageVersionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesCreateMobileAppPackageVersionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'DevicesCreateMobileAppPackageVersionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesCreateMobileAppPackageVersionErrorComponent rebuild(
           void Function(
@@ -241,7 +233,7 @@ class _$DevicesCreateMobileAppPackageVersionErrorComponent
 
   @override
   DevicesCreateMobileAppPackageVersionErrorComponentBuilder toBuilder() =>
-      new DevicesCreateMobileAppPackageVersionErrorComponentBuilder()
+      DevicesCreateMobileAppPackageVersionErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -313,7 +305,6 @@ class DevicesCreateMobileAppPackageVersionErrorComponentBuilder
 
   @override
   void replace(DevicesCreateMobileAppPackageVersionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesCreateMobileAppPackageVersionErrorComponent;
   }
 
@@ -329,15 +320,14 @@ class DevicesCreateMobileAppPackageVersionErrorComponentBuilder
 
   _$DevicesCreateMobileAppPackageVersionErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesCreateMobileAppPackageVersionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'DevicesCreateMobileAppPackageVersionErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'DevicesCreateMobileAppPackageVersionErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'DevicesCreateMobileAppPackageVersionErrorComponent',
-                'detail'));
+        _$DevicesCreateMobileAppPackageVersionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'DevicesCreateMobileAppPackageVersionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'DevicesCreateMobileAppPackageVersionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'DevicesCreateMobileAppPackageVersionErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -26,7 +26,7 @@ IdentificationtasksListErrorAttrEnum
 }
 
 final BuiltSet<IdentificationtasksListErrorAttrEnum>
-    _$identificationtasksListErrorAttrEnumValues = new BuiltSet<
+    _$identificationtasksListErrorAttrEnumValues = BuiltSet<
         IdentificationtasksListErrorAttrEnum>(const <IdentificationtasksListErrorAttrEnum>[
   _$identificationtasksListErrorAttrEnum_reviewAction,
   _$identificationtasksListErrorAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ IdentificationtasksListErrorCodeEnum
 }
 
 final BuiltSet<IdentificationtasksListErrorCodeEnum>
-    _$identificationtasksListErrorCodeEnumValues = new BuiltSet<
+    _$identificationtasksListErrorCodeEnumValues = BuiltSet<
         IdentificationtasksListErrorCodeEnum>(const <IdentificationtasksListErrorCodeEnum>[
   _$identificationtasksListErrorCodeEnum_invalidChoice,
   _$identificationtasksListErrorCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<IdentificationtasksListErrorCodeEnum>
 
 Serializer<IdentificationtasksListErrorAttrEnum>
     _$identificationtasksListErrorAttrEnumSerializer =
-    new _$IdentificationtasksListErrorAttrEnumSerializer();
+    _$IdentificationtasksListErrorAttrEnumSerializer();
 Serializer<IdentificationtasksListErrorCodeEnum>
     _$identificationtasksListErrorCodeEnumSerializer =
-    new _$IdentificationtasksListErrorCodeEnumSerializer();
+    _$IdentificationtasksListErrorCodeEnumSerializer();
 
 class _$IdentificationtasksListErrorAttrEnumSerializer
     implements PrimitiveSerializer<IdentificationtasksListErrorAttrEnum> {
@@ -135,13 +135,9 @@ class _$IdentificationtasksListError extends IdentificationtasksListError {
 
   factory _$IdentificationtasksListError(
           [void Function(IdentificationtasksListErrorBuilder)? updates]) =>
-      (new IdentificationtasksListErrorBuilder()..update(updates))._build();
+      (IdentificationtasksListErrorBuilder()..update(updates))._build();
 
-  _$IdentificationtasksListError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'IdentificationtasksListError', 'oneOf');
-  }
-
+  _$IdentificationtasksListError._({required this.oneOf}) : super._();
   @override
   IdentificationtasksListError rebuild(
           void Function(IdentificationtasksListErrorBuilder) updates) =>
@@ -149,7 +145,7 @@ class _$IdentificationtasksListError extends IdentificationtasksListError {
 
   @override
   IdentificationtasksListErrorBuilder toBuilder() =>
-      new IdentificationtasksListErrorBuilder()..replace(this);
+      IdentificationtasksListErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -198,7 +194,6 @@ class IdentificationtasksListErrorBuilder
 
   @override
   void replace(IdentificationtasksListError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListError;
   }
 
@@ -212,9 +207,10 @@ class IdentificationtasksListErrorBuilder
 
   _$IdentificationtasksListError _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IdentificationtasksListError', 'oneOf'));
+        _$IdentificationtasksListError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IdentificationtasksListError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

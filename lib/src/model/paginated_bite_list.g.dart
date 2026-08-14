@@ -18,23 +18,18 @@ class _$PaginatedBiteList extends PaginatedBiteList {
 
   factory _$PaginatedBiteList(
           [void Function(PaginatedBiteListBuilder)? updates]) =>
-      (new PaginatedBiteListBuilder()..update(updates))._build();
+      (PaginatedBiteListBuilder()..update(updates))._build();
 
   _$PaginatedBiteList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(count, r'PaginatedBiteList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedBiteList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedBiteList rebuild(void Function(PaginatedBiteListBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   PaginatedBiteListBuilder toBuilder() =>
-      new PaginatedBiteListBuilder()..replace(this);
+      PaginatedBiteListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -85,7 +80,7 @@ class PaginatedBiteListBuilder
   set previous(String? previous) => _$this._previous = previous;
 
   ListBuilder<Bite>? _results;
-  ListBuilder<Bite> get results => _$this._results ??= new ListBuilder<Bite>();
+  ListBuilder<Bite> get results => _$this._results ??= ListBuilder<Bite>();
   set results(ListBuilder<Bite>? results) => _$this._results = results;
 
   PaginatedBiteListBuilder() {
@@ -106,7 +101,6 @@ class PaginatedBiteListBuilder
 
   @override
   void replace(PaginatedBiteList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedBiteList;
   }
 
@@ -122,19 +116,20 @@ class PaginatedBiteListBuilder
     _$PaginatedBiteList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedBiteList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedBiteList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedBiteList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedBiteList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedBiteList', _$failedField, e.toString());
       }
       rethrow;

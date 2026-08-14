@@ -56,7 +56,7 @@ MosquitoAppearanceRequestSpecieEnum
 }
 
 final BuiltSet<MosquitoAppearanceRequestSpecieEnum>
-    _$mosquitoAppearanceRequestSpecieEnumValues = new BuiltSet<
+    _$mosquitoAppearanceRequestSpecieEnumValues = BuiltSet<
         MosquitoAppearanceRequestSpecieEnum>(const <MosquitoAppearanceRequestSpecieEnum>[
   _$mosquitoAppearanceRequestSpecieEnum_albopictus,
   _$mosquitoAppearanceRequestSpecieEnum_aegypti,
@@ -118,7 +118,7 @@ MosquitoAppearanceRequestThoraxEnum
 }
 
 final BuiltSet<MosquitoAppearanceRequestThoraxEnum>
-    _$mosquitoAppearanceRequestThoraxEnumValues = new BuiltSet<
+    _$mosquitoAppearanceRequestThoraxEnumValues = BuiltSet<
         MosquitoAppearanceRequestThoraxEnum>(const <MosquitoAppearanceRequestThoraxEnum>[
   _$mosquitoAppearanceRequestThoraxEnum_albopictus,
   _$mosquitoAppearanceRequestThoraxEnum_aegypti,
@@ -180,7 +180,7 @@ MosquitoAppearanceRequestAbdomenEnum
 }
 
 final BuiltSet<MosquitoAppearanceRequestAbdomenEnum>
-    _$mosquitoAppearanceRequestAbdomenEnumValues = new BuiltSet<
+    _$mosquitoAppearanceRequestAbdomenEnumValues = BuiltSet<
         MosquitoAppearanceRequestAbdomenEnum>(const <MosquitoAppearanceRequestAbdomenEnum>[
   _$mosquitoAppearanceRequestAbdomenEnum_albopictus,
   _$mosquitoAppearanceRequestAbdomenEnum_aegypti,
@@ -242,7 +242,7 @@ MosquitoAppearanceRequestLegsEnum _$mosquitoAppearanceRequestLegsEnumValueOf(
 }
 
 final BuiltSet<MosquitoAppearanceRequestLegsEnum>
-    _$mosquitoAppearanceRequestLegsEnumValues = new BuiltSet<
+    _$mosquitoAppearanceRequestLegsEnumValues = BuiltSet<
         MosquitoAppearanceRequestLegsEnum>(const <MosquitoAppearanceRequestLegsEnum>[
   _$mosquitoAppearanceRequestLegsEnum_albopictus,
   _$mosquitoAppearanceRequestLegsEnum_aegypti,
@@ -256,16 +256,16 @@ final BuiltSet<MosquitoAppearanceRequestLegsEnum>
 
 Serializer<MosquitoAppearanceRequestSpecieEnum>
     _$mosquitoAppearanceRequestSpecieEnumSerializer =
-    new _$MosquitoAppearanceRequestSpecieEnumSerializer();
+    _$MosquitoAppearanceRequestSpecieEnumSerializer();
 Serializer<MosquitoAppearanceRequestThoraxEnum>
     _$mosquitoAppearanceRequestThoraxEnumSerializer =
-    new _$MosquitoAppearanceRequestThoraxEnumSerializer();
+    _$MosquitoAppearanceRequestThoraxEnumSerializer();
 Serializer<MosquitoAppearanceRequestAbdomenEnum>
     _$mosquitoAppearanceRequestAbdomenEnumSerializer =
-    new _$MosquitoAppearanceRequestAbdomenEnumSerializer();
+    _$MosquitoAppearanceRequestAbdomenEnumSerializer();
 Serializer<MosquitoAppearanceRequestLegsEnum>
     _$mosquitoAppearanceRequestLegsEnumSerializer =
-    new _$MosquitoAppearanceRequestLegsEnumSerializer();
+    _$MosquitoAppearanceRequestLegsEnumSerializer();
 
 class _$MosquitoAppearanceRequestSpecieEnumSerializer
     implements PrimitiveSerializer<MosquitoAppearanceRequestSpecieEnum> {
@@ -453,12 +453,11 @@ class _$MosquitoAppearanceRequest extends MosquitoAppearanceRequest {
 
   factory _$MosquitoAppearanceRequest(
           [void Function(MosquitoAppearanceRequestBuilder)? updates]) =>
-      (new MosquitoAppearanceRequestBuilder()..update(updates))._build();
+      (MosquitoAppearanceRequestBuilder()..update(updates))._build();
 
   _$MosquitoAppearanceRequest._(
       {this.specie, this.thorax, this.abdomen, this.legs})
       : super._();
-
   @override
   MosquitoAppearanceRequest rebuild(
           void Function(MosquitoAppearanceRequestBuilder) updates) =>
@@ -466,7 +465,7 @@ class _$MosquitoAppearanceRequest extends MosquitoAppearanceRequest {
 
   @override
   MosquitoAppearanceRequestBuilder toBuilder() =>
-      new MosquitoAppearanceRequestBuilder()..replace(this);
+      MosquitoAppearanceRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -542,7 +541,6 @@ class MosquitoAppearanceRequestBuilder
 
   @override
   void replace(MosquitoAppearanceRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MosquitoAppearanceRequest;
   }
 
@@ -556,8 +554,12 @@ class MosquitoAppearanceRequestBuilder
 
   _$MosquitoAppearanceRequest _build() {
     final _$result = _$v ??
-        new _$MosquitoAppearanceRequest._(
-            specie: specie, thorax: thorax, abdomen: abdomen, legs: legs);
+        _$MosquitoAppearanceRequest._(
+          specie: specie,
+          thorax: thorax,
+          abdomen: abdomen,
+          legs: legs,
+        );
     replace(_$result);
     return _$result;
   }

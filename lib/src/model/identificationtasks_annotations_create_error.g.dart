@@ -28,7 +28,7 @@ IdentificationtasksAnnotationsCreateErrorAttrEnum
 }
 
 final BuiltSet<IdentificationtasksAnnotationsCreateErrorAttrEnum>
-    _$identificationtasksAnnotationsCreateErrorAttrEnumValues = new BuiltSet<
+    _$identificationtasksAnnotationsCreateErrorAttrEnumValues = BuiltSet<
         IdentificationtasksAnnotationsCreateErrorAttrEnum>(const <IdentificationtasksAnnotationsCreateErrorAttrEnum>[
   _$identificationtasksAnnotationsCreateErrorAttrEnum_tagsPeriodINDEX,
   _$identificationtasksAnnotationsCreateErrorAttrEnum_unknownDefaultOpenApi,
@@ -82,7 +82,7 @@ IdentificationtasksAnnotationsCreateErrorCodeEnum
 }
 
 final BuiltSet<IdentificationtasksAnnotationsCreateErrorCodeEnum>
-    _$identificationtasksAnnotationsCreateErrorCodeEnumValues = new BuiltSet<
+    _$identificationtasksAnnotationsCreateErrorCodeEnumValues = BuiltSet<
         IdentificationtasksAnnotationsCreateErrorCodeEnum>(const <IdentificationtasksAnnotationsCreateErrorCodeEnum>[
   _$identificationtasksAnnotationsCreateErrorCodeEnum_blank,
   _$identificationtasksAnnotationsCreateErrorCodeEnum_invalid,
@@ -95,10 +95,10 @@ final BuiltSet<IdentificationtasksAnnotationsCreateErrorCodeEnum>
 
 Serializer<IdentificationtasksAnnotationsCreateErrorAttrEnum>
     _$identificationtasksAnnotationsCreateErrorAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateErrorAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateErrorAttrEnumSerializer();
 Serializer<IdentificationtasksAnnotationsCreateErrorCodeEnum>
     _$identificationtasksAnnotationsCreateErrorCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateErrorCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateErrorCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateErrorAttrEnumSerializer
     implements
@@ -184,15 +184,11 @@ class _$IdentificationtasksAnnotationsCreateError
   factory _$IdentificationtasksAnnotationsCreateError(
           [void Function(IdentificationtasksAnnotationsCreateErrorBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateErrorBuilder()..update(updates))
+      (IdentificationtasksAnnotationsCreateErrorBuilder()..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateError._({required this.oneOf})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'IdentificationtasksAnnotationsCreateError', 'oneOf');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateError rebuild(
           void Function(IdentificationtasksAnnotationsCreateErrorBuilder)
@@ -201,7 +197,7 @@ class _$IdentificationtasksAnnotationsCreateError
 
   @override
   IdentificationtasksAnnotationsCreateErrorBuilder toBuilder() =>
-      new IdentificationtasksAnnotationsCreateErrorBuilder()..replace(this);
+      IdentificationtasksAnnotationsCreateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -252,7 +248,6 @@ class IdentificationtasksAnnotationsCreateErrorBuilder
 
   @override
   void replace(IdentificationtasksAnnotationsCreateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksAnnotationsCreateError;
   }
 
@@ -268,9 +263,10 @@ class IdentificationtasksAnnotationsCreateErrorBuilder
 
   _$IdentificationtasksAnnotationsCreateError _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IdentificationtasksAnnotationsCreateError', 'oneOf'));
+        _$IdentificationtasksAnnotationsCreateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IdentificationtasksAnnotationsCreateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

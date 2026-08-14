@@ -32,8 +32,8 @@ WorkspaceMembershipRoleEnum _$workspaceMembershipRoleEnumValueOf(String name) {
 }
 
 final BuiltSet<WorkspaceMembershipRoleEnum>
-    _$workspaceMembershipRoleEnumValues = new BuiltSet<
-        WorkspaceMembershipRoleEnum>(const <WorkspaceMembershipRoleEnum>[
+    _$workspaceMembershipRoleEnumValues =
+    BuiltSet<WorkspaceMembershipRoleEnum>(const <WorkspaceMembershipRoleEnum>[
   _$workspaceMembershipRoleEnum_member,
   _$workspaceMembershipRoleEnum_annotator,
   _$workspaceMembershipRoleEnum_supervisor,
@@ -42,7 +42,7 @@ final BuiltSet<WorkspaceMembershipRoleEnum>
 
 Serializer<WorkspaceMembershipRoleEnum>
     _$workspaceMembershipRoleEnumSerializer =
-    new _$WorkspaceMembershipRoleEnumSerializer();
+    _$WorkspaceMembershipRoleEnumSerializer();
 
 class _$WorkspaceMembershipRoleEnumSerializer
     implements PrimitiveSerializer<WorkspaceMembershipRoleEnum> {
@@ -87,16 +87,11 @@ class _$WorkspaceMembership extends WorkspaceMembership {
 
   factory _$WorkspaceMembership(
           [void Function(WorkspaceMembershipBuilder)? updates]) =>
-      (new WorkspaceMembershipBuilder()..update(updates))._build();
+      (WorkspaceMembershipBuilder()..update(updates))._build();
 
   _$WorkspaceMembership._(
       {required this.user, this.role, required this.createdAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(user, r'WorkspaceMembership', 'user');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'WorkspaceMembership', 'createdAt');
-  }
-
+      : super._();
   @override
   WorkspaceMembership rebuild(
           void Function(WorkspaceMembershipBuilder) updates) =>
@@ -104,7 +99,7 @@ class _$WorkspaceMembership extends WorkspaceMembership {
 
   @override
   WorkspaceMembershipBuilder toBuilder() =>
-      new WorkspaceMembershipBuilder()..replace(this);
+      WorkspaceMembershipBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -140,7 +135,7 @@ class WorkspaceMembershipBuilder
   _$WorkspaceMembership? _$v;
 
   SimpleUserBuilder? _user;
-  SimpleUserBuilder get user => _$this._user ??= new SimpleUserBuilder();
+  SimpleUserBuilder get user => _$this._user ??= SimpleUserBuilder();
   set user(SimpleUserBuilder? user) => _$this._user = user;
 
   WorkspaceMembershipRoleEnum? _role;
@@ -168,7 +163,6 @@ class WorkspaceMembershipBuilder
 
   @override
   void replace(WorkspaceMembership other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$WorkspaceMembership;
   }
 
@@ -184,18 +178,19 @@ class WorkspaceMembershipBuilder
     _$WorkspaceMembership _$result;
     try {
       _$result = _$v ??
-          new _$WorkspaceMembership._(
-              user: user.build(),
-              role: role,
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'WorkspaceMembership', 'createdAt'));
+          _$WorkspaceMembership._(
+            user: user.build(),
+            role: role,
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'WorkspaceMembership', 'createdAt'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'user';
         user.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'WorkspaceMembership', _$failedField, e.toString());
       }
       rethrow;

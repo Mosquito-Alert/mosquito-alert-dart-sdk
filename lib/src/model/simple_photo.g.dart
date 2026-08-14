@@ -13,19 +13,15 @@ class _$SimplePhoto extends SimplePhoto {
   final String url;
 
   factory _$SimplePhoto([void Function(SimplePhotoBuilder)? updates]) =>
-      (new SimplePhotoBuilder()..update(updates))._build();
+      (SimplePhotoBuilder()..update(updates))._build();
 
-  _$SimplePhoto._({required this.uuid, required this.url}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'SimplePhoto', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(url, r'SimplePhoto', 'url');
-  }
-
+  _$SimplePhoto._({required this.uuid, required this.url}) : super._();
   @override
   SimplePhoto rebuild(void Function(SimplePhotoBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  SimplePhotoBuilder toBuilder() => new SimplePhotoBuilder()..replace(this);
+  SimplePhotoBuilder toBuilder() => SimplePhotoBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -78,7 +74,6 @@ class SimplePhotoBuilder implements Builder<SimplePhoto, SimplePhotoBuilder> {
 
   @override
   void replace(SimplePhoto other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SimplePhoto;
   }
 
@@ -92,11 +87,12 @@ class SimplePhotoBuilder implements Builder<SimplePhoto, SimplePhotoBuilder> {
 
   _$SimplePhoto _build() {
     final _$result = _$v ??
-        new _$SimplePhoto._(
-            uuid: BuiltValueNullFieldError.checkNotNull(
-                uuid, r'SimplePhoto', 'uuid'),
-            url: BuiltValueNullFieldError.checkNotNull(
-                url, r'SimplePhoto', 'url'));
+        _$SimplePhoto._(
+          uuid: BuiltValueNullFieldError.checkNotNull(
+              uuid, r'SimplePhoto', 'uuid'),
+          url:
+              BuiltValueNullFieldError.checkNotNull(url, r'SimplePhoto', 'url'),
+        );
     replace(_$result);
     return _$result;
   }

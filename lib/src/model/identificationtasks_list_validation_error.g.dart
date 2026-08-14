@@ -27,7 +27,7 @@ IdentificationtasksListValidationErrorTypeEnum
 }
 
 final BuiltSet<IdentificationtasksListValidationErrorTypeEnum>
-    _$identificationtasksListValidationErrorTypeEnumValues = new BuiltSet<
+    _$identificationtasksListValidationErrorTypeEnumValues = BuiltSet<
         IdentificationtasksListValidationErrorTypeEnum>(const <IdentificationtasksListValidationErrorTypeEnum>[
   _$identificationtasksListValidationErrorTypeEnum_validationError,
   _$identificationtasksListValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -35,7 +35,7 @@ final BuiltSet<IdentificationtasksListValidationErrorTypeEnum>
 
 Serializer<IdentificationtasksListValidationErrorTypeEnum>
     _$identificationtasksListValidationErrorTypeEnumSerializer =
-    new _$IdentificationtasksListValidationErrorTypeEnumSerializer();
+    _$IdentificationtasksListValidationErrorTypeEnumSerializer();
 
 class _$IdentificationtasksListValidationErrorTypeEnumSerializer
     implements
@@ -80,18 +80,12 @@ class _$IdentificationtasksListValidationError
   factory _$IdentificationtasksListValidationError(
           [void Function(IdentificationtasksListValidationErrorBuilder)?
               updates]) =>
-      (new IdentificationtasksListValidationErrorBuilder()..update(updates))
+      (IdentificationtasksListValidationErrorBuilder()..update(updates))
           ._build();
 
   _$IdentificationtasksListValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'IdentificationtasksListValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'IdentificationtasksListValidationError', 'errors');
-  }
-
+      : super._();
   @override
   IdentificationtasksListValidationError rebuild(
           void Function(IdentificationtasksListValidationErrorBuilder)
@@ -100,7 +94,7 @@ class _$IdentificationtasksListValidationError
 
   @override
   IdentificationtasksListValidationErrorBuilder toBuilder() =>
-      new IdentificationtasksListValidationErrorBuilder()..replace(this);
+      IdentificationtasksListValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -142,7 +136,7 @@ class IdentificationtasksListValidationErrorBuilder
 
   ListBuilder<IdentificationtasksListError>? _errors;
   ListBuilder<IdentificationtasksListError> get errors =>
-      _$this._errors ??= new ListBuilder<IdentificationtasksListError>();
+      _$this._errors ??= ListBuilder<IdentificationtasksListError>();
   set errors(ListBuilder<IdentificationtasksListError>? errors) =>
       _$this._errors = errors;
 
@@ -162,7 +156,6 @@ class IdentificationtasksListValidationErrorBuilder
 
   @override
   void replace(IdentificationtasksListValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListValidationError;
   }
 
@@ -179,17 +172,18 @@ class IdentificationtasksListValidationErrorBuilder
     _$IdentificationtasksListValidationError _$result;
     try {
       _$result = _$v ??
-          new _$IdentificationtasksListValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'IdentificationtasksListValidationError', 'type'),
-              errors: errors.build());
+          _$IdentificationtasksListValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'IdentificationtasksListValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'IdentificationtasksListValidationError',
             _$failedField,
             e.toString());

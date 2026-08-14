@@ -26,7 +26,7 @@ NotificationsUpdateErrorAttrEnum _$notificationsUpdateErrorAttrEnumValueOf(
 }
 
 final BuiltSet<NotificationsUpdateErrorAttrEnum>
-    _$notificationsUpdateErrorAttrEnumValues = new BuiltSet<
+    _$notificationsUpdateErrorAttrEnumValues = BuiltSet<
         NotificationsUpdateErrorAttrEnum>(const <NotificationsUpdateErrorAttrEnum>[
   _$notificationsUpdateErrorAttrEnum_isRead,
   _$notificationsUpdateErrorAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ NotificationsUpdateErrorCodeEnum _$notificationsUpdateErrorCodeEnumValueOf(
 }
 
 final BuiltSet<NotificationsUpdateErrorCodeEnum>
-    _$notificationsUpdateErrorCodeEnumValues = new BuiltSet<
+    _$notificationsUpdateErrorCodeEnumValues = BuiltSet<
         NotificationsUpdateErrorCodeEnum>(const <NotificationsUpdateErrorCodeEnum>[
   _$notificationsUpdateErrorCodeEnum_invalid,
   _$notificationsUpdateErrorCodeEnum_null_,
@@ -72,10 +72,10 @@ final BuiltSet<NotificationsUpdateErrorCodeEnum>
 
 Serializer<NotificationsUpdateErrorAttrEnum>
     _$notificationsUpdateErrorAttrEnumSerializer =
-    new _$NotificationsUpdateErrorAttrEnumSerializer();
+    _$NotificationsUpdateErrorAttrEnumSerializer();
 Serializer<NotificationsUpdateErrorCodeEnum>
     _$notificationsUpdateErrorCodeEnumSerializer =
-    new _$NotificationsUpdateErrorCodeEnumSerializer();
+    _$NotificationsUpdateErrorCodeEnumSerializer();
 
 class _$NotificationsUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<NotificationsUpdateErrorAttrEnum> {
@@ -147,13 +147,9 @@ class _$NotificationsUpdateError extends NotificationsUpdateError {
 
   factory _$NotificationsUpdateError(
           [void Function(NotificationsUpdateErrorBuilder)? updates]) =>
-      (new NotificationsUpdateErrorBuilder()..update(updates))._build();
+      (NotificationsUpdateErrorBuilder()..update(updates))._build();
 
-  _$NotificationsUpdateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'NotificationsUpdateError', 'oneOf');
-  }
-
+  _$NotificationsUpdateError._({required this.oneOf}) : super._();
   @override
   NotificationsUpdateError rebuild(
           void Function(NotificationsUpdateErrorBuilder) updates) =>
@@ -161,7 +157,7 @@ class _$NotificationsUpdateError extends NotificationsUpdateError {
 
   @override
   NotificationsUpdateErrorBuilder toBuilder() =>
-      new NotificationsUpdateErrorBuilder()..replace(this);
+      NotificationsUpdateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -209,7 +205,6 @@ class NotificationsUpdateErrorBuilder
 
   @override
   void replace(NotificationsUpdateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationsUpdateError;
   }
 
@@ -223,9 +218,10 @@ class NotificationsUpdateErrorBuilder
 
   _$NotificationsUpdateError _build() {
     final _$result = _$v ??
-        new _$NotificationsUpdateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'NotificationsUpdateError', 'oneOf'));
+        _$NotificationsUpdateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'NotificationsUpdateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

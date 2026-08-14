@@ -27,7 +27,7 @@ BreedingsitesListShortIdErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesListShortIdErrorComponentAttrEnum>
-    _$breedingsitesListShortIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesListShortIdErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesListShortIdErrorComponentAttrEnum>(const <BreedingsitesListShortIdErrorComponentAttrEnum>[
   _$breedingsitesListShortIdErrorComponentAttrEnum_shortId,
   _$breedingsitesListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ BreedingsitesListShortIdErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesListShortIdErrorComponentCodeEnum>
-    _$breedingsitesListShortIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesListShortIdErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesListShortIdErrorComponentCodeEnum>(const <BreedingsitesListShortIdErrorComponentCodeEnum>[
   _$breedingsitesListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$breedingsitesListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -63,10 +63,10 @@ final BuiltSet<BreedingsitesListShortIdErrorComponentCodeEnum>
 
 Serializer<BreedingsitesListShortIdErrorComponentAttrEnum>
     _$breedingsitesListShortIdErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesListShortIdErrorComponentAttrEnumSerializer();
+    _$BreedingsitesListShortIdErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesListShortIdErrorComponentCodeEnum>
     _$breedingsitesListShortIdErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesListShortIdErrorComponentCodeEnumSerializer();
+    _$BreedingsitesListShortIdErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesListShortIdErrorComponentAttrEnumSerializer
     implements
@@ -146,20 +146,12 @@ class _$BreedingsitesListShortIdErrorComponent
   factory _$BreedingsitesListShortIdErrorComponent(
           [void Function(BreedingsitesListShortIdErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesListShortIdErrorComponentBuilder()..update(updates))
+      (BreedingsitesListShortIdErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesListShortIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesListShortIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesListShortIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesListShortIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesListShortIdErrorComponent rebuild(
           void Function(BreedingsitesListShortIdErrorComponentBuilder)
@@ -168,7 +160,7 @@ class _$BreedingsitesListShortIdErrorComponent
 
   @override
   BreedingsitesListShortIdErrorComponentBuilder toBuilder() =>
-      new BreedingsitesListShortIdErrorComponentBuilder()..replace(this);
+      BreedingsitesListShortIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -237,7 +229,6 @@ class BreedingsitesListShortIdErrorComponentBuilder
 
   @override
   void replace(BreedingsitesListShortIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesListShortIdErrorComponent;
   }
 
@@ -252,13 +243,14 @@ class BreedingsitesListShortIdErrorComponentBuilder
 
   _$BreedingsitesListShortIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesListShortIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesListShortIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesListShortIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BreedingsitesListShortIdErrorComponent', 'detail'));
+        _$BreedingsitesListShortIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesListShortIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesListShortIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BreedingsitesListShortIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

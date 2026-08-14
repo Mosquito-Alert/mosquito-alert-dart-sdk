@@ -28,14 +28,14 @@ LocationRequestSource_Enum _$locationRequestSourceEnumValueOf(String name) {
 }
 
 final BuiltSet<LocationRequestSource_Enum> _$locationRequestSourceEnumValues =
-    new BuiltSet<LocationRequestSource_Enum>(const <LocationRequestSource_Enum>[
+    BuiltSet<LocationRequestSource_Enum>(const <LocationRequestSource_Enum>[
   _$locationRequestSourceEnum_auto,
   _$locationRequestSourceEnum_manual,
   _$locationRequestSourceEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<LocationRequestSource_Enum> _$locationRequestSourceEnumSerializer =
-    new _$LocationRequestSource_EnumSerializer();
+    _$LocationRequestSource_EnumSerializer();
 
 class _$LocationRequestSource_EnumSerializer
     implements PrimitiveSerializer<LocationRequestSource_Enum> {
@@ -75,22 +75,15 @@ class _$LocationRequest extends LocationRequest {
   final PointRequest point;
 
   factory _$LocationRequest([void Function(LocationRequestBuilder)? updates]) =>
-      (new LocationRequestBuilder()..update(updates))._build();
+      (LocationRequestBuilder()..update(updates))._build();
 
-  _$LocationRequest._({required this.source_, required this.point})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        source_, r'LocationRequest', 'source_');
-    BuiltValueNullFieldError.checkNotNull(point, r'LocationRequest', 'point');
-  }
-
+  _$LocationRequest._({required this.source_, required this.point}) : super._();
   @override
   LocationRequest rebuild(void Function(LocationRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  LocationRequestBuilder toBuilder() =>
-      new LocationRequestBuilder()..replace(this);
+  LocationRequestBuilder toBuilder() => LocationRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -127,7 +120,7 @@ class LocationRequestBuilder
   set source_(LocationRequestSource_Enum? source_) => _$this._source_ = source_;
 
   PointRequestBuilder? _point;
-  PointRequestBuilder get point => _$this._point ??= new PointRequestBuilder();
+  PointRequestBuilder get point => _$this._point ??= PointRequestBuilder();
   set point(PointRequestBuilder? point) => _$this._point = point;
 
   LocationRequestBuilder() {
@@ -146,7 +139,6 @@ class LocationRequestBuilder
 
   @override
   void replace(LocationRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$LocationRequest;
   }
 
@@ -162,17 +154,18 @@ class LocationRequestBuilder
     _$LocationRequest _$result;
     try {
       _$result = _$v ??
-          new _$LocationRequest._(
-              source_: BuiltValueNullFieldError.checkNotNull(
-                  source_, r'LocationRequest', 'source_'),
-              point: point.build());
+          _$LocationRequest._(
+            source_: BuiltValueNullFieldError.checkNotNull(
+                source_, r'LocationRequest', 'source_'),
+            point: point.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'point';
         point.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'LocationRequest', _$failedField, e.toString());
       }
       rethrow;

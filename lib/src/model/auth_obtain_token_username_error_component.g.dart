@@ -27,7 +27,7 @@ AuthObtainTokenUsernameErrorComponentAttrEnum
 }
 
 final BuiltSet<AuthObtainTokenUsernameErrorComponentAttrEnum>
-    _$authObtainTokenUsernameErrorComponentAttrEnumValues = new BuiltSet<
+    _$authObtainTokenUsernameErrorComponentAttrEnumValues = BuiltSet<
         AuthObtainTokenUsernameErrorComponentAttrEnum>(const <AuthObtainTokenUsernameErrorComponentAttrEnum>[
   _$authObtainTokenUsernameErrorComponentAttrEnum_username,
   _$authObtainTokenUsernameErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -81,7 +81,7 @@ AuthObtainTokenUsernameErrorComponentCodeEnum
 }
 
 final BuiltSet<AuthObtainTokenUsernameErrorComponentCodeEnum>
-    _$authObtainTokenUsernameErrorComponentCodeEnumValues = new BuiltSet<
+    _$authObtainTokenUsernameErrorComponentCodeEnumValues = BuiltSet<
         AuthObtainTokenUsernameErrorComponentCodeEnum>(const <AuthObtainTokenUsernameErrorComponentCodeEnum>[
   _$authObtainTokenUsernameErrorComponentCodeEnum_blank,
   _$authObtainTokenUsernameErrorComponentCodeEnum_invalid,
@@ -94,10 +94,10 @@ final BuiltSet<AuthObtainTokenUsernameErrorComponentCodeEnum>
 
 Serializer<AuthObtainTokenUsernameErrorComponentAttrEnum>
     _$authObtainTokenUsernameErrorComponentAttrEnumSerializer =
-    new _$AuthObtainTokenUsernameErrorComponentAttrEnumSerializer();
+    _$AuthObtainTokenUsernameErrorComponentAttrEnumSerializer();
 Serializer<AuthObtainTokenUsernameErrorComponentCodeEnum>
     _$authObtainTokenUsernameErrorComponentCodeEnumSerializer =
-    new _$AuthObtainTokenUsernameErrorComponentCodeEnumSerializer();
+    _$AuthObtainTokenUsernameErrorComponentCodeEnumSerializer();
 
 class _$AuthObtainTokenUsernameErrorComponentAttrEnumSerializer
     implements
@@ -187,20 +187,12 @@ class _$AuthObtainTokenUsernameErrorComponent
   factory _$AuthObtainTokenUsernameErrorComponent(
           [void Function(AuthObtainTokenUsernameErrorComponentBuilder)?
               updates]) =>
-      (new AuthObtainTokenUsernameErrorComponentBuilder()..update(updates))
+      (AuthObtainTokenUsernameErrorComponentBuilder()..update(updates))
           ._build();
 
   _$AuthObtainTokenUsernameErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'AuthObtainTokenUsernameErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'AuthObtainTokenUsernameErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'AuthObtainTokenUsernameErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   AuthObtainTokenUsernameErrorComponent rebuild(
           void Function(AuthObtainTokenUsernameErrorComponentBuilder)
@@ -209,7 +201,7 @@ class _$AuthObtainTokenUsernameErrorComponent
 
   @override
   AuthObtainTokenUsernameErrorComponentBuilder toBuilder() =>
-      new AuthObtainTokenUsernameErrorComponentBuilder()..replace(this);
+      AuthObtainTokenUsernameErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -278,7 +270,6 @@ class AuthObtainTokenUsernameErrorComponentBuilder
 
   @override
   void replace(AuthObtainTokenUsernameErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthObtainTokenUsernameErrorComponent;
   }
 
@@ -293,13 +284,14 @@ class AuthObtainTokenUsernameErrorComponentBuilder
 
   _$AuthObtainTokenUsernameErrorComponent _build() {
     final _$result = _$v ??
-        new _$AuthObtainTokenUsernameErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'AuthObtainTokenUsernameErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AuthObtainTokenUsernameErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'AuthObtainTokenUsernameErrorComponent', 'detail'));
+        _$AuthObtainTokenUsernameErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'AuthObtainTokenUsernameErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AuthObtainTokenUsernameErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'AuthObtainTokenUsernameErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

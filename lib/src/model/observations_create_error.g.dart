@@ -26,7 +26,7 @@ ObservationsCreateErrorAttrEnum _$observationsCreateErrorAttrEnumValueOf(
 }
 
 final BuiltSet<ObservationsCreateErrorAttrEnum>
-    _$observationsCreateErrorAttrEnumValues = new BuiltSet<
+    _$observationsCreateErrorAttrEnumValues = BuiltSet<
         ObservationsCreateErrorAttrEnum>(const <ObservationsCreateErrorAttrEnum>[
   _$observationsCreateErrorAttrEnum_mosquitoAppearancePeriodLegs,
   _$observationsCreateErrorAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ ObservationsCreateErrorCodeEnum _$observationsCreateErrorCodeEnumValueOf(
 }
 
 final BuiltSet<ObservationsCreateErrorCodeEnum>
-    _$observationsCreateErrorCodeEnumValues = new BuiltSet<
+    _$observationsCreateErrorCodeEnumValues = BuiltSet<
         ObservationsCreateErrorCodeEnum>(const <ObservationsCreateErrorCodeEnum>[
   _$observationsCreateErrorCodeEnum_invalidChoice,
   _$observationsCreateErrorCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<ObservationsCreateErrorCodeEnum>
 
 Serializer<ObservationsCreateErrorAttrEnum>
     _$observationsCreateErrorAttrEnumSerializer =
-    new _$ObservationsCreateErrorAttrEnumSerializer();
+    _$ObservationsCreateErrorAttrEnumSerializer();
 Serializer<ObservationsCreateErrorCodeEnum>
     _$observationsCreateErrorCodeEnumSerializer =
-    new _$ObservationsCreateErrorCodeEnumSerializer();
+    _$ObservationsCreateErrorCodeEnumSerializer();
 
 class _$ObservationsCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<ObservationsCreateErrorAttrEnum> {
@@ -131,13 +131,9 @@ class _$ObservationsCreateError extends ObservationsCreateError {
 
   factory _$ObservationsCreateError(
           [void Function(ObservationsCreateErrorBuilder)? updates]) =>
-      (new ObservationsCreateErrorBuilder()..update(updates))._build();
+      (ObservationsCreateErrorBuilder()..update(updates))._build();
 
-  _$ObservationsCreateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'ObservationsCreateError', 'oneOf');
-  }
-
+  _$ObservationsCreateError._({required this.oneOf}) : super._();
   @override
   ObservationsCreateError rebuild(
           void Function(ObservationsCreateErrorBuilder) updates) =>
@@ -145,7 +141,7 @@ class _$ObservationsCreateError extends ObservationsCreateError {
 
   @override
   ObservationsCreateErrorBuilder toBuilder() =>
-      new ObservationsCreateErrorBuilder()..replace(this);
+      ObservationsCreateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -193,7 +189,6 @@ class ObservationsCreateErrorBuilder
 
   @override
   void replace(ObservationsCreateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateError;
   }
 
@@ -207,9 +202,10 @@ class ObservationsCreateErrorBuilder
 
   _$ObservationsCreateError _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'ObservationsCreateError', 'oneOf'));
+        _$ObservationsCreateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'ObservationsCreateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnum_feedbackPeriodInternalNote,
   _$identificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent rebuild(
           void Function(
@@ -217,7 +203,7 @@ class _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent
   @override
   IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -301,7 +287,6 @@ class IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentBuil
   void replace(
       IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent;
   }
@@ -321,20 +306,21 @@ class IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentBuil
   _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent
+        _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

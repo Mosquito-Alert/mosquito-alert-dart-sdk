@@ -26,7 +26,7 @@ BitesListMineValidationErrorTypeEnum
 }
 
 final BuiltSet<BitesListMineValidationErrorTypeEnum>
-    _$bitesListMineValidationErrorTypeEnumValues = new BuiltSet<
+    _$bitesListMineValidationErrorTypeEnumValues = BuiltSet<
         BitesListMineValidationErrorTypeEnum>(const <BitesListMineValidationErrorTypeEnum>[
   _$bitesListMineValidationErrorTypeEnum_validationError,
   _$bitesListMineValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<BitesListMineValidationErrorTypeEnum>
 
 Serializer<BitesListMineValidationErrorTypeEnum>
     _$bitesListMineValidationErrorTypeEnumSerializer =
-    new _$BitesListMineValidationErrorTypeEnumSerializer();
+    _$BitesListMineValidationErrorTypeEnumSerializer();
 
 class _$BitesListMineValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<BitesListMineValidationErrorTypeEnum> {
@@ -76,16 +76,10 @@ class _$BitesListMineValidationError extends BitesListMineValidationError {
 
   factory _$BitesListMineValidationError(
           [void Function(BitesListMineValidationErrorBuilder)? updates]) =>
-      (new BitesListMineValidationErrorBuilder()..update(updates))._build();
+      (BitesListMineValidationErrorBuilder()..update(updates))._build();
 
   _$BitesListMineValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'BitesListMineValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'BitesListMineValidationError', 'errors');
-  }
-
+      : super._();
   @override
   BitesListMineValidationError rebuild(
           void Function(BitesListMineValidationErrorBuilder) updates) =>
@@ -93,7 +87,7 @@ class _$BitesListMineValidationError extends BitesListMineValidationError {
 
   @override
   BitesListMineValidationErrorBuilder toBuilder() =>
-      new BitesListMineValidationErrorBuilder()..replace(this);
+      BitesListMineValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -133,7 +127,7 @@ class BitesListMineValidationErrorBuilder
 
   ListBuilder<BitesListMineError>? _errors;
   ListBuilder<BitesListMineError> get errors =>
-      _$this._errors ??= new ListBuilder<BitesListMineError>();
+      _$this._errors ??= ListBuilder<BitesListMineError>();
   set errors(ListBuilder<BitesListMineError>? errors) =>
       _$this._errors = errors;
 
@@ -153,7 +147,6 @@ class BitesListMineValidationErrorBuilder
 
   @override
   void replace(BitesListMineValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListMineValidationError;
   }
 
@@ -169,17 +162,18 @@ class BitesListMineValidationErrorBuilder
     _$BitesListMineValidationError _$result;
     try {
       _$result = _$v ??
-          new _$BitesListMineValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'BitesListMineValidationError', 'type'),
-              errors: errors.build());
+          _$BitesListMineValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'BitesListMineValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BitesListMineValidationError', _$failedField, e.toString());
       }
       rethrow;

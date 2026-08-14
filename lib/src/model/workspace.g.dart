@@ -23,7 +23,7 @@ class _$Workspace extends Workspace {
   final DateTime updatedAt;
 
   factory _$Workspace([void Function(WorkspaceBuilder)? updates]) =>
-      (new WorkspaceBuilder()..update(updates))._build();
+      (WorkspaceBuilder()..update(updates))._build();
 
   _$Workspace._(
       {required this.id,
@@ -33,19 +33,13 @@ class _$Workspace extends Workspace {
       this.isPublic,
       this.supervisorExclusivityDays,
       required this.updatedAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'Workspace', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        memberships, r'Workspace', 'memberships');
-    BuiltValueNullFieldError.checkNotNull(updatedAt, r'Workspace', 'updatedAt');
-  }
-
+      : super._();
   @override
   Workspace rebuild(void Function(WorkspaceBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  WorkspaceBuilder toBuilder() => new WorkspaceBuilder()..replace(this);
+  WorkspaceBuilder toBuilder() => WorkspaceBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -100,12 +94,12 @@ class WorkspaceBuilder implements Builder<Workspace, WorkspaceBuilder> {
   set nameValue(String? nameValue) => _$this._nameValue = nameValue;
 
   CountryBuilder? _country;
-  CountryBuilder get country => _$this._country ??= new CountryBuilder();
+  CountryBuilder get country => _$this._country ??= CountryBuilder();
   set country(CountryBuilder? country) => _$this._country = country;
 
   ListBuilder<WorkspaceMembership>? _memberships;
   ListBuilder<WorkspaceMembership> get memberships =>
-      _$this._memberships ??= new ListBuilder<WorkspaceMembership>();
+      _$this._memberships ??= ListBuilder<WorkspaceMembership>();
   set memberships(ListBuilder<WorkspaceMembership>? memberships) =>
       _$this._memberships = memberships;
 
@@ -143,7 +137,6 @@ class WorkspaceBuilder implements Builder<Workspace, WorkspaceBuilder> {
 
   @override
   void replace(Workspace other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Workspace;
   }
 
@@ -159,15 +152,16 @@ class WorkspaceBuilder implements Builder<Workspace, WorkspaceBuilder> {
     _$Workspace _$result;
     try {
       _$result = _$v ??
-          new _$Workspace._(
-              id: BuiltValueNullFieldError.checkNotNull(id, r'Workspace', 'id'),
-              nameValue: nameValue,
-              country: _country?.build(),
-              memberships: memberships.build(),
-              isPublic: isPublic,
-              supervisorExclusivityDays: supervisorExclusivityDays,
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'Workspace', 'updatedAt'));
+          _$Workspace._(
+            id: BuiltValueNullFieldError.checkNotNull(id, r'Workspace', 'id'),
+            nameValue: nameValue,
+            country: _country?.build(),
+            memberships: memberships.build(),
+            isPublic: isPublic,
+            supervisorExclusivityDays: supervisorExclusivityDays,
+            updatedAt: BuiltValueNullFieldError.checkNotNull(
+                updatedAt, r'Workspace', 'updatedAt'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -176,7 +170,7 @@ class WorkspaceBuilder implements Builder<Workspace, WorkspaceBuilder> {
         _$failedField = 'memberships';
         memberships.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'Workspace', _$failedField, e.toString());
       }
       rethrow;

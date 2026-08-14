@@ -14,10 +14,9 @@ class _$ObservationFlagsRequest extends ObservationFlagsRequest {
 
   factory _$ObservationFlagsRequest(
           [void Function(ObservationFlagsRequestBuilder)? updates]) =>
-      (new ObservationFlagsRequestBuilder()..update(updates))._build();
+      (ObservationFlagsRequestBuilder()..update(updates))._build();
 
   _$ObservationFlagsRequest._({this.isFavourite, this.isVisible}) : super._();
-
   @override
   ObservationFlagsRequest rebuild(
           void Function(ObservationFlagsRequestBuilder) updates) =>
@@ -25,7 +24,7 @@ class _$ObservationFlagsRequest extends ObservationFlagsRequest {
 
   @override
   ObservationFlagsRequestBuilder toBuilder() =>
-      new ObservationFlagsRequestBuilder()..replace(this);
+      ObservationFlagsRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -82,7 +81,6 @@ class ObservationFlagsRequestBuilder
 
   @override
   void replace(ObservationFlagsRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationFlagsRequest;
   }
 
@@ -96,8 +94,10 @@ class ObservationFlagsRequestBuilder
 
   _$ObservationFlagsRequest _build() {
     final _$result = _$v ??
-        new _$ObservationFlagsRequest._(
-            isFavourite: isFavourite, isVisible: isVisible);
+        _$ObservationFlagsRequest._(
+          isFavourite: isFavourite,
+          isVisible: isVisible,
+        );
     replace(_$result);
     return _$result;
   }

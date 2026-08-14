@@ -27,7 +27,7 @@ DevicesCreateManufacturerErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesCreateManufacturerErrorComponentAttrEnum>
-    _$devicesCreateManufacturerErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesCreateManufacturerErrorComponentAttrEnumValues = BuiltSet<
         DevicesCreateManufacturerErrorComponentAttrEnum>(const <DevicesCreateManufacturerErrorComponentAttrEnum>[
   _$devicesCreateManufacturerErrorComponentAttrEnum_manufacturer,
   _$devicesCreateManufacturerErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -71,7 +71,7 @@ DevicesCreateManufacturerErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesCreateManufacturerErrorComponentCodeEnum>
-    _$devicesCreateManufacturerErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesCreateManufacturerErrorComponentCodeEnumValues = BuiltSet<
         DevicesCreateManufacturerErrorComponentCodeEnum>(const <DevicesCreateManufacturerErrorComponentCodeEnum>[
   _$devicesCreateManufacturerErrorComponentCodeEnum_invalid,
   _$devicesCreateManufacturerErrorComponentCodeEnum_maxLength,
@@ -82,10 +82,10 @@ final BuiltSet<DevicesCreateManufacturerErrorComponentCodeEnum>
 
 Serializer<DevicesCreateManufacturerErrorComponentAttrEnum>
     _$devicesCreateManufacturerErrorComponentAttrEnumSerializer =
-    new _$DevicesCreateManufacturerErrorComponentAttrEnumSerializer();
+    _$DevicesCreateManufacturerErrorComponentAttrEnumSerializer();
 Serializer<DevicesCreateManufacturerErrorComponentCodeEnum>
     _$devicesCreateManufacturerErrorComponentCodeEnumSerializer =
-    new _$DevicesCreateManufacturerErrorComponentCodeEnumSerializer();
+    _$DevicesCreateManufacturerErrorComponentCodeEnumSerializer();
 
 class _$DevicesCreateManufacturerErrorComponentAttrEnumSerializer
     implements
@@ -171,20 +171,12 @@ class _$DevicesCreateManufacturerErrorComponent
   factory _$DevicesCreateManufacturerErrorComponent(
           [void Function(DevicesCreateManufacturerErrorComponentBuilder)?
               updates]) =>
-      (new DevicesCreateManufacturerErrorComponentBuilder()..update(updates))
+      (DevicesCreateManufacturerErrorComponentBuilder()..update(updates))
           ._build();
 
   _$DevicesCreateManufacturerErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesCreateManufacturerErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesCreateManufacturerErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesCreateManufacturerErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesCreateManufacturerErrorComponent rebuild(
           void Function(DevicesCreateManufacturerErrorComponentBuilder)
@@ -193,7 +185,7 @@ class _$DevicesCreateManufacturerErrorComponent
 
   @override
   DevicesCreateManufacturerErrorComponentBuilder toBuilder() =>
-      new DevicesCreateManufacturerErrorComponentBuilder()..replace(this);
+      DevicesCreateManufacturerErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -262,7 +254,6 @@ class DevicesCreateManufacturerErrorComponentBuilder
 
   @override
   void replace(DevicesCreateManufacturerErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesCreateManufacturerErrorComponent;
   }
 
@@ -277,13 +268,14 @@ class DevicesCreateManufacturerErrorComponentBuilder
 
   _$DevicesCreateManufacturerErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesCreateManufacturerErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesCreateManufacturerErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesCreateManufacturerErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesCreateManufacturerErrorComponent', 'detail'));
+        _$DevicesCreateManufacturerErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesCreateManufacturerErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesCreateManufacturerErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesCreateManufacturerErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

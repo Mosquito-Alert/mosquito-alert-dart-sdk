@@ -27,7 +27,7 @@ MessagesListMineSentValidationErrorTypeEnum
 }
 
 final BuiltSet<MessagesListMineSentValidationErrorTypeEnum>
-    _$messagesListMineSentValidationErrorTypeEnumValues = new BuiltSet<
+    _$messagesListMineSentValidationErrorTypeEnumValues = BuiltSet<
         MessagesListMineSentValidationErrorTypeEnum>(const <MessagesListMineSentValidationErrorTypeEnum>[
   _$messagesListMineSentValidationErrorTypeEnum_validationError,
   _$messagesListMineSentValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -35,7 +35,7 @@ final BuiltSet<MessagesListMineSentValidationErrorTypeEnum>
 
 Serializer<MessagesListMineSentValidationErrorTypeEnum>
     _$messagesListMineSentValidationErrorTypeEnumSerializer =
-    new _$MessagesListMineSentValidationErrorTypeEnumSerializer();
+    _$MessagesListMineSentValidationErrorTypeEnumSerializer();
 
 class _$MessagesListMineSentValidationErrorTypeEnumSerializer
     implements
@@ -80,18 +80,11 @@ class _$MessagesListMineSentValidationError
   factory _$MessagesListMineSentValidationError(
           [void Function(MessagesListMineSentValidationErrorBuilder)?
               updates]) =>
-      (new MessagesListMineSentValidationErrorBuilder()..update(updates))
-          ._build();
+      (MessagesListMineSentValidationErrorBuilder()..update(updates))._build();
 
   _$MessagesListMineSentValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'MessagesListMineSentValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'MessagesListMineSentValidationError', 'errors');
-  }
-
+      : super._();
   @override
   MessagesListMineSentValidationError rebuild(
           void Function(MessagesListMineSentValidationErrorBuilder) updates) =>
@@ -99,7 +92,7 @@ class _$MessagesListMineSentValidationError
 
   @override
   MessagesListMineSentValidationErrorBuilder toBuilder() =>
-      new MessagesListMineSentValidationErrorBuilder()..replace(this);
+      MessagesListMineSentValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -140,7 +133,7 @@ class MessagesListMineSentValidationErrorBuilder
 
   ListBuilder<MessagesListMineSentError>? _errors;
   ListBuilder<MessagesListMineSentError> get errors =>
-      _$this._errors ??= new ListBuilder<MessagesListMineSentError>();
+      _$this._errors ??= ListBuilder<MessagesListMineSentError>();
   set errors(ListBuilder<MessagesListMineSentError>? errors) =>
       _$this._errors = errors;
 
@@ -160,7 +153,6 @@ class MessagesListMineSentValidationErrorBuilder
 
   @override
   void replace(MessagesListMineSentValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesListMineSentValidationError;
   }
 
@@ -177,20 +169,19 @@ class MessagesListMineSentValidationErrorBuilder
     _$MessagesListMineSentValidationError _$result;
     try {
       _$result = _$v ??
-          new _$MessagesListMineSentValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'MessagesListMineSentValidationError', 'type'),
-              errors: errors.build());
+          _$MessagesListMineSentValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'MessagesListMineSentValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'MessagesListMineSentValidationError',
-            _$failedField,
-            e.toString());
+        throw BuiltValueNestedFieldError(r'MessagesListMineSentValidationError',
+            _$failedField, e.toString());
       }
       rethrow;
     }

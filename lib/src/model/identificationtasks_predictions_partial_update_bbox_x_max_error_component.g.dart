@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnum_bboxPeriodXMax,
   _$identificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent
   @override
   IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -327,7 +313,6 @@ class IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent;
   }
@@ -346,20 +331,20 @@ class IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponentBuilder
 
   _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateBboxXMaxErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

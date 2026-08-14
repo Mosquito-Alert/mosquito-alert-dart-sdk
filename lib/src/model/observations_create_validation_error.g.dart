@@ -26,7 +26,7 @@ ObservationsCreateValidationErrorTypeEnum
 }
 
 final BuiltSet<ObservationsCreateValidationErrorTypeEnum>
-    _$observationsCreateValidationErrorTypeEnumValues = new BuiltSet<
+    _$observationsCreateValidationErrorTypeEnumValues = BuiltSet<
         ObservationsCreateValidationErrorTypeEnum>(const <ObservationsCreateValidationErrorTypeEnum>[
   _$observationsCreateValidationErrorTypeEnum_validationError,
   _$observationsCreateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<ObservationsCreateValidationErrorTypeEnum>
 
 Serializer<ObservationsCreateValidationErrorTypeEnum>
     _$observationsCreateValidationErrorTypeEnumSerializer =
-    new _$ObservationsCreateValidationErrorTypeEnumSerializer();
+    _$ObservationsCreateValidationErrorTypeEnumSerializer();
 
 class _$ObservationsCreateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<ObservationsCreateValidationErrorTypeEnum> {
@@ -77,18 +77,11 @@ class _$ObservationsCreateValidationError
 
   factory _$ObservationsCreateValidationError(
           [void Function(ObservationsCreateValidationErrorBuilder)? updates]) =>
-      (new ObservationsCreateValidationErrorBuilder()..update(updates))
-          ._build();
+      (ObservationsCreateValidationErrorBuilder()..update(updates))._build();
 
   _$ObservationsCreateValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'ObservationsCreateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'ObservationsCreateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   ObservationsCreateValidationError rebuild(
           void Function(ObservationsCreateValidationErrorBuilder) updates) =>
@@ -96,7 +89,7 @@ class _$ObservationsCreateValidationError
 
   @override
   ObservationsCreateValidationErrorBuilder toBuilder() =>
-      new ObservationsCreateValidationErrorBuilder()..replace(this);
+      ObservationsCreateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -137,7 +130,7 @@ class ObservationsCreateValidationErrorBuilder
 
   ListBuilder<ObservationsCreateError>? _errors;
   ListBuilder<ObservationsCreateError> get errors =>
-      _$this._errors ??= new ListBuilder<ObservationsCreateError>();
+      _$this._errors ??= ListBuilder<ObservationsCreateError>();
   set errors(ListBuilder<ObservationsCreateError>? errors) =>
       _$this._errors = errors;
 
@@ -157,7 +150,6 @@ class ObservationsCreateValidationErrorBuilder
 
   @override
   void replace(ObservationsCreateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateValidationError;
   }
 
@@ -174,17 +166,18 @@ class ObservationsCreateValidationErrorBuilder
     _$ObservationsCreateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$ObservationsCreateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'ObservationsCreateValidationError', 'type'),
-              errors: errors.build());
+          _$ObservationsCreateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'ObservationsCreateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'ObservationsCreateValidationError', _$failedField, e.toString());
       }
       rethrow;

@@ -26,7 +26,7 @@ BreedingSiteGeoJsonModelTypeEnum _$breedingSiteGeoJsonModelTypeEnumValueOf(
 }
 
 final BuiltSet<BreedingSiteGeoJsonModelTypeEnum>
-    _$breedingSiteGeoJsonModelTypeEnumValues = new BuiltSet<
+    _$breedingSiteGeoJsonModelTypeEnumValues = BuiltSet<
         BreedingSiteGeoJsonModelTypeEnum>(const <BreedingSiteGeoJsonModelTypeEnum>[
   _$breedingSiteGeoJsonModelTypeEnum_feature,
   _$breedingSiteGeoJsonModelTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<BreedingSiteGeoJsonModelTypeEnum>
 
 Serializer<BreedingSiteGeoJsonModelTypeEnum>
     _$breedingSiteGeoJsonModelTypeEnumSerializer =
-    new _$BreedingSiteGeoJsonModelTypeEnumSerializer();
+    _$BreedingSiteGeoJsonModelTypeEnumSerializer();
 
 class _$BreedingSiteGeoJsonModelTypeEnumSerializer
     implements PrimitiveSerializer<BreedingSiteGeoJsonModelTypeEnum> {
@@ -76,11 +76,10 @@ class _$BreedingSiteGeoJsonModel extends BreedingSiteGeoJsonModel {
 
   factory _$BreedingSiteGeoJsonModel(
           [void Function(BreedingSiteGeoJsonModelBuilder)? updates]) =>
-      (new BreedingSiteGeoJsonModelBuilder()..update(updates))._build();
+      (BreedingSiteGeoJsonModelBuilder()..update(updates))._build();
 
   _$BreedingSiteGeoJsonModel._({this.type, this.geometry, this.properties})
       : super._();
-
   @override
   BreedingSiteGeoJsonModel rebuild(
           void Function(BreedingSiteGeoJsonModelBuilder) updates) =>
@@ -88,7 +87,7 @@ class _$BreedingSiteGeoJsonModel extends BreedingSiteGeoJsonModel {
 
   @override
   BreedingSiteGeoJsonModelBuilder toBuilder() =>
-      new BreedingSiteGeoJsonModelBuilder()..replace(this);
+      BreedingSiteGeoJsonModelBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -130,13 +129,13 @@ class BreedingSiteGeoJsonModelBuilder
 
   BiteGeoJsonModelGeometryBuilder? _geometry;
   BiteGeoJsonModelGeometryBuilder get geometry =>
-      _$this._geometry ??= new BiteGeoJsonModelGeometryBuilder();
+      _$this._geometry ??= BiteGeoJsonModelGeometryBuilder();
   set geometry(BiteGeoJsonModelGeometryBuilder? geometry) =>
       _$this._geometry = geometry;
 
   BreedingSiteGeoJsonModelPropertiesBuilder? _properties;
   BreedingSiteGeoJsonModelPropertiesBuilder get properties =>
-      _$this._properties ??= new BreedingSiteGeoJsonModelPropertiesBuilder();
+      _$this._properties ??= BreedingSiteGeoJsonModelPropertiesBuilder();
   set properties(BreedingSiteGeoJsonModelPropertiesBuilder? properties) =>
       _$this._properties = properties;
 
@@ -157,7 +156,6 @@ class BreedingSiteGeoJsonModelBuilder
 
   @override
   void replace(BreedingSiteGeoJsonModel other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingSiteGeoJsonModel;
   }
 
@@ -173,10 +171,11 @@ class BreedingSiteGeoJsonModelBuilder
     _$BreedingSiteGeoJsonModel _$result;
     try {
       _$result = _$v ??
-          new _$BreedingSiteGeoJsonModel._(
-              type: type,
-              geometry: _geometry?.build(),
-              properties: _properties?.build());
+          _$BreedingSiteGeoJsonModel._(
+            type: type,
+            geometry: _geometry?.build(),
+            properties: _properties?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -185,7 +184,7 @@ class BreedingSiteGeoJsonModelBuilder
         _$failedField = 'properties';
         _properties?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BreedingSiteGeoJsonModel', _$failedField, e.toString());
       }
       rethrow;

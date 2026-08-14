@@ -218,8 +218,9 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
         case r'mobile_app':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(MobileApp),
-          ) as MobileApp;
+            specifiedType: const FullType.nullable(MobileApp),
+          ) as MobileApp?;
+          if (valueDes == null) continue;
           result.mobileApp.replace(valueDes);
           break;
         case r'user_uuid':

@@ -26,7 +26,7 @@ MessagesListValidationErrorTypeEnum
 }
 
 final BuiltSet<MessagesListValidationErrorTypeEnum>
-    _$messagesListValidationErrorTypeEnumValues = new BuiltSet<
+    _$messagesListValidationErrorTypeEnumValues = BuiltSet<
         MessagesListValidationErrorTypeEnum>(const <MessagesListValidationErrorTypeEnum>[
   _$messagesListValidationErrorTypeEnum_validationError,
   _$messagesListValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<MessagesListValidationErrorTypeEnum>
 
 Serializer<MessagesListValidationErrorTypeEnum>
     _$messagesListValidationErrorTypeEnumSerializer =
-    new _$MessagesListValidationErrorTypeEnumSerializer();
+    _$MessagesListValidationErrorTypeEnumSerializer();
 
 class _$MessagesListValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<MessagesListValidationErrorTypeEnum> {
@@ -76,16 +76,10 @@ class _$MessagesListValidationError extends MessagesListValidationError {
 
   factory _$MessagesListValidationError(
           [void Function(MessagesListValidationErrorBuilder)? updates]) =>
-      (new MessagesListValidationErrorBuilder()..update(updates))._build();
+      (MessagesListValidationErrorBuilder()..update(updates))._build();
 
   _$MessagesListValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'MessagesListValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'MessagesListValidationError', 'errors');
-  }
-
+      : super._();
   @override
   MessagesListValidationError rebuild(
           void Function(MessagesListValidationErrorBuilder) updates) =>
@@ -93,7 +87,7 @@ class _$MessagesListValidationError extends MessagesListValidationError {
 
   @override
   MessagesListValidationErrorBuilder toBuilder() =>
-      new MessagesListValidationErrorBuilder()..replace(this);
+      MessagesListValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -133,7 +127,7 @@ class MessagesListValidationErrorBuilder
 
   ListBuilder<MessagesListError>? _errors;
   ListBuilder<MessagesListError> get errors =>
-      _$this._errors ??= new ListBuilder<MessagesListError>();
+      _$this._errors ??= ListBuilder<MessagesListError>();
   set errors(ListBuilder<MessagesListError>? errors) => _$this._errors = errors;
 
   MessagesListValidationErrorBuilder() {
@@ -152,7 +146,6 @@ class MessagesListValidationErrorBuilder
 
   @override
   void replace(MessagesListValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesListValidationError;
   }
 
@@ -168,17 +161,18 @@ class MessagesListValidationErrorBuilder
     _$MessagesListValidationError _$result;
     try {
       _$result = _$v ??
-          new _$MessagesListValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'MessagesListValidationError', 'type'),
-              errors: errors.build());
+          _$MessagesListValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'MessagesListValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'MessagesListValidationError', _$failedField, e.toString());
       }
       rethrow;

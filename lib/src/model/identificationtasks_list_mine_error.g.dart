@@ -26,7 +26,7 @@ IdentificationtasksListMineErrorAttrEnum
 }
 
 final BuiltSet<IdentificationtasksListMineErrorAttrEnum>
-    _$identificationtasksListMineErrorAttrEnumValues = new BuiltSet<
+    _$identificationtasksListMineErrorAttrEnumValues = BuiltSet<
         IdentificationtasksListMineErrorAttrEnum>(const <IdentificationtasksListMineErrorAttrEnum>[
   _$identificationtasksListMineErrorAttrEnum_reviewAction,
   _$identificationtasksListMineErrorAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ IdentificationtasksListMineErrorCodeEnum
 }
 
 final BuiltSet<IdentificationtasksListMineErrorCodeEnum>
-    _$identificationtasksListMineErrorCodeEnumValues = new BuiltSet<
+    _$identificationtasksListMineErrorCodeEnumValues = BuiltSet<
         IdentificationtasksListMineErrorCodeEnum>(const <IdentificationtasksListMineErrorCodeEnum>[
   _$identificationtasksListMineErrorCodeEnum_invalidChoice,
   _$identificationtasksListMineErrorCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<IdentificationtasksListMineErrorCodeEnum>
 
 Serializer<IdentificationtasksListMineErrorAttrEnum>
     _$identificationtasksListMineErrorAttrEnumSerializer =
-    new _$IdentificationtasksListMineErrorAttrEnumSerializer();
+    _$IdentificationtasksListMineErrorAttrEnumSerializer();
 Serializer<IdentificationtasksListMineErrorCodeEnum>
     _$identificationtasksListMineErrorCodeEnumSerializer =
-    new _$IdentificationtasksListMineErrorCodeEnumSerializer();
+    _$IdentificationtasksListMineErrorCodeEnumSerializer();
 
 class _$IdentificationtasksListMineErrorAttrEnumSerializer
     implements PrimitiveSerializer<IdentificationtasksListMineErrorAttrEnum> {
@@ -136,13 +136,9 @@ class _$IdentificationtasksListMineError
 
   factory _$IdentificationtasksListMineError(
           [void Function(IdentificationtasksListMineErrorBuilder)? updates]) =>
-      (new IdentificationtasksListMineErrorBuilder()..update(updates))._build();
+      (IdentificationtasksListMineErrorBuilder()..update(updates))._build();
 
-  _$IdentificationtasksListMineError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'IdentificationtasksListMineError', 'oneOf');
-  }
-
+  _$IdentificationtasksListMineError._({required this.oneOf}) : super._();
   @override
   IdentificationtasksListMineError rebuild(
           void Function(IdentificationtasksListMineErrorBuilder) updates) =>
@@ -150,7 +146,7 @@ class _$IdentificationtasksListMineError
 
   @override
   IdentificationtasksListMineErrorBuilder toBuilder() =>
-      new IdentificationtasksListMineErrorBuilder()..replace(this);
+      IdentificationtasksListMineErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -199,7 +195,6 @@ class IdentificationtasksListMineErrorBuilder
 
   @override
   void replace(IdentificationtasksListMineError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListMineError;
   }
 
@@ -213,9 +208,10 @@ class IdentificationtasksListMineErrorBuilder
 
   _$IdentificationtasksListMineError _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListMineError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'IdentificationtasksListMineError', 'oneOf'));
+        _$IdentificationtasksListMineError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'IdentificationtasksListMineError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

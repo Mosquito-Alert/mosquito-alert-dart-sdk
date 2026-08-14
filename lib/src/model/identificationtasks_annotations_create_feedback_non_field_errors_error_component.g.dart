@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnum_feedbackPeriodNonFieldErrors,
   _$identificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -208,7 +194,7 @@ class _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent
   @override
   IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -293,7 +279,6 @@ class IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentBu
   void replace(
       IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent;
   }
@@ -313,20 +298,21 @@ class IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentBu
   _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent
+        _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

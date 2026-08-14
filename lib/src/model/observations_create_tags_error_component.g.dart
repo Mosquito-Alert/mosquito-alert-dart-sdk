@@ -27,7 +27,7 @@ ObservationsCreateTagsErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsCreateTagsErrorComponentAttrEnum>
-    _$observationsCreateTagsErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsCreateTagsErrorComponentAttrEnumValues = BuiltSet<
         ObservationsCreateTagsErrorComponentAttrEnum>(const <ObservationsCreateTagsErrorComponentAttrEnum>[
   _$observationsCreateTagsErrorComponentAttrEnum_tags,
   _$observationsCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -69,7 +69,7 @@ ObservationsCreateTagsErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsCreateTagsErrorComponentCodeEnum>
-    _$observationsCreateTagsErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsCreateTagsErrorComponentCodeEnumValues = BuiltSet<
         ObservationsCreateTagsErrorComponentCodeEnum>(const <ObservationsCreateTagsErrorComponentCodeEnum>[
   _$observationsCreateTagsErrorComponentCodeEnum_invalidJson,
   _$observationsCreateTagsErrorComponentCodeEnum_notAList,
@@ -80,10 +80,10 @@ final BuiltSet<ObservationsCreateTagsErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateTagsErrorComponentAttrEnum>
     _$observationsCreateTagsErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateTagsErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateTagsErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateTagsErrorComponentCodeEnum>
     _$observationsCreateTagsErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateTagsErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateTagsErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateTagsErrorComponentAttrEnumSerializer
     implements
@@ -169,20 +169,11 @@ class _$ObservationsCreateTagsErrorComponent
   factory _$ObservationsCreateTagsErrorComponent(
           [void Function(ObservationsCreateTagsErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateTagsErrorComponentBuilder()..update(updates))
-          ._build();
+      (ObservationsCreateTagsErrorComponentBuilder()..update(updates))._build();
 
   _$ObservationsCreateTagsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsCreateTagsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsCreateTagsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsCreateTagsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateTagsErrorComponent rebuild(
           void Function(ObservationsCreateTagsErrorComponentBuilder) updates) =>
@@ -190,7 +181,7 @@ class _$ObservationsCreateTagsErrorComponent
 
   @override
   ObservationsCreateTagsErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateTagsErrorComponentBuilder()..replace(this);
+      ObservationsCreateTagsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -258,7 +249,6 @@ class ObservationsCreateTagsErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateTagsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateTagsErrorComponent;
   }
 
@@ -273,13 +263,14 @@ class ObservationsCreateTagsErrorComponentBuilder
 
   _$ObservationsCreateTagsErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateTagsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsCreateTagsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsCreateTagsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'ObservationsCreateTagsErrorComponent', 'detail'));
+        _$ObservationsCreateTagsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsCreateTagsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsCreateTagsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsCreateTagsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

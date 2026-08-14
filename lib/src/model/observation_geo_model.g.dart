@@ -18,21 +18,14 @@ class _$ObservationGeoModel extends ObservationGeoModel {
 
   factory _$ObservationGeoModel(
           [void Function(ObservationGeoModelBuilder)? updates]) =>
-      (new ObservationGeoModelBuilder()..update(updates))._build();
+      (ObservationGeoModelBuilder()..update(updates))._build();
 
   _$ObservationGeoModel._(
       {required this.uuid,
       required this.point,
       required this.receivedAt,
       this.identificationTaxonId})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'ObservationGeoModel', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(
-        point, r'ObservationGeoModel', 'point');
-    BuiltValueNullFieldError.checkNotNull(
-        receivedAt, r'ObservationGeoModel', 'receivedAt');
-  }
-
+      : super._();
   @override
   ObservationGeoModel rebuild(
           void Function(ObservationGeoModelBuilder) updates) =>
@@ -40,7 +33,7 @@ class _$ObservationGeoModel extends ObservationGeoModel {
 
   @override
   ObservationGeoModelBuilder toBuilder() =>
-      new ObservationGeoModelBuilder()..replace(this);
+      ObservationGeoModelBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -83,7 +76,7 @@ class ObservationGeoModelBuilder
   set uuid(String? uuid) => _$this._uuid = uuid;
 
   PointBuilder? _point;
-  PointBuilder get point => _$this._point ??= new PointBuilder();
+  PointBuilder get point => _$this._point ??= PointBuilder();
   set point(PointBuilder? point) => _$this._point = point;
 
   DateTime? _receivedAt;
@@ -113,7 +106,6 @@ class ObservationGeoModelBuilder
 
   @override
   void replace(ObservationGeoModel other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationGeoModel;
   }
 
@@ -129,20 +121,21 @@ class ObservationGeoModelBuilder
     _$ObservationGeoModel _$result;
     try {
       _$result = _$v ??
-          new _$ObservationGeoModel._(
-              uuid: BuiltValueNullFieldError.checkNotNull(
-                  uuid, r'ObservationGeoModel', 'uuid'),
-              point: point.build(),
-              receivedAt: BuiltValueNullFieldError.checkNotNull(
-                  receivedAt, r'ObservationGeoModel', 'receivedAt'),
-              identificationTaxonId: identificationTaxonId);
+          _$ObservationGeoModel._(
+            uuid: BuiltValueNullFieldError.checkNotNull(
+                uuid, r'ObservationGeoModel', 'uuid'),
+            point: point.build(),
+            receivedAt: BuiltValueNullFieldError.checkNotNull(
+                receivedAt, r'ObservationGeoModel', 'receivedAt'),
+            identificationTaxonId: identificationTaxonId,
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'point';
         point.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'ObservationGeoModel', _$failedField, e.toString());
       }
       rethrow;

@@ -23,6 +23,11 @@ void main() {
       // TODO
     });
 
+    // String target
+    test('to test the property `target`', () async {
+      // TODO
+    });
+
     // DateTime createdAt
     test('to test the property `createdAt`', () async {
       // TODO

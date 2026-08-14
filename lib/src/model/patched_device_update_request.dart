@@ -116,22 +116,25 @@ class _$PatchedDeviceUpdateRequestSerializer implements PrimitiveSerializer<Patc
         case r'fcm_token':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.fcmToken = valueDes;
           break;
         case r'os':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(DeviceOsRequest),
-          ) as DeviceOsRequest;
+            specifiedType: const FullType.nullable(DeviceOsRequest),
+          ) as DeviceOsRequest?;
+          if (valueDes == null) continue;
           result.os.replace(valueDes);
           break;
         case r'mobile_app':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(MobileAppRequest),
-          ) as MobileAppRequest;
+            specifiedType: const FullType.nullable(MobileAppRequest),
+          ) as MobileAppRequest?;
+          if (valueDes == null) continue;
           result.mobileApp.replace(valueDes);
           break;
         default:

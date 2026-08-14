@@ -27,7 +27,7 @@ ObservationsListBoundaryUuidErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsListBoundaryUuidErrorComponentAttrEnum>
-    _$observationsListBoundaryUuidErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsListBoundaryUuidErrorComponentAttrEnumValues = BuiltSet<
         ObservationsListBoundaryUuidErrorComponentAttrEnum>(const <ObservationsListBoundaryUuidErrorComponentAttrEnum>[
   _$observationsListBoundaryUuidErrorComponentAttrEnum_boundaryUuid,
   _$observationsListBoundaryUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ ObservationsListBoundaryUuidErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsListBoundaryUuidErrorComponentCodeEnum>
-    _$observationsListBoundaryUuidErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsListBoundaryUuidErrorComponentCodeEnumValues = BuiltSet<
         ObservationsListBoundaryUuidErrorComponentCodeEnum>(const <ObservationsListBoundaryUuidErrorComponentCodeEnum>[
   _$observationsListBoundaryUuidErrorComponentCodeEnum_invalid,
   _$observationsListBoundaryUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -69,10 +69,10 @@ final BuiltSet<ObservationsListBoundaryUuidErrorComponentCodeEnum>
 
 Serializer<ObservationsListBoundaryUuidErrorComponentAttrEnum>
     _$observationsListBoundaryUuidErrorComponentAttrEnumSerializer =
-    new _$ObservationsListBoundaryUuidErrorComponentAttrEnumSerializer();
+    _$ObservationsListBoundaryUuidErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListBoundaryUuidErrorComponentCodeEnum>
     _$observationsListBoundaryUuidErrorComponentCodeEnumSerializer =
-    new _$ObservationsListBoundaryUuidErrorComponentCodeEnumSerializer();
+    _$ObservationsListBoundaryUuidErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListBoundaryUuidErrorComponentAttrEnumSerializer
     implements
@@ -156,20 +156,12 @@ class _$ObservationsListBoundaryUuidErrorComponent
   factory _$ObservationsListBoundaryUuidErrorComponent(
           [void Function(ObservationsListBoundaryUuidErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListBoundaryUuidErrorComponentBuilder()..update(updates))
+      (ObservationsListBoundaryUuidErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsListBoundaryUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsListBoundaryUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsListBoundaryUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsListBoundaryUuidErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsListBoundaryUuidErrorComponent rebuild(
           void Function(ObservationsListBoundaryUuidErrorComponentBuilder)
@@ -178,7 +170,7 @@ class _$ObservationsListBoundaryUuidErrorComponent
 
   @override
   ObservationsListBoundaryUuidErrorComponentBuilder toBuilder() =>
-      new ObservationsListBoundaryUuidErrorComponentBuilder()..replace(this);
+      ObservationsListBoundaryUuidErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -247,7 +239,6 @@ class ObservationsListBoundaryUuidErrorComponentBuilder
 
   @override
   void replace(ObservationsListBoundaryUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListBoundaryUuidErrorComponent;
   }
 
@@ -263,13 +254,14 @@ class ObservationsListBoundaryUuidErrorComponentBuilder
 
   _$ObservationsListBoundaryUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListBoundaryUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsListBoundaryUuidErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsListBoundaryUuidErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsListBoundaryUuidErrorComponent', 'detail'));
+        _$ObservationsListBoundaryUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsListBoundaryUuidErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsListBoundaryUuidErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsListBoundaryUuidErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

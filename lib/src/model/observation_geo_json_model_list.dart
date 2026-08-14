@@ -87,15 +87,17 @@ class _$ObservationGeoJsonModelListSerializer implements PrimitiveSerializer<Obs
         case r'type':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ObservationGeoJsonModelListTypeEnum),
-          ) as ObservationGeoJsonModelListTypeEnum;
+            specifiedType: const FullType.nullable(ObservationGeoJsonModelListTypeEnum),
+          ) as ObservationGeoJsonModelListTypeEnum?;
+          if (valueDes == null) continue;
           result.type = valueDes;
           break;
         case r'features':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(ObservationGeoJsonModel)]),
-          ) as BuiltList<ObservationGeoJsonModel>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(ObservationGeoJsonModel)]),
+          ) as BuiltList<ObservationGeoJsonModel>?;
+          if (valueDes == null) continue;
           result.features.replace(valueDes);
           break;
         default:

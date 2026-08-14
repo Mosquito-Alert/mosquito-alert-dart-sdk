@@ -30,7 +30,7 @@ PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnum
 
 final BuiltSet<PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnum>(const <PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnum>[
   _$photosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnum_isDecisive,
   _$photosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -66,7 +66,7 @@ PhotosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnum
 
 final BuiltSet<PhotosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnum>(const <PhotosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnum>[
   _$photosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnum_invalid,
   _$photosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnum_null_,
@@ -75,10 +75,10 @@ final BuiltSet<PhotosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionPartialUpdateIsDecisiveErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnumSerializer
     implements
@@ -165,21 +165,13 @@ class _$PhotosPredictionPartialUpdateIsDecisiveErrorComponent
           [void Function(
                   PhotosPredictionPartialUpdateIsDecisiveErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionPartialUpdateIsDecisiveErrorComponentBuilder()
+      (PhotosPredictionPartialUpdateIsDecisiveErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionPartialUpdateIsDecisiveErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionPartialUpdateIsDecisiveErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionPartialUpdateIsDecisiveErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'PhotosPredictionPartialUpdateIsDecisiveErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionPartialUpdateIsDecisiveErrorComponent rebuild(
           void Function(
@@ -189,7 +181,7 @@ class _$PhotosPredictionPartialUpdateIsDecisiveErrorComponent
 
   @override
   PhotosPredictionPartialUpdateIsDecisiveErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionPartialUpdateIsDecisiveErrorComponentBuilder()
+      PhotosPredictionPartialUpdateIsDecisiveErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -265,7 +257,6 @@ class PhotosPredictionPartialUpdateIsDecisiveErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionPartialUpdateIsDecisiveErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionPartialUpdateIsDecisiveErrorComponent;
   }
 
@@ -282,19 +273,16 @@ class PhotosPredictionPartialUpdateIsDecisiveErrorComponentBuilder
 
   _$PhotosPredictionPartialUpdateIsDecisiveErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionPartialUpdateIsDecisiveErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'PhotosPredictionPartialUpdateIsDecisiveErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'PhotosPredictionPartialUpdateIsDecisiveErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionPartialUpdateIsDecisiveErrorComponent',
-                'detail'));
+        _$PhotosPredictionPartialUpdateIsDecisiveErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'PhotosPredictionPartialUpdateIsDecisiveErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'PhotosPredictionPartialUpdateIsDecisiveErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'PhotosPredictionPartialUpdateIsDecisiveErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

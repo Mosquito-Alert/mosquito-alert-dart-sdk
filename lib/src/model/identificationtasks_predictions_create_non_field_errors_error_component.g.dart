@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$identificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -208,7 +194,7 @@ class _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent
   @override
   IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentBuilder()
+          IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -291,7 +277,6 @@ class IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent;
   }
@@ -310,20 +295,20 @@ class IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponentBuilder
 
   _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreateNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

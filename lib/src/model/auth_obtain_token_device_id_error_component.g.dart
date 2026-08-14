@@ -27,7 +27,7 @@ AuthObtainTokenDeviceIdErrorComponentAttrEnum
 }
 
 final BuiltSet<AuthObtainTokenDeviceIdErrorComponentAttrEnum>
-    _$authObtainTokenDeviceIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$authObtainTokenDeviceIdErrorComponentAttrEnumValues = BuiltSet<
         AuthObtainTokenDeviceIdErrorComponentAttrEnum>(const <AuthObtainTokenDeviceIdErrorComponentAttrEnum>[
   _$authObtainTokenDeviceIdErrorComponentAttrEnum_deviceId,
   _$authObtainTokenDeviceIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -76,7 +76,7 @@ AuthObtainTokenDeviceIdErrorComponentCodeEnum
 }
 
 final BuiltSet<AuthObtainTokenDeviceIdErrorComponentCodeEnum>
-    _$authObtainTokenDeviceIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$authObtainTokenDeviceIdErrorComponentCodeEnumValues = BuiltSet<
         AuthObtainTokenDeviceIdErrorComponentCodeEnum>(const <AuthObtainTokenDeviceIdErrorComponentCodeEnum>[
   _$authObtainTokenDeviceIdErrorComponentCodeEnum_blank,
   _$authObtainTokenDeviceIdErrorComponentCodeEnum_invalid,
@@ -88,10 +88,10 @@ final BuiltSet<AuthObtainTokenDeviceIdErrorComponentCodeEnum>
 
 Serializer<AuthObtainTokenDeviceIdErrorComponentAttrEnum>
     _$authObtainTokenDeviceIdErrorComponentAttrEnumSerializer =
-    new _$AuthObtainTokenDeviceIdErrorComponentAttrEnumSerializer();
+    _$AuthObtainTokenDeviceIdErrorComponentAttrEnumSerializer();
 Serializer<AuthObtainTokenDeviceIdErrorComponentCodeEnum>
     _$authObtainTokenDeviceIdErrorComponentCodeEnumSerializer =
-    new _$AuthObtainTokenDeviceIdErrorComponentCodeEnumSerializer();
+    _$AuthObtainTokenDeviceIdErrorComponentCodeEnumSerializer();
 
 class _$AuthObtainTokenDeviceIdErrorComponentAttrEnumSerializer
     implements
@@ -179,20 +179,12 @@ class _$AuthObtainTokenDeviceIdErrorComponent
   factory _$AuthObtainTokenDeviceIdErrorComponent(
           [void Function(AuthObtainTokenDeviceIdErrorComponentBuilder)?
               updates]) =>
-      (new AuthObtainTokenDeviceIdErrorComponentBuilder()..update(updates))
+      (AuthObtainTokenDeviceIdErrorComponentBuilder()..update(updates))
           ._build();
 
   _$AuthObtainTokenDeviceIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'AuthObtainTokenDeviceIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'AuthObtainTokenDeviceIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'AuthObtainTokenDeviceIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   AuthObtainTokenDeviceIdErrorComponent rebuild(
           void Function(AuthObtainTokenDeviceIdErrorComponentBuilder)
@@ -201,7 +193,7 @@ class _$AuthObtainTokenDeviceIdErrorComponent
 
   @override
   AuthObtainTokenDeviceIdErrorComponentBuilder toBuilder() =>
-      new AuthObtainTokenDeviceIdErrorComponentBuilder()..replace(this);
+      AuthObtainTokenDeviceIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -270,7 +262,6 @@ class AuthObtainTokenDeviceIdErrorComponentBuilder
 
   @override
   void replace(AuthObtainTokenDeviceIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthObtainTokenDeviceIdErrorComponent;
   }
 
@@ -285,13 +276,14 @@ class AuthObtainTokenDeviceIdErrorComponentBuilder
 
   _$AuthObtainTokenDeviceIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$AuthObtainTokenDeviceIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'AuthObtainTokenDeviceIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AuthObtainTokenDeviceIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'AuthObtainTokenDeviceIdErrorComponent', 'detail'));
+        _$AuthObtainTokenDeviceIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'AuthObtainTokenDeviceIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AuthObtainTokenDeviceIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'AuthObtainTokenDeviceIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

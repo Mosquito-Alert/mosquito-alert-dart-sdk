@@ -27,7 +27,7 @@ NotificationsUpdateIsReadErrorComponentAttrEnum
 }
 
 final BuiltSet<NotificationsUpdateIsReadErrorComponentAttrEnum>
-    _$notificationsUpdateIsReadErrorComponentAttrEnumValues = new BuiltSet<
+    _$notificationsUpdateIsReadErrorComponentAttrEnumValues = BuiltSet<
         NotificationsUpdateIsReadErrorComponentAttrEnum>(const <NotificationsUpdateIsReadErrorComponentAttrEnum>[
   _$notificationsUpdateIsReadErrorComponentAttrEnum_isRead,
   _$notificationsUpdateIsReadErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,7 +64,7 @@ NotificationsUpdateIsReadErrorComponentCodeEnum
 }
 
 final BuiltSet<NotificationsUpdateIsReadErrorComponentCodeEnum>
-    _$notificationsUpdateIsReadErrorComponentCodeEnumValues = new BuiltSet<
+    _$notificationsUpdateIsReadErrorComponentCodeEnumValues = BuiltSet<
         NotificationsUpdateIsReadErrorComponentCodeEnum>(const <NotificationsUpdateIsReadErrorComponentCodeEnum>[
   _$notificationsUpdateIsReadErrorComponentCodeEnum_invalid,
   _$notificationsUpdateIsReadErrorComponentCodeEnum_null_,
@@ -74,10 +74,10 @@ final BuiltSet<NotificationsUpdateIsReadErrorComponentCodeEnum>
 
 Serializer<NotificationsUpdateIsReadErrorComponentAttrEnum>
     _$notificationsUpdateIsReadErrorComponentAttrEnumSerializer =
-    new _$NotificationsUpdateIsReadErrorComponentAttrEnumSerializer();
+    _$NotificationsUpdateIsReadErrorComponentAttrEnumSerializer();
 Serializer<NotificationsUpdateIsReadErrorComponentCodeEnum>
     _$notificationsUpdateIsReadErrorComponentCodeEnumSerializer =
-    new _$NotificationsUpdateIsReadErrorComponentCodeEnumSerializer();
+    _$NotificationsUpdateIsReadErrorComponentCodeEnumSerializer();
 
 class _$NotificationsUpdateIsReadErrorComponentAttrEnumSerializer
     implements
@@ -161,20 +161,12 @@ class _$NotificationsUpdateIsReadErrorComponent
   factory _$NotificationsUpdateIsReadErrorComponent(
           [void Function(NotificationsUpdateIsReadErrorComponentBuilder)?
               updates]) =>
-      (new NotificationsUpdateIsReadErrorComponentBuilder()..update(updates))
+      (NotificationsUpdateIsReadErrorComponentBuilder()..update(updates))
           ._build();
 
   _$NotificationsUpdateIsReadErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'NotificationsUpdateIsReadErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'NotificationsUpdateIsReadErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'NotificationsUpdateIsReadErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   NotificationsUpdateIsReadErrorComponent rebuild(
           void Function(NotificationsUpdateIsReadErrorComponentBuilder)
@@ -183,7 +175,7 @@ class _$NotificationsUpdateIsReadErrorComponent
 
   @override
   NotificationsUpdateIsReadErrorComponentBuilder toBuilder() =>
-      new NotificationsUpdateIsReadErrorComponentBuilder()..replace(this);
+      NotificationsUpdateIsReadErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -252,7 +244,6 @@ class NotificationsUpdateIsReadErrorComponentBuilder
 
   @override
   void replace(NotificationsUpdateIsReadErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationsUpdateIsReadErrorComponent;
   }
 
@@ -267,13 +258,14 @@ class NotificationsUpdateIsReadErrorComponentBuilder
 
   _$NotificationsUpdateIsReadErrorComponent _build() {
     final _$result = _$v ??
-        new _$NotificationsUpdateIsReadErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'NotificationsUpdateIsReadErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'NotificationsUpdateIsReadErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'NotificationsUpdateIsReadErrorComponent', 'detail'));
+        _$NotificationsUpdateIsReadErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'NotificationsUpdateIsReadErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'NotificationsUpdateIsReadErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'NotificationsUpdateIsReadErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

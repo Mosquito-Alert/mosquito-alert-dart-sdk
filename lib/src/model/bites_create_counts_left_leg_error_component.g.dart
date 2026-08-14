@@ -28,7 +28,7 @@ BitesCreateCountsLeftLegErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateCountsLeftLegErrorComponentAttrEnum>
-    _$bitesCreateCountsLeftLegErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateCountsLeftLegErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateCountsLeftLegErrorComponentAttrEnum>(const <BitesCreateCountsLeftLegErrorComponentAttrEnum>[
   _$bitesCreateCountsLeftLegErrorComponentAttrEnum_countsPeriodLeftLeg,
   _$bitesCreateCountsLeftLegErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -65,7 +65,7 @@ BitesCreateCountsLeftLegErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateCountsLeftLegErrorComponentCodeEnum>
-    _$bitesCreateCountsLeftLegErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateCountsLeftLegErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateCountsLeftLegErrorComponentCodeEnum>(const <BitesCreateCountsLeftLegErrorComponentCodeEnum>[
   _$bitesCreateCountsLeftLegErrorComponentCodeEnum_invalid,
   _$bitesCreateCountsLeftLegErrorComponentCodeEnum_maxStringLength,
@@ -75,10 +75,10 @@ final BuiltSet<BitesCreateCountsLeftLegErrorComponentCodeEnum>
 
 Serializer<BitesCreateCountsLeftLegErrorComponentAttrEnum>
     _$bitesCreateCountsLeftLegErrorComponentAttrEnumSerializer =
-    new _$BitesCreateCountsLeftLegErrorComponentAttrEnumSerializer();
+    _$BitesCreateCountsLeftLegErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateCountsLeftLegErrorComponentCodeEnum>
     _$bitesCreateCountsLeftLegErrorComponentCodeEnumSerializer =
-    new _$BitesCreateCountsLeftLegErrorComponentCodeEnumSerializer();
+    _$BitesCreateCountsLeftLegErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateCountsLeftLegErrorComponentAttrEnumSerializer
     implements
@@ -162,20 +162,12 @@ class _$BitesCreateCountsLeftLegErrorComponent
   factory _$BitesCreateCountsLeftLegErrorComponent(
           [void Function(BitesCreateCountsLeftLegErrorComponentBuilder)?
               updates]) =>
-      (new BitesCreateCountsLeftLegErrorComponentBuilder()..update(updates))
+      (BitesCreateCountsLeftLegErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BitesCreateCountsLeftLegErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateCountsLeftLegErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateCountsLeftLegErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateCountsLeftLegErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateCountsLeftLegErrorComponent rebuild(
           void Function(BitesCreateCountsLeftLegErrorComponentBuilder)
@@ -184,7 +176,7 @@ class _$BitesCreateCountsLeftLegErrorComponent
 
   @override
   BitesCreateCountsLeftLegErrorComponentBuilder toBuilder() =>
-      new BitesCreateCountsLeftLegErrorComponentBuilder()..replace(this);
+      BitesCreateCountsLeftLegErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -253,7 +245,6 @@ class BitesCreateCountsLeftLegErrorComponentBuilder
 
   @override
   void replace(BitesCreateCountsLeftLegErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateCountsLeftLegErrorComponent;
   }
 
@@ -268,13 +259,14 @@ class BitesCreateCountsLeftLegErrorComponentBuilder
 
   _$BitesCreateCountsLeftLegErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateCountsLeftLegErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateCountsLeftLegErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateCountsLeftLegErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateCountsLeftLegErrorComponent', 'detail'));
+        _$BitesCreateCountsLeftLegErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateCountsLeftLegErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateCountsLeftLegErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateCountsLeftLegErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

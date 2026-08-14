@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnum_isDecisive,
   _$identificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnum_null_,
@@ -77,10 +77,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnumSerializer
     implements
@@ -175,27 +175,13 @@ class _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreateIsDecisiveErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreateIsDecisiveErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreateIsDecisiveErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreateIsDecisiveErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreateIsDecisiveErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreateIsDecisiveErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreateIsDecisiveErrorComponent rebuild(
           void Function(
@@ -206,7 +192,7 @@ class _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponent
   @override
   IdentificationtasksPredictionsCreateIsDecisiveErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreateIsDecisiveErrorComponentBuilder()
+          IdentificationtasksPredictionsCreateIsDecisiveErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -286,7 +272,6 @@ class IdentificationtasksPredictionsCreateIsDecisiveErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsCreateIsDecisiveErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponent;
   }
@@ -305,19 +290,20 @@ class IdentificationtasksPredictionsCreateIsDecisiveErrorComponentBuilder
 
   _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreateIsDecisiveErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreateIsDecisiveErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreateIsDecisiveErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreateIsDecisiveErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreateIsDecisiveErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreateIsDecisiveErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

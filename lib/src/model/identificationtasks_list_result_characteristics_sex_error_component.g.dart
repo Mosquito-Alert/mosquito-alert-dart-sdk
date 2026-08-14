@@ -31,7 +31,7 @@ IdentificationtasksListResultCharacteristicsSexErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksListResultCharacteristicsSexErrorComponentAttrEnum>
     _$identificationtasksListResultCharacteristicsSexErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListResultCharacteristicsSexErrorComponentAttrEnum>(const <IdentificationtasksListResultCharacteristicsSexErrorComponentAttrEnum>[
   _$identificationtasksListResultCharacteristicsSexErrorComponentAttrEnum_resultCharacteristicsSex,
   _$identificationtasksListResultCharacteristicsSexErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksListResultCharacteristicsSexErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksListResultCharacteristicsSexErrorComponentCodeEnum>
     _$identificationtasksListResultCharacteristicsSexErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListResultCharacteristicsSexErrorComponentCodeEnum>(const <IdentificationtasksListResultCharacteristicsSexErrorComponentCodeEnum>[
   _$identificationtasksListResultCharacteristicsSexErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksListResultCharacteristicsSexErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksListResultCharacteristicsSexErrorComponentAttrEnum>
     _$identificationtasksListResultCharacteristicsSexErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListResultCharacteristicsSexErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListResultCharacteristicsSexErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksListResultCharacteristicsSexErrorComponentCodeEnum>
     _$identificationtasksListResultCharacteristicsSexErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListResultCharacteristicsSexErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListResultCharacteristicsSexErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListResultCharacteristicsSexErrorComponentAttrEnumSerializer
     implements
@@ -170,27 +170,13 @@ class _$IdentificationtasksListResultCharacteristicsSexErrorComponent
           [void Function(
                   IdentificationtasksListResultCharacteristicsSexErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListResultCharacteristicsSexErrorComponentBuilder()
+      (IdentificationtasksListResultCharacteristicsSexErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksListResultCharacteristicsSexErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksListResultCharacteristicsSexErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksListResultCharacteristicsSexErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksListResultCharacteristicsSexErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListResultCharacteristicsSexErrorComponent rebuild(
           void Function(
@@ -201,7 +187,7 @@ class _$IdentificationtasksListResultCharacteristicsSexErrorComponent
   @override
   IdentificationtasksListResultCharacteristicsSexErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksListResultCharacteristicsSexErrorComponentBuilder()
+          IdentificationtasksListResultCharacteristicsSexErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -281,7 +267,6 @@ class IdentificationtasksListResultCharacteristicsSexErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksListResultCharacteristicsSexErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksListResultCharacteristicsSexErrorComponent;
   }
@@ -300,19 +285,20 @@ class IdentificationtasksListResultCharacteristicsSexErrorComponentBuilder
 
   _$IdentificationtasksListResultCharacteristicsSexErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListResultCharacteristicsSexErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksListResultCharacteristicsSexErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksListResultCharacteristicsSexErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksListResultCharacteristicsSexErrorComponent',
-                'detail'));
+        _$IdentificationtasksListResultCharacteristicsSexErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksListResultCharacteristicsSexErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksListResultCharacteristicsSexErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksListResultCharacteristicsSexErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

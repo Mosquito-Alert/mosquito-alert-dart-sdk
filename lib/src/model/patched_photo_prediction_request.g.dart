@@ -67,7 +67,7 @@ PatchedPhotoPredictionRequestPredictedClassEnum
 }
 
 final BuiltSet<PatchedPhotoPredictionRequestPredictedClassEnum>
-    _$patchedPhotoPredictionRequestPredictedClassEnumValues = new BuiltSet<
+    _$patchedPhotoPredictionRequestPredictedClassEnumValues = BuiltSet<
         PatchedPhotoPredictionRequestPredictedClassEnum>(const <PatchedPhotoPredictionRequestPredictedClassEnum>[
   _$patchedPhotoPredictionRequestPredictedClassEnum_aeAlbopictus,
   _$patchedPhotoPredictionRequestPredictedClassEnum_aeAegypti,
@@ -127,7 +127,7 @@ PatchedPhotoPredictionRequestClassifierVersionEnum
 }
 
 final BuiltSet<PatchedPhotoPredictionRequestClassifierVersionEnum>
-    _$patchedPhotoPredictionRequestClassifierVersionEnumValues = new BuiltSet<
+    _$patchedPhotoPredictionRequestClassifierVersionEnumValues = BuiltSet<
         PatchedPhotoPredictionRequestClassifierVersionEnum>(const <PatchedPhotoPredictionRequestClassifierVersionEnum>[
   _$patchedPhotoPredictionRequestClassifierVersionEnum_v2023Period1,
   _$patchedPhotoPredictionRequestClassifierVersionEnum_v2024Period1,
@@ -140,10 +140,10 @@ final BuiltSet<PatchedPhotoPredictionRequestClassifierVersionEnum>
 
 Serializer<PatchedPhotoPredictionRequestPredictedClassEnum>
     _$patchedPhotoPredictionRequestPredictedClassEnumSerializer =
-    new _$PatchedPhotoPredictionRequestPredictedClassEnumSerializer();
+    _$PatchedPhotoPredictionRequestPredictedClassEnumSerializer();
 Serializer<PatchedPhotoPredictionRequestClassifierVersionEnum>
     _$patchedPhotoPredictionRequestClassifierVersionEnumSerializer =
-    new _$PatchedPhotoPredictionRequestClassifierVersionEnumSerializer();
+    _$PatchedPhotoPredictionRequestClassifierVersionEnumSerializer();
 
 class _$PatchedPhotoPredictionRequestPredictedClassEnumSerializer
     implements
@@ -256,7 +256,7 @@ class _$PatchedPhotoPredictionRequest extends PatchedPhotoPredictionRequest {
 
   factory _$PatchedPhotoPredictionRequest(
           [void Function(PatchedPhotoPredictionRequestBuilder)? updates]) =>
-      (new PatchedPhotoPredictionRequestBuilder()..update(updates))._build();
+      (PatchedPhotoPredictionRequestBuilder()..update(updates))._build();
 
   _$PatchedPhotoPredictionRequest._(
       {this.bbox,
@@ -267,7 +267,6 @@ class _$PatchedPhotoPredictionRequest extends PatchedPhotoPredictionRequest {
       this.scores,
       this.classifierVersion})
       : super._();
-
   @override
   PatchedPhotoPredictionRequest rebuild(
           void Function(PatchedPhotoPredictionRequestBuilder) updates) =>
@@ -275,7 +274,7 @@ class _$PatchedPhotoPredictionRequest extends PatchedPhotoPredictionRequest {
 
   @override
   PatchedPhotoPredictionRequestBuilder toBuilder() =>
-      new PatchedPhotoPredictionRequestBuilder()..replace(this);
+      PatchedPhotoPredictionRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -326,7 +325,7 @@ class PatchedPhotoPredictionRequestBuilder
 
   BoundingBoxRequestBuilder? _bbox;
   BoundingBoxRequestBuilder get bbox =>
-      _$this._bbox ??= new BoundingBoxRequestBuilder();
+      _$this._bbox ??= BoundingBoxRequestBuilder();
   set bbox(BoundingBoxRequestBuilder? bbox) => _$this._bbox = bbox;
 
   double? _insectConfidence;
@@ -352,7 +351,7 @@ class PatchedPhotoPredictionRequestBuilder
 
   PredictionScoreRequestBuilder? _scores;
   PredictionScoreRequestBuilder get scores =>
-      _$this._scores ??= new PredictionScoreRequestBuilder();
+      _$this._scores ??= PredictionScoreRequestBuilder();
   set scores(PredictionScoreRequestBuilder? scores) => _$this._scores = scores;
 
   PatchedPhotoPredictionRequestClassifierVersionEnum? _classifierVersion;
@@ -384,7 +383,6 @@ class PatchedPhotoPredictionRequestBuilder
 
   @override
   void replace(PatchedPhotoPredictionRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PatchedPhotoPredictionRequest;
   }
 
@@ -400,14 +398,15 @@ class PatchedPhotoPredictionRequestBuilder
     _$PatchedPhotoPredictionRequest _$result;
     try {
       _$result = _$v ??
-          new _$PatchedPhotoPredictionRequest._(
-              bbox: _bbox?.build(),
-              insectConfidence: insectConfidence,
-              predictedClass: predictedClass,
-              thresholdDeviation: thresholdDeviation,
-              isDecisive: isDecisive,
-              scores: _scores?.build(),
-              classifierVersion: classifierVersion);
+          _$PatchedPhotoPredictionRequest._(
+            bbox: _bbox?.build(),
+            insectConfidence: insectConfidence,
+            predictedClass: predictedClass,
+            thresholdDeviation: thresholdDeviation,
+            isDecisive: isDecisive,
+            scores: _scores?.build(),
+            classifierVersion: classifierVersion,
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -417,7 +416,7 @@ class PatchedPhotoPredictionRequestBuilder
         _$failedField = 'scores';
         _scores?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PatchedPhotoPredictionRequest', _$failedField, e.toString());
       }
       rethrow;

@@ -14,22 +14,16 @@ class _$MessageRecipient extends MessageRecipient {
 
   factory _$MessageRecipient(
           [void Function(MessageRecipientBuilder)? updates]) =>
-      (new MessageRecipientBuilder()..update(updates))._build();
+      (MessageRecipientBuilder()..update(updates))._build();
 
-  _$MessageRecipient._({required this.user, required this.hasRead})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(user, r'MessageRecipient', 'user');
-    BuiltValueNullFieldError.checkNotNull(
-        hasRead, r'MessageRecipient', 'hasRead');
-  }
-
+  _$MessageRecipient._({required this.user, required this.hasRead}) : super._();
   @override
   MessageRecipient rebuild(void Function(MessageRecipientBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   MessageRecipientBuilder toBuilder() =>
-      new MessageRecipientBuilder()..replace(this);
+      MessageRecipientBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -62,7 +56,7 @@ class MessageRecipientBuilder
   _$MessageRecipient? _$v;
 
   MinimalUserBuilder? _user;
-  MinimalUserBuilder get user => _$this._user ??= new MinimalUserBuilder();
+  MinimalUserBuilder get user => _$this._user ??= MinimalUserBuilder();
   set user(MinimalUserBuilder? user) => _$this._user = user;
 
   bool? _hasRead;
@@ -85,7 +79,6 @@ class MessageRecipientBuilder
 
   @override
   void replace(MessageRecipient other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessageRecipient;
   }
 
@@ -101,17 +94,18 @@ class MessageRecipientBuilder
     _$MessageRecipient _$result;
     try {
       _$result = _$v ??
-          new _$MessageRecipient._(
-              user: user.build(),
-              hasRead: BuiltValueNullFieldError.checkNotNull(
-                  hasRead, r'MessageRecipient', 'hasRead'));
+          _$MessageRecipient._(
+            user: user.build(),
+            hasRead: BuiltValueNullFieldError.checkNotNull(
+                hasRead, r'MessageRecipient', 'hasRead'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'user';
         user.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'MessageRecipient', _$failedField, e.toString());
       }
       rethrow;

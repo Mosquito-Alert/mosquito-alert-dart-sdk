@@ -26,7 +26,7 @@ CampaignsListValidationErrorTypeEnum
 }
 
 final BuiltSet<CampaignsListValidationErrorTypeEnum>
-    _$campaignsListValidationErrorTypeEnumValues = new BuiltSet<
+    _$campaignsListValidationErrorTypeEnumValues = BuiltSet<
         CampaignsListValidationErrorTypeEnum>(const <CampaignsListValidationErrorTypeEnum>[
   _$campaignsListValidationErrorTypeEnum_validationError,
   _$campaignsListValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<CampaignsListValidationErrorTypeEnum>
 
 Serializer<CampaignsListValidationErrorTypeEnum>
     _$campaignsListValidationErrorTypeEnumSerializer =
-    new _$CampaignsListValidationErrorTypeEnumSerializer();
+    _$CampaignsListValidationErrorTypeEnumSerializer();
 
 class _$CampaignsListValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<CampaignsListValidationErrorTypeEnum> {
@@ -76,16 +76,10 @@ class _$CampaignsListValidationError extends CampaignsListValidationError {
 
   factory _$CampaignsListValidationError(
           [void Function(CampaignsListValidationErrorBuilder)? updates]) =>
-      (new CampaignsListValidationErrorBuilder()..update(updates))._build();
+      (CampaignsListValidationErrorBuilder()..update(updates))._build();
 
   _$CampaignsListValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'CampaignsListValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'CampaignsListValidationError', 'errors');
-  }
-
+      : super._();
   @override
   CampaignsListValidationError rebuild(
           void Function(CampaignsListValidationErrorBuilder) updates) =>
@@ -93,7 +87,7 @@ class _$CampaignsListValidationError extends CampaignsListValidationError {
 
   @override
   CampaignsListValidationErrorBuilder toBuilder() =>
-      new CampaignsListValidationErrorBuilder()..replace(this);
+      CampaignsListValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -133,7 +127,7 @@ class CampaignsListValidationErrorBuilder
 
   ListBuilder<CampaignsListError>? _errors;
   ListBuilder<CampaignsListError> get errors =>
-      _$this._errors ??= new ListBuilder<CampaignsListError>();
+      _$this._errors ??= ListBuilder<CampaignsListError>();
   set errors(ListBuilder<CampaignsListError>? errors) =>
       _$this._errors = errors;
 
@@ -153,7 +147,6 @@ class CampaignsListValidationErrorBuilder
 
   @override
   void replace(CampaignsListValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CampaignsListValidationError;
   }
 
@@ -169,17 +162,18 @@ class CampaignsListValidationErrorBuilder
     _$CampaignsListValidationError _$result;
     try {
       _$result = _$v ??
-          new _$CampaignsListValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'CampaignsListValidationError', 'type'),
-              errors: errors.build());
+          _$CampaignsListValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'CampaignsListValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'CampaignsListValidationError', _$failedField, e.toString());
       }
       rethrow;

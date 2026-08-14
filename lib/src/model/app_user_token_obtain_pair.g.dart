@@ -14,16 +14,10 @@ class _$AppUserTokenObtainPair extends AppUserTokenObtainPair {
 
   factory _$AppUserTokenObtainPair(
           [void Function(AppUserTokenObtainPairBuilder)? updates]) =>
-      (new AppUserTokenObtainPairBuilder()..update(updates))._build();
+      (AppUserTokenObtainPairBuilder()..update(updates))._build();
 
   _$AppUserTokenObtainPair._({required this.access, required this.refresh})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        access, r'AppUserTokenObtainPair', 'access');
-    BuiltValueNullFieldError.checkNotNull(
-        refresh, r'AppUserTokenObtainPair', 'refresh');
-  }
-
+      : super._();
   @override
   AppUserTokenObtainPair rebuild(
           void Function(AppUserTokenObtainPairBuilder) updates) =>
@@ -31,7 +25,7 @@ class _$AppUserTokenObtainPair extends AppUserTokenObtainPair {
 
   @override
   AppUserTokenObtainPairBuilder toBuilder() =>
-      new AppUserTokenObtainPairBuilder()..replace(this);
+      AppUserTokenObtainPairBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -87,7 +81,6 @@ class AppUserTokenObtainPairBuilder
 
   @override
   void replace(AppUserTokenObtainPair other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AppUserTokenObtainPair;
   }
 
@@ -101,11 +94,12 @@ class AppUserTokenObtainPairBuilder
 
   _$AppUserTokenObtainPair _build() {
     final _$result = _$v ??
-        new _$AppUserTokenObtainPair._(
-            access: BuiltValueNullFieldError.checkNotNull(
-                access, r'AppUserTokenObtainPair', 'access'),
-            refresh: BuiltValueNullFieldError.checkNotNull(
-                refresh, r'AppUserTokenObtainPair', 'refresh'));
+        _$AppUserTokenObtainPair._(
+          access: BuiltValueNullFieldError.checkNotNull(
+              access, r'AppUserTokenObtainPair', 'access'),
+          refresh: BuiltValueNullFieldError.checkNotNull(
+              refresh, r'AppUserTokenObtainPair', 'refresh'),
+        );
     replace(_$result);
     return _$result;
   }

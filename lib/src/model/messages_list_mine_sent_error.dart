@@ -6,6 +6,7 @@
 import 'package:mosquito_alert/src/model/messages_list_mine_sent_recipient_uuids_error_component.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/messages_list_mine_sent_order_by_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_list_mine_sent_target_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';
@@ -20,7 +21,7 @@ part 'messages_list_mine_sent_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class MessagesListMineSentError implements Built<MessagesListMineSentError, MessagesListMineSentErrorBuilder> {
-  /// One Of [MessagesListMineSentOrderByErrorComponent], [MessagesListMineSentRecipientUuidsErrorComponent]
+  /// One Of [MessagesListMineSentOrderByErrorComponent], [MessagesListMineSentRecipientUuidsErrorComponent], [MessagesListMineSentTargetErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -28,6 +29,7 @@ abstract class MessagesListMineSentError implements Built<MessagesListMineSentEr
   static const Map<String, Type> discriminatorMapping = {
     r'order_by': MessagesListMineSentOrderByErrorComponent,
     r'recipient_uuids': MessagesListMineSentRecipientUuidsErrorComponent,
+    r'target': MessagesListMineSentTargetErrorComponent,
   };
 
   MessagesListMineSentError._();
@@ -49,6 +51,9 @@ extension MessagesListMineSentErrorDiscriminatorExt on MessagesListMineSentError
         if (this is MessagesListMineSentRecipientUuidsErrorComponent) {
             return r'recipient_uuids';
         }
+        if (this is MessagesListMineSentTargetErrorComponent) {
+            return r'target';
+        }
         return null;
     }
 }
@@ -59,6 +64,9 @@ extension MessagesListMineSentErrorBuilderDiscriminatorExt on MessagesListMineSe
         }
         if (this is MessagesListMineSentRecipientUuidsErrorComponentBuilder) {
             return r'recipient_uuids';
+        }
+        if (this is MessagesListMineSentTargetErrorComponentBuilder) {
+            return r'target';
         }
         return null;
     }
@@ -73,9 +81,7 @@ class _$MessagesListMineSentErrorSerializer implements PrimitiveSerializer<Messa
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    MessagesListMineSentError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    MessagesListMineSentError object) sync* {
   }
 
   @override
@@ -100,7 +106,7 @@ class _$MessagesListMineSentErrorSerializer implements PrimitiveSerializer<Messa
     final discIndex = serializedList.indexOf(MessagesListMineSentError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [MessagesListMineSentOrderByErrorComponent, MessagesListMineSentRecipientUuidsErrorComponent, ];
+    final oneOfTypes = [MessagesListMineSentOrderByErrorComponent, MessagesListMineSentRecipientUuidsErrorComponent, MessagesListMineSentTargetErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -118,6 +124,13 @@ class _$MessagesListMineSentErrorSerializer implements PrimitiveSerializer<Messa
         ) as MessagesListMineSentRecipientUuidsErrorComponent;
         oneOfType = MessagesListMineSentRecipientUuidsErrorComponent;
         break;
+      case r'target':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(MessagesListMineSentTargetErrorComponent),
+        ) as MessagesListMineSentTargetErrorComponent;
+        oneOfType = MessagesListMineSentTargetErrorComponent;
+        break;
       default:
         throw UnsupportedError("Couldn't deserialize oneOf for the discriminator value: ${discValue}");
     }
@@ -128,8 +141,8 @@ class _$MessagesListMineSentErrorSerializer implements PrimitiveSerializer<Messa
 
 class MessagesListMineSentErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'recipient_uuids')
-  static const MessagesListMineSentErrorAttrEnum recipientUuids = _$messagesListMineSentErrorAttrEnum_recipientUuids;
+  @BuiltValueEnumConst(wireName: r'target')
+  static const MessagesListMineSentErrorAttrEnum target = _$messagesListMineSentErrorAttrEnum_target;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MessagesListMineSentErrorAttrEnum unknownDefaultOpenApi = _$messagesListMineSentErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -145,10 +158,6 @@ class MessagesListMineSentErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const MessagesListMineSentErrorCodeEnum invalidChoice = _$messagesListMineSentErrorCodeEnum_invalidChoice;
-  @BuiltValueEnumConst(wireName: r'invalid_list')
-  static const MessagesListMineSentErrorCodeEnum invalidList = _$messagesListMineSentErrorCodeEnum_invalidList;
-  @BuiltValueEnumConst(wireName: r'invalid_pk_value')
-  static const MessagesListMineSentErrorCodeEnum invalidPkValue = _$messagesListMineSentErrorCodeEnum_invalidPkValue;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MessagesListMineSentErrorCodeEnum unknownDefaultOpenApi = _$messagesListMineSentErrorCodeEnum_unknownDefaultOpenApi;
 

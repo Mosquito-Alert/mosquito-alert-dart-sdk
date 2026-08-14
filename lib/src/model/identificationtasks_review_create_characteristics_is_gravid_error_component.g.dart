@@ -31,7 +31,7 @@ IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnum>
     _$identificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnum>(const <IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnum>[
   _$identificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnum_characteristicsPeriodIsGravid,
   _$identificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnum>
     _$identificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnum>(const <IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnum>[
   _$identificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnum_invalid,
   _$identificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnum>
     _$identificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnum>
     _$identificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent
           [void Function(
                   IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentBuilder()
+      (IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent rebuild(
           void Function(
@@ -199,7 +185,7 @@ class _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent
   @override
   IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentBuilder()
+          IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -283,7 +269,6 @@ class IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentBuilde
   void replace(
       IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent;
   }
@@ -303,20 +288,21 @@ class IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponentBuilde
   _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent
+        _$IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksReviewCreateCharacteristicsIsGravidErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

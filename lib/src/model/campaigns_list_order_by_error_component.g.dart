@@ -26,7 +26,7 @@ CampaignsListOrderByErrorComponentAttrEnum
 }
 
 final BuiltSet<CampaignsListOrderByErrorComponentAttrEnum>
-    _$campaignsListOrderByErrorComponentAttrEnumValues = new BuiltSet<
+    _$campaignsListOrderByErrorComponentAttrEnumValues = BuiltSet<
         CampaignsListOrderByErrorComponentAttrEnum>(const <CampaignsListOrderByErrorComponentAttrEnum>[
   _$campaignsListOrderByErrorComponentAttrEnum_orderBy,
   _$campaignsListOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ CampaignsListOrderByErrorComponentCodeEnum
 }
 
 final BuiltSet<CampaignsListOrderByErrorComponentCodeEnum>
-    _$campaignsListOrderByErrorComponentCodeEnumValues = new BuiltSet<
+    _$campaignsListOrderByErrorComponentCodeEnumValues = BuiltSet<
         CampaignsListOrderByErrorComponentCodeEnum>(const <CampaignsListOrderByErrorComponentCodeEnum>[
   _$campaignsListOrderByErrorComponentCodeEnum_invalidChoice,
   _$campaignsListOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<CampaignsListOrderByErrorComponentCodeEnum>
 
 Serializer<CampaignsListOrderByErrorComponentAttrEnum>
     _$campaignsListOrderByErrorComponentAttrEnumSerializer =
-    new _$CampaignsListOrderByErrorComponentAttrEnumSerializer();
+    _$CampaignsListOrderByErrorComponentAttrEnumSerializer();
 Serializer<CampaignsListOrderByErrorComponentCodeEnum>
     _$campaignsListOrderByErrorComponentCodeEnumSerializer =
-    new _$CampaignsListOrderByErrorComponentCodeEnumSerializer();
+    _$CampaignsListOrderByErrorComponentCodeEnumSerializer();
 
 class _$CampaignsListOrderByErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<CampaignsListOrderByErrorComponentAttrEnum> {
@@ -141,20 +141,11 @@ class _$CampaignsListOrderByErrorComponent
   factory _$CampaignsListOrderByErrorComponent(
           [void Function(CampaignsListOrderByErrorComponentBuilder)?
               updates]) =>
-      (new CampaignsListOrderByErrorComponentBuilder()..update(updates))
-          ._build();
+      (CampaignsListOrderByErrorComponentBuilder()..update(updates))._build();
 
   _$CampaignsListOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'CampaignsListOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'CampaignsListOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'CampaignsListOrderByErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   CampaignsListOrderByErrorComponent rebuild(
           void Function(CampaignsListOrderByErrorComponentBuilder) updates) =>
@@ -162,7 +153,7 @@ class _$CampaignsListOrderByErrorComponent
 
   @override
   CampaignsListOrderByErrorComponentBuilder toBuilder() =>
-      new CampaignsListOrderByErrorComponentBuilder()..replace(this);
+      CampaignsListOrderByErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -230,7 +221,6 @@ class CampaignsListOrderByErrorComponentBuilder
 
   @override
   void replace(CampaignsListOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CampaignsListOrderByErrorComponent;
   }
 
@@ -245,13 +235,14 @@ class CampaignsListOrderByErrorComponentBuilder
 
   _$CampaignsListOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$CampaignsListOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'CampaignsListOrderByErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'CampaignsListOrderByErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'CampaignsListOrderByErrorComponent', 'detail'));
+        _$CampaignsListOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'CampaignsListOrderByErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'CampaignsListOrderByErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'CampaignsListOrderByErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

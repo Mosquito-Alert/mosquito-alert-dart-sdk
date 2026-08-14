@@ -93,8 +93,9 @@ class _$MinimalUserSerializer implements PrimitiveSerializer<MinimalUser> {
         case r'locale':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(MinimalUserLocaleEnum),
-          ) as MinimalUserLocaleEnum;
+            specifiedType: const FullType.nullable(MinimalUserLocaleEnum),
+          ) as MinimalUserLocaleEnum?;
+          if (valueDes == null) continue;
           result.locale = valueDes;
           break;
         default:

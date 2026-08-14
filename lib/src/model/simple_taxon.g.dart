@@ -47,7 +47,7 @@ SimpleTaxonRankEnum _$simpleTaxonRankEnumValueOf(String name) {
 }
 
 final BuiltSet<SimpleTaxonRankEnum> _$simpleTaxonRankEnumValues =
-    new BuiltSet<SimpleTaxonRankEnum>(const <SimpleTaxonRankEnum>[
+    BuiltSet<SimpleTaxonRankEnum>(const <SimpleTaxonRankEnum>[
   _$simpleTaxonRankEnum_class_,
   _$simpleTaxonRankEnum_order,
   _$simpleTaxonRankEnum_family,
@@ -59,7 +59,7 @@ final BuiltSet<SimpleTaxonRankEnum> _$simpleTaxonRankEnumValues =
 ]);
 
 Serializer<SimpleTaxonRankEnum> _$simpleTaxonRankEnumSerializer =
-    new _$SimpleTaxonRankEnumSerializer();
+    _$SimpleTaxonRankEnumSerializer();
 
 class _$SimpleTaxonRankEnumSerializer
     implements PrimitiveSerializer<SimpleTaxonRankEnum> {
@@ -114,7 +114,7 @@ class _$SimpleTaxon extends SimpleTaxon {
   final bool italicize;
 
   factory _$SimpleTaxon([void Function(SimpleTaxonBuilder)? updates]) =>
-      (new SimpleTaxonBuilder()..update(updates))._build();
+      (SimpleTaxonBuilder()..update(updates))._build();
 
   _$SimpleTaxon._(
       {required this.id,
@@ -122,21 +122,13 @@ class _$SimpleTaxon extends SimpleTaxon {
       this.commonName,
       required this.rank,
       required this.italicize})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'SimpleTaxon', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        nameValue, r'SimpleTaxon', 'nameValue');
-    BuiltValueNullFieldError.checkNotNull(rank, r'SimpleTaxon', 'rank');
-    BuiltValueNullFieldError.checkNotNull(
-        italicize, r'SimpleTaxon', 'italicize');
-  }
-
+      : super._();
   @override
   SimpleTaxon rebuild(void Function(SimpleTaxonBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  SimpleTaxonBuilder toBuilder() => new SimpleTaxonBuilder()..replace(this);
+  SimpleTaxonBuilder toBuilder() => SimpleTaxonBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -215,7 +207,6 @@ class SimpleTaxonBuilder implements Builder<SimpleTaxon, SimpleTaxonBuilder> {
 
   @override
   void replace(SimpleTaxon other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SimpleTaxon;
   }
 
@@ -229,15 +220,16 @@ class SimpleTaxonBuilder implements Builder<SimpleTaxon, SimpleTaxonBuilder> {
 
   _$SimpleTaxon _build() {
     final _$result = _$v ??
-        new _$SimpleTaxon._(
-            id: BuiltValueNullFieldError.checkNotNull(id, r'SimpleTaxon', 'id'),
-            nameValue: BuiltValueNullFieldError.checkNotNull(
-                nameValue, r'SimpleTaxon', 'nameValue'),
-            commonName: commonName,
-            rank: BuiltValueNullFieldError.checkNotNull(
-                rank, r'SimpleTaxon', 'rank'),
-            italicize: BuiltValueNullFieldError.checkNotNull(
-                italicize, r'SimpleTaxon', 'italicize'));
+        _$SimpleTaxon._(
+          id: BuiltValueNullFieldError.checkNotNull(id, r'SimpleTaxon', 'id'),
+          nameValue: BuiltValueNullFieldError.checkNotNull(
+              nameValue, r'SimpleTaxon', 'nameValue'),
+          commonName: commonName,
+          rank: BuiltValueNullFieldError.checkNotNull(
+              rank, r'SimpleTaxon', 'rank'),
+          italicize: BuiltValueNullFieldError.checkNotNull(
+              italicize, r'SimpleTaxon', 'italicize'),
+        );
     replace(_$result);
     return _$result;
   }

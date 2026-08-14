@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnum_classificationConfidence,
   _$identificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentBuilder()
+      (IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent rebuild(
           void Function(
@@ -199,7 +185,7 @@ class _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent
   @override
   IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentBuilder()
+          IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -284,7 +270,6 @@ class IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentBu
   void replace(
       IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent;
   }
@@ -304,20 +289,21 @@ class IdentificationtasksAnnotationsListClassificationConfidenceErrorComponentBu
   _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent
+        _$IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsListClassificationConfidenceErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

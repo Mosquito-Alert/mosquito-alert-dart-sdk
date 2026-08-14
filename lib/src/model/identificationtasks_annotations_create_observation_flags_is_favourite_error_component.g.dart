@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAtt
 final BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnum_observationFlagsPeriodIsFavourite,
   _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCod
 final BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum_null_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComp
           [void Function(
                   IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
       rebuild(
@@ -209,7 +195,7 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComp
   @override
   IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -294,7 +280,6 @@ class IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorCompon
   void replace(
       IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent;
   }
@@ -314,20 +299,21 @@ class IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorCompon
   _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
+        _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

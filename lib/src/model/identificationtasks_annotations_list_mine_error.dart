@@ -137,9 +137,7 @@ class _$IdentificationtasksAnnotationsListMineErrorSerializer implements Primiti
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    IdentificationtasksAnnotationsListMineError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    IdentificationtasksAnnotationsListMineError object) sync* {
   }
 
   @override

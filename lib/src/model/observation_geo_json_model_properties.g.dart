@@ -17,13 +17,11 @@ class _$ObservationGeoJsonModelProperties
 
   factory _$ObservationGeoJsonModelProperties(
           [void Function(ObservationGeoJsonModelPropertiesBuilder)? updates]) =>
-      (new ObservationGeoJsonModelPropertiesBuilder()..update(updates))
-          ._build();
+      (ObservationGeoJsonModelPropertiesBuilder()..update(updates))._build();
 
   _$ObservationGeoJsonModelProperties._(
       {this.uuid, this.receivedAt, this.identificationTaxonId})
       : super._();
-
   @override
   ObservationGeoJsonModelProperties rebuild(
           void Function(ObservationGeoJsonModelPropertiesBuilder) updates) =>
@@ -31,7 +29,7 @@ class _$ObservationGeoJsonModelProperties
 
   @override
   ObservationGeoJsonModelPropertiesBuilder toBuilder() =>
-      new ObservationGeoJsonModelPropertiesBuilder()..replace(this);
+      ObservationGeoJsonModelPropertiesBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -98,7 +96,6 @@ class ObservationGeoJsonModelPropertiesBuilder
 
   @override
   void replace(ObservationGeoJsonModelProperties other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationGeoJsonModelProperties;
   }
 
@@ -113,10 +110,11 @@ class ObservationGeoJsonModelPropertiesBuilder
 
   _$ObservationGeoJsonModelProperties _build() {
     final _$result = _$v ??
-        new _$ObservationGeoJsonModelProperties._(
-            uuid: uuid,
-            receivedAt: receivedAt,
-            identificationTaxonId: identificationTaxonId);
+        _$ObservationGeoJsonModelProperties._(
+          uuid: uuid,
+          receivedAt: receivedAt,
+          identificationTaxonId: identificationTaxonId,
+        );
     replace(_$result);
     return _$result;
   }

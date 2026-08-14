@@ -26,7 +26,7 @@ UsersUpdateLocaleErrorComponentAttrEnum
 }
 
 final BuiltSet<UsersUpdateLocaleErrorComponentAttrEnum>
-    _$usersUpdateLocaleErrorComponentAttrEnumValues = new BuiltSet<
+    _$usersUpdateLocaleErrorComponentAttrEnumValues = BuiltSet<
         UsersUpdateLocaleErrorComponentAttrEnum>(const <UsersUpdateLocaleErrorComponentAttrEnum>[
   _$usersUpdateLocaleErrorComponentAttrEnum_locale,
   _$usersUpdateLocaleErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -57,7 +57,7 @@ UsersUpdateLocaleErrorComponentCodeEnum
 }
 
 final BuiltSet<UsersUpdateLocaleErrorComponentCodeEnum>
-    _$usersUpdateLocaleErrorComponentCodeEnumValues = new BuiltSet<
+    _$usersUpdateLocaleErrorComponentCodeEnumValues = BuiltSet<
         UsersUpdateLocaleErrorComponentCodeEnum>(const <UsersUpdateLocaleErrorComponentCodeEnum>[
   _$usersUpdateLocaleErrorComponentCodeEnum_invalidChoice,
   _$usersUpdateLocaleErrorComponentCodeEnum_null_,
@@ -66,10 +66,10 @@ final BuiltSet<UsersUpdateLocaleErrorComponentCodeEnum>
 
 Serializer<UsersUpdateLocaleErrorComponentAttrEnum>
     _$usersUpdateLocaleErrorComponentAttrEnumSerializer =
-    new _$UsersUpdateLocaleErrorComponentAttrEnumSerializer();
+    _$UsersUpdateLocaleErrorComponentAttrEnumSerializer();
 Serializer<UsersUpdateLocaleErrorComponentCodeEnum>
     _$usersUpdateLocaleErrorComponentCodeEnumSerializer =
-    new _$UsersUpdateLocaleErrorComponentCodeEnumSerializer();
+    _$UsersUpdateLocaleErrorComponentCodeEnumSerializer();
 
 class _$UsersUpdateLocaleErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<UsersUpdateLocaleErrorComponentAttrEnum> {
@@ -148,19 +148,11 @@ class _$UsersUpdateLocaleErrorComponent
 
   factory _$UsersUpdateLocaleErrorComponent(
           [void Function(UsersUpdateLocaleErrorComponentBuilder)? updates]) =>
-      (new UsersUpdateLocaleErrorComponentBuilder()..update(updates))._build();
+      (UsersUpdateLocaleErrorComponentBuilder()..update(updates))._build();
 
   _$UsersUpdateLocaleErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'UsersUpdateLocaleErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'UsersUpdateLocaleErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'UsersUpdateLocaleErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   UsersUpdateLocaleErrorComponent rebuild(
           void Function(UsersUpdateLocaleErrorComponentBuilder) updates) =>
@@ -168,7 +160,7 @@ class _$UsersUpdateLocaleErrorComponent
 
   @override
   UsersUpdateLocaleErrorComponentBuilder toBuilder() =>
-      new UsersUpdateLocaleErrorComponentBuilder()..replace(this);
+      UsersUpdateLocaleErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -236,7 +228,6 @@ class UsersUpdateLocaleErrorComponentBuilder
 
   @override
   void replace(UsersUpdateLocaleErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UsersUpdateLocaleErrorComponent;
   }
 
@@ -250,13 +241,14 @@ class UsersUpdateLocaleErrorComponentBuilder
 
   _$UsersUpdateLocaleErrorComponent _build() {
     final _$result = _$v ??
-        new _$UsersUpdateLocaleErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'UsersUpdateLocaleErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'UsersUpdateLocaleErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'UsersUpdateLocaleErrorComponent', 'detail'));
+        _$UsersUpdateLocaleErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'UsersUpdateLocaleErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'UsersUpdateLocaleErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'UsersUpdateLocaleErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

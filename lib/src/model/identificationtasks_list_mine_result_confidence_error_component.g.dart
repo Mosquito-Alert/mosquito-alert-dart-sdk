@@ -31,7 +31,7 @@ IdentificationtasksListMineResultConfidenceErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksListMineResultConfidenceErrorComponentAttrEnum>
     _$identificationtasksListMineResultConfidenceErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineResultConfidenceErrorComponentAttrEnum>(const <IdentificationtasksListMineResultConfidenceErrorComponentAttrEnum>[
   _$identificationtasksListMineResultConfidenceErrorComponentAttrEnum_resultConfidence,
   _$identificationtasksListMineResultConfidenceErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksListMineResultConfidenceErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksListMineResultConfidenceErrorComponentCodeEnum>
     _$identificationtasksListMineResultConfidenceErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineResultConfidenceErrorComponentCodeEnum>(const <IdentificationtasksListMineResultConfidenceErrorComponentCodeEnum>[
   _$identificationtasksListMineResultConfidenceErrorComponentCodeEnum_invalid,
   _$identificationtasksListMineResultConfidenceErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -70,10 +70,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksListMineResultConfidenceErrorComponentAttrEnum>
     _$identificationtasksListMineResultConfidenceErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListMineResultConfidenceErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListMineResultConfidenceErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksListMineResultConfidenceErrorComponentCodeEnum>
     _$identificationtasksListMineResultConfidenceErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListMineResultConfidenceErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListMineResultConfidenceErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListMineResultConfidenceErrorComponentAttrEnumSerializer
     implements
@@ -162,21 +162,13 @@ class _$IdentificationtasksListMineResultConfidenceErrorComponent
           [void Function(
                   IdentificationtasksListMineResultConfidenceErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListMineResultConfidenceErrorComponentBuilder()
+      (IdentificationtasksListMineResultConfidenceErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksListMineResultConfidenceErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksListMineResultConfidenceErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksListMineResultConfidenceErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'IdentificationtasksListMineResultConfidenceErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListMineResultConfidenceErrorComponent rebuild(
           void Function(
@@ -187,7 +179,7 @@ class _$IdentificationtasksListMineResultConfidenceErrorComponent
   @override
   IdentificationtasksListMineResultConfidenceErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksListMineResultConfidenceErrorComponentBuilder()
+          IdentificationtasksListMineResultConfidenceErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -264,7 +256,6 @@ class IdentificationtasksListMineResultConfidenceErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksListMineResultConfidenceErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListMineResultConfidenceErrorComponent;
   }
 
@@ -281,19 +272,20 @@ class IdentificationtasksListMineResultConfidenceErrorComponentBuilder
 
   _$IdentificationtasksListMineResultConfidenceErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListMineResultConfidenceErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksListMineResultConfidenceErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksListMineResultConfidenceErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksListMineResultConfidenceErrorComponent',
-                'detail'));
+        _$IdentificationtasksListMineResultConfidenceErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksListMineResultConfidenceErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksListMineResultConfidenceErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksListMineResultConfidenceErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

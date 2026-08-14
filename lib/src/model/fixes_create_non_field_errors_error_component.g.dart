@@ -27,7 +27,7 @@ FixesCreateNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<FixesCreateNonFieldErrorsErrorComponentAttrEnum>
-    _$fixesCreateNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
+    _$fixesCreateNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         FixesCreateNonFieldErrorsErrorComponentAttrEnum>(const <FixesCreateNonFieldErrorsErrorComponentAttrEnum>[
   _$fixesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$fixesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -59,7 +59,7 @@ FixesCreateNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<FixesCreateNonFieldErrorsErrorComponentCodeEnum>
-    _$fixesCreateNonFieldErrorsErrorComponentCodeEnumValues = new BuiltSet<
+    _$fixesCreateNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         FixesCreateNonFieldErrorsErrorComponentCodeEnum>(const <FixesCreateNonFieldErrorsErrorComponentCodeEnum>[
   _$fixesCreateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$fixesCreateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -68,10 +68,10 @@ final BuiltSet<FixesCreateNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<FixesCreateNonFieldErrorsErrorComponentAttrEnum>
     _$fixesCreateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$FixesCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$FixesCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<FixesCreateNonFieldErrorsErrorComponentCodeEnum>
     _$fixesCreateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$FixesCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$FixesCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$FixesCreateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -153,20 +153,12 @@ class _$FixesCreateNonFieldErrorsErrorComponent
   factory _$FixesCreateNonFieldErrorsErrorComponent(
           [void Function(FixesCreateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new FixesCreateNonFieldErrorsErrorComponentBuilder()..update(updates))
+      (FixesCreateNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$FixesCreateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'FixesCreateNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'FixesCreateNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'FixesCreateNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   FixesCreateNonFieldErrorsErrorComponent rebuild(
           void Function(FixesCreateNonFieldErrorsErrorComponentBuilder)
@@ -175,7 +167,7 @@ class _$FixesCreateNonFieldErrorsErrorComponent
 
   @override
   FixesCreateNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new FixesCreateNonFieldErrorsErrorComponentBuilder()..replace(this);
+      FixesCreateNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -244,7 +236,6 @@ class FixesCreateNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(FixesCreateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixesCreateNonFieldErrorsErrorComponent;
   }
 
@@ -259,13 +250,14 @@ class FixesCreateNonFieldErrorsErrorComponentBuilder
 
   _$FixesCreateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$FixesCreateNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'FixesCreateNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'FixesCreateNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'FixesCreateNonFieldErrorsErrorComponent', 'detail'));
+        _$FixesCreateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'FixesCreateNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'FixesCreateNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'FixesCreateNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

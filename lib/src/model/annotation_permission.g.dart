@@ -18,23 +18,14 @@ class _$AnnotationPermission extends AnnotationPermission {
 
   factory _$AnnotationPermission(
           [void Function(AnnotationPermissionBuilder)? updates]) =>
-      (new AnnotationPermissionBuilder()..update(updates))._build();
+      (AnnotationPermissionBuilder()..update(updates))._build();
 
   _$AnnotationPermission._(
       {required this.add,
       required this.change,
       required this.view,
       required this.delete})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(add, r'AnnotationPermission', 'add');
-    BuiltValueNullFieldError.checkNotNull(
-        change, r'AnnotationPermission', 'change');
-    BuiltValueNullFieldError.checkNotNull(
-        view, r'AnnotationPermission', 'view');
-    BuiltValueNullFieldError.checkNotNull(
-        delete, r'AnnotationPermission', 'delete');
-  }
-
+      : super._();
   @override
   AnnotationPermission rebuild(
           void Function(AnnotationPermissionBuilder) updates) =>
@@ -42,7 +33,7 @@ class _$AnnotationPermission extends AnnotationPermission {
 
   @override
   AnnotationPermissionBuilder toBuilder() =>
-      new AnnotationPermissionBuilder()..replace(this);
+      AnnotationPermissionBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -114,7 +105,6 @@ class AnnotationPermissionBuilder
 
   @override
   void replace(AnnotationPermission other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AnnotationPermission;
   }
 
@@ -128,15 +118,16 @@ class AnnotationPermissionBuilder
 
   _$AnnotationPermission _build() {
     final _$result = _$v ??
-        new _$AnnotationPermission._(
-            add: BuiltValueNullFieldError.checkNotNull(
-                add, r'AnnotationPermission', 'add'),
-            change: BuiltValueNullFieldError.checkNotNull(
-                change, r'AnnotationPermission', 'change'),
-            view: BuiltValueNullFieldError.checkNotNull(
-                view, r'AnnotationPermission', 'view'),
-            delete: BuiltValueNullFieldError.checkNotNull(
-                delete, r'AnnotationPermission', 'delete'));
+        _$AnnotationPermission._(
+          add: BuiltValueNullFieldError.checkNotNull(
+              add, r'AnnotationPermission', 'add'),
+          change: BuiltValueNullFieldError.checkNotNull(
+              change, r'AnnotationPermission', 'change'),
+          view: BuiltValueNullFieldError.checkNotNull(
+              view, r'AnnotationPermission', 'view'),
+          delete: BuiltValueNullFieldError.checkNotNull(
+              delete, r'AnnotationPermission', 'delete'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -26,7 +26,7 @@ DevicesCreateTypeErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesCreateTypeErrorComponentAttrEnum>
-    _$devicesCreateTypeErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesCreateTypeErrorComponentAttrEnumValues = BuiltSet<
         DevicesCreateTypeErrorComponentAttrEnum>(const <DevicesCreateTypeErrorComponentAttrEnum>[
   _$devicesCreateTypeErrorComponentAttrEnum_type,
   _$devicesCreateTypeErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ DevicesCreateTypeErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesCreateTypeErrorComponentCodeEnum>
-    _$devicesCreateTypeErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesCreateTypeErrorComponentCodeEnumValues = BuiltSet<
         DevicesCreateTypeErrorComponentCodeEnum>(const <DevicesCreateTypeErrorComponentCodeEnum>[
   _$devicesCreateTypeErrorComponentCodeEnum_invalidChoice,
   _$devicesCreateTypeErrorComponentCodeEnum_null_,
@@ -72,10 +72,10 @@ final BuiltSet<DevicesCreateTypeErrorComponentCodeEnum>
 
 Serializer<DevicesCreateTypeErrorComponentAttrEnum>
     _$devicesCreateTypeErrorComponentAttrEnumSerializer =
-    new _$DevicesCreateTypeErrorComponentAttrEnumSerializer();
+    _$DevicesCreateTypeErrorComponentAttrEnumSerializer();
 Serializer<DevicesCreateTypeErrorComponentCodeEnum>
     _$devicesCreateTypeErrorComponentCodeEnumSerializer =
-    new _$DevicesCreateTypeErrorComponentCodeEnumSerializer();
+    _$DevicesCreateTypeErrorComponentCodeEnumSerializer();
 
 class _$DevicesCreateTypeErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<DevicesCreateTypeErrorComponentAttrEnum> {
@@ -156,19 +156,11 @@ class _$DevicesCreateTypeErrorComponent
 
   factory _$DevicesCreateTypeErrorComponent(
           [void Function(DevicesCreateTypeErrorComponentBuilder)? updates]) =>
-      (new DevicesCreateTypeErrorComponentBuilder()..update(updates))._build();
+      (DevicesCreateTypeErrorComponentBuilder()..update(updates))._build();
 
   _$DevicesCreateTypeErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesCreateTypeErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesCreateTypeErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesCreateTypeErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesCreateTypeErrorComponent rebuild(
           void Function(DevicesCreateTypeErrorComponentBuilder) updates) =>
@@ -176,7 +168,7 @@ class _$DevicesCreateTypeErrorComponent
 
   @override
   DevicesCreateTypeErrorComponentBuilder toBuilder() =>
-      new DevicesCreateTypeErrorComponentBuilder()..replace(this);
+      DevicesCreateTypeErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -244,7 +236,6 @@ class DevicesCreateTypeErrorComponentBuilder
 
   @override
   void replace(DevicesCreateTypeErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesCreateTypeErrorComponent;
   }
 
@@ -258,13 +249,14 @@ class DevicesCreateTypeErrorComponentBuilder
 
   _$DevicesCreateTypeErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesCreateTypeErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesCreateTypeErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesCreateTypeErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesCreateTypeErrorComponent', 'detail'));
+        _$DevicesCreateTypeErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesCreateTypeErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesCreateTypeErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesCreateTypeErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

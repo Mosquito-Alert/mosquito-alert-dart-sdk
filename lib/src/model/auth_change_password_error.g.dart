@@ -26,7 +26,7 @@ AuthChangePasswordErrorAttrEnum _$authChangePasswordErrorAttrEnumValueOf(
 }
 
 final BuiltSet<AuthChangePasswordErrorAttrEnum>
-    _$authChangePasswordErrorAttrEnumValues = new BuiltSet<
+    _$authChangePasswordErrorAttrEnumValues = BuiltSet<
         AuthChangePasswordErrorAttrEnum>(const <AuthChangePasswordErrorAttrEnum>[
   _$authChangePasswordErrorAttrEnum_password,
   _$authChangePasswordErrorAttrEnum_unknownDefaultOpenApi,
@@ -80,7 +80,7 @@ AuthChangePasswordErrorCodeEnum _$authChangePasswordErrorCodeEnumValueOf(
 }
 
 final BuiltSet<AuthChangePasswordErrorCodeEnum>
-    _$authChangePasswordErrorCodeEnumValues = new BuiltSet<
+    _$authChangePasswordErrorCodeEnumValues = BuiltSet<
         AuthChangePasswordErrorCodeEnum>(const <AuthChangePasswordErrorCodeEnum>[
   _$authChangePasswordErrorCodeEnum_blank,
   _$authChangePasswordErrorCodeEnum_invalid,
@@ -94,10 +94,10 @@ final BuiltSet<AuthChangePasswordErrorCodeEnum>
 
 Serializer<AuthChangePasswordErrorAttrEnum>
     _$authChangePasswordErrorAttrEnumSerializer =
-    new _$AuthChangePasswordErrorAttrEnumSerializer();
+    _$AuthChangePasswordErrorAttrEnumSerializer();
 Serializer<AuthChangePasswordErrorCodeEnum>
     _$authChangePasswordErrorCodeEnumSerializer =
-    new _$AuthChangePasswordErrorCodeEnumSerializer();
+    _$AuthChangePasswordErrorCodeEnumSerializer();
 
 class _$AuthChangePasswordErrorAttrEnumSerializer
     implements PrimitiveSerializer<AuthChangePasswordErrorAttrEnum> {
@@ -177,13 +177,9 @@ class _$AuthChangePasswordError extends AuthChangePasswordError {
 
   factory _$AuthChangePasswordError(
           [void Function(AuthChangePasswordErrorBuilder)? updates]) =>
-      (new AuthChangePasswordErrorBuilder()..update(updates))._build();
+      (AuthChangePasswordErrorBuilder()..update(updates))._build();
 
-  _$AuthChangePasswordError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'AuthChangePasswordError', 'oneOf');
-  }
-
+  _$AuthChangePasswordError._({required this.oneOf}) : super._();
   @override
   AuthChangePasswordError rebuild(
           void Function(AuthChangePasswordErrorBuilder) updates) =>
@@ -191,7 +187,7 @@ class _$AuthChangePasswordError extends AuthChangePasswordError {
 
   @override
   AuthChangePasswordErrorBuilder toBuilder() =>
-      new AuthChangePasswordErrorBuilder()..replace(this);
+      AuthChangePasswordErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -239,7 +235,6 @@ class AuthChangePasswordErrorBuilder
 
   @override
   void replace(AuthChangePasswordError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthChangePasswordError;
   }
 
@@ -253,9 +248,10 @@ class AuthChangePasswordErrorBuilder
 
   _$AuthChangePasswordError _build() {
     final _$result = _$v ??
-        new _$AuthChangePasswordError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'AuthChangePasswordError', 'oneOf'));
+        _$AuthChangePasswordError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'AuthChangePasswordError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

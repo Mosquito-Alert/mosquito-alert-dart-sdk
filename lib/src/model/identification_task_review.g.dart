@@ -31,7 +31,7 @@ IdentificationTaskReviewActionEnum _$identificationTaskReviewActionEnumValueOf(
 }
 
 final BuiltSet<IdentificationTaskReviewActionEnum>
-    _$identificationTaskReviewActionEnumValues = new BuiltSet<
+    _$identificationTaskReviewActionEnumValues = BuiltSet<
         IdentificationTaskReviewActionEnum>(const <IdentificationTaskReviewActionEnum>[
   _$identificationTaskReviewActionEnum_agree,
   _$identificationTaskReviewActionEnum_overwrite,
@@ -40,7 +40,7 @@ final BuiltSet<IdentificationTaskReviewActionEnum>
 
 Serializer<IdentificationTaskReviewActionEnum>
     _$identificationTaskReviewActionEnumSerializer =
-    new _$IdentificationTaskReviewActionEnumSerializer();
+    _$IdentificationTaskReviewActionEnumSerializer();
 
 class _$IdentificationTaskReviewActionEnumSerializer
     implements PrimitiveSerializer<IdentificationTaskReviewActionEnum> {
@@ -82,16 +82,10 @@ class _$IdentificationTaskReview extends IdentificationTaskReview {
 
   factory _$IdentificationTaskReview(
           [void Function(IdentificationTaskReviewBuilder)? updates]) =>
-      (new IdentificationTaskReviewBuilder()..update(updates))._build();
+      (IdentificationTaskReviewBuilder()..update(updates))._build();
 
   _$IdentificationTaskReview._({required this.action, required this.createdAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        action, r'IdentificationTaskReview', 'action');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'IdentificationTaskReview', 'createdAt');
-  }
-
+      : super._();
   @override
   IdentificationTaskReview rebuild(
           void Function(IdentificationTaskReviewBuilder) updates) =>
@@ -99,7 +93,7 @@ class _$IdentificationTaskReview extends IdentificationTaskReview {
 
   @override
   IdentificationTaskReviewBuilder toBuilder() =>
-      new IdentificationTaskReviewBuilder()..replace(this);
+      IdentificationTaskReviewBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -157,7 +151,6 @@ class IdentificationTaskReviewBuilder
 
   @override
   void replace(IdentificationTaskReview other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationTaskReview;
   }
 
@@ -171,11 +164,12 @@ class IdentificationTaskReviewBuilder
 
   _$IdentificationTaskReview _build() {
     final _$result = _$v ??
-        new _$IdentificationTaskReview._(
-            action: BuiltValueNullFieldError.checkNotNull(
-                action, r'IdentificationTaskReview', 'action'),
-            createdAt: BuiltValueNullFieldError.checkNotNull(
-                createdAt, r'IdentificationTaskReview', 'createdAt'));
+        _$IdentificationTaskReview._(
+          action: BuiltValueNullFieldError.checkNotNull(
+              action, r'IdentificationTaskReview', 'action'),
+          createdAt: BuiltValueNullFieldError.checkNotNull(
+              createdAt, r'IdentificationTaskReview', 'createdAt'),
+        );
     replace(_$result);
     return _$result;
   }

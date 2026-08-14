@@ -24,7 +24,7 @@ CampaignsListErrorAttrEnum _$campaignsListErrorAttrEnumValueOf(String name) {
 }
 
 final BuiltSet<CampaignsListErrorAttrEnum> _$campaignsListErrorAttrEnumValues =
-    new BuiltSet<CampaignsListErrorAttrEnum>(const <CampaignsListErrorAttrEnum>[
+    BuiltSet<CampaignsListErrorAttrEnum>(const <CampaignsListErrorAttrEnum>[
   _$campaignsListErrorAttrEnum_orderBy,
   _$campaignsListErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -47,15 +47,15 @@ CampaignsListErrorCodeEnum _$campaignsListErrorCodeEnumValueOf(String name) {
 }
 
 final BuiltSet<CampaignsListErrorCodeEnum> _$campaignsListErrorCodeEnumValues =
-    new BuiltSet<CampaignsListErrorCodeEnum>(const <CampaignsListErrorCodeEnum>[
+    BuiltSet<CampaignsListErrorCodeEnum>(const <CampaignsListErrorCodeEnum>[
   _$campaignsListErrorCodeEnum_invalidChoice,
   _$campaignsListErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<CampaignsListErrorAttrEnum> _$campaignsListErrorAttrEnumSerializer =
-    new _$CampaignsListErrorAttrEnumSerializer();
+    _$CampaignsListErrorAttrEnumSerializer();
 Serializer<CampaignsListErrorCodeEnum> _$campaignsListErrorCodeEnumSerializer =
-    new _$CampaignsListErrorCodeEnumSerializer();
+    _$CampaignsListErrorCodeEnumSerializer();
 
 class _$CampaignsListErrorAttrEnumSerializer
     implements PrimitiveSerializer<CampaignsListErrorAttrEnum> {
@@ -121,13 +121,9 @@ class _$CampaignsListError extends CampaignsListError {
 
   factory _$CampaignsListError(
           [void Function(CampaignsListErrorBuilder)? updates]) =>
-      (new CampaignsListErrorBuilder()..update(updates))._build();
+      (CampaignsListErrorBuilder()..update(updates))._build();
 
-  _$CampaignsListError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'CampaignsListError', 'oneOf');
-  }
-
+  _$CampaignsListError._({required this.oneOf}) : super._();
   @override
   CampaignsListError rebuild(
           void Function(CampaignsListErrorBuilder) updates) =>
@@ -135,7 +131,7 @@ class _$CampaignsListError extends CampaignsListError {
 
   @override
   CampaignsListErrorBuilder toBuilder() =>
-      new CampaignsListErrorBuilder()..replace(this);
+      CampaignsListErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -182,7 +178,6 @@ class CampaignsListErrorBuilder
 
   @override
   void replace(CampaignsListError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$CampaignsListError;
   }
 
@@ -196,9 +191,10 @@ class CampaignsListErrorBuilder
 
   _$CampaignsListError _build() {
     final _$result = _$v ??
-        new _$CampaignsListError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'CampaignsListError', 'oneOf'));
+        _$CampaignsListError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'CampaignsListError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

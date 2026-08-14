@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnum_tagsPeriodINDEX,
   _$identificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnum_blank,
   _$identificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnum_invalid,
@@ -105,10 +105,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentAttrEnumSerializer
     implements
@@ -211,23 +211,13 @@ class _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent rebuild(
           void Function(
@@ -238,7 +228,7 @@ class _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent
   @override
   IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -317,7 +307,6 @@ class IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent;
   }
@@ -336,19 +325,20 @@ class IdentificationtasksAnnotationsCreateTagsINDEXErrorComponentBuilder
 
   _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent',
-                'detail'));
+        _$IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateTagsINDEXErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

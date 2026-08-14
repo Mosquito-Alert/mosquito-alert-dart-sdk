@@ -21,7 +21,7 @@ class _$Fix extends Fix {
   final double? power;
 
   factory _$Fix([void Function(FixBuilder)? updates]) =>
-      (new FixBuilder()..update(updates))._build();
+      (FixBuilder()..update(updates))._build();
 
   _$Fix._(
       {required this.coverageUuid,
@@ -30,20 +30,13 @@ class _$Fix extends Fix {
       required this.receivedAt,
       required this.point,
       this.power})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(coverageUuid, r'Fix', 'coverageUuid');
-    BuiltValueNullFieldError.checkNotNull(createdAt, r'Fix', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(sentAt, r'Fix', 'sentAt');
-    BuiltValueNullFieldError.checkNotNull(receivedAt, r'Fix', 'receivedAt');
-    BuiltValueNullFieldError.checkNotNull(point, r'Fix', 'point');
-  }
-
+      : super._();
   @override
   Fix rebuild(void Function(FixBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  FixBuilder toBuilder() => new FixBuilder()..replace(this);
+  FixBuilder toBuilder() => FixBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -103,7 +96,7 @@ class FixBuilder implements Builder<Fix, FixBuilder> {
   set receivedAt(DateTime? receivedAt) => _$this._receivedAt = receivedAt;
 
   FixLocationBuilder? _point;
-  FixLocationBuilder get point => _$this._point ??= new FixLocationBuilder();
+  FixLocationBuilder get point => _$this._point ??= FixLocationBuilder();
   set point(FixLocationBuilder? point) => _$this._point = point;
 
   double? _power;
@@ -130,7 +123,6 @@ class FixBuilder implements Builder<Fix, FixBuilder> {
 
   @override
   void replace(Fix other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Fix;
   }
 
@@ -146,25 +138,25 @@ class FixBuilder implements Builder<Fix, FixBuilder> {
     _$Fix _$result;
     try {
       _$result = _$v ??
-          new _$Fix._(
-              coverageUuid: BuiltValueNullFieldError.checkNotNull(
-                  coverageUuid, r'Fix', 'coverageUuid'),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'Fix', 'createdAt'),
-              sentAt: BuiltValueNullFieldError.checkNotNull(
-                  sentAt, r'Fix', 'sentAt'),
-              receivedAt: BuiltValueNullFieldError.checkNotNull(
-                  receivedAt, r'Fix', 'receivedAt'),
-              point: point.build(),
-              power: power);
+          _$Fix._(
+            coverageUuid: BuiltValueNullFieldError.checkNotNull(
+                coverageUuid, r'Fix', 'coverageUuid'),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'Fix', 'createdAt'),
+            sentAt:
+                BuiltValueNullFieldError.checkNotNull(sentAt, r'Fix', 'sentAt'),
+            receivedAt: BuiltValueNullFieldError.checkNotNull(
+                receivedAt, r'Fix', 'receivedAt'),
+            point: point.build(),
+            power: power,
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'point';
         point.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'Fix', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(r'Fix', _$failedField, e.toString());
       }
       rethrow;
     }

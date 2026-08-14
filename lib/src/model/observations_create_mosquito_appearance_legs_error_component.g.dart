@@ -30,7 +30,7 @@ ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum
 
 final BuiltSet<ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum>
     _$observationsCreateMosquitoAppearanceLegsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum>(const <ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum>[
   _$observationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum_mosquitoAppearancePeriodLegs,
   _$observationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum
 
 final BuiltSet<ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum>
     _$observationsCreateMosquitoAppearanceLegsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum>(const <ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum>[
   _$observationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum_invalidChoice,
   _$observationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -68,10 +68,10 @@ final BuiltSet<ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnum>
     _$observationsCreateMosquitoAppearanceLegsErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnum>
     _$observationsCreateMosquitoAppearanceLegsErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateMosquitoAppearanceLegsErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateMosquitoAppearanceLegsErrorComponentAttrEnumSerializer
     implements
@@ -156,21 +156,13 @@ class _$ObservationsCreateMosquitoAppearanceLegsErrorComponent
           [void Function(
                   ObservationsCreateMosquitoAppearanceLegsErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateMosquitoAppearanceLegsErrorComponentBuilder()
+      (ObservationsCreateMosquitoAppearanceLegsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsCreateMosquitoAppearanceLegsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'ObservationsCreateMosquitoAppearanceLegsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'ObservationsCreateMosquitoAppearanceLegsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'ObservationsCreateMosquitoAppearanceLegsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateMosquitoAppearanceLegsErrorComponent rebuild(
           void Function(
@@ -180,7 +172,7 @@ class _$ObservationsCreateMosquitoAppearanceLegsErrorComponent
 
   @override
   ObservationsCreateMosquitoAppearanceLegsErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateMosquitoAppearanceLegsErrorComponentBuilder()
+      ObservationsCreateMosquitoAppearanceLegsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -256,7 +248,6 @@ class ObservationsCreateMosquitoAppearanceLegsErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateMosquitoAppearanceLegsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateMosquitoAppearanceLegsErrorComponent;
   }
 
@@ -273,19 +264,20 @@ class ObservationsCreateMosquitoAppearanceLegsErrorComponentBuilder
 
   _$ObservationsCreateMosquitoAppearanceLegsErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateMosquitoAppearanceLegsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsCreateMosquitoAppearanceLegsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsCreateMosquitoAppearanceLegsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsCreateMosquitoAppearanceLegsErrorComponent',
-                'detail'));
+        _$ObservationsCreateMosquitoAppearanceLegsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'ObservationsCreateMosquitoAppearanceLegsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'ObservationsCreateMosquitoAppearanceLegsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsCreateMosquitoAppearanceLegsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

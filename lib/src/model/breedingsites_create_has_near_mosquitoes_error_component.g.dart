@@ -30,7 +30,7 @@ BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum
 
 final BuiltSet<BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum>
     _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum>(const <BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum>[
   _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_hasNearMosquitoes,
   _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum
 
 final BuiltSet<BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum>
     _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum>(const <BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum>[
   _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_invalid,
   _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -68,10 +68,10 @@ final BuiltSet<BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum>
 
 Serializer<BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum>
     _$breedingsitesCreateHasNearMosquitoesErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnumSerializer();
+    _$BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnum>
     _$breedingsitesCreateHasNearMosquitoesErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnumSerializer();
+    _$BreedingsitesCreateHasNearMosquitoesErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnumSerializer
     implements
@@ -156,21 +156,13 @@ class _$BreedingsitesCreateHasNearMosquitoesErrorComponent
           [void Function(
                   BreedingsitesCreateHasNearMosquitoesErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesCreateHasNearMosquitoesErrorComponentBuilder()
+      (BreedingsitesCreateHasNearMosquitoesErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$BreedingsitesCreateHasNearMosquitoesErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesCreateHasNearMosquitoesErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesCreateHasNearMosquitoesErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'BreedingsitesCreateHasNearMosquitoesErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesCreateHasNearMosquitoesErrorComponent rebuild(
           void Function(
@@ -180,7 +172,7 @@ class _$BreedingsitesCreateHasNearMosquitoesErrorComponent
 
   @override
   BreedingsitesCreateHasNearMosquitoesErrorComponentBuilder toBuilder() =>
-      new BreedingsitesCreateHasNearMosquitoesErrorComponentBuilder()
+      BreedingsitesCreateHasNearMosquitoesErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -252,7 +244,6 @@ class BreedingsitesCreateHasNearMosquitoesErrorComponentBuilder
 
   @override
   void replace(BreedingsitesCreateHasNearMosquitoesErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesCreateHasNearMosquitoesErrorComponent;
   }
 
@@ -268,15 +259,14 @@ class BreedingsitesCreateHasNearMosquitoesErrorComponentBuilder
 
   _$BreedingsitesCreateHasNearMosquitoesErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesCreateHasNearMosquitoesErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'BreedingsitesCreateHasNearMosquitoesErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'BreedingsitesCreateHasNearMosquitoesErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'BreedingsitesCreateHasNearMosquitoesErrorComponent',
-                'detail'));
+        _$BreedingsitesCreateHasNearMosquitoesErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'BreedingsitesCreateHasNearMosquitoesErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'BreedingsitesCreateHasNearMosquitoesErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'BreedingsitesCreateHasNearMosquitoesErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

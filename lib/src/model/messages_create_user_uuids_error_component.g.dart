@@ -27,7 +27,7 @@ MessagesCreateUserUuidsErrorComponentAttrEnum
 }
 
 final BuiltSet<MessagesCreateUserUuidsErrorComponentAttrEnum>
-    _$messagesCreateUserUuidsErrorComponentAttrEnumValues = new BuiltSet<
+    _$messagesCreateUserUuidsErrorComponentAttrEnumValues = BuiltSet<
         MessagesCreateUserUuidsErrorComponentAttrEnum>(const <MessagesCreateUserUuidsErrorComponentAttrEnum>[
   _$messagesCreateUserUuidsErrorComponentAttrEnum_userUuids,
   _$messagesCreateUserUuidsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ MessagesCreateUserUuidsErrorComponentCodeEnum
 }
 
 final BuiltSet<MessagesCreateUserUuidsErrorComponentCodeEnum>
-    _$messagesCreateUserUuidsErrorComponentCodeEnumValues = new BuiltSet<
+    _$messagesCreateUserUuidsErrorComponentCodeEnumValues = BuiltSet<
         MessagesCreateUserUuidsErrorComponentCodeEnum>(const <MessagesCreateUserUuidsErrorComponentCodeEnum>[
   _$messagesCreateUserUuidsErrorComponentCodeEnum_empty,
   _$messagesCreateUserUuidsErrorComponentCodeEnum_minLength,
@@ -86,10 +86,10 @@ final BuiltSet<MessagesCreateUserUuidsErrorComponentCodeEnum>
 
 Serializer<MessagesCreateUserUuidsErrorComponentAttrEnum>
     _$messagesCreateUserUuidsErrorComponentAttrEnumSerializer =
-    new _$MessagesCreateUserUuidsErrorComponentAttrEnumSerializer();
+    _$MessagesCreateUserUuidsErrorComponentAttrEnumSerializer();
 Serializer<MessagesCreateUserUuidsErrorComponentCodeEnum>
     _$messagesCreateUserUuidsErrorComponentCodeEnumSerializer =
-    new _$MessagesCreateUserUuidsErrorComponentCodeEnumSerializer();
+    _$MessagesCreateUserUuidsErrorComponentCodeEnumSerializer();
 
 class _$MessagesCreateUserUuidsErrorComponentAttrEnumSerializer
     implements
@@ -177,20 +177,12 @@ class _$MessagesCreateUserUuidsErrorComponent
   factory _$MessagesCreateUserUuidsErrorComponent(
           [void Function(MessagesCreateUserUuidsErrorComponentBuilder)?
               updates]) =>
-      (new MessagesCreateUserUuidsErrorComponentBuilder()..update(updates))
+      (MessagesCreateUserUuidsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$MessagesCreateUserUuidsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'MessagesCreateUserUuidsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'MessagesCreateUserUuidsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'MessagesCreateUserUuidsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   MessagesCreateUserUuidsErrorComponent rebuild(
           void Function(MessagesCreateUserUuidsErrorComponentBuilder)
@@ -199,7 +191,7 @@ class _$MessagesCreateUserUuidsErrorComponent
 
   @override
   MessagesCreateUserUuidsErrorComponentBuilder toBuilder() =>
-      new MessagesCreateUserUuidsErrorComponentBuilder()..replace(this);
+      MessagesCreateUserUuidsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -268,7 +260,6 @@ class MessagesCreateUserUuidsErrorComponentBuilder
 
   @override
   void replace(MessagesCreateUserUuidsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesCreateUserUuidsErrorComponent;
   }
 
@@ -283,13 +274,14 @@ class MessagesCreateUserUuidsErrorComponentBuilder
 
   _$MessagesCreateUserUuidsErrorComponent _build() {
     final _$result = _$v ??
-        new _$MessagesCreateUserUuidsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'MessagesCreateUserUuidsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'MessagesCreateUserUuidsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'MessagesCreateUserUuidsErrorComponent', 'detail'));
+        _$MessagesCreateUserUuidsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'MessagesCreateUserUuidsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'MessagesCreateUserUuidsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'MessagesCreateUserUuidsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

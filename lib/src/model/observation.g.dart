@@ -40,7 +40,7 @@ ObservationEventEnvironmentEnum _$observationEventEnvironmentEnumValueOf(
 }
 
 final BuiltSet<ObservationEventEnvironmentEnum>
-    _$observationEventEnvironmentEnumValues = new BuiltSet<
+    _$observationEventEnvironmentEnumValues = BuiltSet<
         ObservationEventEnvironmentEnum>(const <ObservationEventEnvironmentEnum>[
   _$observationEventEnvironmentEnum_indoors,
   _$observationEventEnvironmentEnum_outdoors,
@@ -87,7 +87,7 @@ ObservationEventMomentEnum _$observationEventMomentEnumValueOf(String name) {
 }
 
 final BuiltSet<ObservationEventMomentEnum> _$observationEventMomentEnumValues =
-    new BuiltSet<ObservationEventMomentEnum>(const <ObservationEventMomentEnum>[
+    BuiltSet<ObservationEventMomentEnum>(const <ObservationEventMomentEnum>[
   _$observationEventMomentEnum_now,
   _$observationEventMomentEnum_lastMorning,
   _$observationEventMomentEnum_lastMidday,
@@ -99,9 +99,9 @@ final BuiltSet<ObservationEventMomentEnum> _$observationEventMomentEnumValues =
 
 Serializer<ObservationEventEnvironmentEnum>
     _$observationEventEnvironmentEnumSerializer =
-    new _$ObservationEventEnvironmentEnumSerializer();
+    _$ObservationEventEnvironmentEnumSerializer();
 Serializer<ObservationEventMomentEnum> _$observationEventMomentEnumSerializer =
-    new _$ObservationEventMomentEnumSerializer();
+    _$ObservationEventMomentEnumSerializer();
 
 class _$ObservationEventEnvironmentEnumSerializer
     implements PrimitiveSerializer<ObservationEventEnvironmentEnum> {
@@ -215,7 +215,7 @@ class _$Observation extends Observation {
   final MosquitoAppearance? mosquitoAppearance;
 
   factory _$Observation([void Function(ObservationBuilder)? updates]) =>
-      (new ObservationBuilder()..update(updates))._build();
+      (ObservationBuilder()..update(updates))._build();
 
   _$Observation._(
       {required this.uuid,
@@ -235,31 +235,13 @@ class _$Observation extends Observation {
       this.eventEnvironment,
       this.eventMoment,
       this.mosquitoAppearance})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'Observation', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(shortId, r'Observation', 'shortId');
-    BuiltValueNullFieldError.checkNotNull(userUuid, r'Observation', 'userUuid');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'Observation', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAtLocal, r'Observation', 'createdAtLocal');
-    BuiltValueNullFieldError.checkNotNull(sentAt, r'Observation', 'sentAt');
-    BuiltValueNullFieldError.checkNotNull(
-        receivedAt, r'Observation', 'receivedAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, r'Observation', 'updatedAt');
-    BuiltValueNullFieldError.checkNotNull(location, r'Observation', 'location');
-    BuiltValueNullFieldError.checkNotNull(
-        published, r'Observation', 'published');
-    BuiltValueNullFieldError.checkNotNull(photos, r'Observation', 'photos');
-  }
-
+      : super._();
   @override
   Observation rebuild(void Function(ObservationBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  ObservationBuilder toBuilder() => new ObservationBuilder()..replace(this);
+  ObservationBuilder toBuilder() => ObservationBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -369,7 +351,7 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   LocationBuilder? _location;
-  LocationBuilder get location => _$this._location ??= new LocationBuilder();
+  LocationBuilder get location => _$this._location ??= LocationBuilder();
   set location(LocationBuilder? location) => _$this._location = location;
 
   String? _note;
@@ -377,7 +359,7 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
   set note(String? note) => _$this._note = note;
 
   ListBuilder<String>? _tags;
-  ListBuilder<String> get tags => _$this._tags ??= new ListBuilder<String>();
+  ListBuilder<String> get tags => _$this._tags ??= ListBuilder<String>();
   set tags(ListBuilder<String>? tags) => _$this._tags = tags;
 
   bool? _published;
@@ -386,12 +368,12 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
 
   ListBuilder<SimplePhoto>? _photos;
   ListBuilder<SimplePhoto> get photos =>
-      _$this._photos ??= new ListBuilder<SimplePhoto>();
+      _$this._photos ??= ListBuilder<SimplePhoto>();
   set photos(ListBuilder<SimplePhoto>? photos) => _$this._photos = photos;
 
   IdentificationBuilder? _identification;
   IdentificationBuilder get identification =>
-      _$this._identification ??= new IdentificationBuilder();
+      _$this._identification ??= IdentificationBuilder();
   set identification(IdentificationBuilder? identification) =>
       _$this._identification = identification;
 
@@ -408,7 +390,7 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
 
   MosquitoAppearanceBuilder? _mosquitoAppearance;
   MosquitoAppearanceBuilder get mosquitoAppearance =>
-      _$this._mosquitoAppearance ??= new MosquitoAppearanceBuilder();
+      _$this._mosquitoAppearance ??= MosquitoAppearanceBuilder();
   set mosquitoAppearance(MosquitoAppearanceBuilder? mosquitoAppearance) =>
       _$this._mosquitoAppearance = mosquitoAppearance;
 
@@ -443,7 +425,6 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
 
   @override
   void replace(Observation other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Observation;
   }
 
@@ -459,33 +440,34 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
     _$Observation _$result;
     try {
       _$result = _$v ??
-          new _$Observation._(
-              uuid: BuiltValueNullFieldError.checkNotNull(
-                  uuid, r'Observation', 'uuid'),
-              shortId: BuiltValueNullFieldError.checkNotNull(
-                  shortId, r'Observation', 'shortId'),
-              userUuid: BuiltValueNullFieldError.checkNotNull(
-                  userUuid, r'Observation', 'userUuid'),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'Observation', 'createdAt'),
-              createdAtLocal: BuiltValueNullFieldError.checkNotNull(
-                  createdAtLocal, r'Observation', 'createdAtLocal'),
-              sentAt: BuiltValueNullFieldError.checkNotNull(
-                  sentAt, r'Observation', 'sentAt'),
-              receivedAt: BuiltValueNullFieldError.checkNotNull(
-                  receivedAt, r'Observation', 'receivedAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'Observation', 'updatedAt'),
-              location: location.build(),
-              note: note,
-              tags: _tags?.build(),
-              published: BuiltValueNullFieldError.checkNotNull(
-                  published, r'Observation', 'published'),
-              photos: photos.build(),
-              identification: _identification?.build(),
-              eventEnvironment: eventEnvironment,
-              eventMoment: eventMoment,
-              mosquitoAppearance: _mosquitoAppearance?.build());
+          _$Observation._(
+            uuid: BuiltValueNullFieldError.checkNotNull(
+                uuid, r'Observation', 'uuid'),
+            shortId: BuiltValueNullFieldError.checkNotNull(
+                shortId, r'Observation', 'shortId'),
+            userUuid: BuiltValueNullFieldError.checkNotNull(
+                userUuid, r'Observation', 'userUuid'),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'Observation', 'createdAt'),
+            createdAtLocal: BuiltValueNullFieldError.checkNotNull(
+                createdAtLocal, r'Observation', 'createdAtLocal'),
+            sentAt: BuiltValueNullFieldError.checkNotNull(
+                sentAt, r'Observation', 'sentAt'),
+            receivedAt: BuiltValueNullFieldError.checkNotNull(
+                receivedAt, r'Observation', 'receivedAt'),
+            updatedAt: BuiltValueNullFieldError.checkNotNull(
+                updatedAt, r'Observation', 'updatedAt'),
+            location: location.build(),
+            note: note,
+            tags: _tags?.build(),
+            published: BuiltValueNullFieldError.checkNotNull(
+                published, r'Observation', 'published'),
+            photos: photos.build(),
+            identification: _identification?.build(),
+            eventEnvironment: eventEnvironment,
+            eventMoment: eventMoment,
+            mosquitoAppearance: _mosquitoAppearance?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -503,7 +485,7 @@ class ObservationBuilder implements Builder<Observation, ObservationBuilder> {
         _$failedField = 'mosquitoAppearance';
         _mosquitoAppearance?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'Observation', _$failedField, e.toString());
       }
       rethrow;

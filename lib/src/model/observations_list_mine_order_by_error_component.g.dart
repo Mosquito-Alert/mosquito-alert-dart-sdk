@@ -27,7 +27,7 @@ ObservationsListMineOrderByErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsListMineOrderByErrorComponentAttrEnum>
-    _$observationsListMineOrderByErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsListMineOrderByErrorComponentAttrEnumValues = BuiltSet<
         ObservationsListMineOrderByErrorComponentAttrEnum>(const <ObservationsListMineOrderByErrorComponentAttrEnum>[
   _$observationsListMineOrderByErrorComponentAttrEnum_orderBy,
   _$observationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ ObservationsListMineOrderByErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsListMineOrderByErrorComponentCodeEnum>
-    _$observationsListMineOrderByErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsListMineOrderByErrorComponentCodeEnumValues = BuiltSet<
         ObservationsListMineOrderByErrorComponentCodeEnum>(const <ObservationsListMineOrderByErrorComponentCodeEnum>[
   _$observationsListMineOrderByErrorComponentCodeEnum_invalidChoice,
   _$observationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<ObservationsListMineOrderByErrorComponentCodeEnum>
 
 Serializer<ObservationsListMineOrderByErrorComponentAttrEnum>
     _$observationsListMineOrderByErrorComponentAttrEnumSerializer =
-    new _$ObservationsListMineOrderByErrorComponentAttrEnumSerializer();
+    _$ObservationsListMineOrderByErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListMineOrderByErrorComponentCodeEnum>
     _$observationsListMineOrderByErrorComponentCodeEnumSerializer =
-    new _$ObservationsListMineOrderByErrorComponentCodeEnumSerializer();
+    _$ObservationsListMineOrderByErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListMineOrderByErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,12 @@ class _$ObservationsListMineOrderByErrorComponent
   factory _$ObservationsListMineOrderByErrorComponent(
           [void Function(ObservationsListMineOrderByErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListMineOrderByErrorComponentBuilder()..update(updates))
+      (ObservationsListMineOrderByErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsListMineOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsListMineOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsListMineOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsListMineOrderByErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsListMineOrderByErrorComponent rebuild(
           void Function(ObservationsListMineOrderByErrorComponentBuilder)
@@ -167,7 +159,7 @@ class _$ObservationsListMineOrderByErrorComponent
 
   @override
   ObservationsListMineOrderByErrorComponentBuilder toBuilder() =>
-      new ObservationsListMineOrderByErrorComponentBuilder()..replace(this);
+      ObservationsListMineOrderByErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -236,7 +228,6 @@ class ObservationsListMineOrderByErrorComponentBuilder
 
   @override
   void replace(ObservationsListMineOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListMineOrderByErrorComponent;
   }
 
@@ -252,13 +243,14 @@ class ObservationsListMineOrderByErrorComponentBuilder
 
   _$ObservationsListMineOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListMineOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsListMineOrderByErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsListMineOrderByErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsListMineOrderByErrorComponent', 'detail'));
+        _$ObservationsListMineOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsListMineOrderByErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsListMineOrderByErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsListMineOrderByErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

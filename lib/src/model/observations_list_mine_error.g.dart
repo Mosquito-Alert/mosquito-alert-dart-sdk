@@ -26,7 +26,7 @@ ObservationsListMineErrorAttrEnum _$observationsListMineErrorAttrEnumValueOf(
 }
 
 final BuiltSet<ObservationsListMineErrorAttrEnum>
-    _$observationsListMineErrorAttrEnumValues = new BuiltSet<
+    _$observationsListMineErrorAttrEnumValues = BuiltSet<
         ObservationsListMineErrorAttrEnum>(const <ObservationsListMineErrorAttrEnum>[
   _$observationsListMineErrorAttrEnum_identificationTaxonIdsLookup,
   _$observationsListMineErrorAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ ObservationsListMineErrorCodeEnum _$observationsListMineErrorCodeEnumValueOf(
 }
 
 final BuiltSet<ObservationsListMineErrorCodeEnum>
-    _$observationsListMineErrorCodeEnumValues = new BuiltSet<
+    _$observationsListMineErrorCodeEnumValues = BuiltSet<
         ObservationsListMineErrorCodeEnum>(const <ObservationsListMineErrorCodeEnum>[
   _$observationsListMineErrorCodeEnum_invalidChoice,
   _$observationsListMineErrorCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<ObservationsListMineErrorCodeEnum>
 
 Serializer<ObservationsListMineErrorAttrEnum>
     _$observationsListMineErrorAttrEnumSerializer =
-    new _$ObservationsListMineErrorAttrEnumSerializer();
+    _$ObservationsListMineErrorAttrEnumSerializer();
 Serializer<ObservationsListMineErrorCodeEnum>
     _$observationsListMineErrorCodeEnumSerializer =
-    new _$ObservationsListMineErrorCodeEnumSerializer();
+    _$ObservationsListMineErrorCodeEnumSerializer();
 
 class _$ObservationsListMineErrorAttrEnumSerializer
     implements PrimitiveSerializer<ObservationsListMineErrorAttrEnum> {
@@ -131,13 +131,9 @@ class _$ObservationsListMineError extends ObservationsListMineError {
 
   factory _$ObservationsListMineError(
           [void Function(ObservationsListMineErrorBuilder)? updates]) =>
-      (new ObservationsListMineErrorBuilder()..update(updates))._build();
+      (ObservationsListMineErrorBuilder()..update(updates))._build();
 
-  _$ObservationsListMineError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'ObservationsListMineError', 'oneOf');
-  }
-
+  _$ObservationsListMineError._({required this.oneOf}) : super._();
   @override
   ObservationsListMineError rebuild(
           void Function(ObservationsListMineErrorBuilder) updates) =>
@@ -145,7 +141,7 @@ class _$ObservationsListMineError extends ObservationsListMineError {
 
   @override
   ObservationsListMineErrorBuilder toBuilder() =>
-      new ObservationsListMineErrorBuilder()..replace(this);
+      ObservationsListMineErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -193,7 +189,6 @@ class ObservationsListMineErrorBuilder
 
   @override
   void replace(ObservationsListMineError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListMineError;
   }
 
@@ -207,9 +202,10 @@ class ObservationsListMineErrorBuilder
 
   _$ObservationsListMineError _build() {
     final _$result = _$v ??
-        new _$ObservationsListMineError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'ObservationsListMineError', 'oneOf'));
+        _$ObservationsListMineError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'ObservationsListMineError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -30,7 +30,7 @@ BoundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnum
 
 final BuiltSet<BoundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnum>
     _$boundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         BoundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnum>(const <BoundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnum>[
   _$boundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$boundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -66,7 +66,7 @@ BoundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnum
 
 final BuiltSet<BoundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnum>
     _$boundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         BoundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnum>(const <BoundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnum>[
   _$boundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$boundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -75,10 +75,10 @@ final BuiltSet<BoundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<BoundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnum>
     _$boundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$BoundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$BoundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<BoundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnum>
     _$boundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$BoundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$BoundariesCreateTemporaryNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$BoundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -165,21 +165,13 @@ class _$BoundariesCreateTemporaryNonFieldErrorsErrorComponent
           [void Function(
                   BoundariesCreateTemporaryNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new BoundariesCreateTemporaryNonFieldErrorsErrorComponentBuilder()
+      (BoundariesCreateTemporaryNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$BoundariesCreateTemporaryNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BoundariesCreateTemporaryNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BoundariesCreateTemporaryNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'BoundariesCreateTemporaryNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BoundariesCreateTemporaryNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -189,7 +181,7 @@ class _$BoundariesCreateTemporaryNonFieldErrorsErrorComponent
 
   @override
   BoundariesCreateTemporaryNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new BoundariesCreateTemporaryNonFieldErrorsErrorComponentBuilder()
+      BoundariesCreateTemporaryNonFieldErrorsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -265,7 +257,6 @@ class BoundariesCreateTemporaryNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(BoundariesCreateTemporaryNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BoundariesCreateTemporaryNonFieldErrorsErrorComponent;
   }
 
@@ -282,19 +273,16 @@ class BoundariesCreateTemporaryNonFieldErrorsErrorComponentBuilder
 
   _$BoundariesCreateTemporaryNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$BoundariesCreateTemporaryNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'BoundariesCreateTemporaryNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'BoundariesCreateTemporaryNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'BoundariesCreateTemporaryNonFieldErrorsErrorComponent',
-                'detail'));
+        _$BoundariesCreateTemporaryNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'BoundariesCreateTemporaryNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'BoundariesCreateTemporaryNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'BoundariesCreateTemporaryNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

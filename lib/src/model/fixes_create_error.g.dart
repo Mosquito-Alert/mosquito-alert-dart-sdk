@@ -24,7 +24,7 @@ FixesCreateErrorAttrEnum _$fixesCreateErrorAttrEnumValueOf(String name) {
 }
 
 final BuiltSet<FixesCreateErrorAttrEnum> _$fixesCreateErrorAttrEnumValues =
-    new BuiltSet<FixesCreateErrorAttrEnum>(const <FixesCreateErrorAttrEnum>[
+    BuiltSet<FixesCreateErrorAttrEnum>(const <FixesCreateErrorAttrEnum>[
   _$fixesCreateErrorAttrEnum_power,
   _$fixesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -51,16 +51,16 @@ FixesCreateErrorCodeEnum _$fixesCreateErrorCodeEnumValueOf(String name) {
 }
 
 final BuiltSet<FixesCreateErrorCodeEnum> _$fixesCreateErrorCodeEnumValues =
-    new BuiltSet<FixesCreateErrorCodeEnum>(const <FixesCreateErrorCodeEnum>[
+    BuiltSet<FixesCreateErrorCodeEnum>(const <FixesCreateErrorCodeEnum>[
   _$fixesCreateErrorCodeEnum_invalid,
   _$fixesCreateErrorCodeEnum_maxStringLength,
   _$fixesCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<FixesCreateErrorAttrEnum> _$fixesCreateErrorAttrEnumSerializer =
-    new _$FixesCreateErrorAttrEnumSerializer();
+    _$FixesCreateErrorAttrEnumSerializer();
 Serializer<FixesCreateErrorCodeEnum> _$fixesCreateErrorCodeEnumSerializer =
-    new _$FixesCreateErrorCodeEnumSerializer();
+    _$FixesCreateErrorCodeEnumSerializer();
 
 class _$FixesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<FixesCreateErrorAttrEnum> {
@@ -128,19 +128,16 @@ class _$FixesCreateError extends FixesCreateError {
 
   factory _$FixesCreateError(
           [void Function(FixesCreateErrorBuilder)? updates]) =>
-      (new FixesCreateErrorBuilder()..update(updates))._build();
+      (FixesCreateErrorBuilder()..update(updates))._build();
 
-  _$FixesCreateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(oneOf, r'FixesCreateError', 'oneOf');
-  }
-
+  _$FixesCreateError._({required this.oneOf}) : super._();
   @override
   FixesCreateError rebuild(void Function(FixesCreateErrorBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   FixesCreateErrorBuilder toBuilder() =>
-      new FixesCreateErrorBuilder()..replace(this);
+      FixesCreateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -187,7 +184,6 @@ class FixesCreateErrorBuilder
 
   @override
   void replace(FixesCreateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixesCreateError;
   }
 
@@ -201,9 +197,10 @@ class FixesCreateErrorBuilder
 
   _$FixesCreateError _build() {
     final _$result = _$v ??
-        new _$FixesCreateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'FixesCreateError', 'oneOf'));
+        _$FixesCreateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'FixesCreateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

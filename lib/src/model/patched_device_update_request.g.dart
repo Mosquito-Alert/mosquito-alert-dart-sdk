@@ -18,12 +18,11 @@ class _$PatchedDeviceUpdateRequest extends PatchedDeviceUpdateRequest {
 
   factory _$PatchedDeviceUpdateRequest(
           [void Function(PatchedDeviceUpdateRequestBuilder)? updates]) =>
-      (new PatchedDeviceUpdateRequestBuilder()..update(updates))._build();
+      (PatchedDeviceUpdateRequestBuilder()..update(updates))._build();
 
   _$PatchedDeviceUpdateRequest._(
       {this.nameValue, this.fcmToken, this.os, this.mobileApp})
       : super._();
-
   @override
   PatchedDeviceUpdateRequest rebuild(
           void Function(PatchedDeviceUpdateRequestBuilder) updates) =>
@@ -31,7 +30,7 @@ class _$PatchedDeviceUpdateRequest extends PatchedDeviceUpdateRequest {
 
   @override
   PatchedDeviceUpdateRequestBuilder toBuilder() =>
-      new PatchedDeviceUpdateRequestBuilder()..replace(this);
+      PatchedDeviceUpdateRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -79,12 +78,12 @@ class PatchedDeviceUpdateRequestBuilder
   set fcmToken(String? fcmToken) => _$this._fcmToken = fcmToken;
 
   DeviceOsRequestBuilder? _os;
-  DeviceOsRequestBuilder get os => _$this._os ??= new DeviceOsRequestBuilder();
+  DeviceOsRequestBuilder get os => _$this._os ??= DeviceOsRequestBuilder();
   set os(DeviceOsRequestBuilder? os) => _$this._os = os;
 
   MobileAppRequestBuilder? _mobileApp;
   MobileAppRequestBuilder get mobileApp =>
-      _$this._mobileApp ??= new MobileAppRequestBuilder();
+      _$this._mobileApp ??= MobileAppRequestBuilder();
   set mobileApp(MobileAppRequestBuilder? mobileApp) =>
       _$this._mobileApp = mobileApp;
 
@@ -106,7 +105,6 @@ class PatchedDeviceUpdateRequestBuilder
 
   @override
   void replace(PatchedDeviceUpdateRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PatchedDeviceUpdateRequest;
   }
 
@@ -122,11 +120,12 @@ class PatchedDeviceUpdateRequestBuilder
     _$PatchedDeviceUpdateRequest _$result;
     try {
       _$result = _$v ??
-          new _$PatchedDeviceUpdateRequest._(
-              nameValue: nameValue,
-              fcmToken: fcmToken,
-              os: _os?.build(),
-              mobileApp: _mobileApp?.build());
+          _$PatchedDeviceUpdateRequest._(
+            nameValue: nameValue,
+            fcmToken: fcmToken,
+            os: _os?.build(),
+            mobileApp: _mobileApp?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -135,7 +134,7 @@ class PatchedDeviceUpdateRequestBuilder
         _$failedField = 'mobileApp';
         _mobileApp?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PatchedDeviceUpdateRequest', _$failedField, e.toString());
       }
       rethrow;

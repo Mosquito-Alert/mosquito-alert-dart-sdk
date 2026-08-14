@@ -15,22 +15,17 @@ class _$Photo extends Photo {
   final String imagePath;
 
   factory _$Photo([void Function(PhotoBuilder)? updates]) =>
-      (new PhotoBuilder()..update(updates))._build();
+      (PhotoBuilder()..update(updates))._build();
 
   _$Photo._(
       {required this.uuid, required this.imageUrl, required this.imagePath})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'Photo', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(imageUrl, r'Photo', 'imageUrl');
-    BuiltValueNullFieldError.checkNotNull(imagePath, r'Photo', 'imagePath');
-  }
-
+      : super._();
   @override
   Photo rebuild(void Function(PhotoBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  PhotoBuilder toBuilder() => new PhotoBuilder()..replace(this);
+  PhotoBuilder toBuilder() => PhotoBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -93,7 +88,6 @@ class PhotoBuilder implements Builder<Photo, PhotoBuilder> {
 
   @override
   void replace(Photo other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Photo;
   }
 
@@ -107,12 +101,13 @@ class PhotoBuilder implements Builder<Photo, PhotoBuilder> {
 
   _$Photo _build() {
     final _$result = _$v ??
-        new _$Photo._(
-            uuid: BuiltValueNullFieldError.checkNotNull(uuid, r'Photo', 'uuid'),
-            imageUrl: BuiltValueNullFieldError.checkNotNull(
-                imageUrl, r'Photo', 'imageUrl'),
-            imagePath: BuiltValueNullFieldError.checkNotNull(
-                imagePath, r'Photo', 'imagePath'));
+        _$Photo._(
+          uuid: BuiltValueNullFieldError.checkNotNull(uuid, r'Photo', 'uuid'),
+          imageUrl: BuiltValueNullFieldError.checkNotNull(
+              imageUrl, r'Photo', 'imageUrl'),
+          imagePath: BuiltValueNullFieldError.checkNotNull(
+              imagePath, r'Photo', 'imagePath'),
+        );
     replace(_$result);
     return _$result;
   }

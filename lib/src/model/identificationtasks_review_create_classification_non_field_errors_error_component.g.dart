@@ -31,7 +31,7 @@ IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnu
 final BuiltSet<
         IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnum>(const <IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnum>[
   _$identificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnum_classificationPeriodNonFieldErrors,
   _$identificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnu
 final BuiltSet<
         IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnum>(const <IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnum>[
   _$identificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$identificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnum_required_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponen
           [void Function(
                   IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentBuilder()
+      (IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -208,7 +194,7 @@ class _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponen
   @override
   IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentBuilder()
+          IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -293,7 +279,6 @@ class IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentB
   void replace(
       IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent;
   }
@@ -313,20 +298,21 @@ class IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponentB
   _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent
+        _$IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksReviewCreateClassificationNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

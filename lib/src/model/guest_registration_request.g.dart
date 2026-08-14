@@ -12,13 +12,9 @@ class _$GuestRegistrationRequest extends GuestRegistrationRequest {
 
   factory _$GuestRegistrationRequest(
           [void Function(GuestRegistrationRequestBuilder)? updates]) =>
-      (new GuestRegistrationRequestBuilder()..update(updates))._build();
+      (GuestRegistrationRequestBuilder()..update(updates))._build();
 
-  _$GuestRegistrationRequest._({required this.password}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        password, r'GuestRegistrationRequest', 'password');
-  }
-
+  _$GuestRegistrationRequest._({required this.password}) : super._();
   @override
   GuestRegistrationRequest rebuild(
           void Function(GuestRegistrationRequestBuilder) updates) =>
@@ -26,7 +22,7 @@ class _$GuestRegistrationRequest extends GuestRegistrationRequest {
 
   @override
   GuestRegistrationRequestBuilder toBuilder() =>
-      new GuestRegistrationRequestBuilder()..replace(this);
+      GuestRegistrationRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -74,7 +70,6 @@ class GuestRegistrationRequestBuilder
 
   @override
   void replace(GuestRegistrationRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GuestRegistrationRequest;
   }
 
@@ -88,9 +83,10 @@ class GuestRegistrationRequestBuilder
 
   _$GuestRegistrationRequest _build() {
     final _$result = _$v ??
-        new _$GuestRegistrationRequest._(
-            password: BuiltValueNullFieldError.checkNotNull(
-                password, r'GuestRegistrationRequest', 'password'));
+        _$GuestRegistrationRequest._(
+          password: BuiltValueNullFieldError.checkNotNull(
+              password, r'GuestRegistrationRequest', 'password'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -28,8 +28,7 @@ BoundariesCreateTemporaryGeojsonErrorComponentAttrEnum
 }
 
 final BuiltSet<BoundariesCreateTemporaryGeojsonErrorComponentAttrEnum>
-    _$boundariesCreateTemporaryGeojsonErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$boundariesCreateTemporaryGeojsonErrorComponentAttrEnumValues = BuiltSet<
         BoundariesCreateTemporaryGeojsonErrorComponentAttrEnum>(const <BoundariesCreateTemporaryGeojsonErrorComponentAttrEnum>[
   _$boundariesCreateTemporaryGeojsonErrorComponentAttrEnum_geojson,
   _$boundariesCreateTemporaryGeojsonErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,8 +61,7 @@ BoundariesCreateTemporaryGeojsonErrorComponentCodeEnum
 }
 
 final BuiltSet<BoundariesCreateTemporaryGeojsonErrorComponentCodeEnum>
-    _$boundariesCreateTemporaryGeojsonErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$boundariesCreateTemporaryGeojsonErrorComponentCodeEnumValues = BuiltSet<
         BoundariesCreateTemporaryGeojsonErrorComponentCodeEnum>(const <BoundariesCreateTemporaryGeojsonErrorComponentCodeEnum>[
   _$boundariesCreateTemporaryGeojsonErrorComponentCodeEnum_null_,
   _$boundariesCreateTemporaryGeojsonErrorComponentCodeEnum_required_,
@@ -72,10 +70,10 @@ final BuiltSet<BoundariesCreateTemporaryGeojsonErrorComponentCodeEnum>
 
 Serializer<BoundariesCreateTemporaryGeojsonErrorComponentAttrEnum>
     _$boundariesCreateTemporaryGeojsonErrorComponentAttrEnumSerializer =
-    new _$BoundariesCreateTemporaryGeojsonErrorComponentAttrEnumSerializer();
+    _$BoundariesCreateTemporaryGeojsonErrorComponentAttrEnumSerializer();
 Serializer<BoundariesCreateTemporaryGeojsonErrorComponentCodeEnum>
     _$boundariesCreateTemporaryGeojsonErrorComponentCodeEnumSerializer =
-    new _$BoundariesCreateTemporaryGeojsonErrorComponentCodeEnumSerializer();
+    _$BoundariesCreateTemporaryGeojsonErrorComponentCodeEnumSerializer();
 
 class _$BoundariesCreateTemporaryGeojsonErrorComponentAttrEnumSerializer
     implements
@@ -161,21 +159,12 @@ class _$BoundariesCreateTemporaryGeojsonErrorComponent
   factory _$BoundariesCreateTemporaryGeojsonErrorComponent(
           [void Function(BoundariesCreateTemporaryGeojsonErrorComponentBuilder)?
               updates]) =>
-      (new BoundariesCreateTemporaryGeojsonErrorComponentBuilder()
-            ..update(updates))
+      (BoundariesCreateTemporaryGeojsonErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BoundariesCreateTemporaryGeojsonErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BoundariesCreateTemporaryGeojsonErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BoundariesCreateTemporaryGeojsonErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BoundariesCreateTemporaryGeojsonErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BoundariesCreateTemporaryGeojsonErrorComponent rebuild(
           void Function(BoundariesCreateTemporaryGeojsonErrorComponentBuilder)
@@ -184,8 +173,7 @@ class _$BoundariesCreateTemporaryGeojsonErrorComponent
 
   @override
   BoundariesCreateTemporaryGeojsonErrorComponentBuilder toBuilder() =>
-      new BoundariesCreateTemporaryGeojsonErrorComponentBuilder()
-        ..replace(this);
+      BoundariesCreateTemporaryGeojsonErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -256,7 +244,6 @@ class BoundariesCreateTemporaryGeojsonErrorComponentBuilder
 
   @override
   void replace(BoundariesCreateTemporaryGeojsonErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BoundariesCreateTemporaryGeojsonErrorComponent;
   }
 
@@ -272,13 +259,14 @@ class BoundariesCreateTemporaryGeojsonErrorComponentBuilder
 
   _$BoundariesCreateTemporaryGeojsonErrorComponent _build() {
     final _$result = _$v ??
-        new _$BoundariesCreateTemporaryGeojsonErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'BoundariesCreateTemporaryGeojsonErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'BoundariesCreateTemporaryGeojsonErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BoundariesCreateTemporaryGeojsonErrorComponent', 'detail'));
+        _$BoundariesCreateTemporaryGeojsonErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BoundariesCreateTemporaryGeojsonErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BoundariesCreateTemporaryGeojsonErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'BoundariesCreateTemporaryGeojsonErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

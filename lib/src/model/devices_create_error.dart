@@ -169,9 +169,7 @@ class _$DevicesCreateErrorSerializer implements PrimitiveSerializer<DevicesCreat
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    DevicesCreateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    DevicesCreateError object) sync* {
   }
 
   @override

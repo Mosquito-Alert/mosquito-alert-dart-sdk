@@ -30,7 +30,7 @@ IdentificationtasksListResultAgreementErrorComponentAttrEnum
 
 final BuiltSet<IdentificationtasksListResultAgreementErrorComponentAttrEnum>
     _$identificationtasksListResultAgreementErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListResultAgreementErrorComponentAttrEnum>(const <IdentificationtasksListResultAgreementErrorComponentAttrEnum>[
   _$identificationtasksListResultAgreementErrorComponentAttrEnum_resultAgreement,
   _$identificationtasksListResultAgreementErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ IdentificationtasksListResultAgreementErrorComponentCodeEnum
 
 final BuiltSet<IdentificationtasksListResultAgreementErrorComponentCodeEnum>
     _$identificationtasksListResultAgreementErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListResultAgreementErrorComponentCodeEnum>(const <IdentificationtasksListResultAgreementErrorComponentCodeEnum>[
   _$identificationtasksListResultAgreementErrorComponentCodeEnum_invalid,
   _$identificationtasksListResultAgreementErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -68,10 +68,10 @@ final BuiltSet<IdentificationtasksListResultAgreementErrorComponentCodeEnum>
 
 Serializer<IdentificationtasksListResultAgreementErrorComponentAttrEnum>
     _$identificationtasksListResultAgreementErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListResultAgreementErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListResultAgreementErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksListResultAgreementErrorComponentCodeEnum>
     _$identificationtasksListResultAgreementErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListResultAgreementErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListResultAgreementErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListResultAgreementErrorComponentAttrEnumSerializer
     implements
@@ -156,21 +156,13 @@ class _$IdentificationtasksListResultAgreementErrorComponent
           [void Function(
                   IdentificationtasksListResultAgreementErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListResultAgreementErrorComponentBuilder()
+      (IdentificationtasksListResultAgreementErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksListResultAgreementErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'IdentificationtasksListResultAgreementErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'IdentificationtasksListResultAgreementErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'IdentificationtasksListResultAgreementErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListResultAgreementErrorComponent rebuild(
           void Function(
@@ -180,7 +172,7 @@ class _$IdentificationtasksListResultAgreementErrorComponent
 
   @override
   IdentificationtasksListResultAgreementErrorComponentBuilder toBuilder() =>
-      new IdentificationtasksListResultAgreementErrorComponentBuilder()
+      IdentificationtasksListResultAgreementErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -254,7 +246,6 @@ class IdentificationtasksListResultAgreementErrorComponentBuilder
 
   @override
   void replace(IdentificationtasksListResultAgreementErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListResultAgreementErrorComponent;
   }
 
@@ -271,19 +262,16 @@ class IdentificationtasksListResultAgreementErrorComponentBuilder
 
   _$IdentificationtasksListResultAgreementErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListResultAgreementErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksListResultAgreementErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksListResultAgreementErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksListResultAgreementErrorComponent',
-                'detail'));
+        _$IdentificationtasksListResultAgreementErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'IdentificationtasksListResultAgreementErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'IdentificationtasksListResultAgreementErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksListResultAgreementErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -16,11 +16,10 @@ class _$AnnotationFeedback extends AnnotationFeedback {
 
   factory _$AnnotationFeedback(
           [void Function(AnnotationFeedbackBuilder)? updates]) =>
-      (new AnnotationFeedbackBuilder()..update(updates))._build();
+      (AnnotationFeedbackBuilder()..update(updates))._build();
 
   _$AnnotationFeedback._({this.publicNote, this.internalNote, this.userNote})
       : super._();
-
   @override
   AnnotationFeedback rebuild(
           void Function(AnnotationFeedbackBuilder) updates) =>
@@ -28,7 +27,7 @@ class _$AnnotationFeedback extends AnnotationFeedback {
 
   @override
   AnnotationFeedbackBuilder toBuilder() =>
-      new AnnotationFeedbackBuilder()..replace(this);
+      AnnotationFeedbackBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -92,7 +91,6 @@ class AnnotationFeedbackBuilder
 
   @override
   void replace(AnnotationFeedback other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AnnotationFeedback;
   }
 
@@ -106,10 +104,11 @@ class AnnotationFeedbackBuilder
 
   _$AnnotationFeedback _build() {
     final _$result = _$v ??
-        new _$AnnotationFeedback._(
-            publicNote: publicNote,
-            internalNote: internalNote,
-            userNote: userNote);
+        _$AnnotationFeedback._(
+          publicNote: publicNote,
+          internalNote: internalNote,
+          userNote: userNote,
+        );
     replace(_$result);
     return _$result;
   }

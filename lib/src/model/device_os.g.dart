@@ -15,20 +15,16 @@ class _$DeviceOs extends DeviceOs {
   final String? locale;
 
   factory _$DeviceOs([void Function(DeviceOsBuilder)? updates]) =>
-      (new DeviceOsBuilder()..update(updates))._build();
+      (DeviceOsBuilder()..update(updates))._build();
 
   _$DeviceOs._({required this.nameValue, required this.version, this.locale})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(nameValue, r'DeviceOs', 'nameValue');
-    BuiltValueNullFieldError.checkNotNull(version, r'DeviceOs', 'version');
-  }
-
+      : super._();
   @override
   DeviceOs rebuild(void Function(DeviceOsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  DeviceOsBuilder toBuilder() => new DeviceOsBuilder()..replace(this);
+  DeviceOsBuilder toBuilder() => DeviceOsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -91,7 +87,6 @@ class DeviceOsBuilder implements Builder<DeviceOs, DeviceOsBuilder> {
 
   @override
   void replace(DeviceOs other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DeviceOs;
   }
 
@@ -105,12 +100,13 @@ class DeviceOsBuilder implements Builder<DeviceOs, DeviceOsBuilder> {
 
   _$DeviceOs _build() {
     final _$result = _$v ??
-        new _$DeviceOs._(
-            nameValue: BuiltValueNullFieldError.checkNotNull(
-                nameValue, r'DeviceOs', 'nameValue'),
-            version: BuiltValueNullFieldError.checkNotNull(
-                version, r'DeviceOs', 'version'),
-            locale: locale);
+        _$DeviceOs._(
+          nameValue: BuiltValueNullFieldError.checkNotNull(
+              nameValue, r'DeviceOs', 'nameValue'),
+          version: BuiltValueNullFieldError.checkNotNull(
+              version, r'DeviceOs', 'version'),
+          locale: locale,
+        );
     replace(_$result);
     return _$result;
   }

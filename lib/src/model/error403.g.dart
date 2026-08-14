@@ -23,13 +23,13 @@ Error403CodeEnum _$error403CodeEnumValueOf(String name) {
 }
 
 final BuiltSet<Error403CodeEnum> _$error403CodeEnumValues =
-    new BuiltSet<Error403CodeEnum>(const <Error403CodeEnum>[
+    BuiltSet<Error403CodeEnum>(const <Error403CodeEnum>[
   _$error403CodeEnum_permissionDenied,
   _$error403CodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<Error403CodeEnum> _$error403CodeEnumSerializer =
-    new _$Error403CodeEnumSerializer();
+    _$Error403CodeEnumSerializer();
 
 class _$Error403CodeEnumSerializer
     implements PrimitiveSerializer<Error403CodeEnum> {
@@ -68,20 +68,16 @@ class _$Error403 extends Error403 {
   final String? attr;
 
   factory _$Error403([void Function(Error403Builder)? updates]) =>
-      (new Error403Builder()..update(updates))._build();
+      (Error403Builder()..update(updates))._build();
 
   _$Error403._({required this.code, required this.detail, this.attr})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(code, r'Error403', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail, r'Error403', 'detail');
-  }
-
+      : super._();
   @override
   Error403 rebuild(void Function(Error403Builder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  Error403Builder toBuilder() => new Error403Builder()..replace(this);
+  Error403Builder toBuilder() => Error403Builder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -144,7 +140,6 @@ class Error403Builder implements Builder<Error403, Error403Builder> {
 
   @override
   void replace(Error403 other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Error403;
   }
 
@@ -158,12 +153,13 @@ class Error403Builder implements Builder<Error403, Error403Builder> {
 
   _$Error403 _build() {
     final _$result = _$v ??
-        new _$Error403._(
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'Error403', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'Error403', 'detail'),
-            attr: attr);
+        _$Error403._(
+          code:
+              BuiltValueNullFieldError.checkNotNull(code, r'Error403', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'Error403', 'detail'),
+          attr: attr,
+        );
     replace(_$result);
     return _$result;
   }

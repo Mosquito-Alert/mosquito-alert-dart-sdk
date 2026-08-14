@@ -26,7 +26,7 @@ BitesGeoListShortIdErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesGeoListShortIdErrorComponentAttrEnum>
-    _$bitesGeoListShortIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesGeoListShortIdErrorComponentAttrEnumValues = BuiltSet<
         BitesGeoListShortIdErrorComponentAttrEnum>(const <BitesGeoListShortIdErrorComponentAttrEnum>[
   _$bitesGeoListShortIdErrorComponentAttrEnum_shortId,
   _$bitesGeoListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -53,7 +53,7 @@ BitesGeoListShortIdErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesGeoListShortIdErrorComponentCodeEnum>
-    _$bitesGeoListShortIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesGeoListShortIdErrorComponentCodeEnumValues = BuiltSet<
         BitesGeoListShortIdErrorComponentCodeEnum>(const <BitesGeoListShortIdErrorComponentCodeEnum>[
   _$bitesGeoListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$bitesGeoListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -61,10 +61,10 @@ final BuiltSet<BitesGeoListShortIdErrorComponentCodeEnum>
 
 Serializer<BitesGeoListShortIdErrorComponentAttrEnum>
     _$bitesGeoListShortIdErrorComponentAttrEnumSerializer =
-    new _$BitesGeoListShortIdErrorComponentAttrEnumSerializer();
+    _$BitesGeoListShortIdErrorComponentAttrEnumSerializer();
 Serializer<BitesGeoListShortIdErrorComponentCodeEnum>
     _$bitesGeoListShortIdErrorComponentCodeEnumSerializer =
-    new _$BitesGeoListShortIdErrorComponentCodeEnumSerializer();
+    _$BitesGeoListShortIdErrorComponentCodeEnumSerializer();
 
 class _$BitesGeoListShortIdErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesGeoListShortIdErrorComponentAttrEnum> {
@@ -141,20 +141,11 @@ class _$BitesGeoListShortIdErrorComponent
 
   factory _$BitesGeoListShortIdErrorComponent(
           [void Function(BitesGeoListShortIdErrorComponentBuilder)? updates]) =>
-      (new BitesGeoListShortIdErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesGeoListShortIdErrorComponentBuilder()..update(updates))._build();
 
   _$BitesGeoListShortIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesGeoListShortIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesGeoListShortIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesGeoListShortIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesGeoListShortIdErrorComponent rebuild(
           void Function(BitesGeoListShortIdErrorComponentBuilder) updates) =>
@@ -162,7 +153,7 @@ class _$BitesGeoListShortIdErrorComponent
 
   @override
   BitesGeoListShortIdErrorComponentBuilder toBuilder() =>
-      new BitesGeoListShortIdErrorComponentBuilder()..replace(this);
+      BitesGeoListShortIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -230,7 +221,6 @@ class BitesGeoListShortIdErrorComponentBuilder
 
   @override
   void replace(BitesGeoListShortIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesGeoListShortIdErrorComponent;
   }
 
@@ -245,13 +235,14 @@ class BitesGeoListShortIdErrorComponentBuilder
 
   _$BitesGeoListShortIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesGeoListShortIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesGeoListShortIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesGeoListShortIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesGeoListShortIdErrorComponent', 'detail'));
+        _$BitesGeoListShortIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesGeoListShortIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesGeoListShortIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesGeoListShortIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

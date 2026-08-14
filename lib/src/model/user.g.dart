@@ -91,7 +91,7 @@ UserLocaleEnum _$userLocaleEnumValueOf(String name) {
 }
 
 final BuiltSet<UserLocaleEnum> _$userLocaleEnumValues =
-    new BuiltSet<UserLocaleEnum>(const <UserLocaleEnum>[
+    BuiltSet<UserLocaleEnum>(const <UserLocaleEnum>[
   _$userLocaleEnum_en,
   _$userLocaleEnum_es,
   _$userLocaleEnum_ca,
@@ -120,7 +120,7 @@ final BuiltSet<UserLocaleEnum> _$userLocaleEnumValues =
 ]);
 
 Serializer<UserLocaleEnum> _$userLocaleEnumSerializer =
-    new _$UserLocaleEnumSerializer();
+    _$UserLocaleEnumSerializer();
 
 class _$UserLocaleEnumSerializer
     implements PrimitiveSerializer<UserLocaleEnum> {
@@ -219,7 +219,7 @@ class _$User extends User {
   final UserScore score;
 
   factory _$User([void Function(UserBuilder)? updates]) =>
-      (new UserBuilder()..update(updates))._build();
+      (UserBuilder()..update(updates))._build();
 
   _$User._(
       {required this.uuid,
@@ -232,25 +232,13 @@ class _$User extends User {
       required this.languageIso,
       required this.isGuest,
       required this.score})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'User', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(username, r'User', 'username');
-    BuiltValueNullFieldError.checkNotNull(firstName, r'User', 'firstName');
-    BuiltValueNullFieldError.checkNotNull(lastName, r'User', 'lastName');
-    BuiltValueNullFieldError.checkNotNull(fullName, r'User', 'fullName');
-    BuiltValueNullFieldError.checkNotNull(
-        registrationTime, r'User', 'registrationTime');
-    BuiltValueNullFieldError.checkNotNull(languageIso, r'User', 'languageIso');
-    BuiltValueNullFieldError.checkNotNull(isGuest, r'User', 'isGuest');
-    BuiltValueNullFieldError.checkNotNull(score, r'User', 'score');
-  }
-
+      : super._();
   @override
   User rebuild(void Function(UserBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  UserBuilder toBuilder() => new UserBuilder()..replace(this);
+  UserBuilder toBuilder() => UserBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -343,7 +331,7 @@ class UserBuilder implements Builder<User, UserBuilder> {
   set isGuest(bool? isGuest) => _$this._isGuest = isGuest;
 
   UserScoreBuilder? _score;
-  UserScoreBuilder get score => _$this._score ??= new UserScoreBuilder();
+  UserScoreBuilder get score => _$this._score ??= UserScoreBuilder();
   set score(UserScoreBuilder? score) => _$this._score = score;
 
   UserBuilder() {
@@ -370,7 +358,6 @@ class UserBuilder implements Builder<User, UserBuilder> {
 
   @override
   void replace(User other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$User;
   }
 
@@ -386,33 +373,32 @@ class UserBuilder implements Builder<User, UserBuilder> {
     _$User _$result;
     try {
       _$result = _$v ??
-          new _$User._(
-              uuid:
-                  BuiltValueNullFieldError.checkNotNull(uuid, r'User', 'uuid'),
-              username: BuiltValueNullFieldError.checkNotNull(
-                  username, r'User', 'username'),
-              firstName: BuiltValueNullFieldError.checkNotNull(
-                  firstName, r'User', 'firstName'),
-              lastName: BuiltValueNullFieldError.checkNotNull(
-                  lastName, r'User', 'lastName'),
-              fullName: BuiltValueNullFieldError.checkNotNull(
-                  fullName, r'User', 'fullName'),
-              registrationTime: BuiltValueNullFieldError.checkNotNull(
-                  registrationTime, r'User', 'registrationTime'),
-              locale: locale,
-              languageIso: BuiltValueNullFieldError.checkNotNull(
-                  languageIso, r'User', 'languageIso'),
-              isGuest: BuiltValueNullFieldError.checkNotNull(
-                  isGuest, r'User', 'isGuest'),
-              score: score.build());
+          _$User._(
+            uuid: BuiltValueNullFieldError.checkNotNull(uuid, r'User', 'uuid'),
+            username: BuiltValueNullFieldError.checkNotNull(
+                username, r'User', 'username'),
+            firstName: BuiltValueNullFieldError.checkNotNull(
+                firstName, r'User', 'firstName'),
+            lastName: BuiltValueNullFieldError.checkNotNull(
+                lastName, r'User', 'lastName'),
+            fullName: BuiltValueNullFieldError.checkNotNull(
+                fullName, r'User', 'fullName'),
+            registrationTime: BuiltValueNullFieldError.checkNotNull(
+                registrationTime, r'User', 'registrationTime'),
+            locale: locale,
+            languageIso: BuiltValueNullFieldError.checkNotNull(
+                languageIso, r'User', 'languageIso'),
+            isGuest: BuiltValueNullFieldError.checkNotNull(
+                isGuest, r'User', 'isGuest'),
+            score: score.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'score';
         score.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
-            r'User', _$failedField, e.toString());
+        throw BuiltValueNestedFieldError(r'User', _$failedField, e.toString());
       }
       rethrow;
     }

@@ -26,7 +26,7 @@ DevicesCreateNameErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesCreateNameErrorComponentAttrEnum>
-    _$devicesCreateNameErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesCreateNameErrorComponentAttrEnumValues = BuiltSet<
         DevicesCreateNameErrorComponentAttrEnum>(const <DevicesCreateNameErrorComponentAttrEnum>[
   _$devicesCreateNameErrorComponentAttrEnum_nameValue,
   _$devicesCreateNameErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ DevicesCreateNameErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesCreateNameErrorComponentCodeEnum>
-    _$devicesCreateNameErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesCreateNameErrorComponentCodeEnumValues = BuiltSet<
         DevicesCreateNameErrorComponentCodeEnum>(const <DevicesCreateNameErrorComponentCodeEnum>[
   _$devicesCreateNameErrorComponentCodeEnum_invalid,
   _$devicesCreateNameErrorComponentCodeEnum_maxLength,
@@ -79,10 +79,10 @@ final BuiltSet<DevicesCreateNameErrorComponentCodeEnum>
 
 Serializer<DevicesCreateNameErrorComponentAttrEnum>
     _$devicesCreateNameErrorComponentAttrEnumSerializer =
-    new _$DevicesCreateNameErrorComponentAttrEnumSerializer();
+    _$DevicesCreateNameErrorComponentAttrEnumSerializer();
 Serializer<DevicesCreateNameErrorComponentCodeEnum>
     _$devicesCreateNameErrorComponentCodeEnumSerializer =
-    new _$DevicesCreateNameErrorComponentCodeEnumSerializer();
+    _$DevicesCreateNameErrorComponentCodeEnumSerializer();
 
 class _$DevicesCreateNameErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<DevicesCreateNameErrorComponentAttrEnum> {
@@ -165,19 +165,11 @@ class _$DevicesCreateNameErrorComponent
 
   factory _$DevicesCreateNameErrorComponent(
           [void Function(DevicesCreateNameErrorComponentBuilder)? updates]) =>
-      (new DevicesCreateNameErrorComponentBuilder()..update(updates))._build();
+      (DevicesCreateNameErrorComponentBuilder()..update(updates))._build();
 
   _$DevicesCreateNameErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesCreateNameErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesCreateNameErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesCreateNameErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesCreateNameErrorComponent rebuild(
           void Function(DevicesCreateNameErrorComponentBuilder) updates) =>
@@ -185,7 +177,7 @@ class _$DevicesCreateNameErrorComponent
 
   @override
   DevicesCreateNameErrorComponentBuilder toBuilder() =>
-      new DevicesCreateNameErrorComponentBuilder()..replace(this);
+      DevicesCreateNameErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -253,7 +245,6 @@ class DevicesCreateNameErrorComponentBuilder
 
   @override
   void replace(DevicesCreateNameErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesCreateNameErrorComponent;
   }
 
@@ -267,13 +258,14 @@ class DevicesCreateNameErrorComponentBuilder
 
   _$DevicesCreateNameErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesCreateNameErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesCreateNameErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesCreateNameErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesCreateNameErrorComponent', 'detail'));
+        _$DevicesCreateNameErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesCreateNameErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesCreateNameErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesCreateNameErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

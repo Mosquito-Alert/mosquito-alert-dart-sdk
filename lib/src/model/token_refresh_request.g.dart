@@ -12,13 +12,9 @@ class _$TokenRefreshRequest extends TokenRefreshRequest {
 
   factory _$TokenRefreshRequest(
           [void Function(TokenRefreshRequestBuilder)? updates]) =>
-      (new TokenRefreshRequestBuilder()..update(updates))._build();
+      (TokenRefreshRequestBuilder()..update(updates))._build();
 
-  _$TokenRefreshRequest._({required this.refresh}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        refresh, r'TokenRefreshRequest', 'refresh');
-  }
-
+  _$TokenRefreshRequest._({required this.refresh}) : super._();
   @override
   TokenRefreshRequest rebuild(
           void Function(TokenRefreshRequestBuilder) updates) =>
@@ -26,7 +22,7 @@ class _$TokenRefreshRequest extends TokenRefreshRequest {
 
   @override
   TokenRefreshRequestBuilder toBuilder() =>
-      new TokenRefreshRequestBuilder()..replace(this);
+      TokenRefreshRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -73,7 +69,6 @@ class TokenRefreshRequestBuilder
 
   @override
   void replace(TokenRefreshRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$TokenRefreshRequest;
   }
 
@@ -87,9 +82,10 @@ class TokenRefreshRequestBuilder
 
   _$TokenRefreshRequest _build() {
     final _$result = _$v ??
-        new _$TokenRefreshRequest._(
-            refresh: BuiltValueNullFieldError.checkNotNull(
-                refresh, r'TokenRefreshRequest', 'refresh'));
+        _$TokenRefreshRequest._(
+          refresh: BuiltValueNullFieldError.checkNotNull(
+              refresh, r'TokenRefreshRequest', 'refresh'),
+        );
     replace(_$result);
     return _$result;
   }

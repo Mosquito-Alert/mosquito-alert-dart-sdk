@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnum_bboxPeriodYMin,
   _$identificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent
   @override
   IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -327,7 +313,6 @@ class IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent;
   }
@@ -346,20 +331,20 @@ class IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponentBuilder
 
   _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateBboxYMinErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

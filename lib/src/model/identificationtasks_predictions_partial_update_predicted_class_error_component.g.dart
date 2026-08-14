@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnum_predictedClass,
   _$identificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnum_required_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent
           [void Function(
                   IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent rebuild(
           void Function(
@@ -208,7 +194,7 @@ class _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent
   @override
   IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -293,7 +279,6 @@ class IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentBui
   void replace(
       IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent;
   }
@@ -313,20 +298,21 @@ class IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponentBui
   _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdatePredictedClassErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

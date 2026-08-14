@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnum_decisionLevel,
   _$identificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnum_invalidList,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder()
+      (IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent rebuild(
           void Function(
@@ -208,7 +194,7 @@ class _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent
   @override
   IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder()
+          IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -291,7 +277,6 @@ class IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent;
   }
@@ -310,20 +295,20 @@ class IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentBuilder
 
   _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent',
-                'detail'));
+        _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsListMineDecisionLevelErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

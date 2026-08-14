@@ -30,7 +30,7 @@ IdentificationtasksListResultUncertaintyErrorComponentAttrEnum
 
 final BuiltSet<IdentificationtasksListResultUncertaintyErrorComponentAttrEnum>
     _$identificationtasksListResultUncertaintyErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListResultUncertaintyErrorComponentAttrEnum>(const <IdentificationtasksListResultUncertaintyErrorComponentAttrEnum>[
   _$identificationtasksListResultUncertaintyErrorComponentAttrEnum_resultUncertainty,
   _$identificationtasksListResultUncertaintyErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ IdentificationtasksListResultUncertaintyErrorComponentCodeEnum
 
 final BuiltSet<IdentificationtasksListResultUncertaintyErrorComponentCodeEnum>
     _$identificationtasksListResultUncertaintyErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListResultUncertaintyErrorComponentCodeEnum>(const <IdentificationtasksListResultUncertaintyErrorComponentCodeEnum>[
   _$identificationtasksListResultUncertaintyErrorComponentCodeEnum_invalid,
   _$identificationtasksListResultUncertaintyErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -68,10 +68,10 @@ final BuiltSet<IdentificationtasksListResultUncertaintyErrorComponentCodeEnum>
 
 Serializer<IdentificationtasksListResultUncertaintyErrorComponentAttrEnum>
     _$identificationtasksListResultUncertaintyErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListResultUncertaintyErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListResultUncertaintyErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksListResultUncertaintyErrorComponentCodeEnum>
     _$identificationtasksListResultUncertaintyErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListResultUncertaintyErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListResultUncertaintyErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListResultUncertaintyErrorComponentAttrEnumSerializer
     implements
@@ -156,21 +156,13 @@ class _$IdentificationtasksListResultUncertaintyErrorComponent
           [void Function(
                   IdentificationtasksListResultUncertaintyErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListResultUncertaintyErrorComponentBuilder()
+      (IdentificationtasksListResultUncertaintyErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksListResultUncertaintyErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksListResultUncertaintyErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksListResultUncertaintyErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'IdentificationtasksListResultUncertaintyErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListResultUncertaintyErrorComponent rebuild(
           void Function(
@@ -180,7 +172,7 @@ class _$IdentificationtasksListResultUncertaintyErrorComponent
 
   @override
   IdentificationtasksListResultUncertaintyErrorComponentBuilder toBuilder() =>
-      new IdentificationtasksListResultUncertaintyErrorComponentBuilder()
+      IdentificationtasksListResultUncertaintyErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -256,7 +248,6 @@ class IdentificationtasksListResultUncertaintyErrorComponentBuilder
 
   @override
   void replace(IdentificationtasksListResultUncertaintyErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListResultUncertaintyErrorComponent;
   }
 
@@ -273,19 +264,20 @@ class IdentificationtasksListResultUncertaintyErrorComponentBuilder
 
   _$IdentificationtasksListResultUncertaintyErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListResultUncertaintyErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksListResultUncertaintyErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksListResultUncertaintyErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksListResultUncertaintyErrorComponent',
-                'detail'));
+        _$IdentificationtasksListResultUncertaintyErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksListResultUncertaintyErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksListResultUncertaintyErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksListResultUncertaintyErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -19,7 +19,7 @@ class _$SimpleUser extends SimpleUser {
   final String fullName;
 
   factory _$SimpleUser([void Function(SimpleUserBuilder)? updates]) =>
-      (new SimpleUserBuilder()..update(updates))._build();
+      (SimpleUserBuilder()..update(updates))._build();
 
   _$SimpleUser._(
       {required this.uuid,
@@ -27,21 +27,13 @@ class _$SimpleUser extends SimpleUser {
       required this.firstName,
       required this.lastName,
       required this.fullName})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'SimpleUser', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(username, r'SimpleUser', 'username');
-    BuiltValueNullFieldError.checkNotNull(
-        firstName, r'SimpleUser', 'firstName');
-    BuiltValueNullFieldError.checkNotNull(lastName, r'SimpleUser', 'lastName');
-    BuiltValueNullFieldError.checkNotNull(fullName, r'SimpleUser', 'fullName');
-  }
-
+      : super._();
   @override
   SimpleUser rebuild(void Function(SimpleUserBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  SimpleUserBuilder toBuilder() => new SimpleUserBuilder()..replace(this);
+  SimpleUserBuilder toBuilder() => SimpleUserBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -120,7 +112,6 @@ class SimpleUserBuilder implements Builder<SimpleUser, SimpleUserBuilder> {
 
   @override
   void replace(SimpleUser other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SimpleUser;
   }
 
@@ -134,17 +125,18 @@ class SimpleUserBuilder implements Builder<SimpleUser, SimpleUserBuilder> {
 
   _$SimpleUser _build() {
     final _$result = _$v ??
-        new _$SimpleUser._(
-            uuid: BuiltValueNullFieldError.checkNotNull(
-                uuid, r'SimpleUser', 'uuid'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, r'SimpleUser', 'username'),
-            firstName: BuiltValueNullFieldError.checkNotNull(
-                firstName, r'SimpleUser', 'firstName'),
-            lastName: BuiltValueNullFieldError.checkNotNull(
-                lastName, r'SimpleUser', 'lastName'),
-            fullName: BuiltValueNullFieldError.checkNotNull(
-                fullName, r'SimpleUser', 'fullName'));
+        _$SimpleUser._(
+          uuid: BuiltValueNullFieldError.checkNotNull(
+              uuid, r'SimpleUser', 'uuid'),
+          username: BuiltValueNullFieldError.checkNotNull(
+              username, r'SimpleUser', 'username'),
+          firstName: BuiltValueNullFieldError.checkNotNull(
+              firstName, r'SimpleUser', 'firstName'),
+          lastName: BuiltValueNullFieldError.checkNotNull(
+              lastName, r'SimpleUser', 'lastName'),
+          fullName: BuiltValueNullFieldError.checkNotNull(
+              fullName, r'SimpleUser', 'fullName'),
+        );
     replace(_$result);
     return _$result;
   }

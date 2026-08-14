@@ -17,28 +17,20 @@ class _$Permissions extends Permissions {
   final MessagePermission message;
 
   factory _$Permissions([void Function(PermissionsBuilder)? updates]) =>
-      (new PermissionsBuilder()..update(updates))._build();
+      (PermissionsBuilder()..update(updates))._build();
 
   _$Permissions._(
       {required this.annotation,
       required this.identificationTask,
       required this.review,
       required this.message})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        annotation, r'Permissions', 'annotation');
-    BuiltValueNullFieldError.checkNotNull(
-        identificationTask, r'Permissions', 'identificationTask');
-    BuiltValueNullFieldError.checkNotNull(review, r'Permissions', 'review');
-    BuiltValueNullFieldError.checkNotNull(message, r'Permissions', 'message');
-  }
-
+      : super._();
   @override
   Permissions rebuild(void Function(PermissionsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  PermissionsBuilder toBuilder() => new PermissionsBuilder()..replace(this);
+  PermissionsBuilder toBuilder() => PermissionsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -77,25 +69,25 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
 
   AnnotationPermissionBuilder? _annotation;
   AnnotationPermissionBuilder get annotation =>
-      _$this._annotation ??= new AnnotationPermissionBuilder();
+      _$this._annotation ??= AnnotationPermissionBuilder();
   set annotation(AnnotationPermissionBuilder? annotation) =>
       _$this._annotation = annotation;
 
   IdentificationTaskPermissionBuilder? _identificationTask;
   IdentificationTaskPermissionBuilder get identificationTask =>
-      _$this._identificationTask ??= new IdentificationTaskPermissionBuilder();
+      _$this._identificationTask ??= IdentificationTaskPermissionBuilder();
   set identificationTask(
           IdentificationTaskPermissionBuilder? identificationTask) =>
       _$this._identificationTask = identificationTask;
 
   ReviewPermissionBuilder? _review;
   ReviewPermissionBuilder get review =>
-      _$this._review ??= new ReviewPermissionBuilder();
+      _$this._review ??= ReviewPermissionBuilder();
   set review(ReviewPermissionBuilder? review) => _$this._review = review;
 
   MessagePermissionBuilder? _message;
   MessagePermissionBuilder get message =>
-      _$this._message ??= new MessagePermissionBuilder();
+      _$this._message ??= MessagePermissionBuilder();
   set message(MessagePermissionBuilder? message) => _$this._message = message;
 
   PermissionsBuilder() {
@@ -116,7 +108,6 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
 
   @override
   void replace(Permissions other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Permissions;
   }
 
@@ -132,11 +123,12 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
     _$Permissions _$result;
     try {
       _$result = _$v ??
-          new _$Permissions._(
-              annotation: annotation.build(),
-              identificationTask: identificationTask.build(),
-              review: review.build(),
-              message: message.build());
+          _$Permissions._(
+            annotation: annotation.build(),
+            identificationTask: identificationTask.build(),
+            review: review.build(),
+            message: message.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -149,7 +141,7 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
         _$failedField = 'message';
         message.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'Permissions', _$failedField, e.toString());
       }
       rethrow;

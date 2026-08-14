@@ -31,7 +31,7 @@ IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnum>(const <IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnum>[
   _$identificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnum_scoresPeriodAeKoreicus,
   _$identificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnum>(const <IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnum>[
   _$identificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent
           [void Function(
                   IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentBuilder()
+      (IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent
   @override
   IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentBuilder()
+          IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -328,7 +314,6 @@ class IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentBuilder
   void replace(
       IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent;
   }
@@ -348,20 +333,20 @@ class IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponentBuilder
   _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsUpdateScoresAeKoreicusErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

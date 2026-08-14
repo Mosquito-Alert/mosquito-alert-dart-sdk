@@ -29,7 +29,7 @@ class _$SimplifiedObservationWithPhotos
 
   factory _$SimplifiedObservationWithPhotos(
           [void Function(SimplifiedObservationWithPhotosBuilder)? updates]) =>
-      (new SimplifiedObservationWithPhotosBuilder()..update(updates))._build();
+      (SimplifiedObservationWithPhotosBuilder()..update(updates))._build();
 
   _$SimplifiedObservationWithPhotos._(
       {required this.uuid,
@@ -41,25 +41,7 @@ class _$SimplifiedObservationWithPhotos
       required this.location,
       this.note,
       required this.photos})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        uuid, r'SimplifiedObservationWithPhotos', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(
-        shortId, r'SimplifiedObservationWithPhotos', 'shortId');
-    BuiltValueNullFieldError.checkNotNull(
-        user, r'SimplifiedObservationWithPhotos', 'user');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'SimplifiedObservationWithPhotos', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAtLocal, r'SimplifiedObservationWithPhotos', 'createdAtLocal');
-    BuiltValueNullFieldError.checkNotNull(
-        receivedAt, r'SimplifiedObservationWithPhotos', 'receivedAt');
-    BuiltValueNullFieldError.checkNotNull(
-        location, r'SimplifiedObservationWithPhotos', 'location');
-    BuiltValueNullFieldError.checkNotNull(
-        photos, r'SimplifiedObservationWithPhotos', 'photos');
-  }
-
+      : super._();
   @override
   SimplifiedObservationWithPhotos rebuild(
           void Function(SimplifiedObservationWithPhotosBuilder) updates) =>
@@ -67,7 +49,7 @@ class _$SimplifiedObservationWithPhotos
 
   @override
   SimplifiedObservationWithPhotosBuilder toBuilder() =>
-      new SimplifiedObservationWithPhotosBuilder()..replace(this);
+      SimplifiedObservationWithPhotosBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -131,7 +113,7 @@ class SimplifiedObservationWithPhotosBuilder
   set shortId(String? shortId) => _$this._shortId = shortId;
 
   MinimalUserBuilder? _user;
-  MinimalUserBuilder get user => _$this._user ??= new MinimalUserBuilder();
+  MinimalUserBuilder get user => _$this._user ??= MinimalUserBuilder();
   set user(MinimalUserBuilder? user) => _$this._user = user;
 
   DateTime? _createdAt;
@@ -149,7 +131,7 @@ class SimplifiedObservationWithPhotosBuilder
 
   SimplifiedLocationBuilder? _location;
   SimplifiedLocationBuilder get location =>
-      _$this._location ??= new SimplifiedLocationBuilder();
+      _$this._location ??= SimplifiedLocationBuilder();
   set location(SimplifiedLocationBuilder? location) =>
       _$this._location = location;
 
@@ -159,7 +141,7 @@ class SimplifiedObservationWithPhotosBuilder
 
   ListBuilder<SimplePhoto>? _photos;
   ListBuilder<SimplePhoto> get photos =>
-      _$this._photos ??= new ListBuilder<SimplePhoto>();
+      _$this._photos ??= ListBuilder<SimplePhoto>();
   set photos(ListBuilder<SimplePhoto>? photos) => _$this._photos = photos;
 
   SimplifiedObservationWithPhotosBuilder() {
@@ -185,7 +167,6 @@ class SimplifiedObservationWithPhotosBuilder
 
   @override
   void replace(SimplifiedObservationWithPhotos other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SimplifiedObservationWithPhotos;
   }
 
@@ -201,23 +182,24 @@ class SimplifiedObservationWithPhotosBuilder
     _$SimplifiedObservationWithPhotos _$result;
     try {
       _$result = _$v ??
-          new _$SimplifiedObservationWithPhotos._(
-              uuid: BuiltValueNullFieldError.checkNotNull(
-                  uuid, r'SimplifiedObservationWithPhotos', 'uuid'),
-              shortId: BuiltValueNullFieldError.checkNotNull(
-                  shortId, r'SimplifiedObservationWithPhotos', 'shortId'),
-              user: user.build(),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'SimplifiedObservationWithPhotos', 'createdAt'),
-              createdAtLocal: BuiltValueNullFieldError.checkNotNull(
-                  createdAtLocal,
-                  r'SimplifiedObservationWithPhotos',
-                  'createdAtLocal'),
-              receivedAt: BuiltValueNullFieldError.checkNotNull(
-                  receivedAt, r'SimplifiedObservationWithPhotos', 'receivedAt'),
-              location: location.build(),
-              note: note,
-              photos: photos.build());
+          _$SimplifiedObservationWithPhotos._(
+            uuid: BuiltValueNullFieldError.checkNotNull(
+                uuid, r'SimplifiedObservationWithPhotos', 'uuid'),
+            shortId: BuiltValueNullFieldError.checkNotNull(
+                shortId, r'SimplifiedObservationWithPhotos', 'shortId'),
+            user: user.build(),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'SimplifiedObservationWithPhotos', 'createdAt'),
+            createdAtLocal: BuiltValueNullFieldError.checkNotNull(
+                createdAtLocal,
+                r'SimplifiedObservationWithPhotos',
+                'createdAtLocal'),
+            receivedAt: BuiltValueNullFieldError.checkNotNull(
+                receivedAt, r'SimplifiedObservationWithPhotos', 'receivedAt'),
+            location: location.build(),
+            note: note,
+            photos: photos.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -230,7 +212,7 @@ class SimplifiedObservationWithPhotosBuilder
         _$failedField = 'photos';
         photos.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'SimplifiedObservationWithPhotos', _$failedField, e.toString());
       }
       rethrow;

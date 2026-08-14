@@ -14,21 +14,16 @@ class _$ObservationFlags extends ObservationFlags {
 
   factory _$ObservationFlags(
           [void Function(ObservationFlagsBuilder)? updates]) =>
-      (new ObservationFlagsBuilder()..update(updates))._build();
+      (ObservationFlagsBuilder()..update(updates))._build();
 
-  _$ObservationFlags._({this.isFavourite, required this.isVisible})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        isVisible, r'ObservationFlags', 'isVisible');
-  }
-
+  _$ObservationFlags._({this.isFavourite, required this.isVisible}) : super._();
   @override
   ObservationFlags rebuild(void Function(ObservationFlagsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   ObservationFlagsBuilder toBuilder() =>
-      new ObservationFlagsBuilder()..replace(this);
+      ObservationFlagsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -84,7 +79,6 @@ class ObservationFlagsBuilder
 
   @override
   void replace(ObservationFlags other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationFlags;
   }
 
@@ -98,10 +92,11 @@ class ObservationFlagsBuilder
 
   _$ObservationFlags _build() {
     final _$result = _$v ??
-        new _$ObservationFlags._(
-            isFavourite: isFavourite,
-            isVisible: BuiltValueNullFieldError.checkNotNull(
-                isVisible, r'ObservationFlags', 'isVisible'));
+        _$ObservationFlags._(
+          isFavourite: isFavourite,
+          isVisible: BuiltValueNullFieldError.checkNotNull(
+              isVisible, r'ObservationFlags', 'isVisible'),
+        );
     replace(_$result);
     return _$result;
   }

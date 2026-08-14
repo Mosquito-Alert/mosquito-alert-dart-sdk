@@ -26,7 +26,7 @@ MessagesCreateValidationErrorTypeEnum
 }
 
 final BuiltSet<MessagesCreateValidationErrorTypeEnum>
-    _$messagesCreateValidationErrorTypeEnumValues = new BuiltSet<
+    _$messagesCreateValidationErrorTypeEnumValues = BuiltSet<
         MessagesCreateValidationErrorTypeEnum>(const <MessagesCreateValidationErrorTypeEnum>[
   _$messagesCreateValidationErrorTypeEnum_validationError,
   _$messagesCreateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<MessagesCreateValidationErrorTypeEnum>
 
 Serializer<MessagesCreateValidationErrorTypeEnum>
     _$messagesCreateValidationErrorTypeEnumSerializer =
-    new _$MessagesCreateValidationErrorTypeEnumSerializer();
+    _$MessagesCreateValidationErrorTypeEnumSerializer();
 
 class _$MessagesCreateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<MessagesCreateValidationErrorTypeEnum> {
@@ -76,16 +76,10 @@ class _$MessagesCreateValidationError extends MessagesCreateValidationError {
 
   factory _$MessagesCreateValidationError(
           [void Function(MessagesCreateValidationErrorBuilder)? updates]) =>
-      (new MessagesCreateValidationErrorBuilder()..update(updates))._build();
+      (MessagesCreateValidationErrorBuilder()..update(updates))._build();
 
   _$MessagesCreateValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'MessagesCreateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'MessagesCreateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   MessagesCreateValidationError rebuild(
           void Function(MessagesCreateValidationErrorBuilder) updates) =>
@@ -93,7 +87,7 @@ class _$MessagesCreateValidationError extends MessagesCreateValidationError {
 
   @override
   MessagesCreateValidationErrorBuilder toBuilder() =>
-      new MessagesCreateValidationErrorBuilder()..replace(this);
+      MessagesCreateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -133,7 +127,7 @@ class MessagesCreateValidationErrorBuilder
 
   ListBuilder<MessagesCreateError>? _errors;
   ListBuilder<MessagesCreateError> get errors =>
-      _$this._errors ??= new ListBuilder<MessagesCreateError>();
+      _$this._errors ??= ListBuilder<MessagesCreateError>();
   set errors(ListBuilder<MessagesCreateError>? errors) =>
       _$this._errors = errors;
 
@@ -153,7 +147,6 @@ class MessagesCreateValidationErrorBuilder
 
   @override
   void replace(MessagesCreateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesCreateValidationError;
   }
 
@@ -169,17 +162,18 @@ class MessagesCreateValidationErrorBuilder
     _$MessagesCreateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$MessagesCreateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'MessagesCreateValidationError', 'type'),
-              errors: errors.build());
+          _$MessagesCreateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'MessagesCreateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'MessagesCreateValidationError', _$failedField, e.toString());
       }
       rethrow;

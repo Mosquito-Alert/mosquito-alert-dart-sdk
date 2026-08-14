@@ -40,7 +40,7 @@ BiteRequestEventEnvironmentEnum _$biteRequestEventEnvironmentEnumValueOf(
 }
 
 final BuiltSet<BiteRequestEventEnvironmentEnum>
-    _$biteRequestEventEnvironmentEnumValues = new BuiltSet<
+    _$biteRequestEventEnvironmentEnumValues = BuiltSet<
         BiteRequestEventEnvironmentEnum>(const <BiteRequestEventEnvironmentEnum>[
   _$biteRequestEventEnvironmentEnum_indoors,
   _$biteRequestEventEnvironmentEnum_outdoors,
@@ -87,7 +87,7 @@ BiteRequestEventMomentEnum _$biteRequestEventMomentEnumValueOf(String name) {
 }
 
 final BuiltSet<BiteRequestEventMomentEnum> _$biteRequestEventMomentEnumValues =
-    new BuiltSet<BiteRequestEventMomentEnum>(const <BiteRequestEventMomentEnum>[
+    BuiltSet<BiteRequestEventMomentEnum>(const <BiteRequestEventMomentEnum>[
   _$biteRequestEventMomentEnum_now,
   _$biteRequestEventMomentEnum_lastMorning,
   _$biteRequestEventMomentEnum_lastMidday,
@@ -99,9 +99,9 @@ final BuiltSet<BiteRequestEventMomentEnum> _$biteRequestEventMomentEnumValues =
 
 Serializer<BiteRequestEventEnvironmentEnum>
     _$biteRequestEventEnvironmentEnumSerializer =
-    new _$BiteRequestEventEnvironmentEnumSerializer();
+    _$BiteRequestEventEnvironmentEnumSerializer();
 Serializer<BiteRequestEventMomentEnum> _$biteRequestEventMomentEnumSerializer =
-    new _$BiteRequestEventMomentEnumSerializer();
+    _$BiteRequestEventMomentEnumSerializer();
 
 class _$BiteRequestEventEnvironmentEnumSerializer
     implements PrimitiveSerializer<BiteRequestEventEnvironmentEnum> {
@@ -197,7 +197,7 @@ class _$BiteRequest extends BiteRequest {
   final BiteCountsRequest counts;
 
   factory _$BiteRequest([void Function(BiteRequestBuilder)? updates]) =>
-      (new BiteRequestBuilder()..update(updates))._build();
+      (BiteRequestBuilder()..update(updates))._build();
 
   _$BiteRequest._(
       {required this.createdAt,
@@ -208,20 +208,13 @@ class _$BiteRequest extends BiteRequest {
       this.eventEnvironment,
       this.eventMoment,
       required this.counts})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'BiteRequest', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(sentAt, r'BiteRequest', 'sentAt');
-    BuiltValueNullFieldError.checkNotNull(location, r'BiteRequest', 'location');
-    BuiltValueNullFieldError.checkNotNull(counts, r'BiteRequest', 'counts');
-  }
-
+      : super._();
   @override
   BiteRequest rebuild(void Function(BiteRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  BiteRequestBuilder toBuilder() => new BiteRequestBuilder()..replace(this);
+  BiteRequestBuilder toBuilder() => BiteRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -280,7 +273,7 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
 
   LocationRequestBuilder? _location;
   LocationRequestBuilder get location =>
-      _$this._location ??= new LocationRequestBuilder();
+      _$this._location ??= LocationRequestBuilder();
   set location(LocationRequestBuilder? location) => _$this._location = location;
 
   String? _note;
@@ -288,7 +281,7 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
   set note(String? note) => _$this._note = note;
 
   ListBuilder<String>? _tags;
-  ListBuilder<String> get tags => _$this._tags ??= new ListBuilder<String>();
+  ListBuilder<String> get tags => _$this._tags ??= ListBuilder<String>();
   set tags(ListBuilder<String>? tags) => _$this._tags = tags;
 
   BiteRequestEventEnvironmentEnum? _eventEnvironment;
@@ -304,7 +297,7 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
 
   BiteCountsRequestBuilder? _counts;
   BiteCountsRequestBuilder get counts =>
-      _$this._counts ??= new BiteCountsRequestBuilder();
+      _$this._counts ??= BiteCountsRequestBuilder();
   set counts(BiteCountsRequestBuilder? counts) => _$this._counts = counts;
 
   BiteRequestBuilder() {
@@ -329,7 +322,6 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
 
   @override
   void replace(BiteRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BiteRequest;
   }
 
@@ -345,17 +337,18 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
     _$BiteRequest _$result;
     try {
       _$result = _$v ??
-          new _$BiteRequest._(
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'BiteRequest', 'createdAt'),
-              sentAt: BuiltValueNullFieldError.checkNotNull(
-                  sentAt, r'BiteRequest', 'sentAt'),
-              location: location.build(),
-              note: note,
-              tags: _tags?.build(),
-              eventEnvironment: eventEnvironment,
-              eventMoment: eventMoment,
-              counts: counts.build());
+          _$BiteRequest._(
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'BiteRequest', 'createdAt'),
+            sentAt: BuiltValueNullFieldError.checkNotNull(
+                sentAt, r'BiteRequest', 'sentAt'),
+            location: location.build(),
+            note: note,
+            tags: _tags?.build(),
+            eventEnvironment: eventEnvironment,
+            eventMoment: eventMoment,
+            counts: counts.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -368,7 +361,7 @@ class BiteRequestBuilder implements Builder<BiteRequest, BiteRequestBuilder> {
         _$failedField = 'counts';
         counts.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BiteRequest', _$failedField, e.toString());
       }
       rethrow;

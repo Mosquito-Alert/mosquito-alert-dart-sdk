@@ -28,7 +28,7 @@ AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum>
-    _$authSignupGuestNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
+    _$authSignupGuestNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum>(const <AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum>[
   _$authSignupGuestNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$authSignupGuestNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum>
-    _$authSignupGuestNonFieldErrorsErrorComponentCodeEnumValues = new BuiltSet<
+    _$authSignupGuestNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum>(const <AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum>[
   _$authSignupGuestNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$authSignupGuestNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -69,10 +69,10 @@ final BuiltSet<AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum>
     _$authSignupGuestNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$AuthSignupGuestNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$AuthSignupGuestNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<AuthSignupGuestNonFieldErrorsErrorComponentCodeEnum>
     _$authSignupGuestNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$AuthSignupGuestNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$AuthSignupGuestNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$AuthSignupGuestNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -156,21 +156,12 @@ class _$AuthSignupGuestNonFieldErrorsErrorComponent
   factory _$AuthSignupGuestNonFieldErrorsErrorComponent(
           [void Function(AuthSignupGuestNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new AuthSignupGuestNonFieldErrorsErrorComponentBuilder()
-            ..update(updates))
+      (AuthSignupGuestNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$AuthSignupGuestNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'AuthSignupGuestNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'AuthSignupGuestNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'AuthSignupGuestNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   AuthSignupGuestNonFieldErrorsErrorComponent rebuild(
           void Function(AuthSignupGuestNonFieldErrorsErrorComponentBuilder)
@@ -179,7 +170,7 @@ class _$AuthSignupGuestNonFieldErrorsErrorComponent
 
   @override
   AuthSignupGuestNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new AuthSignupGuestNonFieldErrorsErrorComponentBuilder()..replace(this);
+      AuthSignupGuestNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -248,7 +239,6 @@ class AuthSignupGuestNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(AuthSignupGuestNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthSignupGuestNonFieldErrorsErrorComponent;
   }
 
@@ -264,13 +254,14 @@ class AuthSignupGuestNonFieldErrorsErrorComponentBuilder
 
   _$AuthSignupGuestNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$AuthSignupGuestNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'AuthSignupGuestNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AuthSignupGuestNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'AuthSignupGuestNonFieldErrorsErrorComponent', 'detail'));
+        _$AuthSignupGuestNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'AuthSignupGuestNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AuthSignupGuestNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'AuthSignupGuestNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

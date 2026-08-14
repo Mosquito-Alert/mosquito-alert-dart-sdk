@@ -155,8 +155,9 @@ class _$AnnotationRequestSerializer implements PrimitiveSerializer<AnnotationReq
         case r'best_photo_uuid':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.bestPhotoUuid = valueDes;
           break;
         case r'classification':
@@ -178,36 +179,41 @@ class _$AnnotationRequestSerializer implements PrimitiveSerializer<AnnotationReq
         case r'feedback':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(AnnotationFeedbackRequest),
-          ) as AnnotationFeedbackRequest;
+            specifiedType: const FullType.nullable(AnnotationFeedbackRequest),
+          ) as AnnotationFeedbackRequest?;
+          if (valueDes == null) continue;
           result.feedback.replace(valueDes);
           break;
         case r'is_flagged':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(bool),
-          ) as bool;
+            specifiedType: const FullType.nullable(bool),
+          ) as bool?;
+          if (valueDes == null) continue;
           result.isFlagged = valueDes;
           break;
         case r'is_executive':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(bool),
-          ) as bool;
+            specifiedType: const FullType.nullable(bool),
+          ) as bool?;
+          if (valueDes == null) continue;
           result.isExecutive = valueDes;
           break;
         case r'observation_flags':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ObservationFlagsRequest),
-          ) as ObservationFlagsRequest;
+            specifiedType: const FullType.nullable(ObservationFlagsRequest),
+          ) as ObservationFlagsRequest?;
+          if (valueDes == null) continue;
           result.observationFlags.replace(valueDes);
           break;
         case r'tags':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(String)]),
-          ) as BuiltList<String>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>?;
+          if (valueDes == null) continue;
           result.tags.replace(valueDes);
           break;
         default:

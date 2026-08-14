@@ -29,8 +29,7 @@ ObservationsListMineGeoPrecisionErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsListMineGeoPrecisionErrorComponentAttrEnum>
-    _$observationsListMineGeoPrecisionErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$observationsListMineGeoPrecisionErrorComponentAttrEnumValues = BuiltSet<
         ObservationsListMineGeoPrecisionErrorComponentAttrEnum>(const <ObservationsListMineGeoPrecisionErrorComponentAttrEnum>[
   _$observationsListMineGeoPrecisionErrorComponentAttrEnum_geoPrecision,
   _$observationsListMineGeoPrecisionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,8 +67,7 @@ ObservationsListMineGeoPrecisionErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsListMineGeoPrecisionErrorComponentCodeEnum>
-    _$observationsListMineGeoPrecisionErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$observationsListMineGeoPrecisionErrorComponentCodeEnumValues = BuiltSet<
         ObservationsListMineGeoPrecisionErrorComponentCodeEnum>(const <ObservationsListMineGeoPrecisionErrorComponentCodeEnum>[
   _$observationsListMineGeoPrecisionErrorComponentCodeEnum_invalid,
   _$observationsListMineGeoPrecisionErrorComponentCodeEnum_maxValue,
@@ -79,10 +77,10 @@ final BuiltSet<ObservationsListMineGeoPrecisionErrorComponentCodeEnum>
 
 Serializer<ObservationsListMineGeoPrecisionErrorComponentAttrEnum>
     _$observationsListMineGeoPrecisionErrorComponentAttrEnumSerializer =
-    new _$ObservationsListMineGeoPrecisionErrorComponentAttrEnumSerializer();
+    _$ObservationsListMineGeoPrecisionErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListMineGeoPrecisionErrorComponentCodeEnum>
     _$observationsListMineGeoPrecisionErrorComponentCodeEnumSerializer =
-    new _$ObservationsListMineGeoPrecisionErrorComponentCodeEnumSerializer();
+    _$ObservationsListMineGeoPrecisionErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListMineGeoPrecisionErrorComponentAttrEnumSerializer
     implements
@@ -170,21 +168,12 @@ class _$ObservationsListMineGeoPrecisionErrorComponent
   factory _$ObservationsListMineGeoPrecisionErrorComponent(
           [void Function(ObservationsListMineGeoPrecisionErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListMineGeoPrecisionErrorComponentBuilder()
-            ..update(updates))
+      (ObservationsListMineGeoPrecisionErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsListMineGeoPrecisionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsListMineGeoPrecisionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsListMineGeoPrecisionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsListMineGeoPrecisionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsListMineGeoPrecisionErrorComponent rebuild(
           void Function(ObservationsListMineGeoPrecisionErrorComponentBuilder)
@@ -193,8 +182,7 @@ class _$ObservationsListMineGeoPrecisionErrorComponent
 
   @override
   ObservationsListMineGeoPrecisionErrorComponentBuilder toBuilder() =>
-      new ObservationsListMineGeoPrecisionErrorComponentBuilder()
-        ..replace(this);
+      ObservationsListMineGeoPrecisionErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -265,7 +253,6 @@ class ObservationsListMineGeoPrecisionErrorComponentBuilder
 
   @override
   void replace(ObservationsListMineGeoPrecisionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListMineGeoPrecisionErrorComponent;
   }
 
@@ -281,13 +268,14 @@ class ObservationsListMineGeoPrecisionErrorComponentBuilder
 
   _$ObservationsListMineGeoPrecisionErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListMineGeoPrecisionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'ObservationsListMineGeoPrecisionErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'ObservationsListMineGeoPrecisionErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsListMineGeoPrecisionErrorComponent', 'detail'));
+        _$ObservationsListMineGeoPrecisionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsListMineGeoPrecisionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsListMineGeoPrecisionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'ObservationsListMineGeoPrecisionErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

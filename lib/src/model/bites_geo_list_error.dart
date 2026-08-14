@@ -137,9 +137,7 @@ class _$BitesGeoListErrorSerializer implements PrimitiveSerializer<BitesGeoListE
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    BitesGeoListError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    BitesGeoListError object) sync* {
   }
 
   @override

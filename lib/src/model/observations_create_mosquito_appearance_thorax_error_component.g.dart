@@ -30,7 +30,7 @@ ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum
 
 final BuiltSet<ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum>
     _$observationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum>(const <ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum>[
   _$observationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum_mosquitoAppearancePeriodThorax,
   _$observationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum
 
 final BuiltSet<ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum>
     _$observationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum>(const <ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum>[
   _$observationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum_invalidChoice,
   _$observationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -68,10 +68,10 @@ final BuiltSet<ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnum>
     _$observationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnum>
     _$observationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateMosquitoAppearanceThoraxErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateMosquitoAppearanceThoraxErrorComponentAttrEnumSerializer
     implements
@@ -160,21 +160,13 @@ class _$ObservationsCreateMosquitoAppearanceThoraxErrorComponent
           [void Function(
                   ObservationsCreateMosquitoAppearanceThoraxErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateMosquitoAppearanceThoraxErrorComponentBuilder()
+      (ObservationsCreateMosquitoAppearanceThoraxErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsCreateMosquitoAppearanceThoraxErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'ObservationsCreateMosquitoAppearanceThoraxErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'ObservationsCreateMosquitoAppearanceThoraxErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'ObservationsCreateMosquitoAppearanceThoraxErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateMosquitoAppearanceThoraxErrorComponent rebuild(
           void Function(
@@ -184,7 +176,7 @@ class _$ObservationsCreateMosquitoAppearanceThoraxErrorComponent
 
   @override
   ObservationsCreateMosquitoAppearanceThoraxErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateMosquitoAppearanceThoraxErrorComponentBuilder()
+      ObservationsCreateMosquitoAppearanceThoraxErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -260,7 +252,6 @@ class ObservationsCreateMosquitoAppearanceThoraxErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateMosquitoAppearanceThoraxErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateMosquitoAppearanceThoraxErrorComponent;
   }
 
@@ -277,19 +268,20 @@ class ObservationsCreateMosquitoAppearanceThoraxErrorComponentBuilder
 
   _$ObservationsCreateMosquitoAppearanceThoraxErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateMosquitoAppearanceThoraxErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsCreateMosquitoAppearanceThoraxErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsCreateMosquitoAppearanceThoraxErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsCreateMosquitoAppearanceThoraxErrorComponent',
-                'detail'));
+        _$ObservationsCreateMosquitoAppearanceThoraxErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'ObservationsCreateMosquitoAppearanceThoraxErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'ObservationsCreateMosquitoAppearanceThoraxErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsCreateMosquitoAppearanceThoraxErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

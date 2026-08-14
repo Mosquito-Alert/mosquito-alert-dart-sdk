@@ -13,20 +13,15 @@ class _$MessageContent extends MessageContent {
   final LocalizedMessageBody body;
 
   factory _$MessageContent([void Function(MessageContentBuilder)? updates]) =>
-      (new MessageContentBuilder()..update(updates))._build();
+      (MessageContentBuilder()..update(updates))._build();
 
-  _$MessageContent._({required this.title, required this.body}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(title, r'MessageContent', 'title');
-    BuiltValueNullFieldError.checkNotNull(body, r'MessageContent', 'body');
-  }
-
+  _$MessageContent._({required this.title, required this.body}) : super._();
   @override
   MessageContent rebuild(void Function(MessageContentBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  MessageContentBuilder toBuilder() =>
-      new MessageContentBuilder()..replace(this);
+  MessageContentBuilder toBuilder() => MessageContentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -60,12 +55,12 @@ class MessageContentBuilder
 
   LocalizedMessageTitleBuilder? _title;
   LocalizedMessageTitleBuilder get title =>
-      _$this._title ??= new LocalizedMessageTitleBuilder();
+      _$this._title ??= LocalizedMessageTitleBuilder();
   set title(LocalizedMessageTitleBuilder? title) => _$this._title = title;
 
   LocalizedMessageBodyBuilder? _body;
   LocalizedMessageBodyBuilder get body =>
-      _$this._body ??= new LocalizedMessageBodyBuilder();
+      _$this._body ??= LocalizedMessageBodyBuilder();
   set body(LocalizedMessageBodyBuilder? body) => _$this._body = body;
 
   MessageContentBuilder() {
@@ -84,7 +79,6 @@ class MessageContentBuilder
 
   @override
   void replace(MessageContent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessageContent;
   }
 
@@ -100,7 +94,10 @@ class MessageContentBuilder
     _$MessageContent _$result;
     try {
       _$result = _$v ??
-          new _$MessageContent._(title: title.build(), body: body.build());
+          _$MessageContent._(
+            title: title.build(),
+            body: body.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -109,7 +106,7 @@ class MessageContentBuilder
         _$failedField = 'body';
         body.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'MessageContent', _$failedField, e.toString());
       }
       rethrow;

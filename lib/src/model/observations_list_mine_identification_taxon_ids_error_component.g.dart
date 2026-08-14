@@ -30,7 +30,7 @@ ObservationsListMineIdentificationTaxonIdsErrorComponentAttrEnum
 
 final BuiltSet<ObservationsListMineIdentificationTaxonIdsErrorComponentAttrEnum>
     _$observationsListMineIdentificationTaxonIdsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsListMineIdentificationTaxonIdsErrorComponentAttrEnum>(const <ObservationsListMineIdentificationTaxonIdsErrorComponentAttrEnum>[
   _$observationsListMineIdentificationTaxonIdsErrorComponentAttrEnum_identificationTaxonIds,
   _$observationsListMineIdentificationTaxonIdsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ ObservationsListMineIdentificationTaxonIdsErrorComponentCodeEnum
 
 final BuiltSet<ObservationsListMineIdentificationTaxonIdsErrorComponentCodeEnum>
     _$observationsListMineIdentificationTaxonIdsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsListMineIdentificationTaxonIdsErrorComponentCodeEnum>(const <ObservationsListMineIdentificationTaxonIdsErrorComponentCodeEnum>[
   _$observationsListMineIdentificationTaxonIdsErrorComponentCodeEnum_invalidChoice,
   _$observationsListMineIdentificationTaxonIdsErrorComponentCodeEnum_invalidList,
@@ -82,10 +82,10 @@ final BuiltSet<ObservationsListMineIdentificationTaxonIdsErrorComponentCodeEnum>
 
 Serializer<ObservationsListMineIdentificationTaxonIdsErrorComponentAttrEnum>
     _$observationsListMineIdentificationTaxonIdsErrorComponentAttrEnumSerializer =
-    new _$ObservationsListMineIdentificationTaxonIdsErrorComponentAttrEnumSerializer();
+    _$ObservationsListMineIdentificationTaxonIdsErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListMineIdentificationTaxonIdsErrorComponentCodeEnum>
     _$observationsListMineIdentificationTaxonIdsErrorComponentCodeEnumSerializer =
-    new _$ObservationsListMineIdentificationTaxonIdsErrorComponentCodeEnumSerializer();
+    _$ObservationsListMineIdentificationTaxonIdsErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListMineIdentificationTaxonIdsErrorComponentAttrEnumSerializer
     implements
@@ -178,21 +178,13 @@ class _$ObservationsListMineIdentificationTaxonIdsErrorComponent
           [void Function(
                   ObservationsListMineIdentificationTaxonIdsErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListMineIdentificationTaxonIdsErrorComponentBuilder()
+      (ObservationsListMineIdentificationTaxonIdsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsListMineIdentificationTaxonIdsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'ObservationsListMineIdentificationTaxonIdsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'ObservationsListMineIdentificationTaxonIdsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'ObservationsListMineIdentificationTaxonIdsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsListMineIdentificationTaxonIdsErrorComponent rebuild(
           void Function(
@@ -202,7 +194,7 @@ class _$ObservationsListMineIdentificationTaxonIdsErrorComponent
 
   @override
   ObservationsListMineIdentificationTaxonIdsErrorComponentBuilder toBuilder() =>
-      new ObservationsListMineIdentificationTaxonIdsErrorComponentBuilder()
+      ObservationsListMineIdentificationTaxonIdsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -278,7 +270,6 @@ class ObservationsListMineIdentificationTaxonIdsErrorComponentBuilder
 
   @override
   void replace(ObservationsListMineIdentificationTaxonIdsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListMineIdentificationTaxonIdsErrorComponent;
   }
 
@@ -295,19 +286,20 @@ class ObservationsListMineIdentificationTaxonIdsErrorComponentBuilder
 
   _$ObservationsListMineIdentificationTaxonIdsErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListMineIdentificationTaxonIdsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsListMineIdentificationTaxonIdsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsListMineIdentificationTaxonIdsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsListMineIdentificationTaxonIdsErrorComponent',
-                'detail'));
+        _$ObservationsListMineIdentificationTaxonIdsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'ObservationsListMineIdentificationTaxonIdsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'ObservationsListMineIdentificationTaxonIdsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsListMineIdentificationTaxonIdsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

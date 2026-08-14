@@ -26,7 +26,7 @@ NotificationsPartialUpdateErrorAttrEnum
 }
 
 final BuiltSet<NotificationsPartialUpdateErrorAttrEnum>
-    _$notificationsPartialUpdateErrorAttrEnumValues = new BuiltSet<
+    _$notificationsPartialUpdateErrorAttrEnumValues = BuiltSet<
         NotificationsPartialUpdateErrorAttrEnum>(const <NotificationsPartialUpdateErrorAttrEnum>[
   _$notificationsPartialUpdateErrorAttrEnum_isRead,
   _$notificationsPartialUpdateErrorAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ NotificationsPartialUpdateErrorCodeEnum
 }
 
 final BuiltSet<NotificationsPartialUpdateErrorCodeEnum>
-    _$notificationsPartialUpdateErrorCodeEnumValues = new BuiltSet<
+    _$notificationsPartialUpdateErrorCodeEnumValues = BuiltSet<
         NotificationsPartialUpdateErrorCodeEnum>(const <NotificationsPartialUpdateErrorCodeEnum>[
   _$notificationsPartialUpdateErrorCodeEnum_invalid,
   _$notificationsPartialUpdateErrorCodeEnum_null_,
@@ -72,10 +72,10 @@ final BuiltSet<NotificationsPartialUpdateErrorCodeEnum>
 
 Serializer<NotificationsPartialUpdateErrorAttrEnum>
     _$notificationsPartialUpdateErrorAttrEnumSerializer =
-    new _$NotificationsPartialUpdateErrorAttrEnumSerializer();
+    _$NotificationsPartialUpdateErrorAttrEnumSerializer();
 Serializer<NotificationsPartialUpdateErrorCodeEnum>
     _$notificationsPartialUpdateErrorCodeEnumSerializer =
-    new _$NotificationsPartialUpdateErrorCodeEnumSerializer();
+    _$NotificationsPartialUpdateErrorCodeEnumSerializer();
 
 class _$NotificationsPartialUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<NotificationsPartialUpdateErrorAttrEnum> {
@@ -152,13 +152,9 @@ class _$NotificationsPartialUpdateError
 
   factory _$NotificationsPartialUpdateError(
           [void Function(NotificationsPartialUpdateErrorBuilder)? updates]) =>
-      (new NotificationsPartialUpdateErrorBuilder()..update(updates))._build();
+      (NotificationsPartialUpdateErrorBuilder()..update(updates))._build();
 
-  _$NotificationsPartialUpdateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'NotificationsPartialUpdateError', 'oneOf');
-  }
-
+  _$NotificationsPartialUpdateError._({required this.oneOf}) : super._();
   @override
   NotificationsPartialUpdateError rebuild(
           void Function(NotificationsPartialUpdateErrorBuilder) updates) =>
@@ -166,7 +162,7 @@ class _$NotificationsPartialUpdateError
 
   @override
   NotificationsPartialUpdateErrorBuilder toBuilder() =>
-      new NotificationsPartialUpdateErrorBuilder()..replace(this);
+      NotificationsPartialUpdateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -215,7 +211,6 @@ class NotificationsPartialUpdateErrorBuilder
 
   @override
   void replace(NotificationsPartialUpdateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationsPartialUpdateError;
   }
 
@@ -229,9 +224,10 @@ class NotificationsPartialUpdateErrorBuilder
 
   _$NotificationsPartialUpdateError _build() {
     final _$result = _$v ??
-        new _$NotificationsPartialUpdateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'NotificationsPartialUpdateError', 'oneOf'));
+        _$NotificationsPartialUpdateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'NotificationsPartialUpdateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

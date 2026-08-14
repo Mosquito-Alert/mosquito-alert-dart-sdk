@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnum_isExecutive,
   _$identificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnum_null_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnumSerializer
     implements
@@ -179,27 +179,13 @@ class _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent rebuild(
           void Function(
@@ -210,7 +196,7 @@ class _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent
   @override
   IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -290,7 +276,6 @@ class IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent;
   }
@@ -309,19 +294,20 @@ class IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentBuilder
 
   _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent',
-                'detail'));
+        _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateIsExecutiveErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

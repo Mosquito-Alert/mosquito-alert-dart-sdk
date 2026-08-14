@@ -18,17 +18,11 @@ class _$PaginatedObservationList extends PaginatedObservationList {
 
   factory _$PaginatedObservationList(
           [void Function(PaginatedObservationListBuilder)? updates]) =>
-      (new PaginatedObservationListBuilder()..update(updates))._build();
+      (PaginatedObservationListBuilder()..update(updates))._build();
 
   _$PaginatedObservationList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedObservationList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedObservationList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedObservationList rebuild(
           void Function(PaginatedObservationListBuilder) updates) =>
@@ -36,7 +30,7 @@ class _$PaginatedObservationList extends PaginatedObservationList {
 
   @override
   PaginatedObservationListBuilder toBuilder() =>
-      new PaginatedObservationListBuilder()..replace(this);
+      PaginatedObservationListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -89,7 +83,7 @@ class PaginatedObservationListBuilder
 
   ListBuilder<Observation>? _results;
   ListBuilder<Observation> get results =>
-      _$this._results ??= new ListBuilder<Observation>();
+      _$this._results ??= ListBuilder<Observation>();
   set results(ListBuilder<Observation>? results) => _$this._results = results;
 
   PaginatedObservationListBuilder() {
@@ -110,7 +104,6 @@ class PaginatedObservationListBuilder
 
   @override
   void replace(PaginatedObservationList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedObservationList;
   }
 
@@ -126,19 +119,20 @@ class PaginatedObservationListBuilder
     _$PaginatedObservationList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedObservationList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedObservationList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedObservationList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedObservationList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedObservationList', _$failedField, e.toString());
       }
       rethrow;

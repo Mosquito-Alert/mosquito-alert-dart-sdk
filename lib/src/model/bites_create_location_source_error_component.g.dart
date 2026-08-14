@@ -28,7 +28,7 @@ BitesCreateLocationSourceErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateLocationSourceErrorComponentAttrEnum>
-    _$bitesCreateLocationSourceErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateLocationSourceErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateLocationSourceErrorComponentAttrEnum>(const <BitesCreateLocationSourceErrorComponentAttrEnum>[
   _$bitesCreateLocationSourceErrorComponentAttrEnum_locationPeriodSource,
   _$bitesCreateLocationSourceErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -65,7 +65,7 @@ BitesCreateLocationSourceErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateLocationSourceErrorComponentCodeEnum>
-    _$bitesCreateLocationSourceErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateLocationSourceErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateLocationSourceErrorComponentCodeEnum>(const <BitesCreateLocationSourceErrorComponentCodeEnum>[
   _$bitesCreateLocationSourceErrorComponentCodeEnum_invalidChoice,
   _$bitesCreateLocationSourceErrorComponentCodeEnum_null_,
@@ -75,10 +75,10 @@ final BuiltSet<BitesCreateLocationSourceErrorComponentCodeEnum>
 
 Serializer<BitesCreateLocationSourceErrorComponentAttrEnum>
     _$bitesCreateLocationSourceErrorComponentAttrEnumSerializer =
-    new _$BitesCreateLocationSourceErrorComponentAttrEnumSerializer();
+    _$BitesCreateLocationSourceErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateLocationSourceErrorComponentCodeEnum>
     _$bitesCreateLocationSourceErrorComponentCodeEnumSerializer =
-    new _$BitesCreateLocationSourceErrorComponentCodeEnumSerializer();
+    _$BitesCreateLocationSourceErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateLocationSourceErrorComponentAttrEnumSerializer
     implements
@@ -162,20 +162,12 @@ class _$BitesCreateLocationSourceErrorComponent
   factory _$BitesCreateLocationSourceErrorComponent(
           [void Function(BitesCreateLocationSourceErrorComponentBuilder)?
               updates]) =>
-      (new BitesCreateLocationSourceErrorComponentBuilder()..update(updates))
+      (BitesCreateLocationSourceErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BitesCreateLocationSourceErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateLocationSourceErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateLocationSourceErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateLocationSourceErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateLocationSourceErrorComponent rebuild(
           void Function(BitesCreateLocationSourceErrorComponentBuilder)
@@ -184,7 +176,7 @@ class _$BitesCreateLocationSourceErrorComponent
 
   @override
   BitesCreateLocationSourceErrorComponentBuilder toBuilder() =>
-      new BitesCreateLocationSourceErrorComponentBuilder()..replace(this);
+      BitesCreateLocationSourceErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -253,7 +245,6 @@ class BitesCreateLocationSourceErrorComponentBuilder
 
   @override
   void replace(BitesCreateLocationSourceErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateLocationSourceErrorComponent;
   }
 
@@ -268,13 +259,14 @@ class BitesCreateLocationSourceErrorComponentBuilder
 
   _$BitesCreateLocationSourceErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateLocationSourceErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateLocationSourceErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateLocationSourceErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateLocationSourceErrorComponent', 'detail'));
+        _$BitesCreateLocationSourceErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateLocationSourceErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateLocationSourceErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateLocationSourceErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

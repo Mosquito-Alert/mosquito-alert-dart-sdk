@@ -26,7 +26,7 @@ ObservationGeoJsonModelTypeEnum _$observationGeoJsonModelTypeEnumValueOf(
 }
 
 final BuiltSet<ObservationGeoJsonModelTypeEnum>
-    _$observationGeoJsonModelTypeEnumValues = new BuiltSet<
+    _$observationGeoJsonModelTypeEnumValues = BuiltSet<
         ObservationGeoJsonModelTypeEnum>(const <ObservationGeoJsonModelTypeEnum>[
   _$observationGeoJsonModelTypeEnum_feature,
   _$observationGeoJsonModelTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<ObservationGeoJsonModelTypeEnum>
 
 Serializer<ObservationGeoJsonModelTypeEnum>
     _$observationGeoJsonModelTypeEnumSerializer =
-    new _$ObservationGeoJsonModelTypeEnumSerializer();
+    _$ObservationGeoJsonModelTypeEnumSerializer();
 
 class _$ObservationGeoJsonModelTypeEnumSerializer
     implements PrimitiveSerializer<ObservationGeoJsonModelTypeEnum> {
@@ -76,11 +76,10 @@ class _$ObservationGeoJsonModel extends ObservationGeoJsonModel {
 
   factory _$ObservationGeoJsonModel(
           [void Function(ObservationGeoJsonModelBuilder)? updates]) =>
-      (new ObservationGeoJsonModelBuilder()..update(updates))._build();
+      (ObservationGeoJsonModelBuilder()..update(updates))._build();
 
   _$ObservationGeoJsonModel._({this.type, this.geometry, this.properties})
       : super._();
-
   @override
   ObservationGeoJsonModel rebuild(
           void Function(ObservationGeoJsonModelBuilder) updates) =>
@@ -88,7 +87,7 @@ class _$ObservationGeoJsonModel extends ObservationGeoJsonModel {
 
   @override
   ObservationGeoJsonModelBuilder toBuilder() =>
-      new ObservationGeoJsonModelBuilder()..replace(this);
+      ObservationGeoJsonModelBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -130,13 +129,13 @@ class ObservationGeoJsonModelBuilder
 
   BiteGeoJsonModelGeometryBuilder? _geometry;
   BiteGeoJsonModelGeometryBuilder get geometry =>
-      _$this._geometry ??= new BiteGeoJsonModelGeometryBuilder();
+      _$this._geometry ??= BiteGeoJsonModelGeometryBuilder();
   set geometry(BiteGeoJsonModelGeometryBuilder? geometry) =>
       _$this._geometry = geometry;
 
   ObservationGeoJsonModelPropertiesBuilder? _properties;
   ObservationGeoJsonModelPropertiesBuilder get properties =>
-      _$this._properties ??= new ObservationGeoJsonModelPropertiesBuilder();
+      _$this._properties ??= ObservationGeoJsonModelPropertiesBuilder();
   set properties(ObservationGeoJsonModelPropertiesBuilder? properties) =>
       _$this._properties = properties;
 
@@ -157,7 +156,6 @@ class ObservationGeoJsonModelBuilder
 
   @override
   void replace(ObservationGeoJsonModel other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationGeoJsonModel;
   }
 
@@ -173,10 +171,11 @@ class ObservationGeoJsonModelBuilder
     _$ObservationGeoJsonModel _$result;
     try {
       _$result = _$v ??
-          new _$ObservationGeoJsonModel._(
-              type: type,
-              geometry: _geometry?.build(),
-              properties: _properties?.build());
+          _$ObservationGeoJsonModel._(
+            type: type,
+            geometry: _geometry?.build(),
+            properties: _properties?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -185,7 +184,7 @@ class ObservationGeoJsonModelBuilder
         _$failedField = 'properties';
         _properties?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'ObservationGeoJsonModel', _$failedField, e.toString());
       }
       rethrow;

@@ -26,7 +26,7 @@ BreedingSiteGeoJsonModelListTypeEnum
 }
 
 final BuiltSet<BreedingSiteGeoJsonModelListTypeEnum>
-    _$breedingSiteGeoJsonModelListTypeEnumValues = new BuiltSet<
+    _$breedingSiteGeoJsonModelListTypeEnumValues = BuiltSet<
         BreedingSiteGeoJsonModelListTypeEnum>(const <BreedingSiteGeoJsonModelListTypeEnum>[
   _$breedingSiteGeoJsonModelListTypeEnum_featureCollection,
   _$breedingSiteGeoJsonModelListTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<BreedingSiteGeoJsonModelListTypeEnum>
 
 Serializer<BreedingSiteGeoJsonModelListTypeEnum>
     _$breedingSiteGeoJsonModelListTypeEnumSerializer =
-    new _$BreedingSiteGeoJsonModelListTypeEnumSerializer();
+    _$BreedingSiteGeoJsonModelListTypeEnumSerializer();
 
 class _$BreedingSiteGeoJsonModelListTypeEnumSerializer
     implements PrimitiveSerializer<BreedingSiteGeoJsonModelListTypeEnum> {
@@ -76,10 +76,9 @@ class _$BreedingSiteGeoJsonModelList extends BreedingSiteGeoJsonModelList {
 
   factory _$BreedingSiteGeoJsonModelList(
           [void Function(BreedingSiteGeoJsonModelListBuilder)? updates]) =>
-      (new BreedingSiteGeoJsonModelListBuilder()..update(updates))._build();
+      (BreedingSiteGeoJsonModelListBuilder()..update(updates))._build();
 
   _$BreedingSiteGeoJsonModelList._({this.type, this.features}) : super._();
-
   @override
   BreedingSiteGeoJsonModelList rebuild(
           void Function(BreedingSiteGeoJsonModelListBuilder) updates) =>
@@ -87,7 +86,7 @@ class _$BreedingSiteGeoJsonModelList extends BreedingSiteGeoJsonModelList {
 
   @override
   BreedingSiteGeoJsonModelListBuilder toBuilder() =>
-      new BreedingSiteGeoJsonModelListBuilder()..replace(this);
+      BreedingSiteGeoJsonModelListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -127,7 +126,7 @@ class BreedingSiteGeoJsonModelListBuilder
 
   ListBuilder<BreedingSiteGeoJsonModel>? _features;
   ListBuilder<BreedingSiteGeoJsonModel> get features =>
-      _$this._features ??= new ListBuilder<BreedingSiteGeoJsonModel>();
+      _$this._features ??= ListBuilder<BreedingSiteGeoJsonModel>();
   set features(ListBuilder<BreedingSiteGeoJsonModel>? features) =>
       _$this._features = features;
 
@@ -147,7 +146,6 @@ class BreedingSiteGeoJsonModelListBuilder
 
   @override
   void replace(BreedingSiteGeoJsonModelList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingSiteGeoJsonModelList;
   }
 
@@ -163,15 +161,17 @@ class BreedingSiteGeoJsonModelListBuilder
     _$BreedingSiteGeoJsonModelList _$result;
     try {
       _$result = _$v ??
-          new _$BreedingSiteGeoJsonModelList._(
-              type: type, features: _features?.build());
+          _$BreedingSiteGeoJsonModelList._(
+            type: type,
+            features: _features?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'features';
         _features?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BreedingSiteGeoJsonModelList', _$failedField, e.toString());
       }
       rethrow;

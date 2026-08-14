@@ -153,9 +153,7 @@ class _$ObservationsListErrorSerializer implements PrimitiveSerializer<Observati
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    ObservationsListError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    ObservationsListError object) sync* {
   }
 
   @override

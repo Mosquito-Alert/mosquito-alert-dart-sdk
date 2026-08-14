@@ -28,7 +28,7 @@ BitesCreateEventEnvironmentErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateEventEnvironmentErrorComponentAttrEnum>
-    _$bitesCreateEventEnvironmentErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateEventEnvironmentErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateEventEnvironmentErrorComponentAttrEnum>(const <BitesCreateEventEnvironmentErrorComponentAttrEnum>[
   _$bitesCreateEventEnvironmentErrorComponentAttrEnum_eventEnvironment,
   _$bitesCreateEventEnvironmentErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ BitesCreateEventEnvironmentErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateEventEnvironmentErrorComponentCodeEnum>
-    _$bitesCreateEventEnvironmentErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateEventEnvironmentErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateEventEnvironmentErrorComponentCodeEnum>(const <BitesCreateEventEnvironmentErrorComponentCodeEnum>[
   _$bitesCreateEventEnvironmentErrorComponentCodeEnum_invalidChoice,
   _$bitesCreateEventEnvironmentErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -63,10 +63,10 @@ final BuiltSet<BitesCreateEventEnvironmentErrorComponentCodeEnum>
 
 Serializer<BitesCreateEventEnvironmentErrorComponentAttrEnum>
     _$bitesCreateEventEnvironmentErrorComponentAttrEnumSerializer =
-    new _$BitesCreateEventEnvironmentErrorComponentAttrEnumSerializer();
+    _$BitesCreateEventEnvironmentErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateEventEnvironmentErrorComponentCodeEnum>
     _$bitesCreateEventEnvironmentErrorComponentCodeEnumSerializer =
-    new _$BitesCreateEventEnvironmentErrorComponentCodeEnumSerializer();
+    _$BitesCreateEventEnvironmentErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateEventEnvironmentErrorComponentAttrEnumSerializer
     implements
@@ -146,20 +146,12 @@ class _$BitesCreateEventEnvironmentErrorComponent
   factory _$BitesCreateEventEnvironmentErrorComponent(
           [void Function(BitesCreateEventEnvironmentErrorComponentBuilder)?
               updates]) =>
-      (new BitesCreateEventEnvironmentErrorComponentBuilder()..update(updates))
+      (BitesCreateEventEnvironmentErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BitesCreateEventEnvironmentErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateEventEnvironmentErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateEventEnvironmentErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateEventEnvironmentErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateEventEnvironmentErrorComponent rebuild(
           void Function(BitesCreateEventEnvironmentErrorComponentBuilder)
@@ -168,7 +160,7 @@ class _$BitesCreateEventEnvironmentErrorComponent
 
   @override
   BitesCreateEventEnvironmentErrorComponentBuilder toBuilder() =>
-      new BitesCreateEventEnvironmentErrorComponentBuilder()..replace(this);
+      BitesCreateEventEnvironmentErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -237,7 +229,6 @@ class BitesCreateEventEnvironmentErrorComponentBuilder
 
   @override
   void replace(BitesCreateEventEnvironmentErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateEventEnvironmentErrorComponent;
   }
 
@@ -253,13 +244,14 @@ class BitesCreateEventEnvironmentErrorComponentBuilder
 
   _$BitesCreateEventEnvironmentErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateEventEnvironmentErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateEventEnvironmentErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateEventEnvironmentErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BitesCreateEventEnvironmentErrorComponent', 'detail'));
+        _$BitesCreateEventEnvironmentErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateEventEnvironmentErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateEventEnvironmentErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateEventEnvironmentErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

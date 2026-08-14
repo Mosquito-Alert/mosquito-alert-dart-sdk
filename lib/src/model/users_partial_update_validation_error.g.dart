@@ -26,7 +26,7 @@ UsersPartialUpdateValidationErrorTypeEnum
 }
 
 final BuiltSet<UsersPartialUpdateValidationErrorTypeEnum>
-    _$usersPartialUpdateValidationErrorTypeEnumValues = new BuiltSet<
+    _$usersPartialUpdateValidationErrorTypeEnumValues = BuiltSet<
         UsersPartialUpdateValidationErrorTypeEnum>(const <UsersPartialUpdateValidationErrorTypeEnum>[
   _$usersPartialUpdateValidationErrorTypeEnum_validationError,
   _$usersPartialUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<UsersPartialUpdateValidationErrorTypeEnum>
 
 Serializer<UsersPartialUpdateValidationErrorTypeEnum>
     _$usersPartialUpdateValidationErrorTypeEnumSerializer =
-    new _$UsersPartialUpdateValidationErrorTypeEnumSerializer();
+    _$UsersPartialUpdateValidationErrorTypeEnumSerializer();
 
 class _$UsersPartialUpdateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<UsersPartialUpdateValidationErrorTypeEnum> {
@@ -77,18 +77,11 @@ class _$UsersPartialUpdateValidationError
 
   factory _$UsersPartialUpdateValidationError(
           [void Function(UsersPartialUpdateValidationErrorBuilder)? updates]) =>
-      (new UsersPartialUpdateValidationErrorBuilder()..update(updates))
-          ._build();
+      (UsersPartialUpdateValidationErrorBuilder()..update(updates))._build();
 
   _$UsersPartialUpdateValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'UsersPartialUpdateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'UsersPartialUpdateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   UsersPartialUpdateValidationError rebuild(
           void Function(UsersPartialUpdateValidationErrorBuilder) updates) =>
@@ -96,7 +89,7 @@ class _$UsersPartialUpdateValidationError
 
   @override
   UsersPartialUpdateValidationErrorBuilder toBuilder() =>
-      new UsersPartialUpdateValidationErrorBuilder()..replace(this);
+      UsersPartialUpdateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -137,7 +130,7 @@ class UsersPartialUpdateValidationErrorBuilder
 
   ListBuilder<UsersPartialUpdateError>? _errors;
   ListBuilder<UsersPartialUpdateError> get errors =>
-      _$this._errors ??= new ListBuilder<UsersPartialUpdateError>();
+      _$this._errors ??= ListBuilder<UsersPartialUpdateError>();
   set errors(ListBuilder<UsersPartialUpdateError>? errors) =>
       _$this._errors = errors;
 
@@ -157,7 +150,6 @@ class UsersPartialUpdateValidationErrorBuilder
 
   @override
   void replace(UsersPartialUpdateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UsersPartialUpdateValidationError;
   }
 
@@ -174,17 +166,18 @@ class UsersPartialUpdateValidationErrorBuilder
     _$UsersPartialUpdateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$UsersPartialUpdateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'UsersPartialUpdateValidationError', 'type'),
-              errors: errors.build());
+          _$UsersPartialUpdateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'UsersPartialUpdateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'UsersPartialUpdateValidationError', _$failedField, e.toString());
       }
       rethrow;

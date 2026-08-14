@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentA
 final BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnum_characteristicsPeriodNonFieldErrors,
   _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentC
 final BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorCo
           [void Function(
                   IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent
       rebuild(
@@ -200,7 +186,7 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorCo
   @override
   IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -285,7 +271,6 @@ class IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComp
   void replace(
       IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent;
   }
@@ -305,20 +290,21 @@ class IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComp
   _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent
+        _$IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateCharacteristicsNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

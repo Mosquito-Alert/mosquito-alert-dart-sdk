@@ -31,7 +31,7 @@ ObservationsListIdentificationTaxonIdsLookupErrorComponentAttrEnum
 final BuiltSet<
         ObservationsListIdentificationTaxonIdsLookupErrorComponentAttrEnum>
     _$observationsListIdentificationTaxonIdsLookupErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsListIdentificationTaxonIdsLookupErrorComponentAttrEnum>(const <ObservationsListIdentificationTaxonIdsLookupErrorComponentAttrEnum>[
   _$observationsListIdentificationTaxonIdsLookupErrorComponentAttrEnum_identificationTaxonIdsLookup,
   _$observationsListIdentificationTaxonIdsLookupErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ ObservationsListIdentificationTaxonIdsLookupErrorComponentCodeEnum
 final BuiltSet<
         ObservationsListIdentificationTaxonIdsLookupErrorComponentCodeEnum>
     _$observationsListIdentificationTaxonIdsLookupErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsListIdentificationTaxonIdsLookupErrorComponentCodeEnum>(const <ObservationsListIdentificationTaxonIdsLookupErrorComponentCodeEnum>[
   _$observationsListIdentificationTaxonIdsLookupErrorComponentCodeEnum_invalidChoice,
   _$observationsListIdentificationTaxonIdsLookupErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -70,10 +70,10 @@ final BuiltSet<
 
 Serializer<ObservationsListIdentificationTaxonIdsLookupErrorComponentAttrEnum>
     _$observationsListIdentificationTaxonIdsLookupErrorComponentAttrEnumSerializer =
-    new _$ObservationsListIdentificationTaxonIdsLookupErrorComponentAttrEnumSerializer();
+    _$ObservationsListIdentificationTaxonIdsLookupErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListIdentificationTaxonIdsLookupErrorComponentCodeEnum>
     _$observationsListIdentificationTaxonIdsLookupErrorComponentCodeEnumSerializer =
-    new _$ObservationsListIdentificationTaxonIdsLookupErrorComponentCodeEnumSerializer();
+    _$ObservationsListIdentificationTaxonIdsLookupErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListIdentificationTaxonIdsLookupErrorComponentAttrEnumSerializer
     implements
@@ -164,23 +164,13 @@ class _$ObservationsListIdentificationTaxonIdsLookupErrorComponent
           [void Function(
                   ObservationsListIdentificationTaxonIdsLookupErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListIdentificationTaxonIdsLookupErrorComponentBuilder()
+      (ObservationsListIdentificationTaxonIdsLookupErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsListIdentificationTaxonIdsLookupErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'ObservationsListIdentificationTaxonIdsLookupErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'ObservationsListIdentificationTaxonIdsLookupErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'ObservationsListIdentificationTaxonIdsLookupErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   ObservationsListIdentificationTaxonIdsLookupErrorComponent rebuild(
           void Function(
@@ -191,7 +181,7 @@ class _$ObservationsListIdentificationTaxonIdsLookupErrorComponent
   @override
   ObservationsListIdentificationTaxonIdsLookupErrorComponentBuilder
       toBuilder() =>
-          new ObservationsListIdentificationTaxonIdsLookupErrorComponentBuilder()
+          ObservationsListIdentificationTaxonIdsLookupErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -269,7 +259,6 @@ class ObservationsListIdentificationTaxonIdsLookupErrorComponentBuilder
   @override
   void replace(
       ObservationsListIdentificationTaxonIdsLookupErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListIdentificationTaxonIdsLookupErrorComponent;
   }
 
@@ -287,19 +276,20 @@ class ObservationsListIdentificationTaxonIdsLookupErrorComponentBuilder
 
   _$ObservationsListIdentificationTaxonIdsLookupErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListIdentificationTaxonIdsLookupErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsListIdentificationTaxonIdsLookupErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsListIdentificationTaxonIdsLookupErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsListIdentificationTaxonIdsLookupErrorComponent',
-                'detail'));
+        _$ObservationsListIdentificationTaxonIdsLookupErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'ObservationsListIdentificationTaxonIdsLookupErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'ObservationsListIdentificationTaxonIdsLookupErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsListIdentificationTaxonIdsLookupErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

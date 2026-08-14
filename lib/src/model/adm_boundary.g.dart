@@ -17,27 +17,20 @@ class _$AdmBoundary extends AdmBoundary {
   final int level;
 
   factory _$AdmBoundary([void Function(AdmBoundaryBuilder)? updates]) =>
-      (new AdmBoundaryBuilder()..update(updates))._build();
+      (AdmBoundaryBuilder()..update(updates))._build();
 
   _$AdmBoundary._(
       {required this.nameValue,
       required this.code,
       required this.source_,
       required this.level})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        nameValue, r'AdmBoundary', 'nameValue');
-    BuiltValueNullFieldError.checkNotNull(code, r'AdmBoundary', 'code');
-    BuiltValueNullFieldError.checkNotNull(source_, r'AdmBoundary', 'source_');
-    BuiltValueNullFieldError.checkNotNull(level, r'AdmBoundary', 'level');
-  }
-
+      : super._();
   @override
   AdmBoundary rebuild(void Function(AdmBoundaryBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  AdmBoundaryBuilder toBuilder() => new AdmBoundaryBuilder()..replace(this);
+  AdmBoundaryBuilder toBuilder() => AdmBoundaryBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -108,7 +101,6 @@ class AdmBoundaryBuilder implements Builder<AdmBoundary, AdmBoundaryBuilder> {
 
   @override
   void replace(AdmBoundary other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AdmBoundary;
   }
 
@@ -122,15 +114,16 @@ class AdmBoundaryBuilder implements Builder<AdmBoundary, AdmBoundaryBuilder> {
 
   _$AdmBoundary _build() {
     final _$result = _$v ??
-        new _$AdmBoundary._(
-            nameValue: BuiltValueNullFieldError.checkNotNull(
-                nameValue, r'AdmBoundary', 'nameValue'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AdmBoundary', 'code'),
-            source_: BuiltValueNullFieldError.checkNotNull(
-                source_, r'AdmBoundary', 'source_'),
-            level: BuiltValueNullFieldError.checkNotNull(
-                level, r'AdmBoundary', 'level'));
+        _$AdmBoundary._(
+          nameValue: BuiltValueNullFieldError.checkNotNull(
+              nameValue, r'AdmBoundary', 'nameValue'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AdmBoundary', 'code'),
+          source_: BuiltValueNullFieldError.checkNotNull(
+              source_, r'AdmBoundary', 'source_'),
+          level: BuiltValueNullFieldError.checkNotNull(
+              level, r'AdmBoundary', 'level'),
+        );
     replace(_$result);
     return _$result;
   }

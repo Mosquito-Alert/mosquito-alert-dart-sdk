@@ -27,7 +27,7 @@ ObservationsGeoListCountryIdErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsGeoListCountryIdErrorComponentAttrEnum>
-    _$observationsGeoListCountryIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsGeoListCountryIdErrorComponentAttrEnumValues = BuiltSet<
         ObservationsGeoListCountryIdErrorComponentAttrEnum>(const <ObservationsGeoListCountryIdErrorComponentAttrEnum>[
   _$observationsGeoListCountryIdErrorComponentAttrEnum_countryId,
   _$observationsGeoListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ ObservationsGeoListCountryIdErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsGeoListCountryIdErrorComponentCodeEnum>
-    _$observationsGeoListCountryIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsGeoListCountryIdErrorComponentCodeEnumValues = BuiltSet<
         ObservationsGeoListCountryIdErrorComponentCodeEnum>(const <ObservationsGeoListCountryIdErrorComponentCodeEnum>[
   _$observationsGeoListCountryIdErrorComponentCodeEnum_invalidChoice,
   _$observationsGeoListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<ObservationsGeoListCountryIdErrorComponentCodeEnum>
 
 Serializer<ObservationsGeoListCountryIdErrorComponentAttrEnum>
     _$observationsGeoListCountryIdErrorComponentAttrEnumSerializer =
-    new _$ObservationsGeoListCountryIdErrorComponentAttrEnumSerializer();
+    _$ObservationsGeoListCountryIdErrorComponentAttrEnumSerializer();
 Serializer<ObservationsGeoListCountryIdErrorComponentCodeEnum>
     _$observationsGeoListCountryIdErrorComponentCodeEnumSerializer =
-    new _$ObservationsGeoListCountryIdErrorComponentCodeEnumSerializer();
+    _$ObservationsGeoListCountryIdErrorComponentCodeEnumSerializer();
 
 class _$ObservationsGeoListCountryIdErrorComponentAttrEnumSerializer
     implements
@@ -147,20 +147,12 @@ class _$ObservationsGeoListCountryIdErrorComponent
   factory _$ObservationsGeoListCountryIdErrorComponent(
           [void Function(ObservationsGeoListCountryIdErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsGeoListCountryIdErrorComponentBuilder()..update(updates))
+      (ObservationsGeoListCountryIdErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsGeoListCountryIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsGeoListCountryIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsGeoListCountryIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsGeoListCountryIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsGeoListCountryIdErrorComponent rebuild(
           void Function(ObservationsGeoListCountryIdErrorComponentBuilder)
@@ -169,7 +161,7 @@ class _$ObservationsGeoListCountryIdErrorComponent
 
   @override
   ObservationsGeoListCountryIdErrorComponentBuilder toBuilder() =>
-      new ObservationsGeoListCountryIdErrorComponentBuilder()..replace(this);
+      ObservationsGeoListCountryIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -238,7 +230,6 @@ class ObservationsGeoListCountryIdErrorComponentBuilder
 
   @override
   void replace(ObservationsGeoListCountryIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsGeoListCountryIdErrorComponent;
   }
 
@@ -254,13 +245,14 @@ class ObservationsGeoListCountryIdErrorComponentBuilder
 
   _$ObservationsGeoListCountryIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsGeoListCountryIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsGeoListCountryIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsGeoListCountryIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsGeoListCountryIdErrorComponent', 'detail'));
+        _$ObservationsGeoListCountryIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsGeoListCountryIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsGeoListCountryIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsGeoListCountryIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

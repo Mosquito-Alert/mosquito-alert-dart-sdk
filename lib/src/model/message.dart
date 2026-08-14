@@ -4,6 +4,7 @@
 
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/message_content.dart';
+import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/simple_user.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -16,6 +17,7 @@ part 'message.g.dart';
 /// * [id] 
 /// * [senderUser] 
 /// * [content] - The content of the message
+/// * [target] 
 /// * [createdAt] 
 @BuiltValue()
 abstract class Message implements Built<Message, MessageBuilder> {
@@ -28,6 +30,10 @@ abstract class Message implements Built<Message, MessageBuilder> {
   /// The content of the message
   @BuiltValueField(wireName: r'content')
   MessageContent get content;
+
+  @BuiltValueField(wireName: r'target')
+  MessageTargetEnum get target;
+  // enum targetEnum {  users,  audience,  };
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
@@ -69,6 +75,11 @@ class _$MessageSerializer implements PrimitiveSerializer<Message> {
     yield serializers.serialize(
       object.content,
       specifiedType: const FullType(MessageContent),
+    );
+    yield r'target';
+    yield serializers.serialize(
+      object.target,
+      specifiedType: const FullType(MessageTargetEnum),
     );
     yield r'created_at';
     yield serializers.serialize(
@@ -119,6 +130,13 @@ class _$MessageSerializer implements PrimitiveSerializer<Message> {
           ) as MessageContent;
           result.content.replace(valueDes);
           break;
+        case r'target':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(MessageTargetEnum),
+          ) as MessageTargetEnum;
+          result.target = valueDes;
+          break;
         case r'created_at':
           final valueDes = serializers.deserialize(
             value,
@@ -153,5 +171,22 @@ class _$MessageSerializer implements PrimitiveSerializer<Message> {
     );
     return result.build();
   }
+}
+
+class MessageTargetEnum extends EnumClass {
+
+  @BuiltValueEnumConst(wireName: r'users')
+  static const MessageTargetEnum users = _$messageTargetEnum_users;
+  @BuiltValueEnumConst(wireName: r'audience')
+  static const MessageTargetEnum audience = _$messageTargetEnum_audience;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const MessageTargetEnum unknownDefaultOpenApi = _$messageTargetEnum_unknownDefaultOpenApi;
+
+  static Serializer<MessageTargetEnum> get serializer => _$messageTargetEnumSerializer;
+
+  const MessageTargetEnum._(String name): super(name);
+
+  static BuiltSet<MessageTargetEnum> get values => _$messageTargetEnumValues;
+  static MessageTargetEnum valueOf(String name) => _$messageTargetEnumValueOf(name);
 }
 

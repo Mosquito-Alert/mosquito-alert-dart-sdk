@@ -31,7 +31,7 @@ SpeciesClassificationConfidenceLabelEnum
 }
 
 final BuiltSet<SpeciesClassificationConfidenceLabelEnum>
-    _$speciesClassificationConfidenceLabelEnumValues = new BuiltSet<
+    _$speciesClassificationConfidenceLabelEnumValues = BuiltSet<
         SpeciesClassificationConfidenceLabelEnum>(const <SpeciesClassificationConfidenceLabelEnum>[
   _$speciesClassificationConfidenceLabelEnum_definitely,
   _$speciesClassificationConfidenceLabelEnum_probably,
@@ -40,7 +40,7 @@ final BuiltSet<SpeciesClassificationConfidenceLabelEnum>
 
 Serializer<SpeciesClassificationConfidenceLabelEnum>
     _$speciesClassificationConfidenceLabelEnumSerializer =
-    new _$SpeciesClassificationConfidenceLabelEnumSerializer();
+    _$SpeciesClassificationConfidenceLabelEnumSerializer();
 
 class _$SpeciesClassificationConfidenceLabelEnumSerializer
     implements PrimitiveSerializer<SpeciesClassificationConfidenceLabelEnum> {
@@ -88,24 +88,14 @@ class _$SpeciesClassification extends SpeciesClassification {
 
   factory _$SpeciesClassification(
           [void Function(SpeciesClassificationBuilder)? updates]) =>
-      (new SpeciesClassificationBuilder()..update(updates))._build();
+      (SpeciesClassificationBuilder()..update(updates))._build();
 
   _$SpeciesClassification._(
       {required this.taxon,
       required this.confidence,
       required this.confidenceLabel,
       required this.isHighConfidence})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        taxon, r'SpeciesClassification', 'taxon');
-    BuiltValueNullFieldError.checkNotNull(
-        confidence, r'SpeciesClassification', 'confidence');
-    BuiltValueNullFieldError.checkNotNull(
-        confidenceLabel, r'SpeciesClassification', 'confidenceLabel');
-    BuiltValueNullFieldError.checkNotNull(
-        isHighConfidence, r'SpeciesClassification', 'isHighConfidence');
-  }
-
+      : super._();
   @override
   SpeciesClassification rebuild(
           void Function(SpeciesClassificationBuilder) updates) =>
@@ -113,7 +103,7 @@ class _$SpeciesClassification extends SpeciesClassification {
 
   @override
   SpeciesClassificationBuilder toBuilder() =>
-      new SpeciesClassificationBuilder()..replace(this);
+      SpeciesClassificationBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -152,7 +142,7 @@ class SpeciesClassificationBuilder
   _$SpeciesClassification? _$v;
 
   SimpleTaxonBuilder? _taxon;
-  SimpleTaxonBuilder get taxon => _$this._taxon ??= new SimpleTaxonBuilder();
+  SimpleTaxonBuilder get taxon => _$this._taxon ??= SimpleTaxonBuilder();
   set taxon(SimpleTaxonBuilder? taxon) => _$this._taxon = taxon;
 
   double? _confidence;
@@ -189,7 +179,6 @@ class SpeciesClassificationBuilder
 
   @override
   void replace(SpeciesClassification other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SpeciesClassification;
   }
 
@@ -205,23 +194,22 @@ class SpeciesClassificationBuilder
     _$SpeciesClassification _$result;
     try {
       _$result = _$v ??
-          new _$SpeciesClassification._(
-              taxon: taxon.build(),
-              confidence: BuiltValueNullFieldError.checkNotNull(
-                  confidence, r'SpeciesClassification', 'confidence'),
-              confidenceLabel: BuiltValueNullFieldError.checkNotNull(
-                  confidenceLabel, r'SpeciesClassification', 'confidenceLabel'),
-              isHighConfidence: BuiltValueNullFieldError.checkNotNull(
-                  isHighConfidence,
-                  r'SpeciesClassification',
-                  'isHighConfidence'));
+          _$SpeciesClassification._(
+            taxon: taxon.build(),
+            confidence: BuiltValueNullFieldError.checkNotNull(
+                confidence, r'SpeciesClassification', 'confidence'),
+            confidenceLabel: BuiltValueNullFieldError.checkNotNull(
+                confidenceLabel, r'SpeciesClassification', 'confidenceLabel'),
+            isHighConfidence: BuiltValueNullFieldError.checkNotNull(
+                isHighConfidence, r'SpeciesClassification', 'isHighConfidence'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'taxon';
         taxon.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'SpeciesClassification', _$failedField, e.toString());
       }
       rethrow;

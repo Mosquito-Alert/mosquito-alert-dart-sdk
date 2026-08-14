@@ -30,7 +30,7 @@ DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum
 
 final BuiltSet<DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum>
     _$devicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum>(const <DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum>[
   _$devicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum_mobileAppPeriodPackageName,
   _$devicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -96,7 +96,7 @@ DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum
 
 final BuiltSet<DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum>
     _$devicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum>(const <DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum>[
   _$devicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum_blank,
   _$devicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum_invalid,
@@ -110,10 +110,10 @@ final BuiltSet<DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum>
 
 Serializer<DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnum>
     _$devicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnumSerializer =
-    new _$DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnumSerializer();
+    _$DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnumSerializer();
 Serializer<DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnum>
     _$devicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnumSerializer =
-    new _$DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnumSerializer();
+    _$DevicesPartialUpdateMobileAppPackageNameErrorComponentCodeEnumSerializer();
 
 class _$DevicesPartialUpdateMobileAppPackageNameErrorComponentAttrEnumSerializer
     implements
@@ -210,21 +210,13 @@ class _$DevicesPartialUpdateMobileAppPackageNameErrorComponent
           [void Function(
                   DevicesPartialUpdateMobileAppPackageNameErrorComponentBuilder)?
               updates]) =>
-      (new DevicesPartialUpdateMobileAppPackageNameErrorComponentBuilder()
+      (DevicesPartialUpdateMobileAppPackageNameErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$DevicesPartialUpdateMobileAppPackageNameErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'DevicesPartialUpdateMobileAppPackageNameErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'DevicesPartialUpdateMobileAppPackageNameErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'DevicesPartialUpdateMobileAppPackageNameErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesPartialUpdateMobileAppPackageNameErrorComponent rebuild(
           void Function(
@@ -234,7 +226,7 @@ class _$DevicesPartialUpdateMobileAppPackageNameErrorComponent
 
   @override
   DevicesPartialUpdateMobileAppPackageNameErrorComponentBuilder toBuilder() =>
-      new DevicesPartialUpdateMobileAppPackageNameErrorComponentBuilder()
+      DevicesPartialUpdateMobileAppPackageNameErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -310,7 +302,6 @@ class DevicesPartialUpdateMobileAppPackageNameErrorComponentBuilder
 
   @override
   void replace(DevicesPartialUpdateMobileAppPackageNameErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesPartialUpdateMobileAppPackageNameErrorComponent;
   }
 
@@ -327,19 +318,20 @@ class DevicesPartialUpdateMobileAppPackageNameErrorComponentBuilder
 
   _$DevicesPartialUpdateMobileAppPackageNameErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesPartialUpdateMobileAppPackageNameErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'DevicesPartialUpdateMobileAppPackageNameErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'DevicesPartialUpdateMobileAppPackageNameErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'DevicesPartialUpdateMobileAppPackageNameErrorComponent',
-                'detail'));
+        _$DevicesPartialUpdateMobileAppPackageNameErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'DevicesPartialUpdateMobileAppPackageNameErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'DevicesPartialUpdateMobileAppPackageNameErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'DevicesPartialUpdateMobileAppPackageNameErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

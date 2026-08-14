@@ -30,7 +30,7 @@ IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnum
 
 final BuiltSet<IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateTagsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateTagsErrorComponentAttrEnum_tags,
   _$identificationtasksAnnotationsCreateTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -78,7 +78,7 @@ IdentificationtasksAnnotationsCreateTagsErrorComponentCodeEnum
 
 final BuiltSet<IdentificationtasksAnnotationsCreateTagsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateTagsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateTagsErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateTagsErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateTagsErrorComponentCodeEnum_invalidJson,
   _$identificationtasksAnnotationsCreateTagsErrorComponentCodeEnum_notAList,
@@ -89,10 +89,10 @@ final BuiltSet<IdentificationtasksAnnotationsCreateTagsErrorComponentCodeEnum>
 
 Serializer<IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateTagsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksAnnotationsCreateTagsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateTagsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateTagsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateTagsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnumSerializer
     implements
@@ -183,21 +183,13 @@ class _$IdentificationtasksAnnotationsCreateTagsErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsCreateTagsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateTagsErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateTagsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateTagsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksAnnotationsCreateTagsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksAnnotationsCreateTagsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'IdentificationtasksAnnotationsCreateTagsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateTagsErrorComponent rebuild(
           void Function(
@@ -207,7 +199,7 @@ class _$IdentificationtasksAnnotationsCreateTagsErrorComponent
 
   @override
   IdentificationtasksAnnotationsCreateTagsErrorComponentBuilder toBuilder() =>
-      new IdentificationtasksAnnotationsCreateTagsErrorComponentBuilder()
+      IdentificationtasksAnnotationsCreateTagsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -283,7 +275,6 @@ class IdentificationtasksAnnotationsCreateTagsErrorComponentBuilder
 
   @override
   void replace(IdentificationtasksAnnotationsCreateTagsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksAnnotationsCreateTagsErrorComponent;
   }
 
@@ -300,19 +291,20 @@ class IdentificationtasksAnnotationsCreateTagsErrorComponentBuilder
 
   _$IdentificationtasksAnnotationsCreateTagsErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateTagsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateTagsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateTagsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateTagsErrorComponent',
-                'detail'));
+        _$IdentificationtasksAnnotationsCreateTagsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateTagsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateTagsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateTagsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

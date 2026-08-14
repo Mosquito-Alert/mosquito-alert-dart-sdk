@@ -26,7 +26,7 @@ AuthSignupGuestValidationErrorTypeEnum
 }
 
 final BuiltSet<AuthSignupGuestValidationErrorTypeEnum>
-    _$authSignupGuestValidationErrorTypeEnumValues = new BuiltSet<
+    _$authSignupGuestValidationErrorTypeEnumValues = BuiltSet<
         AuthSignupGuestValidationErrorTypeEnum>(const <AuthSignupGuestValidationErrorTypeEnum>[
   _$authSignupGuestValidationErrorTypeEnum_validationError,
   _$authSignupGuestValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<AuthSignupGuestValidationErrorTypeEnum>
 
 Serializer<AuthSignupGuestValidationErrorTypeEnum>
     _$authSignupGuestValidationErrorTypeEnumSerializer =
-    new _$AuthSignupGuestValidationErrorTypeEnumSerializer();
+    _$AuthSignupGuestValidationErrorTypeEnumSerializer();
 
 class _$AuthSignupGuestValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<AuthSignupGuestValidationErrorTypeEnum> {
@@ -76,16 +76,10 @@ class _$AuthSignupGuestValidationError extends AuthSignupGuestValidationError {
 
   factory _$AuthSignupGuestValidationError(
           [void Function(AuthSignupGuestValidationErrorBuilder)? updates]) =>
-      (new AuthSignupGuestValidationErrorBuilder()..update(updates))._build();
+      (AuthSignupGuestValidationErrorBuilder()..update(updates))._build();
 
   _$AuthSignupGuestValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'AuthSignupGuestValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'AuthSignupGuestValidationError', 'errors');
-  }
-
+      : super._();
   @override
   AuthSignupGuestValidationError rebuild(
           void Function(AuthSignupGuestValidationErrorBuilder) updates) =>
@@ -93,7 +87,7 @@ class _$AuthSignupGuestValidationError extends AuthSignupGuestValidationError {
 
   @override
   AuthSignupGuestValidationErrorBuilder toBuilder() =>
-      new AuthSignupGuestValidationErrorBuilder()..replace(this);
+      AuthSignupGuestValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -133,7 +127,7 @@ class AuthSignupGuestValidationErrorBuilder
 
   ListBuilder<AuthSignupGuestError>? _errors;
   ListBuilder<AuthSignupGuestError> get errors =>
-      _$this._errors ??= new ListBuilder<AuthSignupGuestError>();
+      _$this._errors ??= ListBuilder<AuthSignupGuestError>();
   set errors(ListBuilder<AuthSignupGuestError>? errors) =>
       _$this._errors = errors;
 
@@ -153,7 +147,6 @@ class AuthSignupGuestValidationErrorBuilder
 
   @override
   void replace(AuthSignupGuestValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthSignupGuestValidationError;
   }
 
@@ -169,17 +162,18 @@ class AuthSignupGuestValidationErrorBuilder
     _$AuthSignupGuestValidationError _$result;
     try {
       _$result = _$v ??
-          new _$AuthSignupGuestValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'AuthSignupGuestValidationError', 'type'),
-              errors: errors.build());
+          _$AuthSignupGuestValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'AuthSignupGuestValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'AuthSignupGuestValidationError', _$failedField, e.toString());
       }
       rethrow;

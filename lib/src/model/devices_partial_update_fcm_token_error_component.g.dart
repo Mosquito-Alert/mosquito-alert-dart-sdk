@@ -27,7 +27,7 @@ DevicesPartialUpdateFcmTokenErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesPartialUpdateFcmTokenErrorComponentAttrEnum>
-    _$devicesPartialUpdateFcmTokenErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesPartialUpdateFcmTokenErrorComponentAttrEnumValues = BuiltSet<
         DevicesPartialUpdateFcmTokenErrorComponentAttrEnum>(const <DevicesPartialUpdateFcmTokenErrorComponentAttrEnum>[
   _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_fcmToken,
   _$devicesPartialUpdateFcmTokenErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -81,7 +81,7 @@ DevicesPartialUpdateFcmTokenErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesPartialUpdateFcmTokenErrorComponentCodeEnum>
-    _$devicesPartialUpdateFcmTokenErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesPartialUpdateFcmTokenErrorComponentCodeEnumValues = BuiltSet<
         DevicesPartialUpdateFcmTokenErrorComponentCodeEnum>(const <DevicesPartialUpdateFcmTokenErrorComponentCodeEnum>[
   _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_blank,
   _$devicesPartialUpdateFcmTokenErrorComponentCodeEnum_invalid,
@@ -94,10 +94,10 @@ final BuiltSet<DevicesPartialUpdateFcmTokenErrorComponentCodeEnum>
 
 Serializer<DevicesPartialUpdateFcmTokenErrorComponentAttrEnum>
     _$devicesPartialUpdateFcmTokenErrorComponentAttrEnumSerializer =
-    new _$DevicesPartialUpdateFcmTokenErrorComponentAttrEnumSerializer();
+    _$DevicesPartialUpdateFcmTokenErrorComponentAttrEnumSerializer();
 Serializer<DevicesPartialUpdateFcmTokenErrorComponentCodeEnum>
     _$devicesPartialUpdateFcmTokenErrorComponentCodeEnumSerializer =
-    new _$DevicesPartialUpdateFcmTokenErrorComponentCodeEnumSerializer();
+    _$DevicesPartialUpdateFcmTokenErrorComponentCodeEnumSerializer();
 
 class _$DevicesPartialUpdateFcmTokenErrorComponentAttrEnumSerializer
     implements
@@ -189,20 +189,12 @@ class _$DevicesPartialUpdateFcmTokenErrorComponent
   factory _$DevicesPartialUpdateFcmTokenErrorComponent(
           [void Function(DevicesPartialUpdateFcmTokenErrorComponentBuilder)?
               updates]) =>
-      (new DevicesPartialUpdateFcmTokenErrorComponentBuilder()..update(updates))
+      (DevicesPartialUpdateFcmTokenErrorComponentBuilder()..update(updates))
           ._build();
 
   _$DevicesPartialUpdateFcmTokenErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesPartialUpdateFcmTokenErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesPartialUpdateFcmTokenErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesPartialUpdateFcmTokenErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesPartialUpdateFcmTokenErrorComponent rebuild(
           void Function(DevicesPartialUpdateFcmTokenErrorComponentBuilder)
@@ -211,7 +203,7 @@ class _$DevicesPartialUpdateFcmTokenErrorComponent
 
   @override
   DevicesPartialUpdateFcmTokenErrorComponentBuilder toBuilder() =>
-      new DevicesPartialUpdateFcmTokenErrorComponentBuilder()..replace(this);
+      DevicesPartialUpdateFcmTokenErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -280,7 +272,6 @@ class DevicesPartialUpdateFcmTokenErrorComponentBuilder
 
   @override
   void replace(DevicesPartialUpdateFcmTokenErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesPartialUpdateFcmTokenErrorComponent;
   }
 
@@ -296,13 +287,14 @@ class DevicesPartialUpdateFcmTokenErrorComponentBuilder
 
   _$DevicesPartialUpdateFcmTokenErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesPartialUpdateFcmTokenErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesPartialUpdateFcmTokenErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesPartialUpdateFcmTokenErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'DevicesPartialUpdateFcmTokenErrorComponent', 'detail'));
+        _$DevicesPartialUpdateFcmTokenErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesPartialUpdateFcmTokenErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesPartialUpdateFcmTokenErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesPartialUpdateFcmTokenErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -30,7 +30,7 @@ NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum
 
 final BuiltSet<NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum>
     _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum>(const <NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum>[
   _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -66,7 +66,7 @@ NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum
 
 final BuiltSet<NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum>
     _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum>(const <NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -75,10 +75,10 @@ final BuiltSet<NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum>
     _$notificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnum>
     _$notificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$NotificationsPartialUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -165,21 +165,13 @@ class _$NotificationsPartialUpdateNonFieldErrorsErrorComponent
           [void Function(
                   NotificationsPartialUpdateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new NotificationsPartialUpdateNonFieldErrorsErrorComponentBuilder()
+      (NotificationsPartialUpdateNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$NotificationsPartialUpdateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'NotificationsPartialUpdateNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'NotificationsPartialUpdateNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'NotificationsPartialUpdateNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   NotificationsPartialUpdateNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -189,7 +181,7 @@ class _$NotificationsPartialUpdateNonFieldErrorsErrorComponent
 
   @override
   NotificationsPartialUpdateNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new NotificationsPartialUpdateNonFieldErrorsErrorComponentBuilder()
+      NotificationsPartialUpdateNonFieldErrorsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -265,7 +257,6 @@ class NotificationsPartialUpdateNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(NotificationsPartialUpdateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationsPartialUpdateNonFieldErrorsErrorComponent;
   }
 
@@ -282,19 +273,20 @@ class NotificationsPartialUpdateNonFieldErrorsErrorComponentBuilder
 
   _$NotificationsPartialUpdateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$NotificationsPartialUpdateNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'NotificationsPartialUpdateNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'NotificationsPartialUpdateNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'NotificationsPartialUpdateNonFieldErrorsErrorComponent',
-                'detail'));
+        _$NotificationsPartialUpdateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'NotificationsPartialUpdateNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'NotificationsPartialUpdateNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'NotificationsPartialUpdateNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

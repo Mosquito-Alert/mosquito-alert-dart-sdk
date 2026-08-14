@@ -30,7 +30,7 @@ BreedingsitesCreateLocationPointLatitudeErrorComponentAttrEnum
 
 final BuiltSet<BreedingsitesCreateLocationPointLatitudeErrorComponentAttrEnum>
     _$breedingsitesCreateLocationPointLatitudeErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         BreedingsitesCreateLocationPointLatitudeErrorComponentAttrEnum>(const <BreedingsitesCreateLocationPointLatitudeErrorComponentAttrEnum>[
   _$breedingsitesCreateLocationPointLatitudeErrorComponentAttrEnum_locationPeriodPointPeriodLatitude,
   _$breedingsitesCreateLocationPointLatitudeErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -66,7 +66,7 @@ BreedingsitesCreateLocationPointLatitudeErrorComponentCodeEnum
 
 final BuiltSet<BreedingsitesCreateLocationPointLatitudeErrorComponentCodeEnum>
     _$breedingsitesCreateLocationPointLatitudeErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         BreedingsitesCreateLocationPointLatitudeErrorComponentCodeEnum>(const <BreedingsitesCreateLocationPointLatitudeErrorComponentCodeEnum>[
   _$breedingsitesCreateLocationPointLatitudeErrorComponentCodeEnum_null_,
   _$breedingsitesCreateLocationPointLatitudeErrorComponentCodeEnum_required_,
@@ -75,10 +75,10 @@ final BuiltSet<BreedingsitesCreateLocationPointLatitudeErrorComponentCodeEnum>
 
 Serializer<BreedingsitesCreateLocationPointLatitudeErrorComponentAttrEnum>
     _$breedingsitesCreateLocationPointLatitudeErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesCreateLocationPointLatitudeErrorComponentAttrEnumSerializer();
+    _$BreedingsitesCreateLocationPointLatitudeErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesCreateLocationPointLatitudeErrorComponentCodeEnum>
     _$breedingsitesCreateLocationPointLatitudeErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesCreateLocationPointLatitudeErrorComponentCodeEnumSerializer();
+    _$BreedingsitesCreateLocationPointLatitudeErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesCreateLocationPointLatitudeErrorComponentAttrEnumSerializer
     implements
@@ -165,21 +165,13 @@ class _$BreedingsitesCreateLocationPointLatitudeErrorComponent
           [void Function(
                   BreedingsitesCreateLocationPointLatitudeErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesCreateLocationPointLatitudeErrorComponentBuilder()
+      (BreedingsitesCreateLocationPointLatitudeErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$BreedingsitesCreateLocationPointLatitudeErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'BreedingsitesCreateLocationPointLatitudeErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'BreedingsitesCreateLocationPointLatitudeErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'BreedingsitesCreateLocationPointLatitudeErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesCreateLocationPointLatitudeErrorComponent rebuild(
           void Function(
@@ -189,7 +181,7 @@ class _$BreedingsitesCreateLocationPointLatitudeErrorComponent
 
   @override
   BreedingsitesCreateLocationPointLatitudeErrorComponentBuilder toBuilder() =>
-      new BreedingsitesCreateLocationPointLatitudeErrorComponentBuilder()
+      BreedingsitesCreateLocationPointLatitudeErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -265,7 +257,6 @@ class BreedingsitesCreateLocationPointLatitudeErrorComponentBuilder
 
   @override
   void replace(BreedingsitesCreateLocationPointLatitudeErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesCreateLocationPointLatitudeErrorComponent;
   }
 
@@ -282,19 +273,20 @@ class BreedingsitesCreateLocationPointLatitudeErrorComponentBuilder
 
   _$BreedingsitesCreateLocationPointLatitudeErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesCreateLocationPointLatitudeErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'BreedingsitesCreateLocationPointLatitudeErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'BreedingsitesCreateLocationPointLatitudeErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'BreedingsitesCreateLocationPointLatitudeErrorComponent',
-                'detail'));
+        _$BreedingsitesCreateLocationPointLatitudeErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'BreedingsitesCreateLocationPointLatitudeErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'BreedingsitesCreateLocationPointLatitudeErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'BreedingsitesCreateLocationPointLatitudeErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

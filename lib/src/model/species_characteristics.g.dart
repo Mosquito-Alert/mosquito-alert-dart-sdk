@@ -29,7 +29,7 @@ SpeciesCharacteristicsSexEnum _$speciesCharacteristicsSexEnumValueOf(
 }
 
 final BuiltSet<SpeciesCharacteristicsSexEnum>
-    _$speciesCharacteristicsSexEnumValues = new BuiltSet<
+    _$speciesCharacteristicsSexEnumValues = BuiltSet<
         SpeciesCharacteristicsSexEnum>(const <SpeciesCharacteristicsSexEnum>[
   _$speciesCharacteristicsSexEnum_male,
   _$speciesCharacteristicsSexEnum_female,
@@ -38,7 +38,7 @@ final BuiltSet<SpeciesCharacteristicsSexEnum>
 
 Serializer<SpeciesCharacteristicsSexEnum>
     _$speciesCharacteristicsSexEnumSerializer =
-    new _$SpeciesCharacteristicsSexEnumSerializer();
+    _$SpeciesCharacteristicsSexEnumSerializer();
 
 class _$SpeciesCharacteristicsSexEnumSerializer
     implements PrimitiveSerializer<SpeciesCharacteristicsSexEnum> {
@@ -82,15 +82,11 @@ class _$SpeciesCharacteristics extends SpeciesCharacteristics {
 
   factory _$SpeciesCharacteristics(
           [void Function(SpeciesCharacteristicsBuilder)? updates]) =>
-      (new SpeciesCharacteristicsBuilder()..update(updates))._build();
+      (SpeciesCharacteristicsBuilder()..update(updates))._build();
 
   _$SpeciesCharacteristics._(
       {required this.sex, this.isBloodFed, this.isGravid})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        sex, r'SpeciesCharacteristics', 'sex');
-  }
-
+      : super._();
   @override
   SpeciesCharacteristics rebuild(
           void Function(SpeciesCharacteristicsBuilder) updates) =>
@@ -98,7 +94,7 @@ class _$SpeciesCharacteristics extends SpeciesCharacteristics {
 
   @override
   SpeciesCharacteristicsBuilder toBuilder() =>
-      new SpeciesCharacteristicsBuilder()..replace(this);
+      SpeciesCharacteristicsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -162,7 +158,6 @@ class SpeciesCharacteristicsBuilder
 
   @override
   void replace(SpeciesCharacteristics other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SpeciesCharacteristics;
   }
 
@@ -176,11 +171,12 @@ class SpeciesCharacteristicsBuilder
 
   _$SpeciesCharacteristics _build() {
     final _$result = _$v ??
-        new _$SpeciesCharacteristics._(
-            sex: BuiltValueNullFieldError.checkNotNull(
-                sex, r'SpeciesCharacteristics', 'sex'),
-            isBloodFed: isBloodFed,
-            isGravid: isGravid);
+        _$SpeciesCharacteristics._(
+          sex: BuiltValueNullFieldError.checkNotNull(
+              sex, r'SpeciesCharacteristics', 'sex'),
+          isBloodFed: isBloodFed,
+          isGravid: isGravid,
+        );
     replace(_$result);
     return _$result;
   }

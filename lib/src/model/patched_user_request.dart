@@ -77,8 +77,9 @@ class _$PatchedUserRequestSerializer implements PrimitiveSerializer<PatchedUserR
         case r'locale':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(PatchedUserRequestLocaleEnum),
-          ) as PatchedUserRequestLocaleEnum;
+            specifiedType: const FullType.nullable(PatchedUserRequestLocaleEnum),
+          ) as PatchedUserRequestLocaleEnum?;
+          if (valueDes == null) continue;
           result.locale = valueDes;
           break;
         default:

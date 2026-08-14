@@ -18,20 +18,14 @@ class _$BoundingBoxRequest extends BoundingBoxRequest {
 
   factory _$BoundingBoxRequest(
           [void Function(BoundingBoxRequestBuilder)? updates]) =>
-      (new BoundingBoxRequestBuilder()..update(updates))._build();
+      (BoundingBoxRequestBuilder()..update(updates))._build();
 
   _$BoundingBoxRequest._(
       {required this.xMin,
       required this.yMin,
       required this.xMax,
       required this.yMax})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(xMin, r'BoundingBoxRequest', 'xMin');
-    BuiltValueNullFieldError.checkNotNull(yMin, r'BoundingBoxRequest', 'yMin');
-    BuiltValueNullFieldError.checkNotNull(xMax, r'BoundingBoxRequest', 'xMax');
-    BuiltValueNullFieldError.checkNotNull(yMax, r'BoundingBoxRequest', 'yMax');
-  }
-
+      : super._();
   @override
   BoundingBoxRequest rebuild(
           void Function(BoundingBoxRequestBuilder) updates) =>
@@ -39,7 +33,7 @@ class _$BoundingBoxRequest extends BoundingBoxRequest {
 
   @override
   BoundingBoxRequestBuilder toBuilder() =>
-      new BoundingBoxRequestBuilder()..replace(this);
+      BoundingBoxRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -111,7 +105,6 @@ class BoundingBoxRequestBuilder
 
   @override
   void replace(BoundingBoxRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BoundingBoxRequest;
   }
 
@@ -125,15 +118,16 @@ class BoundingBoxRequestBuilder
 
   _$BoundingBoxRequest _build() {
     final _$result = _$v ??
-        new _$BoundingBoxRequest._(
-            xMin: BuiltValueNullFieldError.checkNotNull(
-                xMin, r'BoundingBoxRequest', 'xMin'),
-            yMin: BuiltValueNullFieldError.checkNotNull(
-                yMin, r'BoundingBoxRequest', 'yMin'),
-            xMax: BuiltValueNullFieldError.checkNotNull(
-                xMax, r'BoundingBoxRequest', 'xMax'),
-            yMax: BuiltValueNullFieldError.checkNotNull(
-                yMax, r'BoundingBoxRequest', 'yMax'));
+        _$BoundingBoxRequest._(
+          xMin: BuiltValueNullFieldError.checkNotNull(
+              xMin, r'BoundingBoxRequest', 'xMin'),
+          yMin: BuiltValueNullFieldError.checkNotNull(
+              yMin, r'BoundingBoxRequest', 'yMin'),
+          xMax: BuiltValueNullFieldError.checkNotNull(
+              xMax, r'BoundingBoxRequest', 'xMax'),
+          yMax: BuiltValueNullFieldError.checkNotNull(
+              yMax, r'BoundingBoxRequest', 'yMax'),
+        );
     replace(_$result);
     return _$result;
   }

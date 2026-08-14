@@ -30,7 +30,7 @@ IdentificationtasksListMineAnnotatorIdsErrorComponentAttrEnum
 
 final BuiltSet<IdentificationtasksListMineAnnotatorIdsErrorComponentAttrEnum>
     _$identificationtasksListMineAnnotatorIdsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineAnnotatorIdsErrorComponentAttrEnum>(const <IdentificationtasksListMineAnnotatorIdsErrorComponentAttrEnum>[
   _$identificationtasksListMineAnnotatorIdsErrorComponentAttrEnum_annotatorIds,
   _$identificationtasksListMineAnnotatorIdsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ IdentificationtasksListMineAnnotatorIdsErrorComponentCodeEnum
 
 final BuiltSet<IdentificationtasksListMineAnnotatorIdsErrorComponentCodeEnum>
     _$identificationtasksListMineAnnotatorIdsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksListMineAnnotatorIdsErrorComponentCodeEnum>(const <IdentificationtasksListMineAnnotatorIdsErrorComponentCodeEnum>[
   _$identificationtasksListMineAnnotatorIdsErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksListMineAnnotatorIdsErrorComponentCodeEnum_invalidList,
@@ -82,10 +82,10 @@ final BuiltSet<IdentificationtasksListMineAnnotatorIdsErrorComponentCodeEnum>
 
 Serializer<IdentificationtasksListMineAnnotatorIdsErrorComponentAttrEnum>
     _$identificationtasksListMineAnnotatorIdsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListMineAnnotatorIdsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListMineAnnotatorIdsErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksListMineAnnotatorIdsErrorComponentCodeEnum>
     _$identificationtasksListMineAnnotatorIdsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListMineAnnotatorIdsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListMineAnnotatorIdsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListMineAnnotatorIdsErrorComponentAttrEnumSerializer
     implements
@@ -174,21 +174,13 @@ class _$IdentificationtasksListMineAnnotatorIdsErrorComponent
           [void Function(
                   IdentificationtasksListMineAnnotatorIdsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListMineAnnotatorIdsErrorComponentBuilder()
+      (IdentificationtasksListMineAnnotatorIdsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksListMineAnnotatorIdsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'IdentificationtasksListMineAnnotatorIdsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'IdentificationtasksListMineAnnotatorIdsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'IdentificationtasksListMineAnnotatorIdsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListMineAnnotatorIdsErrorComponent rebuild(
           void Function(
@@ -198,7 +190,7 @@ class _$IdentificationtasksListMineAnnotatorIdsErrorComponent
 
   @override
   IdentificationtasksListMineAnnotatorIdsErrorComponentBuilder toBuilder() =>
-      new IdentificationtasksListMineAnnotatorIdsErrorComponentBuilder()
+      IdentificationtasksListMineAnnotatorIdsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -274,7 +266,6 @@ class IdentificationtasksListMineAnnotatorIdsErrorComponentBuilder
 
   @override
   void replace(IdentificationtasksListMineAnnotatorIdsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListMineAnnotatorIdsErrorComponent;
   }
 
@@ -291,19 +282,16 @@ class IdentificationtasksListMineAnnotatorIdsErrorComponentBuilder
 
   _$IdentificationtasksListMineAnnotatorIdsErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListMineAnnotatorIdsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksListMineAnnotatorIdsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksListMineAnnotatorIdsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksListMineAnnotatorIdsErrorComponent',
-                'detail'));
+        _$IdentificationtasksListMineAnnotatorIdsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'IdentificationtasksListMineAnnotatorIdsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'IdentificationtasksListMineAnnotatorIdsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksListMineAnnotatorIdsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

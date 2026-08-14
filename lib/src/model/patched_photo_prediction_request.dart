@@ -146,15 +146,17 @@ class _$PatchedPhotoPredictionRequestSerializer implements PrimitiveSerializer<P
         case r'bbox':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BoundingBoxRequest),
-          ) as BoundingBoxRequest;
+            specifiedType: const FullType.nullable(BoundingBoxRequest),
+          ) as BoundingBoxRequest?;
+          if (valueDes == null) continue;
           result.bbox.replace(valueDes);
           break;
         case r'insect_confidence':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(double),
-          ) as double;
+            specifiedType: const FullType.nullable(double),
+          ) as double?;
+          if (valueDes == null) continue;
           result.insectConfidence = valueDes;
           break;
         case r'predicted_class':
@@ -168,29 +170,33 @@ class _$PatchedPhotoPredictionRequestSerializer implements PrimitiveSerializer<P
         case r'threshold_deviation':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(double),
-          ) as double;
+            specifiedType: const FullType.nullable(double),
+          ) as double?;
+          if (valueDes == null) continue;
           result.thresholdDeviation = valueDes;
           break;
         case r'is_decisive':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(bool),
-          ) as bool;
+            specifiedType: const FullType.nullable(bool),
+          ) as bool?;
+          if (valueDes == null) continue;
           result.isDecisive = valueDes;
           break;
         case r'scores':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(PredictionScoreRequest),
-          ) as PredictionScoreRequest;
+            specifiedType: const FullType.nullable(PredictionScoreRequest),
+          ) as PredictionScoreRequest?;
+          if (valueDes == null) continue;
           result.scores.replace(valueDes);
           break;
         case r'classifier_version':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(PatchedPhotoPredictionRequestClassifierVersionEnum),
-          ) as PatchedPhotoPredictionRequestClassifierVersionEnum;
+            specifiedType: const FullType.nullable(PatchedPhotoPredictionRequestClassifierVersionEnum),
+          ) as PatchedPhotoPredictionRequestClassifierVersionEnum?;
+          if (valueDes == null) continue;
           result.classifierVersion = valueDes;
           break;
         default:

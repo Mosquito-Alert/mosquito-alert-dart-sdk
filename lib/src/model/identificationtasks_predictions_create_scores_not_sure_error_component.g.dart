@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnum_scoresPeriodNotSure,
   _$identificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreateScoresNotSureErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreateScoresNotSureErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreateScoresNotSureErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreateScoresNotSureErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreateScoresNotSureErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreateScoresNotSureErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreateScoresNotSureErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponent
   @override
   IdentificationtasksPredictionsCreateScoresNotSureErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreateScoresNotSureErrorComponentBuilder()
+          IdentificationtasksPredictionsCreateScoresNotSureErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -326,7 +312,6 @@ class IdentificationtasksPredictionsCreateScoresNotSureErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsCreateScoresNotSureErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponent;
   }
@@ -345,19 +330,20 @@ class IdentificationtasksPredictionsCreateScoresNotSureErrorComponentBuilder
 
   _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreateScoresNotSureErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreateScoresNotSureErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreateScoresNotSureErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsCreateScoresNotSureErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreateScoresNotSureErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreateScoresNotSureErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreateScoresNotSureErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

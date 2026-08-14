@@ -7,6 +7,13 @@ void main() {
   final instance = MosquitoAlert().getUsersApi();
 
   group(UsersApi, () {
+    // Returns the users matching the provided audience criteria.
+    //
+    //Future<PaginatedUserList> audienceFilter({ int page, int pageSize, AudienceFilterRequest audienceFilterRequest }) async
+    test('test audienceFilter', () async {
+      // TODO
+    });
+
     //Future<PaginatedUserList> list({ int page, int pageSize, String search }) async
     test('test list', () async {
       // TODO

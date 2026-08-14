@@ -27,7 +27,7 @@ UsersUpdateNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<UsersUpdateNonFieldErrorsErrorComponentAttrEnum>
-    _$usersUpdateNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
+    _$usersUpdateNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         UsersUpdateNonFieldErrorsErrorComponentAttrEnum>(const <UsersUpdateNonFieldErrorsErrorComponentAttrEnum>[
   _$usersUpdateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$usersUpdateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -59,7 +59,7 @@ UsersUpdateNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<UsersUpdateNonFieldErrorsErrorComponentCodeEnum>
-    _$usersUpdateNonFieldErrorsErrorComponentCodeEnumValues = new BuiltSet<
+    _$usersUpdateNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         UsersUpdateNonFieldErrorsErrorComponentCodeEnum>(const <UsersUpdateNonFieldErrorsErrorComponentCodeEnum>[
   _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$usersUpdateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -68,10 +68,10 @@ final BuiltSet<UsersUpdateNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<UsersUpdateNonFieldErrorsErrorComponentAttrEnum>
     _$usersUpdateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$UsersUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$UsersUpdateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<UsersUpdateNonFieldErrorsErrorComponentCodeEnum>
     _$usersUpdateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$UsersUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$UsersUpdateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$UsersUpdateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -153,20 +153,12 @@ class _$UsersUpdateNonFieldErrorsErrorComponent
   factory _$UsersUpdateNonFieldErrorsErrorComponent(
           [void Function(UsersUpdateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new UsersUpdateNonFieldErrorsErrorComponentBuilder()..update(updates))
+      (UsersUpdateNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$UsersUpdateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'UsersUpdateNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'UsersUpdateNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'UsersUpdateNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   UsersUpdateNonFieldErrorsErrorComponent rebuild(
           void Function(UsersUpdateNonFieldErrorsErrorComponentBuilder)
@@ -175,7 +167,7 @@ class _$UsersUpdateNonFieldErrorsErrorComponent
 
   @override
   UsersUpdateNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new UsersUpdateNonFieldErrorsErrorComponentBuilder()..replace(this);
+      UsersUpdateNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -244,7 +236,6 @@ class UsersUpdateNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(UsersUpdateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UsersUpdateNonFieldErrorsErrorComponent;
   }
 
@@ -259,13 +250,14 @@ class UsersUpdateNonFieldErrorsErrorComponentBuilder
 
   _$UsersUpdateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$UsersUpdateNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'UsersUpdateNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'UsersUpdateNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'UsersUpdateNonFieldErrorsErrorComponent', 'detail'));
+        _$UsersUpdateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'UsersUpdateNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'UsersUpdateNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'UsersUpdateNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

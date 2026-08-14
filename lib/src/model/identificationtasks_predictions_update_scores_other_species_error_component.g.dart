@@ -31,7 +31,7 @@ IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnum>(const <IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnum>[
   _$identificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnum_scoresPeriodOtherSpecies,
   _$identificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnum>(const <IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnum>[
   _$identificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent
           [void Function(
                   IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentBuilder()
+      (IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent
   @override
   IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentBuilder()
+          IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -328,7 +314,6 @@ class IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentBuilde
   void replace(
       IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent;
   }
@@ -348,20 +333,21 @@ class IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponentBuilde
   _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent
+        _$IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsUpdateScoresOtherSpeciesErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

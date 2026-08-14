@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEn
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnum_classifierVersion,
   _$identificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEn
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnum_null_,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorCompone
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent
       rebuild(
@@ -218,7 +204,7 @@ class _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorCompone
   @override
   IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -303,7 +289,6 @@ class IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent
   void replace(
       IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent;
   }
@@ -323,20 +308,21 @@ class IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent
   _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

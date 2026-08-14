@@ -15,24 +15,17 @@ class _$DeviceOsRequest extends DeviceOsRequest {
   final String? locale;
 
   factory _$DeviceOsRequest([void Function(DeviceOsRequestBuilder)? updates]) =>
-      (new DeviceOsRequestBuilder()..update(updates))._build();
+      (DeviceOsRequestBuilder()..update(updates))._build();
 
   _$DeviceOsRequest._(
       {required this.nameValue, required this.version, this.locale})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        nameValue, r'DeviceOsRequest', 'nameValue');
-    BuiltValueNullFieldError.checkNotNull(
-        version, r'DeviceOsRequest', 'version');
-  }
-
+      : super._();
   @override
   DeviceOsRequest rebuild(void Function(DeviceOsRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  DeviceOsRequestBuilder toBuilder() =>
-      new DeviceOsRequestBuilder()..replace(this);
+  DeviceOsRequestBuilder toBuilder() => DeviceOsRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -96,7 +89,6 @@ class DeviceOsRequestBuilder
 
   @override
   void replace(DeviceOsRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DeviceOsRequest;
   }
 
@@ -110,12 +102,13 @@ class DeviceOsRequestBuilder
 
   _$DeviceOsRequest _build() {
     final _$result = _$v ??
-        new _$DeviceOsRequest._(
-            nameValue: BuiltValueNullFieldError.checkNotNull(
-                nameValue, r'DeviceOsRequest', 'nameValue'),
-            version: BuiltValueNullFieldError.checkNotNull(
-                version, r'DeviceOsRequest', 'version'),
-            locale: locale);
+        _$DeviceOsRequest._(
+          nameValue: BuiltValueNullFieldError.checkNotNull(
+              nameValue, r'DeviceOsRequest', 'nameValue'),
+          version: BuiltValueNullFieldError.checkNotNull(
+              version, r'DeviceOsRequest', 'version'),
+          locale: locale,
+        );
     replace(_$result);
     return _$result;
   }

@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnum_photoUuid,
   _$identificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnum_null_,
@@ -84,10 +84,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnumSerializer
     implements
@@ -184,23 +184,13 @@ class _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreatePhotoUuidErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreatePhotoUuidErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreatePhotoUuidErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksPredictionsCreatePhotoUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksPredictionsCreatePhotoUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreatePhotoUuidErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreatePhotoUuidErrorComponent rebuild(
           void Function(
@@ -211,7 +201,7 @@ class _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponent
   @override
   IdentificationtasksPredictionsCreatePhotoUuidErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreatePhotoUuidErrorComponentBuilder()
+          IdentificationtasksPredictionsCreatePhotoUuidErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -290,7 +280,6 @@ class IdentificationtasksPredictionsCreatePhotoUuidErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsCreatePhotoUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponent;
   }
@@ -309,19 +298,20 @@ class IdentificationtasksPredictionsCreatePhotoUuidErrorComponentBuilder
 
   _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreatePhotoUuidErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreatePhotoUuidErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreatePhotoUuidErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreatePhotoUuidErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreatePhotoUuidErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreatePhotoUuidErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

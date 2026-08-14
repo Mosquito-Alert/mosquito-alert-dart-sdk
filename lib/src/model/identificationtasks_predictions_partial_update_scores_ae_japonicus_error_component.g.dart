@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEn
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnum_scoresPeriodAeJaponicus,
   _$identificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEn
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorCompone
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent
       rebuild(
@@ -245,7 +231,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorCompone
   @override
   IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -330,7 +316,6 @@ class IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent
   void replace(
       IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent;
   }
@@ -350,20 +335,21 @@ class IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent
   _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateScoresAeJaponicusErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

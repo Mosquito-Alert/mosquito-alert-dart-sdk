@@ -29,8 +29,7 @@ BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum>
-    _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum>(const <BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum>[
   _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -63,8 +62,7 @@ BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum>
-    _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum>(const <BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum>[
   _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -73,10 +71,10 @@ final BuiltSet<BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum>
     _$breedingsitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnum>
     _$breedingsitesCreateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$BreedingsitesCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -163,21 +161,13 @@ class _$BreedingsitesCreateNonFieldErrorsErrorComponent
           [void Function(
                   BreedingsitesCreateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesCreateNonFieldErrorsErrorComponentBuilder()
+      (BreedingsitesCreateNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$BreedingsitesCreateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesCreateNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesCreateNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesCreateNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesCreateNonFieldErrorsErrorComponent rebuild(
           void Function(BreedingsitesCreateNonFieldErrorsErrorComponentBuilder)
@@ -186,8 +176,7 @@ class _$BreedingsitesCreateNonFieldErrorsErrorComponent
 
   @override
   BreedingsitesCreateNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new BreedingsitesCreateNonFieldErrorsErrorComponentBuilder()
-        ..replace(this);
+      BreedingsitesCreateNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -258,7 +247,6 @@ class BreedingsitesCreateNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(BreedingsitesCreateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesCreateNonFieldErrorsErrorComponent;
   }
 
@@ -274,13 +262,14 @@ class BreedingsitesCreateNonFieldErrorsErrorComponentBuilder
 
   _$BreedingsitesCreateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesCreateNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'BreedingsitesCreateNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'BreedingsitesCreateNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesCreateNonFieldErrorsErrorComponent', 'detail'));
+        _$BreedingsitesCreateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesCreateNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesCreateNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'BreedingsitesCreateNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

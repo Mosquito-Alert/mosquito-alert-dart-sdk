@@ -86,15 +86,17 @@ class _$BiteGeoJsonModelGeometrySerializer implements PrimitiveSerializer<BiteGe
         case r'type':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BiteGeoJsonModelGeometryTypeEnum),
-          ) as BiteGeoJsonModelGeometryTypeEnum;
+            specifiedType: const FullType.nullable(BiteGeoJsonModelGeometryTypeEnum),
+          ) as BiteGeoJsonModelGeometryTypeEnum?;
+          if (valueDes == null) continue;
           result.type = valueDes;
           break;
         case r'coordinates':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(double)]),
-          ) as BuiltList<double>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(double)]),
+          ) as BuiltList<double>?;
+          if (valueDes == null) continue;
           result.coordinates.replace(valueDes);
           break;
         default:

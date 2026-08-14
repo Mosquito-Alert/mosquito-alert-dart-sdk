@@ -29,8 +29,7 @@ ObservationsCreateLocationSourceErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsCreateLocationSourceErrorComponentAttrEnum>
-    _$observationsCreateLocationSourceErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$observationsCreateLocationSourceErrorComponentAttrEnumValues = BuiltSet<
         ObservationsCreateLocationSourceErrorComponentAttrEnum>(const <ObservationsCreateLocationSourceErrorComponentAttrEnum>[
   _$observationsCreateLocationSourceErrorComponentAttrEnum_locationPeriodSource,
   _$observationsCreateLocationSourceErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -69,8 +68,7 @@ ObservationsCreateLocationSourceErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsCreateLocationSourceErrorComponentCodeEnum>
-    _$observationsCreateLocationSourceErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$observationsCreateLocationSourceErrorComponentCodeEnumValues = BuiltSet<
         ObservationsCreateLocationSourceErrorComponentCodeEnum>(const <ObservationsCreateLocationSourceErrorComponentCodeEnum>[
   _$observationsCreateLocationSourceErrorComponentCodeEnum_invalidChoice,
   _$observationsCreateLocationSourceErrorComponentCodeEnum_null_,
@@ -80,10 +78,10 @@ final BuiltSet<ObservationsCreateLocationSourceErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateLocationSourceErrorComponentAttrEnum>
     _$observationsCreateLocationSourceErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateLocationSourceErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateLocationSourceErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateLocationSourceErrorComponentCodeEnum>
     _$observationsCreateLocationSourceErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateLocationSourceErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateLocationSourceErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateLocationSourceErrorComponentAttrEnumSerializer
     implements
@@ -171,21 +169,12 @@ class _$ObservationsCreateLocationSourceErrorComponent
   factory _$ObservationsCreateLocationSourceErrorComponent(
           [void Function(ObservationsCreateLocationSourceErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateLocationSourceErrorComponentBuilder()
-            ..update(updates))
+      (ObservationsCreateLocationSourceErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsCreateLocationSourceErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsCreateLocationSourceErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsCreateLocationSourceErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsCreateLocationSourceErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateLocationSourceErrorComponent rebuild(
           void Function(ObservationsCreateLocationSourceErrorComponentBuilder)
@@ -194,8 +183,7 @@ class _$ObservationsCreateLocationSourceErrorComponent
 
   @override
   ObservationsCreateLocationSourceErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateLocationSourceErrorComponentBuilder()
-        ..replace(this);
+      ObservationsCreateLocationSourceErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -266,7 +254,6 @@ class ObservationsCreateLocationSourceErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateLocationSourceErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateLocationSourceErrorComponent;
   }
 
@@ -282,13 +269,14 @@ class ObservationsCreateLocationSourceErrorComponentBuilder
 
   _$ObservationsCreateLocationSourceErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateLocationSourceErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'ObservationsCreateLocationSourceErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'ObservationsCreateLocationSourceErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsCreateLocationSourceErrorComponent', 'detail'));
+        _$ObservationsCreateLocationSourceErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsCreateLocationSourceErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsCreateLocationSourceErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'ObservationsCreateLocationSourceErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

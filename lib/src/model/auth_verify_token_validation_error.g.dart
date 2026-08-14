@@ -26,7 +26,7 @@ AuthVerifyTokenValidationErrorTypeEnum
 }
 
 final BuiltSet<AuthVerifyTokenValidationErrorTypeEnum>
-    _$authVerifyTokenValidationErrorTypeEnumValues = new BuiltSet<
+    _$authVerifyTokenValidationErrorTypeEnumValues = BuiltSet<
         AuthVerifyTokenValidationErrorTypeEnum>(const <AuthVerifyTokenValidationErrorTypeEnum>[
   _$authVerifyTokenValidationErrorTypeEnum_validationError,
   _$authVerifyTokenValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<AuthVerifyTokenValidationErrorTypeEnum>
 
 Serializer<AuthVerifyTokenValidationErrorTypeEnum>
     _$authVerifyTokenValidationErrorTypeEnumSerializer =
-    new _$AuthVerifyTokenValidationErrorTypeEnumSerializer();
+    _$AuthVerifyTokenValidationErrorTypeEnumSerializer();
 
 class _$AuthVerifyTokenValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<AuthVerifyTokenValidationErrorTypeEnum> {
@@ -76,16 +76,10 @@ class _$AuthVerifyTokenValidationError extends AuthVerifyTokenValidationError {
 
   factory _$AuthVerifyTokenValidationError(
           [void Function(AuthVerifyTokenValidationErrorBuilder)? updates]) =>
-      (new AuthVerifyTokenValidationErrorBuilder()..update(updates))._build();
+      (AuthVerifyTokenValidationErrorBuilder()..update(updates))._build();
 
   _$AuthVerifyTokenValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'AuthVerifyTokenValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'AuthVerifyTokenValidationError', 'errors');
-  }
-
+      : super._();
   @override
   AuthVerifyTokenValidationError rebuild(
           void Function(AuthVerifyTokenValidationErrorBuilder) updates) =>
@@ -93,7 +87,7 @@ class _$AuthVerifyTokenValidationError extends AuthVerifyTokenValidationError {
 
   @override
   AuthVerifyTokenValidationErrorBuilder toBuilder() =>
-      new AuthVerifyTokenValidationErrorBuilder()..replace(this);
+      AuthVerifyTokenValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -133,7 +127,7 @@ class AuthVerifyTokenValidationErrorBuilder
 
   ListBuilder<AuthVerifyTokenError>? _errors;
   ListBuilder<AuthVerifyTokenError> get errors =>
-      _$this._errors ??= new ListBuilder<AuthVerifyTokenError>();
+      _$this._errors ??= ListBuilder<AuthVerifyTokenError>();
   set errors(ListBuilder<AuthVerifyTokenError>? errors) =>
       _$this._errors = errors;
 
@@ -153,7 +147,6 @@ class AuthVerifyTokenValidationErrorBuilder
 
   @override
   void replace(AuthVerifyTokenValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthVerifyTokenValidationError;
   }
 
@@ -169,17 +162,18 @@ class AuthVerifyTokenValidationErrorBuilder
     _$AuthVerifyTokenValidationError _$result;
     try {
       _$result = _$v ??
-          new _$AuthVerifyTokenValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'AuthVerifyTokenValidationError', 'type'),
-              errors: errors.build());
+          _$AuthVerifyTokenValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'AuthVerifyTokenValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'AuthVerifyTokenValidationError', _$failedField, e.toString());
       }
       rethrow;

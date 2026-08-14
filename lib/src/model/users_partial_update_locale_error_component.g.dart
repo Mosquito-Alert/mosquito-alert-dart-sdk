@@ -27,7 +27,7 @@ UsersPartialUpdateLocaleErrorComponentAttrEnum
 }
 
 final BuiltSet<UsersPartialUpdateLocaleErrorComponentAttrEnum>
-    _$usersPartialUpdateLocaleErrorComponentAttrEnumValues = new BuiltSet<
+    _$usersPartialUpdateLocaleErrorComponentAttrEnumValues = BuiltSet<
         UsersPartialUpdateLocaleErrorComponentAttrEnum>(const <UsersPartialUpdateLocaleErrorComponentAttrEnum>[
   _$usersPartialUpdateLocaleErrorComponentAttrEnum_locale,
   _$usersPartialUpdateLocaleErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -59,7 +59,7 @@ UsersPartialUpdateLocaleErrorComponentCodeEnum
 }
 
 final BuiltSet<UsersPartialUpdateLocaleErrorComponentCodeEnum>
-    _$usersPartialUpdateLocaleErrorComponentCodeEnumValues = new BuiltSet<
+    _$usersPartialUpdateLocaleErrorComponentCodeEnumValues = BuiltSet<
         UsersPartialUpdateLocaleErrorComponentCodeEnum>(const <UsersPartialUpdateLocaleErrorComponentCodeEnum>[
   _$usersPartialUpdateLocaleErrorComponentCodeEnum_invalidChoice,
   _$usersPartialUpdateLocaleErrorComponentCodeEnum_null_,
@@ -68,10 +68,10 @@ final BuiltSet<UsersPartialUpdateLocaleErrorComponentCodeEnum>
 
 Serializer<UsersPartialUpdateLocaleErrorComponentAttrEnum>
     _$usersPartialUpdateLocaleErrorComponentAttrEnumSerializer =
-    new _$UsersPartialUpdateLocaleErrorComponentAttrEnumSerializer();
+    _$UsersPartialUpdateLocaleErrorComponentAttrEnumSerializer();
 Serializer<UsersPartialUpdateLocaleErrorComponentCodeEnum>
     _$usersPartialUpdateLocaleErrorComponentCodeEnumSerializer =
-    new _$UsersPartialUpdateLocaleErrorComponentCodeEnumSerializer();
+    _$UsersPartialUpdateLocaleErrorComponentCodeEnumSerializer();
 
 class _$UsersPartialUpdateLocaleErrorComponentAttrEnumSerializer
     implements
@@ -153,20 +153,12 @@ class _$UsersPartialUpdateLocaleErrorComponent
   factory _$UsersPartialUpdateLocaleErrorComponent(
           [void Function(UsersPartialUpdateLocaleErrorComponentBuilder)?
               updates]) =>
-      (new UsersPartialUpdateLocaleErrorComponentBuilder()..update(updates))
+      (UsersPartialUpdateLocaleErrorComponentBuilder()..update(updates))
           ._build();
 
   _$UsersPartialUpdateLocaleErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'UsersPartialUpdateLocaleErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'UsersPartialUpdateLocaleErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'UsersPartialUpdateLocaleErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   UsersPartialUpdateLocaleErrorComponent rebuild(
           void Function(UsersPartialUpdateLocaleErrorComponentBuilder)
@@ -175,7 +167,7 @@ class _$UsersPartialUpdateLocaleErrorComponent
 
   @override
   UsersPartialUpdateLocaleErrorComponentBuilder toBuilder() =>
-      new UsersPartialUpdateLocaleErrorComponentBuilder()..replace(this);
+      UsersPartialUpdateLocaleErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -244,7 +236,6 @@ class UsersPartialUpdateLocaleErrorComponentBuilder
 
   @override
   void replace(UsersPartialUpdateLocaleErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UsersPartialUpdateLocaleErrorComponent;
   }
 
@@ -259,13 +250,14 @@ class UsersPartialUpdateLocaleErrorComponentBuilder
 
   _$UsersPartialUpdateLocaleErrorComponent _build() {
     final _$result = _$v ??
-        new _$UsersPartialUpdateLocaleErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'UsersPartialUpdateLocaleErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'UsersPartialUpdateLocaleErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'UsersPartialUpdateLocaleErrorComponent', 'detail'));
+        _$UsersPartialUpdateLocaleErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'UsersPartialUpdateLocaleErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'UsersPartialUpdateLocaleErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'UsersPartialUpdateLocaleErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -87,15 +87,17 @@ class _$BreedingSiteGeoJsonModelListSerializer implements PrimitiveSerializer<Br
         case r'type':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BreedingSiteGeoJsonModelListTypeEnum),
-          ) as BreedingSiteGeoJsonModelListTypeEnum;
+            specifiedType: const FullType.nullable(BreedingSiteGeoJsonModelListTypeEnum),
+          ) as BreedingSiteGeoJsonModelListTypeEnum?;
+          if (valueDes == null) continue;
           result.type = valueDes;
           break;
         case r'features':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(BreedingSiteGeoJsonModel)]),
-          ) as BuiltList<BreedingSiteGeoJsonModel>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(BreedingSiteGeoJsonModel)]),
+          ) as BuiltList<BreedingSiteGeoJsonModel>?;
+          if (valueDes == null) continue;
           result.features.replace(valueDes);
           break;
         default:

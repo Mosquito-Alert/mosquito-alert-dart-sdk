@@ -27,7 +27,7 @@ BitesListMineCreatedAtErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesListMineCreatedAtErrorComponentAttrEnum>
-    _$bitesListMineCreatedAtErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesListMineCreatedAtErrorComponentAttrEnumValues = BuiltSet<
         BitesListMineCreatedAtErrorComponentAttrEnum>(const <BitesListMineCreatedAtErrorComponentAttrEnum>[
   _$bitesListMineCreatedAtErrorComponentAttrEnum_createdAt,
   _$bitesListMineCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ BitesListMineCreatedAtErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesListMineCreatedAtErrorComponentCodeEnum>
-    _$bitesListMineCreatedAtErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesListMineCreatedAtErrorComponentCodeEnumValues = BuiltSet<
         BitesListMineCreatedAtErrorComponentCodeEnum>(const <BitesListMineCreatedAtErrorComponentCodeEnum>[
   _$bitesListMineCreatedAtErrorComponentCodeEnum_invalid,
   _$bitesListMineCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<BitesListMineCreatedAtErrorComponentCodeEnum>
 
 Serializer<BitesListMineCreatedAtErrorComponentAttrEnum>
     _$bitesListMineCreatedAtErrorComponentAttrEnumSerializer =
-    new _$BitesListMineCreatedAtErrorComponentAttrEnumSerializer();
+    _$BitesListMineCreatedAtErrorComponentAttrEnumSerializer();
 Serializer<BitesListMineCreatedAtErrorComponentCodeEnum>
     _$bitesListMineCreatedAtErrorComponentCodeEnumSerializer =
-    new _$BitesListMineCreatedAtErrorComponentCodeEnumSerializer();
+    _$BitesListMineCreatedAtErrorComponentCodeEnumSerializer();
 
 class _$BitesListMineCreatedAtErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,11 @@ class _$BitesListMineCreatedAtErrorComponent
   factory _$BitesListMineCreatedAtErrorComponent(
           [void Function(BitesListMineCreatedAtErrorComponentBuilder)?
               updates]) =>
-      (new BitesListMineCreatedAtErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesListMineCreatedAtErrorComponentBuilder()..update(updates))._build();
 
   _$BitesListMineCreatedAtErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesListMineCreatedAtErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesListMineCreatedAtErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesListMineCreatedAtErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesListMineCreatedAtErrorComponent rebuild(
           void Function(BitesListMineCreatedAtErrorComponentBuilder) updates) =>
@@ -166,7 +157,7 @@ class _$BitesListMineCreatedAtErrorComponent
 
   @override
   BitesListMineCreatedAtErrorComponentBuilder toBuilder() =>
-      new BitesListMineCreatedAtErrorComponentBuilder()..replace(this);
+      BitesListMineCreatedAtErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -234,7 +225,6 @@ class BitesListMineCreatedAtErrorComponentBuilder
 
   @override
   void replace(BitesListMineCreatedAtErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListMineCreatedAtErrorComponent;
   }
 
@@ -249,13 +239,14 @@ class BitesListMineCreatedAtErrorComponentBuilder
 
   _$BitesListMineCreatedAtErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesListMineCreatedAtErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesListMineCreatedAtErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesListMineCreatedAtErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesListMineCreatedAtErrorComponent', 'detail'));
+        _$BitesListMineCreatedAtErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesListMineCreatedAtErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesListMineCreatedAtErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesListMineCreatedAtErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

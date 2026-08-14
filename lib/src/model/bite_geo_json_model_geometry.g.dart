@@ -26,7 +26,7 @@ BiteGeoJsonModelGeometryTypeEnum _$biteGeoJsonModelGeometryTypeEnumValueOf(
 }
 
 final BuiltSet<BiteGeoJsonModelGeometryTypeEnum>
-    _$biteGeoJsonModelGeometryTypeEnumValues = new BuiltSet<
+    _$biteGeoJsonModelGeometryTypeEnumValues = BuiltSet<
         BiteGeoJsonModelGeometryTypeEnum>(const <BiteGeoJsonModelGeometryTypeEnum>[
   _$biteGeoJsonModelGeometryTypeEnum_point,
   _$biteGeoJsonModelGeometryTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<BiteGeoJsonModelGeometryTypeEnum>
 
 Serializer<BiteGeoJsonModelGeometryTypeEnum>
     _$biteGeoJsonModelGeometryTypeEnumSerializer =
-    new _$BiteGeoJsonModelGeometryTypeEnumSerializer();
+    _$BiteGeoJsonModelGeometryTypeEnumSerializer();
 
 class _$BiteGeoJsonModelGeometryTypeEnumSerializer
     implements PrimitiveSerializer<BiteGeoJsonModelGeometryTypeEnum> {
@@ -74,10 +74,9 @@ class _$BiteGeoJsonModelGeometry extends BiteGeoJsonModelGeometry {
 
   factory _$BiteGeoJsonModelGeometry(
           [void Function(BiteGeoJsonModelGeometryBuilder)? updates]) =>
-      (new BiteGeoJsonModelGeometryBuilder()..update(updates))._build();
+      (BiteGeoJsonModelGeometryBuilder()..update(updates))._build();
 
   _$BiteGeoJsonModelGeometry._({this.type, this.coordinates}) : super._();
-
   @override
   BiteGeoJsonModelGeometry rebuild(
           void Function(BiteGeoJsonModelGeometryBuilder) updates) =>
@@ -85,7 +84,7 @@ class _$BiteGeoJsonModelGeometry extends BiteGeoJsonModelGeometry {
 
   @override
   BiteGeoJsonModelGeometryBuilder toBuilder() =>
-      new BiteGeoJsonModelGeometryBuilder()..replace(this);
+      BiteGeoJsonModelGeometryBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -124,7 +123,7 @@ class BiteGeoJsonModelGeometryBuilder
 
   ListBuilder<double>? _coordinates;
   ListBuilder<double> get coordinates =>
-      _$this._coordinates ??= new ListBuilder<double>();
+      _$this._coordinates ??= ListBuilder<double>();
   set coordinates(ListBuilder<double>? coordinates) =>
       _$this._coordinates = coordinates;
 
@@ -144,7 +143,6 @@ class BiteGeoJsonModelGeometryBuilder
 
   @override
   void replace(BiteGeoJsonModelGeometry other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BiteGeoJsonModelGeometry;
   }
 
@@ -160,15 +158,17 @@ class BiteGeoJsonModelGeometryBuilder
     _$BiteGeoJsonModelGeometry _$result;
     try {
       _$result = _$v ??
-          new _$BiteGeoJsonModelGeometry._(
-              type: type, coordinates: _coordinates?.build());
+          _$BiteGeoJsonModelGeometry._(
+            type: type,
+            coordinates: _coordinates?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'coordinates';
         _coordinates?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BiteGeoJsonModelGeometry', _$failedField, e.toString());
       }
       rethrow;

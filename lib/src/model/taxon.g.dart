@@ -42,7 +42,7 @@ TaxonRankEnum _$taxonRankEnumValueOf(String name) {
 }
 
 final BuiltSet<TaxonRankEnum> _$taxonRankEnumValues =
-    new BuiltSet<TaxonRankEnum>(const <TaxonRankEnum>[
+    BuiltSet<TaxonRankEnum>(const <TaxonRankEnum>[
   _$taxonRankEnum_class_,
   _$taxonRankEnum_order,
   _$taxonRankEnum_family,
@@ -54,7 +54,7 @@ final BuiltSet<TaxonRankEnum> _$taxonRankEnumValues =
 ]);
 
 Serializer<TaxonRankEnum> _$taxonRankEnumSerializer =
-    new _$TaxonRankEnumSerializer();
+    _$TaxonRankEnumSerializer();
 
 class _$TaxonRankEnumSerializer implements PrimitiveSerializer<TaxonRankEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
@@ -110,7 +110,7 @@ class _$Taxon extends Taxon {
   final bool isRelevant;
 
   factory _$Taxon([void Function(TaxonBuilder)? updates]) =>
-      (new TaxonBuilder()..update(updates))._build();
+      (TaxonBuilder()..update(updates))._build();
 
   _$Taxon._(
       {required this.id,
@@ -119,20 +119,13 @@ class _$Taxon extends Taxon {
       required this.rank,
       required this.italicize,
       required this.isRelevant})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(id, r'Taxon', 'id');
-    BuiltValueNullFieldError.checkNotNull(nameValue, r'Taxon', 'nameValue');
-    BuiltValueNullFieldError.checkNotNull(rank, r'Taxon', 'rank');
-    BuiltValueNullFieldError.checkNotNull(italicize, r'Taxon', 'italicize');
-    BuiltValueNullFieldError.checkNotNull(isRelevant, r'Taxon', 'isRelevant');
-  }
-
+      : super._();
   @override
   Taxon rebuild(void Function(TaxonBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  TaxonBuilder toBuilder() => new TaxonBuilder()..replace(this);
+  TaxonBuilder toBuilder() => TaxonBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -219,7 +212,6 @@ class TaxonBuilder implements Builder<Taxon, TaxonBuilder> {
 
   @override
   void replace(Taxon other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Taxon;
   }
 
@@ -233,16 +225,17 @@ class TaxonBuilder implements Builder<Taxon, TaxonBuilder> {
 
   _$Taxon _build() {
     final _$result = _$v ??
-        new _$Taxon._(
-            id: BuiltValueNullFieldError.checkNotNull(id, r'Taxon', 'id'),
-            nameValue: BuiltValueNullFieldError.checkNotNull(
-                nameValue, r'Taxon', 'nameValue'),
-            commonName: commonName,
-            rank: BuiltValueNullFieldError.checkNotNull(rank, r'Taxon', 'rank'),
-            italicize: BuiltValueNullFieldError.checkNotNull(
-                italicize, r'Taxon', 'italicize'),
-            isRelevant: BuiltValueNullFieldError.checkNotNull(
-                isRelevant, r'Taxon', 'isRelevant'));
+        _$Taxon._(
+          id: BuiltValueNullFieldError.checkNotNull(id, r'Taxon', 'id'),
+          nameValue: BuiltValueNullFieldError.checkNotNull(
+              nameValue, r'Taxon', 'nameValue'),
+          commonName: commonName,
+          rank: BuiltValueNullFieldError.checkNotNull(rank, r'Taxon', 'rank'),
+          italicize: BuiltValueNullFieldError.checkNotNull(
+              italicize, r'Taxon', 'italicize'),
+          isRelevant: BuiltValueNullFieldError.checkNotNull(
+              isRelevant, r'Taxon', 'isRelevant'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -57,7 +57,7 @@ BreedingSiteGeoJsonModelPropertiesSiteTypeEnum
 }
 
 final BuiltSet<BreedingSiteGeoJsonModelPropertiesSiteTypeEnum>
-    _$breedingSiteGeoJsonModelPropertiesSiteTypeEnumValues = new BuiltSet<
+    _$breedingSiteGeoJsonModelPropertiesSiteTypeEnumValues = BuiltSet<
         BreedingSiteGeoJsonModelPropertiesSiteTypeEnum>(const <BreedingSiteGeoJsonModelPropertiesSiteTypeEnum>[
   _$breedingSiteGeoJsonModelPropertiesSiteTypeEnum_basin,
   _$breedingSiteGeoJsonModelPropertiesSiteTypeEnum_bucket,
@@ -71,7 +71,7 @@ final BuiltSet<BreedingSiteGeoJsonModelPropertiesSiteTypeEnum>
 
 Serializer<BreedingSiteGeoJsonModelPropertiesSiteTypeEnum>
     _$breedingSiteGeoJsonModelPropertiesSiteTypeEnumSerializer =
-    new _$BreedingSiteGeoJsonModelPropertiesSiteTypeEnumSerializer();
+    _$BreedingSiteGeoJsonModelPropertiesSiteTypeEnumSerializer();
 
 class _$BreedingSiteGeoJsonModelPropertiesSiteTypeEnumSerializer
     implements
@@ -132,13 +132,11 @@ class _$BreedingSiteGeoJsonModelProperties
   factory _$BreedingSiteGeoJsonModelProperties(
           [void Function(BreedingSiteGeoJsonModelPropertiesBuilder)?
               updates]) =>
-      (new BreedingSiteGeoJsonModelPropertiesBuilder()..update(updates))
-          ._build();
+      (BreedingSiteGeoJsonModelPropertiesBuilder()..update(updates))._build();
 
   _$BreedingSiteGeoJsonModelProperties._(
       {this.uuid, this.receivedAt, this.siteType, this.hasWater})
       : super._();
-
   @override
   BreedingSiteGeoJsonModelProperties rebuild(
           void Function(BreedingSiteGeoJsonModelPropertiesBuilder) updates) =>
@@ -146,7 +144,7 @@ class _$BreedingSiteGeoJsonModelProperties
 
   @override
   BreedingSiteGeoJsonModelPropertiesBuilder toBuilder() =>
-      new BreedingSiteGeoJsonModelPropertiesBuilder()..replace(this);
+      BreedingSiteGeoJsonModelPropertiesBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -222,7 +220,6 @@ class BreedingSiteGeoJsonModelPropertiesBuilder
 
   @override
   void replace(BreedingSiteGeoJsonModelProperties other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingSiteGeoJsonModelProperties;
   }
 
@@ -237,11 +234,12 @@ class BreedingSiteGeoJsonModelPropertiesBuilder
 
   _$BreedingSiteGeoJsonModelProperties _build() {
     final _$result = _$v ??
-        new _$BreedingSiteGeoJsonModelProperties._(
-            uuid: uuid,
-            receivedAt: receivedAt,
-            siteType: siteType,
-            hasWater: hasWater);
+        _$BreedingSiteGeoJsonModelProperties._(
+          uuid: uuid,
+          receivedAt: receivedAt,
+          siteType: siteType,
+          hasWater: hasWater,
+        );
     replace(_$result);
     return _$result;
   }

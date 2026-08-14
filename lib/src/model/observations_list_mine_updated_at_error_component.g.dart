@@ -27,7 +27,7 @@ ObservationsListMineUpdatedAtErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsListMineUpdatedAtErrorComponentAttrEnum>
-    _$observationsListMineUpdatedAtErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsListMineUpdatedAtErrorComponentAttrEnumValues = BuiltSet<
         ObservationsListMineUpdatedAtErrorComponentAttrEnum>(const <ObservationsListMineUpdatedAtErrorComponentAttrEnum>[
   _$observationsListMineUpdatedAtErrorComponentAttrEnum_updatedAt,
   _$observationsListMineUpdatedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ ObservationsListMineUpdatedAtErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsListMineUpdatedAtErrorComponentCodeEnum>
-    _$observationsListMineUpdatedAtErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsListMineUpdatedAtErrorComponentCodeEnumValues = BuiltSet<
         ObservationsListMineUpdatedAtErrorComponentCodeEnum>(const <ObservationsListMineUpdatedAtErrorComponentCodeEnum>[
   _$observationsListMineUpdatedAtErrorComponentCodeEnum_invalid,
   _$observationsListMineUpdatedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<ObservationsListMineUpdatedAtErrorComponentCodeEnum>
 
 Serializer<ObservationsListMineUpdatedAtErrorComponentAttrEnum>
     _$observationsListMineUpdatedAtErrorComponentAttrEnumSerializer =
-    new _$ObservationsListMineUpdatedAtErrorComponentAttrEnumSerializer();
+    _$ObservationsListMineUpdatedAtErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListMineUpdatedAtErrorComponentCodeEnum>
     _$observationsListMineUpdatedAtErrorComponentCodeEnumSerializer =
-    new _$ObservationsListMineUpdatedAtErrorComponentCodeEnumSerializer();
+    _$ObservationsListMineUpdatedAtErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListMineUpdatedAtErrorComponentAttrEnumSerializer
     implements
@@ -147,21 +147,12 @@ class _$ObservationsListMineUpdatedAtErrorComponent
   factory _$ObservationsListMineUpdatedAtErrorComponent(
           [void Function(ObservationsListMineUpdatedAtErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListMineUpdatedAtErrorComponentBuilder()
-            ..update(updates))
+      (ObservationsListMineUpdatedAtErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsListMineUpdatedAtErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsListMineUpdatedAtErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsListMineUpdatedAtErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsListMineUpdatedAtErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsListMineUpdatedAtErrorComponent rebuild(
           void Function(ObservationsListMineUpdatedAtErrorComponentBuilder)
@@ -170,7 +161,7 @@ class _$ObservationsListMineUpdatedAtErrorComponent
 
   @override
   ObservationsListMineUpdatedAtErrorComponentBuilder toBuilder() =>
-      new ObservationsListMineUpdatedAtErrorComponentBuilder()..replace(this);
+      ObservationsListMineUpdatedAtErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -239,7 +230,6 @@ class ObservationsListMineUpdatedAtErrorComponentBuilder
 
   @override
   void replace(ObservationsListMineUpdatedAtErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListMineUpdatedAtErrorComponent;
   }
 
@@ -255,13 +245,14 @@ class ObservationsListMineUpdatedAtErrorComponentBuilder
 
   _$ObservationsListMineUpdatedAtErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListMineUpdatedAtErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsListMineUpdatedAtErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsListMineUpdatedAtErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsListMineUpdatedAtErrorComponent', 'detail'));
+        _$ObservationsListMineUpdatedAtErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsListMineUpdatedAtErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsListMineUpdatedAtErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsListMineUpdatedAtErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

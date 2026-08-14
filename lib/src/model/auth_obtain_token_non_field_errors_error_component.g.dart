@@ -28,7 +28,7 @@ AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum>
-    _$authObtainTokenNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
+    _$authObtainTokenNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum>(const <AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum>[
   _$authObtainTokenNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$authObtainTokenNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -66,7 +66,7 @@ AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum>
-    _$authObtainTokenNonFieldErrorsErrorComponentCodeEnumValues = new BuiltSet<
+    _$authObtainTokenNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum>(const <AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum>[
   _$authObtainTokenNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$authObtainTokenNonFieldErrorsErrorComponentCodeEnum_noActiveAccount,
@@ -76,10 +76,10 @@ final BuiltSet<AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<AuthObtainTokenNonFieldErrorsErrorComponentAttrEnum>
     _$authObtainTokenNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$AuthObtainTokenNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$AuthObtainTokenNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<AuthObtainTokenNonFieldErrorsErrorComponentCodeEnum>
     _$authObtainTokenNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$AuthObtainTokenNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$AuthObtainTokenNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$AuthObtainTokenNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -165,21 +165,12 @@ class _$AuthObtainTokenNonFieldErrorsErrorComponent
   factory _$AuthObtainTokenNonFieldErrorsErrorComponent(
           [void Function(AuthObtainTokenNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new AuthObtainTokenNonFieldErrorsErrorComponentBuilder()
-            ..update(updates))
+      (AuthObtainTokenNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$AuthObtainTokenNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'AuthObtainTokenNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'AuthObtainTokenNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'AuthObtainTokenNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   AuthObtainTokenNonFieldErrorsErrorComponent rebuild(
           void Function(AuthObtainTokenNonFieldErrorsErrorComponentBuilder)
@@ -188,7 +179,7 @@ class _$AuthObtainTokenNonFieldErrorsErrorComponent
 
   @override
   AuthObtainTokenNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new AuthObtainTokenNonFieldErrorsErrorComponentBuilder()..replace(this);
+      AuthObtainTokenNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -257,7 +248,6 @@ class AuthObtainTokenNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(AuthObtainTokenNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthObtainTokenNonFieldErrorsErrorComponent;
   }
 
@@ -273,13 +263,14 @@ class AuthObtainTokenNonFieldErrorsErrorComponentBuilder
 
   _$AuthObtainTokenNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$AuthObtainTokenNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'AuthObtainTokenNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AuthObtainTokenNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'AuthObtainTokenNonFieldErrorsErrorComponent', 'detail'));
+        _$AuthObtainTokenNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'AuthObtainTokenNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AuthObtainTokenNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'AuthObtainTokenNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

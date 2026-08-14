@@ -30,7 +30,7 @@ PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnum
 
 final BuiltSet<PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnum>
     _$photosPredictionUpdateClassifierVersionErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnum>(const <PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnum>[
   _$photosPredictionUpdateClassifierVersionErrorComponentAttrEnum_classifierVersion,
   _$photosPredictionUpdateClassifierVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ PhotosPredictionUpdateClassifierVersionErrorComponentCodeEnum
 
 final BuiltSet<PhotosPredictionUpdateClassifierVersionErrorComponentCodeEnum>
     _$photosPredictionUpdateClassifierVersionErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateClassifierVersionErrorComponentCodeEnum>(const <PhotosPredictionUpdateClassifierVersionErrorComponentCodeEnum>[
   _$photosPredictionUpdateClassifierVersionErrorComponentCodeEnum_invalidChoice,
   _$photosPredictionUpdateClassifierVersionErrorComponentCodeEnum_null_,
@@ -82,10 +82,10 @@ final BuiltSet<PhotosPredictionUpdateClassifierVersionErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnum>
     _$photosPredictionUpdateClassifierVersionErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionUpdateClassifierVersionErrorComponentCodeEnum>
     _$photosPredictionUpdateClassifierVersionErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionUpdateClassifierVersionErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionUpdateClassifierVersionErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnumSerializer
     implements
@@ -174,21 +174,13 @@ class _$PhotosPredictionUpdateClassifierVersionErrorComponent
           [void Function(
                   PhotosPredictionUpdateClassifierVersionErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdateClassifierVersionErrorComponentBuilder()
+      (PhotosPredictionUpdateClassifierVersionErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionUpdateClassifierVersionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionUpdateClassifierVersionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionUpdateClassifierVersionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'PhotosPredictionUpdateClassifierVersionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdateClassifierVersionErrorComponent rebuild(
           void Function(
@@ -198,7 +190,7 @@ class _$PhotosPredictionUpdateClassifierVersionErrorComponent
 
   @override
   PhotosPredictionUpdateClassifierVersionErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionUpdateClassifierVersionErrorComponentBuilder()
+      PhotosPredictionUpdateClassifierVersionErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -274,7 +266,6 @@ class PhotosPredictionUpdateClassifierVersionErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionUpdateClassifierVersionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateClassifierVersionErrorComponent;
   }
 
@@ -291,19 +282,16 @@ class PhotosPredictionUpdateClassifierVersionErrorComponentBuilder
 
   _$PhotosPredictionUpdateClassifierVersionErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdateClassifierVersionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'PhotosPredictionUpdateClassifierVersionErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'PhotosPredictionUpdateClassifierVersionErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionUpdateClassifierVersionErrorComponent',
-                'detail'));
+        _$PhotosPredictionUpdateClassifierVersionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'PhotosPredictionUpdateClassifierVersionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'PhotosPredictionUpdateClassifierVersionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'PhotosPredictionUpdateClassifierVersionErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

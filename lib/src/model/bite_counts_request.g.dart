@@ -22,7 +22,7 @@ class _$BiteCountsRequest extends BiteCountsRequest {
 
   factory _$BiteCountsRequest(
           [void Function(BiteCountsRequestBuilder)? updates]) =>
-      (new BiteCountsRequestBuilder()..update(updates))._build();
+      (BiteCountsRequestBuilder()..update(updates))._build();
 
   _$BiteCountsRequest._(
       {this.head,
@@ -32,14 +32,13 @@ class _$BiteCountsRequest extends BiteCountsRequest {
       this.leftLeg,
       this.rightLeg})
       : super._();
-
   @override
   BiteCountsRequest rebuild(void Function(BiteCountsRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   BiteCountsRequestBuilder toBuilder() =>
-      new BiteCountsRequestBuilder()..replace(this);
+      BiteCountsRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -127,7 +126,6 @@ class BiteCountsRequestBuilder
 
   @override
   void replace(BiteCountsRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BiteCountsRequest;
   }
 
@@ -141,13 +139,14 @@ class BiteCountsRequestBuilder
 
   _$BiteCountsRequest _build() {
     final _$result = _$v ??
-        new _$BiteCountsRequest._(
-            head: head,
-            leftArm: leftArm,
-            rightArm: rightArm,
-            chest: chest,
-            leftLeg: leftLeg,
-            rightLeg: rightLeg);
+        _$BiteCountsRequest._(
+          head: head,
+          leftArm: leftArm,
+          rightArm: rightArm,
+          chest: chest,
+          leftLeg: leftLeg,
+          rightLeg: rightLeg,
+        );
     replace(_$result);
     return _$result;
   }

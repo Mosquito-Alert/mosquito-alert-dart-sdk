@@ -27,7 +27,7 @@ IdentificationtasksListStatusErrorComponentAttrEnum
 }
 
 final BuiltSet<IdentificationtasksListStatusErrorComponentAttrEnum>
-    _$identificationtasksListStatusErrorComponentAttrEnumValues = new BuiltSet<
+    _$identificationtasksListStatusErrorComponentAttrEnumValues = BuiltSet<
         IdentificationtasksListStatusErrorComponentAttrEnum>(const <IdentificationtasksListStatusErrorComponentAttrEnum>[
   _$identificationtasksListStatusErrorComponentAttrEnum_status,
   _$identificationtasksListStatusErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ IdentificationtasksListStatusErrorComponentCodeEnum
 }
 
 final BuiltSet<IdentificationtasksListStatusErrorComponentCodeEnum>
-    _$identificationtasksListStatusErrorComponentCodeEnumValues = new BuiltSet<
+    _$identificationtasksListStatusErrorComponentCodeEnumValues = BuiltSet<
         IdentificationtasksListStatusErrorComponentCodeEnum>(const <IdentificationtasksListStatusErrorComponentCodeEnum>[
   _$identificationtasksListStatusErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksListStatusErrorComponentCodeEnum_invalidList,
@@ -69,10 +69,10 @@ final BuiltSet<IdentificationtasksListStatusErrorComponentCodeEnum>
 
 Serializer<IdentificationtasksListStatusErrorComponentAttrEnum>
     _$identificationtasksListStatusErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksListStatusErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksListStatusErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksListStatusErrorComponentCodeEnum>
     _$identificationtasksListStatusErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksListStatusErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksListStatusErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksListStatusErrorComponentAttrEnumSerializer
     implements
@@ -156,21 +156,12 @@ class _$IdentificationtasksListStatusErrorComponent
   factory _$IdentificationtasksListStatusErrorComponent(
           [void Function(IdentificationtasksListStatusErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksListStatusErrorComponentBuilder()
-            ..update(updates))
+      (IdentificationtasksListStatusErrorComponentBuilder()..update(updates))
           ._build();
 
   _$IdentificationtasksListStatusErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'IdentificationtasksListStatusErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'IdentificationtasksListStatusErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'IdentificationtasksListStatusErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksListStatusErrorComponent rebuild(
           void Function(IdentificationtasksListStatusErrorComponentBuilder)
@@ -179,7 +170,7 @@ class _$IdentificationtasksListStatusErrorComponent
 
   @override
   IdentificationtasksListStatusErrorComponentBuilder toBuilder() =>
-      new IdentificationtasksListStatusErrorComponentBuilder()..replace(this);
+      IdentificationtasksListStatusErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -248,7 +239,6 @@ class IdentificationtasksListStatusErrorComponentBuilder
 
   @override
   void replace(IdentificationtasksListStatusErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksListStatusErrorComponent;
   }
 
@@ -264,13 +254,14 @@ class IdentificationtasksListStatusErrorComponentBuilder
 
   _$IdentificationtasksListStatusErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksListStatusErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'IdentificationtasksListStatusErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'IdentificationtasksListStatusErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'IdentificationtasksListStatusErrorComponent', 'detail'));
+        _$IdentificationtasksListStatusErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'IdentificationtasksListStatusErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'IdentificationtasksListStatusErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'IdentificationtasksListStatusErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

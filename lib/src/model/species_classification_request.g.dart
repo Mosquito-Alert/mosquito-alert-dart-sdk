@@ -32,7 +32,7 @@ SpeciesClassificationRequestConfidenceLabelEnum
 }
 
 final BuiltSet<SpeciesClassificationRequestConfidenceLabelEnum>
-    _$speciesClassificationRequestConfidenceLabelEnumValues = new BuiltSet<
+    _$speciesClassificationRequestConfidenceLabelEnumValues = BuiltSet<
         SpeciesClassificationRequestConfidenceLabelEnum>(const <SpeciesClassificationRequestConfidenceLabelEnum>[
   _$speciesClassificationRequestConfidenceLabelEnum_definitely,
   _$speciesClassificationRequestConfidenceLabelEnum_probably,
@@ -41,7 +41,7 @@ final BuiltSet<SpeciesClassificationRequestConfidenceLabelEnum>
 
 Serializer<SpeciesClassificationRequestConfidenceLabelEnum>
     _$speciesClassificationRequestConfidenceLabelEnumSerializer =
-    new _$SpeciesClassificationRequestConfidenceLabelEnumSerializer();
+    _$SpeciesClassificationRequestConfidenceLabelEnumSerializer();
 
 class _$SpeciesClassificationRequestConfidenceLabelEnumSerializer
     implements
@@ -86,17 +86,11 @@ class _$SpeciesClassificationRequest extends SpeciesClassificationRequest {
 
   factory _$SpeciesClassificationRequest(
           [void Function(SpeciesClassificationRequestBuilder)? updates]) =>
-      (new SpeciesClassificationRequestBuilder()..update(updates))._build();
+      (SpeciesClassificationRequestBuilder()..update(updates))._build();
 
   _$SpeciesClassificationRequest._(
       {required this.taxonId, required this.confidenceLabel})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        taxonId, r'SpeciesClassificationRequest', 'taxonId');
-    BuiltValueNullFieldError.checkNotNull(
-        confidenceLabel, r'SpeciesClassificationRequest', 'confidenceLabel');
-  }
-
+      : super._();
   @override
   SpeciesClassificationRequest rebuild(
           void Function(SpeciesClassificationRequestBuilder) updates) =>
@@ -104,7 +98,7 @@ class _$SpeciesClassificationRequest extends SpeciesClassificationRequest {
 
   @override
   SpeciesClassificationRequestBuilder toBuilder() =>
-      new SpeciesClassificationRequestBuilder()..replace(this);
+      SpeciesClassificationRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -165,7 +159,6 @@ class SpeciesClassificationRequestBuilder
 
   @override
   void replace(SpeciesClassificationRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SpeciesClassificationRequest;
   }
 
@@ -179,13 +172,14 @@ class SpeciesClassificationRequestBuilder
 
   _$SpeciesClassificationRequest _build() {
     final _$result = _$v ??
-        new _$SpeciesClassificationRequest._(
-            taxonId: BuiltValueNullFieldError.checkNotNull(
-                taxonId, r'SpeciesClassificationRequest', 'taxonId'),
-            confidenceLabel: BuiltValueNullFieldError.checkNotNull(
-                confidenceLabel,
-                r'SpeciesClassificationRequest',
-                'confidenceLabel'));
+        _$SpeciesClassificationRequest._(
+          taxonId: BuiltValueNullFieldError.checkNotNull(
+              taxonId, r'SpeciesClassificationRequest', 'taxonId'),
+          confidenceLabel: BuiltValueNullFieldError.checkNotNull(
+              confidenceLabel,
+              r'SpeciesClassificationRequest',
+              'confidenceLabel'),
+        );
     replace(_$result);
     return _$result;
   }

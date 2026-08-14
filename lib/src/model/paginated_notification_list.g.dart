@@ -18,17 +18,11 @@ class _$PaginatedNotificationList extends PaginatedNotificationList {
 
   factory _$PaginatedNotificationList(
           [void Function(PaginatedNotificationListBuilder)? updates]) =>
-      (new PaginatedNotificationListBuilder()..update(updates))._build();
+      (PaginatedNotificationListBuilder()..update(updates))._build();
 
   _$PaginatedNotificationList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedNotificationList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedNotificationList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedNotificationList rebuild(
           void Function(PaginatedNotificationListBuilder) updates) =>
@@ -36,7 +30,7 @@ class _$PaginatedNotificationList extends PaginatedNotificationList {
 
   @override
   PaginatedNotificationListBuilder toBuilder() =>
-      new PaginatedNotificationListBuilder()..replace(this);
+      PaginatedNotificationListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -89,7 +83,7 @@ class PaginatedNotificationListBuilder
 
   ListBuilder<Notification>? _results;
   ListBuilder<Notification> get results =>
-      _$this._results ??= new ListBuilder<Notification>();
+      _$this._results ??= ListBuilder<Notification>();
   set results(ListBuilder<Notification>? results) => _$this._results = results;
 
   PaginatedNotificationListBuilder() {
@@ -110,7 +104,6 @@ class PaginatedNotificationListBuilder
 
   @override
   void replace(PaginatedNotificationList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedNotificationList;
   }
 
@@ -126,19 +119,20 @@ class PaginatedNotificationListBuilder
     _$PaginatedNotificationList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedNotificationList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedNotificationList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedNotificationList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedNotificationList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedNotificationList', _$failedField, e.toString());
       }
       rethrow;

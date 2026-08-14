@@ -27,7 +27,7 @@ BitesCreateCountsHeadErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateCountsHeadErrorComponentAttrEnum>
-    _$bitesCreateCountsHeadErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateCountsHeadErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateCountsHeadErrorComponentAttrEnum>(const <BitesCreateCountsHeadErrorComponentAttrEnum>[
   _$bitesCreateCountsHeadErrorComponentAttrEnum_countsPeriodHead,
   _$bitesCreateCountsHeadErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,7 +64,7 @@ BitesCreateCountsHeadErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateCountsHeadErrorComponentCodeEnum>
-    _$bitesCreateCountsHeadErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateCountsHeadErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateCountsHeadErrorComponentCodeEnum>(const <BitesCreateCountsHeadErrorComponentCodeEnum>[
   _$bitesCreateCountsHeadErrorComponentCodeEnum_invalid,
   _$bitesCreateCountsHeadErrorComponentCodeEnum_maxStringLength,
@@ -74,10 +74,10 @@ final BuiltSet<BitesCreateCountsHeadErrorComponentCodeEnum>
 
 Serializer<BitesCreateCountsHeadErrorComponentAttrEnum>
     _$bitesCreateCountsHeadErrorComponentAttrEnumSerializer =
-    new _$BitesCreateCountsHeadErrorComponentAttrEnumSerializer();
+    _$BitesCreateCountsHeadErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateCountsHeadErrorComponentCodeEnum>
     _$bitesCreateCountsHeadErrorComponentCodeEnumSerializer =
-    new _$BitesCreateCountsHeadErrorComponentCodeEnumSerializer();
+    _$BitesCreateCountsHeadErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateCountsHeadErrorComponentAttrEnumSerializer
     implements
@@ -161,20 +161,11 @@ class _$BitesCreateCountsHeadErrorComponent
   factory _$BitesCreateCountsHeadErrorComponent(
           [void Function(BitesCreateCountsHeadErrorComponentBuilder)?
               updates]) =>
-      (new BitesCreateCountsHeadErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesCreateCountsHeadErrorComponentBuilder()..update(updates))._build();
 
   _$BitesCreateCountsHeadErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateCountsHeadErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateCountsHeadErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateCountsHeadErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateCountsHeadErrorComponent rebuild(
           void Function(BitesCreateCountsHeadErrorComponentBuilder) updates) =>
@@ -182,7 +173,7 @@ class _$BitesCreateCountsHeadErrorComponent
 
   @override
   BitesCreateCountsHeadErrorComponentBuilder toBuilder() =>
-      new BitesCreateCountsHeadErrorComponentBuilder()..replace(this);
+      BitesCreateCountsHeadErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -250,7 +241,6 @@ class BitesCreateCountsHeadErrorComponentBuilder
 
   @override
   void replace(BitesCreateCountsHeadErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateCountsHeadErrorComponent;
   }
 
@@ -265,13 +255,14 @@ class BitesCreateCountsHeadErrorComponentBuilder
 
   _$BitesCreateCountsHeadErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateCountsHeadErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateCountsHeadErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateCountsHeadErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateCountsHeadErrorComponent', 'detail'));
+        _$BitesCreateCountsHeadErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateCountsHeadErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateCountsHeadErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateCountsHeadErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

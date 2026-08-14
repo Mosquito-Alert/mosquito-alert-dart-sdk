@@ -26,7 +26,7 @@ DevicesPartialUpdateErrorAttrEnum _$devicesPartialUpdateErrorAttrEnumValueOf(
 }
 
 final BuiltSet<DevicesPartialUpdateErrorAttrEnum>
-    _$devicesPartialUpdateErrorAttrEnumValues = new BuiltSet<
+    _$devicesPartialUpdateErrorAttrEnumValues = BuiltSet<
         DevicesPartialUpdateErrorAttrEnum>(const <DevicesPartialUpdateErrorAttrEnum>[
   _$devicesPartialUpdateErrorAttrEnum_mobileAppPeriodPackageVersion,
   _$devicesPartialUpdateErrorAttrEnum_unknownDefaultOpenApi,
@@ -87,7 +87,7 @@ DevicesPartialUpdateErrorCodeEnum _$devicesPartialUpdateErrorCodeEnumValueOf(
 }
 
 final BuiltSet<DevicesPartialUpdateErrorCodeEnum>
-    _$devicesPartialUpdateErrorCodeEnumValues = new BuiltSet<
+    _$devicesPartialUpdateErrorCodeEnumValues = BuiltSet<
         DevicesPartialUpdateErrorCodeEnum>(const <DevicesPartialUpdateErrorCodeEnum>[
   _$devicesPartialUpdateErrorCodeEnum_blank,
   _$devicesPartialUpdateErrorCodeEnum_invalid,
@@ -102,10 +102,10 @@ final BuiltSet<DevicesPartialUpdateErrorCodeEnum>
 
 Serializer<DevicesPartialUpdateErrorAttrEnum>
     _$devicesPartialUpdateErrorAttrEnumSerializer =
-    new _$DevicesPartialUpdateErrorAttrEnumSerializer();
+    _$DevicesPartialUpdateErrorAttrEnumSerializer();
 Serializer<DevicesPartialUpdateErrorCodeEnum>
     _$devicesPartialUpdateErrorCodeEnumSerializer =
-    new _$DevicesPartialUpdateErrorCodeEnumSerializer();
+    _$DevicesPartialUpdateErrorCodeEnumSerializer();
 
 class _$DevicesPartialUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<DevicesPartialUpdateErrorAttrEnum> {
@@ -187,13 +187,9 @@ class _$DevicesPartialUpdateError extends DevicesPartialUpdateError {
 
   factory _$DevicesPartialUpdateError(
           [void Function(DevicesPartialUpdateErrorBuilder)? updates]) =>
-      (new DevicesPartialUpdateErrorBuilder()..update(updates))._build();
+      (DevicesPartialUpdateErrorBuilder()..update(updates))._build();
 
-  _$DevicesPartialUpdateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'DevicesPartialUpdateError', 'oneOf');
-  }
-
+  _$DevicesPartialUpdateError._({required this.oneOf}) : super._();
   @override
   DevicesPartialUpdateError rebuild(
           void Function(DevicesPartialUpdateErrorBuilder) updates) =>
@@ -201,7 +197,7 @@ class _$DevicesPartialUpdateError extends DevicesPartialUpdateError {
 
   @override
   DevicesPartialUpdateErrorBuilder toBuilder() =>
-      new DevicesPartialUpdateErrorBuilder()..replace(this);
+      DevicesPartialUpdateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -249,7 +245,6 @@ class DevicesPartialUpdateErrorBuilder
 
   @override
   void replace(DevicesPartialUpdateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesPartialUpdateError;
   }
 
@@ -263,9 +258,10 @@ class DevicesPartialUpdateErrorBuilder
 
   _$DevicesPartialUpdateError _build() {
     final _$result = _$v ??
-        new _$DevicesPartialUpdateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'DevicesPartialUpdateError', 'oneOf'));
+        _$DevicesPartialUpdateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'DevicesPartialUpdateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

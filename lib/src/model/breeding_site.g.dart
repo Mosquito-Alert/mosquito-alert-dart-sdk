@@ -48,7 +48,7 @@ BreedingSiteSiteTypeEnum _$breedingSiteSiteTypeEnumValueOf(String name) {
 }
 
 final BuiltSet<BreedingSiteSiteTypeEnum> _$breedingSiteSiteTypeEnumValues =
-    new BuiltSet<BreedingSiteSiteTypeEnum>(const <BreedingSiteSiteTypeEnum>[
+    BuiltSet<BreedingSiteSiteTypeEnum>(const <BreedingSiteSiteTypeEnum>[
   _$breedingSiteSiteTypeEnum_basin,
   _$breedingSiteSiteTypeEnum_bucket,
   _$breedingSiteSiteTypeEnum_fountain,
@@ -60,7 +60,7 @@ final BuiltSet<BreedingSiteSiteTypeEnum> _$breedingSiteSiteTypeEnumValues =
 ]);
 
 Serializer<BreedingSiteSiteTypeEnum> _$breedingSiteSiteTypeEnumSerializer =
-    new _$BreedingSiteSiteTypeEnumSerializer();
+    _$BreedingSiteSiteTypeEnumSerializer();
 
 class _$BreedingSiteSiteTypeEnumSerializer
     implements PrimitiveSerializer<BreedingSiteSiteTypeEnum> {
@@ -142,7 +142,7 @@ class _$BreedingSite extends BreedingSite {
   final bool? hasLarvae;
 
   factory _$BreedingSite([void Function(BreedingSiteBuilder)? updates]) =>
-      (new BreedingSiteBuilder()..update(updates))._build();
+      (BreedingSiteBuilder()..update(updates))._build();
 
   _$BreedingSite._(
       {required this.uuid,
@@ -163,35 +163,13 @@ class _$BreedingSite extends BreedingSite {
       this.inPublicArea,
       this.hasNearMosquitoes,
       this.hasLarvae})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'BreedingSite', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(shortId, r'BreedingSite', 'shortId');
-    BuiltValueNullFieldError.checkNotNull(
-        userUuid, r'BreedingSite', 'userUuid');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'BreedingSite', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAtLocal, r'BreedingSite', 'createdAtLocal');
-    BuiltValueNullFieldError.checkNotNull(sentAt, r'BreedingSite', 'sentAt');
-    BuiltValueNullFieldError.checkNotNull(
-        receivedAt, r'BreedingSite', 'receivedAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, r'BreedingSite', 'updatedAt');
-    BuiltValueNullFieldError.checkNotNull(
-        location, r'BreedingSite', 'location');
-    BuiltValueNullFieldError.checkNotNull(
-        published, r'BreedingSite', 'published');
-    BuiltValueNullFieldError.checkNotNull(photos, r'BreedingSite', 'photos');
-    BuiltValueNullFieldError.checkNotNull(
-        siteType, r'BreedingSite', 'siteType');
-  }
-
+      : super._();
   @override
   BreedingSite rebuild(void Function(BreedingSiteBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  BreedingSiteBuilder toBuilder() => new BreedingSiteBuilder()..replace(this);
+  BreedingSiteBuilder toBuilder() => BreedingSiteBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -305,7 +283,7 @@ class BreedingSiteBuilder
   set updatedAt(DateTime? updatedAt) => _$this._updatedAt = updatedAt;
 
   LocationBuilder? _location;
-  LocationBuilder get location => _$this._location ??= new LocationBuilder();
+  LocationBuilder get location => _$this._location ??= LocationBuilder();
   set location(LocationBuilder? location) => _$this._location = location;
 
   String? _note;
@@ -313,7 +291,7 @@ class BreedingSiteBuilder
   set note(String? note) => _$this._note = note;
 
   ListBuilder<String>? _tags;
-  ListBuilder<String> get tags => _$this._tags ??= new ListBuilder<String>();
+  ListBuilder<String> get tags => _$this._tags ??= ListBuilder<String>();
   set tags(ListBuilder<String>? tags) => _$this._tags = tags;
 
   bool? _published;
@@ -322,7 +300,7 @@ class BreedingSiteBuilder
 
   ListBuilder<SimplePhoto>? _photos;
   ListBuilder<SimplePhoto> get photos =>
-      _$this._photos ??= new ListBuilder<SimplePhoto>();
+      _$this._photos ??= ListBuilder<SimplePhoto>();
   set photos(ListBuilder<SimplePhoto>? photos) => _$this._photos = photos;
 
   BreedingSiteSiteTypeEnum? _siteType;
@@ -379,7 +357,6 @@ class BreedingSiteBuilder
 
   @override
   void replace(BreedingSite other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingSite;
   }
 
@@ -395,34 +372,36 @@ class BreedingSiteBuilder
     _$BreedingSite _$result;
     try {
       _$result = _$v ??
-          new _$BreedingSite._(
-              uuid: BuiltValueNullFieldError.checkNotNull(
-                  uuid, r'BreedingSite', 'uuid'),
-              shortId: BuiltValueNullFieldError.checkNotNull(
-                  shortId, r'BreedingSite', 'shortId'),
-              userUuid: BuiltValueNullFieldError.checkNotNull(
-                  userUuid, r'BreedingSite', 'userUuid'),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'BreedingSite', 'createdAt'),
-              createdAtLocal: BuiltValueNullFieldError.checkNotNull(
-                  createdAtLocal, r'BreedingSite', 'createdAtLocal'),
-              sentAt: BuiltValueNullFieldError.checkNotNull(
-                  sentAt, r'BreedingSite', 'sentAt'),
-              receivedAt: BuiltValueNullFieldError.checkNotNull(
-                  receivedAt, r'BreedingSite', 'receivedAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'BreedingSite', 'updatedAt'),
-              location: location.build(),
-              note: note,
-              tags: _tags?.build(),
-              published: BuiltValueNullFieldError.checkNotNull(
-                  published, r'BreedingSite', 'published'),
-              photos: photos.build(),
-              siteType: BuiltValueNullFieldError.checkNotNull(siteType, r'BreedingSite', 'siteType'),
-              hasWater: hasWater,
-              inPublicArea: inPublicArea,
-              hasNearMosquitoes: hasNearMosquitoes,
-              hasLarvae: hasLarvae);
+          _$BreedingSite._(
+            uuid: BuiltValueNullFieldError.checkNotNull(
+                uuid, r'BreedingSite', 'uuid'),
+            shortId: BuiltValueNullFieldError.checkNotNull(
+                shortId, r'BreedingSite', 'shortId'),
+            userUuid: BuiltValueNullFieldError.checkNotNull(
+                userUuid, r'BreedingSite', 'userUuid'),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'BreedingSite', 'createdAt'),
+            createdAtLocal: BuiltValueNullFieldError.checkNotNull(
+                createdAtLocal, r'BreedingSite', 'createdAtLocal'),
+            sentAt: BuiltValueNullFieldError.checkNotNull(
+                sentAt, r'BreedingSite', 'sentAt'),
+            receivedAt: BuiltValueNullFieldError.checkNotNull(
+                receivedAt, r'BreedingSite', 'receivedAt'),
+            updatedAt: BuiltValueNullFieldError.checkNotNull(
+                updatedAt, r'BreedingSite', 'updatedAt'),
+            location: location.build(),
+            note: note,
+            tags: _tags?.build(),
+            published: BuiltValueNullFieldError.checkNotNull(
+                published, r'BreedingSite', 'published'),
+            photos: photos.build(),
+            siteType: BuiltValueNullFieldError.checkNotNull(
+                siteType, r'BreedingSite', 'siteType'),
+            hasWater: hasWater,
+            inPublicArea: inPublicArea,
+            hasNearMosquitoes: hasNearMosquitoes,
+            hasLarvae: hasLarvae,
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -435,7 +414,7 @@ class BreedingSiteBuilder
         _$failedField = 'photos';
         photos.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BreedingSite', _$failedField, e.toString());
       }
       rethrow;

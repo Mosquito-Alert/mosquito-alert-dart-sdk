@@ -24,15 +24,18 @@ import 'package:mosquito_alert/src/model/messages_create_content_body_sq_error_c
 import 'package:mosquito_alert/src/model/messages_create_content_body_sv_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_es_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_hu_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_zh_cn_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_nl_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_ca_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_last_login_after_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_gl_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_tr_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_bg_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_it_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_bn_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_mk_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_last_login_before_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_ca_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_es_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_sq_error_component.dart';
@@ -40,8 +43,10 @@ import 'package:mosquito_alert/src/model/messages_create_content_body_de_error_c
 import 'package:mosquito_alert/src/model/messages_create_content_body_en_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_hr_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_sl_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_in_area_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_eu_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_en_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_non_field_errors_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_de_error_component.dart';
@@ -58,6 +63,7 @@ import 'package:mosquito_alert/src/model/messages_create_user_uuids_error_compon
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_hr_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_title_sv_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_target_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';
@@ -72,12 +78,17 @@ part 'messages_create_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class MessagesCreateError implements Built<MessagesCreateError, MessagesCreateErrorBuilder> {
-  /// One Of [MessagesCreateContentBodyBgErrorComponent], [MessagesCreateContentBodyBnErrorComponent], [MessagesCreateContentBodyCaErrorComponent], [MessagesCreateContentBodyDeErrorComponent], [MessagesCreateContentBodyElErrorComponent], [MessagesCreateContentBodyEnErrorComponent], [MessagesCreateContentBodyEsErrorComponent], [MessagesCreateContentBodyEuErrorComponent], [MessagesCreateContentBodyFrErrorComponent], [MessagesCreateContentBodyGlErrorComponent], [MessagesCreateContentBodyHrErrorComponent], [MessagesCreateContentBodyHuErrorComponent], [MessagesCreateContentBodyItErrorComponent], [MessagesCreateContentBodyLbErrorComponent], [MessagesCreateContentBodyMkErrorComponent], [MessagesCreateContentBodyNlErrorComponent], [MessagesCreateContentBodyNonFieldErrorsErrorComponent], [MessagesCreateContentBodyPtErrorComponent], [MessagesCreateContentBodyRoErrorComponent], [MessagesCreateContentBodySlErrorComponent], [MessagesCreateContentBodySqErrorComponent], [MessagesCreateContentBodySrErrorComponent], [MessagesCreateContentBodySvErrorComponent], [MessagesCreateContentBodyTrErrorComponent], [MessagesCreateContentBodyZhCnErrorComponent], [MessagesCreateContentNonFieldErrorsErrorComponent], [MessagesCreateContentTitleBgErrorComponent], [MessagesCreateContentTitleBnErrorComponent], [MessagesCreateContentTitleCaErrorComponent], [MessagesCreateContentTitleDeErrorComponent], [MessagesCreateContentTitleElErrorComponent], [MessagesCreateContentTitleEnErrorComponent], [MessagesCreateContentTitleEsErrorComponent], [MessagesCreateContentTitleEuErrorComponent], [MessagesCreateContentTitleFrErrorComponent], [MessagesCreateContentTitleGlErrorComponent], [MessagesCreateContentTitleHrErrorComponent], [MessagesCreateContentTitleHuErrorComponent], [MessagesCreateContentTitleItErrorComponent], [MessagesCreateContentTitleLbErrorComponent], [MessagesCreateContentTitleMkErrorComponent], [MessagesCreateContentTitleNlErrorComponent], [MessagesCreateContentTitleNonFieldErrorsErrorComponent], [MessagesCreateContentTitlePtErrorComponent], [MessagesCreateContentTitleRoErrorComponent], [MessagesCreateContentTitleSlErrorComponent], [MessagesCreateContentTitleSqErrorComponent], [MessagesCreateContentTitleSrErrorComponent], [MessagesCreateContentTitleSvErrorComponent], [MessagesCreateContentTitleTrErrorComponent], [MessagesCreateContentTitleZhCnErrorComponent], [MessagesCreateNonFieldErrorsErrorComponent], [MessagesCreateUserUuidsErrorComponent], [MessagesCreateUserUuidsINDEXErrorComponent]
+  /// One Of [MessagesCreateAudienceInAreaErrorComponent], [MessagesCreateAudienceLastLoginAfterErrorComponent], [MessagesCreateAudienceLastLoginBeforeErrorComponent], [MessagesCreateAudienceLocaleErrorComponent], [MessagesCreateAudienceNonFieldErrorsErrorComponent], [MessagesCreateContentBodyBgErrorComponent], [MessagesCreateContentBodyBnErrorComponent], [MessagesCreateContentBodyCaErrorComponent], [MessagesCreateContentBodyDeErrorComponent], [MessagesCreateContentBodyElErrorComponent], [MessagesCreateContentBodyEnErrorComponent], [MessagesCreateContentBodyEsErrorComponent], [MessagesCreateContentBodyEuErrorComponent], [MessagesCreateContentBodyFrErrorComponent], [MessagesCreateContentBodyGlErrorComponent], [MessagesCreateContentBodyHrErrorComponent], [MessagesCreateContentBodyHuErrorComponent], [MessagesCreateContentBodyItErrorComponent], [MessagesCreateContentBodyLbErrorComponent], [MessagesCreateContentBodyMkErrorComponent], [MessagesCreateContentBodyNlErrorComponent], [MessagesCreateContentBodyNonFieldErrorsErrorComponent], [MessagesCreateContentBodyPtErrorComponent], [MessagesCreateContentBodyRoErrorComponent], [MessagesCreateContentBodySlErrorComponent], [MessagesCreateContentBodySqErrorComponent], [MessagesCreateContentBodySrErrorComponent], [MessagesCreateContentBodySvErrorComponent], [MessagesCreateContentBodyTrErrorComponent], [MessagesCreateContentBodyZhCnErrorComponent], [MessagesCreateContentNonFieldErrorsErrorComponent], [MessagesCreateContentTitleBgErrorComponent], [MessagesCreateContentTitleBnErrorComponent], [MessagesCreateContentTitleCaErrorComponent], [MessagesCreateContentTitleDeErrorComponent], [MessagesCreateContentTitleElErrorComponent], [MessagesCreateContentTitleEnErrorComponent], [MessagesCreateContentTitleEsErrorComponent], [MessagesCreateContentTitleEuErrorComponent], [MessagesCreateContentTitleFrErrorComponent], [MessagesCreateContentTitleGlErrorComponent], [MessagesCreateContentTitleHrErrorComponent], [MessagesCreateContentTitleHuErrorComponent], [MessagesCreateContentTitleItErrorComponent], [MessagesCreateContentTitleLbErrorComponent], [MessagesCreateContentTitleMkErrorComponent], [MessagesCreateContentTitleNlErrorComponent], [MessagesCreateContentTitleNonFieldErrorsErrorComponent], [MessagesCreateContentTitlePtErrorComponent], [MessagesCreateContentTitleRoErrorComponent], [MessagesCreateContentTitleSlErrorComponent], [MessagesCreateContentTitleSqErrorComponent], [MessagesCreateContentTitleSrErrorComponent], [MessagesCreateContentTitleSvErrorComponent], [MessagesCreateContentTitleTrErrorComponent], [MessagesCreateContentTitleZhCnErrorComponent], [MessagesCreateNonFieldErrorsErrorComponent], [MessagesCreateTargetErrorComponent], [MessagesCreateUserUuidsErrorComponent], [MessagesCreateUserUuidsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
 
   static const Map<String, Type> discriminatorMapping = {
+    r'audience.in_area': MessagesCreateAudienceInAreaErrorComponent,
+    r'audience.last_login_after': MessagesCreateAudienceLastLoginAfterErrorComponent,
+    r'audience.last_login_before': MessagesCreateAudienceLastLoginBeforeErrorComponent,
+    r'audience.locale': MessagesCreateAudienceLocaleErrorComponent,
+    r'audience.non_field_errors': MessagesCreateAudienceNonFieldErrorsErrorComponent,
     r'content.body.bg': MessagesCreateContentBodyBgErrorComponent,
     r'content.body.bn': MessagesCreateContentBodyBnErrorComponent,
     r'content.body.ca': MessagesCreateContentBodyCaErrorComponent,
@@ -130,6 +141,7 @@ abstract class MessagesCreateError implements Built<MessagesCreateError, Message
     r'content.title.tr': MessagesCreateContentTitleTrErrorComponent,
     r'content.title.zh-cn': MessagesCreateContentTitleZhCnErrorComponent,
     r'non_field_errors': MessagesCreateNonFieldErrorsErrorComponent,
+    r'target': MessagesCreateTargetErrorComponent,
     r'user_uuids': MessagesCreateUserUuidsErrorComponent,
     r'user_uuids.INDEX': MessagesCreateUserUuidsINDEXErrorComponent,
   };
@@ -147,6 +159,21 @@ abstract class MessagesCreateError implements Built<MessagesCreateError, Message
 
 extension MessagesCreateErrorDiscriminatorExt on MessagesCreateError {
     String? get discriminatorValue {
+        if (this is MessagesCreateAudienceInAreaErrorComponent) {
+            return r'audience.in_area';
+        }
+        if (this is MessagesCreateAudienceLastLoginAfterErrorComponent) {
+            return r'audience.last_login_after';
+        }
+        if (this is MessagesCreateAudienceLastLoginBeforeErrorComponent) {
+            return r'audience.last_login_before';
+        }
+        if (this is MessagesCreateAudienceLocaleErrorComponent) {
+            return r'audience.locale';
+        }
+        if (this is MessagesCreateAudienceNonFieldErrorsErrorComponent) {
+            return r'audience.non_field_errors';
+        }
         if (this is MessagesCreateContentBodyBgErrorComponent) {
             return r'content.body.bg';
         }
@@ -303,6 +330,9 @@ extension MessagesCreateErrorDiscriminatorExt on MessagesCreateError {
         if (this is MessagesCreateNonFieldErrorsErrorComponent) {
             return r'non_field_errors';
         }
+        if (this is MessagesCreateTargetErrorComponent) {
+            return r'target';
+        }
         if (this is MessagesCreateUserUuidsErrorComponent) {
             return r'user_uuids';
         }
@@ -314,6 +344,21 @@ extension MessagesCreateErrorDiscriminatorExt on MessagesCreateError {
 }
 extension MessagesCreateErrorBuilderDiscriminatorExt on MessagesCreateErrorBuilder {
     String? get discriminatorValue {
+        if (this is MessagesCreateAudienceInAreaErrorComponentBuilder) {
+            return r'audience.in_area';
+        }
+        if (this is MessagesCreateAudienceLastLoginAfterErrorComponentBuilder) {
+            return r'audience.last_login_after';
+        }
+        if (this is MessagesCreateAudienceLastLoginBeforeErrorComponentBuilder) {
+            return r'audience.last_login_before';
+        }
+        if (this is MessagesCreateAudienceLocaleErrorComponentBuilder) {
+            return r'audience.locale';
+        }
+        if (this is MessagesCreateAudienceNonFieldErrorsErrorComponentBuilder) {
+            return r'audience.non_field_errors';
+        }
         if (this is MessagesCreateContentBodyBgErrorComponentBuilder) {
             return r'content.body.bg';
         }
@@ -470,6 +515,9 @@ extension MessagesCreateErrorBuilderDiscriminatorExt on MessagesCreateErrorBuild
         if (this is MessagesCreateNonFieldErrorsErrorComponentBuilder) {
             return r'non_field_errors';
         }
+        if (this is MessagesCreateTargetErrorComponentBuilder) {
+            return r'target';
+        }
         if (this is MessagesCreateUserUuidsErrorComponentBuilder) {
             return r'user_uuids';
         }
@@ -489,9 +537,7 @@ class _$MessagesCreateErrorSerializer implements PrimitiveSerializer<MessagesCre
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    MessagesCreateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    MessagesCreateError object) sync* {
   }
 
   @override
@@ -516,10 +562,45 @@ class _$MessagesCreateErrorSerializer implements PrimitiveSerializer<MessagesCre
     final discIndex = serializedList.indexOf(MessagesCreateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [MessagesCreateContentBodyBgErrorComponent, MessagesCreateContentBodyBnErrorComponent, MessagesCreateContentBodyCaErrorComponent, MessagesCreateContentBodyDeErrorComponent, MessagesCreateContentBodyElErrorComponent, MessagesCreateContentBodyEnErrorComponent, MessagesCreateContentBodyEsErrorComponent, MessagesCreateContentBodyEuErrorComponent, MessagesCreateContentBodyFrErrorComponent, MessagesCreateContentBodyGlErrorComponent, MessagesCreateContentBodyHrErrorComponent, MessagesCreateContentBodyHuErrorComponent, MessagesCreateContentBodyItErrorComponent, MessagesCreateContentBodyLbErrorComponent, MessagesCreateContentBodyMkErrorComponent, MessagesCreateContentBodyNlErrorComponent, MessagesCreateContentBodyNonFieldErrorsErrorComponent, MessagesCreateContentBodyPtErrorComponent, MessagesCreateContentBodyRoErrorComponent, MessagesCreateContentBodySlErrorComponent, MessagesCreateContentBodySqErrorComponent, MessagesCreateContentBodySrErrorComponent, MessagesCreateContentBodySvErrorComponent, MessagesCreateContentBodyTrErrorComponent, MessagesCreateContentBodyZhCnErrorComponent, MessagesCreateContentNonFieldErrorsErrorComponent, MessagesCreateContentTitleBgErrorComponent, MessagesCreateContentTitleBnErrorComponent, MessagesCreateContentTitleCaErrorComponent, MessagesCreateContentTitleDeErrorComponent, MessagesCreateContentTitleElErrorComponent, MessagesCreateContentTitleEnErrorComponent, MessagesCreateContentTitleEsErrorComponent, MessagesCreateContentTitleEuErrorComponent, MessagesCreateContentTitleFrErrorComponent, MessagesCreateContentTitleGlErrorComponent, MessagesCreateContentTitleHrErrorComponent, MessagesCreateContentTitleHuErrorComponent, MessagesCreateContentTitleItErrorComponent, MessagesCreateContentTitleLbErrorComponent, MessagesCreateContentTitleMkErrorComponent, MessagesCreateContentTitleNlErrorComponent, MessagesCreateContentTitleNonFieldErrorsErrorComponent, MessagesCreateContentTitlePtErrorComponent, MessagesCreateContentTitleRoErrorComponent, MessagesCreateContentTitleSlErrorComponent, MessagesCreateContentTitleSqErrorComponent, MessagesCreateContentTitleSrErrorComponent, MessagesCreateContentTitleSvErrorComponent, MessagesCreateContentTitleTrErrorComponent, MessagesCreateContentTitleZhCnErrorComponent, MessagesCreateNonFieldErrorsErrorComponent, MessagesCreateUserUuidsErrorComponent, MessagesCreateUserUuidsINDEXErrorComponent, ];
+    final oneOfTypes = [MessagesCreateAudienceInAreaErrorComponent, MessagesCreateAudienceLastLoginAfterErrorComponent, MessagesCreateAudienceLastLoginBeforeErrorComponent, MessagesCreateAudienceLocaleErrorComponent, MessagesCreateAudienceNonFieldErrorsErrorComponent, MessagesCreateContentBodyBgErrorComponent, MessagesCreateContentBodyBnErrorComponent, MessagesCreateContentBodyCaErrorComponent, MessagesCreateContentBodyDeErrorComponent, MessagesCreateContentBodyElErrorComponent, MessagesCreateContentBodyEnErrorComponent, MessagesCreateContentBodyEsErrorComponent, MessagesCreateContentBodyEuErrorComponent, MessagesCreateContentBodyFrErrorComponent, MessagesCreateContentBodyGlErrorComponent, MessagesCreateContentBodyHrErrorComponent, MessagesCreateContentBodyHuErrorComponent, MessagesCreateContentBodyItErrorComponent, MessagesCreateContentBodyLbErrorComponent, MessagesCreateContentBodyMkErrorComponent, MessagesCreateContentBodyNlErrorComponent, MessagesCreateContentBodyNonFieldErrorsErrorComponent, MessagesCreateContentBodyPtErrorComponent, MessagesCreateContentBodyRoErrorComponent, MessagesCreateContentBodySlErrorComponent, MessagesCreateContentBodySqErrorComponent, MessagesCreateContentBodySrErrorComponent, MessagesCreateContentBodySvErrorComponent, MessagesCreateContentBodyTrErrorComponent, MessagesCreateContentBodyZhCnErrorComponent, MessagesCreateContentNonFieldErrorsErrorComponent, MessagesCreateContentTitleBgErrorComponent, MessagesCreateContentTitleBnErrorComponent, MessagesCreateContentTitleCaErrorComponent, MessagesCreateContentTitleDeErrorComponent, MessagesCreateContentTitleElErrorComponent, MessagesCreateContentTitleEnErrorComponent, MessagesCreateContentTitleEsErrorComponent, MessagesCreateContentTitleEuErrorComponent, MessagesCreateContentTitleFrErrorComponent, MessagesCreateContentTitleGlErrorComponent, MessagesCreateContentTitleHrErrorComponent, MessagesCreateContentTitleHuErrorComponent, MessagesCreateContentTitleItErrorComponent, MessagesCreateContentTitleLbErrorComponent, MessagesCreateContentTitleMkErrorComponent, MessagesCreateContentTitleNlErrorComponent, MessagesCreateContentTitleNonFieldErrorsErrorComponent, MessagesCreateContentTitlePtErrorComponent, MessagesCreateContentTitleRoErrorComponent, MessagesCreateContentTitleSlErrorComponent, MessagesCreateContentTitleSqErrorComponent, MessagesCreateContentTitleSrErrorComponent, MessagesCreateContentTitleSvErrorComponent, MessagesCreateContentTitleTrErrorComponent, MessagesCreateContentTitleZhCnErrorComponent, MessagesCreateNonFieldErrorsErrorComponent, MessagesCreateTargetErrorComponent, MessagesCreateUserUuidsErrorComponent, MessagesCreateUserUuidsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
+      case r'audience.in_area':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(MessagesCreateAudienceInAreaErrorComponent),
+        ) as MessagesCreateAudienceInAreaErrorComponent;
+        oneOfType = MessagesCreateAudienceInAreaErrorComponent;
+        break;
+      case r'audience.last_login_after':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(MessagesCreateAudienceLastLoginAfterErrorComponent),
+        ) as MessagesCreateAudienceLastLoginAfterErrorComponent;
+        oneOfType = MessagesCreateAudienceLastLoginAfterErrorComponent;
+        break;
+      case r'audience.last_login_before':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(MessagesCreateAudienceLastLoginBeforeErrorComponent),
+        ) as MessagesCreateAudienceLastLoginBeforeErrorComponent;
+        oneOfType = MessagesCreateAudienceLastLoginBeforeErrorComponent;
+        break;
+      case r'audience.locale':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(MessagesCreateAudienceLocaleErrorComponent),
+        ) as MessagesCreateAudienceLocaleErrorComponent;
+        oneOfType = MessagesCreateAudienceLocaleErrorComponent;
+        break;
+      case r'audience.non_field_errors':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(MessagesCreateAudienceNonFieldErrorsErrorComponent),
+        ) as MessagesCreateAudienceNonFieldErrorsErrorComponent;
+        oneOfType = MessagesCreateAudienceNonFieldErrorsErrorComponent;
+        break;
       case r'content.body.bg':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
@@ -884,6 +965,13 @@ class _$MessagesCreateErrorSerializer implements PrimitiveSerializer<MessagesCre
         ) as MessagesCreateNonFieldErrorsErrorComponent;
         oneOfType = MessagesCreateNonFieldErrorsErrorComponent;
         break;
+      case r'target':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(MessagesCreateTargetErrorComponent),
+        ) as MessagesCreateTargetErrorComponent;
+        oneOfType = MessagesCreateTargetErrorComponent;
+        break;
       case r'user_uuids':
         oneOfResult = serializers.deserialize(
           oneOfDataSrc,
@@ -908,8 +996,8 @@ class _$MessagesCreateErrorSerializer implements PrimitiveSerializer<MessagesCre
 
 class MessagesCreateErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'content.body.zh-cn')
-  static const MessagesCreateErrorAttrEnum contentPeriodBodyPeriodZhCn = _$messagesCreateErrorAttrEnum_contentPeriodBodyPeriodZhCn;
+  @BuiltValueEnumConst(wireName: r'audience.locale')
+  static const MessagesCreateErrorAttrEnum audiencePeriodLocale = _$messagesCreateErrorAttrEnum_audiencePeriodLocale;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MessagesCreateErrorAttrEnum unknownDefaultOpenApi = _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -923,14 +1011,10 @@ class MessagesCreateErrorAttrEnum extends EnumClass {
 
 class MessagesCreateErrorCodeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'blank')
-  static const MessagesCreateErrorCodeEnum blank = _$messagesCreateErrorCodeEnum_blank;
-  @BuiltValueEnumConst(wireName: r'invalid')
-  static const MessagesCreateErrorCodeEnum invalid = _$messagesCreateErrorCodeEnum_invalid;
-  @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
-  static const MessagesCreateErrorCodeEnum nullCharactersNotAllowed = _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed;
-  @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
-  static const MessagesCreateErrorCodeEnum surrogateCharactersNotAllowed = _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'invalid_choice')
+  static const MessagesCreateErrorCodeEnum invalidChoice = _$messagesCreateErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'null')
+  static const MessagesCreateErrorCodeEnum null_ = _$messagesCreateErrorCodeEnum_null_;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MessagesCreateErrorCodeEnum unknownDefaultOpenApi = _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi;
 

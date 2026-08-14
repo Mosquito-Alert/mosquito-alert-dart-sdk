@@ -31,7 +31,7 @@ DeviceRequestTypeEnum _$deviceRequestTypeEnumValueOf(String name) {
 }
 
 final BuiltSet<DeviceRequestTypeEnum> _$deviceRequestTypeEnumValues =
-    new BuiltSet<DeviceRequestTypeEnum>(const <DeviceRequestTypeEnum>[
+    BuiltSet<DeviceRequestTypeEnum>(const <DeviceRequestTypeEnum>[
   _$deviceRequestTypeEnum_ios,
   _$deviceRequestTypeEnum_android,
   _$deviceRequestTypeEnum_web,
@@ -39,7 +39,7 @@ final BuiltSet<DeviceRequestTypeEnum> _$deviceRequestTypeEnumValues =
 ]);
 
 Serializer<DeviceRequestTypeEnum> _$deviceRequestTypeEnumSerializer =
-    new _$DeviceRequestTypeEnumSerializer();
+    _$DeviceRequestTypeEnumSerializer();
 
 class _$DeviceRequestTypeEnumSerializer
     implements PrimitiveSerializer<DeviceRequestTypeEnum> {
@@ -92,7 +92,7 @@ class _$DeviceRequest extends DeviceRequest {
   final MobileAppRequest? mobileApp;
 
   factory _$DeviceRequest([void Function(DeviceRequestBuilder)? updates]) =>
-      (new DeviceRequestBuilder()..update(updates))._build();
+      (DeviceRequestBuilder()..update(updates))._build();
 
   _$DeviceRequest._(
       {required this.deviceId,
@@ -103,22 +103,13 @@ class _$DeviceRequest extends DeviceRequest {
       required this.model,
       required this.os,
       this.mobileApp})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        deviceId, r'DeviceRequest', 'deviceId');
-    BuiltValueNullFieldError.checkNotNull(
-        fcmToken, r'DeviceRequest', 'fcmToken');
-    BuiltValueNullFieldError.checkNotNull(type, r'DeviceRequest', 'type');
-    BuiltValueNullFieldError.checkNotNull(model, r'DeviceRequest', 'model');
-    BuiltValueNullFieldError.checkNotNull(os, r'DeviceRequest', 'os');
-  }
-
+      : super._();
   @override
   DeviceRequest rebuild(void Function(DeviceRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  DeviceRequestBuilder toBuilder() => new DeviceRequestBuilder()..replace(this);
+  DeviceRequestBuilder toBuilder() => DeviceRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -193,12 +184,12 @@ class DeviceRequestBuilder
   set model(String? model) => _$this._model = model;
 
   DeviceOsRequestBuilder? _os;
-  DeviceOsRequestBuilder get os => _$this._os ??= new DeviceOsRequestBuilder();
+  DeviceOsRequestBuilder get os => _$this._os ??= DeviceOsRequestBuilder();
   set os(DeviceOsRequestBuilder? os) => _$this._os = os;
 
   MobileAppRequestBuilder? _mobileApp;
   MobileAppRequestBuilder get mobileApp =>
-      _$this._mobileApp ??= new MobileAppRequestBuilder();
+      _$this._mobileApp ??= MobileAppRequestBuilder();
   set mobileApp(MobileAppRequestBuilder? mobileApp) =>
       _$this._mobileApp = mobileApp;
 
@@ -224,7 +215,6 @@ class DeviceRequestBuilder
 
   @override
   void replace(DeviceRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DeviceRequest;
   }
 
@@ -240,19 +230,20 @@ class DeviceRequestBuilder
     _$DeviceRequest _$result;
     try {
       _$result = _$v ??
-          new _$DeviceRequest._(
-              deviceId: BuiltValueNullFieldError.checkNotNull(
-                  deviceId, r'DeviceRequest', 'deviceId'),
-              nameValue: nameValue,
-              fcmToken: BuiltValueNullFieldError.checkNotNull(
-                  fcmToken, r'DeviceRequest', 'fcmToken'),
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'DeviceRequest', 'type'),
-              manufacturer: manufacturer,
-              model: BuiltValueNullFieldError.checkNotNull(
-                  model, r'DeviceRequest', 'model'),
-              os: os.build(),
-              mobileApp: _mobileApp?.build());
+          _$DeviceRequest._(
+            deviceId: BuiltValueNullFieldError.checkNotNull(
+                deviceId, r'DeviceRequest', 'deviceId'),
+            nameValue: nameValue,
+            fcmToken: BuiltValueNullFieldError.checkNotNull(
+                fcmToken, r'DeviceRequest', 'fcmToken'),
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'DeviceRequest', 'type'),
+            manufacturer: manufacturer,
+            model: BuiltValueNullFieldError.checkNotNull(
+                model, r'DeviceRequest', 'model'),
+            os: os.build(),
+            mobileApp: _mobileApp?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -261,7 +252,7 @@ class DeviceRequestBuilder
         _$failedField = 'mobileApp';
         _mobileApp?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'DeviceRequest', _$failedField, e.toString());
       }
       rethrow;

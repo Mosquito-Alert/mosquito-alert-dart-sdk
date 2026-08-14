@@ -101,8 +101,9 @@ class _$WorkspaceMembershipSerializer implements PrimitiveSerializer<WorkspaceMe
         case r'role':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(WorkspaceMembershipRoleEnum),
-          ) as WorkspaceMembershipRoleEnum;
+            specifiedType: const FullType.nullable(WorkspaceMembershipRoleEnum),
+          ) as WorkspaceMembershipRoleEnum?;
+          if (valueDes == null) continue;
           result.role = valueDes;
           break;
         case r'created_at':

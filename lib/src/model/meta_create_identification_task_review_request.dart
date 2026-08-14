@@ -76,9 +76,7 @@ class _$MetaCreateIdentificationTaskReviewRequestSerializer implements Primitive
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    MetaCreateIdentificationTaskReviewRequest object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    MetaCreateIdentificationTaskReviewRequest object) sync* {
   }
 
   @override

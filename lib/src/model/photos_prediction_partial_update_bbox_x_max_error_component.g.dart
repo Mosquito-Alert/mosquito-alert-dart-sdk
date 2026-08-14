@@ -30,7 +30,7 @@ PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnum
 
 final BuiltSet<PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnum>(const <PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnum>[
   _$photosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnum_bboxPeriodXMax,
   _$photosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -90,7 +90,7 @@ PhotosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnum
 
 final BuiltSet<PhotosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnum>(const <PhotosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnum>[
   _$photosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnum_invalid,
   _$photosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnum_maxStringLength,
@@ -103,10 +103,10 @@ final BuiltSet<PhotosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionPartialUpdateBboxXMaxErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnumSerializer
     implements
@@ -201,21 +201,13 @@ class _$PhotosPredictionPartialUpdateBboxXMaxErrorComponent
           [void Function(
                   PhotosPredictionPartialUpdateBboxXMaxErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionPartialUpdateBboxXMaxErrorComponentBuilder()
+      (PhotosPredictionPartialUpdateBboxXMaxErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionPartialUpdateBboxXMaxErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionPartialUpdateBboxXMaxErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionPartialUpdateBboxXMaxErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'PhotosPredictionPartialUpdateBboxXMaxErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionPartialUpdateBboxXMaxErrorComponent rebuild(
           void Function(
@@ -225,7 +217,7 @@ class _$PhotosPredictionPartialUpdateBboxXMaxErrorComponent
 
   @override
   PhotosPredictionPartialUpdateBboxXMaxErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionPartialUpdateBboxXMaxErrorComponentBuilder()
+      PhotosPredictionPartialUpdateBboxXMaxErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -297,7 +289,6 @@ class PhotosPredictionPartialUpdateBboxXMaxErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionPartialUpdateBboxXMaxErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionPartialUpdateBboxXMaxErrorComponent;
   }
 
@@ -313,15 +304,14 @@ class PhotosPredictionPartialUpdateBboxXMaxErrorComponentBuilder
 
   _$PhotosPredictionPartialUpdateBboxXMaxErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionPartialUpdateBboxXMaxErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'PhotosPredictionPartialUpdateBboxXMaxErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'PhotosPredictionPartialUpdateBboxXMaxErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionPartialUpdateBboxXMaxErrorComponent',
-                'detail'));
+        _$PhotosPredictionPartialUpdateBboxXMaxErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'PhotosPredictionPartialUpdateBboxXMaxErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'PhotosPredictionPartialUpdateBboxXMaxErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'PhotosPredictionPartialUpdateBboxXMaxErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

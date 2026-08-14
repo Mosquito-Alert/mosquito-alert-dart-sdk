@@ -225,9 +225,7 @@ class _$PhotosPredictionUpdateErrorSerializer implements PrimitiveSerializer<Pho
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    PhotosPredictionUpdateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    PhotosPredictionUpdateError object) sync* {
   }
 
   @override

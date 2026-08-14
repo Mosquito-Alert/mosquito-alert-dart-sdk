@@ -18,23 +18,14 @@ class _$AdmBoundaryRequest extends AdmBoundaryRequest {
 
   factory _$AdmBoundaryRequest(
           [void Function(AdmBoundaryRequestBuilder)? updates]) =>
-      (new AdmBoundaryRequestBuilder()..update(updates))._build();
+      (AdmBoundaryRequestBuilder()..update(updates))._build();
 
   _$AdmBoundaryRequest._(
       {required this.nameValue,
       required this.code,
       required this.source_,
       required this.level})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        nameValue, r'AdmBoundaryRequest', 'nameValue');
-    BuiltValueNullFieldError.checkNotNull(code, r'AdmBoundaryRequest', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        source_, r'AdmBoundaryRequest', 'source_');
-    BuiltValueNullFieldError.checkNotNull(
-        level, r'AdmBoundaryRequest', 'level');
-  }
-
+      : super._();
   @override
   AdmBoundaryRequest rebuild(
           void Function(AdmBoundaryRequestBuilder) updates) =>
@@ -42,7 +33,7 @@ class _$AdmBoundaryRequest extends AdmBoundaryRequest {
 
   @override
   AdmBoundaryRequestBuilder toBuilder() =>
-      new AdmBoundaryRequestBuilder()..replace(this);
+      AdmBoundaryRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -114,7 +105,6 @@ class AdmBoundaryRequestBuilder
 
   @override
   void replace(AdmBoundaryRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AdmBoundaryRequest;
   }
 
@@ -128,15 +118,16 @@ class AdmBoundaryRequestBuilder
 
   _$AdmBoundaryRequest _build() {
     final _$result = _$v ??
-        new _$AdmBoundaryRequest._(
-            nameValue: BuiltValueNullFieldError.checkNotNull(
-                nameValue, r'AdmBoundaryRequest', 'nameValue'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'AdmBoundaryRequest', 'code'),
-            source_: BuiltValueNullFieldError.checkNotNull(
-                source_, r'AdmBoundaryRequest', 'source_'),
-            level: BuiltValueNullFieldError.checkNotNull(
-                level, r'AdmBoundaryRequest', 'level'));
+        _$AdmBoundaryRequest._(
+          nameValue: BuiltValueNullFieldError.checkNotNull(
+              nameValue, r'AdmBoundaryRequest', 'nameValue'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AdmBoundaryRequest', 'code'),
+          source_: BuiltValueNullFieldError.checkNotNull(
+              source_, r'AdmBoundaryRequest', 'source_'),
+          level: BuiltValueNullFieldError.checkNotNull(
+              level, r'AdmBoundaryRequest', 'level'),
+        );
     replace(_$result);
     return _$result;
   }

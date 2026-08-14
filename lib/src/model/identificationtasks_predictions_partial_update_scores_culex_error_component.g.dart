@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnum_scoresPeriodCulex,
   _$identificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent
   @override
   IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -328,7 +314,6 @@ class IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentBuilde
   void replace(
       IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent;
   }
@@ -348,20 +333,21 @@ class IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentBuilde
   _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

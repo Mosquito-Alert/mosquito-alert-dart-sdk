@@ -14,10 +14,9 @@ class _$BiteGeoJsonModelProperties extends BiteGeoJsonModelProperties {
 
   factory _$BiteGeoJsonModelProperties(
           [void Function(BiteGeoJsonModelPropertiesBuilder)? updates]) =>
-      (new BiteGeoJsonModelPropertiesBuilder()..update(updates))._build();
+      (BiteGeoJsonModelPropertiesBuilder()..update(updates))._build();
 
   _$BiteGeoJsonModelProperties._({this.uuid, this.receivedAt}) : super._();
-
   @override
   BiteGeoJsonModelProperties rebuild(
           void Function(BiteGeoJsonModelPropertiesBuilder) updates) =>
@@ -25,7 +24,7 @@ class _$BiteGeoJsonModelProperties extends BiteGeoJsonModelProperties {
 
   @override
   BiteGeoJsonModelPropertiesBuilder toBuilder() =>
-      new BiteGeoJsonModelPropertiesBuilder()..replace(this);
+      BiteGeoJsonModelPropertiesBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -82,7 +81,6 @@ class BiteGeoJsonModelPropertiesBuilder
 
   @override
   void replace(BiteGeoJsonModelProperties other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BiteGeoJsonModelProperties;
   }
 
@@ -96,7 +94,10 @@ class BiteGeoJsonModelPropertiesBuilder
 
   _$BiteGeoJsonModelProperties _build() {
     final _$result = _$v ??
-        new _$BiteGeoJsonModelProperties._(uuid: uuid, receivedAt: receivedAt);
+        _$BiteGeoJsonModelProperties._(
+          uuid: uuid,
+          receivedAt: receivedAt,
+        );
     replace(_$result);
     return _$result;
   }

@@ -28,8 +28,7 @@ NotificationsPartialUpdateIsReadErrorComponentAttrEnum
 }
 
 final BuiltSet<NotificationsPartialUpdateIsReadErrorComponentAttrEnum>
-    _$notificationsPartialUpdateIsReadErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$notificationsPartialUpdateIsReadErrorComponentAttrEnumValues = BuiltSet<
         NotificationsPartialUpdateIsReadErrorComponentAttrEnum>(const <NotificationsPartialUpdateIsReadErrorComponentAttrEnum>[
   _$notificationsPartialUpdateIsReadErrorComponentAttrEnum_isRead,
   _$notificationsPartialUpdateIsReadErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -67,8 +66,7 @@ NotificationsPartialUpdateIsReadErrorComponentCodeEnum
 }
 
 final BuiltSet<NotificationsPartialUpdateIsReadErrorComponentCodeEnum>
-    _$notificationsPartialUpdateIsReadErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$notificationsPartialUpdateIsReadErrorComponentCodeEnumValues = BuiltSet<
         NotificationsPartialUpdateIsReadErrorComponentCodeEnum>(const <NotificationsPartialUpdateIsReadErrorComponentCodeEnum>[
   _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_invalid,
   _$notificationsPartialUpdateIsReadErrorComponentCodeEnum_null_,
@@ -78,10 +76,10 @@ final BuiltSet<NotificationsPartialUpdateIsReadErrorComponentCodeEnum>
 
 Serializer<NotificationsPartialUpdateIsReadErrorComponentAttrEnum>
     _$notificationsPartialUpdateIsReadErrorComponentAttrEnumSerializer =
-    new _$NotificationsPartialUpdateIsReadErrorComponentAttrEnumSerializer();
+    _$NotificationsPartialUpdateIsReadErrorComponentAttrEnumSerializer();
 Serializer<NotificationsPartialUpdateIsReadErrorComponentCodeEnum>
     _$notificationsPartialUpdateIsReadErrorComponentCodeEnumSerializer =
-    new _$NotificationsPartialUpdateIsReadErrorComponentCodeEnumSerializer();
+    _$NotificationsPartialUpdateIsReadErrorComponentCodeEnumSerializer();
 
 class _$NotificationsPartialUpdateIsReadErrorComponentAttrEnumSerializer
     implements
@@ -169,21 +167,12 @@ class _$NotificationsPartialUpdateIsReadErrorComponent
   factory _$NotificationsPartialUpdateIsReadErrorComponent(
           [void Function(NotificationsPartialUpdateIsReadErrorComponentBuilder)?
               updates]) =>
-      (new NotificationsPartialUpdateIsReadErrorComponentBuilder()
-            ..update(updates))
+      (NotificationsPartialUpdateIsReadErrorComponentBuilder()..update(updates))
           ._build();
 
   _$NotificationsPartialUpdateIsReadErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'NotificationsPartialUpdateIsReadErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'NotificationsPartialUpdateIsReadErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'NotificationsPartialUpdateIsReadErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   NotificationsPartialUpdateIsReadErrorComponent rebuild(
           void Function(NotificationsPartialUpdateIsReadErrorComponentBuilder)
@@ -192,8 +181,7 @@ class _$NotificationsPartialUpdateIsReadErrorComponent
 
   @override
   NotificationsPartialUpdateIsReadErrorComponentBuilder toBuilder() =>
-      new NotificationsPartialUpdateIsReadErrorComponentBuilder()
-        ..replace(this);
+      NotificationsPartialUpdateIsReadErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -264,7 +252,6 @@ class NotificationsPartialUpdateIsReadErrorComponentBuilder
 
   @override
   void replace(NotificationsPartialUpdateIsReadErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationsPartialUpdateIsReadErrorComponent;
   }
 
@@ -280,13 +267,14 @@ class NotificationsPartialUpdateIsReadErrorComponentBuilder
 
   _$NotificationsPartialUpdateIsReadErrorComponent _build() {
     final _$result = _$v ??
-        new _$NotificationsPartialUpdateIsReadErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'NotificationsPartialUpdateIsReadErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'NotificationsPartialUpdateIsReadErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'NotificationsPartialUpdateIsReadErrorComponent', 'detail'));
+        _$NotificationsPartialUpdateIsReadErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'NotificationsPartialUpdateIsReadErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'NotificationsPartialUpdateIsReadErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'NotificationsPartialUpdateIsReadErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

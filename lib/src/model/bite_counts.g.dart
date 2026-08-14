@@ -23,7 +23,7 @@ class _$BiteCounts extends BiteCounts {
   final int? rightLeg;
 
   factory _$BiteCounts([void Function(BiteCountsBuilder)? updates]) =>
-      (new BiteCountsBuilder()..update(updates))._build();
+      (BiteCountsBuilder()..update(updates))._build();
 
   _$BiteCounts._(
       {required this.total,
@@ -33,16 +33,13 @@ class _$BiteCounts extends BiteCounts {
       this.chest,
       this.leftLeg,
       this.rightLeg})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(total, r'BiteCounts', 'total');
-  }
-
+      : super._();
   @override
   BiteCounts rebuild(void Function(BiteCountsBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  BiteCountsBuilder toBuilder() => new BiteCountsBuilder()..replace(this);
+  BiteCountsBuilder toBuilder() => BiteCountsBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -137,7 +134,6 @@ class BiteCountsBuilder implements Builder<BiteCounts, BiteCountsBuilder> {
 
   @override
   void replace(BiteCounts other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BiteCounts;
   }
 
@@ -151,15 +147,16 @@ class BiteCountsBuilder implements Builder<BiteCounts, BiteCountsBuilder> {
 
   _$BiteCounts _build() {
     final _$result = _$v ??
-        new _$BiteCounts._(
-            total: BuiltValueNullFieldError.checkNotNull(
-                total, r'BiteCounts', 'total'),
-            head: head,
-            leftArm: leftArm,
-            rightArm: rightArm,
-            chest: chest,
-            leftLeg: leftLeg,
-            rightLeg: rightLeg);
+        _$BiteCounts._(
+          total: BuiltValueNullFieldError.checkNotNull(
+              total, r'BiteCounts', 'total'),
+          head: head,
+          leftArm: leftArm,
+          rightArm: rightArm,
+          chest: chest,
+          leftLeg: leftLeg,
+          rightLeg: rightLeg,
+        );
     replace(_$result);
     return _$result;
   }

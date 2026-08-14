@@ -26,7 +26,7 @@ BreedingsitesGeoListErrorAttrEnum _$breedingsitesGeoListErrorAttrEnumValueOf(
 }
 
 final BuiltSet<BreedingsitesGeoListErrorAttrEnum>
-    _$breedingsitesGeoListErrorAttrEnumValues = new BuiltSet<
+    _$breedingsitesGeoListErrorAttrEnumValues = BuiltSet<
         BreedingsitesGeoListErrorAttrEnum>(const <BreedingsitesGeoListErrorAttrEnum>[
   _$breedingsitesGeoListErrorAttrEnum_siteType,
   _$breedingsitesGeoListErrorAttrEnum_unknownDefaultOpenApi,
@@ -57,7 +57,7 @@ BreedingsitesGeoListErrorCodeEnum _$breedingsitesGeoListErrorCodeEnumValueOf(
 }
 
 final BuiltSet<BreedingsitesGeoListErrorCodeEnum>
-    _$breedingsitesGeoListErrorCodeEnumValues = new BuiltSet<
+    _$breedingsitesGeoListErrorCodeEnumValues = BuiltSet<
         BreedingsitesGeoListErrorCodeEnum>(const <BreedingsitesGeoListErrorCodeEnum>[
   _$breedingsitesGeoListErrorCodeEnum_invalidChoice,
   _$breedingsitesGeoListErrorCodeEnum_invalidList,
@@ -66,10 +66,10 @@ final BuiltSet<BreedingsitesGeoListErrorCodeEnum>
 
 Serializer<BreedingsitesGeoListErrorAttrEnum>
     _$breedingsitesGeoListErrorAttrEnumSerializer =
-    new _$BreedingsitesGeoListErrorAttrEnumSerializer();
+    _$BreedingsitesGeoListErrorAttrEnumSerializer();
 Serializer<BreedingsitesGeoListErrorCodeEnum>
     _$breedingsitesGeoListErrorCodeEnumSerializer =
-    new _$BreedingsitesGeoListErrorCodeEnumSerializer();
+    _$BreedingsitesGeoListErrorCodeEnumSerializer();
 
 class _$BreedingsitesGeoListErrorAttrEnumSerializer
     implements PrimitiveSerializer<BreedingsitesGeoListErrorAttrEnum> {
@@ -139,13 +139,9 @@ class _$BreedingsitesGeoListError extends BreedingsitesGeoListError {
 
   factory _$BreedingsitesGeoListError(
           [void Function(BreedingsitesGeoListErrorBuilder)? updates]) =>
-      (new BreedingsitesGeoListErrorBuilder()..update(updates))._build();
+      (BreedingsitesGeoListErrorBuilder()..update(updates))._build();
 
-  _$BreedingsitesGeoListError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'BreedingsitesGeoListError', 'oneOf');
-  }
-
+  _$BreedingsitesGeoListError._({required this.oneOf}) : super._();
   @override
   BreedingsitesGeoListError rebuild(
           void Function(BreedingsitesGeoListErrorBuilder) updates) =>
@@ -153,7 +149,7 @@ class _$BreedingsitesGeoListError extends BreedingsitesGeoListError {
 
   @override
   BreedingsitesGeoListErrorBuilder toBuilder() =>
-      new BreedingsitesGeoListErrorBuilder()..replace(this);
+      BreedingsitesGeoListErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -201,7 +197,6 @@ class BreedingsitesGeoListErrorBuilder
 
   @override
   void replace(BreedingsitesGeoListError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesGeoListError;
   }
 
@@ -215,9 +210,10 @@ class BreedingsitesGeoListErrorBuilder
 
   _$BreedingsitesGeoListError _build() {
     final _$result = _$v ??
-        new _$BreedingsitesGeoListError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'BreedingsitesGeoListError', 'oneOf'));
+        _$BreedingsitesGeoListError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'BreedingsitesGeoListError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -18,17 +18,11 @@ class _$PaginatedPhotoPredictionList extends PaginatedPhotoPredictionList {
 
   factory _$PaginatedPhotoPredictionList(
           [void Function(PaginatedPhotoPredictionListBuilder)? updates]) =>
-      (new PaginatedPhotoPredictionListBuilder()..update(updates))._build();
+      (PaginatedPhotoPredictionListBuilder()..update(updates))._build();
 
   _$PaginatedPhotoPredictionList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedPhotoPredictionList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedPhotoPredictionList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedPhotoPredictionList rebuild(
           void Function(PaginatedPhotoPredictionListBuilder) updates) =>
@@ -36,7 +30,7 @@ class _$PaginatedPhotoPredictionList extends PaginatedPhotoPredictionList {
 
   @override
   PaginatedPhotoPredictionListBuilder toBuilder() =>
-      new PaginatedPhotoPredictionListBuilder()..replace(this);
+      PaginatedPhotoPredictionListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -90,7 +84,7 @@ class PaginatedPhotoPredictionListBuilder
 
   ListBuilder<PhotoPrediction>? _results;
   ListBuilder<PhotoPrediction> get results =>
-      _$this._results ??= new ListBuilder<PhotoPrediction>();
+      _$this._results ??= ListBuilder<PhotoPrediction>();
   set results(ListBuilder<PhotoPrediction>? results) =>
       _$this._results = results;
 
@@ -112,7 +106,6 @@ class PaginatedPhotoPredictionListBuilder
 
   @override
   void replace(PaginatedPhotoPredictionList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedPhotoPredictionList;
   }
 
@@ -128,19 +121,20 @@ class PaginatedPhotoPredictionListBuilder
     _$PaginatedPhotoPredictionList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedPhotoPredictionList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedPhotoPredictionList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedPhotoPredictionList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedPhotoPredictionList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedPhotoPredictionList', _$failedField, e.toString());
       }
       rethrow;

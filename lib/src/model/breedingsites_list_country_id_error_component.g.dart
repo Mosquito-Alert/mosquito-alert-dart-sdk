@@ -27,7 +27,7 @@ BreedingsitesListCountryIdErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesListCountryIdErrorComponentAttrEnum>
-    _$breedingsitesListCountryIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesListCountryIdErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesListCountryIdErrorComponentAttrEnum>(const <BreedingsitesListCountryIdErrorComponentAttrEnum>[
   _$breedingsitesListCountryIdErrorComponentAttrEnum_countryId,
   _$breedingsitesListCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ BreedingsitesListCountryIdErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesListCountryIdErrorComponentCodeEnum>
-    _$breedingsitesListCountryIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesListCountryIdErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesListCountryIdErrorComponentCodeEnum>(const <BreedingsitesListCountryIdErrorComponentCodeEnum>[
   _$breedingsitesListCountryIdErrorComponentCodeEnum_invalidChoice,
   _$breedingsitesListCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<BreedingsitesListCountryIdErrorComponentCodeEnum>
 
 Serializer<BreedingsitesListCountryIdErrorComponentAttrEnum>
     _$breedingsitesListCountryIdErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesListCountryIdErrorComponentAttrEnumSerializer();
+    _$BreedingsitesListCountryIdErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesListCountryIdErrorComponentCodeEnum>
     _$breedingsitesListCountryIdErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesListCountryIdErrorComponentCodeEnumSerializer();
+    _$BreedingsitesListCountryIdErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesListCountryIdErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,12 @@ class _$BreedingsitesListCountryIdErrorComponent
   factory _$BreedingsitesListCountryIdErrorComponent(
           [void Function(BreedingsitesListCountryIdErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesListCountryIdErrorComponentBuilder()..update(updates))
+      (BreedingsitesListCountryIdErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesListCountryIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesListCountryIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesListCountryIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesListCountryIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesListCountryIdErrorComponent rebuild(
           void Function(BreedingsitesListCountryIdErrorComponentBuilder)
@@ -167,7 +159,7 @@ class _$BreedingsitesListCountryIdErrorComponent
 
   @override
   BreedingsitesListCountryIdErrorComponentBuilder toBuilder() =>
-      new BreedingsitesListCountryIdErrorComponentBuilder()..replace(this);
+      BreedingsitesListCountryIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -236,7 +228,6 @@ class BreedingsitesListCountryIdErrorComponentBuilder
 
   @override
   void replace(BreedingsitesListCountryIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesListCountryIdErrorComponent;
   }
 
@@ -251,13 +242,14 @@ class BreedingsitesListCountryIdErrorComponentBuilder
 
   _$BreedingsitesListCountryIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesListCountryIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesListCountryIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesListCountryIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BreedingsitesListCountryIdErrorComponent', 'detail'));
+        _$BreedingsitesListCountryIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesListCountryIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesListCountryIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BreedingsitesListCountryIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

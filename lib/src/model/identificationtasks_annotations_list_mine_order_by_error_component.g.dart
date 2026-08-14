@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineOrderByErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsListMineOrderByErrorComponentAttrEnum_orderBy,
   _$identificationtasksAnnotationsListMineOrderByErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineOrderByErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -70,10 +70,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineOrderByErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineOrderByErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineOrderByErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnumSerializer
     implements
@@ -166,23 +166,13 @@ class _$IdentificationtasksAnnotationsListMineOrderByErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder()
+      (IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListMineOrderByErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksAnnotationsListMineOrderByErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksAnnotationsListMineOrderByErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsListMineOrderByErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListMineOrderByErrorComponent rebuild(
           void Function(
@@ -193,7 +183,7 @@ class _$IdentificationtasksAnnotationsListMineOrderByErrorComponent
   @override
   IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder()
+          IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -272,7 +262,6 @@ class IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksAnnotationsListMineOrderByErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$IdentificationtasksAnnotationsListMineOrderByErrorComponent;
   }
@@ -291,19 +280,20 @@ class IdentificationtasksAnnotationsListMineOrderByErrorComponentBuilder
 
   _$IdentificationtasksAnnotationsListMineOrderByErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsListMineOrderByErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsListMineOrderByErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsListMineOrderByErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsListMineOrderByErrorComponent',
-                'detail'));
+        _$IdentificationtasksAnnotationsListMineOrderByErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsListMineOrderByErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsListMineOrderByErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsListMineOrderByErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

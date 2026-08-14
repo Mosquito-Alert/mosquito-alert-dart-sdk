@@ -27,7 +27,7 @@ ObservationsCreateEventMomentErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsCreateEventMomentErrorComponentAttrEnum>
-    _$observationsCreateEventMomentErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsCreateEventMomentErrorComponentAttrEnumValues = BuiltSet<
         ObservationsCreateEventMomentErrorComponentAttrEnum>(const <ObservationsCreateEventMomentErrorComponentAttrEnum>[
   _$observationsCreateEventMomentErrorComponentAttrEnum_eventMoment,
   _$observationsCreateEventMomentErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ ObservationsCreateEventMomentErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsCreateEventMomentErrorComponentCodeEnum>
-    _$observationsCreateEventMomentErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsCreateEventMomentErrorComponentCodeEnumValues = BuiltSet<
         ObservationsCreateEventMomentErrorComponentCodeEnum>(const <ObservationsCreateEventMomentErrorComponentCodeEnum>[
   _$observationsCreateEventMomentErrorComponentCodeEnum_invalidChoice,
   _$observationsCreateEventMomentErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -63,10 +63,10 @@ final BuiltSet<ObservationsCreateEventMomentErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateEventMomentErrorComponentAttrEnum>
     _$observationsCreateEventMomentErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateEventMomentErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateEventMomentErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateEventMomentErrorComponentCodeEnum>
     _$observationsCreateEventMomentErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateEventMomentErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateEventMomentErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateEventMomentErrorComponentAttrEnumSerializer
     implements
@@ -148,21 +148,12 @@ class _$ObservationsCreateEventMomentErrorComponent
   factory _$ObservationsCreateEventMomentErrorComponent(
           [void Function(ObservationsCreateEventMomentErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateEventMomentErrorComponentBuilder()
-            ..update(updates))
+      (ObservationsCreateEventMomentErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsCreateEventMomentErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsCreateEventMomentErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsCreateEventMomentErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsCreateEventMomentErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateEventMomentErrorComponent rebuild(
           void Function(ObservationsCreateEventMomentErrorComponentBuilder)
@@ -171,7 +162,7 @@ class _$ObservationsCreateEventMomentErrorComponent
 
   @override
   ObservationsCreateEventMomentErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateEventMomentErrorComponentBuilder()..replace(this);
+      ObservationsCreateEventMomentErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -240,7 +231,6 @@ class ObservationsCreateEventMomentErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateEventMomentErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateEventMomentErrorComponent;
   }
 
@@ -256,13 +246,14 @@ class ObservationsCreateEventMomentErrorComponentBuilder
 
   _$ObservationsCreateEventMomentErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateEventMomentErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsCreateEventMomentErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsCreateEventMomentErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsCreateEventMomentErrorComponent', 'detail'));
+        _$ObservationsCreateEventMomentErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsCreateEventMomentErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsCreateEventMomentErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsCreateEventMomentErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

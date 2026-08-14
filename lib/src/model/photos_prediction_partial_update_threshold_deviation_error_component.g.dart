@@ -31,7 +31,7 @@ PhotosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnum
 final BuiltSet<
         PhotosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnum>(const <PhotosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnum>[
   _$photosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnum_thresholdDeviation,
   _$photosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ PhotosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnum
 final BuiltSet<
         PhotosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnum>(const <PhotosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnum>[
   _$photosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnum_invalid,
   _$photosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         PhotosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnumSerializer();
 Serializer<
         PhotosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponentAttrEnumSerializer
     implements
@@ -215,27 +215,13 @@ class _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponent
           [void Function(
                   PhotosPredictionPartialUpdateThresholdDeviationErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionPartialUpdateThresholdDeviationErrorComponentBuilder()
+      (PhotosPredictionPartialUpdateThresholdDeviationErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'PhotosPredictionPartialUpdateThresholdDeviationErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'PhotosPredictionPartialUpdateThresholdDeviationErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'PhotosPredictionPartialUpdateThresholdDeviationErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionPartialUpdateThresholdDeviationErrorComponent rebuild(
           void Function(
@@ -246,7 +232,7 @@ class _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponent
   @override
   PhotosPredictionPartialUpdateThresholdDeviationErrorComponentBuilder
       toBuilder() =>
-          new PhotosPredictionPartialUpdateThresholdDeviationErrorComponentBuilder()
+          PhotosPredictionPartialUpdateThresholdDeviationErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -326,7 +312,6 @@ class PhotosPredictionPartialUpdateThresholdDeviationErrorComponentBuilder
   @override
   void replace(
       PhotosPredictionPartialUpdateThresholdDeviationErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponent;
   }
@@ -345,19 +330,20 @@ class PhotosPredictionPartialUpdateThresholdDeviationErrorComponentBuilder
 
   _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'PhotosPredictionPartialUpdateThresholdDeviationErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'PhotosPredictionPartialUpdateThresholdDeviationErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionPartialUpdateThresholdDeviationErrorComponent',
-                'detail'));
+        _$PhotosPredictionPartialUpdateThresholdDeviationErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'PhotosPredictionPartialUpdateThresholdDeviationErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'PhotosPredictionPartialUpdateThresholdDeviationErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'PhotosPredictionPartialUpdateThresholdDeviationErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

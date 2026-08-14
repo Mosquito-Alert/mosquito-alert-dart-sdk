@@ -28,7 +28,7 @@ MessagesCreateContentBodySqErrorComponentAttrEnum
 }
 
 final BuiltSet<MessagesCreateContentBodySqErrorComponentAttrEnum>
-    _$messagesCreateContentBodySqErrorComponentAttrEnumValues = new BuiltSet<
+    _$messagesCreateContentBodySqErrorComponentAttrEnumValues = BuiltSet<
         MessagesCreateContentBodySqErrorComponentAttrEnum>(const <MessagesCreateContentBodySqErrorComponentAttrEnum>[
   _$messagesCreateContentBodySqErrorComponentAttrEnum_contentPeriodBodyPeriodSq,
   _$messagesCreateContentBodySqErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ MessagesCreateContentBodySqErrorComponentCodeEnum
 }
 
 final BuiltSet<MessagesCreateContentBodySqErrorComponentCodeEnum>
-    _$messagesCreateContentBodySqErrorComponentCodeEnumValues = new BuiltSet<
+    _$messagesCreateContentBodySqErrorComponentCodeEnumValues = BuiltSet<
         MessagesCreateContentBodySqErrorComponentCodeEnum>(const <MessagesCreateContentBodySqErrorComponentCodeEnum>[
   _$messagesCreateContentBodySqErrorComponentCodeEnum_blank,
   _$messagesCreateContentBodySqErrorComponentCodeEnum_invalid,
@@ -83,10 +83,10 @@ final BuiltSet<MessagesCreateContentBodySqErrorComponentCodeEnum>
 
 Serializer<MessagesCreateContentBodySqErrorComponentAttrEnum>
     _$messagesCreateContentBodySqErrorComponentAttrEnumSerializer =
-    new _$MessagesCreateContentBodySqErrorComponentAttrEnumSerializer();
+    _$MessagesCreateContentBodySqErrorComponentAttrEnumSerializer();
 Serializer<MessagesCreateContentBodySqErrorComponentCodeEnum>
     _$messagesCreateContentBodySqErrorComponentCodeEnumSerializer =
-    new _$MessagesCreateContentBodySqErrorComponentCodeEnumSerializer();
+    _$MessagesCreateContentBodySqErrorComponentCodeEnumSerializer();
 
 class _$MessagesCreateContentBodySqErrorComponentAttrEnumSerializer
     implements
@@ -172,20 +172,12 @@ class _$MessagesCreateContentBodySqErrorComponent
   factory _$MessagesCreateContentBodySqErrorComponent(
           [void Function(MessagesCreateContentBodySqErrorComponentBuilder)?
               updates]) =>
-      (new MessagesCreateContentBodySqErrorComponentBuilder()..update(updates))
+      (MessagesCreateContentBodySqErrorComponentBuilder()..update(updates))
           ._build();
 
   _$MessagesCreateContentBodySqErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'MessagesCreateContentBodySqErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'MessagesCreateContentBodySqErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'MessagesCreateContentBodySqErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   MessagesCreateContentBodySqErrorComponent rebuild(
           void Function(MessagesCreateContentBodySqErrorComponentBuilder)
@@ -194,7 +186,7 @@ class _$MessagesCreateContentBodySqErrorComponent
 
   @override
   MessagesCreateContentBodySqErrorComponentBuilder toBuilder() =>
-      new MessagesCreateContentBodySqErrorComponentBuilder()..replace(this);
+      MessagesCreateContentBodySqErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -263,7 +255,6 @@ class MessagesCreateContentBodySqErrorComponentBuilder
 
   @override
   void replace(MessagesCreateContentBodySqErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesCreateContentBodySqErrorComponent;
   }
 
@@ -279,13 +270,14 @@ class MessagesCreateContentBodySqErrorComponentBuilder
 
   _$MessagesCreateContentBodySqErrorComponent _build() {
     final _$result = _$v ??
-        new _$MessagesCreateContentBodySqErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'MessagesCreateContentBodySqErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'MessagesCreateContentBodySqErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'MessagesCreateContentBodySqErrorComponent', 'detail'));
+        _$MessagesCreateContentBodySqErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'MessagesCreateContentBodySqErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'MessagesCreateContentBodySqErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'MessagesCreateContentBodySqErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

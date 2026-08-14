@@ -73,9 +73,7 @@ class _$NotificationsUpdateErrorSerializer implements PrimitiveSerializer<Notifi
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    NotificationsUpdateError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    NotificationsUpdateError object) sync* {
   }
 
   @override

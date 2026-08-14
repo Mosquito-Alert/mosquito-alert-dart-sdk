@@ -26,7 +26,7 @@ DevicesCreateValidationErrorTypeEnum
 }
 
 final BuiltSet<DevicesCreateValidationErrorTypeEnum>
-    _$devicesCreateValidationErrorTypeEnumValues = new BuiltSet<
+    _$devicesCreateValidationErrorTypeEnumValues = BuiltSet<
         DevicesCreateValidationErrorTypeEnum>(const <DevicesCreateValidationErrorTypeEnum>[
   _$devicesCreateValidationErrorTypeEnum_validationError,
   _$devicesCreateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<DevicesCreateValidationErrorTypeEnum>
 
 Serializer<DevicesCreateValidationErrorTypeEnum>
     _$devicesCreateValidationErrorTypeEnumSerializer =
-    new _$DevicesCreateValidationErrorTypeEnumSerializer();
+    _$DevicesCreateValidationErrorTypeEnumSerializer();
 
 class _$DevicesCreateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<DevicesCreateValidationErrorTypeEnum> {
@@ -76,16 +76,10 @@ class _$DevicesCreateValidationError extends DevicesCreateValidationError {
 
   factory _$DevicesCreateValidationError(
           [void Function(DevicesCreateValidationErrorBuilder)? updates]) =>
-      (new DevicesCreateValidationErrorBuilder()..update(updates))._build();
+      (DevicesCreateValidationErrorBuilder()..update(updates))._build();
 
   _$DevicesCreateValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'DevicesCreateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'DevicesCreateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   DevicesCreateValidationError rebuild(
           void Function(DevicesCreateValidationErrorBuilder) updates) =>
@@ -93,7 +87,7 @@ class _$DevicesCreateValidationError extends DevicesCreateValidationError {
 
   @override
   DevicesCreateValidationErrorBuilder toBuilder() =>
-      new DevicesCreateValidationErrorBuilder()..replace(this);
+      DevicesCreateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -133,7 +127,7 @@ class DevicesCreateValidationErrorBuilder
 
   ListBuilder<DevicesCreateError>? _errors;
   ListBuilder<DevicesCreateError> get errors =>
-      _$this._errors ??= new ListBuilder<DevicesCreateError>();
+      _$this._errors ??= ListBuilder<DevicesCreateError>();
   set errors(ListBuilder<DevicesCreateError>? errors) =>
       _$this._errors = errors;
 
@@ -153,7 +147,6 @@ class DevicesCreateValidationErrorBuilder
 
   @override
   void replace(DevicesCreateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesCreateValidationError;
   }
 
@@ -169,17 +162,18 @@ class DevicesCreateValidationErrorBuilder
     _$DevicesCreateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$DevicesCreateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'DevicesCreateValidationError', 'type'),
-              errors: errors.build());
+          _$DevicesCreateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'DevicesCreateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'DevicesCreateValidationError', _$failedField, e.toString());
       }
       rethrow;

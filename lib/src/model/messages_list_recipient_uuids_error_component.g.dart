@@ -27,7 +27,7 @@ MessagesListRecipientUuidsErrorComponentAttrEnum
 }
 
 final BuiltSet<MessagesListRecipientUuidsErrorComponentAttrEnum>
-    _$messagesListRecipientUuidsErrorComponentAttrEnumValues = new BuiltSet<
+    _$messagesListRecipientUuidsErrorComponentAttrEnumValues = BuiltSet<
         MessagesListRecipientUuidsErrorComponentAttrEnum>(const <MessagesListRecipientUuidsErrorComponentAttrEnum>[
   _$messagesListRecipientUuidsErrorComponentAttrEnum_recipientUuids,
   _$messagesListRecipientUuidsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,7 +64,7 @@ MessagesListRecipientUuidsErrorComponentCodeEnum
 }
 
 final BuiltSet<MessagesListRecipientUuidsErrorComponentCodeEnum>
-    _$messagesListRecipientUuidsErrorComponentCodeEnumValues = new BuiltSet<
+    _$messagesListRecipientUuidsErrorComponentCodeEnumValues = BuiltSet<
         MessagesListRecipientUuidsErrorComponentCodeEnum>(const <MessagesListRecipientUuidsErrorComponentCodeEnum>[
   _$messagesListRecipientUuidsErrorComponentCodeEnum_invalidChoice,
   _$messagesListRecipientUuidsErrorComponentCodeEnum_invalidList,
@@ -74,10 +74,10 @@ final BuiltSet<MessagesListRecipientUuidsErrorComponentCodeEnum>
 
 Serializer<MessagesListRecipientUuidsErrorComponentAttrEnum>
     _$messagesListRecipientUuidsErrorComponentAttrEnumSerializer =
-    new _$MessagesListRecipientUuidsErrorComponentAttrEnumSerializer();
+    _$MessagesListRecipientUuidsErrorComponentAttrEnumSerializer();
 Serializer<MessagesListRecipientUuidsErrorComponentCodeEnum>
     _$messagesListRecipientUuidsErrorComponentCodeEnumSerializer =
-    new _$MessagesListRecipientUuidsErrorComponentCodeEnumSerializer();
+    _$MessagesListRecipientUuidsErrorComponentCodeEnumSerializer();
 
 class _$MessagesListRecipientUuidsErrorComponentAttrEnumSerializer
     implements
@@ -161,20 +161,12 @@ class _$MessagesListRecipientUuidsErrorComponent
   factory _$MessagesListRecipientUuidsErrorComponent(
           [void Function(MessagesListRecipientUuidsErrorComponentBuilder)?
               updates]) =>
-      (new MessagesListRecipientUuidsErrorComponentBuilder()..update(updates))
+      (MessagesListRecipientUuidsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$MessagesListRecipientUuidsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'MessagesListRecipientUuidsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'MessagesListRecipientUuidsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'MessagesListRecipientUuidsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   MessagesListRecipientUuidsErrorComponent rebuild(
           void Function(MessagesListRecipientUuidsErrorComponentBuilder)
@@ -183,7 +175,7 @@ class _$MessagesListRecipientUuidsErrorComponent
 
   @override
   MessagesListRecipientUuidsErrorComponentBuilder toBuilder() =>
-      new MessagesListRecipientUuidsErrorComponentBuilder()..replace(this);
+      MessagesListRecipientUuidsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -252,7 +244,6 @@ class MessagesListRecipientUuidsErrorComponentBuilder
 
   @override
   void replace(MessagesListRecipientUuidsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesListRecipientUuidsErrorComponent;
   }
 
@@ -267,13 +258,14 @@ class MessagesListRecipientUuidsErrorComponentBuilder
 
   _$MessagesListRecipientUuidsErrorComponent _build() {
     final _$result = _$v ??
-        new _$MessagesListRecipientUuidsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'MessagesListRecipientUuidsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'MessagesListRecipientUuidsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'MessagesListRecipientUuidsErrorComponent', 'detail'));
+        _$MessagesListRecipientUuidsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'MessagesListRecipientUuidsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'MessagesListRecipientUuidsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'MessagesListRecipientUuidsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

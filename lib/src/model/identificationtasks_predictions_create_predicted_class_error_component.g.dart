@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnum_predictedClass,
   _$identificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnum_required_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreatePredictedClassErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreatePredictedClassErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksPredictionsCreatePredictedClassErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreatePredictedClassErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreatePredictedClassErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreatePredictedClassErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreatePredictedClassErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreatePredictedClassErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreatePredictedClassErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreatePredictedClassErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreatePredictedClassErrorComponent rebuild(
           void Function(
@@ -208,7 +194,7 @@ class _$IdentificationtasksPredictionsCreatePredictedClassErrorComponent
   @override
   IdentificationtasksPredictionsCreatePredictedClassErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreatePredictedClassErrorComponentBuilder()
+          IdentificationtasksPredictionsCreatePredictedClassErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -291,7 +277,6 @@ class IdentificationtasksPredictionsCreatePredictedClassErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsCreatePredictedClassErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsCreatePredictedClassErrorComponent;
   }
@@ -310,20 +295,20 @@ class IdentificationtasksPredictionsCreatePredictedClassErrorComponentBuilder
 
   _$IdentificationtasksPredictionsCreatePredictedClassErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreatePredictedClassErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreatePredictedClassErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreatePredictedClassErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreatePredictedClassErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsCreatePredictedClassErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreatePredictedClassErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreatePredictedClassErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreatePredictedClassErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -12,13 +12,9 @@ class _$NotificationRequest extends NotificationRequest {
 
   factory _$NotificationRequest(
           [void Function(NotificationRequestBuilder)? updates]) =>
-      (new NotificationRequestBuilder()..update(updates))._build();
+      (NotificationRequestBuilder()..update(updates))._build();
 
-  _$NotificationRequest._({required this.isRead}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        isRead, r'NotificationRequest', 'isRead');
-  }
-
+  _$NotificationRequest._({required this.isRead}) : super._();
   @override
   NotificationRequest rebuild(
           void Function(NotificationRequestBuilder) updates) =>
@@ -26,7 +22,7 @@ class _$NotificationRequest extends NotificationRequest {
 
   @override
   NotificationRequestBuilder toBuilder() =>
-      new NotificationRequestBuilder()..replace(this);
+      NotificationRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -73,7 +69,6 @@ class NotificationRequestBuilder
 
   @override
   void replace(NotificationRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationRequest;
   }
 
@@ -87,9 +82,10 @@ class NotificationRequestBuilder
 
   _$NotificationRequest _build() {
     final _$result = _$v ??
-        new _$NotificationRequest._(
-            isRead: BuiltValueNullFieldError.checkNotNull(
-                isRead, r'NotificationRequest', 'isRead'));
+        _$NotificationRequest._(
+          isRead: BuiltValueNullFieldError.checkNotNull(
+              isRead, r'NotificationRequest', 'isRead'),
+        );
     replace(_$result);
     return _$result;
   }

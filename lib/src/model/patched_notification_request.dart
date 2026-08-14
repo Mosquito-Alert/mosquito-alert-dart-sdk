@@ -73,8 +73,9 @@ class _$PatchedNotificationRequestSerializer implements PrimitiveSerializer<Patc
         case r'is_read':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(bool),
-          ) as bool;
+            specifiedType: const FullType.nullable(bool),
+          ) as bool?;
+          if (valueDes == null) continue;
           result.isRead = valueDes;
           break;
         default:

@@ -31,7 +31,7 @@ IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnum>(const <IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnum>[
   _$identificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnum_bboxPeriodYMax,
   _$identificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnum>(const <IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnum>[
   _$identificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnum_maxStringLength,
@@ -105,10 +105,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentAttrEnumSerializer
     implements
@@ -209,23 +209,13 @@ class _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent
           [void Function(
                   IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentBuilder()
+      (IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent rebuild(
           void Function(
@@ -236,7 +226,7 @@ class _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent
   @override
   IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentBuilder()
+          IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -314,7 +304,6 @@ class IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent;
   }
 
@@ -332,19 +321,20 @@ class IdentificationtasksPredictionsUpdateBboxYMaxErrorComponentBuilder
 
   _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsUpdateBboxYMaxErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

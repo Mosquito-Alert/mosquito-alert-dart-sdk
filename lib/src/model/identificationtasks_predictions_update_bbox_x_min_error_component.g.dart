@@ -31,7 +31,7 @@ IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnum>(const <IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnum>[
   _$identificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnum_bboxPeriodXMin,
   _$identificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnum>(const <IdentificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnum>[
   _$identificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnum_maxStringLength,
@@ -105,10 +105,10 @@ final BuiltSet<
 
 Serializer<IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnumSerializer
     implements
@@ -209,23 +209,13 @@ class _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponent
           [void Function(
                   IdentificationtasksPredictionsUpdateBboxXMinErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsUpdateBboxXMinErrorComponentBuilder()
+      (IdentificationtasksPredictionsUpdateBboxXMinErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksPredictionsUpdateBboxXMinErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksPredictionsUpdateBboxXMinErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsUpdateBboxXMinErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsUpdateBboxXMinErrorComponent rebuild(
           void Function(
@@ -236,7 +226,7 @@ class _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponent
   @override
   IdentificationtasksPredictionsUpdateBboxXMinErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsUpdateBboxXMinErrorComponentBuilder()
+          IdentificationtasksPredictionsUpdateBboxXMinErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -314,7 +304,6 @@ class IdentificationtasksPredictionsUpdateBboxXMinErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsUpdateBboxXMinErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponent;
   }
 
@@ -332,19 +321,20 @@ class IdentificationtasksPredictionsUpdateBboxXMinErrorComponentBuilder
 
   _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsUpdateBboxXMinErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsUpdateBboxXMinErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsUpdateBboxXMinErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsUpdateBboxXMinErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsUpdateBboxXMinErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsUpdateBboxXMinErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

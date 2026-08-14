@@ -27,7 +27,7 @@ class _$PredictionScore extends PredictionScore {
   final double notSure;
 
   factory _$PredictionScore([void Function(PredictionScoreBuilder)? updates]) =>
-      (new PredictionScoreBuilder()..update(updates))._build();
+      (PredictionScoreBuilder()..update(updates))._build();
 
   _$PredictionScore._(
       {required this.aeAlbopictus,
@@ -39,33 +39,13 @@ class _$PredictionScore extends PredictionScore {
       required this.culiseta,
       required this.otherSpecies,
       required this.notSure})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        aeAlbopictus, r'PredictionScore', 'aeAlbopictus');
-    BuiltValueNullFieldError.checkNotNull(
-        aeAegypti, r'PredictionScore', 'aeAegypti');
-    BuiltValueNullFieldError.checkNotNull(
-        aeJaponicus, r'PredictionScore', 'aeJaponicus');
-    BuiltValueNullFieldError.checkNotNull(
-        aeKoreicus, r'PredictionScore', 'aeKoreicus');
-    BuiltValueNullFieldError.checkNotNull(culex, r'PredictionScore', 'culex');
-    BuiltValueNullFieldError.checkNotNull(
-        anopheles, r'PredictionScore', 'anopheles');
-    BuiltValueNullFieldError.checkNotNull(
-        culiseta, r'PredictionScore', 'culiseta');
-    BuiltValueNullFieldError.checkNotNull(
-        otherSpecies, r'PredictionScore', 'otherSpecies');
-    BuiltValueNullFieldError.checkNotNull(
-        notSure, r'PredictionScore', 'notSure');
-  }
-
+      : super._();
   @override
   PredictionScore rebuild(void Function(PredictionScoreBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  PredictionScoreBuilder toBuilder() =>
-      new PredictionScoreBuilder()..replace(this);
+  PredictionScoreBuilder toBuilder() => PredictionScoreBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -177,7 +157,6 @@ class PredictionScoreBuilder
 
   @override
   void replace(PredictionScore other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PredictionScore;
   }
 
@@ -191,25 +170,26 @@ class PredictionScoreBuilder
 
   _$PredictionScore _build() {
     final _$result = _$v ??
-        new _$PredictionScore._(
-            aeAlbopictus: BuiltValueNullFieldError.checkNotNull(
-                aeAlbopictus, r'PredictionScore', 'aeAlbopictus'),
-            aeAegypti: BuiltValueNullFieldError.checkNotNull(
-                aeAegypti, r'PredictionScore', 'aeAegypti'),
-            aeJaponicus: BuiltValueNullFieldError.checkNotNull(
-                aeJaponicus, r'PredictionScore', 'aeJaponicus'),
-            aeKoreicus: BuiltValueNullFieldError.checkNotNull(
-                aeKoreicus, r'PredictionScore', 'aeKoreicus'),
-            culex: BuiltValueNullFieldError.checkNotNull(
-                culex, r'PredictionScore', 'culex'),
-            anopheles: BuiltValueNullFieldError.checkNotNull(
-                anopheles, r'PredictionScore', 'anopheles'),
-            culiseta: BuiltValueNullFieldError.checkNotNull(
-                culiseta, r'PredictionScore', 'culiseta'),
-            otherSpecies: BuiltValueNullFieldError.checkNotNull(
-                otherSpecies, r'PredictionScore', 'otherSpecies'),
-            notSure:
-                BuiltValueNullFieldError.checkNotNull(notSure, r'PredictionScore', 'notSure'));
+        _$PredictionScore._(
+          aeAlbopictus: BuiltValueNullFieldError.checkNotNull(
+              aeAlbopictus, r'PredictionScore', 'aeAlbopictus'),
+          aeAegypti: BuiltValueNullFieldError.checkNotNull(
+              aeAegypti, r'PredictionScore', 'aeAegypti'),
+          aeJaponicus: BuiltValueNullFieldError.checkNotNull(
+              aeJaponicus, r'PredictionScore', 'aeJaponicus'),
+          aeKoreicus: BuiltValueNullFieldError.checkNotNull(
+              aeKoreicus, r'PredictionScore', 'aeKoreicus'),
+          culex: BuiltValueNullFieldError.checkNotNull(
+              culex, r'PredictionScore', 'culex'),
+          anopheles: BuiltValueNullFieldError.checkNotNull(
+              anopheles, r'PredictionScore', 'anopheles'),
+          culiseta: BuiltValueNullFieldError.checkNotNull(
+              culiseta, r'PredictionScore', 'culiseta'),
+          otherSpecies: BuiltValueNullFieldError.checkNotNull(
+              otherSpecies, r'PredictionScore', 'otherSpecies'),
+          notSure: BuiltValueNullFieldError.checkNotNull(
+              notSure, r'PredictionScore', 'notSure'),
+        );
     replace(_$result);
     return _$result;
   }

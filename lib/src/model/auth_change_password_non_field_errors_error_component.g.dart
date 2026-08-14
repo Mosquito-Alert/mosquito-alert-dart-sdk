@@ -29,8 +29,7 @@ AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum>
-    _$authChangePasswordNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$authChangePasswordNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum>(const <AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum>[
   _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$authChangePasswordNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -63,8 +62,7 @@ AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum>
-    _$authChangePasswordNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$authChangePasswordNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum>(const <AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum>[
   _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$authChangePasswordNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -73,10 +71,10 @@ final BuiltSet<AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum>
     _$authChangePasswordNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$AuthChangePasswordNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$AuthChangePasswordNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<AuthChangePasswordNonFieldErrorsErrorComponentCodeEnum>
     _$authChangePasswordNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$AuthChangePasswordNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$AuthChangePasswordNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$AuthChangePasswordNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -162,21 +160,12 @@ class _$AuthChangePasswordNonFieldErrorsErrorComponent
   factory _$AuthChangePasswordNonFieldErrorsErrorComponent(
           [void Function(AuthChangePasswordNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new AuthChangePasswordNonFieldErrorsErrorComponentBuilder()
-            ..update(updates))
+      (AuthChangePasswordNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$AuthChangePasswordNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'AuthChangePasswordNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'AuthChangePasswordNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'AuthChangePasswordNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   AuthChangePasswordNonFieldErrorsErrorComponent rebuild(
           void Function(AuthChangePasswordNonFieldErrorsErrorComponentBuilder)
@@ -185,8 +174,7 @@ class _$AuthChangePasswordNonFieldErrorsErrorComponent
 
   @override
   AuthChangePasswordNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new AuthChangePasswordNonFieldErrorsErrorComponentBuilder()
-        ..replace(this);
+      AuthChangePasswordNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -257,7 +245,6 @@ class AuthChangePasswordNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(AuthChangePasswordNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthChangePasswordNonFieldErrorsErrorComponent;
   }
 
@@ -273,13 +260,14 @@ class AuthChangePasswordNonFieldErrorsErrorComponentBuilder
 
   _$AuthChangePasswordNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$AuthChangePasswordNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'AuthChangePasswordNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'AuthChangePasswordNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'AuthChangePasswordNonFieldErrorsErrorComponent', 'detail'));
+        _$AuthChangePasswordNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'AuthChangePasswordNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'AuthChangePasswordNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'AuthChangePasswordNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

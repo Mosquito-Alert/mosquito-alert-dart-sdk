@@ -27,7 +27,7 @@ BitesCreateCountsChestErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesCreateCountsChestErrorComponentAttrEnum>
-    _$bitesCreateCountsChestErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesCreateCountsChestErrorComponentAttrEnumValues = BuiltSet<
         BitesCreateCountsChestErrorComponentAttrEnum>(const <BitesCreateCountsChestErrorComponentAttrEnum>[
   _$bitesCreateCountsChestErrorComponentAttrEnum_countsPeriodChest,
   _$bitesCreateCountsChestErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,7 +64,7 @@ BitesCreateCountsChestErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesCreateCountsChestErrorComponentCodeEnum>
-    _$bitesCreateCountsChestErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesCreateCountsChestErrorComponentCodeEnumValues = BuiltSet<
         BitesCreateCountsChestErrorComponentCodeEnum>(const <BitesCreateCountsChestErrorComponentCodeEnum>[
   _$bitesCreateCountsChestErrorComponentCodeEnum_invalid,
   _$bitesCreateCountsChestErrorComponentCodeEnum_maxStringLength,
@@ -74,10 +74,10 @@ final BuiltSet<BitesCreateCountsChestErrorComponentCodeEnum>
 
 Serializer<BitesCreateCountsChestErrorComponentAttrEnum>
     _$bitesCreateCountsChestErrorComponentAttrEnumSerializer =
-    new _$BitesCreateCountsChestErrorComponentAttrEnumSerializer();
+    _$BitesCreateCountsChestErrorComponentAttrEnumSerializer();
 Serializer<BitesCreateCountsChestErrorComponentCodeEnum>
     _$bitesCreateCountsChestErrorComponentCodeEnumSerializer =
-    new _$BitesCreateCountsChestErrorComponentCodeEnumSerializer();
+    _$BitesCreateCountsChestErrorComponentCodeEnumSerializer();
 
 class _$BitesCreateCountsChestErrorComponentAttrEnumSerializer
     implements
@@ -161,20 +161,11 @@ class _$BitesCreateCountsChestErrorComponent
   factory _$BitesCreateCountsChestErrorComponent(
           [void Function(BitesCreateCountsChestErrorComponentBuilder)?
               updates]) =>
-      (new BitesCreateCountsChestErrorComponentBuilder()..update(updates))
-          ._build();
+      (BitesCreateCountsChestErrorComponentBuilder()..update(updates))._build();
 
   _$BitesCreateCountsChestErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesCreateCountsChestErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesCreateCountsChestErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesCreateCountsChestErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesCreateCountsChestErrorComponent rebuild(
           void Function(BitesCreateCountsChestErrorComponentBuilder) updates) =>
@@ -182,7 +173,7 @@ class _$BitesCreateCountsChestErrorComponent
 
   @override
   BitesCreateCountsChestErrorComponentBuilder toBuilder() =>
-      new BitesCreateCountsChestErrorComponentBuilder()..replace(this);
+      BitesCreateCountsChestErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -250,7 +241,6 @@ class BitesCreateCountsChestErrorComponentBuilder
 
   @override
   void replace(BitesCreateCountsChestErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateCountsChestErrorComponent;
   }
 
@@ -265,13 +255,14 @@ class BitesCreateCountsChestErrorComponentBuilder
 
   _$BitesCreateCountsChestErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesCreateCountsChestErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesCreateCountsChestErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesCreateCountsChestErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesCreateCountsChestErrorComponent', 'detail'));
+        _$BitesCreateCountsChestErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesCreateCountsChestErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesCreateCountsChestErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesCreateCountsChestErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -18,29 +18,21 @@ class _$ReviewPermission extends ReviewPermission {
 
   factory _$ReviewPermission(
           [void Function(ReviewPermissionBuilder)? updates]) =>
-      (new ReviewPermissionBuilder()..update(updates))._build();
+      (ReviewPermissionBuilder()..update(updates))._build();
 
   _$ReviewPermission._(
       {required this.add,
       required this.change,
       required this.view,
       required this.delete})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(add, r'ReviewPermission', 'add');
-    BuiltValueNullFieldError.checkNotNull(
-        change, r'ReviewPermission', 'change');
-    BuiltValueNullFieldError.checkNotNull(view, r'ReviewPermission', 'view');
-    BuiltValueNullFieldError.checkNotNull(
-        delete, r'ReviewPermission', 'delete');
-  }
-
+      : super._();
   @override
   ReviewPermission rebuild(void Function(ReviewPermissionBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   ReviewPermissionBuilder toBuilder() =>
-      new ReviewPermissionBuilder()..replace(this);
+      ReviewPermissionBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -112,7 +104,6 @@ class ReviewPermissionBuilder
 
   @override
   void replace(ReviewPermission other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ReviewPermission;
   }
 
@@ -126,15 +117,16 @@ class ReviewPermissionBuilder
 
   _$ReviewPermission _build() {
     final _$result = _$v ??
-        new _$ReviewPermission._(
-            add: BuiltValueNullFieldError.checkNotNull(
-                add, r'ReviewPermission', 'add'),
-            change: BuiltValueNullFieldError.checkNotNull(
-                change, r'ReviewPermission', 'change'),
-            view: BuiltValueNullFieldError.checkNotNull(
-                view, r'ReviewPermission', 'view'),
-            delete: BuiltValueNullFieldError.checkNotNull(
-                delete, r'ReviewPermission', 'delete'));
+        _$ReviewPermission._(
+          add: BuiltValueNullFieldError.checkNotNull(
+              add, r'ReviewPermission', 'add'),
+          change: BuiltValueNullFieldError.checkNotNull(
+              change, r'ReviewPermission', 'change'),
+          view: BuiltValueNullFieldError.checkNotNull(
+              view, r'ReviewPermission', 'view'),
+          delete: BuiltValueNullFieldError.checkNotNull(
+              delete, r'ReviewPermission', 'delete'),
+        );
     replace(_$result);
     return _$result;
   }

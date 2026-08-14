@@ -31,7 +31,7 @@ IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEn
 final BuiltSet<
         IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnum>
     _$identificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnum>(const <IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnum>[
   _$identificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnum_classificationPeriodConfidenceLabel,
   _$identificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEn
 final BuiltSet<
         IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnum>
     _$identificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnum>(const <IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnum>[
   _$identificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnum_null_,
   _$identificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnum_required_,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnum>
     _$identificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnum>
     _$identificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentAttrEnumSerializer
     implements
@@ -177,27 +177,13 @@ class _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorCompone
           [void Function(
                   IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentBuilder()
+      (IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent
       rebuild(
@@ -209,7 +195,7 @@ class _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorCompone
   @override
   IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentBuilder()
+          IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -294,7 +280,6 @@ class IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent
   void replace(
       IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent;
   }
@@ -314,20 +299,21 @@ class IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent
   _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent
+        _$IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksReviewCreateClassificationConfidenceLabelErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

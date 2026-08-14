@@ -18,29 +18,21 @@ class _$MessagePermission extends MessagePermission {
 
   factory _$MessagePermission(
           [void Function(MessagePermissionBuilder)? updates]) =>
-      (new MessagePermissionBuilder()..update(updates))._build();
+      (MessagePermissionBuilder()..update(updates))._build();
 
   _$MessagePermission._(
       {required this.add,
       required this.change,
       required this.view,
       required this.delete})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(add, r'MessagePermission', 'add');
-    BuiltValueNullFieldError.checkNotNull(
-        change, r'MessagePermission', 'change');
-    BuiltValueNullFieldError.checkNotNull(view, r'MessagePermission', 'view');
-    BuiltValueNullFieldError.checkNotNull(
-        delete, r'MessagePermission', 'delete');
-  }
-
+      : super._();
   @override
   MessagePermission rebuild(void Function(MessagePermissionBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   MessagePermissionBuilder toBuilder() =>
-      new MessagePermissionBuilder()..replace(this);
+      MessagePermissionBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -112,7 +104,6 @@ class MessagePermissionBuilder
 
   @override
   void replace(MessagePermission other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagePermission;
   }
 
@@ -126,15 +117,16 @@ class MessagePermissionBuilder
 
   _$MessagePermission _build() {
     final _$result = _$v ??
-        new _$MessagePermission._(
-            add: BuiltValueNullFieldError.checkNotNull(
-                add, r'MessagePermission', 'add'),
-            change: BuiltValueNullFieldError.checkNotNull(
-                change, r'MessagePermission', 'change'),
-            view: BuiltValueNullFieldError.checkNotNull(
-                view, r'MessagePermission', 'view'),
-            delete: BuiltValueNullFieldError.checkNotNull(
-                delete, r'MessagePermission', 'delete'));
+        _$MessagePermission._(
+          add: BuiltValueNullFieldError.checkNotNull(
+              add, r'MessagePermission', 'add'),
+          change: BuiltValueNullFieldError.checkNotNull(
+              change, r'MessagePermission', 'change'),
+          view: BuiltValueNullFieldError.checkNotNull(
+              view, r'MessagePermission', 'view'),
+          delete: BuiltValueNullFieldError.checkNotNull(
+              delete, r'MessagePermission', 'delete'),
+        );
     replace(_$result);
     return _$result;
   }

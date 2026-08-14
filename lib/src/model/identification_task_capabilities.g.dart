@@ -16,21 +16,13 @@ class _$IdentificationTaskCapabilities extends IdentificationTaskCapabilities {
 
   factory _$IdentificationTaskCapabilities(
           [void Function(IdentificationTaskCapabilitiesBuilder)? updates]) =>
-      (new IdentificationTaskCapabilitiesBuilder()..update(updates))._build();
+      (IdentificationTaskCapabilitiesBuilder()..update(updates))._build();
 
   _$IdentificationTaskCapabilities._(
       {required this.review,
       required this.annotate,
       required this.annotateExecutive})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        review, r'IdentificationTaskCapabilities', 'review');
-    BuiltValueNullFieldError.checkNotNull(
-        annotate, r'IdentificationTaskCapabilities', 'annotate');
-    BuiltValueNullFieldError.checkNotNull(annotateExecutive,
-        r'IdentificationTaskCapabilities', 'annotateExecutive');
-  }
-
+      : super._();
   @override
   IdentificationTaskCapabilities rebuild(
           void Function(IdentificationTaskCapabilitiesBuilder) updates) =>
@@ -38,7 +30,7 @@ class _$IdentificationTaskCapabilities extends IdentificationTaskCapabilities {
 
   @override
   IdentificationTaskCapabilitiesBuilder toBuilder() =>
-      new IdentificationTaskCapabilitiesBuilder()..replace(this);
+      IdentificationTaskCapabilitiesBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -105,7 +97,6 @@ class IdentificationTaskCapabilitiesBuilder
 
   @override
   void replace(IdentificationTaskCapabilities other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationTaskCapabilities;
   }
 
@@ -119,15 +110,16 @@ class IdentificationTaskCapabilitiesBuilder
 
   _$IdentificationTaskCapabilities _build() {
     final _$result = _$v ??
-        new _$IdentificationTaskCapabilities._(
-            review: BuiltValueNullFieldError.checkNotNull(
-                review, r'IdentificationTaskCapabilities', 'review'),
-            annotate: BuiltValueNullFieldError.checkNotNull(
-                annotate, r'IdentificationTaskCapabilities', 'annotate'),
-            annotateExecutive: BuiltValueNullFieldError.checkNotNull(
-                annotateExecutive,
-                r'IdentificationTaskCapabilities',
-                'annotateExecutive'));
+        _$IdentificationTaskCapabilities._(
+          review: BuiltValueNullFieldError.checkNotNull(
+              review, r'IdentificationTaskCapabilities', 'review'),
+          annotate: BuiltValueNullFieldError.checkNotNull(
+              annotate, r'IdentificationTaskCapabilities', 'annotate'),
+          annotateExecutive: BuiltValueNullFieldError.checkNotNull(
+              annotateExecutive,
+              r'IdentificationTaskCapabilities',
+              'annotateExecutive'),
+        );
     replace(_$result);
     return _$result;
   }

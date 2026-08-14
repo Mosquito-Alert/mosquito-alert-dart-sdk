@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnum_classificationTaxonIds,
   _$identificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnum_invalidList,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentBuilder()
+      (IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent rebuild(
           void Function(
@@ -217,7 +203,7 @@ class _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent
   @override
   IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentBuilder()
+          IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -301,7 +287,6 @@ class IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentBuil
   void replace(
       IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent;
   }
@@ -321,20 +306,21 @@ class IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponentBuil
   _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent
+        _$IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsListClassificationTaxonIdsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

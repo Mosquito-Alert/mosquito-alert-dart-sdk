@@ -26,7 +26,7 @@ UsersUpdateValidationErrorTypeEnum _$usersUpdateValidationErrorTypeEnumValueOf(
 }
 
 final BuiltSet<UsersUpdateValidationErrorTypeEnum>
-    _$usersUpdateValidationErrorTypeEnumValues = new BuiltSet<
+    _$usersUpdateValidationErrorTypeEnumValues = BuiltSet<
         UsersUpdateValidationErrorTypeEnum>(const <UsersUpdateValidationErrorTypeEnum>[
   _$usersUpdateValidationErrorTypeEnum_validationError,
   _$usersUpdateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<UsersUpdateValidationErrorTypeEnum>
 
 Serializer<UsersUpdateValidationErrorTypeEnum>
     _$usersUpdateValidationErrorTypeEnumSerializer =
-    new _$UsersUpdateValidationErrorTypeEnumSerializer();
+    _$UsersUpdateValidationErrorTypeEnumSerializer();
 
 class _$UsersUpdateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<UsersUpdateValidationErrorTypeEnum> {
@@ -74,16 +74,10 @@ class _$UsersUpdateValidationError extends UsersUpdateValidationError {
 
   factory _$UsersUpdateValidationError(
           [void Function(UsersUpdateValidationErrorBuilder)? updates]) =>
-      (new UsersUpdateValidationErrorBuilder()..update(updates))._build();
+      (UsersUpdateValidationErrorBuilder()..update(updates))._build();
 
   _$UsersUpdateValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'UsersUpdateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'UsersUpdateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   UsersUpdateValidationError rebuild(
           void Function(UsersUpdateValidationErrorBuilder) updates) =>
@@ -91,7 +85,7 @@ class _$UsersUpdateValidationError extends UsersUpdateValidationError {
 
   @override
   UsersUpdateValidationErrorBuilder toBuilder() =>
-      new UsersUpdateValidationErrorBuilder()..replace(this);
+      UsersUpdateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -130,7 +124,7 @@ class UsersUpdateValidationErrorBuilder
 
   ListBuilder<UsersUpdateError>? _errors;
   ListBuilder<UsersUpdateError> get errors =>
-      _$this._errors ??= new ListBuilder<UsersUpdateError>();
+      _$this._errors ??= ListBuilder<UsersUpdateError>();
   set errors(ListBuilder<UsersUpdateError>? errors) => _$this._errors = errors;
 
   UsersUpdateValidationErrorBuilder() {
@@ -149,7 +143,6 @@ class UsersUpdateValidationErrorBuilder
 
   @override
   void replace(UsersUpdateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$UsersUpdateValidationError;
   }
 
@@ -165,17 +158,18 @@ class UsersUpdateValidationErrorBuilder
     _$UsersUpdateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$UsersUpdateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'UsersUpdateValidationError', 'type'),
-              errors: errors.build());
+          _$UsersUpdateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'UsersUpdateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'UsersUpdateValidationError', _$failedField, e.toString());
       }
       rethrow;

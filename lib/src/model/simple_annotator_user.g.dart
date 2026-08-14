@@ -20,7 +20,7 @@ class _$SimpleAnnotatorUser extends SimpleAnnotatorUser {
 
   factory _$SimpleAnnotatorUser(
           [void Function(SimpleAnnotatorUserBuilder)? updates]) =>
-      (new SimpleAnnotatorUserBuilder()..update(updates))._build();
+      (SimpleAnnotatorUserBuilder()..update(updates))._build();
 
   _$SimpleAnnotatorUser._(
       {required this.uuid,
@@ -28,18 +28,7 @@ class _$SimpleAnnotatorUser extends SimpleAnnotatorUser {
       required this.firstName,
       required this.lastName,
       required this.fullName})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'SimpleAnnotatorUser', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(
-        username, r'SimpleAnnotatorUser', 'username');
-    BuiltValueNullFieldError.checkNotNull(
-        firstName, r'SimpleAnnotatorUser', 'firstName');
-    BuiltValueNullFieldError.checkNotNull(
-        lastName, r'SimpleAnnotatorUser', 'lastName');
-    BuiltValueNullFieldError.checkNotNull(
-        fullName, r'SimpleAnnotatorUser', 'fullName');
-  }
-
+      : super._();
   @override
   SimpleAnnotatorUser rebuild(
           void Function(SimpleAnnotatorUserBuilder) updates) =>
@@ -47,7 +36,7 @@ class _$SimpleAnnotatorUser extends SimpleAnnotatorUser {
 
   @override
   SimpleAnnotatorUserBuilder toBuilder() =>
-      new SimpleAnnotatorUserBuilder()..replace(this);
+      SimpleAnnotatorUserBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -127,7 +116,6 @@ class SimpleAnnotatorUserBuilder
 
   @override
   void replace(SimpleAnnotatorUser other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$SimpleAnnotatorUser;
   }
 
@@ -141,17 +129,18 @@ class SimpleAnnotatorUserBuilder
 
   _$SimpleAnnotatorUser _build() {
     final _$result = _$v ??
-        new _$SimpleAnnotatorUser._(
-            uuid: BuiltValueNullFieldError.checkNotNull(
-                uuid, r'SimpleAnnotatorUser', 'uuid'),
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, r'SimpleAnnotatorUser', 'username'),
-            firstName: BuiltValueNullFieldError.checkNotNull(
-                firstName, r'SimpleAnnotatorUser', 'firstName'),
-            lastName: BuiltValueNullFieldError.checkNotNull(
-                lastName, r'SimpleAnnotatorUser', 'lastName'),
-            fullName: BuiltValueNullFieldError.checkNotNull(
-                fullName, r'SimpleAnnotatorUser', 'fullName'));
+        _$SimpleAnnotatorUser._(
+          uuid: BuiltValueNullFieldError.checkNotNull(
+              uuid, r'SimpleAnnotatorUser', 'uuid'),
+          username: BuiltValueNullFieldError.checkNotNull(
+              username, r'SimpleAnnotatorUser', 'username'),
+          firstName: BuiltValueNullFieldError.checkNotNull(
+              firstName, r'SimpleAnnotatorUser', 'firstName'),
+          lastName: BuiltValueNullFieldError.checkNotNull(
+              lastName, r'SimpleAnnotatorUser', 'lastName'),
+          fullName: BuiltValueNullFieldError.checkNotNull(
+              fullName, r'SimpleAnnotatorUser', 'fullName'),
+        );
     replace(_$result);
     return _$result;
   }

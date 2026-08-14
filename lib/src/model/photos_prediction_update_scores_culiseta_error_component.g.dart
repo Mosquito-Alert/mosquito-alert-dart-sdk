@@ -30,7 +30,7 @@ PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnum
 
 final BuiltSet<PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnum>
     _$photosPredictionUpdateScoresCulisetaErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnum>(const <PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnum>[
   _$photosPredictionUpdateScoresCulisetaErrorComponentAttrEnum_scoresPeriodCuliseta,
   _$photosPredictionUpdateScoresCulisetaErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -89,7 +89,7 @@ PhotosPredictionUpdateScoresCulisetaErrorComponentCodeEnum
 
 final BuiltSet<PhotosPredictionUpdateScoresCulisetaErrorComponentCodeEnum>
     _$photosPredictionUpdateScoresCulisetaErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateScoresCulisetaErrorComponentCodeEnum>(const <PhotosPredictionUpdateScoresCulisetaErrorComponentCodeEnum>[
   _$photosPredictionUpdateScoresCulisetaErrorComponentCodeEnum_invalid,
   _$photosPredictionUpdateScoresCulisetaErrorComponentCodeEnum_maxStringLength,
@@ -102,10 +102,10 @@ final BuiltSet<PhotosPredictionUpdateScoresCulisetaErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnum>
     _$photosPredictionUpdateScoresCulisetaErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionUpdateScoresCulisetaErrorComponentCodeEnum>
     _$photosPredictionUpdateScoresCulisetaErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionUpdateScoresCulisetaErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionUpdateScoresCulisetaErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnumSerializer
     implements
@@ -200,21 +200,13 @@ class _$PhotosPredictionUpdateScoresCulisetaErrorComponent
           [void Function(
                   PhotosPredictionUpdateScoresCulisetaErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdateScoresCulisetaErrorComponentBuilder()
+      (PhotosPredictionUpdateScoresCulisetaErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionUpdateScoresCulisetaErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionUpdateScoresCulisetaErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionUpdateScoresCulisetaErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'PhotosPredictionUpdateScoresCulisetaErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdateScoresCulisetaErrorComponent rebuild(
           void Function(
@@ -224,7 +216,7 @@ class _$PhotosPredictionUpdateScoresCulisetaErrorComponent
 
   @override
   PhotosPredictionUpdateScoresCulisetaErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionUpdateScoresCulisetaErrorComponentBuilder()
+      PhotosPredictionUpdateScoresCulisetaErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -296,7 +288,6 @@ class PhotosPredictionUpdateScoresCulisetaErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionUpdateScoresCulisetaErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateScoresCulisetaErrorComponent;
   }
 
@@ -312,15 +303,14 @@ class PhotosPredictionUpdateScoresCulisetaErrorComponentBuilder
 
   _$PhotosPredictionUpdateScoresCulisetaErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdateScoresCulisetaErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'PhotosPredictionUpdateScoresCulisetaErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'PhotosPredictionUpdateScoresCulisetaErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionUpdateScoresCulisetaErrorComponent',
-                'detail'));
+        _$PhotosPredictionUpdateScoresCulisetaErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'PhotosPredictionUpdateScoresCulisetaErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'PhotosPredictionUpdateScoresCulisetaErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'PhotosPredictionUpdateScoresCulisetaErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

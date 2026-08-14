@@ -7,8 +7,8 @@ part of 'messages_list_mine_sent_error.dart';
 // **************************************************************************
 
 const MessagesListMineSentErrorAttrEnum
-    _$messagesListMineSentErrorAttrEnum_recipientUuids =
-    const MessagesListMineSentErrorAttrEnum._('recipientUuids');
+    _$messagesListMineSentErrorAttrEnum_target =
+    const MessagesListMineSentErrorAttrEnum._('target');
 const MessagesListMineSentErrorAttrEnum
     _$messagesListMineSentErrorAttrEnum_unknownDefaultOpenApi =
     const MessagesListMineSentErrorAttrEnum._('unknownDefaultOpenApi');
@@ -16,8 +16,8 @@ const MessagesListMineSentErrorAttrEnum
 MessagesListMineSentErrorAttrEnum _$messagesListMineSentErrorAttrEnumValueOf(
     String name) {
   switch (name) {
-    case 'recipientUuids':
-      return _$messagesListMineSentErrorAttrEnum_recipientUuids;
+    case 'target':
+      return _$messagesListMineSentErrorAttrEnum_target;
     case 'unknownDefaultOpenApi':
       return _$messagesListMineSentErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -26,21 +26,15 @@ MessagesListMineSentErrorAttrEnum _$messagesListMineSentErrorAttrEnumValueOf(
 }
 
 final BuiltSet<MessagesListMineSentErrorAttrEnum>
-    _$messagesListMineSentErrorAttrEnumValues = new BuiltSet<
+    _$messagesListMineSentErrorAttrEnumValues = BuiltSet<
         MessagesListMineSentErrorAttrEnum>(const <MessagesListMineSentErrorAttrEnum>[
-  _$messagesListMineSentErrorAttrEnum_recipientUuids,
+  _$messagesListMineSentErrorAttrEnum_target,
   _$messagesListMineSentErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const MessagesListMineSentErrorCodeEnum
     _$messagesListMineSentErrorCodeEnum_invalidChoice =
     const MessagesListMineSentErrorCodeEnum._('invalidChoice');
-const MessagesListMineSentErrorCodeEnum
-    _$messagesListMineSentErrorCodeEnum_invalidList =
-    const MessagesListMineSentErrorCodeEnum._('invalidList');
-const MessagesListMineSentErrorCodeEnum
-    _$messagesListMineSentErrorCodeEnum_invalidPkValue =
-    const MessagesListMineSentErrorCodeEnum._('invalidPkValue');
 const MessagesListMineSentErrorCodeEnum
     _$messagesListMineSentErrorCodeEnum_unknownDefaultOpenApi =
     const MessagesListMineSentErrorCodeEnum._('unknownDefaultOpenApi');
@@ -50,10 +44,6 @@ MessagesListMineSentErrorCodeEnum _$messagesListMineSentErrorCodeEnumValueOf(
   switch (name) {
     case 'invalidChoice':
       return _$messagesListMineSentErrorCodeEnum_invalidChoice;
-    case 'invalidList':
-      return _$messagesListMineSentErrorCodeEnum_invalidList;
-    case 'invalidPkValue':
-      return _$messagesListMineSentErrorCodeEnum_invalidPkValue;
     case 'unknownDefaultOpenApi':
       return _$messagesListMineSentErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -62,29 +52,27 @@ MessagesListMineSentErrorCodeEnum _$messagesListMineSentErrorCodeEnumValueOf(
 }
 
 final BuiltSet<MessagesListMineSentErrorCodeEnum>
-    _$messagesListMineSentErrorCodeEnumValues = new BuiltSet<
+    _$messagesListMineSentErrorCodeEnumValues = BuiltSet<
         MessagesListMineSentErrorCodeEnum>(const <MessagesListMineSentErrorCodeEnum>[
   _$messagesListMineSentErrorCodeEnum_invalidChoice,
-  _$messagesListMineSentErrorCodeEnum_invalidList,
-  _$messagesListMineSentErrorCodeEnum_invalidPkValue,
   _$messagesListMineSentErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<MessagesListMineSentErrorAttrEnum>
     _$messagesListMineSentErrorAttrEnumSerializer =
-    new _$MessagesListMineSentErrorAttrEnumSerializer();
+    _$MessagesListMineSentErrorAttrEnumSerializer();
 Serializer<MessagesListMineSentErrorCodeEnum>
     _$messagesListMineSentErrorCodeEnumSerializer =
-    new _$MessagesListMineSentErrorCodeEnumSerializer();
+    _$MessagesListMineSentErrorCodeEnumSerializer();
 
 class _$MessagesListMineSentErrorAttrEnumSerializer
     implements PrimitiveSerializer<MessagesListMineSentErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'recipientUuids': 'recipient_uuids',
+    'target': 'target',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'recipient_uuids': 'recipientUuids',
+    'target': 'target',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -111,14 +99,10 @@ class _$MessagesListMineSentErrorCodeEnumSerializer
     implements PrimitiveSerializer<MessagesListMineSentErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
     'invalidChoice': 'invalid_choice',
-    'invalidList': 'invalid_list',
-    'invalidPkValue': 'invalid_pk_value',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'invalid_choice': 'invalidChoice',
-    'invalid_list': 'invalidList',
-    'invalid_pk_value': 'invalidPkValue',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -147,13 +131,9 @@ class _$MessagesListMineSentError extends MessagesListMineSentError {
 
   factory _$MessagesListMineSentError(
           [void Function(MessagesListMineSentErrorBuilder)? updates]) =>
-      (new MessagesListMineSentErrorBuilder()..update(updates))._build();
+      (MessagesListMineSentErrorBuilder()..update(updates))._build();
 
-  _$MessagesListMineSentError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'MessagesListMineSentError', 'oneOf');
-  }
-
+  _$MessagesListMineSentError._({required this.oneOf}) : super._();
   @override
   MessagesListMineSentError rebuild(
           void Function(MessagesListMineSentErrorBuilder) updates) =>
@@ -161,7 +141,7 @@ class _$MessagesListMineSentError extends MessagesListMineSentError {
 
   @override
   MessagesListMineSentErrorBuilder toBuilder() =>
-      new MessagesListMineSentErrorBuilder()..replace(this);
+      MessagesListMineSentErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -209,7 +189,6 @@ class MessagesListMineSentErrorBuilder
 
   @override
   void replace(MessagesListMineSentError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesListMineSentError;
   }
 
@@ -223,9 +202,10 @@ class MessagesListMineSentErrorBuilder
 
   _$MessagesListMineSentError _build() {
     final _$result = _$v ??
-        new _$MessagesListMineSentError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'MessagesListMineSentError', 'oneOf'));
+        _$MessagesListMineSentError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'MessagesListMineSentError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

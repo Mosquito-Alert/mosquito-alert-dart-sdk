@@ -27,7 +27,7 @@ ObservationsCreatePhotosErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsCreatePhotosErrorComponentAttrEnum>
-    _$observationsCreatePhotosErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsCreatePhotosErrorComponentAttrEnumValues = BuiltSet<
         ObservationsCreatePhotosErrorComponentAttrEnum>(const <ObservationsCreatePhotosErrorComponentAttrEnum>[
   _$observationsCreatePhotosErrorComponentAttrEnum_photos,
   _$observationsCreatePhotosErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -69,7 +69,7 @@ ObservationsCreatePhotosErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsCreatePhotosErrorComponentCodeEnum>
-    _$observationsCreatePhotosErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsCreatePhotosErrorComponentCodeEnumValues = BuiltSet<
         ObservationsCreatePhotosErrorComponentCodeEnum>(const <ObservationsCreatePhotosErrorComponentCodeEnum>[
   _$observationsCreatePhotosErrorComponentCodeEnum_minLength,
   _$observationsCreatePhotosErrorComponentCodeEnum_notAList,
@@ -80,10 +80,10 @@ final BuiltSet<ObservationsCreatePhotosErrorComponentCodeEnum>
 
 Serializer<ObservationsCreatePhotosErrorComponentAttrEnum>
     _$observationsCreatePhotosErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreatePhotosErrorComponentAttrEnumSerializer();
+    _$ObservationsCreatePhotosErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreatePhotosErrorComponentCodeEnum>
     _$observationsCreatePhotosErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreatePhotosErrorComponentCodeEnumSerializer();
+    _$ObservationsCreatePhotosErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreatePhotosErrorComponentAttrEnumSerializer
     implements
@@ -169,20 +169,12 @@ class _$ObservationsCreatePhotosErrorComponent
   factory _$ObservationsCreatePhotosErrorComponent(
           [void Function(ObservationsCreatePhotosErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreatePhotosErrorComponentBuilder()..update(updates))
+      (ObservationsCreatePhotosErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsCreatePhotosErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsCreatePhotosErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsCreatePhotosErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsCreatePhotosErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreatePhotosErrorComponent rebuild(
           void Function(ObservationsCreatePhotosErrorComponentBuilder)
@@ -191,7 +183,7 @@ class _$ObservationsCreatePhotosErrorComponent
 
   @override
   ObservationsCreatePhotosErrorComponentBuilder toBuilder() =>
-      new ObservationsCreatePhotosErrorComponentBuilder()..replace(this);
+      ObservationsCreatePhotosErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -260,7 +252,6 @@ class ObservationsCreatePhotosErrorComponentBuilder
 
   @override
   void replace(ObservationsCreatePhotosErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreatePhotosErrorComponent;
   }
 
@@ -275,13 +266,14 @@ class ObservationsCreatePhotosErrorComponentBuilder
 
   _$ObservationsCreatePhotosErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreatePhotosErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsCreatePhotosErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsCreatePhotosErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'ObservationsCreatePhotosErrorComponent', 'detail'));
+        _$ObservationsCreatePhotosErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsCreatePhotosErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsCreatePhotosErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsCreatePhotosErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

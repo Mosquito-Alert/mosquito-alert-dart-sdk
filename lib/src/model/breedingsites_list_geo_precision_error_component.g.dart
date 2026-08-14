@@ -27,7 +27,7 @@ BreedingsitesListGeoPrecisionErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesListGeoPrecisionErrorComponentAttrEnum>
-    _$breedingsitesListGeoPrecisionErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesListGeoPrecisionErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesListGeoPrecisionErrorComponentAttrEnum>(const <BreedingsitesListGeoPrecisionErrorComponentAttrEnum>[
   _$breedingsitesListGeoPrecisionErrorComponentAttrEnum_geoPrecision,
   _$breedingsitesListGeoPrecisionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,7 +64,7 @@ BreedingsitesListGeoPrecisionErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesListGeoPrecisionErrorComponentCodeEnum>
-    _$breedingsitesListGeoPrecisionErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesListGeoPrecisionErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesListGeoPrecisionErrorComponentCodeEnum>(const <BreedingsitesListGeoPrecisionErrorComponentCodeEnum>[
   _$breedingsitesListGeoPrecisionErrorComponentCodeEnum_invalid,
   _$breedingsitesListGeoPrecisionErrorComponentCodeEnum_maxValue,
@@ -74,10 +74,10 @@ final BuiltSet<BreedingsitesListGeoPrecisionErrorComponentCodeEnum>
 
 Serializer<BreedingsitesListGeoPrecisionErrorComponentAttrEnum>
     _$breedingsitesListGeoPrecisionErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesListGeoPrecisionErrorComponentAttrEnumSerializer();
+    _$BreedingsitesListGeoPrecisionErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesListGeoPrecisionErrorComponentCodeEnum>
     _$breedingsitesListGeoPrecisionErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesListGeoPrecisionErrorComponentCodeEnumSerializer();
+    _$BreedingsitesListGeoPrecisionErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesListGeoPrecisionErrorComponentAttrEnumSerializer
     implements
@@ -163,21 +163,12 @@ class _$BreedingsitesListGeoPrecisionErrorComponent
   factory _$BreedingsitesListGeoPrecisionErrorComponent(
           [void Function(BreedingsitesListGeoPrecisionErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesListGeoPrecisionErrorComponentBuilder()
-            ..update(updates))
+      (BreedingsitesListGeoPrecisionErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesListGeoPrecisionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesListGeoPrecisionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesListGeoPrecisionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesListGeoPrecisionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesListGeoPrecisionErrorComponent rebuild(
           void Function(BreedingsitesListGeoPrecisionErrorComponentBuilder)
@@ -186,7 +177,7 @@ class _$BreedingsitesListGeoPrecisionErrorComponent
 
   @override
   BreedingsitesListGeoPrecisionErrorComponentBuilder toBuilder() =>
-      new BreedingsitesListGeoPrecisionErrorComponentBuilder()..replace(this);
+      BreedingsitesListGeoPrecisionErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -255,7 +246,6 @@ class BreedingsitesListGeoPrecisionErrorComponentBuilder
 
   @override
   void replace(BreedingsitesListGeoPrecisionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesListGeoPrecisionErrorComponent;
   }
 
@@ -271,13 +261,14 @@ class BreedingsitesListGeoPrecisionErrorComponentBuilder
 
   _$BreedingsitesListGeoPrecisionErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesListGeoPrecisionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesListGeoPrecisionErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesListGeoPrecisionErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesListGeoPrecisionErrorComponent', 'detail'));
+        _$BreedingsitesListGeoPrecisionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesListGeoPrecisionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesListGeoPrecisionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BreedingsitesListGeoPrecisionErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -27,7 +27,7 @@ ObservationsGeoListCreatedAtErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsGeoListCreatedAtErrorComponentAttrEnum>
-    _$observationsGeoListCreatedAtErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsGeoListCreatedAtErrorComponentAttrEnumValues = BuiltSet<
         ObservationsGeoListCreatedAtErrorComponentAttrEnum>(const <ObservationsGeoListCreatedAtErrorComponentAttrEnum>[
   _$observationsGeoListCreatedAtErrorComponentAttrEnum_createdAt,
   _$observationsGeoListCreatedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ ObservationsGeoListCreatedAtErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsGeoListCreatedAtErrorComponentCodeEnum>
-    _$observationsGeoListCreatedAtErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsGeoListCreatedAtErrorComponentCodeEnumValues = BuiltSet<
         ObservationsGeoListCreatedAtErrorComponentCodeEnum>(const <ObservationsGeoListCreatedAtErrorComponentCodeEnum>[
   _$observationsGeoListCreatedAtErrorComponentCodeEnum_invalid,
   _$observationsGeoListCreatedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<ObservationsGeoListCreatedAtErrorComponentCodeEnum>
 
 Serializer<ObservationsGeoListCreatedAtErrorComponentAttrEnum>
     _$observationsGeoListCreatedAtErrorComponentAttrEnumSerializer =
-    new _$ObservationsGeoListCreatedAtErrorComponentAttrEnumSerializer();
+    _$ObservationsGeoListCreatedAtErrorComponentAttrEnumSerializer();
 Serializer<ObservationsGeoListCreatedAtErrorComponentCodeEnum>
     _$observationsGeoListCreatedAtErrorComponentCodeEnumSerializer =
-    new _$ObservationsGeoListCreatedAtErrorComponentCodeEnumSerializer();
+    _$ObservationsGeoListCreatedAtErrorComponentCodeEnumSerializer();
 
 class _$ObservationsGeoListCreatedAtErrorComponentAttrEnumSerializer
     implements
@@ -147,20 +147,12 @@ class _$ObservationsGeoListCreatedAtErrorComponent
   factory _$ObservationsGeoListCreatedAtErrorComponent(
           [void Function(ObservationsGeoListCreatedAtErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsGeoListCreatedAtErrorComponentBuilder()..update(updates))
+      (ObservationsGeoListCreatedAtErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsGeoListCreatedAtErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsGeoListCreatedAtErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsGeoListCreatedAtErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsGeoListCreatedAtErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsGeoListCreatedAtErrorComponent rebuild(
           void Function(ObservationsGeoListCreatedAtErrorComponentBuilder)
@@ -169,7 +161,7 @@ class _$ObservationsGeoListCreatedAtErrorComponent
 
   @override
   ObservationsGeoListCreatedAtErrorComponentBuilder toBuilder() =>
-      new ObservationsGeoListCreatedAtErrorComponentBuilder()..replace(this);
+      ObservationsGeoListCreatedAtErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -238,7 +230,6 @@ class ObservationsGeoListCreatedAtErrorComponentBuilder
 
   @override
   void replace(ObservationsGeoListCreatedAtErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsGeoListCreatedAtErrorComponent;
   }
 
@@ -254,13 +245,14 @@ class ObservationsGeoListCreatedAtErrorComponentBuilder
 
   _$ObservationsGeoListCreatedAtErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsGeoListCreatedAtErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsGeoListCreatedAtErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsGeoListCreatedAtErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsGeoListCreatedAtErrorComponent', 'detail'));
+        _$ObservationsGeoListCreatedAtErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsGeoListCreatedAtErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsGeoListCreatedAtErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsGeoListCreatedAtErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

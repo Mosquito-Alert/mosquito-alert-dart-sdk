@@ -31,7 +31,7 @@ BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnum
 final BuiltSet<
         BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnum>
     _$breedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnum>(const <BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnum>[
   _$breedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnum_locationPeriodPointPeriodNonFieldErrors,
   _$breedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnum
 final BuiltSet<
         BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnum>
     _$breedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnum>(const <BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnum>[
   _$breedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$breedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -84,10 +84,10 @@ final BuiltSet<
 
 Serializer<BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnum>
     _$breedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnum>
     _$breedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent
           [void Function(
                   BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentBuilder()
+      (BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -217,7 +203,7 @@ class _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent
   @override
   BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentBuilder()
+          BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -297,7 +283,6 @@ class BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentBuilder
   @override
   void replace(
       BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent;
   }
@@ -316,19 +301,20 @@ class BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentBuilder
 
   _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent',
-                'detail'));
+        _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'BreedingsitesCreateLocationPointNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

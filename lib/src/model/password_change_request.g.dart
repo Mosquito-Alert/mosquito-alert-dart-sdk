@@ -12,13 +12,9 @@ class _$PasswordChangeRequest extends PasswordChangeRequest {
 
   factory _$PasswordChangeRequest(
           [void Function(PasswordChangeRequestBuilder)? updates]) =>
-      (new PasswordChangeRequestBuilder()..update(updates))._build();
+      (PasswordChangeRequestBuilder()..update(updates))._build();
 
-  _$PasswordChangeRequest._({required this.password}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        password, r'PasswordChangeRequest', 'password');
-  }
-
+  _$PasswordChangeRequest._({required this.password}) : super._();
   @override
   PasswordChangeRequest rebuild(
           void Function(PasswordChangeRequestBuilder) updates) =>
@@ -26,7 +22,7 @@ class _$PasswordChangeRequest extends PasswordChangeRequest {
 
   @override
   PasswordChangeRequestBuilder toBuilder() =>
-      new PasswordChangeRequestBuilder()..replace(this);
+      PasswordChangeRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -73,7 +69,6 @@ class PasswordChangeRequestBuilder
 
   @override
   void replace(PasswordChangeRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PasswordChangeRequest;
   }
 
@@ -87,9 +82,10 @@ class PasswordChangeRequestBuilder
 
   _$PasswordChangeRequest _build() {
     final _$result = _$v ??
-        new _$PasswordChangeRequest._(
-            password: BuiltValueNullFieldError.checkNotNull(
-                password, r'PasswordChangeRequest', 'password'));
+        _$PasswordChangeRequest._(
+          password: BuiltValueNullFieldError.checkNotNull(
+              password, r'PasswordChangeRequest', 'password'),
+        );
     replace(_$result);
     return _$result;
   }

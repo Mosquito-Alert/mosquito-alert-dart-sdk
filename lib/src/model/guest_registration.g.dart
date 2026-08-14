@@ -12,20 +12,16 @@ class _$GuestRegistration extends GuestRegistration {
 
   factory _$GuestRegistration(
           [void Function(GuestRegistrationBuilder)? updates]) =>
-      (new GuestRegistrationBuilder()..update(updates))._build();
+      (GuestRegistrationBuilder()..update(updates))._build();
 
-  _$GuestRegistration._({required this.username}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        username, r'GuestRegistration', 'username');
-  }
-
+  _$GuestRegistration._({required this.username}) : super._();
   @override
   GuestRegistration rebuild(void Function(GuestRegistrationBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   GuestRegistrationBuilder toBuilder() =>
-      new GuestRegistrationBuilder()..replace(this);
+      GuestRegistrationBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -72,7 +68,6 @@ class GuestRegistrationBuilder
 
   @override
   void replace(GuestRegistration other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$GuestRegistration;
   }
 
@@ -86,9 +81,10 @@ class GuestRegistrationBuilder
 
   _$GuestRegistration _build() {
     final _$result = _$v ??
-        new _$GuestRegistration._(
-            username: BuiltValueNullFieldError.checkNotNull(
-                username, r'GuestRegistration', 'username'));
+        _$GuestRegistration._(
+          username: BuiltValueNullFieldError.checkNotNull(
+              username, r'GuestRegistration', 'username'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -27,7 +27,7 @@ ObservationsListMineCountryIdErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsListMineCountryIdErrorComponentAttrEnum>
-    _$observationsListMineCountryIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsListMineCountryIdErrorComponentAttrEnumValues = BuiltSet<
         ObservationsListMineCountryIdErrorComponentAttrEnum>(const <ObservationsListMineCountryIdErrorComponentAttrEnum>[
   _$observationsListMineCountryIdErrorComponentAttrEnum_countryId,
   _$observationsListMineCountryIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ ObservationsListMineCountryIdErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsListMineCountryIdErrorComponentCodeEnum>
-    _$observationsListMineCountryIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsListMineCountryIdErrorComponentCodeEnumValues = BuiltSet<
         ObservationsListMineCountryIdErrorComponentCodeEnum>(const <ObservationsListMineCountryIdErrorComponentCodeEnum>[
   _$observationsListMineCountryIdErrorComponentCodeEnum_invalidChoice,
   _$observationsListMineCountryIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -63,10 +63,10 @@ final BuiltSet<ObservationsListMineCountryIdErrorComponentCodeEnum>
 
 Serializer<ObservationsListMineCountryIdErrorComponentAttrEnum>
     _$observationsListMineCountryIdErrorComponentAttrEnumSerializer =
-    new _$ObservationsListMineCountryIdErrorComponentAttrEnumSerializer();
+    _$ObservationsListMineCountryIdErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListMineCountryIdErrorComponentCodeEnum>
     _$observationsListMineCountryIdErrorComponentCodeEnumSerializer =
-    new _$ObservationsListMineCountryIdErrorComponentCodeEnumSerializer();
+    _$ObservationsListMineCountryIdErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListMineCountryIdErrorComponentAttrEnumSerializer
     implements
@@ -148,21 +148,12 @@ class _$ObservationsListMineCountryIdErrorComponent
   factory _$ObservationsListMineCountryIdErrorComponent(
           [void Function(ObservationsListMineCountryIdErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListMineCountryIdErrorComponentBuilder()
-            ..update(updates))
+      (ObservationsListMineCountryIdErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsListMineCountryIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsListMineCountryIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsListMineCountryIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsListMineCountryIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsListMineCountryIdErrorComponent rebuild(
           void Function(ObservationsListMineCountryIdErrorComponentBuilder)
@@ -171,7 +162,7 @@ class _$ObservationsListMineCountryIdErrorComponent
 
   @override
   ObservationsListMineCountryIdErrorComponentBuilder toBuilder() =>
-      new ObservationsListMineCountryIdErrorComponentBuilder()..replace(this);
+      ObservationsListMineCountryIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -240,7 +231,6 @@ class ObservationsListMineCountryIdErrorComponentBuilder
 
   @override
   void replace(ObservationsListMineCountryIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListMineCountryIdErrorComponent;
   }
 
@@ -256,13 +246,14 @@ class ObservationsListMineCountryIdErrorComponentBuilder
 
   _$ObservationsListMineCountryIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListMineCountryIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsListMineCountryIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsListMineCountryIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'ObservationsListMineCountryIdErrorComponent', 'detail'));
+        _$ObservationsListMineCountryIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsListMineCountryIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsListMineCountryIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsListMineCountryIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

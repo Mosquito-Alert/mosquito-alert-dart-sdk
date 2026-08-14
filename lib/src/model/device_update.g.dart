@@ -31,7 +31,7 @@ DeviceUpdateTypeEnum _$deviceUpdateTypeEnumValueOf(String name) {
 }
 
 final BuiltSet<DeviceUpdateTypeEnum> _$deviceUpdateTypeEnumValues =
-    new BuiltSet<DeviceUpdateTypeEnum>(const <DeviceUpdateTypeEnum>[
+    BuiltSet<DeviceUpdateTypeEnum>(const <DeviceUpdateTypeEnum>[
   _$deviceUpdateTypeEnum_ios,
   _$deviceUpdateTypeEnum_android,
   _$deviceUpdateTypeEnum_web,
@@ -39,7 +39,7 @@ final BuiltSet<DeviceUpdateTypeEnum> _$deviceUpdateTypeEnumValues =
 ]);
 
 Serializer<DeviceUpdateTypeEnum> _$deviceUpdateTypeEnumSerializer =
-    new _$DeviceUpdateTypeEnumSerializer();
+    _$DeviceUpdateTypeEnumSerializer();
 
 class _$DeviceUpdateTypeEnumSerializer
     implements PrimitiveSerializer<DeviceUpdateTypeEnum> {
@@ -98,7 +98,7 @@ class _$DeviceUpdate extends DeviceUpdate {
   final DateTime updatedAt;
 
   factory _$DeviceUpdate([void Function(DeviceUpdateBuilder)? updates]) =>
-      (new DeviceUpdateBuilder()..update(updates))._build();
+      (DeviceUpdateBuilder()..update(updates))._build();
 
   _$DeviceUpdate._(
       {required this.deviceId,
@@ -112,26 +112,13 @@ class _$DeviceUpdate extends DeviceUpdate {
       this.lastLogin,
       required this.createdAt,
       required this.updatedAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        deviceId, r'DeviceUpdate', 'deviceId');
-    BuiltValueNullFieldError.checkNotNull(type, r'DeviceUpdate', 'type');
-    BuiltValueNullFieldError.checkNotNull(model, r'DeviceUpdate', 'model');
-    BuiltValueNullFieldError.checkNotNull(os, r'DeviceUpdate', 'os');
-    BuiltValueNullFieldError.checkNotNull(
-        userUuid, r'DeviceUpdate', 'userUuid');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'DeviceUpdate', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, r'DeviceUpdate', 'updatedAt');
-  }
-
+      : super._();
   @override
   DeviceUpdate rebuild(void Function(DeviceUpdateBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  DeviceUpdateBuilder toBuilder() => new DeviceUpdateBuilder()..replace(this);
+  DeviceUpdateBuilder toBuilder() => DeviceUpdateBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -211,12 +198,11 @@ class DeviceUpdateBuilder
   set model(String? model) => _$this._model = model;
 
   DeviceOsBuilder? _os;
-  DeviceOsBuilder get os => _$this._os ??= new DeviceOsBuilder();
+  DeviceOsBuilder get os => _$this._os ??= DeviceOsBuilder();
   set os(DeviceOsBuilder? os) => _$this._os = os;
 
   MobileAppBuilder? _mobileApp;
-  MobileAppBuilder get mobileApp =>
-      _$this._mobileApp ??= new MobileAppBuilder();
+  MobileAppBuilder get mobileApp => _$this._mobileApp ??= MobileAppBuilder();
   set mobileApp(MobileAppBuilder? mobileApp) => _$this._mobileApp = mobileApp;
 
   String? _userUuid;
@@ -260,7 +246,6 @@ class DeviceUpdateBuilder
 
   @override
   void replace(DeviceUpdate other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DeviceUpdate;
   }
 
@@ -276,24 +261,25 @@ class DeviceUpdateBuilder
     _$DeviceUpdate _$result;
     try {
       _$result = _$v ??
-          new _$DeviceUpdate._(
-              deviceId: BuiltValueNullFieldError.checkNotNull(
-                  deviceId, r'DeviceUpdate', 'deviceId'),
-              nameValue: nameValue,
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'DeviceUpdate', 'type'),
-              manufacturer: manufacturer,
-              model: BuiltValueNullFieldError.checkNotNull(
-                  model, r'DeviceUpdate', 'model'),
-              os: os.build(),
-              mobileApp: _mobileApp?.build(),
-              userUuid: BuiltValueNullFieldError.checkNotNull(
-                  userUuid, r'DeviceUpdate', 'userUuid'),
-              lastLogin: lastLogin,
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'DeviceUpdate', 'createdAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'DeviceUpdate', 'updatedAt'));
+          _$DeviceUpdate._(
+            deviceId: BuiltValueNullFieldError.checkNotNull(
+                deviceId, r'DeviceUpdate', 'deviceId'),
+            nameValue: nameValue,
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'DeviceUpdate', 'type'),
+            manufacturer: manufacturer,
+            model: BuiltValueNullFieldError.checkNotNull(
+                model, r'DeviceUpdate', 'model'),
+            os: os.build(),
+            mobileApp: _mobileApp?.build(),
+            userUuid: BuiltValueNullFieldError.checkNotNull(
+                userUuid, r'DeviceUpdate', 'userUuid'),
+            lastLogin: lastLogin,
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'DeviceUpdate', 'createdAt'),
+            updatedAt: BuiltValueNullFieldError.checkNotNull(
+                updatedAt, r'DeviceUpdate', 'updatedAt'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -302,7 +288,7 @@ class DeviceUpdateBuilder
         _$failedField = 'mobileApp';
         _mobileApp?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'DeviceUpdate', _$failedField, e.toString());
       }
       rethrow;

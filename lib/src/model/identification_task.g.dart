@@ -41,8 +41,8 @@ IdentificationTaskStatusEnum _$identificationTaskStatusEnumValueOf(
 }
 
 final BuiltSet<IdentificationTaskStatusEnum>
-    _$identificationTaskStatusEnumValues = new BuiltSet<
-        IdentificationTaskStatusEnum>(const <IdentificationTaskStatusEnum>[
+    _$identificationTaskStatusEnumValues =
+    BuiltSet<IdentificationTaskStatusEnum>(const <IdentificationTaskStatusEnum>[
   _$identificationTaskStatusEnum_open,
   _$identificationTaskStatusEnum_conflict,
   _$identificationTaskStatusEnum_review,
@@ -53,7 +53,7 @@ final BuiltSet<IdentificationTaskStatusEnum>
 
 Serializer<IdentificationTaskStatusEnum>
     _$identificationTaskStatusEnumSerializer =
-    new _$IdentificationTaskStatusEnumSerializer();
+    _$IdentificationTaskStatusEnumSerializer();
 
 class _$IdentificationTaskStatusEnumSerializer
     implements PrimitiveSerializer<IdentificationTaskStatusEnum> {
@@ -120,7 +120,7 @@ class _$IdentificationTask extends IdentificationTask {
 
   factory _$IdentificationTask(
           [void Function(IdentificationTaskBuilder)? updates]) =>
-      (new IdentificationTaskBuilder()..update(updates))._build();
+      (IdentificationTaskBuilder()..update(updates))._build();
 
   _$IdentificationTask._(
       {required this.observation,
@@ -135,27 +135,7 @@ class _$IdentificationTask extends IdentificationTask {
       this.result,
       required this.createdAt,
       required this.updatedAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        observation, r'IdentificationTask', 'observation');
-    BuiltValueNullFieldError.checkNotNull(
-        publicPhoto, r'IdentificationTask', 'publicPhoto');
-    BuiltValueNullFieldError.checkNotNull(
-        assignments, r'IdentificationTask', 'assignments');
-    BuiltValueNullFieldError.checkNotNull(
-        status, r'IdentificationTask', 'status');
-    BuiltValueNullFieldError.checkNotNull(
-        isFlagged, r'IdentificationTask', 'isFlagged');
-    BuiltValueNullFieldError.checkNotNull(
-        isSafe, r'IdentificationTask', 'isSafe');
-    BuiltValueNullFieldError.checkNotNull(
-        numAnnotations, r'IdentificationTask', 'numAnnotations');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'IdentificationTask', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, r'IdentificationTask', 'updatedAt');
-  }
-
+      : super._();
   @override
   IdentificationTask rebuild(
           void Function(IdentificationTaskBuilder) updates) =>
@@ -163,7 +143,7 @@ class _$IdentificationTask extends IdentificationTask {
 
   @override
   IdentificationTaskBuilder toBuilder() =>
-      new IdentificationTaskBuilder()..replace(this);
+      IdentificationTaskBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -227,19 +207,19 @@ class IdentificationTaskBuilder
 
   SimplifiedObservationWithPhotosBuilder? _observation;
   SimplifiedObservationWithPhotosBuilder get observation =>
-      _$this._observation ??= new SimplifiedObservationWithPhotosBuilder();
+      _$this._observation ??= SimplifiedObservationWithPhotosBuilder();
   set observation(SimplifiedObservationWithPhotosBuilder? observation) =>
       _$this._observation = observation;
 
   SimplePhotoBuilder? _publicPhoto;
   SimplePhotoBuilder get publicPhoto =>
-      _$this._publicPhoto ??= new SimplePhotoBuilder();
+      _$this._publicPhoto ??= SimplePhotoBuilder();
   set publicPhoto(SimplePhotoBuilder? publicPhoto) =>
       _$this._publicPhoto = publicPhoto;
 
   ListBuilder<UserAssignment>? _assignments;
   ListBuilder<UserAssignment> get assignments =>
-      _$this._assignments ??= new ListBuilder<UserAssignment>();
+      _$this._assignments ??= ListBuilder<UserAssignment>();
   set assignments(ListBuilder<UserAssignment>? assignments) =>
       _$this._assignments = assignments;
 
@@ -266,13 +246,13 @@ class IdentificationTaskBuilder
 
   IdentificationTaskReviewBuilder? _review;
   IdentificationTaskReviewBuilder get review =>
-      _$this._review ??= new IdentificationTaskReviewBuilder();
+      _$this._review ??= IdentificationTaskReviewBuilder();
   set review(IdentificationTaskReviewBuilder? review) =>
       _$this._review = review;
 
   IdentificationTaskResultBuilder? _result;
   IdentificationTaskResultBuilder get result =>
-      _$this._result ??= new IdentificationTaskResultBuilder();
+      _$this._result ??= IdentificationTaskResultBuilder();
   set result(IdentificationTaskResultBuilder? result) =>
       _$this._result = result;
 
@@ -310,7 +290,6 @@ class IdentificationTaskBuilder
 
   @override
   void replace(IdentificationTask other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationTask;
   }
 
@@ -326,25 +305,26 @@ class IdentificationTaskBuilder
     _$IdentificationTask _$result;
     try {
       _$result = _$v ??
-          new _$IdentificationTask._(
-              observation: observation.build(),
-              publicPhoto: publicPhoto.build(),
-              assignments: assignments.build(),
-              status: BuiltValueNullFieldError.checkNotNull(
-                  status, r'IdentificationTask', 'status'),
-              isFlagged: BuiltValueNullFieldError.checkNotNull(
-                  isFlagged, r'IdentificationTask', 'isFlagged'),
-              isSafe: BuiltValueNullFieldError.checkNotNull(
-                  isSafe, r'IdentificationTask', 'isSafe'),
-              publicNote: publicNote,
-              numAnnotations: BuiltValueNullFieldError.checkNotNull(
-                  numAnnotations, r'IdentificationTask', 'numAnnotations'),
-              review: _review?.build(),
-              result: _result?.build(),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'IdentificationTask', 'createdAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'IdentificationTask', 'updatedAt'));
+          _$IdentificationTask._(
+            observation: observation.build(),
+            publicPhoto: publicPhoto.build(),
+            assignments: assignments.build(),
+            status: BuiltValueNullFieldError.checkNotNull(
+                status, r'IdentificationTask', 'status'),
+            isFlagged: BuiltValueNullFieldError.checkNotNull(
+                isFlagged, r'IdentificationTask', 'isFlagged'),
+            isSafe: BuiltValueNullFieldError.checkNotNull(
+                isSafe, r'IdentificationTask', 'isSafe'),
+            publicNote: publicNote,
+            numAnnotations: BuiltValueNullFieldError.checkNotNull(
+                numAnnotations, r'IdentificationTask', 'numAnnotations'),
+            review: _review?.build(),
+            result: _result?.build(),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'IdentificationTask', 'createdAt'),
+            updatedAt: BuiltValueNullFieldError.checkNotNull(
+                updatedAt, r'IdentificationTask', 'updatedAt'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -360,7 +340,7 @@ class IdentificationTaskBuilder
         _$failedField = 'result';
         _result?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'IdentificationTask', _$failedField, e.toString());
       }
       rethrow;

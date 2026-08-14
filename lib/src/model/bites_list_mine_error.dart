@@ -137,9 +137,7 @@ class _$BitesListMineErrorSerializer implements PrimitiveSerializer<BitesListMin
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    BitesListMineError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    BitesListMineError object) sync* {
   }
 
   @override

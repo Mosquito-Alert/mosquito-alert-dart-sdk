@@ -27,7 +27,7 @@ BitesListMineBoundaryUuidErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesListMineBoundaryUuidErrorComponentAttrEnum>
-    _$bitesListMineBoundaryUuidErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesListMineBoundaryUuidErrorComponentAttrEnumValues = BuiltSet<
         BitesListMineBoundaryUuidErrorComponentAttrEnum>(const <BitesListMineBoundaryUuidErrorComponentAttrEnum>[
   _$bitesListMineBoundaryUuidErrorComponentAttrEnum_boundaryUuid,
   _$bitesListMineBoundaryUuidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ BitesListMineBoundaryUuidErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesListMineBoundaryUuidErrorComponentCodeEnum>
-    _$bitesListMineBoundaryUuidErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesListMineBoundaryUuidErrorComponentCodeEnumValues = BuiltSet<
         BitesListMineBoundaryUuidErrorComponentCodeEnum>(const <BitesListMineBoundaryUuidErrorComponentCodeEnum>[
   _$bitesListMineBoundaryUuidErrorComponentCodeEnum_invalid,
   _$bitesListMineBoundaryUuidErrorComponentCodeEnum_nullCharactersNotAllowed,
@@ -69,10 +69,10 @@ final BuiltSet<BitesListMineBoundaryUuidErrorComponentCodeEnum>
 
 Serializer<BitesListMineBoundaryUuidErrorComponentAttrEnum>
     _$bitesListMineBoundaryUuidErrorComponentAttrEnumSerializer =
-    new _$BitesListMineBoundaryUuidErrorComponentAttrEnumSerializer();
+    _$BitesListMineBoundaryUuidErrorComponentAttrEnumSerializer();
 Serializer<BitesListMineBoundaryUuidErrorComponentCodeEnum>
     _$bitesListMineBoundaryUuidErrorComponentCodeEnumSerializer =
-    new _$BitesListMineBoundaryUuidErrorComponentCodeEnumSerializer();
+    _$BitesListMineBoundaryUuidErrorComponentCodeEnumSerializer();
 
 class _$BitesListMineBoundaryUuidErrorComponentAttrEnumSerializer
     implements
@@ -154,20 +154,12 @@ class _$BitesListMineBoundaryUuidErrorComponent
   factory _$BitesListMineBoundaryUuidErrorComponent(
           [void Function(BitesListMineBoundaryUuidErrorComponentBuilder)?
               updates]) =>
-      (new BitesListMineBoundaryUuidErrorComponentBuilder()..update(updates))
+      (BitesListMineBoundaryUuidErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BitesListMineBoundaryUuidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesListMineBoundaryUuidErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesListMineBoundaryUuidErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesListMineBoundaryUuidErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesListMineBoundaryUuidErrorComponent rebuild(
           void Function(BitesListMineBoundaryUuidErrorComponentBuilder)
@@ -176,7 +168,7 @@ class _$BitesListMineBoundaryUuidErrorComponent
 
   @override
   BitesListMineBoundaryUuidErrorComponentBuilder toBuilder() =>
-      new BitesListMineBoundaryUuidErrorComponentBuilder()..replace(this);
+      BitesListMineBoundaryUuidErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -245,7 +237,6 @@ class BitesListMineBoundaryUuidErrorComponentBuilder
 
   @override
   void replace(BitesListMineBoundaryUuidErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListMineBoundaryUuidErrorComponent;
   }
 
@@ -260,13 +251,14 @@ class BitesListMineBoundaryUuidErrorComponentBuilder
 
   _$BitesListMineBoundaryUuidErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesListMineBoundaryUuidErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesListMineBoundaryUuidErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesListMineBoundaryUuidErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesListMineBoundaryUuidErrorComponent', 'detail'));
+        _$BitesListMineBoundaryUuidErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesListMineBoundaryUuidErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesListMineBoundaryUuidErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesListMineBoundaryUuidErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

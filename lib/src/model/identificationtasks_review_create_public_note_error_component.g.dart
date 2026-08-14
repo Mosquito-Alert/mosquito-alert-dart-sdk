@@ -30,7 +30,7 @@ IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnum
 
 final BuiltSet<IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnum>
     _$identificationtasksReviewCreatePublicNoteErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnum>(const <IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnum>[
   _$identificationtasksReviewCreatePublicNoteErrorComponentAttrEnum_publicNote,
   _$identificationtasksReviewCreatePublicNoteErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -84,7 +84,7 @@ IdentificationtasksReviewCreatePublicNoteErrorComponentCodeEnum
 
 final BuiltSet<IdentificationtasksReviewCreatePublicNoteErrorComponentCodeEnum>
     _$identificationtasksReviewCreatePublicNoteErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreatePublicNoteErrorComponentCodeEnum>(const <IdentificationtasksReviewCreatePublicNoteErrorComponentCodeEnum>[
   _$identificationtasksReviewCreatePublicNoteErrorComponentCodeEnum_blank,
   _$identificationtasksReviewCreatePublicNoteErrorComponentCodeEnum_invalid,
@@ -96,10 +96,10 @@ final BuiltSet<IdentificationtasksReviewCreatePublicNoteErrorComponentCodeEnum>
 
 Serializer<IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnum>
     _$identificationtasksReviewCreatePublicNoteErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnumSerializer();
 Serializer<IdentificationtasksReviewCreatePublicNoteErrorComponentCodeEnum>
     _$identificationtasksReviewCreatePublicNoteErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksReviewCreatePublicNoteErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksReviewCreatePublicNoteErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnumSerializer
     implements
@@ -196,21 +196,13 @@ class _$IdentificationtasksReviewCreatePublicNoteErrorComponent
           [void Function(
                   IdentificationtasksReviewCreatePublicNoteErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksReviewCreatePublicNoteErrorComponentBuilder()
+      (IdentificationtasksReviewCreatePublicNoteErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksReviewCreatePublicNoteErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'IdentificationtasksReviewCreatePublicNoteErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'IdentificationtasksReviewCreatePublicNoteErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'IdentificationtasksReviewCreatePublicNoteErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksReviewCreatePublicNoteErrorComponent rebuild(
           void Function(
@@ -220,7 +212,7 @@ class _$IdentificationtasksReviewCreatePublicNoteErrorComponent
 
   @override
   IdentificationtasksReviewCreatePublicNoteErrorComponentBuilder toBuilder() =>
-      new IdentificationtasksReviewCreatePublicNoteErrorComponentBuilder()
+      IdentificationtasksReviewCreatePublicNoteErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -296,7 +288,6 @@ class IdentificationtasksReviewCreatePublicNoteErrorComponentBuilder
 
   @override
   void replace(IdentificationtasksReviewCreatePublicNoteErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$IdentificationtasksReviewCreatePublicNoteErrorComponent;
   }
 
@@ -313,19 +304,20 @@ class IdentificationtasksReviewCreatePublicNoteErrorComponentBuilder
 
   _$IdentificationtasksReviewCreatePublicNoteErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksReviewCreatePublicNoteErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksReviewCreatePublicNoteErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksReviewCreatePublicNoteErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksReviewCreatePublicNoteErrorComponent',
-                'detail'));
+        _$IdentificationtasksReviewCreatePublicNoteErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksReviewCreatePublicNoteErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksReviewCreatePublicNoteErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksReviewCreatePublicNoteErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

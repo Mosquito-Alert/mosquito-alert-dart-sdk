@@ -31,7 +31,7 @@ PhotosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnum
 final BuiltSet<
         PhotosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnum>(const <PhotosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnum>[
   _$photosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnum_classifierVersion,
   _$photosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ PhotosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnum
 final BuiltSet<
         PhotosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnum>(const <PhotosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnum>[
   _$photosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnum_invalidChoice,
   _$photosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnum_null_,
@@ -84,10 +84,10 @@ final BuiltSet<
 
 Serializer<PhotosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnum>
     _$photosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnum>
     _$photosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionPartialUpdateClassifierVersionErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionPartialUpdateClassifierVersionErrorComponentAttrEnumSerializer
     implements
@@ -184,27 +184,13 @@ class _$PhotosPredictionPartialUpdateClassifierVersionErrorComponent
           [void Function(
                   PhotosPredictionPartialUpdateClassifierVersionErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionPartialUpdateClassifierVersionErrorComponentBuilder()
+      (PhotosPredictionPartialUpdateClassifierVersionErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionPartialUpdateClassifierVersionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'PhotosPredictionPartialUpdateClassifierVersionErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'PhotosPredictionPartialUpdateClassifierVersionErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'PhotosPredictionPartialUpdateClassifierVersionErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionPartialUpdateClassifierVersionErrorComponent rebuild(
           void Function(
@@ -215,7 +201,7 @@ class _$PhotosPredictionPartialUpdateClassifierVersionErrorComponent
   @override
   PhotosPredictionPartialUpdateClassifierVersionErrorComponentBuilder
       toBuilder() =>
-          new PhotosPredictionPartialUpdateClassifierVersionErrorComponentBuilder()
+          PhotosPredictionPartialUpdateClassifierVersionErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -295,7 +281,6 @@ class PhotosPredictionPartialUpdateClassifierVersionErrorComponentBuilder
   @override
   void replace(
       PhotosPredictionPartialUpdateClassifierVersionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v =
         other as _$PhotosPredictionPartialUpdateClassifierVersionErrorComponent;
   }
@@ -314,19 +299,20 @@ class PhotosPredictionPartialUpdateClassifierVersionErrorComponentBuilder
 
   _$PhotosPredictionPartialUpdateClassifierVersionErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionPartialUpdateClassifierVersionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'PhotosPredictionPartialUpdateClassifierVersionErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'PhotosPredictionPartialUpdateClassifierVersionErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionPartialUpdateClassifierVersionErrorComponent',
-                'detail'));
+        _$PhotosPredictionPartialUpdateClassifierVersionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'PhotosPredictionPartialUpdateClassifierVersionErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'PhotosPredictionPartialUpdateClassifierVersionErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'PhotosPredictionPartialUpdateClassifierVersionErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -89,9 +89,7 @@ class _$AuthObtainTokenErrorSerializer implements PrimitiveSerializer<AuthObtain
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    AuthObtainTokenError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    AuthObtainTokenError object) sync* {
   }
 
   @override

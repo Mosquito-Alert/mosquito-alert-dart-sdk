@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnum_scoresPeriodAeAegypti,
   _$identificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent
   @override
   IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -329,7 +315,6 @@ class IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentBu
   void replace(
       IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent;
   }
@@ -349,20 +334,21 @@ class IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponentBu
   _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateScoresAeAegyptiErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

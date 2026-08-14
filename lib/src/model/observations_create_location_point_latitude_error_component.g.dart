@@ -30,7 +30,7 @@ ObservationsCreateLocationPointLatitudeErrorComponentAttrEnum
 
 final BuiltSet<ObservationsCreateLocationPointLatitudeErrorComponentAttrEnum>
     _$observationsCreateLocationPointLatitudeErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateLocationPointLatitudeErrorComponentAttrEnum>(const <ObservationsCreateLocationPointLatitudeErrorComponentAttrEnum>[
   _$observationsCreateLocationPointLatitudeErrorComponentAttrEnum_locationPeriodPointPeriodLatitude,
   _$observationsCreateLocationPointLatitudeErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -66,7 +66,7 @@ ObservationsCreateLocationPointLatitudeErrorComponentCodeEnum
 
 final BuiltSet<ObservationsCreateLocationPointLatitudeErrorComponentCodeEnum>
     _$observationsCreateLocationPointLatitudeErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsCreateLocationPointLatitudeErrorComponentCodeEnum>(const <ObservationsCreateLocationPointLatitudeErrorComponentCodeEnum>[
   _$observationsCreateLocationPointLatitudeErrorComponentCodeEnum_null_,
   _$observationsCreateLocationPointLatitudeErrorComponentCodeEnum_required_,
@@ -75,10 +75,10 @@ final BuiltSet<ObservationsCreateLocationPointLatitudeErrorComponentCodeEnum>
 
 Serializer<ObservationsCreateLocationPointLatitudeErrorComponentAttrEnum>
     _$observationsCreateLocationPointLatitudeErrorComponentAttrEnumSerializer =
-    new _$ObservationsCreateLocationPointLatitudeErrorComponentAttrEnumSerializer();
+    _$ObservationsCreateLocationPointLatitudeErrorComponentAttrEnumSerializer();
 Serializer<ObservationsCreateLocationPointLatitudeErrorComponentCodeEnum>
     _$observationsCreateLocationPointLatitudeErrorComponentCodeEnumSerializer =
-    new _$ObservationsCreateLocationPointLatitudeErrorComponentCodeEnumSerializer();
+    _$ObservationsCreateLocationPointLatitudeErrorComponentCodeEnumSerializer();
 
 class _$ObservationsCreateLocationPointLatitudeErrorComponentAttrEnumSerializer
     implements
@@ -165,21 +165,13 @@ class _$ObservationsCreateLocationPointLatitudeErrorComponent
           [void Function(
                   ObservationsCreateLocationPointLatitudeErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsCreateLocationPointLatitudeErrorComponentBuilder()
+      (ObservationsCreateLocationPointLatitudeErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsCreateLocationPointLatitudeErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsCreateLocationPointLatitudeErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsCreateLocationPointLatitudeErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'ObservationsCreateLocationPointLatitudeErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsCreateLocationPointLatitudeErrorComponent rebuild(
           void Function(
@@ -189,7 +181,7 @@ class _$ObservationsCreateLocationPointLatitudeErrorComponent
 
   @override
   ObservationsCreateLocationPointLatitudeErrorComponentBuilder toBuilder() =>
-      new ObservationsCreateLocationPointLatitudeErrorComponentBuilder()
+      ObservationsCreateLocationPointLatitudeErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -265,7 +257,6 @@ class ObservationsCreateLocationPointLatitudeErrorComponentBuilder
 
   @override
   void replace(ObservationsCreateLocationPointLatitudeErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsCreateLocationPointLatitudeErrorComponent;
   }
 
@@ -282,19 +273,16 @@ class ObservationsCreateLocationPointLatitudeErrorComponentBuilder
 
   _$ObservationsCreateLocationPointLatitudeErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsCreateLocationPointLatitudeErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsCreateLocationPointLatitudeErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsCreateLocationPointLatitudeErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsCreateLocationPointLatitudeErrorComponent',
-                'detail'));
+        _$ObservationsCreateLocationPointLatitudeErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(attr,
+              r'ObservationsCreateLocationPointLatitudeErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(code,
+              r'ObservationsCreateLocationPointLatitudeErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsCreateLocationPointLatitudeErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

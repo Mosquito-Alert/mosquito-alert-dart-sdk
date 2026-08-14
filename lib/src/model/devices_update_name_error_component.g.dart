@@ -26,7 +26,7 @@ DevicesUpdateNameErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesUpdateNameErrorComponentAttrEnum>
-    _$devicesUpdateNameErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesUpdateNameErrorComponentAttrEnumValues = BuiltSet<
         DevicesUpdateNameErrorComponentAttrEnum>(const <DevicesUpdateNameErrorComponentAttrEnum>[
   _$devicesUpdateNameErrorComponentAttrEnum_nameValue,
   _$devicesUpdateNameErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ DevicesUpdateNameErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesUpdateNameErrorComponentCodeEnum>
-    _$devicesUpdateNameErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesUpdateNameErrorComponentCodeEnumValues = BuiltSet<
         DevicesUpdateNameErrorComponentCodeEnum>(const <DevicesUpdateNameErrorComponentCodeEnum>[
   _$devicesUpdateNameErrorComponentCodeEnum_invalid,
   _$devicesUpdateNameErrorComponentCodeEnum_maxLength,
@@ -79,10 +79,10 @@ final BuiltSet<DevicesUpdateNameErrorComponentCodeEnum>
 
 Serializer<DevicesUpdateNameErrorComponentAttrEnum>
     _$devicesUpdateNameErrorComponentAttrEnumSerializer =
-    new _$DevicesUpdateNameErrorComponentAttrEnumSerializer();
+    _$DevicesUpdateNameErrorComponentAttrEnumSerializer();
 Serializer<DevicesUpdateNameErrorComponentCodeEnum>
     _$devicesUpdateNameErrorComponentCodeEnumSerializer =
-    new _$DevicesUpdateNameErrorComponentCodeEnumSerializer();
+    _$DevicesUpdateNameErrorComponentCodeEnumSerializer();
 
 class _$DevicesUpdateNameErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<DevicesUpdateNameErrorComponentAttrEnum> {
@@ -165,19 +165,11 @@ class _$DevicesUpdateNameErrorComponent
 
   factory _$DevicesUpdateNameErrorComponent(
           [void Function(DevicesUpdateNameErrorComponentBuilder)? updates]) =>
-      (new DevicesUpdateNameErrorComponentBuilder()..update(updates))._build();
+      (DevicesUpdateNameErrorComponentBuilder()..update(updates))._build();
 
   _$DevicesUpdateNameErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesUpdateNameErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesUpdateNameErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesUpdateNameErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesUpdateNameErrorComponent rebuild(
           void Function(DevicesUpdateNameErrorComponentBuilder) updates) =>
@@ -185,7 +177,7 @@ class _$DevicesUpdateNameErrorComponent
 
   @override
   DevicesUpdateNameErrorComponentBuilder toBuilder() =>
-      new DevicesUpdateNameErrorComponentBuilder()..replace(this);
+      DevicesUpdateNameErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -253,7 +245,6 @@ class DevicesUpdateNameErrorComponentBuilder
 
   @override
   void replace(DevicesUpdateNameErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesUpdateNameErrorComponent;
   }
 
@@ -267,13 +258,14 @@ class DevicesUpdateNameErrorComponentBuilder
 
   _$DevicesUpdateNameErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesUpdateNameErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesUpdateNameErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesUpdateNameErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesUpdateNameErrorComponent', 'detail'));
+        _$DevicesUpdateNameErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesUpdateNameErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesUpdateNameErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesUpdateNameErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

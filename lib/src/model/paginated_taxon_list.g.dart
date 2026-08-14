@@ -18,17 +18,11 @@ class _$PaginatedTaxonList extends PaginatedTaxonList {
 
   factory _$PaginatedTaxonList(
           [void Function(PaginatedTaxonListBuilder)? updates]) =>
-      (new PaginatedTaxonListBuilder()..update(updates))._build();
+      (PaginatedTaxonListBuilder()..update(updates))._build();
 
   _$PaginatedTaxonList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedTaxonList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedTaxonList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedTaxonList rebuild(
           void Function(PaginatedTaxonListBuilder) updates) =>
@@ -36,7 +30,7 @@ class _$PaginatedTaxonList extends PaginatedTaxonList {
 
   @override
   PaginatedTaxonListBuilder toBuilder() =>
-      new PaginatedTaxonListBuilder()..replace(this);
+      PaginatedTaxonListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -87,8 +81,7 @@ class PaginatedTaxonListBuilder
   set previous(String? previous) => _$this._previous = previous;
 
   ListBuilder<Taxon>? _results;
-  ListBuilder<Taxon> get results =>
-      _$this._results ??= new ListBuilder<Taxon>();
+  ListBuilder<Taxon> get results => _$this._results ??= ListBuilder<Taxon>();
   set results(ListBuilder<Taxon>? results) => _$this._results = results;
 
   PaginatedTaxonListBuilder() {
@@ -109,7 +102,6 @@ class PaginatedTaxonListBuilder
 
   @override
   void replace(PaginatedTaxonList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedTaxonList;
   }
 
@@ -125,19 +117,20 @@ class PaginatedTaxonListBuilder
     _$PaginatedTaxonList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedTaxonList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedTaxonList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedTaxonList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedTaxonList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedTaxonList', _$failedField, e.toString());
       }
       rethrow;

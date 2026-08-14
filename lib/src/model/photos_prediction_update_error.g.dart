@@ -26,7 +26,7 @@ PhotosPredictionUpdateErrorAttrEnum
 }
 
 final BuiltSet<PhotosPredictionUpdateErrorAttrEnum>
-    _$photosPredictionUpdateErrorAttrEnumValues = new BuiltSet<
+    _$photosPredictionUpdateErrorAttrEnumValues = BuiltSet<
         PhotosPredictionUpdateErrorAttrEnum>(const <PhotosPredictionUpdateErrorAttrEnum>[
   _$photosPredictionUpdateErrorAttrEnum_classifierVersion,
   _$photosPredictionUpdateErrorAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ PhotosPredictionUpdateErrorCodeEnum
 }
 
 final BuiltSet<PhotosPredictionUpdateErrorCodeEnum>
-    _$photosPredictionUpdateErrorCodeEnumValues = new BuiltSet<
+    _$photosPredictionUpdateErrorCodeEnumValues = BuiltSet<
         PhotosPredictionUpdateErrorCodeEnum>(const <PhotosPredictionUpdateErrorCodeEnum>[
   _$photosPredictionUpdateErrorCodeEnum_invalidChoice,
   _$photosPredictionUpdateErrorCodeEnum_null_,
@@ -72,10 +72,10 @@ final BuiltSet<PhotosPredictionUpdateErrorCodeEnum>
 
 Serializer<PhotosPredictionUpdateErrorAttrEnum>
     _$photosPredictionUpdateErrorAttrEnumSerializer =
-    new _$PhotosPredictionUpdateErrorAttrEnumSerializer();
+    _$PhotosPredictionUpdateErrorAttrEnumSerializer();
 Serializer<PhotosPredictionUpdateErrorCodeEnum>
     _$photosPredictionUpdateErrorCodeEnumSerializer =
-    new _$PhotosPredictionUpdateErrorCodeEnumSerializer();
+    _$PhotosPredictionUpdateErrorCodeEnumSerializer();
 
 class _$PhotosPredictionUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<PhotosPredictionUpdateErrorAttrEnum> {
@@ -151,13 +151,9 @@ class _$PhotosPredictionUpdateError extends PhotosPredictionUpdateError {
 
   factory _$PhotosPredictionUpdateError(
           [void Function(PhotosPredictionUpdateErrorBuilder)? updates]) =>
-      (new PhotosPredictionUpdateErrorBuilder()..update(updates))._build();
+      (PhotosPredictionUpdateErrorBuilder()..update(updates))._build();
 
-  _$PhotosPredictionUpdateError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'PhotosPredictionUpdateError', 'oneOf');
-  }
-
+  _$PhotosPredictionUpdateError._({required this.oneOf}) : super._();
   @override
   PhotosPredictionUpdateError rebuild(
           void Function(PhotosPredictionUpdateErrorBuilder) updates) =>
@@ -165,7 +161,7 @@ class _$PhotosPredictionUpdateError extends PhotosPredictionUpdateError {
 
   @override
   PhotosPredictionUpdateErrorBuilder toBuilder() =>
-      new PhotosPredictionUpdateErrorBuilder()..replace(this);
+      PhotosPredictionUpdateErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -214,7 +210,6 @@ class PhotosPredictionUpdateErrorBuilder
 
   @override
   void replace(PhotosPredictionUpdateError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateError;
   }
 
@@ -228,9 +223,10 @@ class PhotosPredictionUpdateErrorBuilder
 
   _$PhotosPredictionUpdateError _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdateError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'PhotosPredictionUpdateError', 'oneOf'));
+        _$PhotosPredictionUpdateError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'PhotosPredictionUpdateError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

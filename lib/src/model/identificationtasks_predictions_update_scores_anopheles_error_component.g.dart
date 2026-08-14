@@ -31,7 +31,7 @@ IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnum>(const <IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnum>[
   _$identificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnum_scoresPeriodAnopheles,
   _$identificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnum>(const <IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnum>[
   _$identificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnum>
     _$identificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnum>
     _$identificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent
           [void Function(
                   IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentBuilder()
+      (IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent
   @override
   IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentBuilder()
+          IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -327,7 +313,6 @@ class IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent;
   }
@@ -346,20 +331,20 @@ class IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentBuilder
 
   _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

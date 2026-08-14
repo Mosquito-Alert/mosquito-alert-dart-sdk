@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/messages_list_order_by_error_component.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/messages_list_target_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_list_recipient_uuids_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -20,7 +21,7 @@ part 'messages_list_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class MessagesListError implements Built<MessagesListError, MessagesListErrorBuilder> {
-  /// One Of [MessagesListOrderByErrorComponent], [MessagesListRecipientUuidsErrorComponent]
+  /// One Of [MessagesListOrderByErrorComponent], [MessagesListRecipientUuidsErrorComponent], [MessagesListTargetErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -28,6 +29,7 @@ abstract class MessagesListError implements Built<MessagesListError, MessagesLis
   static const Map<String, Type> discriminatorMapping = {
     r'order_by': MessagesListOrderByErrorComponent,
     r'recipient_uuids': MessagesListRecipientUuidsErrorComponent,
+    r'target': MessagesListTargetErrorComponent,
   };
 
   MessagesListError._();
@@ -49,6 +51,9 @@ extension MessagesListErrorDiscriminatorExt on MessagesListError {
         if (this is MessagesListRecipientUuidsErrorComponent) {
             return r'recipient_uuids';
         }
+        if (this is MessagesListTargetErrorComponent) {
+            return r'target';
+        }
         return null;
     }
 }
@@ -59,6 +64,9 @@ extension MessagesListErrorBuilderDiscriminatorExt on MessagesListErrorBuilder {
         }
         if (this is MessagesListRecipientUuidsErrorComponentBuilder) {
             return r'recipient_uuids';
+        }
+        if (this is MessagesListTargetErrorComponentBuilder) {
+            return r'target';
         }
         return null;
     }
@@ -73,9 +81,7 @@ class _$MessagesListErrorSerializer implements PrimitiveSerializer<MessagesListE
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    MessagesListError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    MessagesListError object) sync* {
   }
 
   @override
@@ -100,7 +106,7 @@ class _$MessagesListErrorSerializer implements PrimitiveSerializer<MessagesListE
     final discIndex = serializedList.indexOf(MessagesListError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [MessagesListOrderByErrorComponent, MessagesListRecipientUuidsErrorComponent, ];
+    final oneOfTypes = [MessagesListOrderByErrorComponent, MessagesListRecipientUuidsErrorComponent, MessagesListTargetErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -118,6 +124,13 @@ class _$MessagesListErrorSerializer implements PrimitiveSerializer<MessagesListE
         ) as MessagesListRecipientUuidsErrorComponent;
         oneOfType = MessagesListRecipientUuidsErrorComponent;
         break;
+      case r'target':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(MessagesListTargetErrorComponent),
+        ) as MessagesListTargetErrorComponent;
+        oneOfType = MessagesListTargetErrorComponent;
+        break;
       default:
         throw UnsupportedError("Couldn't deserialize oneOf for the discriminator value: ${discValue}");
     }
@@ -128,8 +141,8 @@ class _$MessagesListErrorSerializer implements PrimitiveSerializer<MessagesListE
 
 class MessagesListErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'recipient_uuids')
-  static const MessagesListErrorAttrEnum recipientUuids = _$messagesListErrorAttrEnum_recipientUuids;
+  @BuiltValueEnumConst(wireName: r'target')
+  static const MessagesListErrorAttrEnum target = _$messagesListErrorAttrEnum_target;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MessagesListErrorAttrEnum unknownDefaultOpenApi = _$messagesListErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -145,10 +158,6 @@ class MessagesListErrorCodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'invalid_choice')
   static const MessagesListErrorCodeEnum invalidChoice = _$messagesListErrorCodeEnum_invalidChoice;
-  @BuiltValueEnumConst(wireName: r'invalid_list')
-  static const MessagesListErrorCodeEnum invalidList = _$messagesListErrorCodeEnum_invalidList;
-  @BuiltValueEnumConst(wireName: r'invalid_pk_value')
-  static const MessagesListErrorCodeEnum invalidPkValue = _$messagesListErrorCodeEnum_invalidPkValue;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MessagesListErrorCodeEnum unknownDefaultOpenApi = _$messagesListErrorCodeEnum_unknownDefaultOpenApi;
 

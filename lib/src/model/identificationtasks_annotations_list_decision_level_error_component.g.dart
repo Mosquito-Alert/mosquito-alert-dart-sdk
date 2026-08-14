@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnum_decisionLevel,
   _$identificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -68,7 +68,7 @@ IdentificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnum_invalidChoice,
   _$identificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnum_invalidList,
@@ -78,11 +78,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsListDecisionLevelErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListDecisionLevelErrorComponentAttrEnumSerializer
     implements
@@ -179,27 +179,13 @@ class _$IdentificationtasksAnnotationsListDecisionLevelErrorComponent
           [void Function(
                   IdentificationtasksAnnotationsListDecisionLevelErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListDecisionLevelErrorComponentBuilder()
+      (IdentificationtasksAnnotationsListDecisionLevelErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListDecisionLevelErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsListDecisionLevelErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsListDecisionLevelErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsListDecisionLevelErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListDecisionLevelErrorComponent rebuild(
           void Function(
@@ -210,7 +196,7 @@ class _$IdentificationtasksAnnotationsListDecisionLevelErrorComponent
   @override
   IdentificationtasksAnnotationsListDecisionLevelErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsListDecisionLevelErrorComponentBuilder()
+          IdentificationtasksAnnotationsListDecisionLevelErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -290,7 +276,6 @@ class IdentificationtasksAnnotationsListDecisionLevelErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksAnnotationsListDecisionLevelErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsListDecisionLevelErrorComponent;
   }
@@ -309,19 +294,20 @@ class IdentificationtasksAnnotationsListDecisionLevelErrorComponentBuilder
 
   _$IdentificationtasksAnnotationsListDecisionLevelErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsListDecisionLevelErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsListDecisionLevelErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsListDecisionLevelErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsListDecisionLevelErrorComponent',
-                'detail'));
+        _$IdentificationtasksAnnotationsListDecisionLevelErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsListDecisionLevelErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsListDecisionLevelErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsListDecisionLevelErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

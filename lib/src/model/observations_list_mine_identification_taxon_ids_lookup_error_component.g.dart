@@ -31,7 +31,7 @@ ObservationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnum
 final BuiltSet<
         ObservationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnum>
     _$observationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnum>(const <ObservationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnum>[
   _$observationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnum_identificationTaxonIdsLookup,
   _$observationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ ObservationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnum
 final BuiltSet<
         ObservationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnum>
     _$observationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnum>(const <ObservationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnum>[
   _$observationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnum_invalidChoice,
   _$observationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         ObservationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnum>
     _$observationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnumSerializer =
-    new _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnumSerializer();
+    _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnumSerializer();
 Serializer<
         ObservationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnum>
     _$observationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnumSerializer =
-    new _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnumSerializer();
+    _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponent
           [void Function(
                   ObservationsListMineIdentificationTaxonIdsLookupErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListMineIdentificationTaxonIdsLookupErrorComponentBuilder()
+      (ObservationsListMineIdentificationTaxonIdsLookupErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'ObservationsListMineIdentificationTaxonIdsLookupErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'ObservationsListMineIdentificationTaxonIdsLookupErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'ObservationsListMineIdentificationTaxonIdsLookupErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   ObservationsListMineIdentificationTaxonIdsLookupErrorComponent rebuild(
           void Function(
@@ -199,7 +185,7 @@ class _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponent
   @override
   ObservationsListMineIdentificationTaxonIdsLookupErrorComponentBuilder
       toBuilder() =>
-          new ObservationsListMineIdentificationTaxonIdsLookupErrorComponentBuilder()
+          ObservationsListMineIdentificationTaxonIdsLookupErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -279,7 +265,6 @@ class ObservationsListMineIdentificationTaxonIdsLookupErrorComponentBuilder
   @override
   void replace(
       ObservationsListMineIdentificationTaxonIdsLookupErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponent;
   }
@@ -298,19 +283,20 @@ class ObservationsListMineIdentificationTaxonIdsLookupErrorComponentBuilder
 
   _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsListMineIdentificationTaxonIdsLookupErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsListMineIdentificationTaxonIdsLookupErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsListMineIdentificationTaxonIdsLookupErrorComponent',
-                'detail'));
+        _$ObservationsListMineIdentificationTaxonIdsLookupErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'ObservationsListMineIdentificationTaxonIdsLookupErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'ObservationsListMineIdentificationTaxonIdsLookupErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsListMineIdentificationTaxonIdsLookupErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

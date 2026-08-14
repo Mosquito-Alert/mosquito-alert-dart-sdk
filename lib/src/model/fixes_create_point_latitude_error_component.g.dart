@@ -28,7 +28,7 @@ FixesCreatePointLatitudeErrorComponentAttrEnum
 }
 
 final BuiltSet<FixesCreatePointLatitudeErrorComponentAttrEnum>
-    _$fixesCreatePointLatitudeErrorComponentAttrEnumValues = new BuiltSet<
+    _$fixesCreatePointLatitudeErrorComponentAttrEnumValues = BuiltSet<
         FixesCreatePointLatitudeErrorComponentAttrEnum>(const <FixesCreatePointLatitudeErrorComponentAttrEnum>[
   _$fixesCreatePointLatitudeErrorComponentAttrEnum_pointPeriodLatitude,
   _$fixesCreatePointLatitudeErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -70,7 +70,7 @@ FixesCreatePointLatitudeErrorComponentCodeEnum
 }
 
 final BuiltSet<FixesCreatePointLatitudeErrorComponentCodeEnum>
-    _$fixesCreatePointLatitudeErrorComponentCodeEnumValues = new BuiltSet<
+    _$fixesCreatePointLatitudeErrorComponentCodeEnumValues = BuiltSet<
         FixesCreatePointLatitudeErrorComponentCodeEnum>(const <FixesCreatePointLatitudeErrorComponentCodeEnum>[
   _$fixesCreatePointLatitudeErrorComponentCodeEnum_invalid,
   _$fixesCreatePointLatitudeErrorComponentCodeEnum_maxStringLength,
@@ -81,10 +81,10 @@ final BuiltSet<FixesCreatePointLatitudeErrorComponentCodeEnum>
 
 Serializer<FixesCreatePointLatitudeErrorComponentAttrEnum>
     _$fixesCreatePointLatitudeErrorComponentAttrEnumSerializer =
-    new _$FixesCreatePointLatitudeErrorComponentAttrEnumSerializer();
+    _$FixesCreatePointLatitudeErrorComponentAttrEnumSerializer();
 Serializer<FixesCreatePointLatitudeErrorComponentCodeEnum>
     _$fixesCreatePointLatitudeErrorComponentCodeEnumSerializer =
-    new _$FixesCreatePointLatitudeErrorComponentCodeEnumSerializer();
+    _$FixesCreatePointLatitudeErrorComponentCodeEnumSerializer();
 
 class _$FixesCreatePointLatitudeErrorComponentAttrEnumSerializer
     implements
@@ -170,20 +170,12 @@ class _$FixesCreatePointLatitudeErrorComponent
   factory _$FixesCreatePointLatitudeErrorComponent(
           [void Function(FixesCreatePointLatitudeErrorComponentBuilder)?
               updates]) =>
-      (new FixesCreatePointLatitudeErrorComponentBuilder()..update(updates))
+      (FixesCreatePointLatitudeErrorComponentBuilder()..update(updates))
           ._build();
 
   _$FixesCreatePointLatitudeErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'FixesCreatePointLatitudeErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'FixesCreatePointLatitudeErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'FixesCreatePointLatitudeErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   FixesCreatePointLatitudeErrorComponent rebuild(
           void Function(FixesCreatePointLatitudeErrorComponentBuilder)
@@ -192,7 +184,7 @@ class _$FixesCreatePointLatitudeErrorComponent
 
   @override
   FixesCreatePointLatitudeErrorComponentBuilder toBuilder() =>
-      new FixesCreatePointLatitudeErrorComponentBuilder()..replace(this);
+      FixesCreatePointLatitudeErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -261,7 +253,6 @@ class FixesCreatePointLatitudeErrorComponentBuilder
 
   @override
   void replace(FixesCreatePointLatitudeErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$FixesCreatePointLatitudeErrorComponent;
   }
 
@@ -276,13 +267,14 @@ class FixesCreatePointLatitudeErrorComponentBuilder
 
   _$FixesCreatePointLatitudeErrorComponent _build() {
     final _$result = _$v ??
-        new _$FixesCreatePointLatitudeErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'FixesCreatePointLatitudeErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'FixesCreatePointLatitudeErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'FixesCreatePointLatitudeErrorComponent', 'detail'));
+        _$FixesCreatePointLatitudeErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'FixesCreatePointLatitudeErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'FixesCreatePointLatitudeErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'FixesCreatePointLatitudeErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

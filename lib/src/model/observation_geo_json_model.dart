@@ -99,22 +99,25 @@ class _$ObservationGeoJsonModelSerializer implements PrimitiveSerializer<Observa
         case r'type':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ObservationGeoJsonModelTypeEnum),
-          ) as ObservationGeoJsonModelTypeEnum;
+            specifiedType: const FullType.nullable(ObservationGeoJsonModelTypeEnum),
+          ) as ObservationGeoJsonModelTypeEnum?;
+          if (valueDes == null) continue;
           result.type = valueDes;
           break;
         case r'geometry':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BiteGeoJsonModelGeometry),
-          ) as BiteGeoJsonModelGeometry;
+            specifiedType: const FullType.nullable(BiteGeoJsonModelGeometry),
+          ) as BiteGeoJsonModelGeometry?;
+          if (valueDes == null) continue;
           result.geometry.replace(valueDes);
           break;
         case r'properties':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ObservationGeoJsonModelProperties),
-          ) as ObservationGeoJsonModelProperties;
+            specifiedType: const FullType.nullable(ObservationGeoJsonModelProperties),
+          ) as ObservationGeoJsonModelProperties?;
+          if (valueDes == null) continue;
           result.properties.replace(valueDes);
           break;
         default:

@@ -30,7 +30,7 @@ ObservationsGeoListIdentificationTaxonIdsErrorComponentAttrEnum
 
 final BuiltSet<ObservationsGeoListIdentificationTaxonIdsErrorComponentAttrEnum>
     _$observationsGeoListIdentificationTaxonIdsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsGeoListIdentificationTaxonIdsErrorComponentAttrEnum>(const <ObservationsGeoListIdentificationTaxonIdsErrorComponentAttrEnum>[
   _$observationsGeoListIdentificationTaxonIdsErrorComponentAttrEnum_identificationTaxonIds,
   _$observationsGeoListIdentificationTaxonIdsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ ObservationsGeoListIdentificationTaxonIdsErrorComponentCodeEnum
 
 final BuiltSet<ObservationsGeoListIdentificationTaxonIdsErrorComponentCodeEnum>
     _$observationsGeoListIdentificationTaxonIdsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         ObservationsGeoListIdentificationTaxonIdsErrorComponentCodeEnum>(const <ObservationsGeoListIdentificationTaxonIdsErrorComponentCodeEnum>[
   _$observationsGeoListIdentificationTaxonIdsErrorComponentCodeEnum_invalidChoice,
   _$observationsGeoListIdentificationTaxonIdsErrorComponentCodeEnum_invalidList,
@@ -82,10 +82,10 @@ final BuiltSet<ObservationsGeoListIdentificationTaxonIdsErrorComponentCodeEnum>
 
 Serializer<ObservationsGeoListIdentificationTaxonIdsErrorComponentAttrEnum>
     _$observationsGeoListIdentificationTaxonIdsErrorComponentAttrEnumSerializer =
-    new _$ObservationsGeoListIdentificationTaxonIdsErrorComponentAttrEnumSerializer();
+    _$ObservationsGeoListIdentificationTaxonIdsErrorComponentAttrEnumSerializer();
 Serializer<ObservationsGeoListIdentificationTaxonIdsErrorComponentCodeEnum>
     _$observationsGeoListIdentificationTaxonIdsErrorComponentCodeEnumSerializer =
-    new _$ObservationsGeoListIdentificationTaxonIdsErrorComponentCodeEnumSerializer();
+    _$ObservationsGeoListIdentificationTaxonIdsErrorComponentCodeEnumSerializer();
 
 class _$ObservationsGeoListIdentificationTaxonIdsErrorComponentAttrEnumSerializer
     implements
@@ -178,21 +178,13 @@ class _$ObservationsGeoListIdentificationTaxonIdsErrorComponent
           [void Function(
                   ObservationsGeoListIdentificationTaxonIdsErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsGeoListIdentificationTaxonIdsErrorComponentBuilder()
+      (ObservationsGeoListIdentificationTaxonIdsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$ObservationsGeoListIdentificationTaxonIdsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'ObservationsGeoListIdentificationTaxonIdsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'ObservationsGeoListIdentificationTaxonIdsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'ObservationsGeoListIdentificationTaxonIdsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsGeoListIdentificationTaxonIdsErrorComponent rebuild(
           void Function(
@@ -202,7 +194,7 @@ class _$ObservationsGeoListIdentificationTaxonIdsErrorComponent
 
   @override
   ObservationsGeoListIdentificationTaxonIdsErrorComponentBuilder toBuilder() =>
-      new ObservationsGeoListIdentificationTaxonIdsErrorComponentBuilder()
+      ObservationsGeoListIdentificationTaxonIdsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -278,7 +270,6 @@ class ObservationsGeoListIdentificationTaxonIdsErrorComponentBuilder
 
   @override
   void replace(ObservationsGeoListIdentificationTaxonIdsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsGeoListIdentificationTaxonIdsErrorComponent;
   }
 
@@ -295,19 +286,20 @@ class ObservationsGeoListIdentificationTaxonIdsErrorComponentBuilder
 
   _$ObservationsGeoListIdentificationTaxonIdsErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsGeoListIdentificationTaxonIdsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'ObservationsGeoListIdentificationTaxonIdsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'ObservationsGeoListIdentificationTaxonIdsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'ObservationsGeoListIdentificationTaxonIdsErrorComponent',
-                'detail'));
+        _$ObservationsGeoListIdentificationTaxonIdsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'ObservationsGeoListIdentificationTaxonIdsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'ObservationsGeoListIdentificationTaxonIdsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'ObservationsGeoListIdentificationTaxonIdsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

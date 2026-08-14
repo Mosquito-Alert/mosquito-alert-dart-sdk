@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnu
 final BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnum_characteristicsPeriodIsGravid,
   _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnu
 final BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponen
           [void Function(
                   IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent rebuild(
           void Function(
@@ -199,7 +185,7 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponen
   @override
   IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -284,7 +270,6 @@ class IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentB
   void replace(
       IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent;
   }
@@ -304,20 +289,21 @@ class IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentB
   _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent
+        _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrE
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum_scoresPeriodAeAlbopictus,
   _$identificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeE
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorCompon
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent
       rebuild(
@@ -245,7 +231,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorCompon
   @override
   IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -330,7 +316,6 @@ class IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponen
   void replace(
       IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent;
   }
@@ -350,20 +335,21 @@ class IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponen
   _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateScoresAeAlbopictusErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

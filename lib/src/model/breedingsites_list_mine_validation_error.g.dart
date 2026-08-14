@@ -27,7 +27,7 @@ BreedingsitesListMineValidationErrorTypeEnum
 }
 
 final BuiltSet<BreedingsitesListMineValidationErrorTypeEnum>
-    _$breedingsitesListMineValidationErrorTypeEnumValues = new BuiltSet<
+    _$breedingsitesListMineValidationErrorTypeEnumValues = BuiltSet<
         BreedingsitesListMineValidationErrorTypeEnum>(const <BreedingsitesListMineValidationErrorTypeEnum>[
   _$breedingsitesListMineValidationErrorTypeEnum_validationError,
   _$breedingsitesListMineValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -35,7 +35,7 @@ final BuiltSet<BreedingsitesListMineValidationErrorTypeEnum>
 
 Serializer<BreedingsitesListMineValidationErrorTypeEnum>
     _$breedingsitesListMineValidationErrorTypeEnumSerializer =
-    new _$BreedingsitesListMineValidationErrorTypeEnumSerializer();
+    _$BreedingsitesListMineValidationErrorTypeEnumSerializer();
 
 class _$BreedingsitesListMineValidationErrorTypeEnumSerializer
     implements
@@ -80,18 +80,11 @@ class _$BreedingsitesListMineValidationError
   factory _$BreedingsitesListMineValidationError(
           [void Function(BreedingsitesListMineValidationErrorBuilder)?
               updates]) =>
-      (new BreedingsitesListMineValidationErrorBuilder()..update(updates))
-          ._build();
+      (BreedingsitesListMineValidationErrorBuilder()..update(updates))._build();
 
   _$BreedingsitesListMineValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'BreedingsitesListMineValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'BreedingsitesListMineValidationError', 'errors');
-  }
-
+      : super._();
   @override
   BreedingsitesListMineValidationError rebuild(
           void Function(BreedingsitesListMineValidationErrorBuilder) updates) =>
@@ -99,7 +92,7 @@ class _$BreedingsitesListMineValidationError
 
   @override
   BreedingsitesListMineValidationErrorBuilder toBuilder() =>
-      new BreedingsitesListMineValidationErrorBuilder()..replace(this);
+      BreedingsitesListMineValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -140,7 +133,7 @@ class BreedingsitesListMineValidationErrorBuilder
 
   ListBuilder<BreedingsitesListMineError>? _errors;
   ListBuilder<BreedingsitesListMineError> get errors =>
-      _$this._errors ??= new ListBuilder<BreedingsitesListMineError>();
+      _$this._errors ??= ListBuilder<BreedingsitesListMineError>();
   set errors(ListBuilder<BreedingsitesListMineError>? errors) =>
       _$this._errors = errors;
 
@@ -160,7 +153,6 @@ class BreedingsitesListMineValidationErrorBuilder
 
   @override
   void replace(BreedingsitesListMineValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesListMineValidationError;
   }
 
@@ -177,17 +169,18 @@ class BreedingsitesListMineValidationErrorBuilder
     _$BreedingsitesListMineValidationError _$result;
     try {
       _$result = _$v ??
-          new _$BreedingsitesListMineValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'BreedingsitesListMineValidationError', 'type'),
-              errors: errors.build());
+          _$BreedingsitesListMineValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'BreedingsitesListMineValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BreedingsitesListMineValidationError',
             _$failedField,
             e.toString());

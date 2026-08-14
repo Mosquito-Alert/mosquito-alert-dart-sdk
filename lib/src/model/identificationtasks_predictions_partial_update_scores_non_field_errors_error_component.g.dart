@@ -31,7 +31,7 @@ IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAtt
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnum_scoresPeriodNonFieldErrors,
   _$identificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCod
 final BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnum>(const <IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnum>[
   _$identificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComp
           [void Function(
                   IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentBuilder()
+      (IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent
       rebuild(
@@ -218,7 +204,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComp
   @override
   IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentBuilder()
+          IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -303,7 +289,6 @@ class IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorCompon
   void replace(
       IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent;
   }
@@ -323,20 +308,21 @@ class IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorCompon
   _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent
+        _$IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsPartialUpdateScoresNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -13,16 +13,21 @@ part 'create_user_message_request.g.dart';
 /// CreateUserMessageRequest
 ///
 /// Properties:
-/// * [userUuids] 
 /// * [content] - The content of the message
+/// * [target] 
+/// * [userUuids] 
 @BuiltValue()
 abstract class CreateUserMessageRequest implements Built<CreateUserMessageRequest, CreateUserMessageRequestBuilder> {
-  @BuiltValueField(wireName: r'user_uuids')
-  BuiltList<String> get userUuids;
-
   /// The content of the message
   @BuiltValueField(wireName: r'content')
   MessageContentRequest get content;
+
+  @BuiltValueField(wireName: r'target')
+  CreateUserMessageRequestTargetEnum get target;
+  // enum targetEnum {  users,  };
+
+  @BuiltValueField(wireName: r'user_uuids')
+  BuiltList<String> get userUuids;
 
   CreateUserMessageRequest._();
 
@@ -47,15 +52,20 @@ class _$CreateUserMessageRequestSerializer implements PrimitiveSerializer<Create
     CreateUserMessageRequest object, {
     FullType specifiedType = FullType.unspecified,
   }) sync* {
-    yield r'user_uuids';
-    yield serializers.serialize(
-      object.userUuids,
-      specifiedType: const FullType(BuiltList, [FullType(String)]),
-    );
     yield r'content';
     yield serializers.serialize(
       object.content,
       specifiedType: const FullType(MessageContentRequest),
+    );
+    yield r'target';
+    yield serializers.serialize(
+      object.target,
+      specifiedType: const FullType(CreateUserMessageRequestTargetEnum),
+    );
+    yield r'user_uuids';
+    yield serializers.serialize(
+      object.userUuids,
+      specifiedType: const FullType(BuiltList, [FullType(String)]),
     );
   }
 
@@ -80,19 +90,26 @@ class _$CreateUserMessageRequestSerializer implements PrimitiveSerializer<Create
       final key = serializedList[i] as String;
       final value = serializedList[i + 1];
       switch (key) {
-        case r'user_uuids':
-          final valueDes = serializers.deserialize(
-            value,
-            specifiedType: const FullType(BuiltList, [FullType(String)]),
-          ) as BuiltList<String>;
-          result.userUuids.replace(valueDes);
-          break;
         case r'content':
           final valueDes = serializers.deserialize(
             value,
             specifiedType: const FullType(MessageContentRequest),
           ) as MessageContentRequest;
           result.content.replace(valueDes);
+          break;
+        case r'target':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(CreateUserMessageRequestTargetEnum),
+          ) as CreateUserMessageRequestTargetEnum;
+          result.target = valueDes;
+          break;
+        case r'user_uuids':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>;
+          result.userUuids.replace(valueDes);
           break;
         default:
           unhandled.add(key);
@@ -121,5 +138,20 @@ class _$CreateUserMessageRequestSerializer implements PrimitiveSerializer<Create
     );
     return result.build();
   }
+}
+
+class CreateUserMessageRequestTargetEnum extends EnumClass {
+
+  @BuiltValueEnumConst(wireName: r'users')
+  static const CreateUserMessageRequestTargetEnum users = _$createUserMessageRequestTargetEnum_users;
+  @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
+  static const CreateUserMessageRequestTargetEnum unknownDefaultOpenApi = _$createUserMessageRequestTargetEnum_unknownDefaultOpenApi;
+
+  static Serializer<CreateUserMessageRequestTargetEnum> get serializer => _$createUserMessageRequestTargetEnumSerializer;
+
+  const CreateUserMessageRequestTargetEnum._(String name): super(name);
+
+  static BuiltSet<CreateUserMessageRequestTargetEnum> get values => _$createUserMessageRequestTargetEnumValues;
+  static CreateUserMessageRequestTargetEnum valueOf(String name) => _$createUserMessageRequestTargetEnumValueOf(name);
 }
 

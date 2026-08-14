@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnum_scoresPeriodCuliseta,
   _$identificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent
   @override
   IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentBuilder()
+          IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -327,7 +313,6 @@ class IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentBuilder
   @override
   void replace(
       IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent;
   }
@@ -346,20 +331,20 @@ class IdentificationtasksPredictionsCreateScoresCulisetaErrorComponentBuilder
 
   _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreateScoresCulisetaErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

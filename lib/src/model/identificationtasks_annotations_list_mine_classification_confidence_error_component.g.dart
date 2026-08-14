@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttr
 final BuiltSet<
         IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnum_classificationConfidence,
   _$identificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCode
 final BuiltSet<
         IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnum_invalid,
   _$identificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnum>
     _$identificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnum>
     _$identificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorCompo
           [void Function(
                   IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentBuilder()
+      (IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent
       rebuild(
@@ -200,7 +186,7 @@ class _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorCompo
   @override
   IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentBuilder()
+          IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -285,7 +271,6 @@ class IdentificationtasksAnnotationsListMineClassificationConfidenceErrorCompone
   void replace(
       IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent;
   }
@@ -305,20 +290,21 @@ class IdentificationtasksAnnotationsListMineClassificationConfidenceErrorCompone
   _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent
+        _$IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsListMineClassificationConfidenceErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

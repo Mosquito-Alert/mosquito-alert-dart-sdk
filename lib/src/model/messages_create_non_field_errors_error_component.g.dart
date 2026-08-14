@@ -28,7 +28,7 @@ MessagesCreateNonFieldErrorsErrorComponentAttrEnum
 }
 
 final BuiltSet<MessagesCreateNonFieldErrorsErrorComponentAttrEnum>
-    _$messagesCreateNonFieldErrorsErrorComponentAttrEnumValues = new BuiltSet<
+    _$messagesCreateNonFieldErrorsErrorComponentAttrEnumValues = BuiltSet<
         MessagesCreateNonFieldErrorsErrorComponentAttrEnum>(const <MessagesCreateNonFieldErrorsErrorComponentAttrEnum>[
   _$messagesCreateNonFieldErrorsErrorComponentAttrEnum_nonFieldErrors,
   _$messagesCreateNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -60,7 +60,7 @@ MessagesCreateNonFieldErrorsErrorComponentCodeEnum
 }
 
 final BuiltSet<MessagesCreateNonFieldErrorsErrorComponentCodeEnum>
-    _$messagesCreateNonFieldErrorsErrorComponentCodeEnumValues = new BuiltSet<
+    _$messagesCreateNonFieldErrorsErrorComponentCodeEnumValues = BuiltSet<
         MessagesCreateNonFieldErrorsErrorComponentCodeEnum>(const <MessagesCreateNonFieldErrorsErrorComponentCodeEnum>[
   _$messagesCreateNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$messagesCreateNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -69,10 +69,10 @@ final BuiltSet<MessagesCreateNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<MessagesCreateNonFieldErrorsErrorComponentAttrEnum>
     _$messagesCreateNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$MessagesCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$MessagesCreateNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<MessagesCreateNonFieldErrorsErrorComponentCodeEnum>
     _$messagesCreateNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$MessagesCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$MessagesCreateNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$MessagesCreateNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -156,20 +156,12 @@ class _$MessagesCreateNonFieldErrorsErrorComponent
   factory _$MessagesCreateNonFieldErrorsErrorComponent(
           [void Function(MessagesCreateNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new MessagesCreateNonFieldErrorsErrorComponentBuilder()..update(updates))
+      (MessagesCreateNonFieldErrorsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$MessagesCreateNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'MessagesCreateNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'MessagesCreateNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'MessagesCreateNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   MessagesCreateNonFieldErrorsErrorComponent rebuild(
           void Function(MessagesCreateNonFieldErrorsErrorComponentBuilder)
@@ -178,7 +170,7 @@ class _$MessagesCreateNonFieldErrorsErrorComponent
 
   @override
   MessagesCreateNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new MessagesCreateNonFieldErrorsErrorComponentBuilder()..replace(this);
+      MessagesCreateNonFieldErrorsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -247,7 +239,6 @@ class MessagesCreateNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(MessagesCreateNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesCreateNonFieldErrorsErrorComponent;
   }
 
@@ -263,13 +254,14 @@ class MessagesCreateNonFieldErrorsErrorComponentBuilder
 
   _$MessagesCreateNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$MessagesCreateNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'MessagesCreateNonFieldErrorsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'MessagesCreateNonFieldErrorsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'MessagesCreateNonFieldErrorsErrorComponent', 'detail'));
+        _$MessagesCreateNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'MessagesCreateNonFieldErrorsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'MessagesCreateNonFieldErrorsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'MessagesCreateNonFieldErrorsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

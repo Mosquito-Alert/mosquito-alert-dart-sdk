@@ -29,8 +29,7 @@ PhotosPredictionUpdateScoresCulexErrorComponentAttrEnum
 }
 
 final BuiltSet<PhotosPredictionUpdateScoresCulexErrorComponentAttrEnum>
-    _$photosPredictionUpdateScoresCulexErrorComponentAttrEnumValues =
-    new BuiltSet<
+    _$photosPredictionUpdateScoresCulexErrorComponentAttrEnumValues = BuiltSet<
         PhotosPredictionUpdateScoresCulexErrorComponentAttrEnum>(const <PhotosPredictionUpdateScoresCulexErrorComponentAttrEnum>[
   _$photosPredictionUpdateScoresCulexErrorComponentAttrEnum_scoresPeriodCulex,
   _$photosPredictionUpdateScoresCulexErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -85,8 +84,7 @@ PhotosPredictionUpdateScoresCulexErrorComponentCodeEnum
 }
 
 final BuiltSet<PhotosPredictionUpdateScoresCulexErrorComponentCodeEnum>
-    _$photosPredictionUpdateScoresCulexErrorComponentCodeEnumValues =
-    new BuiltSet<
+    _$photosPredictionUpdateScoresCulexErrorComponentCodeEnumValues = BuiltSet<
         PhotosPredictionUpdateScoresCulexErrorComponentCodeEnum>(const <PhotosPredictionUpdateScoresCulexErrorComponentCodeEnum>[
   _$photosPredictionUpdateScoresCulexErrorComponentCodeEnum_invalid,
   _$photosPredictionUpdateScoresCulexErrorComponentCodeEnum_maxStringLength,
@@ -99,10 +97,10 @@ final BuiltSet<PhotosPredictionUpdateScoresCulexErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionUpdateScoresCulexErrorComponentAttrEnum>
     _$photosPredictionUpdateScoresCulexErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionUpdateScoresCulexErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionUpdateScoresCulexErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionUpdateScoresCulexErrorComponentCodeEnum>
     _$photosPredictionUpdateScoresCulexErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionUpdateScoresCulexErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionUpdateScoresCulexErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionUpdateScoresCulexErrorComponentAttrEnumSerializer
     implements
@@ -197,21 +195,13 @@ class _$PhotosPredictionUpdateScoresCulexErrorComponent
           [void Function(
                   PhotosPredictionUpdateScoresCulexErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdateScoresCulexErrorComponentBuilder()
+      (PhotosPredictionUpdateScoresCulexErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionUpdateScoresCulexErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'PhotosPredictionUpdateScoresCulexErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'PhotosPredictionUpdateScoresCulexErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'PhotosPredictionUpdateScoresCulexErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdateScoresCulexErrorComponent rebuild(
           void Function(PhotosPredictionUpdateScoresCulexErrorComponentBuilder)
@@ -220,8 +210,7 @@ class _$PhotosPredictionUpdateScoresCulexErrorComponent
 
   @override
   PhotosPredictionUpdateScoresCulexErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionUpdateScoresCulexErrorComponentBuilder()
-        ..replace(this);
+      PhotosPredictionUpdateScoresCulexErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -292,7 +281,6 @@ class PhotosPredictionUpdateScoresCulexErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionUpdateScoresCulexErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateScoresCulexErrorComponent;
   }
 
@@ -308,13 +296,14 @@ class PhotosPredictionUpdateScoresCulexErrorComponentBuilder
 
   _$PhotosPredictionUpdateScoresCulexErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdateScoresCulexErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(attr,
-                r'PhotosPredictionUpdateScoresCulexErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(code,
-                r'PhotosPredictionUpdateScoresCulexErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'PhotosPredictionUpdateScoresCulexErrorComponent', 'detail'));
+        _$PhotosPredictionUpdateScoresCulexErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'PhotosPredictionUpdateScoresCulexErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'PhotosPredictionUpdateScoresCulexErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'PhotosPredictionUpdateScoresCulexErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

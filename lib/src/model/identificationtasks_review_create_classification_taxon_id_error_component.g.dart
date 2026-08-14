@@ -31,7 +31,7 @@ IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnum>
     _$identificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnum>(const <IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnum>[
   _$identificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnum_classificationPeriodTaxonId,
   _$identificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -80,7 +80,7 @@ IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnum>
     _$identificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnum>(const <IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnum>[
   _$identificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnum_doesNotExist,
   _$identificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnum_incorrectType,
@@ -92,11 +92,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnum>
     _$identificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnum>
     _$identificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnumSerializer
     implements
@@ -195,27 +195,13 @@ class _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent
           [void Function(
                   IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentBuilder()
+      (IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent rebuild(
           void Function(
@@ -226,7 +212,7 @@ class _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent
   @override
   IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentBuilder()
+          IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -310,7 +296,6 @@ class IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentBuilder
   void replace(
       IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent;
   }
@@ -330,20 +315,20 @@ class IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentBuilder
   _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent',
-                'detail'));
+        _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksReviewCreateClassificationTaxonIdErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

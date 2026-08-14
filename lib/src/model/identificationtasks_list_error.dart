@@ -177,9 +177,7 @@ class _$IdentificationtasksListErrorSerializer implements PrimitiveSerializer<Id
 
   Iterable<Object?> _serializeProperties(
     Serializers serializers,
-    IdentificationtasksListError object, {
-    FullType specifiedType = FullType.unspecified,
-  }) sync* {
+    IdentificationtasksListError object) sync* {
   }
 
   @override

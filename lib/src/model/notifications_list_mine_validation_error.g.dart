@@ -27,7 +27,7 @@ NotificationsListMineValidationErrorTypeEnum
 }
 
 final BuiltSet<NotificationsListMineValidationErrorTypeEnum>
-    _$notificationsListMineValidationErrorTypeEnumValues = new BuiltSet<
+    _$notificationsListMineValidationErrorTypeEnumValues = BuiltSet<
         NotificationsListMineValidationErrorTypeEnum>(const <NotificationsListMineValidationErrorTypeEnum>[
   _$notificationsListMineValidationErrorTypeEnum_validationError,
   _$notificationsListMineValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -35,7 +35,7 @@ final BuiltSet<NotificationsListMineValidationErrorTypeEnum>
 
 Serializer<NotificationsListMineValidationErrorTypeEnum>
     _$notificationsListMineValidationErrorTypeEnumSerializer =
-    new _$NotificationsListMineValidationErrorTypeEnumSerializer();
+    _$NotificationsListMineValidationErrorTypeEnumSerializer();
 
 class _$NotificationsListMineValidationErrorTypeEnumSerializer
     implements
@@ -80,18 +80,11 @@ class _$NotificationsListMineValidationError
   factory _$NotificationsListMineValidationError(
           [void Function(NotificationsListMineValidationErrorBuilder)?
               updates]) =>
-      (new NotificationsListMineValidationErrorBuilder()..update(updates))
-          ._build();
+      (NotificationsListMineValidationErrorBuilder()..update(updates))._build();
 
   _$NotificationsListMineValidationError._(
       {required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'NotificationsListMineValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'NotificationsListMineValidationError', 'errors');
-  }
-
+      : super._();
   @override
   NotificationsListMineValidationError rebuild(
           void Function(NotificationsListMineValidationErrorBuilder) updates) =>
@@ -99,7 +92,7 @@ class _$NotificationsListMineValidationError
 
   @override
   NotificationsListMineValidationErrorBuilder toBuilder() =>
-      new NotificationsListMineValidationErrorBuilder()..replace(this);
+      NotificationsListMineValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -141,7 +134,7 @@ class NotificationsListMineValidationErrorBuilder
   ListBuilder<NotificationsListMineOrderByErrorComponent>? _errors;
   ListBuilder<NotificationsListMineOrderByErrorComponent> get errors =>
       _$this._errors ??=
-          new ListBuilder<NotificationsListMineOrderByErrorComponent>();
+          ListBuilder<NotificationsListMineOrderByErrorComponent>();
   set errors(ListBuilder<NotificationsListMineOrderByErrorComponent>? errors) =>
       _$this._errors = errors;
 
@@ -161,7 +154,6 @@ class NotificationsListMineValidationErrorBuilder
 
   @override
   void replace(NotificationsListMineValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$NotificationsListMineValidationError;
   }
 
@@ -178,17 +170,18 @@ class NotificationsListMineValidationErrorBuilder
     _$NotificationsListMineValidationError _$result;
     try {
       _$result = _$v ??
-          new _$NotificationsListMineValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'NotificationsListMineValidationError', 'type'),
-              errors: errors.build());
+          _$NotificationsListMineValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'NotificationsListMineValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'NotificationsListMineValidationError',
             _$failedField,
             e.toString());

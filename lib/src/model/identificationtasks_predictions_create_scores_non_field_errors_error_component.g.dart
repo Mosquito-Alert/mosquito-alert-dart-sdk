@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnum_scoresPeriodNonFieldErrors,
   _$identificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -74,7 +74,7 @@ IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -85,11 +85,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -186,27 +186,13 @@ class _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -217,7 +203,7 @@ class _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent
   @override
   IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentBuilder()
+          IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -301,7 +287,6 @@ class IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentBuil
   void replace(
       IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent;
   }
@@ -321,20 +306,21 @@ class IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentBuil
   _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent
+        _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

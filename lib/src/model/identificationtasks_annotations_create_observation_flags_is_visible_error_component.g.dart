@@ -31,7 +31,7 @@ IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrE
 final BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnum>(const <IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnum>[
   _$identificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnum_observationFlagsPeriodIsVisible,
   _$identificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -62,7 +62,7 @@ IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeE
 final BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnum>(const <IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnum>[
   _$identificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnum_null_,
   _$identificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -71,11 +71,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnum>
     _$identificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnumSerializer
     implements
@@ -168,27 +168,13 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorCompon
           [void Function(
                   IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentBuilder()
+      (IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
       rebuild(
@@ -200,7 +186,7 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorCompon
   @override
   IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentBuilder()
+          IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -285,7 +271,6 @@ class IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponen
   void replace(
       IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent;
   }
@@ -305,20 +290,21 @@ class IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponen
   _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
+        _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

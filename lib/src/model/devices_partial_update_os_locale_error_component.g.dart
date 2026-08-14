@@ -28,7 +28,7 @@ DevicesPartialUpdateOsLocaleErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesPartialUpdateOsLocaleErrorComponentAttrEnum>
-    _$devicesPartialUpdateOsLocaleErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesPartialUpdateOsLocaleErrorComponentAttrEnumValues = BuiltSet<
         DevicesPartialUpdateOsLocaleErrorComponentAttrEnum>(const <DevicesPartialUpdateOsLocaleErrorComponentAttrEnum>[
   _$devicesPartialUpdateOsLocaleErrorComponentAttrEnum_osPeriodLocale,
   _$devicesPartialUpdateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ DevicesPartialUpdateOsLocaleErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesPartialUpdateOsLocaleErrorComponentCodeEnum>
-    _$devicesPartialUpdateOsLocaleErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesPartialUpdateOsLocaleErrorComponentCodeEnumValues = BuiltSet<
         DevicesPartialUpdateOsLocaleErrorComponentCodeEnum>(const <DevicesPartialUpdateOsLocaleErrorComponentCodeEnum>[
   _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_invalid,
   _$devicesPartialUpdateOsLocaleErrorComponentCodeEnum_maxLength,
@@ -83,10 +83,10 @@ final BuiltSet<DevicesPartialUpdateOsLocaleErrorComponentCodeEnum>
 
 Serializer<DevicesPartialUpdateOsLocaleErrorComponentAttrEnum>
     _$devicesPartialUpdateOsLocaleErrorComponentAttrEnumSerializer =
-    new _$DevicesPartialUpdateOsLocaleErrorComponentAttrEnumSerializer();
+    _$DevicesPartialUpdateOsLocaleErrorComponentAttrEnumSerializer();
 Serializer<DevicesPartialUpdateOsLocaleErrorComponentCodeEnum>
     _$devicesPartialUpdateOsLocaleErrorComponentCodeEnumSerializer =
-    new _$DevicesPartialUpdateOsLocaleErrorComponentCodeEnumSerializer();
+    _$DevicesPartialUpdateOsLocaleErrorComponentCodeEnumSerializer();
 
 class _$DevicesPartialUpdateOsLocaleErrorComponentAttrEnumSerializer
     implements
@@ -174,20 +174,12 @@ class _$DevicesPartialUpdateOsLocaleErrorComponent
   factory _$DevicesPartialUpdateOsLocaleErrorComponent(
           [void Function(DevicesPartialUpdateOsLocaleErrorComponentBuilder)?
               updates]) =>
-      (new DevicesPartialUpdateOsLocaleErrorComponentBuilder()..update(updates))
+      (DevicesPartialUpdateOsLocaleErrorComponentBuilder()..update(updates))
           ._build();
 
   _$DevicesPartialUpdateOsLocaleErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesPartialUpdateOsLocaleErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesPartialUpdateOsLocaleErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesPartialUpdateOsLocaleErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesPartialUpdateOsLocaleErrorComponent rebuild(
           void Function(DevicesPartialUpdateOsLocaleErrorComponentBuilder)
@@ -196,7 +188,7 @@ class _$DevicesPartialUpdateOsLocaleErrorComponent
 
   @override
   DevicesPartialUpdateOsLocaleErrorComponentBuilder toBuilder() =>
-      new DevicesPartialUpdateOsLocaleErrorComponentBuilder()..replace(this);
+      DevicesPartialUpdateOsLocaleErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -265,7 +257,6 @@ class DevicesPartialUpdateOsLocaleErrorComponentBuilder
 
   @override
   void replace(DevicesPartialUpdateOsLocaleErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesPartialUpdateOsLocaleErrorComponent;
   }
 
@@ -281,13 +272,14 @@ class DevicesPartialUpdateOsLocaleErrorComponentBuilder
 
   _$DevicesPartialUpdateOsLocaleErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesPartialUpdateOsLocaleErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesPartialUpdateOsLocaleErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesPartialUpdateOsLocaleErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'DevicesPartialUpdateOsLocaleErrorComponent', 'detail'));
+        _$DevicesPartialUpdateOsLocaleErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesPartialUpdateOsLocaleErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesPartialUpdateOsLocaleErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesPartialUpdateOsLocaleErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

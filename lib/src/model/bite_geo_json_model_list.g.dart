@@ -26,15 +26,15 @@ BiteGeoJsonModelListTypeEnum _$biteGeoJsonModelListTypeEnumValueOf(
 }
 
 final BuiltSet<BiteGeoJsonModelListTypeEnum>
-    _$biteGeoJsonModelListTypeEnumValues = new BuiltSet<
-        BiteGeoJsonModelListTypeEnum>(const <BiteGeoJsonModelListTypeEnum>[
+    _$biteGeoJsonModelListTypeEnumValues =
+    BuiltSet<BiteGeoJsonModelListTypeEnum>(const <BiteGeoJsonModelListTypeEnum>[
   _$biteGeoJsonModelListTypeEnum_featureCollection,
   _$biteGeoJsonModelListTypeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BiteGeoJsonModelListTypeEnum>
     _$biteGeoJsonModelListTypeEnumSerializer =
-    new _$BiteGeoJsonModelListTypeEnumSerializer();
+    _$BiteGeoJsonModelListTypeEnumSerializer();
 
 class _$BiteGeoJsonModelListTypeEnumSerializer
     implements PrimitiveSerializer<BiteGeoJsonModelListTypeEnum> {
@@ -73,10 +73,9 @@ class _$BiteGeoJsonModelList extends BiteGeoJsonModelList {
 
   factory _$BiteGeoJsonModelList(
           [void Function(BiteGeoJsonModelListBuilder)? updates]) =>
-      (new BiteGeoJsonModelListBuilder()..update(updates))._build();
+      (BiteGeoJsonModelListBuilder()..update(updates))._build();
 
   _$BiteGeoJsonModelList._({this.type, this.features}) : super._();
-
   @override
   BiteGeoJsonModelList rebuild(
           void Function(BiteGeoJsonModelListBuilder) updates) =>
@@ -84,7 +83,7 @@ class _$BiteGeoJsonModelList extends BiteGeoJsonModelList {
 
   @override
   BiteGeoJsonModelListBuilder toBuilder() =>
-      new BiteGeoJsonModelListBuilder()..replace(this);
+      BiteGeoJsonModelListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -122,7 +121,7 @@ class BiteGeoJsonModelListBuilder
 
   ListBuilder<BiteGeoJsonModel>? _features;
   ListBuilder<BiteGeoJsonModel> get features =>
-      _$this._features ??= new ListBuilder<BiteGeoJsonModel>();
+      _$this._features ??= ListBuilder<BiteGeoJsonModel>();
   set features(ListBuilder<BiteGeoJsonModel>? features) =>
       _$this._features = features;
 
@@ -142,7 +141,6 @@ class BiteGeoJsonModelListBuilder
 
   @override
   void replace(BiteGeoJsonModelList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BiteGeoJsonModelList;
   }
 
@@ -158,15 +156,17 @@ class BiteGeoJsonModelListBuilder
     _$BiteGeoJsonModelList _$result;
     try {
       _$result = _$v ??
-          new _$BiteGeoJsonModelList._(
-              type: type, features: _features?.build());
+          _$BiteGeoJsonModelList._(
+            type: type,
+            features: _features?.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'features';
         _features?.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BiteGeoJsonModelList', _$failedField, e.toString());
       }
       rethrow;

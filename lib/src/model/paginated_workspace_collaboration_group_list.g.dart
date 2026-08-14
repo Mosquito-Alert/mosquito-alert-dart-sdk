@@ -20,18 +20,12 @@ class _$PaginatedWorkspaceCollaborationGroupList
   factory _$PaginatedWorkspaceCollaborationGroupList(
           [void Function(PaginatedWorkspaceCollaborationGroupListBuilder)?
               updates]) =>
-      (new PaginatedWorkspaceCollaborationGroupListBuilder()..update(updates))
+      (PaginatedWorkspaceCollaborationGroupListBuilder()..update(updates))
           ._build();
 
   _$PaginatedWorkspaceCollaborationGroupList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedWorkspaceCollaborationGroupList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedWorkspaceCollaborationGroupList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedWorkspaceCollaborationGroupList rebuild(
           void Function(PaginatedWorkspaceCollaborationGroupListBuilder)
@@ -40,7 +34,7 @@ class _$PaginatedWorkspaceCollaborationGroupList
 
   @override
   PaginatedWorkspaceCollaborationGroupListBuilder toBuilder() =>
-      new PaginatedWorkspaceCollaborationGroupListBuilder()..replace(this);
+      PaginatedWorkspaceCollaborationGroupListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -95,7 +89,7 @@ class PaginatedWorkspaceCollaborationGroupListBuilder
 
   ListBuilder<WorkspaceCollaborationGroup>? _results;
   ListBuilder<WorkspaceCollaborationGroup> get results =>
-      _$this._results ??= new ListBuilder<WorkspaceCollaborationGroup>();
+      _$this._results ??= ListBuilder<WorkspaceCollaborationGroup>();
   set results(ListBuilder<WorkspaceCollaborationGroup>? results) =>
       _$this._results = results;
 
@@ -117,7 +111,6 @@ class PaginatedWorkspaceCollaborationGroupListBuilder
 
   @override
   void replace(PaginatedWorkspaceCollaborationGroupList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedWorkspaceCollaborationGroupList;
   }
 
@@ -134,19 +127,20 @@ class PaginatedWorkspaceCollaborationGroupListBuilder
     _$PaginatedWorkspaceCollaborationGroupList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedWorkspaceCollaborationGroupList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedWorkspaceCollaborationGroupList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedWorkspaceCollaborationGroupList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedWorkspaceCollaborationGroupList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedWorkspaceCollaborationGroupList',
             _$failedField,
             e.toString());

@@ -30,7 +30,7 @@ PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnum
 
 final BuiltSet<PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnum>
     _$photosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnum>(const <PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnum>[
   _$photosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnum_scoresPeriodNonFieldErrors,
   _$photosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -72,7 +72,7 @@ PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnum
 
 final BuiltSet<PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnum>
     _$photosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnum>(const <PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnum>[
   _$photosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnum_invalid,
   _$photosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnum_null_,
@@ -82,10 +82,10 @@ final BuiltSet<PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnum>
 
 Serializer<PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnum>
     _$photosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnumSerializer =
-    new _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnumSerializer();
+    _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnumSerializer();
 Serializer<PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnum>
     _$photosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnumSerializer =
-    new _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnumSerializer();
+    _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentCodeEnumSerializer();
 
 class _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentAttrEnumSerializer
     implements
@@ -178,21 +178,13 @@ class _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent
           [void Function(
                   PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentBuilder)?
               updates]) =>
-      (new PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentBuilder()
+      (PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(attr,
-        r'PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(code,
-        r'PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail,
-        r'PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent rebuild(
           void Function(
@@ -202,7 +194,7 @@ class _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent
 
   @override
   PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentBuilder toBuilder() =>
-      new PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentBuilder()
+      PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentBuilder()
         ..replace(this);
 
   @override
@@ -278,7 +270,6 @@ class PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentBuilder
 
   @override
   void replace(PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent;
   }
 
@@ -295,19 +286,20 @@ class PhotosPredictionUpdateScoresNonFieldErrorsErrorComponentBuilder
 
   _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent _build() {
     final _$result = _$v ??
-        new _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent',
-                'detail'));
+        _$PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'PhotosPredictionUpdateScoresNonFieldErrorsErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

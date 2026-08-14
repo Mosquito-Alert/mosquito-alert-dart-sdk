@@ -12,10 +12,9 @@ class _$TemporaryBoundaryRequest extends TemporaryBoundaryRequest {
 
   factory _$TemporaryBoundaryRequest(
           [void Function(TemporaryBoundaryRequestBuilder)? updates]) =>
-      (new TemporaryBoundaryRequestBuilder()..update(updates))._build();
+      (TemporaryBoundaryRequestBuilder()..update(updates))._build();
 
   _$TemporaryBoundaryRequest._({this.geojson}) : super._();
-
   @override
   TemporaryBoundaryRequest rebuild(
           void Function(TemporaryBoundaryRequestBuilder) updates) =>
@@ -23,7 +22,7 @@ class _$TemporaryBoundaryRequest extends TemporaryBoundaryRequest {
 
   @override
   TemporaryBoundaryRequestBuilder toBuilder() =>
-      new TemporaryBoundaryRequestBuilder()..replace(this);
+      TemporaryBoundaryRequestBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -71,7 +70,6 @@ class TemporaryBoundaryRequestBuilder
 
   @override
   void replace(TemporaryBoundaryRequest other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$TemporaryBoundaryRequest;
   }
 
@@ -84,7 +82,10 @@ class TemporaryBoundaryRequestBuilder
   TemporaryBoundaryRequest build() => _build();
 
   _$TemporaryBoundaryRequest _build() {
-    final _$result = _$v ?? new _$TemporaryBoundaryRequest._(geojson: geojson);
+    final _$result = _$v ??
+        _$TemporaryBoundaryRequest._(
+          geojson: geojson,
+        );
     replace(_$result);
     return _$result;
   }

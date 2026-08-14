@@ -26,7 +26,7 @@ BitesListMineTagsErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesListMineTagsErrorComponentAttrEnum>
-    _$bitesListMineTagsErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesListMineTagsErrorComponentAttrEnumValues = BuiltSet<
         BitesListMineTagsErrorComponentAttrEnum>(const <BitesListMineTagsErrorComponentAttrEnum>[
   _$bitesListMineTagsErrorComponentAttrEnum_tags,
   _$bitesListMineTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -52,7 +52,7 @@ BitesListMineTagsErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesListMineTagsErrorComponentCodeEnum>
-    _$bitesListMineTagsErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesListMineTagsErrorComponentCodeEnumValues = BuiltSet<
         BitesListMineTagsErrorComponentCodeEnum>(const <BitesListMineTagsErrorComponentCodeEnum>[
   _$bitesListMineTagsErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$bitesListMineTagsErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -60,10 +60,10 @@ final BuiltSet<BitesListMineTagsErrorComponentCodeEnum>
 
 Serializer<BitesListMineTagsErrorComponentAttrEnum>
     _$bitesListMineTagsErrorComponentAttrEnumSerializer =
-    new _$BitesListMineTagsErrorComponentAttrEnumSerializer();
+    _$BitesListMineTagsErrorComponentAttrEnumSerializer();
 Serializer<BitesListMineTagsErrorComponentCodeEnum>
     _$bitesListMineTagsErrorComponentCodeEnumSerializer =
-    new _$BitesListMineTagsErrorComponentCodeEnumSerializer();
+    _$BitesListMineTagsErrorComponentCodeEnumSerializer();
 
 class _$BitesListMineTagsErrorComponentAttrEnumSerializer
     implements PrimitiveSerializer<BitesListMineTagsErrorComponentAttrEnum> {
@@ -140,19 +140,11 @@ class _$BitesListMineTagsErrorComponent
 
   factory _$BitesListMineTagsErrorComponent(
           [void Function(BitesListMineTagsErrorComponentBuilder)? updates]) =>
-      (new BitesListMineTagsErrorComponentBuilder()..update(updates))._build();
+      (BitesListMineTagsErrorComponentBuilder()..update(updates))._build();
 
   _$BitesListMineTagsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesListMineTagsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesListMineTagsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesListMineTagsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesListMineTagsErrorComponent rebuild(
           void Function(BitesListMineTagsErrorComponentBuilder) updates) =>
@@ -160,7 +152,7 @@ class _$BitesListMineTagsErrorComponent
 
   @override
   BitesListMineTagsErrorComponentBuilder toBuilder() =>
-      new BitesListMineTagsErrorComponentBuilder()..replace(this);
+      BitesListMineTagsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -228,7 +220,6 @@ class BitesListMineTagsErrorComponentBuilder
 
   @override
   void replace(BitesListMineTagsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesListMineTagsErrorComponent;
   }
 
@@ -242,13 +233,14 @@ class BitesListMineTagsErrorComponentBuilder
 
   _$BitesListMineTagsErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesListMineTagsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesListMineTagsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesListMineTagsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesListMineTagsErrorComponent', 'detail'));
+        _$BitesListMineTagsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesListMineTagsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesListMineTagsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesListMineTagsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

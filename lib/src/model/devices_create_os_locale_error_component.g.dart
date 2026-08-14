@@ -27,7 +27,7 @@ DevicesCreateOsLocaleErrorComponentAttrEnum
 }
 
 final BuiltSet<DevicesCreateOsLocaleErrorComponentAttrEnum>
-    _$devicesCreateOsLocaleErrorComponentAttrEnumValues = new BuiltSet<
+    _$devicesCreateOsLocaleErrorComponentAttrEnumValues = BuiltSet<
         DevicesCreateOsLocaleErrorComponentAttrEnum>(const <DevicesCreateOsLocaleErrorComponentAttrEnum>[
   _$devicesCreateOsLocaleErrorComponentAttrEnum_osPeriodLocale,
   _$devicesCreateOsLocaleErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -71,7 +71,7 @@ DevicesCreateOsLocaleErrorComponentCodeEnum
 }
 
 final BuiltSet<DevicesCreateOsLocaleErrorComponentCodeEnum>
-    _$devicesCreateOsLocaleErrorComponentCodeEnumValues = new BuiltSet<
+    _$devicesCreateOsLocaleErrorComponentCodeEnumValues = BuiltSet<
         DevicesCreateOsLocaleErrorComponentCodeEnum>(const <DevicesCreateOsLocaleErrorComponentCodeEnum>[
   _$devicesCreateOsLocaleErrorComponentCodeEnum_invalid,
   _$devicesCreateOsLocaleErrorComponentCodeEnum_maxLength,
@@ -82,10 +82,10 @@ final BuiltSet<DevicesCreateOsLocaleErrorComponentCodeEnum>
 
 Serializer<DevicesCreateOsLocaleErrorComponentAttrEnum>
     _$devicesCreateOsLocaleErrorComponentAttrEnumSerializer =
-    new _$DevicesCreateOsLocaleErrorComponentAttrEnumSerializer();
+    _$DevicesCreateOsLocaleErrorComponentAttrEnumSerializer();
 Serializer<DevicesCreateOsLocaleErrorComponentCodeEnum>
     _$devicesCreateOsLocaleErrorComponentCodeEnumSerializer =
-    new _$DevicesCreateOsLocaleErrorComponentCodeEnumSerializer();
+    _$DevicesCreateOsLocaleErrorComponentCodeEnumSerializer();
 
 class _$DevicesCreateOsLocaleErrorComponentAttrEnumSerializer
     implements
@@ -171,20 +171,11 @@ class _$DevicesCreateOsLocaleErrorComponent
   factory _$DevicesCreateOsLocaleErrorComponent(
           [void Function(DevicesCreateOsLocaleErrorComponentBuilder)?
               updates]) =>
-      (new DevicesCreateOsLocaleErrorComponentBuilder()..update(updates))
-          ._build();
+      (DevicesCreateOsLocaleErrorComponentBuilder()..update(updates))._build();
 
   _$DevicesCreateOsLocaleErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'DevicesCreateOsLocaleErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'DevicesCreateOsLocaleErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'DevicesCreateOsLocaleErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   DevicesCreateOsLocaleErrorComponent rebuild(
           void Function(DevicesCreateOsLocaleErrorComponentBuilder) updates) =>
@@ -192,7 +183,7 @@ class _$DevicesCreateOsLocaleErrorComponent
 
   @override
   DevicesCreateOsLocaleErrorComponentBuilder toBuilder() =>
-      new DevicesCreateOsLocaleErrorComponentBuilder()..replace(this);
+      DevicesCreateOsLocaleErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -260,7 +251,6 @@ class DevicesCreateOsLocaleErrorComponentBuilder
 
   @override
   void replace(DevicesCreateOsLocaleErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$DevicesCreateOsLocaleErrorComponent;
   }
 
@@ -275,13 +265,14 @@ class DevicesCreateOsLocaleErrorComponentBuilder
 
   _$DevicesCreateOsLocaleErrorComponent _build() {
     final _$result = _$v ??
-        new _$DevicesCreateOsLocaleErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'DevicesCreateOsLocaleErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'DevicesCreateOsLocaleErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'DevicesCreateOsLocaleErrorComponent', 'detail'));
+        _$DevicesCreateOsLocaleErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'DevicesCreateOsLocaleErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'DevicesCreateOsLocaleErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'DevicesCreateOsLocaleErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

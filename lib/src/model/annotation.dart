@@ -251,8 +251,9 @@ class _$AnnotationSerializer implements PrimitiveSerializer<Annotation> {
         case r'feedback':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(AnnotationFeedback),
-          ) as AnnotationFeedback;
+            specifiedType: const FullType.nullable(AnnotationFeedback),
+          ) as AnnotationFeedback?;
+          if (valueDes == null) continue;
           result.feedback.replace(valueDes);
           break;
         case r'type':
@@ -279,15 +280,17 @@ class _$AnnotationSerializer implements PrimitiveSerializer<Annotation> {
         case r'observation_flags':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(ObservationFlags),
-          ) as ObservationFlags;
+            specifiedType: const FullType.nullable(ObservationFlags),
+          ) as ObservationFlags?;
+          if (valueDes == null) continue;
           result.observationFlags.replace(valueDes);
           break;
         case r'tags':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BuiltList, [FullType(String)]),
-          ) as BuiltList<String>;
+            specifiedType: const FullType.nullable(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>?;
+          if (valueDes == null) continue;
           result.tags.replace(valueDes);
           break;
         case r'created_at':

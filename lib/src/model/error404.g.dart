@@ -23,13 +23,13 @@ Error404CodeEnum _$error404CodeEnumValueOf(String name) {
 }
 
 final BuiltSet<Error404CodeEnum> _$error404CodeEnumValues =
-    new BuiltSet<Error404CodeEnum>(const <Error404CodeEnum>[
+    BuiltSet<Error404CodeEnum>(const <Error404CodeEnum>[
   _$error404CodeEnum_notFound,
   _$error404CodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<Error404CodeEnum> _$error404CodeEnumSerializer =
-    new _$Error404CodeEnumSerializer();
+    _$Error404CodeEnumSerializer();
 
 class _$Error404CodeEnumSerializer
     implements PrimitiveSerializer<Error404CodeEnum> {
@@ -68,20 +68,16 @@ class _$Error404 extends Error404 {
   final String? attr;
 
   factory _$Error404([void Function(Error404Builder)? updates]) =>
-      (new Error404Builder()..update(updates))._build();
+      (Error404Builder()..update(updates))._build();
 
   _$Error404._({required this.code, required this.detail, this.attr})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(code, r'Error404', 'code');
-    BuiltValueNullFieldError.checkNotNull(detail, r'Error404', 'detail');
-  }
-
+      : super._();
   @override
   Error404 rebuild(void Function(Error404Builder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  Error404Builder toBuilder() => new Error404Builder()..replace(this);
+  Error404Builder toBuilder() => Error404Builder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -144,7 +140,6 @@ class Error404Builder implements Builder<Error404, Error404Builder> {
 
   @override
   void replace(Error404 other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$Error404;
   }
 
@@ -158,12 +153,13 @@ class Error404Builder implements Builder<Error404, Error404Builder> {
 
   _$Error404 _build() {
     final _$result = _$v ??
-        new _$Error404._(
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'Error404', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'Error404', 'detail'),
-            attr: attr);
+        _$Error404._(
+          code:
+              BuiltValueNullFieldError.checkNotNull(code, r'Error404', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'Error404', 'detail'),
+          attr: attr,
+        );
     replace(_$result);
     return _$result;
   }

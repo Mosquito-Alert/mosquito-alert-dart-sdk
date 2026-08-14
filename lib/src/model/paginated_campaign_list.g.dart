@@ -18,17 +18,11 @@ class _$PaginatedCampaignList extends PaginatedCampaignList {
 
   factory _$PaginatedCampaignList(
           [void Function(PaginatedCampaignListBuilder)? updates]) =>
-      (new PaginatedCampaignListBuilder()..update(updates))._build();
+      (PaginatedCampaignListBuilder()..update(updates))._build();
 
   _$PaginatedCampaignList._(
       {required this.count, this.next, this.previous, required this.results})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        count, r'PaginatedCampaignList', 'count');
-    BuiltValueNullFieldError.checkNotNull(
-        results, r'PaginatedCampaignList', 'results');
-  }
-
+      : super._();
   @override
   PaginatedCampaignList rebuild(
           void Function(PaginatedCampaignListBuilder) updates) =>
@@ -36,7 +30,7 @@ class _$PaginatedCampaignList extends PaginatedCampaignList {
 
   @override
   PaginatedCampaignListBuilder toBuilder() =>
-      new PaginatedCampaignListBuilder()..replace(this);
+      PaginatedCampaignListBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -88,7 +82,7 @@ class PaginatedCampaignListBuilder
 
   ListBuilder<Campaign>? _results;
   ListBuilder<Campaign> get results =>
-      _$this._results ??= new ListBuilder<Campaign>();
+      _$this._results ??= ListBuilder<Campaign>();
   set results(ListBuilder<Campaign>? results) => _$this._results = results;
 
   PaginatedCampaignListBuilder() {
@@ -109,7 +103,6 @@ class PaginatedCampaignListBuilder
 
   @override
   void replace(PaginatedCampaignList other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$PaginatedCampaignList;
   }
 
@@ -125,19 +118,20 @@ class PaginatedCampaignListBuilder
     _$PaginatedCampaignList _$result;
     try {
       _$result = _$v ??
-          new _$PaginatedCampaignList._(
-              count: BuiltValueNullFieldError.checkNotNull(
-                  count, r'PaginatedCampaignList', 'count'),
-              next: next,
-              previous: previous,
-              results: results.build());
+          _$PaginatedCampaignList._(
+            count: BuiltValueNullFieldError.checkNotNull(
+                count, r'PaginatedCampaignList', 'count'),
+            next: next,
+            previous: previous,
+            results: results.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'results';
         results.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'PaginatedCampaignList', _$failedField, e.toString());
       }
       rethrow;

@@ -99,22 +99,25 @@ class _$BiteGeoJsonModelSerializer implements PrimitiveSerializer<BiteGeoJsonMod
         case r'type':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BiteGeoJsonModelTypeEnum),
-          ) as BiteGeoJsonModelTypeEnum;
+            specifiedType: const FullType.nullable(BiteGeoJsonModelTypeEnum),
+          ) as BiteGeoJsonModelTypeEnum?;
+          if (valueDes == null) continue;
           result.type = valueDes;
           break;
         case r'geometry':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BiteGeoJsonModelGeometry),
-          ) as BiteGeoJsonModelGeometry;
+            specifiedType: const FullType.nullable(BiteGeoJsonModelGeometry),
+          ) as BiteGeoJsonModelGeometry?;
+          if (valueDes == null) continue;
           result.geometry.replace(valueDes);
           break;
         case r'properties':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(BiteGeoJsonModelProperties),
-          ) as BiteGeoJsonModelProperties;
+            specifiedType: const FullType.nullable(BiteGeoJsonModelProperties),
+          ) as BiteGeoJsonModelProperties?;
+          if (valueDes == null) continue;
           result.properties.replace(valueDes);
           break;
         default:

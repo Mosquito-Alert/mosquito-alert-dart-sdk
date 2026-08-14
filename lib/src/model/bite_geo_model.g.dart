@@ -15,23 +15,17 @@ class _$BiteGeoModel extends BiteGeoModel {
   final DateTime receivedAt;
 
   factory _$BiteGeoModel([void Function(BiteGeoModelBuilder)? updates]) =>
-      (new BiteGeoModelBuilder()..update(updates))._build();
+      (BiteGeoModelBuilder()..update(updates))._build();
 
   _$BiteGeoModel._(
       {required this.uuid, required this.point, required this.receivedAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(uuid, r'BiteGeoModel', 'uuid');
-    BuiltValueNullFieldError.checkNotNull(point, r'BiteGeoModel', 'point');
-    BuiltValueNullFieldError.checkNotNull(
-        receivedAt, r'BiteGeoModel', 'receivedAt');
-  }
-
+      : super._();
   @override
   BiteGeoModel rebuild(void Function(BiteGeoModelBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
-  BiteGeoModelBuilder toBuilder() => new BiteGeoModelBuilder()..replace(this);
+  BiteGeoModelBuilder toBuilder() => BiteGeoModelBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -71,7 +65,7 @@ class BiteGeoModelBuilder
   set uuid(String? uuid) => _$this._uuid = uuid;
 
   PointBuilder? _point;
-  PointBuilder get point => _$this._point ??= new PointBuilder();
+  PointBuilder get point => _$this._point ??= PointBuilder();
   set point(PointBuilder? point) => _$this._point = point;
 
   DateTime? _receivedAt;
@@ -95,7 +89,6 @@ class BiteGeoModelBuilder
 
   @override
   void replace(BiteGeoModel other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BiteGeoModel;
   }
 
@@ -111,19 +104,20 @@ class BiteGeoModelBuilder
     _$BiteGeoModel _$result;
     try {
       _$result = _$v ??
-          new _$BiteGeoModel._(
-              uuid: BuiltValueNullFieldError.checkNotNull(
-                  uuid, r'BiteGeoModel', 'uuid'),
-              point: point.build(),
-              receivedAt: BuiltValueNullFieldError.checkNotNull(
-                  receivedAt, r'BiteGeoModel', 'receivedAt'));
+          _$BiteGeoModel._(
+            uuid: BuiltValueNullFieldError.checkNotNull(
+                uuid, r'BiteGeoModel', 'uuid'),
+            point: point.build(),
+            receivedAt: BuiltValueNullFieldError.checkNotNull(
+                receivedAt, r'BiteGeoModel', 'receivedAt'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'point';
         point.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BiteGeoModel', _$failedField, e.toString());
       }
       rethrow;

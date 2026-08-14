@@ -27,7 +27,7 @@ BreedingsitesGeoListReceivedAtErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesGeoListReceivedAtErrorComponentAttrEnum>
-    _$breedingsitesGeoListReceivedAtErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesGeoListReceivedAtErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesGeoListReceivedAtErrorComponentAttrEnum>(const <BreedingsitesGeoListReceivedAtErrorComponentAttrEnum>[
   _$breedingsitesGeoListReceivedAtErrorComponentAttrEnum_receivedAt,
   _$breedingsitesGeoListReceivedAtErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ BreedingsitesGeoListReceivedAtErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesGeoListReceivedAtErrorComponentCodeEnum>
-    _$breedingsitesGeoListReceivedAtErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesGeoListReceivedAtErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesGeoListReceivedAtErrorComponentCodeEnum>(const <BreedingsitesGeoListReceivedAtErrorComponentCodeEnum>[
   _$breedingsitesGeoListReceivedAtErrorComponentCodeEnum_invalid,
   _$breedingsitesGeoListReceivedAtErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<BreedingsitesGeoListReceivedAtErrorComponentCodeEnum>
 
 Serializer<BreedingsitesGeoListReceivedAtErrorComponentAttrEnum>
     _$breedingsitesGeoListReceivedAtErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesGeoListReceivedAtErrorComponentAttrEnumSerializer();
+    _$BreedingsitesGeoListReceivedAtErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesGeoListReceivedAtErrorComponentCodeEnum>
     _$breedingsitesGeoListReceivedAtErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesGeoListReceivedAtErrorComponentCodeEnumSerializer();
+    _$BreedingsitesGeoListReceivedAtErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesGeoListReceivedAtErrorComponentAttrEnumSerializer
     implements
@@ -149,21 +149,12 @@ class _$BreedingsitesGeoListReceivedAtErrorComponent
   factory _$BreedingsitesGeoListReceivedAtErrorComponent(
           [void Function(BreedingsitesGeoListReceivedAtErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesGeoListReceivedAtErrorComponentBuilder()
-            ..update(updates))
+      (BreedingsitesGeoListReceivedAtErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesGeoListReceivedAtErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesGeoListReceivedAtErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesGeoListReceivedAtErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesGeoListReceivedAtErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesGeoListReceivedAtErrorComponent rebuild(
           void Function(BreedingsitesGeoListReceivedAtErrorComponentBuilder)
@@ -172,7 +163,7 @@ class _$BreedingsitesGeoListReceivedAtErrorComponent
 
   @override
   BreedingsitesGeoListReceivedAtErrorComponentBuilder toBuilder() =>
-      new BreedingsitesGeoListReceivedAtErrorComponentBuilder()..replace(this);
+      BreedingsitesGeoListReceivedAtErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -243,7 +234,6 @@ class BreedingsitesGeoListReceivedAtErrorComponentBuilder
 
   @override
   void replace(BreedingsitesGeoListReceivedAtErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesGeoListReceivedAtErrorComponent;
   }
 
@@ -259,13 +249,14 @@ class BreedingsitesGeoListReceivedAtErrorComponentBuilder
 
   _$BreedingsitesGeoListReceivedAtErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesGeoListReceivedAtErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesGeoListReceivedAtErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesGeoListReceivedAtErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesGeoListReceivedAtErrorComponent', 'detail'));
+        _$BreedingsitesGeoListReceivedAtErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesGeoListReceivedAtErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesGeoListReceivedAtErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(detail,
+              r'BreedingsitesGeoListReceivedAtErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

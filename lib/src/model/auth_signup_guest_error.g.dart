@@ -25,8 +25,8 @@ AuthSignupGuestErrorAttrEnum _$authSignupGuestErrorAttrEnumValueOf(
 }
 
 final BuiltSet<AuthSignupGuestErrorAttrEnum>
-    _$authSignupGuestErrorAttrEnumValues = new BuiltSet<
-        AuthSignupGuestErrorAttrEnum>(const <AuthSignupGuestErrorAttrEnum>[
+    _$authSignupGuestErrorAttrEnumValues =
+    BuiltSet<AuthSignupGuestErrorAttrEnum>(const <AuthSignupGuestErrorAttrEnum>[
   _$authSignupGuestErrorAttrEnum_password,
   _$authSignupGuestErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -76,8 +76,8 @@ AuthSignupGuestErrorCodeEnum _$authSignupGuestErrorCodeEnumValueOf(
 }
 
 final BuiltSet<AuthSignupGuestErrorCodeEnum>
-    _$authSignupGuestErrorCodeEnumValues = new BuiltSet<
-        AuthSignupGuestErrorCodeEnum>(const <AuthSignupGuestErrorCodeEnum>[
+    _$authSignupGuestErrorCodeEnumValues =
+    BuiltSet<AuthSignupGuestErrorCodeEnum>(const <AuthSignupGuestErrorCodeEnum>[
   _$authSignupGuestErrorCodeEnum_blank,
   _$authSignupGuestErrorCodeEnum_invalid,
   _$authSignupGuestErrorCodeEnum_minLength,
@@ -90,10 +90,10 @@ final BuiltSet<AuthSignupGuestErrorCodeEnum>
 
 Serializer<AuthSignupGuestErrorAttrEnum>
     _$authSignupGuestErrorAttrEnumSerializer =
-    new _$AuthSignupGuestErrorAttrEnumSerializer();
+    _$AuthSignupGuestErrorAttrEnumSerializer();
 Serializer<AuthSignupGuestErrorCodeEnum>
     _$authSignupGuestErrorCodeEnumSerializer =
-    new _$AuthSignupGuestErrorCodeEnumSerializer();
+    _$AuthSignupGuestErrorCodeEnumSerializer();
 
 class _$AuthSignupGuestErrorAttrEnumSerializer
     implements PrimitiveSerializer<AuthSignupGuestErrorAttrEnum> {
@@ -171,13 +171,9 @@ class _$AuthSignupGuestError extends AuthSignupGuestError {
 
   factory _$AuthSignupGuestError(
           [void Function(AuthSignupGuestErrorBuilder)? updates]) =>
-      (new AuthSignupGuestErrorBuilder()..update(updates))._build();
+      (AuthSignupGuestErrorBuilder()..update(updates))._build();
 
-  _$AuthSignupGuestError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        oneOf, r'AuthSignupGuestError', 'oneOf');
-  }
-
+  _$AuthSignupGuestError._({required this.oneOf}) : super._();
   @override
   AuthSignupGuestError rebuild(
           void Function(AuthSignupGuestErrorBuilder) updates) =>
@@ -185,7 +181,7 @@ class _$AuthSignupGuestError extends AuthSignupGuestError {
 
   @override
   AuthSignupGuestErrorBuilder toBuilder() =>
-      new AuthSignupGuestErrorBuilder()..replace(this);
+      AuthSignupGuestErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -232,7 +228,6 @@ class AuthSignupGuestErrorBuilder
 
   @override
   void replace(AuthSignupGuestError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$AuthSignupGuestError;
   }
 
@@ -246,9 +241,10 @@ class AuthSignupGuestErrorBuilder
 
   _$AuthSignupGuestError _build() {
     final _$result = _$v ??
-        new _$AuthSignupGuestError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'AuthSignupGuestError', 'oneOf'));
+        _$AuthSignupGuestError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'AuthSignupGuestError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -28,7 +28,7 @@ MessagesCreateContentBodyEnErrorComponentAttrEnum
 }
 
 final BuiltSet<MessagesCreateContentBodyEnErrorComponentAttrEnum>
-    _$messagesCreateContentBodyEnErrorComponentAttrEnumValues = new BuiltSet<
+    _$messagesCreateContentBodyEnErrorComponentAttrEnumValues = BuiltSet<
         MessagesCreateContentBodyEnErrorComponentAttrEnum>(const <MessagesCreateContentBodyEnErrorComponentAttrEnum>[
   _$messagesCreateContentBodyEnErrorComponentAttrEnum_contentPeriodBodyPeriodEn,
   _$messagesCreateContentBodyEnErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -41,9 +41,15 @@ const MessagesCreateContentBodyEnErrorComponentCodeEnum
     _$messagesCreateContentBodyEnErrorComponentCodeEnum_invalid =
     const MessagesCreateContentBodyEnErrorComponentCodeEnum._('invalid');
 const MessagesCreateContentBodyEnErrorComponentCodeEnum
+    _$messagesCreateContentBodyEnErrorComponentCodeEnum_null_ =
+    const MessagesCreateContentBodyEnErrorComponentCodeEnum._('null_');
+const MessagesCreateContentBodyEnErrorComponentCodeEnum
     _$messagesCreateContentBodyEnErrorComponentCodeEnum_nullCharactersNotAllowed =
     const MessagesCreateContentBodyEnErrorComponentCodeEnum._(
         'nullCharactersNotAllowed');
+const MessagesCreateContentBodyEnErrorComponentCodeEnum
+    _$messagesCreateContentBodyEnErrorComponentCodeEnum_required_ =
+    const MessagesCreateContentBodyEnErrorComponentCodeEnum._('required_');
 const MessagesCreateContentBodyEnErrorComponentCodeEnum
     _$messagesCreateContentBodyEnErrorComponentCodeEnum_surrogateCharactersNotAllowed =
     const MessagesCreateContentBodyEnErrorComponentCodeEnum._(
@@ -60,8 +66,12 @@ MessagesCreateContentBodyEnErrorComponentCodeEnum
       return _$messagesCreateContentBodyEnErrorComponentCodeEnum_blank;
     case 'invalid':
       return _$messagesCreateContentBodyEnErrorComponentCodeEnum_invalid;
+    case 'null_':
+      return _$messagesCreateContentBodyEnErrorComponentCodeEnum_null_;
     case 'nullCharactersNotAllowed':
       return _$messagesCreateContentBodyEnErrorComponentCodeEnum_nullCharactersNotAllowed;
+    case 'required_':
+      return _$messagesCreateContentBodyEnErrorComponentCodeEnum_required_;
     case 'surrogateCharactersNotAllowed':
       return _$messagesCreateContentBodyEnErrorComponentCodeEnum_surrogateCharactersNotAllowed;
     case 'unknownDefaultOpenApi':
@@ -72,21 +82,23 @@ MessagesCreateContentBodyEnErrorComponentCodeEnum
 }
 
 final BuiltSet<MessagesCreateContentBodyEnErrorComponentCodeEnum>
-    _$messagesCreateContentBodyEnErrorComponentCodeEnumValues = new BuiltSet<
+    _$messagesCreateContentBodyEnErrorComponentCodeEnumValues = BuiltSet<
         MessagesCreateContentBodyEnErrorComponentCodeEnum>(const <MessagesCreateContentBodyEnErrorComponentCodeEnum>[
   _$messagesCreateContentBodyEnErrorComponentCodeEnum_blank,
   _$messagesCreateContentBodyEnErrorComponentCodeEnum_invalid,
+  _$messagesCreateContentBodyEnErrorComponentCodeEnum_null_,
   _$messagesCreateContentBodyEnErrorComponentCodeEnum_nullCharactersNotAllowed,
+  _$messagesCreateContentBodyEnErrorComponentCodeEnum_required_,
   _$messagesCreateContentBodyEnErrorComponentCodeEnum_surrogateCharactersNotAllowed,
   _$messagesCreateContentBodyEnErrorComponentCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<MessagesCreateContentBodyEnErrorComponentAttrEnum>
     _$messagesCreateContentBodyEnErrorComponentAttrEnumSerializer =
-    new _$MessagesCreateContentBodyEnErrorComponentAttrEnumSerializer();
+    _$MessagesCreateContentBodyEnErrorComponentAttrEnumSerializer();
 Serializer<MessagesCreateContentBodyEnErrorComponentCodeEnum>
     _$messagesCreateContentBodyEnErrorComponentCodeEnumSerializer =
-    new _$MessagesCreateContentBodyEnErrorComponentCodeEnumSerializer();
+    _$MessagesCreateContentBodyEnErrorComponentCodeEnumSerializer();
 
 class _$MessagesCreateContentBodyEnErrorComponentAttrEnumSerializer
     implements
@@ -127,14 +139,18 @@ class _$MessagesCreateContentBodyEnErrorComponentCodeEnumSerializer
   static const Map<String, Object> _toWire = const <String, Object>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'null_': 'null',
     'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'required_': 'required',
     'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'blank': 'blank',
     'invalid': 'invalid',
+    'null': 'null_',
     'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'required': 'required_',
     'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
@@ -172,20 +188,12 @@ class _$MessagesCreateContentBodyEnErrorComponent
   factory _$MessagesCreateContentBodyEnErrorComponent(
           [void Function(MessagesCreateContentBodyEnErrorComponentBuilder)?
               updates]) =>
-      (new MessagesCreateContentBodyEnErrorComponentBuilder()..update(updates))
+      (MessagesCreateContentBodyEnErrorComponentBuilder()..update(updates))
           ._build();
 
   _$MessagesCreateContentBodyEnErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'MessagesCreateContentBodyEnErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'MessagesCreateContentBodyEnErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'MessagesCreateContentBodyEnErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   MessagesCreateContentBodyEnErrorComponent rebuild(
           void Function(MessagesCreateContentBodyEnErrorComponentBuilder)
@@ -194,7 +202,7 @@ class _$MessagesCreateContentBodyEnErrorComponent
 
   @override
   MessagesCreateContentBodyEnErrorComponentBuilder toBuilder() =>
-      new MessagesCreateContentBodyEnErrorComponentBuilder()..replace(this);
+      MessagesCreateContentBodyEnErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -263,7 +271,6 @@ class MessagesCreateContentBodyEnErrorComponentBuilder
 
   @override
   void replace(MessagesCreateContentBodyEnErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$MessagesCreateContentBodyEnErrorComponent;
   }
 
@@ -279,13 +286,14 @@ class MessagesCreateContentBodyEnErrorComponentBuilder
 
   _$MessagesCreateContentBodyEnErrorComponent _build() {
     final _$result = _$v ??
-        new _$MessagesCreateContentBodyEnErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'MessagesCreateContentBodyEnErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'MessagesCreateContentBodyEnErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'MessagesCreateContentBodyEnErrorComponent', 'detail'));
+        _$MessagesCreateContentBodyEnErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'MessagesCreateContentBodyEnErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'MessagesCreateContentBodyEnErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'MessagesCreateContentBodyEnErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

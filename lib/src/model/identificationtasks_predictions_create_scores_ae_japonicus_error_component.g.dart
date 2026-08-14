@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnum_scoresPeriodAeJaponicus,
   _$identificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent
   @override
   IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentBuilder()
+          IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -328,7 +314,6 @@ class IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentBuilder
   void replace(
       IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent;
   }
@@ -348,20 +333,20 @@ class IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponentBuilder
   _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent
-            ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent',
-                'detail'));
+        _$IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreateScoresAeJaponicusErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

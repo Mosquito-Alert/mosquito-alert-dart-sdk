@@ -27,7 +27,7 @@ BitesGeoListGeoPrecisionErrorComponentAttrEnum
 }
 
 final BuiltSet<BitesGeoListGeoPrecisionErrorComponentAttrEnum>
-    _$bitesGeoListGeoPrecisionErrorComponentAttrEnumValues = new BuiltSet<
+    _$bitesGeoListGeoPrecisionErrorComponentAttrEnumValues = BuiltSet<
         BitesGeoListGeoPrecisionErrorComponentAttrEnum>(const <BitesGeoListGeoPrecisionErrorComponentAttrEnum>[
   _$bitesGeoListGeoPrecisionErrorComponentAttrEnum_geoPrecision,
   _$bitesGeoListGeoPrecisionErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -64,7 +64,7 @@ BitesGeoListGeoPrecisionErrorComponentCodeEnum
 }
 
 final BuiltSet<BitesGeoListGeoPrecisionErrorComponentCodeEnum>
-    _$bitesGeoListGeoPrecisionErrorComponentCodeEnumValues = new BuiltSet<
+    _$bitesGeoListGeoPrecisionErrorComponentCodeEnumValues = BuiltSet<
         BitesGeoListGeoPrecisionErrorComponentCodeEnum>(const <BitesGeoListGeoPrecisionErrorComponentCodeEnum>[
   _$bitesGeoListGeoPrecisionErrorComponentCodeEnum_invalid,
   _$bitesGeoListGeoPrecisionErrorComponentCodeEnum_maxValue,
@@ -74,10 +74,10 @@ final BuiltSet<BitesGeoListGeoPrecisionErrorComponentCodeEnum>
 
 Serializer<BitesGeoListGeoPrecisionErrorComponentAttrEnum>
     _$bitesGeoListGeoPrecisionErrorComponentAttrEnumSerializer =
-    new _$BitesGeoListGeoPrecisionErrorComponentAttrEnumSerializer();
+    _$BitesGeoListGeoPrecisionErrorComponentAttrEnumSerializer();
 Serializer<BitesGeoListGeoPrecisionErrorComponentCodeEnum>
     _$bitesGeoListGeoPrecisionErrorComponentCodeEnumSerializer =
-    new _$BitesGeoListGeoPrecisionErrorComponentCodeEnumSerializer();
+    _$BitesGeoListGeoPrecisionErrorComponentCodeEnumSerializer();
 
 class _$BitesGeoListGeoPrecisionErrorComponentAttrEnumSerializer
     implements
@@ -161,20 +161,12 @@ class _$BitesGeoListGeoPrecisionErrorComponent
   factory _$BitesGeoListGeoPrecisionErrorComponent(
           [void Function(BitesGeoListGeoPrecisionErrorComponentBuilder)?
               updates]) =>
-      (new BitesGeoListGeoPrecisionErrorComponentBuilder()..update(updates))
+      (BitesGeoListGeoPrecisionErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BitesGeoListGeoPrecisionErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BitesGeoListGeoPrecisionErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BitesGeoListGeoPrecisionErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BitesGeoListGeoPrecisionErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BitesGeoListGeoPrecisionErrorComponent rebuild(
           void Function(BitesGeoListGeoPrecisionErrorComponentBuilder)
@@ -183,7 +175,7 @@ class _$BitesGeoListGeoPrecisionErrorComponent
 
   @override
   BitesGeoListGeoPrecisionErrorComponentBuilder toBuilder() =>
-      new BitesGeoListGeoPrecisionErrorComponentBuilder()..replace(this);
+      BitesGeoListGeoPrecisionErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -252,7 +244,6 @@ class BitesGeoListGeoPrecisionErrorComponentBuilder
 
   @override
   void replace(BitesGeoListGeoPrecisionErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesGeoListGeoPrecisionErrorComponent;
   }
 
@@ -267,13 +258,14 @@ class BitesGeoListGeoPrecisionErrorComponentBuilder
 
   _$BitesGeoListGeoPrecisionErrorComponent _build() {
     final _$result = _$v ??
-        new _$BitesGeoListGeoPrecisionErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BitesGeoListGeoPrecisionErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BitesGeoListGeoPrecisionErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'BitesGeoListGeoPrecisionErrorComponent', 'detail'));
+        _$BitesGeoListGeoPrecisionErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BitesGeoListGeoPrecisionErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BitesGeoListGeoPrecisionErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BitesGeoListGeoPrecisionErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -24,7 +24,7 @@ BitesGeoListErrorAttrEnum _$bitesGeoListErrorAttrEnumValueOf(String name) {
 }
 
 final BuiltSet<BitesGeoListErrorAttrEnum> _$bitesGeoListErrorAttrEnumValues =
-    new BuiltSet<BitesGeoListErrorAttrEnum>(const <BitesGeoListErrorAttrEnum>[
+    BuiltSet<BitesGeoListErrorAttrEnum>(const <BitesGeoListErrorAttrEnum>[
   _$bitesGeoListErrorAttrEnum_boundaryUuid,
   _$bitesGeoListErrorAttrEnum_unknownDefaultOpenApi,
 ]);
@@ -52,16 +52,16 @@ BitesGeoListErrorCodeEnum _$bitesGeoListErrorCodeEnumValueOf(String name) {
 }
 
 final BuiltSet<BitesGeoListErrorCodeEnum> _$bitesGeoListErrorCodeEnumValues =
-    new BuiltSet<BitesGeoListErrorCodeEnum>(const <BitesGeoListErrorCodeEnum>[
+    BuiltSet<BitesGeoListErrorCodeEnum>(const <BitesGeoListErrorCodeEnum>[
   _$bitesGeoListErrorCodeEnum_invalid,
   _$bitesGeoListErrorCodeEnum_nullCharactersNotAllowed,
   _$bitesGeoListErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
 Serializer<BitesGeoListErrorAttrEnum> _$bitesGeoListErrorAttrEnumSerializer =
-    new _$BitesGeoListErrorAttrEnumSerializer();
+    _$BitesGeoListErrorAttrEnumSerializer();
 Serializer<BitesGeoListErrorCodeEnum> _$bitesGeoListErrorCodeEnumSerializer =
-    new _$BitesGeoListErrorCodeEnumSerializer();
+    _$BitesGeoListErrorCodeEnumSerializer();
 
 class _$BitesGeoListErrorAttrEnumSerializer
     implements PrimitiveSerializer<BitesGeoListErrorAttrEnum> {
@@ -129,19 +129,16 @@ class _$BitesGeoListError extends BitesGeoListError {
 
   factory _$BitesGeoListError(
           [void Function(BitesGeoListErrorBuilder)? updates]) =>
-      (new BitesGeoListErrorBuilder()..update(updates))._build();
+      (BitesGeoListErrorBuilder()..update(updates))._build();
 
-  _$BitesGeoListError._({required this.oneOf}) : super._() {
-    BuiltValueNullFieldError.checkNotNull(oneOf, r'BitesGeoListError', 'oneOf');
-  }
-
+  _$BitesGeoListError._({required this.oneOf}) : super._();
   @override
   BitesGeoListError rebuild(void Function(BitesGeoListErrorBuilder) updates) =>
       (toBuilder()..update(updates)).build();
 
   @override
   BitesGeoListErrorBuilder toBuilder() =>
-      new BitesGeoListErrorBuilder()..replace(this);
+      BitesGeoListErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -188,7 +185,6 @@ class BitesGeoListErrorBuilder
 
   @override
   void replace(BitesGeoListError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesGeoListError;
   }
 
@@ -202,9 +198,10 @@ class BitesGeoListErrorBuilder
 
   _$BitesGeoListError _build() {
     final _$result = _$v ??
-        new _$BitesGeoListError._(
-            oneOf: BuiltValueNullFieldError.checkNotNull(
-                oneOf, r'BitesGeoListError', 'oneOf'));
+        _$BitesGeoListError._(
+          oneOf: BuiltValueNullFieldError.checkNotNull(
+              oneOf, r'BitesGeoListError', 'oneOf'),
+        );
     replace(_$result);
     return _$result;
   }

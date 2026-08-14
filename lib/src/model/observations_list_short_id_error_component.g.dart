@@ -27,7 +27,7 @@ ObservationsListShortIdErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsListShortIdErrorComponentAttrEnum>
-    _$observationsListShortIdErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsListShortIdErrorComponentAttrEnumValues = BuiltSet<
         ObservationsListShortIdErrorComponentAttrEnum>(const <ObservationsListShortIdErrorComponentAttrEnum>[
   _$observationsListShortIdErrorComponentAttrEnum_shortId,
   _$observationsListShortIdErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ ObservationsListShortIdErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsListShortIdErrorComponentCodeEnum>
-    _$observationsListShortIdErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsListShortIdErrorComponentCodeEnumValues = BuiltSet<
         ObservationsListShortIdErrorComponentCodeEnum>(const <ObservationsListShortIdErrorComponentCodeEnum>[
   _$observationsListShortIdErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$observationsListShortIdErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -63,10 +63,10 @@ final BuiltSet<ObservationsListShortIdErrorComponentCodeEnum>
 
 Serializer<ObservationsListShortIdErrorComponentAttrEnum>
     _$observationsListShortIdErrorComponentAttrEnumSerializer =
-    new _$ObservationsListShortIdErrorComponentAttrEnumSerializer();
+    _$ObservationsListShortIdErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListShortIdErrorComponentCodeEnum>
     _$observationsListShortIdErrorComponentCodeEnumSerializer =
-    new _$ObservationsListShortIdErrorComponentCodeEnumSerializer();
+    _$ObservationsListShortIdErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListShortIdErrorComponentAttrEnumSerializer
     implements
@@ -146,20 +146,12 @@ class _$ObservationsListShortIdErrorComponent
   factory _$ObservationsListShortIdErrorComponent(
           [void Function(ObservationsListShortIdErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListShortIdErrorComponentBuilder()..update(updates))
+      (ObservationsListShortIdErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsListShortIdErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsListShortIdErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsListShortIdErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsListShortIdErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsListShortIdErrorComponent rebuild(
           void Function(ObservationsListShortIdErrorComponentBuilder)
@@ -168,7 +160,7 @@ class _$ObservationsListShortIdErrorComponent
 
   @override
   ObservationsListShortIdErrorComponentBuilder toBuilder() =>
-      new ObservationsListShortIdErrorComponentBuilder()..replace(this);
+      ObservationsListShortIdErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -237,7 +229,6 @@ class ObservationsListShortIdErrorComponentBuilder
 
   @override
   void replace(ObservationsListShortIdErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListShortIdErrorComponent;
   }
 
@@ -252,13 +243,14 @@ class ObservationsListShortIdErrorComponentBuilder
 
   _$ObservationsListShortIdErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListShortIdErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsListShortIdErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsListShortIdErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'ObservationsListShortIdErrorComponent', 'detail'));
+        _$ObservationsListShortIdErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsListShortIdErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsListShortIdErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsListShortIdErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

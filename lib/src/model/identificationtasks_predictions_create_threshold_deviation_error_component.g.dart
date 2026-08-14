@@ -31,7 +31,7 @@ IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnum>(const <IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnum>[
   _$identificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnum_thresholdDeviation,
   _$identificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -92,7 +92,7 @@ IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnum
 final BuiltSet<
         IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnumValues =
-    new BuiltSet<
+    BuiltSet<
         IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnum>(const <IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnum>[
   _$identificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnum_invalid,
   _$identificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnum_maxStringLength,
@@ -106,11 +106,11 @@ final BuiltSet<
 Serializer<
         IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnum>
     _$identificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnumSerializer();
+    _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnumSerializer();
 Serializer<
         IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnum>
     _$identificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnumSerializer =
-    new _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnumSerializer();
+    _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentCodeEnumSerializer();
 
 class _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnumSerializer
     implements
@@ -213,27 +213,13 @@ class _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
           [void Function(
                   IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentBuilder)?
               updates]) =>
-      (new IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentBuilder()
+      (IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentBuilder()
             ..update(updates))
           ._build();
 
   _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr,
-        r'IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent',
-        'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code,
-        r'IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent',
-        'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail,
-        r'IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent',
-        'detail');
-  }
-
+      : super._();
   @override
   IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent rebuild(
           void Function(
@@ -244,7 +230,7 @@ class _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
   @override
   IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentBuilder
       toBuilder() =>
-          new IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentBuilder()
+          IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentBuilder()
             ..replace(this);
 
   @override
@@ -328,7 +314,6 @@ class IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentBuilde
   void replace(
       IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
           other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other
         as _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent;
   }
@@ -348,20 +333,21 @@ class IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentBuilde
   _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
       _build() {
     final _$result = _$v ??
-        new _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
+        _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent
             ._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr,
-                r'IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent',
-                'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code,
-                r'IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent',
-                'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail,
-                r'IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent',
-                'detail'));
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr,
+              r'IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent',
+              'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code,
+              r'IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent',
+              'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail,
+              r'IdentificationtasksPredictionsCreateThresholdDeviationErrorComponent',
+              'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -22,7 +22,7 @@ class _$WorkspaceCollaborationGroup extends WorkspaceCollaborationGroup {
 
   factory _$WorkspaceCollaborationGroup(
           [void Function(WorkspaceCollaborationGroupBuilder)? updates]) =>
-      (new WorkspaceCollaborationGroupBuilder()..update(updates))._build();
+      (WorkspaceCollaborationGroupBuilder()..update(updates))._build();
 
   _$WorkspaceCollaborationGroup._(
       {required this.id,
@@ -31,21 +31,7 @@ class _$WorkspaceCollaborationGroup extends WorkspaceCollaborationGroup {
       required this.reviewers,
       required this.createdAt,
       required this.updatedAt})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        id, r'WorkspaceCollaborationGroup', 'id');
-    BuiltValueNullFieldError.checkNotNull(
-        nameValue, r'WorkspaceCollaborationGroup', 'nameValue');
-    BuiltValueNullFieldError.checkNotNull(
-        workspaces, r'WorkspaceCollaborationGroup', 'workspaces');
-    BuiltValueNullFieldError.checkNotNull(
-        reviewers, r'WorkspaceCollaborationGroup', 'reviewers');
-    BuiltValueNullFieldError.checkNotNull(
-        createdAt, r'WorkspaceCollaborationGroup', 'createdAt');
-    BuiltValueNullFieldError.checkNotNull(
-        updatedAt, r'WorkspaceCollaborationGroup', 'updatedAt');
-  }
-
+      : super._();
   @override
   WorkspaceCollaborationGroup rebuild(
           void Function(WorkspaceCollaborationGroupBuilder) updates) =>
@@ -53,7 +39,7 @@ class _$WorkspaceCollaborationGroup extends WorkspaceCollaborationGroup {
 
   @override
   WorkspaceCollaborationGroupBuilder toBuilder() =>
-      new WorkspaceCollaborationGroupBuilder()..replace(this);
+      WorkspaceCollaborationGroupBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -109,13 +95,13 @@ class WorkspaceCollaborationGroupBuilder
 
   ListBuilder<SimpleWorkspace>? _workspaces;
   ListBuilder<SimpleWorkspace> get workspaces =>
-      _$this._workspaces ??= new ListBuilder<SimpleWorkspace>();
+      _$this._workspaces ??= ListBuilder<SimpleWorkspace>();
   set workspaces(ListBuilder<SimpleWorkspace>? workspaces) =>
       _$this._workspaces = workspaces;
 
   ListBuilder<SimpleUser>? _reviewers;
   ListBuilder<SimpleUser> get reviewers =>
-      _$this._reviewers ??= new ListBuilder<SimpleUser>();
+      _$this._reviewers ??= ListBuilder<SimpleUser>();
   set reviewers(ListBuilder<SimpleUser>? reviewers) =>
       _$this._reviewers = reviewers;
 
@@ -147,7 +133,6 @@ class WorkspaceCollaborationGroupBuilder
 
   @override
   void replace(WorkspaceCollaborationGroup other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$WorkspaceCollaborationGroup;
   }
 
@@ -163,17 +148,18 @@ class WorkspaceCollaborationGroupBuilder
     _$WorkspaceCollaborationGroup _$result;
     try {
       _$result = _$v ??
-          new _$WorkspaceCollaborationGroup._(
-              id: BuiltValueNullFieldError.checkNotNull(
-                  id, r'WorkspaceCollaborationGroup', 'id'),
-              nameValue: BuiltValueNullFieldError.checkNotNull(
-                  nameValue, r'WorkspaceCollaborationGroup', 'nameValue'),
-              workspaces: workspaces.build(),
-              reviewers: reviewers.build(),
-              createdAt: BuiltValueNullFieldError.checkNotNull(
-                  createdAt, r'WorkspaceCollaborationGroup', 'createdAt'),
-              updatedAt: BuiltValueNullFieldError.checkNotNull(
-                  updatedAt, r'WorkspaceCollaborationGroup', 'updatedAt'));
+          _$WorkspaceCollaborationGroup._(
+            id: BuiltValueNullFieldError.checkNotNull(
+                id, r'WorkspaceCollaborationGroup', 'id'),
+            nameValue: BuiltValueNullFieldError.checkNotNull(
+                nameValue, r'WorkspaceCollaborationGroup', 'nameValue'),
+            workspaces: workspaces.build(),
+            reviewers: reviewers.build(),
+            createdAt: BuiltValueNullFieldError.checkNotNull(
+                createdAt, r'WorkspaceCollaborationGroup', 'createdAt'),
+            updatedAt: BuiltValueNullFieldError.checkNotNull(
+                updatedAt, r'WorkspaceCollaborationGroup', 'updatedAt'),
+          );
     } catch (_) {
       late String _$failedField;
       try {
@@ -182,7 +168,7 @@ class WorkspaceCollaborationGroupBuilder
         _$failedField = 'reviewers';
         reviewers.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'WorkspaceCollaborationGroup', _$failedField, e.toString());
       }
       rethrow;

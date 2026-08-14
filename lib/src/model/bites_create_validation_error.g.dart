@@ -26,7 +26,7 @@ BitesCreateValidationErrorTypeEnum _$bitesCreateValidationErrorTypeEnumValueOf(
 }
 
 final BuiltSet<BitesCreateValidationErrorTypeEnum>
-    _$bitesCreateValidationErrorTypeEnumValues = new BuiltSet<
+    _$bitesCreateValidationErrorTypeEnumValues = BuiltSet<
         BitesCreateValidationErrorTypeEnum>(const <BitesCreateValidationErrorTypeEnum>[
   _$bitesCreateValidationErrorTypeEnum_validationError,
   _$bitesCreateValidationErrorTypeEnum_unknownDefaultOpenApi,
@@ -34,7 +34,7 @@ final BuiltSet<BitesCreateValidationErrorTypeEnum>
 
 Serializer<BitesCreateValidationErrorTypeEnum>
     _$bitesCreateValidationErrorTypeEnumSerializer =
-    new _$BitesCreateValidationErrorTypeEnumSerializer();
+    _$BitesCreateValidationErrorTypeEnumSerializer();
 
 class _$BitesCreateValidationErrorTypeEnumSerializer
     implements PrimitiveSerializer<BitesCreateValidationErrorTypeEnum> {
@@ -74,16 +74,10 @@ class _$BitesCreateValidationError extends BitesCreateValidationError {
 
   factory _$BitesCreateValidationError(
           [void Function(BitesCreateValidationErrorBuilder)? updates]) =>
-      (new BitesCreateValidationErrorBuilder()..update(updates))._build();
+      (BitesCreateValidationErrorBuilder()..update(updates))._build();
 
   _$BitesCreateValidationError._({required this.type, required this.errors})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        type, r'BitesCreateValidationError', 'type');
-    BuiltValueNullFieldError.checkNotNull(
-        errors, r'BitesCreateValidationError', 'errors');
-  }
-
+      : super._();
   @override
   BitesCreateValidationError rebuild(
           void Function(BitesCreateValidationErrorBuilder) updates) =>
@@ -91,7 +85,7 @@ class _$BitesCreateValidationError extends BitesCreateValidationError {
 
   @override
   BitesCreateValidationErrorBuilder toBuilder() =>
-      new BitesCreateValidationErrorBuilder()..replace(this);
+      BitesCreateValidationErrorBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -130,7 +124,7 @@ class BitesCreateValidationErrorBuilder
 
   ListBuilder<BitesCreateError>? _errors;
   ListBuilder<BitesCreateError> get errors =>
-      _$this._errors ??= new ListBuilder<BitesCreateError>();
+      _$this._errors ??= ListBuilder<BitesCreateError>();
   set errors(ListBuilder<BitesCreateError>? errors) => _$this._errors = errors;
 
   BitesCreateValidationErrorBuilder() {
@@ -149,7 +143,6 @@ class BitesCreateValidationErrorBuilder
 
   @override
   void replace(BitesCreateValidationError other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BitesCreateValidationError;
   }
 
@@ -165,17 +158,18 @@ class BitesCreateValidationErrorBuilder
     _$BitesCreateValidationError _$result;
     try {
       _$result = _$v ??
-          new _$BitesCreateValidationError._(
-              type: BuiltValueNullFieldError.checkNotNull(
-                  type, r'BitesCreateValidationError', 'type'),
-              errors: errors.build());
+          _$BitesCreateValidationError._(
+            type: BuiltValueNullFieldError.checkNotNull(
+                type, r'BitesCreateValidationError', 'type'),
+            errors: errors.build(),
+          );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'errors';
         errors.build();
       } catch (e) {
-        throw new BuiltValueNestedFieldError(
+        throw BuiltValueNestedFieldError(
             r'BitesCreateValidationError', _$failedField, e.toString());
       }
       rethrow;

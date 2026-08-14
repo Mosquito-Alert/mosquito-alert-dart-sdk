@@ -27,7 +27,7 @@ ObservationsListMineTagsErrorComponentAttrEnum
 }
 
 final BuiltSet<ObservationsListMineTagsErrorComponentAttrEnum>
-    _$observationsListMineTagsErrorComponentAttrEnumValues = new BuiltSet<
+    _$observationsListMineTagsErrorComponentAttrEnumValues = BuiltSet<
         ObservationsListMineTagsErrorComponentAttrEnum>(const <ObservationsListMineTagsErrorComponentAttrEnum>[
   _$observationsListMineTagsErrorComponentAttrEnum_tags,
   _$observationsListMineTagsErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -55,7 +55,7 @@ ObservationsListMineTagsErrorComponentCodeEnum
 }
 
 final BuiltSet<ObservationsListMineTagsErrorComponentCodeEnum>
-    _$observationsListMineTagsErrorComponentCodeEnumValues = new BuiltSet<
+    _$observationsListMineTagsErrorComponentCodeEnumValues = BuiltSet<
         ObservationsListMineTagsErrorComponentCodeEnum>(const <ObservationsListMineTagsErrorComponentCodeEnum>[
   _$observationsListMineTagsErrorComponentCodeEnum_nullCharactersNotAllowed,
   _$observationsListMineTagsErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -63,10 +63,10 @@ final BuiltSet<ObservationsListMineTagsErrorComponentCodeEnum>
 
 Serializer<ObservationsListMineTagsErrorComponentAttrEnum>
     _$observationsListMineTagsErrorComponentAttrEnumSerializer =
-    new _$ObservationsListMineTagsErrorComponentAttrEnumSerializer();
+    _$ObservationsListMineTagsErrorComponentAttrEnumSerializer();
 Serializer<ObservationsListMineTagsErrorComponentCodeEnum>
     _$observationsListMineTagsErrorComponentCodeEnumSerializer =
-    new _$ObservationsListMineTagsErrorComponentCodeEnumSerializer();
+    _$ObservationsListMineTagsErrorComponentCodeEnumSerializer();
 
 class _$ObservationsListMineTagsErrorComponentAttrEnumSerializer
     implements
@@ -146,20 +146,12 @@ class _$ObservationsListMineTagsErrorComponent
   factory _$ObservationsListMineTagsErrorComponent(
           [void Function(ObservationsListMineTagsErrorComponentBuilder)?
               updates]) =>
-      (new ObservationsListMineTagsErrorComponentBuilder()..update(updates))
+      (ObservationsListMineTagsErrorComponentBuilder()..update(updates))
           ._build();
 
   _$ObservationsListMineTagsErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'ObservationsListMineTagsErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'ObservationsListMineTagsErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'ObservationsListMineTagsErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   ObservationsListMineTagsErrorComponent rebuild(
           void Function(ObservationsListMineTagsErrorComponentBuilder)
@@ -168,7 +160,7 @@ class _$ObservationsListMineTagsErrorComponent
 
   @override
   ObservationsListMineTagsErrorComponentBuilder toBuilder() =>
-      new ObservationsListMineTagsErrorComponentBuilder()..replace(this);
+      ObservationsListMineTagsErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -237,7 +229,6 @@ class ObservationsListMineTagsErrorComponentBuilder
 
   @override
   void replace(ObservationsListMineTagsErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$ObservationsListMineTagsErrorComponent;
   }
 
@@ -252,13 +243,14 @@ class ObservationsListMineTagsErrorComponentBuilder
 
   _$ObservationsListMineTagsErrorComponent _build() {
     final _$result = _$v ??
-        new _$ObservationsListMineTagsErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'ObservationsListMineTagsErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'ObservationsListMineTagsErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(
-                detail, r'ObservationsListMineTagsErrorComponent', 'detail'));
+        _$ObservationsListMineTagsErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'ObservationsListMineTagsErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'ObservationsListMineTagsErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'ObservationsListMineTagsErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }

@@ -27,7 +27,7 @@ BreedingsitesCreateHasWaterErrorComponentAttrEnum
 }
 
 final BuiltSet<BreedingsitesCreateHasWaterErrorComponentAttrEnum>
-    _$breedingsitesCreateHasWaterErrorComponentAttrEnumValues = new BuiltSet<
+    _$breedingsitesCreateHasWaterErrorComponentAttrEnumValues = BuiltSet<
         BreedingsitesCreateHasWaterErrorComponentAttrEnum>(const <BreedingsitesCreateHasWaterErrorComponentAttrEnum>[
   _$breedingsitesCreateHasWaterErrorComponentAttrEnum_hasWater,
   _$breedingsitesCreateHasWaterErrorComponentAttrEnum_unknownDefaultOpenApi,
@@ -54,7 +54,7 @@ BreedingsitesCreateHasWaterErrorComponentCodeEnum
 }
 
 final BuiltSet<BreedingsitesCreateHasWaterErrorComponentCodeEnum>
-    _$breedingsitesCreateHasWaterErrorComponentCodeEnumValues = new BuiltSet<
+    _$breedingsitesCreateHasWaterErrorComponentCodeEnumValues = BuiltSet<
         BreedingsitesCreateHasWaterErrorComponentCodeEnum>(const <BreedingsitesCreateHasWaterErrorComponentCodeEnum>[
   _$breedingsitesCreateHasWaterErrorComponentCodeEnum_invalid,
   _$breedingsitesCreateHasWaterErrorComponentCodeEnum_unknownDefaultOpenApi,
@@ -62,10 +62,10 @@ final BuiltSet<BreedingsitesCreateHasWaterErrorComponentCodeEnum>
 
 Serializer<BreedingsitesCreateHasWaterErrorComponentAttrEnum>
     _$breedingsitesCreateHasWaterErrorComponentAttrEnumSerializer =
-    new _$BreedingsitesCreateHasWaterErrorComponentAttrEnumSerializer();
+    _$BreedingsitesCreateHasWaterErrorComponentAttrEnumSerializer();
 Serializer<BreedingsitesCreateHasWaterErrorComponentCodeEnum>
     _$breedingsitesCreateHasWaterErrorComponentCodeEnumSerializer =
-    new _$BreedingsitesCreateHasWaterErrorComponentCodeEnumSerializer();
+    _$BreedingsitesCreateHasWaterErrorComponentCodeEnumSerializer();
 
 class _$BreedingsitesCreateHasWaterErrorComponentAttrEnumSerializer
     implements
@@ -145,20 +145,12 @@ class _$BreedingsitesCreateHasWaterErrorComponent
   factory _$BreedingsitesCreateHasWaterErrorComponent(
           [void Function(BreedingsitesCreateHasWaterErrorComponentBuilder)?
               updates]) =>
-      (new BreedingsitesCreateHasWaterErrorComponentBuilder()..update(updates))
+      (BreedingsitesCreateHasWaterErrorComponentBuilder()..update(updates))
           ._build();
 
   _$BreedingsitesCreateHasWaterErrorComponent._(
       {required this.attr, required this.code, required this.detail})
-      : super._() {
-    BuiltValueNullFieldError.checkNotNull(
-        attr, r'BreedingsitesCreateHasWaterErrorComponent', 'attr');
-    BuiltValueNullFieldError.checkNotNull(
-        code, r'BreedingsitesCreateHasWaterErrorComponent', 'code');
-    BuiltValueNullFieldError.checkNotNull(
-        detail, r'BreedingsitesCreateHasWaterErrorComponent', 'detail');
-  }
-
+      : super._();
   @override
   BreedingsitesCreateHasWaterErrorComponent rebuild(
           void Function(BreedingsitesCreateHasWaterErrorComponentBuilder)
@@ -167,7 +159,7 @@ class _$BreedingsitesCreateHasWaterErrorComponent
 
   @override
   BreedingsitesCreateHasWaterErrorComponentBuilder toBuilder() =>
-      new BreedingsitesCreateHasWaterErrorComponentBuilder()..replace(this);
+      BreedingsitesCreateHasWaterErrorComponentBuilder()..replace(this);
 
   @override
   bool operator ==(Object other) {
@@ -236,7 +228,6 @@ class BreedingsitesCreateHasWaterErrorComponentBuilder
 
   @override
   void replace(BreedingsitesCreateHasWaterErrorComponent other) {
-    ArgumentError.checkNotNull(other, 'other');
     _$v = other as _$BreedingsitesCreateHasWaterErrorComponent;
   }
 
@@ -252,13 +243,14 @@ class BreedingsitesCreateHasWaterErrorComponentBuilder
 
   _$BreedingsitesCreateHasWaterErrorComponent _build() {
     final _$result = _$v ??
-        new _$BreedingsitesCreateHasWaterErrorComponent._(
-            attr: BuiltValueNullFieldError.checkNotNull(
-                attr, r'BreedingsitesCreateHasWaterErrorComponent', 'attr'),
-            code: BuiltValueNullFieldError.checkNotNull(
-                code, r'BreedingsitesCreateHasWaterErrorComponent', 'code'),
-            detail: BuiltValueNullFieldError.checkNotNull(detail,
-                r'BreedingsitesCreateHasWaterErrorComponent', 'detail'));
+        _$BreedingsitesCreateHasWaterErrorComponent._(
+          attr: BuiltValueNullFieldError.checkNotNull(
+              attr, r'BreedingsitesCreateHasWaterErrorComponent', 'attr'),
+          code: BuiltValueNullFieldError.checkNotNull(
+              code, r'BreedingsitesCreateHasWaterErrorComponent', 'code'),
+          detail: BuiltValueNullFieldError.checkNotNull(
+              detail, r'BreedingsitesCreateHasWaterErrorComponent', 'detail'),
+        );
     replace(_$result);
     return _$result;
   }
