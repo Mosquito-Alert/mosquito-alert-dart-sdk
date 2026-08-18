@@ -228,12 +228,14 @@ class _$PatchedUserRequestLocaleEnumSerializer
 class _$PatchedUserRequest extends PatchedUserRequest {
   @override
   final PatchedUserRequestLocaleEnum? locale;
+  @override
+  final BuiltList<String>? notificationTopics;
 
   factory _$PatchedUserRequest(
           [void Function(PatchedUserRequestBuilder)? updates]) =>
       (PatchedUserRequestBuilder()..update(updates))._build();
 
-  _$PatchedUserRequest._({this.locale}) : super._();
+  _$PatchedUserRequest._({this.locale, this.notificationTopics}) : super._();
   @override
   PatchedUserRequest rebuild(
           void Function(PatchedUserRequestBuilder) updates) =>
@@ -246,13 +248,16 @@ class _$PatchedUserRequest extends PatchedUserRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is PatchedUserRequest && locale == other.locale;
+    return other is PatchedUserRequest &&
+        locale == other.locale &&
+        notificationTopics == other.notificationTopics;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, locale.hashCode);
+    _$hash = $jc(_$hash, notificationTopics.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -260,7 +265,8 @@ class _$PatchedUserRequest extends PatchedUserRequest {
   @override
   String toString() {
     return (newBuiltValueToStringHelper(r'PatchedUserRequest')
-          ..add('locale', locale))
+          ..add('locale', locale)
+          ..add('notificationTopics', notificationTopics))
         .toString();
   }
 }
@@ -273,6 +279,12 @@ class PatchedUserRequestBuilder
   PatchedUserRequestLocaleEnum? get locale => _$this._locale;
   set locale(PatchedUserRequestLocaleEnum? locale) => _$this._locale = locale;
 
+  ListBuilder<String>? _notificationTopics;
+  ListBuilder<String> get notificationTopics =>
+      _$this._notificationTopics ??= ListBuilder<String>();
+  set notificationTopics(ListBuilder<String>? notificationTopics) =>
+      _$this._notificationTopics = notificationTopics;
+
   PatchedUserRequestBuilder() {
     PatchedUserRequest._defaults(this);
   }
@@ -281,6 +293,7 @@ class PatchedUserRequestBuilder
     final $v = _$v;
     if ($v != null) {
       _locale = $v.locale;
+      _notificationTopics = $v.notificationTopics?.toBuilder();
       _$v = null;
     }
     return this;
@@ -300,10 +313,24 @@ class PatchedUserRequestBuilder
   PatchedUserRequest build() => _build();
 
   _$PatchedUserRequest _build() {
-    final _$result = _$v ??
-        _$PatchedUserRequest._(
-          locale: locale,
-        );
+    _$PatchedUserRequest _$result;
+    try {
+      _$result = _$v ??
+          _$PatchedUserRequest._(
+            locale: locale,
+            notificationTopics: _notificationTopics?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'notificationTopics';
+        _notificationTopics?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+            r'PatchedUserRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

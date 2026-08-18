@@ -28,5 +28,11 @@ void main() {
       // TODO
     });
 
+    // Filter users subscribed to any of the provided notification topics.
+    // BuiltList<String> notificationTopics
+    test('to test the property `notificationTopics`', () async {
+      // TODO
+    });
+
   });
 }

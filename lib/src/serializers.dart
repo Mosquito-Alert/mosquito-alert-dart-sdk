@@ -458,6 +458,8 @@ import 'package:mosquito_alert/src/model/messages_create_audience_last_login_aft
 import 'package:mosquito_alert/src/model/messages_create_audience_last_login_before_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_audience_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_audience_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_notification_topics_error_component.dart';
+import 'package:mosquito_alert/src/model/messages_create_audience_notification_topics_index_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_bg_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_bn_error_component.dart';
 import 'package:mosquito_alert/src/model/messages_create_content_body_ca_error_component.dart';
@@ -724,14 +726,20 @@ import 'package:mosquito_alert/src/model/users_audience_filter_last_login_after_
 import 'package:mosquito_alert/src/model/users_audience_filter_last_login_before_error_component.dart';
 import 'package:mosquito_alert/src/model/users_audience_filter_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_audience_filter_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_notification_topics_error_component.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_notification_topics_index_error_component.dart';
 import 'package:mosquito_alert/src/model/users_audience_filter_validation_error.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_error.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/users_partial_update_notification_topics_error_component.dart';
+import 'package:mosquito_alert/src/model/users_partial_update_notification_topics_index_error_component.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_validation_error.dart';
 import 'package:mosquito_alert/src/model/users_update_error.dart';
 import 'package:mosquito_alert/src/model/users_update_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_update_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/users_update_notification_topics_error_component.dart';
+import 'package:mosquito_alert/src/model/users_update_notification_topics_index_error_component.dart';
 import 'package:mosquito_alert/src/model/users_update_validation_error.dart';
 import 'package:mosquito_alert/src/model/workspace.dart';
 import 'package:mosquito_alert/src/model/workspace_collaboration_group.dart';
@@ -1184,6 +1192,8 @@ part 'serializers.g.dart';
   MessagesCreateAudienceLastLoginBeforeErrorComponent,
   MessagesCreateAudienceLocaleErrorComponent,
   MessagesCreateAudienceNonFieldErrorsErrorComponent,
+  MessagesCreateAudienceNotificationTopicsErrorComponent,
+  MessagesCreateAudienceNotificationTopicsINDEXErrorComponent,
   MessagesCreateContentBodyBgErrorComponent,
   MessagesCreateContentBodyBnErrorComponent,
   MessagesCreateContentBodyCaErrorComponent,
@@ -1450,14 +1460,20 @@ part 'serializers.g.dart';
   UsersAudienceFilterLastLoginBeforeErrorComponent,
   UsersAudienceFilterLocaleErrorComponent,
   UsersAudienceFilterNonFieldErrorsErrorComponent,
+  UsersAudienceFilterNotificationTopicsErrorComponent,
+  UsersAudienceFilterNotificationTopicsINDEXErrorComponent,
   UsersAudienceFilterValidationError,
   UsersPartialUpdateError,
   UsersPartialUpdateLocaleErrorComponent,
   UsersPartialUpdateNonFieldErrorsErrorComponent,
+  UsersPartialUpdateNotificationTopicsErrorComponent,
+  UsersPartialUpdateNotificationTopicsINDEXErrorComponent,
   UsersPartialUpdateValidationError,
   UsersUpdateError,
   UsersUpdateLocaleErrorComponent,
   UsersUpdateNonFieldErrorsErrorComponent,
+  UsersUpdateNotificationTopicsErrorComponent,
+  UsersUpdateNotificationTopicsINDEXErrorComponent,
   UsersUpdateValidationError,
   Workspace,
   WorkspaceCollaborationGroup,

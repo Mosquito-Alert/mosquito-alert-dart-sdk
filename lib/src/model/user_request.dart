@@ -13,12 +13,16 @@ part 'user_request.g.dart';
 ///
 /// Properties:
 /// * [locale] - The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
+/// * [notificationTopics] 
 @BuiltValue()
 abstract class UserRequest implements Built<UserRequest, UserRequestBuilder> {
   /// The locale code representing the language preference selected by the user for displaying the interface text. Enter the locale following the BCP 47 standard in 'language' or 'language-region' format (e.g., 'en' for English, 'en-US' for English (United States), 'fr' for French). The language is a two-letter ISO 639-1 code, and the region is an optional two-letter ISO 3166-1 alpha-2 code.
   @BuiltValueField(wireName: r'locale')
   UserRequestLocaleEnum? get locale;
   // enum localeEnum {  en,  es,  ca,  eu,  bn,  sv,  de,  sq,  el,  gl,  hu,  pt,  sl,  it,  fr,  bg,  ro,  hr,  mk,  sr,  lb,  nl,  tr,  zh-CN,  };
+
+  @BuiltValueField(wireName: r'notification_topics')
+  BuiltList<String>? get notificationTopics;
 
   UserRequest._();
 
@@ -51,6 +55,13 @@ class _$UserRequestSerializer implements PrimitiveSerializer<UserRequest> {
         specifiedType: const FullType(UserRequestLocaleEnum),
       );
     }
+    if (object.notificationTopics != null) {
+      yield r'notification_topics';
+      yield serializers.serialize(
+        object.notificationTopics,
+        specifiedType: const FullType(BuiltList, [FullType(String)]),
+      );
+    }
   }
 
   @override
@@ -81,6 +92,14 @@ class _$UserRequestSerializer implements PrimitiveSerializer<UserRequest> {
           ) as UserRequestLocaleEnum?;
           if (valueDes == null) continue;
           result.locale = valueDes;
+          break;
+        case r'notification_topics':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>?;
+          if (valueDes == null) continue;
+          result.notificationTopics.replace(valueDes);
           break;
         default:
           unhandled.add(key);

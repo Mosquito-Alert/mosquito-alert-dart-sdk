@@ -13,5 +13,10 @@ void main() {
       // TODO
     });
 
+    // BuiltList<String> notificationTopics
+    test('to test the property `notificationTopics`', () async {
+      // TODO
+    });
+
   });
 }

@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **languageIso** | **String** | ISO 639-1 code | [default to 'en']
 **isGuest** | **bool** |  | 
 **score** | [**UserScore**](UserScore.md) |  | 
+**notificationTopics** | **BuiltList&lt;String&gt;** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

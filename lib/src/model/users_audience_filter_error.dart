@@ -9,6 +9,8 @@ import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/users_audience_filter_last_login_before_error_component.dart';
 import 'package:mosquito_alert/src/model/users_audience_filter_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_audience_filter_non_field_errors_error_component.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_notification_topics_error_component.dart';
+import 'package:mosquito_alert/src/model/users_audience_filter_notification_topics_index_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';
@@ -23,7 +25,7 @@ part 'users_audience_filter_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class UsersAudienceFilterError implements Built<UsersAudienceFilterError, UsersAudienceFilterErrorBuilder> {
-  /// One Of [UsersAudienceFilterInAreaErrorComponent], [UsersAudienceFilterLastLoginAfterErrorComponent], [UsersAudienceFilterLastLoginBeforeErrorComponent], [UsersAudienceFilterLocaleErrorComponent], [UsersAudienceFilterNonFieldErrorsErrorComponent]
+  /// One Of [UsersAudienceFilterInAreaErrorComponent], [UsersAudienceFilterLastLoginAfterErrorComponent], [UsersAudienceFilterLastLoginBeforeErrorComponent], [UsersAudienceFilterLocaleErrorComponent], [UsersAudienceFilterNonFieldErrorsErrorComponent], [UsersAudienceFilterNotificationTopicsErrorComponent], [UsersAudienceFilterNotificationTopicsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -34,6 +36,8 @@ abstract class UsersAudienceFilterError implements Built<UsersAudienceFilterErro
     r'last_login_before': UsersAudienceFilterLastLoginBeforeErrorComponent,
     r'locale': UsersAudienceFilterLocaleErrorComponent,
     r'non_field_errors': UsersAudienceFilterNonFieldErrorsErrorComponent,
+    r'notification_topics': UsersAudienceFilterNotificationTopicsErrorComponent,
+    r'notification_topics.INDEX': UsersAudienceFilterNotificationTopicsINDEXErrorComponent,
   };
 
   UsersAudienceFilterError._();
@@ -64,6 +68,12 @@ extension UsersAudienceFilterErrorDiscriminatorExt on UsersAudienceFilterError {
         if (this is UsersAudienceFilterNonFieldErrorsErrorComponent) {
             return r'non_field_errors';
         }
+        if (this is UsersAudienceFilterNotificationTopicsErrorComponent) {
+            return r'notification_topics';
+        }
+        if (this is UsersAudienceFilterNotificationTopicsINDEXErrorComponent) {
+            return r'notification_topics.INDEX';
+        }
         return null;
     }
 }
@@ -83,6 +93,12 @@ extension UsersAudienceFilterErrorBuilderDiscriminatorExt on UsersAudienceFilter
         }
         if (this is UsersAudienceFilterNonFieldErrorsErrorComponentBuilder) {
             return r'non_field_errors';
+        }
+        if (this is UsersAudienceFilterNotificationTopicsErrorComponentBuilder) {
+            return r'notification_topics';
+        }
+        if (this is UsersAudienceFilterNotificationTopicsINDEXErrorComponentBuilder) {
+            return r'notification_topics.INDEX';
         }
         return null;
     }
@@ -122,7 +138,7 @@ class _$UsersAudienceFilterErrorSerializer implements PrimitiveSerializer<UsersA
     final discIndex = serializedList.indexOf(UsersAudienceFilterError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [UsersAudienceFilterInAreaErrorComponent, UsersAudienceFilterLastLoginAfterErrorComponent, UsersAudienceFilterLastLoginBeforeErrorComponent, UsersAudienceFilterLocaleErrorComponent, UsersAudienceFilterNonFieldErrorsErrorComponent, ];
+    final oneOfTypes = [UsersAudienceFilterInAreaErrorComponent, UsersAudienceFilterLastLoginAfterErrorComponent, UsersAudienceFilterLastLoginBeforeErrorComponent, UsersAudienceFilterLocaleErrorComponent, UsersAudienceFilterNonFieldErrorsErrorComponent, UsersAudienceFilterNotificationTopicsErrorComponent, UsersAudienceFilterNotificationTopicsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -161,6 +177,20 @@ class _$UsersAudienceFilterErrorSerializer implements PrimitiveSerializer<UsersA
         ) as UsersAudienceFilterNonFieldErrorsErrorComponent;
         oneOfType = UsersAudienceFilterNonFieldErrorsErrorComponent;
         break;
+      case r'notification_topics':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(UsersAudienceFilterNotificationTopicsErrorComponent),
+        ) as UsersAudienceFilterNotificationTopicsErrorComponent;
+        oneOfType = UsersAudienceFilterNotificationTopicsErrorComponent;
+        break;
+      case r'notification_topics.INDEX':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(UsersAudienceFilterNotificationTopicsINDEXErrorComponent),
+        ) as UsersAudienceFilterNotificationTopicsINDEXErrorComponent;
+        oneOfType = UsersAudienceFilterNotificationTopicsINDEXErrorComponent;
+        break;
       default:
         throw UnsupportedError("Couldn't deserialize oneOf for the discriminator value: ${discValue}");
     }
@@ -171,8 +201,8 @@ class _$UsersAudienceFilterErrorSerializer implements PrimitiveSerializer<UsersA
 
 class UsersAudienceFilterErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'locale')
-  static const UsersAudienceFilterErrorAttrEnum locale = _$usersAudienceFilterErrorAttrEnum_locale;
+  @BuiltValueEnumConst(wireName: r'notification_topics.INDEX')
+  static const UsersAudienceFilterErrorAttrEnum notificationTopicsPeriodINDEX = _$usersAudienceFilterErrorAttrEnum_notificationTopicsPeriodINDEX;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const UsersAudienceFilterErrorAttrEnum unknownDefaultOpenApi = _$usersAudienceFilterErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -186,10 +216,18 @@ class UsersAudienceFilterErrorAttrEnum extends EnumClass {
 
 class UsersAudienceFilterErrorCodeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'invalid_choice')
-  static const UsersAudienceFilterErrorCodeEnum invalidChoice = _$usersAudienceFilterErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'blank')
+  static const UsersAudienceFilterErrorCodeEnum blank = _$usersAudienceFilterErrorCodeEnum_blank;
+  @BuiltValueEnumConst(wireName: r'invalid')
+  static const UsersAudienceFilterErrorCodeEnum invalid = _$usersAudienceFilterErrorCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const UsersAudienceFilterErrorCodeEnum null_ = _$usersAudienceFilterErrorCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
+  static const UsersAudienceFilterErrorCodeEnum nullCharactersNotAllowed = _$usersAudienceFilterErrorCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'required')
+  static const UsersAudienceFilterErrorCodeEnum required_ = _$usersAudienceFilterErrorCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
+  static const UsersAudienceFilterErrorCodeEnum surrogateCharactersNotAllowed = _$usersAudienceFilterErrorCodeEnum_surrogateCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const UsersAudienceFilterErrorCodeEnum unknownDefaultOpenApi = _$usersAudienceFilterErrorCodeEnum_unknownDefaultOpenApi;
 

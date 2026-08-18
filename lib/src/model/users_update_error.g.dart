@@ -6,16 +6,17 @@ part of 'users_update_error.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const UsersUpdateErrorAttrEnum _$usersUpdateErrorAttrEnum_locale =
-    const UsersUpdateErrorAttrEnum._('locale');
+const UsersUpdateErrorAttrEnum
+    _$usersUpdateErrorAttrEnum_notificationTopicsPeriodINDEX =
+    const UsersUpdateErrorAttrEnum._('notificationTopicsPeriodINDEX');
 const UsersUpdateErrorAttrEnum
     _$usersUpdateErrorAttrEnum_unknownDefaultOpenApi =
     const UsersUpdateErrorAttrEnum._('unknownDefaultOpenApi');
 
 UsersUpdateErrorAttrEnum _$usersUpdateErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'locale':
-      return _$usersUpdateErrorAttrEnum_locale;
+    case 'notificationTopicsPeriodINDEX':
+      return _$usersUpdateErrorAttrEnum_notificationTopicsPeriodINDEX;
     case 'unknownDefaultOpenApi':
       return _$usersUpdateErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -25,24 +26,42 @@ UsersUpdateErrorAttrEnum _$usersUpdateErrorAttrEnumValueOf(String name) {
 
 final BuiltSet<UsersUpdateErrorAttrEnum> _$usersUpdateErrorAttrEnumValues =
     BuiltSet<UsersUpdateErrorAttrEnum>(const <UsersUpdateErrorAttrEnum>[
-  _$usersUpdateErrorAttrEnum_locale,
+  _$usersUpdateErrorAttrEnum_notificationTopicsPeriodINDEX,
   _$usersUpdateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
-const UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnum_invalidChoice =
-    const UsersUpdateErrorCodeEnum._('invalidChoice');
+const UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnum_blank =
+    const UsersUpdateErrorCodeEnum._('blank');
+const UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnum_invalid =
+    const UsersUpdateErrorCodeEnum._('invalid');
 const UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnum_null_ =
     const UsersUpdateErrorCodeEnum._('null_');
+const UsersUpdateErrorCodeEnum
+    _$usersUpdateErrorCodeEnum_nullCharactersNotAllowed =
+    const UsersUpdateErrorCodeEnum._('nullCharactersNotAllowed');
+const UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnum_required_ =
+    const UsersUpdateErrorCodeEnum._('required_');
+const UsersUpdateErrorCodeEnum
+    _$usersUpdateErrorCodeEnum_surrogateCharactersNotAllowed =
+    const UsersUpdateErrorCodeEnum._('surrogateCharactersNotAllowed');
 const UsersUpdateErrorCodeEnum
     _$usersUpdateErrorCodeEnum_unknownDefaultOpenApi =
     const UsersUpdateErrorCodeEnum._('unknownDefaultOpenApi');
 
 UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnumValueOf(String name) {
   switch (name) {
-    case 'invalidChoice':
-      return _$usersUpdateErrorCodeEnum_invalidChoice;
+    case 'blank':
+      return _$usersUpdateErrorCodeEnum_blank;
+    case 'invalid':
+      return _$usersUpdateErrorCodeEnum_invalid;
     case 'null_':
       return _$usersUpdateErrorCodeEnum_null_;
+    case 'nullCharactersNotAllowed':
+      return _$usersUpdateErrorCodeEnum_nullCharactersNotAllowed;
+    case 'required_':
+      return _$usersUpdateErrorCodeEnum_required_;
+    case 'surrogateCharactersNotAllowed':
+      return _$usersUpdateErrorCodeEnum_surrogateCharactersNotAllowed;
     case 'unknownDefaultOpenApi':
       return _$usersUpdateErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -52,8 +71,12 @@ UsersUpdateErrorCodeEnum _$usersUpdateErrorCodeEnumValueOf(String name) {
 
 final BuiltSet<UsersUpdateErrorCodeEnum> _$usersUpdateErrorCodeEnumValues =
     BuiltSet<UsersUpdateErrorCodeEnum>(const <UsersUpdateErrorCodeEnum>[
-  _$usersUpdateErrorCodeEnum_invalidChoice,
+  _$usersUpdateErrorCodeEnum_blank,
+  _$usersUpdateErrorCodeEnum_invalid,
   _$usersUpdateErrorCodeEnum_null_,
+  _$usersUpdateErrorCodeEnum_nullCharactersNotAllowed,
+  _$usersUpdateErrorCodeEnum_required_,
+  _$usersUpdateErrorCodeEnum_surrogateCharactersNotAllowed,
   _$usersUpdateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -65,11 +88,11 @@ Serializer<UsersUpdateErrorCodeEnum> _$usersUpdateErrorCodeEnumSerializer =
 class _$UsersUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<UsersUpdateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'locale': 'locale',
+    'notificationTopicsPeriodINDEX': 'notification_topics.INDEX',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'locale': 'locale',
+    'notification_topics.INDEX': 'notificationTopicsPeriodINDEX',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -94,13 +117,21 @@ class _$UsersUpdateErrorAttrEnumSerializer
 class _$UsersUpdateErrorCodeEnumSerializer
     implements PrimitiveSerializer<UsersUpdateErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'invalidChoice': 'invalid_choice',
+    'blank': 'blank',
+    'invalid': 'invalid',
     'null_': 'null',
+    'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'required_': 'required',
+    'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'invalid_choice': 'invalidChoice',
+    'blank': 'blank',
+    'invalid': 'invalid',
     'null': 'null_',
+    'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'required': 'required_',
+    'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

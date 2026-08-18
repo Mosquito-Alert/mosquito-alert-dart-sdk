@@ -4,7 +4,9 @@
 
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/users_update_locale_error_component.dart';
+import 'package:mosquito_alert/src/model/users_update_notification_topics_index_error_component.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/users_update_notification_topics_error_component.dart';
 import 'package:mosquito_alert/src/model/users_update_non_field_errors_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
@@ -20,7 +22,7 @@ part 'users_update_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class UsersUpdateError implements Built<UsersUpdateError, UsersUpdateErrorBuilder> {
-  /// One Of [UsersUpdateLocaleErrorComponent], [UsersUpdateNonFieldErrorsErrorComponent]
+  /// One Of [UsersUpdateLocaleErrorComponent], [UsersUpdateNonFieldErrorsErrorComponent], [UsersUpdateNotificationTopicsErrorComponent], [UsersUpdateNotificationTopicsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -28,6 +30,8 @@ abstract class UsersUpdateError implements Built<UsersUpdateError, UsersUpdateEr
   static const Map<String, Type> discriminatorMapping = {
     r'locale': UsersUpdateLocaleErrorComponent,
     r'non_field_errors': UsersUpdateNonFieldErrorsErrorComponent,
+    r'notification_topics': UsersUpdateNotificationTopicsErrorComponent,
+    r'notification_topics.INDEX': UsersUpdateNotificationTopicsINDEXErrorComponent,
   };
 
   UsersUpdateError._();
@@ -49,6 +53,12 @@ extension UsersUpdateErrorDiscriminatorExt on UsersUpdateError {
         if (this is UsersUpdateNonFieldErrorsErrorComponent) {
             return r'non_field_errors';
         }
+        if (this is UsersUpdateNotificationTopicsErrorComponent) {
+            return r'notification_topics';
+        }
+        if (this is UsersUpdateNotificationTopicsINDEXErrorComponent) {
+            return r'notification_topics.INDEX';
+        }
         return null;
     }
 }
@@ -59,6 +69,12 @@ extension UsersUpdateErrorBuilderDiscriminatorExt on UsersUpdateErrorBuilder {
         }
         if (this is UsersUpdateNonFieldErrorsErrorComponentBuilder) {
             return r'non_field_errors';
+        }
+        if (this is UsersUpdateNotificationTopicsErrorComponentBuilder) {
+            return r'notification_topics';
+        }
+        if (this is UsersUpdateNotificationTopicsINDEXErrorComponentBuilder) {
+            return r'notification_topics.INDEX';
         }
         return null;
     }
@@ -98,7 +114,7 @@ class _$UsersUpdateErrorSerializer implements PrimitiveSerializer<UsersUpdateErr
     final discIndex = serializedList.indexOf(UsersUpdateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [UsersUpdateLocaleErrorComponent, UsersUpdateNonFieldErrorsErrorComponent, ];
+    final oneOfTypes = [UsersUpdateLocaleErrorComponent, UsersUpdateNonFieldErrorsErrorComponent, UsersUpdateNotificationTopicsErrorComponent, UsersUpdateNotificationTopicsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -116,6 +132,20 @@ class _$UsersUpdateErrorSerializer implements PrimitiveSerializer<UsersUpdateErr
         ) as UsersUpdateNonFieldErrorsErrorComponent;
         oneOfType = UsersUpdateNonFieldErrorsErrorComponent;
         break;
+      case r'notification_topics':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(UsersUpdateNotificationTopicsErrorComponent),
+        ) as UsersUpdateNotificationTopicsErrorComponent;
+        oneOfType = UsersUpdateNotificationTopicsErrorComponent;
+        break;
+      case r'notification_topics.INDEX':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(UsersUpdateNotificationTopicsINDEXErrorComponent),
+        ) as UsersUpdateNotificationTopicsINDEXErrorComponent;
+        oneOfType = UsersUpdateNotificationTopicsINDEXErrorComponent;
+        break;
       default:
         throw UnsupportedError("Couldn't deserialize oneOf for the discriminator value: ${discValue}");
     }
@@ -126,8 +156,8 @@ class _$UsersUpdateErrorSerializer implements PrimitiveSerializer<UsersUpdateErr
 
 class UsersUpdateErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'locale')
-  static const UsersUpdateErrorAttrEnum locale = _$usersUpdateErrorAttrEnum_locale;
+  @BuiltValueEnumConst(wireName: r'notification_topics.INDEX')
+  static const UsersUpdateErrorAttrEnum notificationTopicsPeriodINDEX = _$usersUpdateErrorAttrEnum_notificationTopicsPeriodINDEX;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const UsersUpdateErrorAttrEnum unknownDefaultOpenApi = _$usersUpdateErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -141,10 +171,18 @@ class UsersUpdateErrorAttrEnum extends EnumClass {
 
 class UsersUpdateErrorCodeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'invalid_choice')
-  static const UsersUpdateErrorCodeEnum invalidChoice = _$usersUpdateErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'blank')
+  static const UsersUpdateErrorCodeEnum blank = _$usersUpdateErrorCodeEnum_blank;
+  @BuiltValueEnumConst(wireName: r'invalid')
+  static const UsersUpdateErrorCodeEnum invalid = _$usersUpdateErrorCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const UsersUpdateErrorCodeEnum null_ = _$usersUpdateErrorCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
+  static const UsersUpdateErrorCodeEnum nullCharactersNotAllowed = _$usersUpdateErrorCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'required')
+  static const UsersUpdateErrorCodeEnum required_ = _$usersUpdateErrorCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
+  static const UsersUpdateErrorCodeEnum surrogateCharactersNotAllowed = _$usersUpdateErrorCodeEnum_surrogateCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const UsersUpdateErrorCodeEnum unknownDefaultOpenApi = _$usersUpdateErrorCodeEnum_unknownDefaultOpenApi;
 

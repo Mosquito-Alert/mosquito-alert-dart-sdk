@@ -4,10 +4,8 @@
 
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/create_audience_message_request.dart';
-import 'package:mosquito_alert/src/model/audience_filter_request.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/model/create_user_message_request.dart';
-import 'package:mosquito_alert/src/model/create_audience_message_content_request.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';

@@ -17,6 +17,7 @@ part 'audience_filter.g.dart';
 /// * [lastLoginAfter] 
 /// * [inArea] - Filter users whose last known location is within the specified area. The area should be provided as a GeoJSON geometry object.
 /// * [locale] 
+/// * [notificationTopics] - Filter users subscribed to any of the provided notification topics.
 @BuiltValue()
 abstract class AudienceFilter implements Built<AudienceFilter, AudienceFilterBuilder> {
   @BuiltValueField(wireName: r'last_login_before')
@@ -32,6 +33,10 @@ abstract class AudienceFilter implements Built<AudienceFilter, AudienceFilterBui
   @BuiltValueField(wireName: r'locale')
   AudienceFilterLocaleEnum? get locale;
   // enum localeEnum {  en,  es,  ca,  eu,  bn,  sv,  de,  sq,  el,  gl,  hu,  pt,  sl,  it,  fr,  bg,  ro,  hr,  mk,  sr,  lb,  nl,  tr,  zh-CN,  };
+
+  /// Filter users subscribed to any of the provided notification topics.
+  @BuiltValueField(wireName: r'notification_topics')
+  BuiltList<String>? get notificationTopics;
 
   AudienceFilter._();
 
@@ -82,6 +87,13 @@ class _$AudienceFilterSerializer implements PrimitiveSerializer<AudienceFilter> 
       yield serializers.serialize(
         object.locale,
         specifiedType: const FullType(AudienceFilterLocaleEnum),
+      );
+    }
+    if (object.notificationTopics != null) {
+      yield r'notification_topics';
+      yield serializers.serialize(
+        object.notificationTopics,
+        specifiedType: const FullType(BuiltList, [FullType(String)]),
       );
     }
   }
@@ -138,6 +150,14 @@ class _$AudienceFilterSerializer implements PrimitiveSerializer<AudienceFilter> 
           ) as AudienceFilterLocaleEnum?;
           if (valueDes == null) continue;
           result.locale = valueDes;
+          break;
+        case r'notification_topics':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>?;
+          if (valueDes == null) continue;
+          result.notificationTopics.replace(valueDes);
           break;
         default:
           unhandled.add(key);

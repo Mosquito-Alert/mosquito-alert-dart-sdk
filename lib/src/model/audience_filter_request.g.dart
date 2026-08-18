@@ -235,13 +235,19 @@ class _$AudienceFilterRequest extends AudienceFilterRequest {
   final JsonObject? inArea;
   @override
   final AudienceFilterRequestLocaleEnum? locale;
+  @override
+  final BuiltList<String>? notificationTopics;
 
   factory _$AudienceFilterRequest(
           [void Function(AudienceFilterRequestBuilder)? updates]) =>
       (AudienceFilterRequestBuilder()..update(updates))._build();
 
   _$AudienceFilterRequest._(
-      {this.lastLoginBefore, this.lastLoginAfter, this.inArea, this.locale})
+      {this.lastLoginBefore,
+      this.lastLoginAfter,
+      this.inArea,
+      this.locale,
+      this.notificationTopics})
       : super._();
   @override
   AudienceFilterRequest rebuild(
@@ -259,7 +265,8 @@ class _$AudienceFilterRequest extends AudienceFilterRequest {
         lastLoginBefore == other.lastLoginBefore &&
         lastLoginAfter == other.lastLoginAfter &&
         inArea == other.inArea &&
-        locale == other.locale;
+        locale == other.locale &&
+        notificationTopics == other.notificationTopics;
   }
 
   @override
@@ -269,6 +276,7 @@ class _$AudienceFilterRequest extends AudienceFilterRequest {
     _$hash = $jc(_$hash, lastLoginAfter.hashCode);
     _$hash = $jc(_$hash, inArea.hashCode);
     _$hash = $jc(_$hash, locale.hashCode);
+    _$hash = $jc(_$hash, notificationTopics.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -279,7 +287,8 @@ class _$AudienceFilterRequest extends AudienceFilterRequest {
           ..add('lastLoginBefore', lastLoginBefore)
           ..add('lastLoginAfter', lastLoginAfter)
           ..add('inArea', inArea)
-          ..add('locale', locale))
+          ..add('locale', locale)
+          ..add('notificationTopics', notificationTopics))
         .toString();
   }
 }
@@ -307,6 +316,12 @@ class AudienceFilterRequestBuilder
   set locale(AudienceFilterRequestLocaleEnum? locale) =>
       _$this._locale = locale;
 
+  ListBuilder<String>? _notificationTopics;
+  ListBuilder<String> get notificationTopics =>
+      _$this._notificationTopics ??= ListBuilder<String>();
+  set notificationTopics(ListBuilder<String>? notificationTopics) =>
+      _$this._notificationTopics = notificationTopics;
+
   AudienceFilterRequestBuilder() {
     AudienceFilterRequest._defaults(this);
   }
@@ -318,6 +333,7 @@ class AudienceFilterRequestBuilder
       _lastLoginAfter = $v.lastLoginAfter;
       _inArea = $v.inArea;
       _locale = $v.locale;
+      _notificationTopics = $v.notificationTopics?.toBuilder();
       _$v = null;
     }
     return this;
@@ -337,13 +353,27 @@ class AudienceFilterRequestBuilder
   AudienceFilterRequest build() => _build();
 
   _$AudienceFilterRequest _build() {
-    final _$result = _$v ??
-        _$AudienceFilterRequest._(
-          lastLoginBefore: lastLoginBefore,
-          lastLoginAfter: lastLoginAfter,
-          inArea: inArea,
-          locale: locale,
-        );
+    _$AudienceFilterRequest _$result;
+    try {
+      _$result = _$v ??
+          _$AudienceFilterRequest._(
+            lastLoginBefore: lastLoginBefore,
+            lastLoginAfter: lastLoginAfter,
+            inArea: inArea,
+            locale: locale,
+            notificationTopics: _notificationTopics?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'notificationTopics';
+        _notificationTopics?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+            r'AudienceFilterRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }

@@ -7,8 +7,8 @@ part of 'users_audience_filter_error.dart';
 // **************************************************************************
 
 const UsersAudienceFilterErrorAttrEnum
-    _$usersAudienceFilterErrorAttrEnum_locale =
-    const UsersAudienceFilterErrorAttrEnum._('locale');
+    _$usersAudienceFilterErrorAttrEnum_notificationTopicsPeriodINDEX =
+    const UsersAudienceFilterErrorAttrEnum._('notificationTopicsPeriodINDEX');
 const UsersAudienceFilterErrorAttrEnum
     _$usersAudienceFilterErrorAttrEnum_unknownDefaultOpenApi =
     const UsersAudienceFilterErrorAttrEnum._('unknownDefaultOpenApi');
@@ -16,8 +16,8 @@ const UsersAudienceFilterErrorAttrEnum
 UsersAudienceFilterErrorAttrEnum _$usersAudienceFilterErrorAttrEnumValueOf(
     String name) {
   switch (name) {
-    case 'locale':
-      return _$usersAudienceFilterErrorAttrEnum_locale;
+    case 'notificationTopicsPeriodINDEX':
+      return _$usersAudienceFilterErrorAttrEnum_notificationTopicsPeriodINDEX;
     case 'unknownDefaultOpenApi':
       return _$usersAudienceFilterErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -28,16 +28,28 @@ UsersAudienceFilterErrorAttrEnum _$usersAudienceFilterErrorAttrEnumValueOf(
 final BuiltSet<UsersAudienceFilterErrorAttrEnum>
     _$usersAudienceFilterErrorAttrEnumValues = BuiltSet<
         UsersAudienceFilterErrorAttrEnum>(const <UsersAudienceFilterErrorAttrEnum>[
-  _$usersAudienceFilterErrorAttrEnum_locale,
+  _$usersAudienceFilterErrorAttrEnum_notificationTopicsPeriodINDEX,
   _$usersAudienceFilterErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
 const UsersAudienceFilterErrorCodeEnum
-    _$usersAudienceFilterErrorCodeEnum_invalidChoice =
-    const UsersAudienceFilterErrorCodeEnum._('invalidChoice');
+    _$usersAudienceFilterErrorCodeEnum_blank =
+    const UsersAudienceFilterErrorCodeEnum._('blank');
+const UsersAudienceFilterErrorCodeEnum
+    _$usersAudienceFilterErrorCodeEnum_invalid =
+    const UsersAudienceFilterErrorCodeEnum._('invalid');
 const UsersAudienceFilterErrorCodeEnum
     _$usersAudienceFilterErrorCodeEnum_null_ =
     const UsersAudienceFilterErrorCodeEnum._('null_');
+const UsersAudienceFilterErrorCodeEnum
+    _$usersAudienceFilterErrorCodeEnum_nullCharactersNotAllowed =
+    const UsersAudienceFilterErrorCodeEnum._('nullCharactersNotAllowed');
+const UsersAudienceFilterErrorCodeEnum
+    _$usersAudienceFilterErrorCodeEnum_required_ =
+    const UsersAudienceFilterErrorCodeEnum._('required_');
+const UsersAudienceFilterErrorCodeEnum
+    _$usersAudienceFilterErrorCodeEnum_surrogateCharactersNotAllowed =
+    const UsersAudienceFilterErrorCodeEnum._('surrogateCharactersNotAllowed');
 const UsersAudienceFilterErrorCodeEnum
     _$usersAudienceFilterErrorCodeEnum_unknownDefaultOpenApi =
     const UsersAudienceFilterErrorCodeEnum._('unknownDefaultOpenApi');
@@ -45,10 +57,18 @@ const UsersAudienceFilterErrorCodeEnum
 UsersAudienceFilterErrorCodeEnum _$usersAudienceFilterErrorCodeEnumValueOf(
     String name) {
   switch (name) {
-    case 'invalidChoice':
-      return _$usersAudienceFilterErrorCodeEnum_invalidChoice;
+    case 'blank':
+      return _$usersAudienceFilterErrorCodeEnum_blank;
+    case 'invalid':
+      return _$usersAudienceFilterErrorCodeEnum_invalid;
     case 'null_':
       return _$usersAudienceFilterErrorCodeEnum_null_;
+    case 'nullCharactersNotAllowed':
+      return _$usersAudienceFilterErrorCodeEnum_nullCharactersNotAllowed;
+    case 'required_':
+      return _$usersAudienceFilterErrorCodeEnum_required_;
+    case 'surrogateCharactersNotAllowed':
+      return _$usersAudienceFilterErrorCodeEnum_surrogateCharactersNotAllowed;
     case 'unknownDefaultOpenApi':
       return _$usersAudienceFilterErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -59,8 +79,12 @@ UsersAudienceFilterErrorCodeEnum _$usersAudienceFilterErrorCodeEnumValueOf(
 final BuiltSet<UsersAudienceFilterErrorCodeEnum>
     _$usersAudienceFilterErrorCodeEnumValues = BuiltSet<
         UsersAudienceFilterErrorCodeEnum>(const <UsersAudienceFilterErrorCodeEnum>[
-  _$usersAudienceFilterErrorCodeEnum_invalidChoice,
+  _$usersAudienceFilterErrorCodeEnum_blank,
+  _$usersAudienceFilterErrorCodeEnum_invalid,
   _$usersAudienceFilterErrorCodeEnum_null_,
+  _$usersAudienceFilterErrorCodeEnum_nullCharactersNotAllowed,
+  _$usersAudienceFilterErrorCodeEnum_required_,
+  _$usersAudienceFilterErrorCodeEnum_surrogateCharactersNotAllowed,
   _$usersAudienceFilterErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -74,11 +98,11 @@ Serializer<UsersAudienceFilterErrorCodeEnum>
 class _$UsersAudienceFilterErrorAttrEnumSerializer
     implements PrimitiveSerializer<UsersAudienceFilterErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'locale': 'locale',
+    'notificationTopicsPeriodINDEX': 'notification_topics.INDEX',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'locale': 'locale',
+    'notification_topics.INDEX': 'notificationTopicsPeriodINDEX',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -104,13 +128,21 @@ class _$UsersAudienceFilterErrorAttrEnumSerializer
 class _$UsersAudienceFilterErrorCodeEnumSerializer
     implements PrimitiveSerializer<UsersAudienceFilterErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'invalidChoice': 'invalid_choice',
+    'blank': 'blank',
+    'invalid': 'invalid',
     'null_': 'null',
+    'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'required_': 'required',
+    'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'invalid_choice': 'invalidChoice',
+    'blank': 'blank',
+    'invalid': 'invalid',
     'null': 'null_',
+    'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'required': 'required_',
+    'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

@@ -1799,6 +1799,17 @@ Serializers _$serializers = (Serializers().toBuilder()
           MessagesCreateAudienceNonFieldErrorsErrorComponentAttrEnum.serializer)
       ..add(
           MessagesCreateAudienceNonFieldErrorsErrorComponentCodeEnum.serializer)
+      ..add(MessagesCreateAudienceNotificationTopicsErrorComponent.serializer)
+      ..add(MessagesCreateAudienceNotificationTopicsErrorComponentAttrEnum
+          .serializer)
+      ..add(MessagesCreateAudienceNotificationTopicsErrorComponentCodeEnum
+          .serializer)
+      ..add(MessagesCreateAudienceNotificationTopicsINDEXErrorComponent
+          .serializer)
+      ..add(MessagesCreateAudienceNotificationTopicsINDEXErrorComponentAttrEnum
+          .serializer)
+      ..add(MessagesCreateAudienceNotificationTopicsINDEXErrorComponentCodeEnum
+          .serializer)
       ..add(MessagesCreateContentBodyBgErrorComponent.serializer)
       ..add(MessagesCreateContentBodyBgErrorComponentAttrEnum.serializer)
       ..add(MessagesCreateContentBodyBgErrorComponentCodeEnum.serializer)
@@ -2594,6 +2605,16 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..add(UsersAudienceFilterNonFieldErrorsErrorComponent.serializer)
       ..add(UsersAudienceFilterNonFieldErrorsErrorComponentAttrEnum.serializer)
       ..add(UsersAudienceFilterNonFieldErrorsErrorComponentCodeEnum.serializer)
+      ..add(UsersAudienceFilterNotificationTopicsErrorComponent.serializer)
+      ..add(UsersAudienceFilterNotificationTopicsErrorComponentAttrEnum
+          .serializer)
+      ..add(UsersAudienceFilterNotificationTopicsErrorComponentCodeEnum
+          .serializer)
+      ..add(UsersAudienceFilterNotificationTopicsINDEXErrorComponent.serializer)
+      ..add(UsersAudienceFilterNotificationTopicsINDEXErrorComponentAttrEnum
+          .serializer)
+      ..add(UsersAudienceFilterNotificationTopicsINDEXErrorComponentCodeEnum
+          .serializer)
       ..add(UsersAudienceFilterValidationError.serializer)
       ..add(UsersAudienceFilterValidationErrorTypeEnum.serializer)
       ..add(UsersPartialUpdateError.serializer)
@@ -2603,6 +2624,16 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..add(UsersPartialUpdateNonFieldErrorsErrorComponent.serializer)
       ..add(UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum.serializer)
       ..add(UsersPartialUpdateNonFieldErrorsErrorComponentCodeEnum.serializer)
+      ..add(UsersPartialUpdateNotificationTopicsErrorComponent.serializer)
+      ..add(
+          UsersPartialUpdateNotificationTopicsErrorComponentAttrEnum.serializer)
+      ..add(
+          UsersPartialUpdateNotificationTopicsErrorComponentCodeEnum.serializer)
+      ..add(UsersPartialUpdateNotificationTopicsINDEXErrorComponent.serializer)
+      ..add(UsersPartialUpdateNotificationTopicsINDEXErrorComponentAttrEnum
+          .serializer)
+      ..add(UsersPartialUpdateNotificationTopicsINDEXErrorComponentCodeEnum
+          .serializer)
       ..add(UsersPartialUpdateValidationError.serializer)
       ..add(UsersPartialUpdateValidationErrorTypeEnum.serializer)
       ..add(UsersUpdateError.serializer)
@@ -2612,6 +2643,12 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..add(UsersUpdateNonFieldErrorsErrorComponent.serializer)
       ..add(UsersUpdateNonFieldErrorsErrorComponentAttrEnum.serializer)
       ..add(UsersUpdateNonFieldErrorsErrorComponentCodeEnum.serializer)
+      ..add(UsersUpdateNotificationTopicsErrorComponent.serializer)
+      ..add(UsersUpdateNotificationTopicsErrorComponentAttrEnum.serializer)
+      ..add(UsersUpdateNotificationTopicsErrorComponentCodeEnum.serializer)
+      ..add(UsersUpdateNotificationTopicsINDEXErrorComponent.serializer)
+      ..add(UsersUpdateNotificationTopicsINDEXErrorComponentAttrEnum.serializer)
+      ..add(UsersUpdateNotificationTopicsINDEXErrorComponentCodeEnum.serializer)
       ..add(UsersUpdateValidationError.serializer)
       ..add(UsersUpdateValidationErrorTypeEnum.serializer)
       ..add(Workspace.serializer)
@@ -2843,6 +2880,21 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimpleUser)]),
           () => ListBuilder<SimpleUser>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => ListBuilder<String>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(String)]),
+          () => ListBuilder<String>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => ListBuilder<String>())

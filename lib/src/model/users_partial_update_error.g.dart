@@ -6,8 +6,9 @@ part of 'users_partial_update_error.dart';
 // BuiltValueGenerator
 // **************************************************************************
 
-const UsersPartialUpdateErrorAttrEnum _$usersPartialUpdateErrorAttrEnum_locale =
-    const UsersPartialUpdateErrorAttrEnum._('locale');
+const UsersPartialUpdateErrorAttrEnum
+    _$usersPartialUpdateErrorAttrEnum_notificationTopicsPeriodINDEX =
+    const UsersPartialUpdateErrorAttrEnum._('notificationTopicsPeriodINDEX');
 const UsersPartialUpdateErrorAttrEnum
     _$usersPartialUpdateErrorAttrEnum_unknownDefaultOpenApi =
     const UsersPartialUpdateErrorAttrEnum._('unknownDefaultOpenApi');
@@ -15,8 +16,8 @@ const UsersPartialUpdateErrorAttrEnum
 UsersPartialUpdateErrorAttrEnum _$usersPartialUpdateErrorAttrEnumValueOf(
     String name) {
   switch (name) {
-    case 'locale':
-      return _$usersPartialUpdateErrorAttrEnum_locale;
+    case 'notificationTopicsPeriodINDEX':
+      return _$usersPartialUpdateErrorAttrEnum_notificationTopicsPeriodINDEX;
     case 'unknownDefaultOpenApi':
       return _$usersPartialUpdateErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -27,15 +28,26 @@ UsersPartialUpdateErrorAttrEnum _$usersPartialUpdateErrorAttrEnumValueOf(
 final BuiltSet<UsersPartialUpdateErrorAttrEnum>
     _$usersPartialUpdateErrorAttrEnumValues = BuiltSet<
         UsersPartialUpdateErrorAttrEnum>(const <UsersPartialUpdateErrorAttrEnum>[
-  _$usersPartialUpdateErrorAttrEnum_locale,
+  _$usersPartialUpdateErrorAttrEnum_notificationTopicsPeriodINDEX,
   _$usersPartialUpdateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
+const UsersPartialUpdateErrorCodeEnum _$usersPartialUpdateErrorCodeEnum_blank =
+    const UsersPartialUpdateErrorCodeEnum._('blank');
 const UsersPartialUpdateErrorCodeEnum
-    _$usersPartialUpdateErrorCodeEnum_invalidChoice =
-    const UsersPartialUpdateErrorCodeEnum._('invalidChoice');
+    _$usersPartialUpdateErrorCodeEnum_invalid =
+    const UsersPartialUpdateErrorCodeEnum._('invalid');
 const UsersPartialUpdateErrorCodeEnum _$usersPartialUpdateErrorCodeEnum_null_ =
     const UsersPartialUpdateErrorCodeEnum._('null_');
+const UsersPartialUpdateErrorCodeEnum
+    _$usersPartialUpdateErrorCodeEnum_nullCharactersNotAllowed =
+    const UsersPartialUpdateErrorCodeEnum._('nullCharactersNotAllowed');
+const UsersPartialUpdateErrorCodeEnum
+    _$usersPartialUpdateErrorCodeEnum_required_ =
+    const UsersPartialUpdateErrorCodeEnum._('required_');
+const UsersPartialUpdateErrorCodeEnum
+    _$usersPartialUpdateErrorCodeEnum_surrogateCharactersNotAllowed =
+    const UsersPartialUpdateErrorCodeEnum._('surrogateCharactersNotAllowed');
 const UsersPartialUpdateErrorCodeEnum
     _$usersPartialUpdateErrorCodeEnum_unknownDefaultOpenApi =
     const UsersPartialUpdateErrorCodeEnum._('unknownDefaultOpenApi');
@@ -43,10 +55,18 @@ const UsersPartialUpdateErrorCodeEnum
 UsersPartialUpdateErrorCodeEnum _$usersPartialUpdateErrorCodeEnumValueOf(
     String name) {
   switch (name) {
-    case 'invalidChoice':
-      return _$usersPartialUpdateErrorCodeEnum_invalidChoice;
+    case 'blank':
+      return _$usersPartialUpdateErrorCodeEnum_blank;
+    case 'invalid':
+      return _$usersPartialUpdateErrorCodeEnum_invalid;
     case 'null_':
       return _$usersPartialUpdateErrorCodeEnum_null_;
+    case 'nullCharactersNotAllowed':
+      return _$usersPartialUpdateErrorCodeEnum_nullCharactersNotAllowed;
+    case 'required_':
+      return _$usersPartialUpdateErrorCodeEnum_required_;
+    case 'surrogateCharactersNotAllowed':
+      return _$usersPartialUpdateErrorCodeEnum_surrogateCharactersNotAllowed;
     case 'unknownDefaultOpenApi':
       return _$usersPartialUpdateErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -57,8 +77,12 @@ UsersPartialUpdateErrorCodeEnum _$usersPartialUpdateErrorCodeEnumValueOf(
 final BuiltSet<UsersPartialUpdateErrorCodeEnum>
     _$usersPartialUpdateErrorCodeEnumValues = BuiltSet<
         UsersPartialUpdateErrorCodeEnum>(const <UsersPartialUpdateErrorCodeEnum>[
-  _$usersPartialUpdateErrorCodeEnum_invalidChoice,
+  _$usersPartialUpdateErrorCodeEnum_blank,
+  _$usersPartialUpdateErrorCodeEnum_invalid,
   _$usersPartialUpdateErrorCodeEnum_null_,
+  _$usersPartialUpdateErrorCodeEnum_nullCharactersNotAllowed,
+  _$usersPartialUpdateErrorCodeEnum_required_,
+  _$usersPartialUpdateErrorCodeEnum_surrogateCharactersNotAllowed,
   _$usersPartialUpdateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -72,11 +96,11 @@ Serializer<UsersPartialUpdateErrorCodeEnum>
 class _$UsersPartialUpdateErrorAttrEnumSerializer
     implements PrimitiveSerializer<UsersPartialUpdateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'locale': 'locale',
+    'notificationTopicsPeriodINDEX': 'notification_topics.INDEX',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'locale': 'locale',
+    'notification_topics.INDEX': 'notificationTopicsPeriodINDEX',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -102,13 +126,21 @@ class _$UsersPartialUpdateErrorAttrEnumSerializer
 class _$UsersPartialUpdateErrorCodeEnumSerializer
     implements PrimitiveSerializer<UsersPartialUpdateErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'invalidChoice': 'invalid_choice',
+    'blank': 'blank',
+    'invalid': 'invalid',
     'null_': 'null',
+    'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'required_': 'required',
+    'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'invalid_choice': 'invalidChoice',
+    'blank': 'blank',
+    'invalid': 'invalid',
     'null': 'null_',
+    'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'required': 'required_',
+    'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

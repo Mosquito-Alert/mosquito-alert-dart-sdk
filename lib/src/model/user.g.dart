@@ -217,6 +217,8 @@ class _$User extends User {
   final bool isGuest;
   @override
   final UserScore score;
+  @override
+  final BuiltList<String>? notificationTopics;
 
   factory _$User([void Function(UserBuilder)? updates]) =>
       (UserBuilder()..update(updates))._build();
@@ -231,7 +233,8 @@ class _$User extends User {
       this.locale,
       required this.languageIso,
       required this.isGuest,
-      required this.score})
+      required this.score,
+      this.notificationTopics})
       : super._();
   @override
   User rebuild(void Function(UserBuilder) updates) =>
@@ -253,7 +256,8 @@ class _$User extends User {
         locale == other.locale &&
         languageIso == other.languageIso &&
         isGuest == other.isGuest &&
-        score == other.score;
+        score == other.score &&
+        notificationTopics == other.notificationTopics;
   }
 
   @override
@@ -269,6 +273,7 @@ class _$User extends User {
     _$hash = $jc(_$hash, languageIso.hashCode);
     _$hash = $jc(_$hash, isGuest.hashCode);
     _$hash = $jc(_$hash, score.hashCode);
+    _$hash = $jc(_$hash, notificationTopics.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -285,7 +290,8 @@ class _$User extends User {
           ..add('locale', locale)
           ..add('languageIso', languageIso)
           ..add('isGuest', isGuest)
-          ..add('score', score))
+          ..add('score', score)
+          ..add('notificationTopics', notificationTopics))
         .toString();
   }
 }
@@ -334,6 +340,12 @@ class UserBuilder implements Builder<User, UserBuilder> {
   UserScoreBuilder get score => _$this._score ??= UserScoreBuilder();
   set score(UserScoreBuilder? score) => _$this._score = score;
 
+  ListBuilder<String>? _notificationTopics;
+  ListBuilder<String> get notificationTopics =>
+      _$this._notificationTopics ??= ListBuilder<String>();
+  set notificationTopics(ListBuilder<String>? notificationTopics) =>
+      _$this._notificationTopics = notificationTopics;
+
   UserBuilder() {
     User._defaults(this);
   }
@@ -351,6 +363,7 @@ class UserBuilder implements Builder<User, UserBuilder> {
       _languageIso = $v.languageIso;
       _isGuest = $v.isGuest;
       _score = $v.score.toBuilder();
+      _notificationTopics = $v.notificationTopics?.toBuilder();
       _$v = null;
     }
     return this;
@@ -391,12 +404,15 @@ class UserBuilder implements Builder<User, UserBuilder> {
             isGuest: BuiltValueNullFieldError.checkNotNull(
                 isGuest, r'User', 'isGuest'),
             score: score.build(),
+            notificationTopics: _notificationTopics?.build(),
           );
     } catch (_) {
       late String _$failedField;
       try {
         _$failedField = 'score';
         score.build();
+        _$failedField = 'notificationTopics';
+        _notificationTopics?.build();
       } catch (e) {
         throw BuiltValueNestedFieldError(r'User', _$failedField, e.toString());
       }

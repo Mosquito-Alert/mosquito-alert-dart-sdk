@@ -7,16 +7,17 @@ part of 'messages_create_error.dart';
 // **************************************************************************
 
 const MessagesCreateErrorAttrEnum
-    _$messagesCreateErrorAttrEnum_audiencePeriodLocale =
-    const MessagesCreateErrorAttrEnum._('audiencePeriodLocale');
+    _$messagesCreateErrorAttrEnum_audiencePeriodNotificationTopicsPeriodINDEX =
+    const MessagesCreateErrorAttrEnum._(
+        'audiencePeriodNotificationTopicsPeriodINDEX');
 const MessagesCreateErrorAttrEnum
     _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi =
     const MessagesCreateErrorAttrEnum._('unknownDefaultOpenApi');
 
 MessagesCreateErrorAttrEnum _$messagesCreateErrorAttrEnumValueOf(String name) {
   switch (name) {
-    case 'audiencePeriodLocale':
-      return _$messagesCreateErrorAttrEnum_audiencePeriodLocale;
+    case 'audiencePeriodNotificationTopicsPeriodINDEX':
+      return _$messagesCreateErrorAttrEnum_audiencePeriodNotificationTopicsPeriodINDEX;
     case 'unknownDefaultOpenApi':
       return _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi;
     default:
@@ -27,24 +28,42 @@ MessagesCreateErrorAttrEnum _$messagesCreateErrorAttrEnumValueOf(String name) {
 final BuiltSet<MessagesCreateErrorAttrEnum>
     _$messagesCreateErrorAttrEnumValues =
     BuiltSet<MessagesCreateErrorAttrEnum>(const <MessagesCreateErrorAttrEnum>[
-  _$messagesCreateErrorAttrEnum_audiencePeriodLocale,
+  _$messagesCreateErrorAttrEnum_audiencePeriodNotificationTopicsPeriodINDEX,
   _$messagesCreateErrorAttrEnum_unknownDefaultOpenApi,
 ]);
 
-const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_invalidChoice =
-    const MessagesCreateErrorCodeEnum._('invalidChoice');
+const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_blank =
+    const MessagesCreateErrorCodeEnum._('blank');
+const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_invalid =
+    const MessagesCreateErrorCodeEnum._('invalid');
 const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_null_ =
     const MessagesCreateErrorCodeEnum._('null_');
+const MessagesCreateErrorCodeEnum
+    _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed =
+    const MessagesCreateErrorCodeEnum._('nullCharactersNotAllowed');
+const MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnum_required_ =
+    const MessagesCreateErrorCodeEnum._('required_');
+const MessagesCreateErrorCodeEnum
+    _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed =
+    const MessagesCreateErrorCodeEnum._('surrogateCharactersNotAllowed');
 const MessagesCreateErrorCodeEnum
     _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi =
     const MessagesCreateErrorCodeEnum._('unknownDefaultOpenApi');
 
 MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnumValueOf(String name) {
   switch (name) {
-    case 'invalidChoice':
-      return _$messagesCreateErrorCodeEnum_invalidChoice;
+    case 'blank':
+      return _$messagesCreateErrorCodeEnum_blank;
+    case 'invalid':
+      return _$messagesCreateErrorCodeEnum_invalid;
     case 'null_':
       return _$messagesCreateErrorCodeEnum_null_;
+    case 'nullCharactersNotAllowed':
+      return _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed;
+    case 'required_':
+      return _$messagesCreateErrorCodeEnum_required_;
+    case 'surrogateCharactersNotAllowed':
+      return _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed;
     case 'unknownDefaultOpenApi':
       return _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi;
     default:
@@ -55,8 +74,12 @@ MessagesCreateErrorCodeEnum _$messagesCreateErrorCodeEnumValueOf(String name) {
 final BuiltSet<MessagesCreateErrorCodeEnum>
     _$messagesCreateErrorCodeEnumValues =
     BuiltSet<MessagesCreateErrorCodeEnum>(const <MessagesCreateErrorCodeEnum>[
-  _$messagesCreateErrorCodeEnum_invalidChoice,
+  _$messagesCreateErrorCodeEnum_blank,
+  _$messagesCreateErrorCodeEnum_invalid,
   _$messagesCreateErrorCodeEnum_null_,
+  _$messagesCreateErrorCodeEnum_nullCharactersNotAllowed,
+  _$messagesCreateErrorCodeEnum_required_,
+  _$messagesCreateErrorCodeEnum_surrogateCharactersNotAllowed,
   _$messagesCreateErrorCodeEnum_unknownDefaultOpenApi,
 ]);
 
@@ -70,11 +93,13 @@ Serializer<MessagesCreateErrorCodeEnum>
 class _$MessagesCreateErrorAttrEnumSerializer
     implements PrimitiveSerializer<MessagesCreateErrorAttrEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'audiencePeriodLocale': 'audience.locale',
+    'audiencePeriodNotificationTopicsPeriodINDEX':
+        'audience.notification_topics.INDEX',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'audience.locale': 'audiencePeriodLocale',
+    'audience.notification_topics.INDEX':
+        'audiencePeriodNotificationTopicsPeriodINDEX',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 
@@ -99,13 +124,21 @@ class _$MessagesCreateErrorAttrEnumSerializer
 class _$MessagesCreateErrorCodeEnumSerializer
     implements PrimitiveSerializer<MessagesCreateErrorCodeEnum> {
   static const Map<String, Object> _toWire = const <String, Object>{
-    'invalidChoice': 'invalid_choice',
+    'blank': 'blank',
+    'invalid': 'invalid',
     'null_': 'null',
+    'nullCharactersNotAllowed': 'null_characters_not_allowed',
+    'required_': 'required',
+    'surrogateCharactersNotAllowed': 'surrogate_characters_not_allowed',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
-    'invalid_choice': 'invalidChoice',
+    'blank': 'blank',
+    'invalid': 'invalid',
     'null': 'null_',
+    'null_characters_not_allowed': 'nullCharactersNotAllowed',
+    'required': 'required_',
+    'surrogate_characters_not_allowed': 'surrogateCharactersNotAllowed',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

@@ -6,6 +6,8 @@
 import 'package:mosquito_alert/src/model/users_partial_update_locale_error_component.dart';
 import 'package:mosquito_alert/src/model/users_partial_update_non_field_errors_error_component.dart';
 import 'package:built_collection/built_collection.dart';
+import 'package:mosquito_alert/src/model/users_partial_update_notification_topics_index_error_component.dart';
+import 'package:mosquito_alert/src/model/users_partial_update_notification_topics_error_component.dart';
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'package:one_of/one_of.dart';
@@ -20,7 +22,7 @@ part 'users_partial_update_error.g.dart';
 /// * [detail] 
 @BuiltValue()
 abstract class UsersPartialUpdateError implements Built<UsersPartialUpdateError, UsersPartialUpdateErrorBuilder> {
-  /// One Of [UsersPartialUpdateLocaleErrorComponent], [UsersPartialUpdateNonFieldErrorsErrorComponent]
+  /// One Of [UsersPartialUpdateLocaleErrorComponent], [UsersPartialUpdateNonFieldErrorsErrorComponent], [UsersPartialUpdateNotificationTopicsErrorComponent], [UsersPartialUpdateNotificationTopicsINDEXErrorComponent]
   OneOf get oneOf;
 
   static const String discriminatorFieldName = r'attr';
@@ -28,6 +30,8 @@ abstract class UsersPartialUpdateError implements Built<UsersPartialUpdateError,
   static const Map<String, Type> discriminatorMapping = {
     r'locale': UsersPartialUpdateLocaleErrorComponent,
     r'non_field_errors': UsersPartialUpdateNonFieldErrorsErrorComponent,
+    r'notification_topics': UsersPartialUpdateNotificationTopicsErrorComponent,
+    r'notification_topics.INDEX': UsersPartialUpdateNotificationTopicsINDEXErrorComponent,
   };
 
   UsersPartialUpdateError._();
@@ -49,6 +53,12 @@ extension UsersPartialUpdateErrorDiscriminatorExt on UsersPartialUpdateError {
         if (this is UsersPartialUpdateNonFieldErrorsErrorComponent) {
             return r'non_field_errors';
         }
+        if (this is UsersPartialUpdateNotificationTopicsErrorComponent) {
+            return r'notification_topics';
+        }
+        if (this is UsersPartialUpdateNotificationTopicsINDEXErrorComponent) {
+            return r'notification_topics.INDEX';
+        }
         return null;
     }
 }
@@ -59,6 +69,12 @@ extension UsersPartialUpdateErrorBuilderDiscriminatorExt on UsersPartialUpdateEr
         }
         if (this is UsersPartialUpdateNonFieldErrorsErrorComponentBuilder) {
             return r'non_field_errors';
+        }
+        if (this is UsersPartialUpdateNotificationTopicsErrorComponentBuilder) {
+            return r'notification_topics';
+        }
+        if (this is UsersPartialUpdateNotificationTopicsINDEXErrorComponentBuilder) {
+            return r'notification_topics.INDEX';
         }
         return null;
     }
@@ -98,7 +114,7 @@ class _$UsersPartialUpdateErrorSerializer implements PrimitiveSerializer<UsersPa
     final discIndex = serializedList.indexOf(UsersPartialUpdateError.discriminatorFieldName) + 1;
     final discValue = serializers.deserialize(serializedList[discIndex], specifiedType: FullType(String)) as String;
     oneOfDataSrc = serialized;
-    final oneOfTypes = [UsersPartialUpdateLocaleErrorComponent, UsersPartialUpdateNonFieldErrorsErrorComponent, ];
+    final oneOfTypes = [UsersPartialUpdateLocaleErrorComponent, UsersPartialUpdateNonFieldErrorsErrorComponent, UsersPartialUpdateNotificationTopicsErrorComponent, UsersPartialUpdateNotificationTopicsINDEXErrorComponent, ];
     Object oneOfResult;
     Type oneOfType;
     switch (discValue) {
@@ -116,6 +132,20 @@ class _$UsersPartialUpdateErrorSerializer implements PrimitiveSerializer<UsersPa
         ) as UsersPartialUpdateNonFieldErrorsErrorComponent;
         oneOfType = UsersPartialUpdateNonFieldErrorsErrorComponent;
         break;
+      case r'notification_topics':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(UsersPartialUpdateNotificationTopicsErrorComponent),
+        ) as UsersPartialUpdateNotificationTopicsErrorComponent;
+        oneOfType = UsersPartialUpdateNotificationTopicsErrorComponent;
+        break;
+      case r'notification_topics.INDEX':
+        oneOfResult = serializers.deserialize(
+          oneOfDataSrc,
+          specifiedType: FullType(UsersPartialUpdateNotificationTopicsINDEXErrorComponent),
+        ) as UsersPartialUpdateNotificationTopicsINDEXErrorComponent;
+        oneOfType = UsersPartialUpdateNotificationTopicsINDEXErrorComponent;
+        break;
       default:
         throw UnsupportedError("Couldn't deserialize oneOf for the discriminator value: ${discValue}");
     }
@@ -126,8 +156,8 @@ class _$UsersPartialUpdateErrorSerializer implements PrimitiveSerializer<UsersPa
 
 class UsersPartialUpdateErrorAttrEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'locale')
-  static const UsersPartialUpdateErrorAttrEnum locale = _$usersPartialUpdateErrorAttrEnum_locale;
+  @BuiltValueEnumConst(wireName: r'notification_topics.INDEX')
+  static const UsersPartialUpdateErrorAttrEnum notificationTopicsPeriodINDEX = _$usersPartialUpdateErrorAttrEnum_notificationTopicsPeriodINDEX;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const UsersPartialUpdateErrorAttrEnum unknownDefaultOpenApi = _$usersPartialUpdateErrorAttrEnum_unknownDefaultOpenApi;
 
@@ -141,10 +171,18 @@ class UsersPartialUpdateErrorAttrEnum extends EnumClass {
 
 class UsersPartialUpdateErrorCodeEnum extends EnumClass {
 
-  @BuiltValueEnumConst(wireName: r'invalid_choice')
-  static const UsersPartialUpdateErrorCodeEnum invalidChoice = _$usersPartialUpdateErrorCodeEnum_invalidChoice;
+  @BuiltValueEnumConst(wireName: r'blank')
+  static const UsersPartialUpdateErrorCodeEnum blank = _$usersPartialUpdateErrorCodeEnum_blank;
+  @BuiltValueEnumConst(wireName: r'invalid')
+  static const UsersPartialUpdateErrorCodeEnum invalid = _$usersPartialUpdateErrorCodeEnum_invalid;
   @BuiltValueEnumConst(wireName: r'null')
   static const UsersPartialUpdateErrorCodeEnum null_ = _$usersPartialUpdateErrorCodeEnum_null_;
+  @BuiltValueEnumConst(wireName: r'null_characters_not_allowed')
+  static const UsersPartialUpdateErrorCodeEnum nullCharactersNotAllowed = _$usersPartialUpdateErrorCodeEnum_nullCharactersNotAllowed;
+  @BuiltValueEnumConst(wireName: r'required')
+  static const UsersPartialUpdateErrorCodeEnum required_ = _$usersPartialUpdateErrorCodeEnum_required_;
+  @BuiltValueEnumConst(wireName: r'surrogate_characters_not_allowed')
+  static const UsersPartialUpdateErrorCodeEnum surrogateCharactersNotAllowed = _$usersPartialUpdateErrorCodeEnum_surrogateCharactersNotAllowed;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const UsersPartialUpdateErrorCodeEnum unknownDefaultOpenApi = _$usersPartialUpdateErrorCodeEnum_unknownDefaultOpenApi;
 

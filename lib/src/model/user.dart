@@ -23,6 +23,7 @@ part 'user.g.dart';
 /// * [languageIso] - ISO 639-1 code
 /// * [isGuest] 
 /// * [score] 
+/// * [notificationTopics] 
 @BuiltValue()
 abstract class User implements Built<User, UserBuilder> {
   @BuiltValueField(wireName: r'uuid')
@@ -58,6 +59,9 @@ abstract class User implements Built<User, UserBuilder> {
 
   @BuiltValueField(wireName: r'score')
   UserScore get score;
+
+  @BuiltValueField(wireName: r'notification_topics')
+  BuiltList<String>? get notificationTopics;
 
   User._();
 
@@ -136,6 +140,13 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
       object.score,
       specifiedType: const FullType(UserScore),
     );
+    if (object.notificationTopics != null) {
+      yield r'notification_topics';
+      yield serializers.serialize(
+        object.notificationTopics,
+        specifiedType: const FullType(BuiltList, [FullType(String)]),
+      );
+    }
   }
 
   @override
@@ -229,6 +240,14 @@ class _$UserSerializer implements PrimitiveSerializer<User> {
             specifiedType: const FullType(UserScore),
           ) as UserScore;
           result.score.replace(valueDes);
+          break;
+        case r'notification_topics':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType.nullable(BuiltList, [FullType(String)]),
+          ) as BuiltList<String>?;
+          if (valueDes == null) continue;
+          result.notificationTopics.replace(valueDes);
           break;
         default:
           unhandled.add(key);

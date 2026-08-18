@@ -223,11 +223,13 @@ class _$UserRequestLocaleEnumSerializer
 class _$UserRequest extends UserRequest {
   @override
   final UserRequestLocaleEnum? locale;
+  @override
+  final BuiltList<String>? notificationTopics;
 
   factory _$UserRequest([void Function(UserRequestBuilder)? updates]) =>
       (UserRequestBuilder()..update(updates))._build();
 
-  _$UserRequest._({this.locale}) : super._();
+  _$UserRequest._({this.locale, this.notificationTopics}) : super._();
   @override
   UserRequest rebuild(void Function(UserRequestBuilder) updates) =>
       (toBuilder()..update(updates)).build();
@@ -238,20 +240,25 @@ class _$UserRequest extends UserRequest {
   @override
   bool operator ==(Object other) {
     if (identical(other, this)) return true;
-    return other is UserRequest && locale == other.locale;
+    return other is UserRequest &&
+        locale == other.locale &&
+        notificationTopics == other.notificationTopics;
   }
 
   @override
   int get hashCode {
     var _$hash = 0;
     _$hash = $jc(_$hash, locale.hashCode);
+    _$hash = $jc(_$hash, notificationTopics.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
 
   @override
   String toString() {
-    return (newBuiltValueToStringHelper(r'UserRequest')..add('locale', locale))
+    return (newBuiltValueToStringHelper(r'UserRequest')
+          ..add('locale', locale)
+          ..add('notificationTopics', notificationTopics))
         .toString();
   }
 }
@@ -263,6 +270,12 @@ class UserRequestBuilder implements Builder<UserRequest, UserRequestBuilder> {
   UserRequestLocaleEnum? get locale => _$this._locale;
   set locale(UserRequestLocaleEnum? locale) => _$this._locale = locale;
 
+  ListBuilder<String>? _notificationTopics;
+  ListBuilder<String> get notificationTopics =>
+      _$this._notificationTopics ??= ListBuilder<String>();
+  set notificationTopics(ListBuilder<String>? notificationTopics) =>
+      _$this._notificationTopics = notificationTopics;
+
   UserRequestBuilder() {
     UserRequest._defaults(this);
   }
@@ -271,6 +284,7 @@ class UserRequestBuilder implements Builder<UserRequest, UserRequestBuilder> {
     final $v = _$v;
     if ($v != null) {
       _locale = $v.locale;
+      _notificationTopics = $v.notificationTopics?.toBuilder();
       _$v = null;
     }
     return this;
@@ -290,10 +304,24 @@ class UserRequestBuilder implements Builder<UserRequest, UserRequestBuilder> {
   UserRequest build() => _build();
 
   _$UserRequest _build() {
-    final _$result = _$v ??
-        _$UserRequest._(
-          locale: locale,
-        );
+    _$UserRequest _$result;
+    try {
+      _$result = _$v ??
+          _$UserRequest._(
+            locale: locale,
+            notificationTopics: _notificationTopics?.build(),
+          );
+    } catch (_) {
+      late String _$failedField;
+      try {
+        _$failedField = 'notificationTopics';
+        _notificationTopics?.build();
+      } catch (e) {
+        throw BuiltValueNestedFieldError(
+            r'UserRequest', _$failedField, e.toString());
+      }
+      rethrow;
+    }
     replace(_$result);
     return _$result;
   }
