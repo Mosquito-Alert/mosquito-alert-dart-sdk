@@ -168,3 +168,4 @@ class _$SimpleAnnotatorUserSerializer implements PrimitiveSerializer<SimpleAnnot
   }
 }
 
+

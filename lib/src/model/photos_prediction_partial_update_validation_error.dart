@@ -123,6 +123,7 @@ class _$PhotosPredictionPartialUpdateValidationErrorSerializer implements Primit
   }
 }
 
+
 class PhotosPredictionPartialUpdateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

@@ -139,6 +139,7 @@ class _$MessagesCreateContentTitleHuErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class MessagesCreateContentTitleHuErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'content.title.hu')

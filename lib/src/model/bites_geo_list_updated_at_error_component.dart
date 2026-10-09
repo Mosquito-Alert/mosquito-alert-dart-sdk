@@ -139,6 +139,7 @@ class _$BitesGeoListUpdatedAtErrorComponentSerializer implements PrimitiveSerial
   }
 }
 
+
 class BitesGeoListUpdatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'updated_at')

@@ -124,6 +124,7 @@ class _$NotificationsPartialUpdateErrorSerializer implements PrimitiveSerializer
   }
 }
 
+
 class NotificationsPartialUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_read')

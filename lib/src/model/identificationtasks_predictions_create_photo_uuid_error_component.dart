@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsCreatePhotoUuidErrorComponentSerializer im
   }
 }
 
+
 class IdentificationtasksPredictionsCreatePhotoUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'photo_uuid')

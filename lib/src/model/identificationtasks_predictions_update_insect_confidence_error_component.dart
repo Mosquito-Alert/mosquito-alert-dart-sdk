@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsUpdateInsectConfidenceErrorComponentSerial
   }
 }
 
+
 class IdentificationtasksPredictionsUpdateInsectConfidenceErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'insect_confidence')

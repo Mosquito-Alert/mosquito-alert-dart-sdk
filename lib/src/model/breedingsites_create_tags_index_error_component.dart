@@ -139,6 +139,7 @@ class _$BreedingsitesCreateTagsINDEXErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class BreedingsitesCreateTagsINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags.INDEX')

@@ -128,3 +128,4 @@ class _$ObservationFlagsRequestSerializer implements PrimitiveSerializer<Observa
   }
 }
 
+

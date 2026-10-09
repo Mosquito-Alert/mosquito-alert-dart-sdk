@@ -139,6 +139,7 @@ class _$AuthRefreshTokenNonFieldErrorsErrorComponentSerializer implements Primit
   }
 }
 
+
 class AuthRefreshTokenNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

@@ -379,6 +379,7 @@ class _$ObservationsCreateErrorSerializer implements PrimitiveSerializer<Observa
   }
 }
 
+
 class ObservationsCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mosquito_appearance.legs')

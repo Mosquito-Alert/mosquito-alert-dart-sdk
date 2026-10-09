@@ -139,6 +139,7 @@ class _$IdentificationtasksListMineStatusErrorComponentSerializer implements Pri
   }
 }
 
+
 class IdentificationtasksListMineStatusErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'status')

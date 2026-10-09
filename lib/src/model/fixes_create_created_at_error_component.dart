@@ -139,6 +139,7 @@ class _$FixesCreateCreatedAtErrorComponentSerializer implements PrimitiveSeriali
   }
 }
 
+
 class FixesCreateCreatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'created_at')

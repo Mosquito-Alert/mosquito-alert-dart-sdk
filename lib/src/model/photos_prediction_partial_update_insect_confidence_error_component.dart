@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateInsectConfidenceErrorComponentSerializer im
   }
 }
 
+
 class PhotosPredictionPartialUpdateInsectConfidenceErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'insect_confidence')

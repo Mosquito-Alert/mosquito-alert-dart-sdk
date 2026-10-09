@@ -123,6 +123,7 @@ class _$BoundariesCreateTemporaryValidationErrorSerializer implements PrimitiveS
   }
 }
 
+
 class BoundariesCreateTemporaryValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

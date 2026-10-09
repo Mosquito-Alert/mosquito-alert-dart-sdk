@@ -139,6 +139,7 @@ class _$AuthSignupGuestNonFieldErrorsErrorComponentSerializer implements Primiti
   }
 }
 
+
 class AuthSignupGuestNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

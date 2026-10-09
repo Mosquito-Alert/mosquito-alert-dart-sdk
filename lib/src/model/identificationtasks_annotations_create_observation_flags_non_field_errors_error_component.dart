@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorC
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateObservationFlagsNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'observation_flags.non_field_errors')

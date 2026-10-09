@@ -139,6 +139,7 @@ class _$BreedingsitesCreateLocationSourceErrorComponentSerializer implements Pri
   }
 }
 
+
 class BreedingsitesCreateLocationSourceErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.source')

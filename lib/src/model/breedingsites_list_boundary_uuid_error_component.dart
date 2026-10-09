@@ -139,6 +139,7 @@ class _$BreedingsitesListBoundaryUuidErrorComponentSerializer implements Primiti
   }
 }
 
+
 class BreedingsitesListBoundaryUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'boundary_uuid')

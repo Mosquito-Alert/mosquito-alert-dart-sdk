@@ -139,6 +139,7 @@ class _$NotificationsPartialUpdateNonFieldErrorsErrorComponentSerializer impleme
   }
 }
 
+
 class NotificationsPartialUpdateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

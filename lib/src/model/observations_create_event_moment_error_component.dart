@@ -139,6 +139,7 @@ class _$ObservationsCreateEventMomentErrorComponentSerializer implements Primiti
   }
 }
 
+
 class ObservationsCreateEventMomentErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'event_moment')

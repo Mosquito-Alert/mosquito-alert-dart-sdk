@@ -139,6 +139,7 @@ class _$NotificationsPartialUpdateIsReadErrorComponentSerializer implements Prim
   }
 }
 
+
 class NotificationsPartialUpdateIsReadErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_read')

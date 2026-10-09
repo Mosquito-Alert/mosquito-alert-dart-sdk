@@ -139,6 +139,7 @@ class _$AuthChangePasswordNonFieldErrorsErrorComponentSerializer implements Prim
   }
 }
 
+
 class AuthChangePasswordNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

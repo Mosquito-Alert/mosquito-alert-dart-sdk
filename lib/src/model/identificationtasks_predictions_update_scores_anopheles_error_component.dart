@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentSeriali
   }
 }
 
+
 class IdentificationtasksPredictionsUpdateScoresAnophelesErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.anopheles')

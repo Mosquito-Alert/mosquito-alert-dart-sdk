@@ -139,6 +139,7 @@ class _$BreedingsitesListMineGeoPrecisionErrorComponentSerializer implements Pri
   }
 }
 
+
 class BreedingsitesListMineGeoPrecisionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'geo_precision')

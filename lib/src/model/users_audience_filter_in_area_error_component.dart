@@ -139,6 +139,7 @@ class _$UsersAudienceFilterInAreaErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class UsersAudienceFilterInAreaErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'in_area')

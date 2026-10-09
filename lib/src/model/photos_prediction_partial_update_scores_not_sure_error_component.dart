@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateScoresNotSureErrorComponentSerializer imple
   }
 }
 
+
 class PhotosPredictionPartialUpdateScoresNotSureErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.not_sure')

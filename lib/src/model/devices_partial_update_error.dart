@@ -244,6 +244,7 @@ class _$DevicesPartialUpdateErrorSerializer implements PrimitiveSerializer<Devic
   }
 }
 
+
 class DevicesPartialUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mobile_app.package_version')

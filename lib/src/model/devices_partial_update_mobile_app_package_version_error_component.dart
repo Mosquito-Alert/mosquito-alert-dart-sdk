@@ -139,6 +139,7 @@ class _$DevicesPartialUpdateMobileAppPackageVersionErrorComponentSerializer impl
   }
 }
 
+
 class DevicesPartialUpdateMobileAppPackageVersionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mobile_app.package_version')

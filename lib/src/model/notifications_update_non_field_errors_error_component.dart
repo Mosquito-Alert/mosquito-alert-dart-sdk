@@ -139,6 +139,7 @@ class _$NotificationsUpdateNonFieldErrorsErrorComponentSerializer implements Pri
   }
 }
 
+
 class NotificationsUpdateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

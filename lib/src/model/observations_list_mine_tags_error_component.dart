@@ -139,6 +139,7 @@ class _$ObservationsListMineTagsErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class ObservationsListMineTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')

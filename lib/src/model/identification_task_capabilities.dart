@@ -136,3 +136,4 @@ class _$IdentificationTaskCapabilitiesSerializer implements PrimitiveSerializer<
   }
 }
 
+

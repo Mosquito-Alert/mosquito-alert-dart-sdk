@@ -124,3 +124,4 @@ class _$MessageContentRequestSerializer implements PrimitiveSerializer<MessageCo
   }
 }
 
+

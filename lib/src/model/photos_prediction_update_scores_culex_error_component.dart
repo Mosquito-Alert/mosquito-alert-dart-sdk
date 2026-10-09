@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateScoresCulexErrorComponentSerializer implements Pri
   }
 }
 
+
 class PhotosPredictionUpdateScoresCulexErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.culex')

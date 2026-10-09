@@ -160,3 +160,4 @@ class _$PaginatedPhotoPredictionListSerializer implements PrimitiveSerializer<Pa
   }
 }
 
+

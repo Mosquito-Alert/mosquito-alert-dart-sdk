@@ -139,6 +139,7 @@ class _$ObservationsCreateLocationSourceErrorComponentSerializer implements Prim
   }
 }
 
+
 class ObservationsCreateLocationSourceErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.source')

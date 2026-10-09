@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentSeri
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateFeedbackPublicNoteErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'feedback.public_note')

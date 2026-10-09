@@ -139,6 +139,7 @@ class _$MessagesCreateTargetErrorComponentSerializer implements PrimitiveSeriali
   }
 }
 
+
 class MessagesCreateTargetErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'target')

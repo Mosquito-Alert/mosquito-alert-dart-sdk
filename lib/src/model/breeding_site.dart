@@ -402,6 +402,7 @@ class _$BreedingSiteSerializer implements PrimitiveSerializer<BreedingSite> {
   }
 }
 
+
 class BreedingSiteSiteTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'basin')

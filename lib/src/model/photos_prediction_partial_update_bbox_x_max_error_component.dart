@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateBboxXMaxErrorComponentSerializer implements
   }
 }
 
+
 class PhotosPredictionPartialUpdateBboxXMaxErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.x_max')

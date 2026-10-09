@@ -139,6 +139,7 @@ class _$DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentSerializer impl
   }
 }
 
+
 class DevicesPartialUpdateMobileAppNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mobile_app.non_field_errors')

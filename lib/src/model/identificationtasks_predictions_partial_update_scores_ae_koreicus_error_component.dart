@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresAeKoreicusErrorComponen
   }
 }
 
+
 class IdentificationtasksPredictionsPartialUpdateScoresAeKoreicusErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.ae_koreicus')

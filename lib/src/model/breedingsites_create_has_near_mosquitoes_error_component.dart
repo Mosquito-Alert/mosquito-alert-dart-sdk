@@ -139,6 +139,7 @@ class _$BreedingsitesCreateHasNearMosquitoesErrorComponentSerializer implements 
   }
 }
 
+
 class BreedingsitesCreateHasNearMosquitoesErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'has_near_mosquitoes')

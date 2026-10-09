@@ -139,6 +139,7 @@ class _$IdentificationtasksListStatusErrorComponentSerializer implements Primiti
   }
 }
 
+
 class IdentificationtasksListStatusErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'status')

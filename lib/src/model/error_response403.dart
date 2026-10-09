@@ -123,6 +123,7 @@ class _$ErrorResponse403Serializer implements PrimitiveSerializer<ErrorResponse4
   }
 }
 
+
 class ErrorResponse403TypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'client_error')

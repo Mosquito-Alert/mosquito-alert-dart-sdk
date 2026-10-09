@@ -139,6 +139,7 @@ class _$BreedingsitesListUserUuidErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class BreedingsitesListUserUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuid')

@@ -139,6 +139,7 @@ class _$UsersAudienceFilterNotificationTopicsINDEXErrorComponentSerializer imple
   }
 }
 
+
 class UsersAudienceFilterNotificationTopicsINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'notification_topics.INDEX')

@@ -123,6 +123,7 @@ class _$PhotosPredictionUpdateValidationErrorSerializer implements PrimitiveSeri
   }
 }
 
+
 class PhotosPredictionUpdateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

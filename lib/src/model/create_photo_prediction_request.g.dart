@@ -100,6 +100,9 @@ const CreatePhotoPredictionRequestClassifierVersionEnum
     _$createPhotoPredictionRequestClassifierVersionEnum_v2025Period4 =
     const CreatePhotoPredictionRequestClassifierVersionEnum._('v2025Period4');
 const CreatePhotoPredictionRequestClassifierVersionEnum
+    _$createPhotoPredictionRequestClassifierVersionEnum_v2026Period1 =
+    const CreatePhotoPredictionRequestClassifierVersionEnum._('v2026Period1');
+const CreatePhotoPredictionRequestClassifierVersionEnum
     _$createPhotoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi =
     const CreatePhotoPredictionRequestClassifierVersionEnum._(
         'unknownDefaultOpenApi');
@@ -119,6 +122,8 @@ CreatePhotoPredictionRequestClassifierVersionEnum
       return _$createPhotoPredictionRequestClassifierVersionEnum_v2025Period3;
     case 'v2025Period4':
       return _$createPhotoPredictionRequestClassifierVersionEnum_v2025Period4;
+    case 'v2026Period1':
+      return _$createPhotoPredictionRequestClassifierVersionEnum_v2026Period1;
     case 'unknownDefaultOpenApi':
       return _$createPhotoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi;
     default:
@@ -135,6 +140,7 @@ final BuiltSet<CreatePhotoPredictionRequestClassifierVersionEnum>
   _$createPhotoPredictionRequestClassifierVersionEnum_v2025Period2,
   _$createPhotoPredictionRequestClassifierVersionEnum_v2025Period3,
   _$createPhotoPredictionRequestClassifierVersionEnum_v2025Period4,
+  _$createPhotoPredictionRequestClassifierVersionEnum_v2026Period1,
   _$createPhotoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi,
 ]);
 
@@ -204,6 +210,7 @@ class _$CreatePhotoPredictionRequestClassifierVersionEnumSerializer
     'v2025Period2': 'v2025.2',
     'v2025Period3': 'v2025.3',
     'v2025Period4': 'v2025.4',
+    'v2026Period1': 'v2026.1',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
@@ -213,6 +220,7 @@ class _$CreatePhotoPredictionRequestClassifierVersionEnumSerializer
     'v2025.2': 'v2025Period2',
     'v2025.3': 'v2025Period3',
     'v2025.4': 'v2025Period4',
+    'v2026.1': 'v2026Period1',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

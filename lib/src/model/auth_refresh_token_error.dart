@@ -124,6 +124,7 @@ class _$AuthRefreshTokenErrorSerializer implements PrimitiveSerializer<AuthRefre
   }
 }
 
+
 class AuthRefreshTokenErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'refresh')

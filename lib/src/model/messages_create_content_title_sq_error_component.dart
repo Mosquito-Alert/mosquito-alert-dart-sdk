@@ -139,6 +139,7 @@ class _$MessagesCreateContentTitleSqErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class MessagesCreateContentTitleSqErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'content.title.sq')

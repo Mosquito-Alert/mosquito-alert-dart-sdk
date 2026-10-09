@@ -173,30 +173,24 @@ class _$MosquitoAppearanceRequestSerializer implements PrimitiveSerializer<Mosqu
   }
 }
 
+
+/// The mosquito specie perceived by the user.
 class MosquitoAppearanceRequestSpecieEnum extends EnumClass {
 
-  /// The mosquito specie perceived by the user.
   @BuiltValueEnumConst(wireName: r'albopictus')
   static const MosquitoAppearanceRequestSpecieEnum albopictus = _$mosquitoAppearanceRequestSpecieEnum_albopictus;
-  /// The mosquito specie perceived by the user.
   @BuiltValueEnumConst(wireName: r'aegypti')
   static const MosquitoAppearanceRequestSpecieEnum aegypti = _$mosquitoAppearanceRequestSpecieEnum_aegypti;
-  /// The mosquito specie perceived by the user.
   @BuiltValueEnumConst(wireName: r'japonicus')
   static const MosquitoAppearanceRequestSpecieEnum japonicus = _$mosquitoAppearanceRequestSpecieEnum_japonicus;
-  /// The mosquito specie perceived by the user.
   @BuiltValueEnumConst(wireName: r'koreicus')
   static const MosquitoAppearanceRequestSpecieEnum koreicus = _$mosquitoAppearanceRequestSpecieEnum_koreicus;
-  /// The mosquito specie perceived by the user.
   @BuiltValueEnumConst(wireName: r'culex')
   static const MosquitoAppearanceRequestSpecieEnum culex = _$mosquitoAppearanceRequestSpecieEnum_culex;
-  /// The mosquito specie perceived by the user.
   @BuiltValueEnumConst(wireName: r'other')
   static const MosquitoAppearanceRequestSpecieEnum other = _$mosquitoAppearanceRequestSpecieEnum_other;
-  /// The mosquito specie perceived by the user.
   @BuiltValueEnumConst(wireName: r'')
   static const MosquitoAppearanceRequestSpecieEnum empty = _$mosquitoAppearanceRequestSpecieEnum_empty;
-  /// The mosquito specie perceived by the user.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MosquitoAppearanceRequestSpecieEnum unknownDefaultOpenApi = _$mosquitoAppearanceRequestSpecieEnum_unknownDefaultOpenApi;
 
@@ -208,30 +202,23 @@ class MosquitoAppearanceRequestSpecieEnum extends EnumClass {
   static MosquitoAppearanceRequestSpecieEnum valueOf(String name) => _$mosquitoAppearanceRequestSpecieEnumValueOf(name);
 }
 
+/// The species of mosquito that the thorax resembles, according to the user.
 class MosquitoAppearanceRequestThoraxEnum extends EnumClass {
 
-  /// The species of mosquito that the thorax resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'albopictus')
   static const MosquitoAppearanceRequestThoraxEnum albopictus = _$mosquitoAppearanceRequestThoraxEnum_albopictus;
-  /// The species of mosquito that the thorax resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'aegypti')
   static const MosquitoAppearanceRequestThoraxEnum aegypti = _$mosquitoAppearanceRequestThoraxEnum_aegypti;
-  /// The species of mosquito that the thorax resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'japonicus')
   static const MosquitoAppearanceRequestThoraxEnum japonicus = _$mosquitoAppearanceRequestThoraxEnum_japonicus;
-  /// The species of mosquito that the thorax resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'koreicus')
   static const MosquitoAppearanceRequestThoraxEnum koreicus = _$mosquitoAppearanceRequestThoraxEnum_koreicus;
-  /// The species of mosquito that the thorax resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'culex')
   static const MosquitoAppearanceRequestThoraxEnum culex = _$mosquitoAppearanceRequestThoraxEnum_culex;
-  /// The species of mosquito that the thorax resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'other')
   static const MosquitoAppearanceRequestThoraxEnum other = _$mosquitoAppearanceRequestThoraxEnum_other;
-  /// The species of mosquito that the thorax resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'')
   static const MosquitoAppearanceRequestThoraxEnum empty = _$mosquitoAppearanceRequestThoraxEnum_empty;
-  /// The species of mosquito that the thorax resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MosquitoAppearanceRequestThoraxEnum unknownDefaultOpenApi = _$mosquitoAppearanceRequestThoraxEnum_unknownDefaultOpenApi;
 
@@ -243,30 +230,23 @@ class MosquitoAppearanceRequestThoraxEnum extends EnumClass {
   static MosquitoAppearanceRequestThoraxEnum valueOf(String name) => _$mosquitoAppearanceRequestThoraxEnumValueOf(name);
 }
 
+/// The species of mosquito that the abdomen resembles, according to the user.
 class MosquitoAppearanceRequestAbdomenEnum extends EnumClass {
 
-  /// The species of mosquito that the abdomen resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'albopictus')
   static const MosquitoAppearanceRequestAbdomenEnum albopictus = _$mosquitoAppearanceRequestAbdomenEnum_albopictus;
-  /// The species of mosquito that the abdomen resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'aegypti')
   static const MosquitoAppearanceRequestAbdomenEnum aegypti = _$mosquitoAppearanceRequestAbdomenEnum_aegypti;
-  /// The species of mosquito that the abdomen resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'japonicus')
   static const MosquitoAppearanceRequestAbdomenEnum japonicus = _$mosquitoAppearanceRequestAbdomenEnum_japonicus;
-  /// The species of mosquito that the abdomen resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'koreicus')
   static const MosquitoAppearanceRequestAbdomenEnum koreicus = _$mosquitoAppearanceRequestAbdomenEnum_koreicus;
-  /// The species of mosquito that the abdomen resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'culex')
   static const MosquitoAppearanceRequestAbdomenEnum culex = _$mosquitoAppearanceRequestAbdomenEnum_culex;
-  /// The species of mosquito that the abdomen resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'other')
   static const MosquitoAppearanceRequestAbdomenEnum other = _$mosquitoAppearanceRequestAbdomenEnum_other;
-  /// The species of mosquito that the abdomen resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'')
   static const MosquitoAppearanceRequestAbdomenEnum empty = _$mosquitoAppearanceRequestAbdomenEnum_empty;
-  /// The species of mosquito that the abdomen resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MosquitoAppearanceRequestAbdomenEnum unknownDefaultOpenApi = _$mosquitoAppearanceRequestAbdomenEnum_unknownDefaultOpenApi;
 
@@ -278,30 +258,23 @@ class MosquitoAppearanceRequestAbdomenEnum extends EnumClass {
   static MosquitoAppearanceRequestAbdomenEnum valueOf(String name) => _$mosquitoAppearanceRequestAbdomenEnumValueOf(name);
 }
 
+/// The species of mosquito that the leg resembles, according to the user.
 class MosquitoAppearanceRequestLegsEnum extends EnumClass {
 
-  /// The species of mosquito that the leg resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'albopictus')
   static const MosquitoAppearanceRequestLegsEnum albopictus = _$mosquitoAppearanceRequestLegsEnum_albopictus;
-  /// The species of mosquito that the leg resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'aegypti')
   static const MosquitoAppearanceRequestLegsEnum aegypti = _$mosquitoAppearanceRequestLegsEnum_aegypti;
-  /// The species of mosquito that the leg resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'japonicus')
   static const MosquitoAppearanceRequestLegsEnum japonicus = _$mosquitoAppearanceRequestLegsEnum_japonicus;
-  /// The species of mosquito that the leg resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'koreicus')
   static const MosquitoAppearanceRequestLegsEnum koreicus = _$mosquitoAppearanceRequestLegsEnum_koreicus;
-  /// The species of mosquito that the leg resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'culex')
   static const MosquitoAppearanceRequestLegsEnum culex = _$mosquitoAppearanceRequestLegsEnum_culex;
-  /// The species of mosquito that the leg resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'other')
   static const MosquitoAppearanceRequestLegsEnum other = _$mosquitoAppearanceRequestLegsEnum_other;
-  /// The species of mosquito that the leg resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'')
   static const MosquitoAppearanceRequestLegsEnum empty = _$mosquitoAppearanceRequestLegsEnum_empty;
-  /// The species of mosquito that the leg resembles, according to the user.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const MosquitoAppearanceRequestLegsEnum unknownDefaultOpenApi = _$mosquitoAppearanceRequestLegsEnum_unknownDefaultOpenApi;
 

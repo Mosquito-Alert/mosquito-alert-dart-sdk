@@ -409,6 +409,7 @@ class _$IdentificationtasksPredictionsPartialUpdateErrorSerializer implements Pr
   }
 }
 
+
 class IdentificationtasksPredictionsPartialUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'classifier_version')

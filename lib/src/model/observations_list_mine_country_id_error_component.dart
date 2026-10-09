@@ -139,6 +139,7 @@ class _$ObservationsListMineCountryIdErrorComponentSerializer implements Primiti
   }
 }
 
+
 class ObservationsListMineCountryIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'country_id')

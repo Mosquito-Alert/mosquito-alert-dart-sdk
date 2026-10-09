@@ -139,6 +139,7 @@ class _$ObservationsListReceivedAtErrorComponentSerializer implements PrimitiveS
   }
 }
 
+
 class ObservationsListReceivedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'received_at')

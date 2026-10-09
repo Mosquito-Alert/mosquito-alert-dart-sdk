@@ -149,6 +149,7 @@ class _$ObservationGeoJsonModelSerializer implements PrimitiveSerializer<Observa
   }
 }
 
+
 class ObservationGeoJsonModelTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'Feature')

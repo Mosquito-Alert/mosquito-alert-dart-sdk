@@ -139,6 +139,7 @@ class _$BreedingsitesGeoListUpdatedAtErrorComponentSerializer implements Primiti
   }
 }
 
+
 class BreedingsitesGeoListUpdatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'updated_at')

@@ -144,6 +144,7 @@ class _$SpeciesCharacteristicsRequestSerializer implements PrimitiveSerializer<S
   }
 }
 
+
 class SpeciesCharacteristicsRequestSexEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'male')

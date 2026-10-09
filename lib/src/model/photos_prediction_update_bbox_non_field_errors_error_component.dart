@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateBboxNonFieldErrorsErrorComponentSerializer impleme
   }
 }
 
+
 class PhotosPredictionUpdateBboxNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.non_field_errors')

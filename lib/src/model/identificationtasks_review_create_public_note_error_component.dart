@@ -139,6 +139,7 @@ class _$IdentificationtasksReviewCreatePublicNoteErrorComponentSerializer implem
   }
 }
 
+
 class IdentificationtasksReviewCreatePublicNoteErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'public_note')

@@ -139,6 +139,7 @@ class _$ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentSerializ
   }
 }
 
+
 class ObservationsCreateMosquitoAppearanceNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mosquito_appearance.non_field_errors')

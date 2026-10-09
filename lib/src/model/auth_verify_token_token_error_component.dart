@@ -139,6 +139,7 @@ class _$AuthVerifyTokenTokenErrorComponentSerializer implements PrimitiveSeriali
   }
 }
 
+
 class AuthVerifyTokenTokenErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'token')

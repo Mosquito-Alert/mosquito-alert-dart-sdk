@@ -166,3 +166,4 @@ class _$PatchedDeviceUpdateRequestSerializer implements PrimitiveSerializer<Patc
   }
 }
 
+

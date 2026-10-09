@@ -139,6 +139,7 @@ class _$ObservationsCreateTagsINDEXErrorComponentSerializer implements Primitive
   }
 }
 
+
 class ObservationsCreateTagsINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags.INDEX')

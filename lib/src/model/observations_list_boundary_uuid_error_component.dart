@@ -139,6 +139,7 @@ class _$ObservationsListBoundaryUuidErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class ObservationsListBoundaryUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'boundary_uuid')

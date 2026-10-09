@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsListUserIdsErrorComponentSerializer implem
   }
 }
 
+
 class IdentificationtasksAnnotationsListUserIdsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_ids')

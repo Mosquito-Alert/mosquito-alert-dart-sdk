@@ -244,6 +244,7 @@ class _$DevicesUpdateErrorSerializer implements PrimitiveSerializer<DevicesUpdat
   }
 }
 
+
 class DevicesUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mobile_app.package_version')

@@ -139,6 +139,7 @@ class _$UsersUpdateNotificationTopicsINDEXErrorComponentSerializer implements Pr
   }
 }
 
+
 class UsersUpdateNotificationTopicsINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'notification_topics.INDEX')

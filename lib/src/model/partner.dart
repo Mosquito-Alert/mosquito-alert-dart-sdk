@@ -155,3 +155,4 @@ class _$PartnerSerializer implements PrimitiveSerializer<Partner> {
   }
 }
 
+

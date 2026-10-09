@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateBboxYMaxErrorComponentSerializer implements Primit
   }
 }
 
+
 class PhotosPredictionUpdateBboxYMaxErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.y_max')

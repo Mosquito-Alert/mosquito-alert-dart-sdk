@@ -139,6 +139,7 @@ class _$ObservationsListMineBoundaryUuidErrorComponentSerializer implements Prim
   }
 }
 
+
 class ObservationsListMineBoundaryUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'boundary_uuid')

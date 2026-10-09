@@ -139,6 +139,7 @@ class _$BreedingsitesListReceivedAtErrorComponentSerializer implements Primitive
   }
 }
 
+
 class BreedingsitesListReceivedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'received_at')

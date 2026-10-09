@@ -46,7 +46,7 @@ abstract class PhotoPredictionRequest implements Built<PhotoPredictionRequest, P
 
   @BuiltValueField(wireName: r'classifier_version')
   PhotoPredictionRequestClassifierVersionEnum get classifierVersion;
-  // enum classifierVersionEnum {  v2023.1,  v2024.1,  v2025.1,  v2025.2,  v2025.3,  v2025.4,  };
+  // enum classifierVersionEnum {  v2023.1,  v2024.1,  v2025.1,  v2025.2,  v2025.3,  v2025.4,  v2026.1,  };
 
   PhotoPredictionRequest._();
 
@@ -211,6 +211,7 @@ class _$PhotoPredictionRequestSerializer implements PrimitiveSerializer<PhotoPre
   }
 }
 
+
 class PhotoPredictionRequestPredictedClassEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'ae_albopictus')
@@ -256,6 +257,8 @@ class PhotoPredictionRequestClassifierVersionEnum extends EnumClass {
   static const PhotoPredictionRequestClassifierVersionEnum v2025Period3 = _$photoPredictionRequestClassifierVersionEnum_v2025Period3;
   @BuiltValueEnumConst(wireName: r'v2025.4')
   static const PhotoPredictionRequestClassifierVersionEnum v2025Period4 = _$photoPredictionRequestClassifierVersionEnum_v2025Period4;
+  @BuiltValueEnumConst(wireName: r'v2026.1')
+  static const PhotoPredictionRequestClassifierVersionEnum v2026Period1 = _$photoPredictionRequestClassifierVersionEnum_v2026Period1;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const PhotoPredictionRequestClassifierVersionEnum unknownDefaultOpenApi = _$photoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi;
 

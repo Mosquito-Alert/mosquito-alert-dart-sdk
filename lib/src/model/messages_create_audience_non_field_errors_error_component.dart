@@ -139,6 +139,7 @@ class _$MessagesCreateAudienceNonFieldErrorsErrorComponentSerializer implements 
   }
 }
 
+
 class MessagesCreateAudienceNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'audience.non_field_errors')

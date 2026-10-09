@@ -139,6 +139,7 @@ class _$ObservationsCreateEventEnvironmentErrorComponentSerializer implements Pr
   }
 }
 
+
 class ObservationsCreateEventEnvironmentErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'event_environment')

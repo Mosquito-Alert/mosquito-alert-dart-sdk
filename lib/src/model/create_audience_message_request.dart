@@ -142,6 +142,7 @@ class _$CreateAudienceMessageRequestSerializer implements PrimitiveSerializer<Cr
   }
 }
 
+
 class CreateAudienceMessageRequestTargetEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'audience')

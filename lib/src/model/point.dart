@@ -120,3 +120,4 @@ class _$PointSerializer implements PrimitiveSerializer<Point> {
   }
 }
 
+

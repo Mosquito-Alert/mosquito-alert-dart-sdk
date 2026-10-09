@@ -159,6 +159,7 @@ class _$SimplifiedLocationSerializer implements PrimitiveSerializer<SimplifiedLo
   }
 }
 
+
 class SimplifiedLocationTimezoneEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'Africa/Abidjan')

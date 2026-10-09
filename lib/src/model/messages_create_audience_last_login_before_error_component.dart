@@ -139,6 +139,7 @@ class _$MessagesCreateAudienceLastLoginBeforeErrorComponentSerializer implements
   }
 }
 
+
 class MessagesCreateAudienceLastLoginBeforeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'audience.last_login_before')

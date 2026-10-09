@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentS
   }
 }
 
+
 class IdentificationtasksPredictionsPartialUpdateScoresCulisetaErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.culiseta')

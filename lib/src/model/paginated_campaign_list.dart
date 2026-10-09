@@ -160,3 +160,4 @@ class _$PaginatedCampaignListSerializer implements PrimitiveSerializer<Paginated
   }
 }
 
+

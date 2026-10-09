@@ -139,6 +139,7 @@ class _$ObservationsCreatePhotosINDEXErrorComponentSerializer implements Primiti
   }
 }
 
+
 class ObservationsCreatePhotosINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'photos.INDEX')

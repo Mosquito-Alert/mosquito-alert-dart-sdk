@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsUpdateScoresAeAegyptiErrorComponentSeriali
   }
 }
 
+
 class IdentificationtasksPredictionsUpdateScoresAeAegyptiErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.ae_aegypti')

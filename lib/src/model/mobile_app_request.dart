@@ -120,3 +120,4 @@ class _$MobileAppRequestSerializer implements PrimitiveSerializer<MobileAppReque
   }
 }
 
+

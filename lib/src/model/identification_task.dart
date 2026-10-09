@@ -292,6 +292,7 @@ class _$IdentificationTaskSerializer implements PrimitiveSerializer<Identificati
   }
 }
 
+
 class IdentificationTaskStatusEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'open')

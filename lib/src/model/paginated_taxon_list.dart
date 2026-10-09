@@ -160,3 +160,4 @@ class _$PaginatedTaxonListSerializer implements PrimitiveSerializer<PaginatedTax
   }
 }
 
+

@@ -124,6 +124,7 @@ class _$AuthSignupGuestErrorSerializer implements PrimitiveSerializer<AuthSignup
   }
 }
 
+
 class AuthSignupGuestErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'password')

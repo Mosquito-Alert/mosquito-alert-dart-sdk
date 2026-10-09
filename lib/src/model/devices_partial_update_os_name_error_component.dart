@@ -139,6 +139,7 @@ class _$DevicesPartialUpdateOsNameErrorComponentSerializer implements PrimitiveS
   }
 }
 
+
 class DevicesPartialUpdateOsNameErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'os.name')

@@ -123,6 +123,7 @@ class _$BreedingsitesListValidationErrorSerializer implements PrimitiveSerialize
   }
 }
 
+
 class BreedingsitesListValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

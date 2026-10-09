@@ -139,6 +139,7 @@ class _$ObservationsCreatePhotosErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class ObservationsCreatePhotosErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'photos')

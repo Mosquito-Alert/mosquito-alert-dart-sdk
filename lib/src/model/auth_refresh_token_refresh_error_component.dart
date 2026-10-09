@@ -139,6 +139,7 @@ class _$AuthRefreshTokenRefreshErrorComponentSerializer implements PrimitiveSeri
   }
 }
 
+
 class AuthRefreshTokenRefreshErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'refresh')

@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentSe
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateFeedbackInternalNoteErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'feedback.internal_note')

@@ -121,3 +121,4 @@ class _$UserScoreSerializer implements PrimitiveSerializer<UserScore> {
   }
 }
 
+

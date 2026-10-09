@@ -139,6 +139,7 @@ class _$ObservationsListCreatedAtErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class ObservationsListCreatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'created_at')

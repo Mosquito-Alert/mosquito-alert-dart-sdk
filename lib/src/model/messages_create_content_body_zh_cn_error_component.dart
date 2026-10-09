@@ -139,6 +139,7 @@ class _$MessagesCreateContentBodyZhCnErrorComponentSerializer implements Primiti
   }
 }
 
+
 class MessagesCreateContentBodyZhCnErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'content.body.zh-cn')

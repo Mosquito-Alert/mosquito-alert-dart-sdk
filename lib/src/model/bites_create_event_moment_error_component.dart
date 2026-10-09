@@ -139,6 +139,7 @@ class _$BitesCreateEventMomentErrorComponentSerializer implements PrimitiveSeria
   }
 }
 
+
 class BitesCreateEventMomentErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'event_moment')

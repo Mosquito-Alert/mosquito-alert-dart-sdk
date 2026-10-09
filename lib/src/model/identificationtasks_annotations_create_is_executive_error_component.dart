@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentSerializer 
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateIsExecutiveErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_executive')

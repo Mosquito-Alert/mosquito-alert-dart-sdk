@@ -123,6 +123,7 @@ class _$BitesGeoListValidationErrorSerializer implements PrimitiveSerializer<Bit
   }
 }
 
+
 class BitesGeoListValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

@@ -100,6 +100,9 @@ const PatchedPhotoPredictionRequestClassifierVersionEnum
     _$patchedPhotoPredictionRequestClassifierVersionEnum_v2025Period4 =
     const PatchedPhotoPredictionRequestClassifierVersionEnum._('v2025Period4');
 const PatchedPhotoPredictionRequestClassifierVersionEnum
+    _$patchedPhotoPredictionRequestClassifierVersionEnum_v2026Period1 =
+    const PatchedPhotoPredictionRequestClassifierVersionEnum._('v2026Period1');
+const PatchedPhotoPredictionRequestClassifierVersionEnum
     _$patchedPhotoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi =
     const PatchedPhotoPredictionRequestClassifierVersionEnum._(
         'unknownDefaultOpenApi');
@@ -119,6 +122,8 @@ PatchedPhotoPredictionRequestClassifierVersionEnum
       return _$patchedPhotoPredictionRequestClassifierVersionEnum_v2025Period3;
     case 'v2025Period4':
       return _$patchedPhotoPredictionRequestClassifierVersionEnum_v2025Period4;
+    case 'v2026Period1':
+      return _$patchedPhotoPredictionRequestClassifierVersionEnum_v2026Period1;
     case 'unknownDefaultOpenApi':
       return _$patchedPhotoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi;
     default:
@@ -135,6 +140,7 @@ final BuiltSet<PatchedPhotoPredictionRequestClassifierVersionEnum>
   _$patchedPhotoPredictionRequestClassifierVersionEnum_v2025Period2,
   _$patchedPhotoPredictionRequestClassifierVersionEnum_v2025Period3,
   _$patchedPhotoPredictionRequestClassifierVersionEnum_v2025Period4,
+  _$patchedPhotoPredictionRequestClassifierVersionEnum_v2026Period1,
   _$patchedPhotoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi,
 ]);
 
@@ -205,6 +211,7 @@ class _$PatchedPhotoPredictionRequestClassifierVersionEnumSerializer
     'v2025Period2': 'v2025.2',
     'v2025Period3': 'v2025.3',
     'v2025Period4': 'v2025.4',
+    'v2026Period1': 'v2026.1',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
@@ -214,6 +221,7 @@ class _$PatchedPhotoPredictionRequestClassifierVersionEnumSerializer
     'v2025.2': 'v2025Period2',
     'v2025.3': 'v2025Period3',
     'v2025.4': 'v2025Period4',
+    'v2026.1': 'v2026Period1',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

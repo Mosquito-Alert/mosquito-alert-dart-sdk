@@ -139,6 +139,7 @@ class _$DevicesCreateOsNonFieldErrorsErrorComponentSerializer implements Primiti
   }
 }
 
+
 class DevicesCreateOsNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'os.non_field_errors')

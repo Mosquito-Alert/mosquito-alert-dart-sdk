@@ -123,6 +123,7 @@ class _$AuthChangePasswordValidationErrorSerializer implements PrimitiveSerializ
   }
 }
 
+
 class AuthChangePasswordValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

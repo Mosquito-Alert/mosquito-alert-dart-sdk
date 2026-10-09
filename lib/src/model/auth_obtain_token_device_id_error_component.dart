@@ -139,6 +139,7 @@ class _$AuthObtainTokenDeviceIdErrorComponentSerializer implements PrimitiveSeri
   }
 }
 
+
 class AuthObtainTokenDeviceIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'device_id')

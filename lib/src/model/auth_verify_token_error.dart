@@ -124,6 +124,7 @@ class _$AuthVerifyTokenErrorSerializer implements PrimitiveSerializer<AuthVerify
   }
 }
 
+
 class AuthVerifyTokenErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'token')

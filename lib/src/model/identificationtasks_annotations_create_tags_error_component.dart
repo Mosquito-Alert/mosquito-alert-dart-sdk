@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateTagsErrorComponentSerializer impleme
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')

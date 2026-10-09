@@ -139,6 +139,7 @@ class _$DevicesCreateManufacturerErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class DevicesCreateManufacturerErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'manufacturer')

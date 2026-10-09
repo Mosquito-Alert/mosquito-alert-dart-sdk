@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateBboxYMaxErrorComponentSerializer implements
   }
 }
 
+
 class PhotosPredictionPartialUpdateBboxYMaxErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.y_max')

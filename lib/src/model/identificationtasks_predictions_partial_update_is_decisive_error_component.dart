@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentSeria
   }
 }
 
+
 class IdentificationtasksPredictionsPartialUpdateIsDecisiveErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_decisive')

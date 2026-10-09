@@ -175,6 +175,7 @@ class _$BreedingSiteGeoModelSerializer implements PrimitiveSerializer<BreedingSi
   }
 }
 
+
 class BreedingSiteGeoModelSiteTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'basin')

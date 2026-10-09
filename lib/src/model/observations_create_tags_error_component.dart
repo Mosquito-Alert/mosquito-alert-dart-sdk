@@ -139,6 +139,7 @@ class _$ObservationsCreateTagsErrorComponentSerializer implements PrimitiveSeria
   }
 }
 
+
 class ObservationsCreateTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')

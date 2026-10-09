@@ -139,6 +139,7 @@ class _$IdentificationtasksReviewCreateCharacteristicsSexErrorComponentSerialize
   }
 }
 
+
 class IdentificationtasksReviewCreateCharacteristicsSexErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'characteristics.sex')

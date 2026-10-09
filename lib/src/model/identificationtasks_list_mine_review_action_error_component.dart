@@ -139,6 +139,7 @@ class _$IdentificationtasksListMineReviewActionErrorComponentSerializer implemen
   }
 }
 
+
 class IdentificationtasksListMineReviewActionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'review_action')

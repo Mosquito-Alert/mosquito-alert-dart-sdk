@@ -139,6 +139,7 @@ class _$BreedingsitesGeoListTagsErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class BreedingsitesGeoListTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')

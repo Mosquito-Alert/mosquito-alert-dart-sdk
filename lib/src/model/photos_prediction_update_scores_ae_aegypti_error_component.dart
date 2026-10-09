@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateScoresAeAegyptiErrorComponentSerializer implements
   }
 }
 
+
 class PhotosPredictionUpdateScoresAeAegyptiErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.ae_aegypti')

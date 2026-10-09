@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsCreateScoresOtherSpeciesErrorComponentSeri
   }
 }
 
+
 class IdentificationtasksPredictionsCreateScoresOtherSpeciesErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.other_species')

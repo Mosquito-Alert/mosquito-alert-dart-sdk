@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsListMineUpdatedAtErrorComponentSerializer 
   }
 }
 
+
 class IdentificationtasksAnnotationsListMineUpdatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'updated_at')

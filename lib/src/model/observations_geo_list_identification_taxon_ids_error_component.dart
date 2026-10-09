@@ -139,6 +139,7 @@ class _$ObservationsGeoListIdentificationTaxonIdsErrorComponentSerializer implem
   }
 }
 
+
 class ObservationsGeoListIdentificationTaxonIdsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'identification_taxon_ids')

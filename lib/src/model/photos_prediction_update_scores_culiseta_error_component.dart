@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateScoresCulisetaErrorComponentSerializer implements 
   }
 }
 
+
 class PhotosPredictionUpdateScoresCulisetaErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.culiseta')

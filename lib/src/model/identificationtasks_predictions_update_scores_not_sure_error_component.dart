@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsUpdateScoresNotSureErrorComponentSerialize
   }
 }
 
+
 class IdentificationtasksPredictionsUpdateScoresNotSureErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.not_sure')

@@ -214,6 +214,7 @@ class _$FixesCreateErrorSerializer implements PrimitiveSerializer<FixesCreateErr
   }
 }
 
+
 class FixesCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'power')

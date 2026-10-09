@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsListMineTypeErrorComponentSerializer imple
   }
 }
 
+
 class IdentificationtasksAnnotationsListMineTypeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'type')

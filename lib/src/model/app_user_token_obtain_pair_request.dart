@@ -139,3 +139,4 @@ class _$AppUserTokenObtainPairRequestSerializer implements PrimitiveSerializer<A
   }
 }
 
+

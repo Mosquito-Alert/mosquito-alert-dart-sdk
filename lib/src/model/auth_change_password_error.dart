@@ -124,6 +124,7 @@ class _$AuthChangePasswordErrorSerializer implements PrimitiveSerializer<AuthCha
   }
 }
 
+
 class AuthChangePasswordErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'password')

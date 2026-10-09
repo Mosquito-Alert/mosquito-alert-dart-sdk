@@ -139,6 +139,7 @@ class _$ObservationsListMineUpdatedAtErrorComponentSerializer implements Primiti
   }
 }
 
+
 class ObservationsListMineUpdatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'updated_at')

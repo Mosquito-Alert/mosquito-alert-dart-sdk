@@ -123,6 +123,7 @@ class _$FixesCreateValidationErrorSerializer implements PrimitiveSerializer<Fixe
   }
 }
 
+
 class FixesCreateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

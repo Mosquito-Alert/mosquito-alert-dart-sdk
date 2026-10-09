@@ -139,6 +139,7 @@ class _$BitesCreateNonFieldErrorsErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class BitesCreateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

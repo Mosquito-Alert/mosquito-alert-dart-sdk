@@ -139,6 +139,7 @@ class _$AuthSignupGuestPasswordErrorComponentSerializer implements PrimitiveSeri
   }
 }
 
+
 class AuthSignupGuestPasswordErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'password')

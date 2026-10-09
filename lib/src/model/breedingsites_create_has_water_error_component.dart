@@ -139,6 +139,7 @@ class _$BreedingsitesCreateHasWaterErrorComponentSerializer implements Primitive
   }
 }
 
+
 class BreedingsitesCreateHasWaterErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'has_water')

@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsCreateBboxXMaxErrorComponentSerializer imp
   }
 }
 
+
 class IdentificationtasksPredictionsCreateBboxXMaxErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.x_max')

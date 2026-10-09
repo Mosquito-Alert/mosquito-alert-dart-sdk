@@ -139,6 +139,7 @@ class _$MessagesCreateNonFieldErrorsErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class MessagesCreateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

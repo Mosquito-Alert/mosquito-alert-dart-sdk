@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorCompon
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateObservationFlagsIsVisibleErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'observation_flags.is_visible')

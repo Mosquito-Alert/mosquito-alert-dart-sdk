@@ -139,6 +139,7 @@ class _$IdentificationtasksListNumAnnotationsErrorComponentSerializer implements
   }
 }
 
+
 class IdentificationtasksListNumAnnotationsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'num_annotations')

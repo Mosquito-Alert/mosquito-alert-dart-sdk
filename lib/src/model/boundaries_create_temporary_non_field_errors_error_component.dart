@@ -139,6 +139,7 @@ class _$BoundariesCreateTemporaryNonFieldErrorsErrorComponentSerializer implemen
   }
 }
 
+
 class BoundariesCreateTemporaryNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

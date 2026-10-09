@@ -123,6 +123,7 @@ class _$UsersAudienceFilterValidationErrorSerializer implements PrimitiveSeriali
   }
 }
 
+
 class UsersAudienceFilterValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

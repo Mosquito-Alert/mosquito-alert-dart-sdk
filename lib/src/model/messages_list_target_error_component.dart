@@ -139,6 +139,7 @@ class _$MessagesListTargetErrorComponentSerializer implements PrimitiveSerialize
   }
 }
 
+
 class MessagesListTargetErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'target')

@@ -123,6 +123,7 @@ class _$TaxaListValidationErrorSerializer implements PrimitiveSerializer<TaxaLis
   }
 }
 
+
 class TaxaListValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

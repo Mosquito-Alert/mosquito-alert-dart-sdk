@@ -139,6 +139,7 @@ class _$BreedingsitesCreateSentAtErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class BreedingsitesCreateSentAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'sent_at')

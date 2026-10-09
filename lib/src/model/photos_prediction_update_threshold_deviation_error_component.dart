@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateThresholdDeviationErrorComponentSerializer impleme
   }
 }
 
+
 class PhotosPredictionUpdateThresholdDeviationErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'threshold_deviation')

@@ -139,6 +139,7 @@ class _$UsersAudienceFilterNotificationTopicsErrorComponentSerializer implements
   }
 }
 
+
 class UsersAudienceFilterNotificationTopicsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'notification_topics')

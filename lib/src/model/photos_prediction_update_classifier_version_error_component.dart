@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateClassifierVersionErrorComponentSerializer implemen
   }
 }
 
+
 class PhotosPredictionUpdateClassifierVersionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'classifier_version')

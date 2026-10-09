@@ -139,6 +139,7 @@ class _$DevicesPartialUpdateOsVersionErrorComponentSerializer implements Primiti
   }
 }
 
+
 class DevicesPartialUpdateOsVersionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'os.version')

@@ -139,6 +139,7 @@ class _$NotificationsUpdateIsReadErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class NotificationsUpdateIsReadErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_read')

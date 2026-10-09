@@ -139,6 +139,7 @@ class _$BitesCreateTagsErrorComponentSerializer implements PrimitiveSerializer<B
   }
 }
 
+
 class BitesCreateTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')

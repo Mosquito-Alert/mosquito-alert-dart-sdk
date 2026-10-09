@@ -139,6 +139,7 @@ class _$BitesListMineOrderByErrorComponentSerializer implements PrimitiveSeriali
   }
 }
 
+
 class BitesListMineOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

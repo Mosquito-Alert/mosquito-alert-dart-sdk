@@ -139,6 +139,7 @@ class _$IdentificationtasksListResultSourceErrorComponentSerializer implements P
   }
 }
 
+
 class IdentificationtasksListResultSourceErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'result_source')

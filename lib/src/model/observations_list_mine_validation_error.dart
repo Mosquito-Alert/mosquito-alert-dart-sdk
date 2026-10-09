@@ -123,6 +123,7 @@ class _$ObservationsListMineValidationErrorSerializer implements PrimitiveSerial
   }
 }
 
+
 class ObservationsListMineValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

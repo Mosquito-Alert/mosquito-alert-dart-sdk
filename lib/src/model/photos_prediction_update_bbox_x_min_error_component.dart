@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateBboxXMinErrorComponentSerializer implements Primit
   }
 }
 
+
 class PhotosPredictionUpdateBboxXMinErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.x_min')

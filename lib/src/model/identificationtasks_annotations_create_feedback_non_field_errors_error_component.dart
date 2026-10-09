@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponent
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateFeedbackNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'feedback.non_field_errors')

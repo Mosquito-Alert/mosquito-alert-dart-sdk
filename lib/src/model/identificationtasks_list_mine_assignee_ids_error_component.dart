@@ -139,6 +139,7 @@ class _$IdentificationtasksListMineAssigneeIdsErrorComponentSerializer implement
   }
 }
 
+
 class IdentificationtasksListMineAssigneeIdsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'assignee_ids')

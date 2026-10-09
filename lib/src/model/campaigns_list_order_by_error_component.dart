@@ -139,6 +139,7 @@ class _$CampaignsListOrderByErrorComponentSerializer implements PrimitiveSeriali
   }
 }
 
+
 class CampaignsListOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

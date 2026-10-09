@@ -139,6 +139,7 @@ class _$DevicesUpdateFcmTokenErrorComponentSerializer implements PrimitiveSerial
   }
 }
 
+
 class DevicesUpdateFcmTokenErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'fcm_token')

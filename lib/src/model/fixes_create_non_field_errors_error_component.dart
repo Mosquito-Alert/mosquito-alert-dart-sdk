@@ -139,6 +139,7 @@ class _$FixesCreateNonFieldErrorsErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class FixesCreateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

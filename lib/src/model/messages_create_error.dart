@@ -1024,6 +1024,7 @@ class _$MessagesCreateErrorSerializer implements PrimitiveSerializer<MessagesCre
   }
 }
 
+
 class MessagesCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'audience.notification_topics.INDEX')

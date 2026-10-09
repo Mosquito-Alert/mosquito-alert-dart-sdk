@@ -139,6 +139,7 @@ class _$ObservationsListMineReceivedAtErrorComponentSerializer implements Primit
   }
 }
 
+
 class ObservationsListMineReceivedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'received_at')

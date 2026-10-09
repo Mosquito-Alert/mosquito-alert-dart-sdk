@@ -129,6 +129,7 @@ class _$ObservationGeoJsonModelListSerializer implements PrimitiveSerializer<Obs
   }
 }
 
+
 class ObservationGeoJsonModelListTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'FeatureCollection')

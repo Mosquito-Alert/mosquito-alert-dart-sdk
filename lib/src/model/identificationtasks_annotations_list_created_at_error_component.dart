@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsListCreatedAtErrorComponentSerializer impl
   }
 }
 
+
 class IdentificationtasksAnnotationsListCreatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'created_at')

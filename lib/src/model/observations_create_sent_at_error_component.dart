@@ -139,6 +139,7 @@ class _$ObservationsCreateSentAtErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class ObservationsCreateSentAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'sent_at')

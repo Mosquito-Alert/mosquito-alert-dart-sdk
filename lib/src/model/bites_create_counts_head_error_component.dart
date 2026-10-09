@@ -139,6 +139,7 @@ class _$BitesCreateCountsHeadErrorComponentSerializer implements PrimitiveSerial
   }
 }
 
+
 class BitesCreateCountsHeadErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'counts.head')

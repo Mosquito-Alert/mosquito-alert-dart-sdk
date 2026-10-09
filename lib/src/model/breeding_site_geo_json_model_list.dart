@@ -129,6 +129,7 @@ class _$BreedingSiteGeoJsonModelListSerializer implements PrimitiveSerializer<Br
   }
 }
 
+
 class BreedingSiteGeoJsonModelListTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'FeatureCollection')

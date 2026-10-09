@@ -139,6 +139,7 @@ class _$MessagesCreateContentNonFieldErrorsErrorComponentSerializer implements P
   }
 }
 
+
 class MessagesCreateContentNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'content.non_field_errors')

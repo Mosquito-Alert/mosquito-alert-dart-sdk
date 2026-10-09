@@ -139,6 +139,7 @@ class _$CampaignsListCountryIdErrorComponentSerializer implements PrimitiveSeria
   }
 }
 
+
 class CampaignsListCountryIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'country_id')

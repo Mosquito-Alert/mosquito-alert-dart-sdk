@@ -142,6 +142,7 @@ class _$WorkspaceMembershipSerializer implements PrimitiveSerializer<WorkspaceMe
   }
 }
 
+
 class WorkspaceMembershipRoleEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'member')

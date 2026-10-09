@@ -139,6 +139,7 @@ class _$FixesCreatePointLongitudeErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class FixesCreatePointLongitudeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'point.longitude')

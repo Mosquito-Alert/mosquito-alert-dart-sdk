@@ -139,6 +139,7 @@ class _$MessagesCreateAudienceInAreaErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class MessagesCreateAudienceInAreaErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'audience.in_area')

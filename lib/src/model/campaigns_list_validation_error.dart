@@ -123,6 +123,7 @@ class _$CampaignsListValidationErrorSerializer implements PrimitiveSerializer<Ca
   }
 }
 
+
 class CampaignsListValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

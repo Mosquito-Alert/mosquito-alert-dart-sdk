@@ -142,3 +142,4 @@ class _$DeviceOsSerializer implements PrimitiveSerializer<DeviceOs> {
   }
 }
 
+

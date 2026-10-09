@@ -139,6 +139,7 @@ class _$BreedingsitesListShortIdErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class BreedingsitesListShortIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short_id')

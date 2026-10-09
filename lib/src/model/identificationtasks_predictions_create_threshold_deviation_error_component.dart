@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentSeri
   }
 }
 
+
 class IdentificationtasksPredictionsCreateThresholdDeviationErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'threshold_deviation')

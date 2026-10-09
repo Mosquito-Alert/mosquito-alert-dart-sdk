@@ -139,6 +139,7 @@ class _$UsersPartialUpdateNotificationTopicsErrorComponentSerializer implements 
   }
 }
 
+
 class UsersPartialUpdateNotificationTopicsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'notification_topics')

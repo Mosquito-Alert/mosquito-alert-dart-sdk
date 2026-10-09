@@ -139,6 +139,7 @@ class _$BreedingsitesCreateLocationPointLatitudeErrorComponentSerializer impleme
   }
 }
 
+
 class BreedingsitesCreateLocationPointLatitudeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.point.latitude')

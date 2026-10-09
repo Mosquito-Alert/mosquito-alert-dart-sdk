@@ -58,7 +58,7 @@ abstract class CreatePhotoPrediction implements Built<CreatePhotoPrediction, Cre
 
   @BuiltValueField(wireName: r'classifier_version')
   CreatePhotoPredictionClassifierVersionEnum get classifierVersion;
-  // enum classifierVersionEnum {  v2023.1,  v2024.1,  v2025.1,  v2025.2,  v2025.3,  v2025.4,  };
+  // enum classifierVersionEnum {  v2023.1,  v2024.1,  v2025.1,  v2025.2,  v2025.3,  v2025.4,  v2026.1,  };
 
   @BuiltValueField(wireName: r'created_at')
   DateTime get createdAt;
@@ -278,6 +278,7 @@ class _$CreatePhotoPredictionSerializer implements PrimitiveSerializer<CreatePho
   }
 }
 
+
 class CreatePhotoPredictionPredictedClassEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'ae_albopictus')
@@ -323,6 +324,8 @@ class CreatePhotoPredictionClassifierVersionEnum extends EnumClass {
   static const CreatePhotoPredictionClassifierVersionEnum v2025Period3 = _$createPhotoPredictionClassifierVersionEnum_v2025Period3;
   @BuiltValueEnumConst(wireName: r'v2025.4')
   static const CreatePhotoPredictionClassifierVersionEnum v2025Period4 = _$createPhotoPredictionClassifierVersionEnum_v2025Period4;
+  @BuiltValueEnumConst(wireName: r'v2026.1')
+  static const CreatePhotoPredictionClassifierVersionEnum v2026Period1 = _$createPhotoPredictionClassifierVersionEnum_v2026Period1;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const CreatePhotoPredictionClassifierVersionEnum unknownDefaultOpenApi = _$createPhotoPredictionClassifierVersionEnum_unknownDefaultOpenApi;
 

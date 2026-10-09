@@ -99,6 +99,9 @@ const PhotoPredictionRequestClassifierVersionEnum
     _$photoPredictionRequestClassifierVersionEnum_v2025Period4 =
     const PhotoPredictionRequestClassifierVersionEnum._('v2025Period4');
 const PhotoPredictionRequestClassifierVersionEnum
+    _$photoPredictionRequestClassifierVersionEnum_v2026Period1 =
+    const PhotoPredictionRequestClassifierVersionEnum._('v2026Period1');
+const PhotoPredictionRequestClassifierVersionEnum
     _$photoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi =
     const PhotoPredictionRequestClassifierVersionEnum._(
         'unknownDefaultOpenApi');
@@ -118,6 +121,8 @@ PhotoPredictionRequestClassifierVersionEnum
       return _$photoPredictionRequestClassifierVersionEnum_v2025Period3;
     case 'v2025Period4':
       return _$photoPredictionRequestClassifierVersionEnum_v2025Period4;
+    case 'v2026Period1':
+      return _$photoPredictionRequestClassifierVersionEnum_v2026Period1;
     case 'unknownDefaultOpenApi':
       return _$photoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi;
     default:
@@ -134,6 +139,7 @@ final BuiltSet<PhotoPredictionRequestClassifierVersionEnum>
   _$photoPredictionRequestClassifierVersionEnum_v2025Period2,
   _$photoPredictionRequestClassifierVersionEnum_v2025Period3,
   _$photoPredictionRequestClassifierVersionEnum_v2025Period4,
+  _$photoPredictionRequestClassifierVersionEnum_v2026Period1,
   _$photoPredictionRequestClassifierVersionEnum_unknownDefaultOpenApi,
 ]);
 
@@ -202,6 +208,7 @@ class _$PhotoPredictionRequestClassifierVersionEnumSerializer
     'v2025Period2': 'v2025.2',
     'v2025Period3': 'v2025.3',
     'v2025Period4': 'v2025.4',
+    'v2026Period1': 'v2026.1',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
@@ -211,6 +218,7 @@ class _$PhotoPredictionRequestClassifierVersionEnumSerializer
     'v2025.2': 'v2025Period2',
     'v2025.3': 'v2025Period3',
     'v2025.4': 'v2025Period4',
+    'v2026.1': 'v2026Period1',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

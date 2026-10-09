@@ -123,6 +123,7 @@ class _$MessagesCreateValidationErrorSerializer implements PrimitiveSerializer<M
   }
 }
 
+
 class MessagesCreateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

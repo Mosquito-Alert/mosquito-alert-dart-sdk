@@ -319,6 +319,7 @@ class _$IdentificationtasksListErrorSerializer implements PrimitiveSerializer<Id
   }
 }
 
+
 class IdentificationtasksListErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'review_action')

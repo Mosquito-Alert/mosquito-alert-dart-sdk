@@ -106,6 +106,7 @@ class _$CreateAgreeReviewRequestSerializer implements PrimitiveSerializer<Create
   }
 }
 
+
 class CreateAgreeReviewRequestActionEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'agree')

@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateBboxXMaxErrorComponentSerializer implements Primit
   }
 }
 
+
 class PhotosPredictionUpdateBboxXMaxErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.x_max')

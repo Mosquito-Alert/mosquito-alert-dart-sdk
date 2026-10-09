@@ -139,6 +139,7 @@ class _$DevicesCreateDeviceIdErrorComponentSerializer implements PrimitiveSerial
   }
 }
 
+
 class DevicesCreateDeviceIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'device_id')

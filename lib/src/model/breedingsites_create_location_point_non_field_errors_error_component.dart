@@ -139,6 +139,7 @@ class _$BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentSerializer i
   }
 }
 
+
 class BreedingsitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.point.non_field_errors')

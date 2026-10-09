@@ -139,6 +139,7 @@ class _$DevicesPartialUpdateOsLocaleErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class DevicesPartialUpdateOsLocaleErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'os.locale')

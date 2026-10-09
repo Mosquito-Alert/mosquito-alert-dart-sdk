@@ -139,6 +139,7 @@ class _$BitesListUpdatedAtErrorComponentSerializer implements PrimitiveSerialize
   }
 }
 
+
 class BitesListUpdatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'updated_at')

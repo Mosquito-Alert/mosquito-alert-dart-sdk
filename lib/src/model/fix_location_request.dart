@@ -122,3 +122,4 @@ class _$FixLocationRequestSerializer implements PrimitiveSerializer<FixLocationR
   }
 }
 
+

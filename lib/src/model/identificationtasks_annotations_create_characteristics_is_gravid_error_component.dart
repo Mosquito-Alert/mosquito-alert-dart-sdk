@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponen
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateCharacteristicsIsGravidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'characteristics.is_gravid')

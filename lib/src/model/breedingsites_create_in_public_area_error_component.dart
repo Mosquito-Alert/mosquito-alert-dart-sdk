@@ -139,6 +139,7 @@ class _$BreedingsitesCreateInPublicAreaErrorComponentSerializer implements Primi
   }
 }
 
+
 class BreedingsitesCreateInPublicAreaErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'in_public_area')

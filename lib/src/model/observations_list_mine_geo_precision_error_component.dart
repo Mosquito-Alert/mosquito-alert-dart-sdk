@@ -139,6 +139,7 @@ class _$ObservationsListMineGeoPrecisionErrorComponentSerializer implements Prim
   }
 }
 
+
 class ObservationsListMineGeoPrecisionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'geo_precision')

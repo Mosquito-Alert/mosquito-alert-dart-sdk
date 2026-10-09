@@ -139,6 +139,7 @@ class _$UsersAudienceFilterNonFieldErrorsErrorComponentSerializer implements Pri
   }
 }
 
+
 class UsersAudienceFilterNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

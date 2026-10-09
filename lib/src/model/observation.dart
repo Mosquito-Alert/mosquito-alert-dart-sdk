@@ -386,21 +386,18 @@ class _$ObservationSerializer implements PrimitiveSerializer<Observation> {
   }
 }
 
+
+/// The environment where the event took place.
 class ObservationEventEnvironmentEnum extends EnumClass {
 
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'indoors')
   static const ObservationEventEnvironmentEnum indoors = _$observationEventEnvironmentEnum_indoors;
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'outdoors')
   static const ObservationEventEnvironmentEnum outdoors = _$observationEventEnvironmentEnum_outdoors;
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'vehicle')
   static const ObservationEventEnvironmentEnum vehicle = _$observationEventEnvironmentEnum_vehicle;
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'')
   static const ObservationEventEnvironmentEnum empty = _$observationEventEnvironmentEnum_empty;
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const ObservationEventEnvironmentEnum unknownDefaultOpenApi = _$observationEventEnvironmentEnum_unknownDefaultOpenApi;
 
@@ -412,27 +409,21 @@ class ObservationEventEnvironmentEnum extends EnumClass {
   static ObservationEventEnvironmentEnum valueOf(String name) => _$observationEventEnvironmentEnumValueOf(name);
 }
 
+/// The moment of the day when the event took place.
 class ObservationEventMomentEnum extends EnumClass {
 
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'now')
   static const ObservationEventMomentEnum now = _$observationEventMomentEnum_now;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'last_morning')
   static const ObservationEventMomentEnum lastMorning = _$observationEventMomentEnum_lastMorning;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'last_midday')
   static const ObservationEventMomentEnum lastMidday = _$observationEventMomentEnum_lastMidday;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'last_afternoon')
   static const ObservationEventMomentEnum lastAfternoon = _$observationEventMomentEnum_lastAfternoon;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'last_night')
   static const ObservationEventMomentEnum lastNight = _$observationEventMomentEnum_lastNight;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'')
   static const ObservationEventMomentEnum empty = _$observationEventMomentEnum_empty;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const ObservationEventMomentEnum unknownDefaultOpenApi = _$observationEventMomentEnum_unknownDefaultOpenApi;
 

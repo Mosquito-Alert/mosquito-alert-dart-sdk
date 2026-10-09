@@ -139,6 +139,7 @@ class _$IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentSerial
   }
 }
 
+
 class IdentificationtasksReviewCreateClassificationTaxonIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'classification.taxon_id')

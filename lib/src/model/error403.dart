@@ -139,6 +139,7 @@ class _$Error403Serializer implements PrimitiveSerializer<Error403> {
   }
 }
 
+
 class Error403CodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'permission_denied')

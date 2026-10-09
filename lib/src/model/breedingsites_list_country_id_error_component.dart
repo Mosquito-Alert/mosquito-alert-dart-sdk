@@ -139,6 +139,7 @@ class _$BreedingsitesListCountryIdErrorComponentSerializer implements PrimitiveS
   }
 }
 
+
 class BreedingsitesListCountryIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'country_id')

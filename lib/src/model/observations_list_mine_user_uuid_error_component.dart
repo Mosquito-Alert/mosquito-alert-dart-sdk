@@ -139,6 +139,7 @@ class _$ObservationsListMineUserUuidErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class ObservationsListMineUserUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuid')

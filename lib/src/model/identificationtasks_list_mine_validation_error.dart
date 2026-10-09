@@ -123,6 +123,7 @@ class _$IdentificationtasksListMineValidationErrorSerializer implements Primitiv
   }
 }
 
+
 class IdentificationtasksListMineValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

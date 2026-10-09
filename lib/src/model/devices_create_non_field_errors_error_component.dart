@@ -139,6 +139,7 @@ class _$DevicesCreateNonFieldErrorsErrorComponentSerializer implements Primitive
   }
 }
 
+
 class DevicesCreateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

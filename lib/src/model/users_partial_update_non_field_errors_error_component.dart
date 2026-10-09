@@ -139,6 +139,7 @@ class _$UsersPartialUpdateNonFieldErrorsErrorComponentSerializer implements Prim
   }
 }
 
+
 class UsersPartialUpdateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

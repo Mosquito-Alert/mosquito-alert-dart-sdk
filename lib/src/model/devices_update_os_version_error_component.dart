@@ -139,6 +139,7 @@ class _$DevicesUpdateOsVersionErrorComponentSerializer implements PrimitiveSeria
   }
 }
 
+
 class DevicesUpdateOsVersionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'os.version')

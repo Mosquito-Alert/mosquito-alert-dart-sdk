@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsListMineOrderByErrorComponentSerializer im
   }
 }
 
+
 class IdentificationtasksAnnotationsListMineOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

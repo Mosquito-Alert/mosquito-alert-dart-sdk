@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateScoresOtherSpeciesErrorComponentSerializer 
   }
 }
 
+
 class PhotosPredictionPartialUpdateScoresOtherSpeciesErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.other_species')

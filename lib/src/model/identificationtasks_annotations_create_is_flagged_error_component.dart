@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentSerializer im
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateIsFlaggedErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_flagged')

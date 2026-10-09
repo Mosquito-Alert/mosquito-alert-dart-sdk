@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentSeri
   }
 }
 
+
 class IdentificationtasksPredictionsPartialUpdateScoresCulexErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.culex')

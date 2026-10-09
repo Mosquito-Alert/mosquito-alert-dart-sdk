@@ -139,6 +139,7 @@ class _$BitesCreateLocationPointLatitudeErrorComponentSerializer implements Prim
   }
 }
 
+
 class BitesCreateLocationPointLatitudeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.point.latitude')

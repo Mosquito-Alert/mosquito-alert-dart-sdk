@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponentSerialize
   }
 }
 
+
 class PhotosPredictionPartialUpdateScoresNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.non_field_errors')

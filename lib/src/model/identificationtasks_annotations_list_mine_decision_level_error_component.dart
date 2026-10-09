@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentSeriali
   }
 }
 
+
 class IdentificationtasksAnnotationsListMineDecisionLevelErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'decision_level')

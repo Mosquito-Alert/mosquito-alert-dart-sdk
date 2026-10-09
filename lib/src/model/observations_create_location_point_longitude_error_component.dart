@@ -139,6 +139,7 @@ class _$ObservationsCreateLocationPointLongitudeErrorComponentSerializer impleme
   }
 }
 
+
 class ObservationsCreateLocationPointLongitudeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.point.longitude')

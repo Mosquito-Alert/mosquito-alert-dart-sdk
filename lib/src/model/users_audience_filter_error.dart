@@ -199,6 +199,7 @@ class _$UsersAudienceFilterErrorSerializer implements PrimitiveSerializer<UsersA
   }
 }
 
+
 class UsersAudienceFilterErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'notification_topics.INDEX')

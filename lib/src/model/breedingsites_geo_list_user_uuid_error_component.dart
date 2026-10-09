@@ -139,6 +139,7 @@ class _$BreedingsitesGeoListUserUuidErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class BreedingsitesGeoListUserUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuid')

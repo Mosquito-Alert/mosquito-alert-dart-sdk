@@ -139,6 +139,7 @@ class _$DevicesPartialUpdateNonFieldErrorsErrorComponentSerializer implements Pr
   }
 }
 
+
 class DevicesPartialUpdateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

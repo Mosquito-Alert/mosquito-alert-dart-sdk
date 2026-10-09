@@ -160,3 +160,4 @@ class _$DeviceUpdateRequestSerializer implements PrimitiveSerializer<DeviceUpdat
   }
 }
 
+

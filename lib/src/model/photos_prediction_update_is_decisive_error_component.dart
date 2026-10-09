@@ -139,6 +139,7 @@ class _$PhotosPredictionUpdateIsDecisiveErrorComponentSerializer implements Prim
   }
 }
 
+
 class PhotosPredictionUpdateIsDecisiveErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_decisive')

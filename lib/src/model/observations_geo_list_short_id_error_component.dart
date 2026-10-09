@@ -139,6 +139,7 @@ class _$ObservationsGeoListShortIdErrorComponentSerializer implements PrimitiveS
   }
 }
 
+
 class ObservationsGeoListShortIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short_id')

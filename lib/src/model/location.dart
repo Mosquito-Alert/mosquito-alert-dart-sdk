@@ -194,15 +194,14 @@ class _$LocationSerializer implements PrimitiveSerializer<Location> {
   }
 }
 
+
+/// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
 class LocationSource_Enum extends EnumClass {
 
-  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
   @BuiltValueEnumConst(wireName: r'auto')
   static const LocationSource_Enum auto = _$locationSourceEnum_auto;
-  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
   @BuiltValueEnumConst(wireName: r'manual')
   static const LocationSource_Enum manual = _$locationSourceEnum_manual;
-  /// Indicates how the location was obtained. Use 'Auto (GPS)' if the location was automatically retrieved from the device's GPS, or 'Manual (User-selected)' if the location was selected by the user on a map.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const LocationSource_Enum unknownDefaultOpenApi = _$locationSourceEnum_unknownDefaultOpenApi;
 

@@ -124,6 +124,7 @@ class _$CampaignsListErrorSerializer implements PrimitiveSerializer<CampaignsLis
   }
 }
 
+
 class CampaignsListErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

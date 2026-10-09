@@ -122,6 +122,7 @@ class _$IdentificationTaskReviewSerializer implements PrimitiveSerializer<Identi
   }
 }
 
+
 class IdentificationTaskReviewActionEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'agree')

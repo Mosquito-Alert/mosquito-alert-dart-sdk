@@ -139,6 +139,7 @@ class _$BitesListMineUserUuidErrorComponentSerializer implements PrimitiveSerial
   }
 }
 
+
 class BitesListMineUserUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuid')

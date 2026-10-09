@@ -154,6 +154,7 @@ class _$UsersUpdateErrorSerializer implements PrimitiveSerializer<UsersUpdateErr
   }
 }
 
+
 class UsersUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'notification_topics.INDEX')

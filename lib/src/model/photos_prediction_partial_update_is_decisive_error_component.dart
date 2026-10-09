@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateIsDecisiveErrorComponentSerializer implemen
   }
 }
 
+
 class PhotosPredictionPartialUpdateIsDecisiveErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_decisive')

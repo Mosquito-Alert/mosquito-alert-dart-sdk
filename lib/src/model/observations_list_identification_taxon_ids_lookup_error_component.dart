@@ -139,6 +139,7 @@ class _$ObservationsListIdentificationTaxonIdsLookupErrorComponentSerializer imp
   }
 }
 
+
 class ObservationsListIdentificationTaxonIdsLookupErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'identification_taxon_ids_lookup')

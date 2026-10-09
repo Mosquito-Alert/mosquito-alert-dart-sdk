@@ -139,6 +139,7 @@ class _$BitesCreateEventEnvironmentErrorComponentSerializer implements Primitive
   }
 }
 
+
 class BitesCreateEventEnvironmentErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'event_environment')

@@ -139,6 +139,7 @@ class _$BoundariesCreateTemporaryGeojsonErrorComponentSerializer implements Prim
   }
 }
 
+
 class BoundariesCreateTemporaryGeojsonErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'geojson')

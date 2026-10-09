@@ -139,6 +139,7 @@ class _$BitesCreateCountsLeftArmErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class BitesCreateCountsLeftArmErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'counts.left_arm')

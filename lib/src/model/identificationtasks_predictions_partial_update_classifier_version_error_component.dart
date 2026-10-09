@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorCompone
   }
 }
 
+
 class IdentificationtasksPredictionsPartialUpdateClassifierVersionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'classifier_version')

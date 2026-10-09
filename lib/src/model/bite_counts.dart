@@ -232,3 +232,4 @@ class _$BiteCountsSerializer implements PrimitiveSerializer<BiteCounts> {
   }
 }
 
+

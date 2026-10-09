@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsPartialUpdateNonFieldErrorsErrorComponentS
   }
 }
 
+
 class IdentificationtasksPredictionsPartialUpdateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

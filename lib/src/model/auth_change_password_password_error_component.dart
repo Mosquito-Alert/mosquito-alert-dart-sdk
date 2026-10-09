@@ -139,6 +139,7 @@ class _$AuthChangePasswordPasswordErrorComponentSerializer implements PrimitiveS
   }
 }
 
+
 class AuthChangePasswordPasswordErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'password')

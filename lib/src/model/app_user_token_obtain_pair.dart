@@ -120,3 +120,4 @@ class _$AppUserTokenObtainPairSerializer implements PrimitiveSerializer<AppUserT
   }
 }
 
+

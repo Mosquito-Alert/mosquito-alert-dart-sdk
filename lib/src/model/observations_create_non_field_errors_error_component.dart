@@ -139,6 +139,7 @@ class _$ObservationsCreateNonFieldErrorsErrorComponentSerializer implements Prim
   }
 }
 
+
 class ObservationsCreateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

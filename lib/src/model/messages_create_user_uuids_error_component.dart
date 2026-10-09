@@ -139,6 +139,7 @@ class _$MessagesCreateUserUuidsErrorComponentSerializer implements PrimitiveSeri
   }
 }
 
+
 class MessagesCreateUserUuidsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuids')

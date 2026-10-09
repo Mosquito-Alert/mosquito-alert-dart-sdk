@@ -123,6 +123,7 @@ class _$DevicesUpdateValidationErrorSerializer implements PrimitiveSerializer<De
   }
 }
 
+
 class DevicesUpdateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

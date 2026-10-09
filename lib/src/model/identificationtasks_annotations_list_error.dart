@@ -244,6 +244,7 @@ class _$IdentificationtasksAnnotationsListErrorSerializer implements PrimitiveSe
   }
 }
 
+
 class IdentificationtasksAnnotationsListErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

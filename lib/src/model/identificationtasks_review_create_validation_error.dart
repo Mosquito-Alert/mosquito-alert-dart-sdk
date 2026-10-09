@@ -123,6 +123,7 @@ class _$IdentificationtasksReviewCreateValidationErrorSerializer implements Prim
   }
 }
 
+
 class IdentificationtasksReviewCreateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

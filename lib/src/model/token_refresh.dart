@@ -104,3 +104,4 @@ class _$TokenRefreshSerializer implements PrimitiveSerializer<TokenRefresh> {
   }
 }
 
+

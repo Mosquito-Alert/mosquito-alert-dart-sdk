@@ -139,6 +139,7 @@ class _$ObservationsGeoListCountryIdErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class ObservationsGeoListCountryIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'country_id')

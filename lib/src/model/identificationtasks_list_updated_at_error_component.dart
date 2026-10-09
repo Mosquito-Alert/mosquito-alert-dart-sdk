@@ -139,6 +139,7 @@ class _$IdentificationtasksListUpdatedAtErrorComponentSerializer implements Prim
   }
 }
 
+
 class IdentificationtasksListUpdatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'updated_at')

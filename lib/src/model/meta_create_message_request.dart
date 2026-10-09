@@ -125,6 +125,7 @@ class _$MetaCreateMessageRequestSerializer implements PrimitiveSerializer<MetaCr
   }
 }
 
+
 class MetaCreateMessageRequestTargetEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'audience')

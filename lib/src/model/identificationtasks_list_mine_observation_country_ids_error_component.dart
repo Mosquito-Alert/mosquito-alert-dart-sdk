@@ -139,6 +139,7 @@ class _$IdentificationtasksListMineObservationCountryIdsErrorComponentSerializer
   }
 }
 
+
 class IdentificationtasksListMineObservationCountryIdsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'observation_country_ids')

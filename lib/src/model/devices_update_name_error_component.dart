@@ -139,6 +139,7 @@ class _$DevicesUpdateNameErrorComponentSerializer implements PrimitiveSerializer
   }
 }
 
+
 class DevicesUpdateNameErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'name')

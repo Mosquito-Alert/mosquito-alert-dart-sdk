@@ -139,6 +139,7 @@ class _$BreedingsitesListOrderByErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class BreedingsitesListOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

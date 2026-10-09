@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComp
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateObservationFlagsIsFavouriteErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'observation_flags.is_favourite')

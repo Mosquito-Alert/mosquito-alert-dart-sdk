@@ -139,6 +139,7 @@ class _$TaxaListRankErrorComponentSerializer implements PrimitiveSerializer<Taxa
   }
 }
 
+
 class TaxaListRankErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'rank')

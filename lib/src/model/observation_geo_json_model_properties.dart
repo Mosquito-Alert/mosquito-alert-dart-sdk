@@ -145,3 +145,4 @@ class _$ObservationGeoJsonModelPropertiesSerializer implements PrimitiveSerializ
   }
 }
 
+

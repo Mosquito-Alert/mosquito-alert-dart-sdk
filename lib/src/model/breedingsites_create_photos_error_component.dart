@@ -139,6 +139,7 @@ class _$BreedingsitesCreatePhotosErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class BreedingsitesCreatePhotosErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'photos')

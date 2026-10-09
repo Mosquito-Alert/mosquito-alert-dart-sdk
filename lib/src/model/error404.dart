@@ -139,6 +139,7 @@ class _$Error404Serializer implements PrimitiveSerializer<Error404> {
   }
 }
 
+
 class Error404CodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'not_found')

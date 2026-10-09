@@ -160,3 +160,4 @@ class _$PaginatedWorkspaceCollaborationGroupListSerializer implements PrimitiveS
   }
 }
 
+

@@ -129,6 +129,7 @@ class _$BiteGeoJsonModelListSerializer implements PrimitiveSerializer<BiteGeoJso
   }
 }
 
+
 class BiteGeoJsonModelListTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'FeatureCollection')

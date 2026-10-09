@@ -139,6 +139,7 @@ class _$BitesCreateCountsChestErrorComponentSerializer implements PrimitiveSeria
   }
 }
 
+
 class BitesCreateCountsChestErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'counts.chest')

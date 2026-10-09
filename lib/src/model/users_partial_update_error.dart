@@ -154,6 +154,7 @@ class _$UsersPartialUpdateErrorSerializer implements PrimitiveSerializer<UsersPa
   }
 }
 
+
 class UsersPartialUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'notification_topics.INDEX')

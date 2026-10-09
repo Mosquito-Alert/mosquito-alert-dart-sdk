@@ -379,6 +379,7 @@ class _$BitesCreateErrorSerializer implements PrimitiveSerializer<BitesCreateErr
   }
 }
 
+
 class BitesCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'counts.right_leg')

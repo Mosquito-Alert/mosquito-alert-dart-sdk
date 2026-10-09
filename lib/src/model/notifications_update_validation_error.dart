@@ -123,6 +123,7 @@ class _$NotificationsUpdateValidationErrorSerializer implements PrimitiveSeriali
   }
 }
 
+
 class NotificationsUpdateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

@@ -139,6 +139,7 @@ class _$BreedingsitesCreateHasLarvaeErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class BreedingsitesCreateHasLarvaeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'has_larvae')

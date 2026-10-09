@@ -139,6 +139,7 @@ class _$BitesGeoListCountryIdErrorComponentSerializer implements PrimitiveSerial
   }
 }
 
+
 class BitesGeoListCountryIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'country_id')

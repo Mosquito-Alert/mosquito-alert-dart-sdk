@@ -128,6 +128,7 @@ class _$BiteGeoJsonModelGeometrySerializer implements PrimitiveSerializer<BiteGe
   }
 }
 
+
 class BiteGeoJsonModelGeometryTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'Point')

@@ -105,3 +105,4 @@ class _$GuestRegistrationSerializer implements PrimitiveSerializer<GuestRegistra
   }
 }
 
+

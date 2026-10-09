@@ -156,3 +156,4 @@ class _$BoundingBoxRequestSerializer implements PrimitiveSerializer<BoundingBoxR
   }
 }
 
+

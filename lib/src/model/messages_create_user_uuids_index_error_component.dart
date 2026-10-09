@@ -139,6 +139,7 @@ class _$MessagesCreateUserUuidsINDEXErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class MessagesCreateUserUuidsINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuids.INDEX')

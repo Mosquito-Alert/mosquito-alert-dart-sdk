@@ -139,6 +139,7 @@ class _$IdentificationtasksReviewCreateIsSafeErrorComponentSerializer implements
   }
 }
 
+
 class IdentificationtasksReviewCreateIsSafeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_safe')

@@ -139,6 +139,7 @@ class _$MessagesListRecipientUuidsErrorComponentSerializer implements PrimitiveS
   }
 }
 
+
 class MessagesListRecipientUuidsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'recipient_uuids')

@@ -140,6 +140,7 @@ class _$CreateUserMessageRequestSerializer implements PrimitiveSerializer<Create
   }
 }
 
+
 class CreateUserMessageRequestTargetEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'users')

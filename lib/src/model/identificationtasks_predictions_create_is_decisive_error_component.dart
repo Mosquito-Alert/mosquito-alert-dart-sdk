@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsCreateIsDecisiveErrorComponentSerializer i
   }
 }
 
+
 class IdentificationtasksPredictionsCreateIsDecisiveErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'is_decisive')

@@ -139,6 +139,7 @@ class _$ObservationsCreateMosquitoAppearanceAbdomenErrorComponentSerializer impl
   }
 }
 
+
 class ObservationsCreateMosquitoAppearanceAbdomenErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mosquito_appearance.abdomen')

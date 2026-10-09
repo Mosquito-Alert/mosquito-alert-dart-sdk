@@ -139,6 +139,7 @@ class _$MessagesCreateAudienceLocaleErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class MessagesCreateAudienceLocaleErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'audience.locale')

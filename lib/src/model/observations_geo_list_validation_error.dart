@@ -123,6 +123,7 @@ class _$ObservationsGeoListValidationErrorSerializer implements PrimitiveSeriali
   }
 }
 
+
 class ObservationsGeoListValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

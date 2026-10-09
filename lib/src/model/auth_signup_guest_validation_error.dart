@@ -123,6 +123,7 @@ class _$AuthSignupGuestValidationErrorSerializer implements PrimitiveSerializer<
   }
 }
 
+
 class AuthSignupGuestValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

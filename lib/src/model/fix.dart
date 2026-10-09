@@ -190,3 +190,4 @@ class _$FixSerializer implements PrimitiveSerializer<Fix> {
   }
 }
 
+

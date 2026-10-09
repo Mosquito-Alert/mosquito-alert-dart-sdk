@@ -139,6 +139,7 @@ class _$BitesListMineCountryIdErrorComponentSerializer implements PrimitiveSeria
   }
 }
 
+
 class BitesListMineCountryIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'country_id')

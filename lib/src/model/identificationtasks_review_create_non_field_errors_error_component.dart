@@ -139,6 +139,7 @@ class _$IdentificationtasksReviewCreateNonFieldErrorsErrorComponentSerializer im
   }
 }
 
+
 class IdentificationtasksReviewCreateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

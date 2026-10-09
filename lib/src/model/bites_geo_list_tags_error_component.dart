@@ -139,6 +139,7 @@ class _$BitesGeoListTagsErrorComponentSerializer implements PrimitiveSerializer<
   }
 }
 
+
 class BitesGeoListTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')

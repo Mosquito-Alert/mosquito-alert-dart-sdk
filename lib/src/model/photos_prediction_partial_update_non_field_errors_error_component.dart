@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateNonFieldErrorsErrorComponentSerializer impl
   }
 }
 
+
 class PhotosPredictionPartialUpdateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentSerialize
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateBestPhotoUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'best_photo_uuid')

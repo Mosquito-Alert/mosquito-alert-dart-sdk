@@ -139,6 +139,7 @@ class _$BitesCreateLocationSourceErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class BitesCreateLocationSourceErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.source')

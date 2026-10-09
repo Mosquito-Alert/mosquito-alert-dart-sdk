@@ -259,6 +259,7 @@ class _$BreedingsitesListErrorSerializer implements PrimitiveSerializer<Breeding
   }
 }
 
+
 class BreedingsitesListErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'site_type')

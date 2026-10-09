@@ -188,6 +188,7 @@ class _$AudienceFilterSerializer implements PrimitiveSerializer<AudienceFilter> 
   }
 }
 
+
 class AudienceFilterLocaleEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'en')

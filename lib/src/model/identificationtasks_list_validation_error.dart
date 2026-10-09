@@ -123,6 +123,7 @@ class _$IdentificationtasksListValidationErrorSerializer implements PrimitiveSer
   }
 }
 
+
 class IdentificationtasksListValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

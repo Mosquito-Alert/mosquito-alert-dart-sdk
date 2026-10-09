@@ -152,3 +152,4 @@ class _$MessagePermissionSerializer implements PrimitiveSerializer<MessagePermis
   }
 }
 
+

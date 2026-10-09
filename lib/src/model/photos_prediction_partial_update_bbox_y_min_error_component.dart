@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateBboxYMinErrorComponentSerializer implements
   }
 }
 
+
 class PhotosPredictionPartialUpdateBboxYMinErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.y_min')

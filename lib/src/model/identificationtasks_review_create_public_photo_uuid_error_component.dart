@@ -139,6 +139,7 @@ class _$IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentSerializer i
   }
 }
 
+
 class IdentificationtasksReviewCreatePublicPhotoUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'public_photo_uuid')

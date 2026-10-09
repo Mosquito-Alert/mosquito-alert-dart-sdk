@@ -139,6 +139,7 @@ class _$IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorCompone
   }
 }
 
+
 class IdentificationtasksReviewCreateCharacteristicsNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'characteristics.non_field_errors')

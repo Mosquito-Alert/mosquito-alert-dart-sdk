@@ -394,6 +394,7 @@ class _$IdentificationtasksAnnotationsCreateErrorSerializer implements Primitive
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags.INDEX')

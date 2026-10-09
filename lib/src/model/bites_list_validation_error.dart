@@ -123,6 +123,7 @@ class _$BitesListValidationErrorSerializer implements PrimitiveSerializer<BitesL
   }
 }
 
+
 class BitesListValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

@@ -139,6 +139,7 @@ class _$UsersUpdateNotificationTopicsErrorComponentSerializer implements Primiti
   }
 }
 
+
 class UsersUpdateNotificationTopicsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'notification_topics')

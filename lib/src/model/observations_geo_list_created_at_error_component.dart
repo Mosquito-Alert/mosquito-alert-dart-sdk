@@ -139,6 +139,7 @@ class _$ObservationsGeoListCreatedAtErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class ObservationsGeoListCreatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'created_at')

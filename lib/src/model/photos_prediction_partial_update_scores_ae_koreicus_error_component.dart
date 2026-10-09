@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateScoresAeKoreicusErrorComponentSerializer im
   }
 }
 
+
 class PhotosPredictionPartialUpdateScoresAeKoreicusErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.ae_koreicus')

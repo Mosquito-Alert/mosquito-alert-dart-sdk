@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsCreateScoresCulexErrorComponentSerializer 
   }
 }
 
+
 class IdentificationtasksPredictionsCreateScoresCulexErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.culex')

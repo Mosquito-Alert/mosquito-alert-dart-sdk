@@ -139,6 +139,7 @@ class _$ObservationsGeoListReceivedAtErrorComponentSerializer implements Primiti
   }
 }
 
+
 class ObservationsGeoListReceivedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'received_at')

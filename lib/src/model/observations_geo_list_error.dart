@@ -274,6 +274,7 @@ class _$ObservationsGeoListErrorSerializer implements PrimitiveSerializer<Observ
   }
 }
 
+
 class ObservationsGeoListErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'identification_taxon_ids_lookup')

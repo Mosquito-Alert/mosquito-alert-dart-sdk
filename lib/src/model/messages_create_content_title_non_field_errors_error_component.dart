@@ -139,6 +139,7 @@ class _$MessagesCreateContentTitleNonFieldErrorsErrorComponentSerializer impleme
   }
 }
 
+
 class MessagesCreateContentTitleNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'content.title.non_field_errors')

@@ -139,6 +139,7 @@ class _$MessagesCreateContentBodyNlErrorComponentSerializer implements Primitive
   }
 }
 
+
 class MessagesCreateContentBodyNlErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'content.body.nl')

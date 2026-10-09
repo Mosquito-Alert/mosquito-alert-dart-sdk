@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdateScoresAnophelesErrorComponentSerializer imp
   }
 }
 
+
 class PhotosPredictionPartialUpdateScoresAnophelesErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.anopheles')

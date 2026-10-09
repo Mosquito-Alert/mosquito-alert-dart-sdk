@@ -207,6 +207,7 @@ class _$TaxonTreeNodeSerializer implements PrimitiveSerializer<TaxonTreeNode> {
   }
 }
 
+
 class TaxonTreeNodeRankEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'class')

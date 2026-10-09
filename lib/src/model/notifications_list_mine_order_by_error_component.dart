@@ -139,6 +139,7 @@ class _$NotificationsListMineOrderByErrorComponentSerializer implements Primitiv
   }
 }
 
+
 class NotificationsListMineOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

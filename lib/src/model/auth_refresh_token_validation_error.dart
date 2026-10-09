@@ -123,6 +123,7 @@ class _$AuthRefreshTokenValidationErrorSerializer implements PrimitiveSerializer
   }
 }
 
+
 class AuthRefreshTokenValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

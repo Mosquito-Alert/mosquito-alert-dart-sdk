@@ -139,6 +139,7 @@ class _$BreedingsitesListGeoPrecisionErrorComponentSerializer implements Primiti
   }
 }
 
+
 class BreedingsitesListGeoPrecisionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'geo_precision')

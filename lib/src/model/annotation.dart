@@ -336,6 +336,7 @@ class _$AnnotationSerializer implements PrimitiveSerializer<Annotation> {
   }
 }
 
+
 class AnnotationTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short')

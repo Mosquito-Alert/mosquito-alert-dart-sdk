@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentSe
   }
 }
 
+
 class IdentificationtasksPredictionsCreateScoresNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'scores.non_field_errors')

@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsUpdatePredictedClassErrorComponentSerializ
   }
 }
 
+
 class IdentificationtasksPredictionsUpdatePredictedClassErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'predicted_class')

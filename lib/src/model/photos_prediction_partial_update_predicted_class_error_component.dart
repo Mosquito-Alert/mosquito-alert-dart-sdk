@@ -139,6 +139,7 @@ class _$PhotosPredictionPartialUpdatePredictedClassErrorComponentSerializer impl
   }
 }
 
+
 class PhotosPredictionPartialUpdatePredictedClassErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'predicted_class')

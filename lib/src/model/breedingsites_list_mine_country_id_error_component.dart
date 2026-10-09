@@ -139,6 +139,7 @@ class _$BreedingsitesListMineCountryIdErrorComponentSerializer implements Primit
   }
 }
 
+
 class BreedingsitesListMineCountryIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'country_id')

@@ -347,21 +347,18 @@ class _$BiteSerializer implements PrimitiveSerializer<Bite> {
   }
 }
 
+
+/// The environment where the event took place.
 class BiteEventEnvironmentEnum extends EnumClass {
 
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'indoors')
   static const BiteEventEnvironmentEnum indoors = _$biteEventEnvironmentEnum_indoors;
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'outdoors')
   static const BiteEventEnvironmentEnum outdoors = _$biteEventEnvironmentEnum_outdoors;
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'vehicle')
   static const BiteEventEnvironmentEnum vehicle = _$biteEventEnvironmentEnum_vehicle;
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'')
   static const BiteEventEnvironmentEnum empty = _$biteEventEnvironmentEnum_empty;
-  /// The environment where the event took place.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BiteEventEnvironmentEnum unknownDefaultOpenApi = _$biteEventEnvironmentEnum_unknownDefaultOpenApi;
 
@@ -373,27 +370,21 @@ class BiteEventEnvironmentEnum extends EnumClass {
   static BiteEventEnvironmentEnum valueOf(String name) => _$biteEventEnvironmentEnumValueOf(name);
 }
 
+/// The moment of the day when the event took place.
 class BiteEventMomentEnum extends EnumClass {
 
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'now')
   static const BiteEventMomentEnum now = _$biteEventMomentEnum_now;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'last_morning')
   static const BiteEventMomentEnum lastMorning = _$biteEventMomentEnum_lastMorning;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'last_midday')
   static const BiteEventMomentEnum lastMidday = _$biteEventMomentEnum_lastMidday;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'last_afternoon')
   static const BiteEventMomentEnum lastAfternoon = _$biteEventMomentEnum_lastAfternoon;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'last_night')
   static const BiteEventMomentEnum lastNight = _$biteEventMomentEnum_lastNight;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'')
   static const BiteEventMomentEnum empty = _$biteEventMomentEnum_empty;
-  /// The moment of the day when the event took place.
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const BiteEventMomentEnum unknownDefaultOpenApi = _$biteEventMomentEnum_unknownDefaultOpenApi;
 

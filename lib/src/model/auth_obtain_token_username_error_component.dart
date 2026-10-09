@@ -139,6 +139,7 @@ class _$AuthObtainTokenUsernameErrorComponentSerializer implements PrimitiveSeri
   }
 }
 
+
 class AuthObtainTokenUsernameErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'username')

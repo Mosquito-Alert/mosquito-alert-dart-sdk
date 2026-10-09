@@ -127,6 +127,7 @@ class _$MetaCreateIdentificationTaskReviewRequestSerializer implements Primitive
   }
 }
 
+
 class MetaCreateIdentificationTaskReviewRequestActionEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'overwrite')

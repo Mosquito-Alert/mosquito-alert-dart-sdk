@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsCreateClassifierVersionErrorComponentSeria
   }
 }
 
+
 class IdentificationtasksPredictionsCreateClassifierVersionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'classifier_version')

@@ -232,6 +232,7 @@ class _$DeviceRequestSerializer implements PrimitiveSerializer<DeviceRequest> {
   }
 }
 
+
 class DeviceRequestTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'ios')

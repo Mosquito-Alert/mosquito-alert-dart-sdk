@@ -139,6 +139,7 @@ class _$BreedingsitesListMineUserUuidErrorComponentSerializer implements Primiti
   }
 }
 
+
 class BreedingsitesListMineUserUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuid')

@@ -139,6 +139,7 @@ class _$BitesListMineShortIdErrorComponentSerializer implements PrimitiveSeriali
   }
 }
 
+
 class BitesListMineShortIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short_id')

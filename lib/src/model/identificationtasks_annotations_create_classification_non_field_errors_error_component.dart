@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorCom
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateClassificationNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'classification.non_field_errors')

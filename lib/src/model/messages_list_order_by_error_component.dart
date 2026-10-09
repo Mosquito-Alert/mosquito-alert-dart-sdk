@@ -139,6 +139,7 @@ class _$MessagesListOrderByErrorComponentSerializer implements PrimitiveSerializ
   }
 }
 
+
 class MessagesListOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

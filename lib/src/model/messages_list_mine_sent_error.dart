@@ -139,6 +139,7 @@ class _$MessagesListMineSentErrorSerializer implements PrimitiveSerializer<Messa
   }
 }
 
+
 class MessagesListMineSentErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'target')

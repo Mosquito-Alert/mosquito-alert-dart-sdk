@@ -154,6 +154,7 @@ class _$AuthObtainTokenErrorSerializer implements PrimitiveSerializer<AuthObtain
   }
 }
 
+
 class AuthObtainTokenErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'device_id')

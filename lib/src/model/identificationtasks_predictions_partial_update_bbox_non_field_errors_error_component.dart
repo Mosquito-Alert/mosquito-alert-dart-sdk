@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorCompon
   }
 }
 
+
 class IdentificationtasksPredictionsPartialUpdateBboxNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.non_field_errors')

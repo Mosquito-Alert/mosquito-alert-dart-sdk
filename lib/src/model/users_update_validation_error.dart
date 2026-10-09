@@ -123,6 +123,7 @@ class _$UsersUpdateValidationErrorSerializer implements PrimitiveSerializer<User
   }
 }
 
+
 class UsersUpdateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

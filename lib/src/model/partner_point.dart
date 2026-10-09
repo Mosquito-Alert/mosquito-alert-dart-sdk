@@ -120,3 +120,4 @@ class _$PartnerPointSerializer implements PrimitiveSerializer<PartnerPoint> {
   }
 }
 
+

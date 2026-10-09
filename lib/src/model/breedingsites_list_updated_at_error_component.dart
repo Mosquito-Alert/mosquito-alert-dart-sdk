@@ -139,6 +139,7 @@ class _$BreedingsitesListUpdatedAtErrorComponentSerializer implements PrimitiveS
   }
 }
 
+
 class BreedingsitesListUpdatedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'updated_at')

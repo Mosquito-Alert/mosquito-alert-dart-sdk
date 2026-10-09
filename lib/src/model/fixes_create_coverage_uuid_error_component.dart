@@ -139,6 +139,7 @@ class _$FixesCreateCoverageUuidErrorComponentSerializer implements PrimitiveSeri
   }
 }
 
+
 class FixesCreateCoverageUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'coverage_uuid')

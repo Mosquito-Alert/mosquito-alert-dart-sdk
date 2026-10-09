@@ -139,6 +139,7 @@ class _$Error401Serializer implements PrimitiveSerializer<Error401> {
   }
 }
 
+
 class Error401CodeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'token_not_valid')

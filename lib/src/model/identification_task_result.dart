@@ -222,6 +222,7 @@ class _$IdentificationTaskResultSerializer implements PrimitiveSerializer<Identi
   }
 }
 
+
 class IdentificationTaskResultSource_Enum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'expert')

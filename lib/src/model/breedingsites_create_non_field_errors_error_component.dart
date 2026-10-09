@@ -139,6 +139,7 @@ class _$BreedingsitesCreateNonFieldErrorsErrorComponentSerializer implements Pri
   }
 }
 
+
 class BreedingsitesCreateNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'non_field_errors')

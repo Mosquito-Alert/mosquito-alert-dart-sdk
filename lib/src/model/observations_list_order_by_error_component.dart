@@ -139,6 +139,7 @@ class _$ObservationsListOrderByErrorComponentSerializer implements PrimitiveSeri
   }
 }
 
+
 class ObservationsListOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

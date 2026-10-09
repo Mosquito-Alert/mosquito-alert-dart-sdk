@@ -139,6 +139,7 @@ class _$BreedingsitesListMineBoundaryUuidErrorComponentSerializer implements Pri
   }
 }
 
+
 class BreedingsitesListMineBoundaryUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'boundary_uuid')

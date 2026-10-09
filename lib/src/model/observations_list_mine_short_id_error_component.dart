@@ -139,6 +139,7 @@ class _$ObservationsListMineShortIdErrorComponentSerializer implements Primitive
   }
 }
 
+
 class ObservationsListMineShortIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short_id')

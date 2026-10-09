@@ -139,6 +139,7 @@ class _$BreedingsitesListMineTagsErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class BreedingsitesListMineTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')

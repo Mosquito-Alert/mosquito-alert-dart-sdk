@@ -139,6 +139,7 @@ class _$UsersPartialUpdateLocaleErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class UsersPartialUpdateLocaleErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'locale')

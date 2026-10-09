@@ -123,6 +123,7 @@ class _$IdentificationtasksAnnotationsCreateValidationErrorSerializer implements
   }
 }
 
+
 class IdentificationtasksAnnotationsCreateValidationErrorTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'validation_error')

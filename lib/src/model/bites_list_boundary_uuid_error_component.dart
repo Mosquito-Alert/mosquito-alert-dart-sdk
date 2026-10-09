@@ -139,6 +139,7 @@ class _$BitesListBoundaryUuidErrorComponentSerializer implements PrimitiveSerial
   }
 }
 
+
 class BitesListBoundaryUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'boundary_uuid')

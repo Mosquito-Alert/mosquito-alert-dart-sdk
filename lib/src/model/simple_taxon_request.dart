@@ -141,6 +141,7 @@ class _$SimpleTaxonRequestSerializer implements PrimitiveSerializer<SimpleTaxonR
   }
 }
 
+
 class SimpleTaxonRequestRankEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'class')

@@ -139,6 +139,7 @@ class _$BitesCreateLocationPointLongitudeErrorComponentSerializer implements Pri
   }
 }
 
+
 class BitesCreateLocationPointLongitudeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.point.longitude')

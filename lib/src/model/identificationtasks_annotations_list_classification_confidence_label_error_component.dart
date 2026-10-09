@@ -139,6 +139,7 @@ class _$IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComp
   }
 }
 
+
 class IdentificationtasksAnnotationsListClassificationConfidenceLabelErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'classification_confidence_label')

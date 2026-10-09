@@ -279,6 +279,7 @@ class _$DeviceUpdateSerializer implements PrimitiveSerializer<DeviceUpdate> {
   }
 }
 
+
 class DeviceUpdateTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'ios')

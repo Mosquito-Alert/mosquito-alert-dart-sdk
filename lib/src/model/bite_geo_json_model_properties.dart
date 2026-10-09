@@ -126,3 +126,4 @@ class _$BiteGeoJsonModelPropertiesSerializer implements PrimitiveSerializer<Bite
   }
 }
 
+

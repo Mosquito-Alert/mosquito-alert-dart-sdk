@@ -139,6 +139,7 @@ class _$BitesGeoListOrderByErrorComponentSerializer implements PrimitiveSerializ
   }
 }
 
+
 class BitesGeoListOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

@@ -139,6 +139,7 @@ class _$MessagesCreateContentTitleZhCnErrorComponentSerializer implements Primit
   }
 }
 
+
 class MessagesCreateContentTitleZhCnErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'content.title.zh-cn')

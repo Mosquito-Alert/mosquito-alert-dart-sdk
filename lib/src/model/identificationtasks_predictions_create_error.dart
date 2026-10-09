@@ -424,6 +424,7 @@ class _$IdentificationtasksPredictionsCreateErrorSerializer implements Primitive
   }
 }
 
+
 class IdentificationtasksPredictionsCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'classifier_version')

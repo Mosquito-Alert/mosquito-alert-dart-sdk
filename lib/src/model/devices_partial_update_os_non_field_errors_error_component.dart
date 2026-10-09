@@ -139,6 +139,7 @@ class _$DevicesPartialUpdateOsNonFieldErrorsErrorComponentSerializer implements 
   }
 }
 
+
 class DevicesPartialUpdateOsNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'os.non_field_errors')

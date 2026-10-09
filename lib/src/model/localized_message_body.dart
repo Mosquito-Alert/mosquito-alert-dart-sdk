@@ -568,3 +568,4 @@ class _$LocalizedMessageBodySerializer implements PrimitiveSerializer<LocalizedM
   }
 }
 
+

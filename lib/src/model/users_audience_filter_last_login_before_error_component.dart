@@ -139,6 +139,7 @@ class _$UsersAudienceFilterLastLoginBeforeErrorComponentSerializer implements Pr
   }
 }
 
+
 class UsersAudienceFilterLastLoginBeforeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'last_login_before')

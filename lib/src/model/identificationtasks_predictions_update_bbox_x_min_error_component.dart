@@ -139,6 +139,7 @@ class _$IdentificationtasksPredictionsUpdateBboxXMinErrorComponentSerializer imp
   }
 }
 
+
 class IdentificationtasksPredictionsUpdateBboxXMinErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'bbox.x_min')

@@ -152,3 +152,4 @@ class _$AnnotationPermissionSerializer implements PrimitiveSerializer<Annotation
   }
 }
 
+

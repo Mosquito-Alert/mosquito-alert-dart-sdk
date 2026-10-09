@@ -160,3 +160,4 @@ class _$PaginatedNotificationListSerializer implements PrimitiveSerializer<Pagin
   }
 }
 
+

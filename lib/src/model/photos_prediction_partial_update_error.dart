@@ -409,6 +409,7 @@ class _$PhotosPredictionPartialUpdateErrorSerializer implements PrimitiveSeriali
   }
 }
 
+
 class PhotosPredictionPartialUpdateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'classifier_version')

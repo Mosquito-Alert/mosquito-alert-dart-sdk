@@ -139,6 +139,7 @@ class _$IdentificationtasksListMineResultConfidenceErrorComponentSerializer impl
   }
 }
 
+
 class IdentificationtasksListMineResultConfidenceErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'result_confidence')

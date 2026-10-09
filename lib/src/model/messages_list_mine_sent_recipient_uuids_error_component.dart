@@ -139,6 +139,7 @@ class _$MessagesListMineSentRecipientUuidsErrorComponentSerializer implements Pr
   }
 }
 
+
 class MessagesListMineSentRecipientUuidsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'recipient_uuids')

@@ -124,6 +124,7 @@ class _$BoundariesCreateTemporaryErrorSerializer implements PrimitiveSerializer<
   }
 }
 
+
 class BoundariesCreateTemporaryErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'geojson')

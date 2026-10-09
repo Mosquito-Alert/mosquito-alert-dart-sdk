@@ -121,3 +121,4 @@ class _$SimplePhotoSerializer implements PrimitiveSerializer<SimplePhoto> {
   }
 }
 
+

@@ -139,6 +139,7 @@ class _$BitesGeoListShortIdErrorComponentSerializer implements PrimitiveSerializ
   }
 }
 
+
 class BitesGeoListShortIdErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short_id')

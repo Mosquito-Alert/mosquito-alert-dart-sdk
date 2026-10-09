@@ -281,6 +281,7 @@ class _$DeviceSerializer implements PrimitiveSerializer<Device> {
   }
 }
 
+
 class DeviceTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'ios')

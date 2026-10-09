@@ -274,6 +274,7 @@ class _$IdentificationtasksReviewCreateErrorSerializer implements PrimitiveSeria
   }
 }
 
+
 class IdentificationtasksReviewCreateErrorAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'characteristics.is_gravid')

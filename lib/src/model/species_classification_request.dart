@@ -122,6 +122,7 @@ class _$SpeciesClassificationRequestSerializer implements PrimitiveSerializer<Sp
   }
 }
 
+
 class SpeciesClassificationRequestConfidenceLabelEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'definitely')

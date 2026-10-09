@@ -140,6 +140,7 @@ class _$UserAssignmentSerializer implements PrimitiveSerializer<UserAssignment> 
   }
 }
 
+
 class UserAssignmentAnnotationTypeEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'short')

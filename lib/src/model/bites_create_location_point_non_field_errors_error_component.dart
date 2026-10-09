@@ -139,6 +139,7 @@ class _$BitesCreateLocationPointNonFieldErrorsErrorComponentSerializer implement
   }
 }
 
+
 class BitesCreateLocationPointNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.point.non_field_errors')

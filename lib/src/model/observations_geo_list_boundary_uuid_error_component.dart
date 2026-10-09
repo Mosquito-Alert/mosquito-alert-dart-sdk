@@ -139,6 +139,7 @@ class _$ObservationsGeoListBoundaryUuidErrorComponentSerializer implements Primi
   }
 }
 
+
 class ObservationsGeoListBoundaryUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'boundary_uuid')

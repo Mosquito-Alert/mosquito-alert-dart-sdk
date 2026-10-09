@@ -173,3 +173,4 @@ class _$FixRequestSerializer implements PrimitiveSerializer<FixRequest> {
   }
 }
 
+

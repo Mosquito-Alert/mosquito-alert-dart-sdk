@@ -139,6 +139,7 @@ class _$BitesListMineTagsErrorComponentSerializer implements PrimitiveSerializer
   }
 }
 
+
 class BitesListMineTagsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags')

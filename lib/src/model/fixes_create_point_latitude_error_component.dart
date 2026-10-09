@@ -139,6 +139,7 @@ class _$FixesCreatePointLatitudeErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class FixesCreatePointLatitudeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'point.latitude')

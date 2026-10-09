@@ -139,6 +139,7 @@ class _$IdentificationtasksListResultUncertaintyErrorComponentSerializer impleme
   }
 }
 
+
 class IdentificationtasksListResultUncertaintyErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'result_uncertainty')

@@ -106,3 +106,4 @@ class _$TemporaryBoundaryRequestSerializer implements PrimitiveSerializer<Tempor
   }
 }
 
+

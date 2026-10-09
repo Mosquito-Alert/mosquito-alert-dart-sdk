@@ -139,6 +139,7 @@ class _$BitesCreateTagsINDEXErrorComponentSerializer implements PrimitiveSeriali
   }
 }
 
+
 class BitesCreateTagsINDEXErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'tags.INDEX')

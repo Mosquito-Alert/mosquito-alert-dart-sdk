@@ -139,6 +139,7 @@ class _$FixesCreatePointNonFieldErrorsErrorComponentSerializer implements Primit
   }
 }
 
+
 class FixesCreatePointNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'point.non_field_errors')

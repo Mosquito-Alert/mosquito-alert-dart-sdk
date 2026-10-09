@@ -139,6 +139,7 @@ class _$IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentSe
   }
 }
 
+
 class IdentificationtasksReviewCreateCharacteristicsIsBloodFedErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'characteristics.is_blood_fed')

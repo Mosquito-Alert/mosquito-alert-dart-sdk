@@ -126,6 +126,7 @@ class _$MessageTargetingSerializer implements PrimitiveSerializer<MessageTargeti
   }
 }
 
+
 class MessageTargetingTargetEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'users')

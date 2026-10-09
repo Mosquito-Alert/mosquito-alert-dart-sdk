@@ -139,6 +139,7 @@ class _$UsersAudienceFilterLocaleErrorComponentSerializer implements PrimitiveSe
   }
 }
 
+
 class UsersAudienceFilterLocaleErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'locale')

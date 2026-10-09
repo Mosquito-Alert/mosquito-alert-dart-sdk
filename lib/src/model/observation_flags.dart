@@ -125,3 +125,4 @@ class _$ObservationFlagsSerializer implements PrimitiveSerializer<ObservationFla
   }
 }
 
+

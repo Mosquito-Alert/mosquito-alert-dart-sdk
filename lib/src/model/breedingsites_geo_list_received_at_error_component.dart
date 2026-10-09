@@ -139,6 +139,7 @@ class _$BreedingsitesGeoListReceivedAtErrorComponentSerializer implements Primit
   }
 }
 
+
 class BreedingsitesGeoListReceivedAtErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'received_at')

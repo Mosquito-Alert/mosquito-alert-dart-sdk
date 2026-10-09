@@ -139,6 +139,7 @@ class _$IdentificationtasksListMineResultAgreementErrorComponentSerializer imple
   }
 }
 
+
 class IdentificationtasksListMineResultAgreementErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'result_agreement')

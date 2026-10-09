@@ -139,6 +139,7 @@ class _$BreedingsitesGeoListBoundaryUuidErrorComponentSerializer implements Prim
   }
 }
 
+
 class BreedingsitesGeoListBoundaryUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'boundary_uuid')

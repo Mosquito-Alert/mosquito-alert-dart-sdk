@@ -139,6 +139,7 @@ class _$BreedingsitesListMineSiteTypeErrorComponentSerializer implements Primiti
   }
 }
 
+
 class BreedingsitesListMineSiteTypeErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'site_type')

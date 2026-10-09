@@ -187,3 +187,4 @@ class _$WorkspaceCollaborationGroupSerializer implements PrimitiveSerializer<Wor
   }
 }
 
+

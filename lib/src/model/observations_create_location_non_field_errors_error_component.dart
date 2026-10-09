@@ -139,6 +139,7 @@ class _$ObservationsCreateLocationNonFieldErrorsErrorComponentSerializer impleme
   }
 }
 
+
 class ObservationsCreateLocationNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'location.non_field_errors')

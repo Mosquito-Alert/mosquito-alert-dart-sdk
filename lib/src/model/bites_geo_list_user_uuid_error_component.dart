@@ -139,6 +139,7 @@ class _$BitesGeoListUserUuidErrorComponentSerializer implements PrimitiveSeriali
   }
 }
 
+
 class BitesGeoListUserUuidErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'user_uuid')

@@ -139,6 +139,7 @@ class _$DevicesCreateMobileAppNonFieldErrorsErrorComponentSerializer implements 
   }
 }
 
+
 class DevicesCreateMobileAppNonFieldErrorsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mobile_app.non_field_errors')

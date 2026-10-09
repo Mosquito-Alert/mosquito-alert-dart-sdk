@@ -139,6 +139,7 @@ class _$DevicesUpdateOsLocaleErrorComponentSerializer implements PrimitiveSerial
   }
 }
 
+
 class DevicesUpdateOsLocaleErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'os.locale')

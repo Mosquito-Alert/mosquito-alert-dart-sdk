@@ -139,6 +139,7 @@ class _$ObservationsGeoListOrderByErrorComponentSerializer implements PrimitiveS
   }
 }
 
+
 class ObservationsGeoListOrderByErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'order_by')

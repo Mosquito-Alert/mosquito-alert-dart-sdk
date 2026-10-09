@@ -139,6 +139,7 @@ class _$IdentificationtasksListResultTaxonIdsErrorComponentSerializer implements
   }
 }
 
+
 class IdentificationtasksListResultTaxonIdsErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'result_taxon_ids')

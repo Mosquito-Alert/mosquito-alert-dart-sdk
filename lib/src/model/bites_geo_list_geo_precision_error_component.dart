@@ -139,6 +139,7 @@ class _$BitesGeoListGeoPrecisionErrorComponentSerializer implements PrimitiveSer
   }
 }
 
+
 class BitesGeoListGeoPrecisionErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'geo_precision')

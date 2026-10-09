@@ -139,6 +139,7 @@ class _$DevicesCreateMobileAppPackageNameErrorComponentSerializer implements Pri
   }
 }
 
+
 class DevicesCreateMobileAppPackageNameErrorComponentAttrEnum extends EnumClass {
 
   @BuiltValueEnumConst(wireName: r'mobile_app.package_name')
