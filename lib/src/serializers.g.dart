@@ -18,6 +18,8 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..add(AnnotationTypeEnum.serializer)
       ..add(AppUserTokenObtainPair.serializer)
       ..add(AppUserTokenObtainPairRequest.serializer)
+      ..add(AreaMeta.serializer)
+      ..add(AreaMetaLevelEnum.serializer)
       ..add(Assignment.serializer)
       ..add(AssignmentAnnotationTypeEnum.serializer)
       ..add(AudienceFilter.serializer)
@@ -2294,6 +2296,7 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..add(PaginatedObservationList.serializer)
       ..add(PaginatedPartnerList.serializer)
       ..add(PaginatedPhotoPredictionList.serializer)
+      ..add(PaginatedReportStatsResponseList.serializer)
       ..add(PaginatedTaxonList.serializer)
       ..add(PaginatedUserList.serializer)
       ..add(PaginatedWorkspaceCollaborationGroupList.serializer)
@@ -2548,6 +2551,13 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..add(PointRequest.serializer)
       ..add(PredictionScore.serializer)
       ..add(PredictionScoreRequest.serializer)
+      ..add(ReportStatsMeta.serializer)
+      ..add(ReportStatsMetaGroupByEnum.serializer)
+      ..add(ReportStatsMetaIntervalEnum.serializer)
+      ..add(ReportStatsMetaLevelEnum.serializer)
+      ..add(ReportStatsResponse.serializer)
+      ..add(ReportStatsRow.serializer)
+      ..add(ReportStatsRowTypeEnum.serializer)
       ..add(ReviewPermission.serializer)
       ..add(SimpleAnnotatorUser.serializer)
       ..add(SimplePhoto.serializer)
@@ -2568,6 +2578,7 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..add(SpeciesClassificationConfidenceLabelEnum.serializer)
       ..add(SpeciesClassificationRequest.serializer)
       ..add(SpeciesClassificationRequestConfidenceLabelEnum.serializer)
+      ..add(StatisticsPermission.serializer)
       ..add(TaxaListRankErrorComponent.serializer)
       ..add(TaxaListRankErrorComponentAttrEnum.serializer)
       ..add(TaxaListRankErrorComponentCodeEnum.serializer)
@@ -2871,6 +2882,17 @@ Serializers _$serializers = (Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(PhotosPredictionUpdateError)]),
           () => ListBuilder<PhotosPredictionUpdateError>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(ReportStatsMetaGroupByEnum)]),
+          () => ListBuilder<ReportStatsMetaGroupByEnum>())
+      ..addBuilderFactory(
+          const FullType(
+              BuiltList, const [const FullType(ReportStatsResponse)]),
+          () => ListBuilder<ReportStatsResponse>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(ReportStatsRow)]),
+          () => ListBuilder<ReportStatsRow>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimplePhoto)]),
           () => ListBuilder<SimplePhoto>())

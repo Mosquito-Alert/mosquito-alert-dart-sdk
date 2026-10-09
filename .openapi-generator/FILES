@@ -10,6 +10,7 @@ doc/AnnotationPermission.md
 doc/AnnotationRequest.md
 doc/AppUserTokenObtainPair.md
 doc/AppUserTokenObtainPairRequest.md
+doc/AreaMeta.md
 doc/Assignment.md
 doc/AudienceFilter.md
 doc/AudienceFilterRequest.md
@@ -628,6 +629,7 @@ doc/PaginatedNotificationList.md
 doc/PaginatedObservationList.md
 doc/PaginatedPartnerList.md
 doc/PaginatedPhotoPredictionList.md
+doc/PaginatedReportStatsResponseList.md
 doc/PaginatedTaxonList.md
 doc/PaginatedUserList.md
 doc/PaginatedWorkspaceCollaborationGroupList.md
@@ -697,6 +699,9 @@ doc/Point.md
 doc/PointRequest.md
 doc/PredictionScore.md
 doc/PredictionScoreRequest.md
+doc/ReportStatsMeta.md
+doc/ReportStatsResponse.md
+doc/ReportStatsRow.md
 doc/ReviewPermission.md
 doc/SimpleAnnotatorUser.md
 doc/SimplePhoto.md
@@ -710,6 +715,8 @@ doc/SpeciesCharacteristics.md
 doc/SpeciesCharacteristicsRequest.md
 doc/SpeciesClassification.md
 doc/SpeciesClassificationRequest.md
+doc/StatisticsPermission.md
+doc/StatsApi.md
 doc/TaxaApi.md
 doc/TaxaListRankErrorComponent.md
 doc/TaxaListValidationError.md
@@ -768,6 +775,7 @@ lib/src/api/partners_api.dart
 lib/src/api/permissions_api.dart
 lib/src/api/photos_api.dart
 lib/src/api/ping_api.dart
+lib/src/api/stats_api.dart
 lib/src/api/taxa_api.dart
 lib/src/api/users_api.dart
 lib/src/api/workspaces_api.dart
@@ -787,6 +795,7 @@ lib/src/model/annotation_permission.dart
 lib/src/model/annotation_request.dart
 lib/src/model/app_user_token_obtain_pair.dart
 lib/src/model/app_user_token_obtain_pair_request.dart
+lib/src/model/area_meta.dart
 lib/src/model/assignment.dart
 lib/src/model/audience_filter.dart
 lib/src/model/audience_filter_request.dart
@@ -1394,6 +1403,7 @@ lib/src/model/paginated_notification_list.dart
 lib/src/model/paginated_observation_list.dart
 lib/src/model/paginated_partner_list.dart
 lib/src/model/paginated_photo_prediction_list.dart
+lib/src/model/paginated_report_stats_response_list.dart
 lib/src/model/paginated_taxon_list.dart
 lib/src/model/paginated_user_list.dart
 lib/src/model/paginated_workspace_collaboration_group_list.dart
@@ -1459,6 +1469,9 @@ lib/src/model/point.dart
 lib/src/model/point_request.dart
 lib/src/model/prediction_score.dart
 lib/src/model/prediction_score_request.dart
+lib/src/model/report_stats_meta.dart
+lib/src/model/report_stats_response.dart
+lib/src/model/report_stats_row.dart
 lib/src/model/review_permission.dart
 lib/src/model/simple_annotator_user.dart
 lib/src/model/simple_photo.dart
@@ -1472,6 +1485,7 @@ lib/src/model/species_characteristics.dart
 lib/src/model/species_characteristics_request.dart
 lib/src/model/species_classification.dart
 lib/src/model/species_classification_request.dart
+lib/src/model/statistics_permission.dart
 lib/src/model/taxa_list_rank_error_component.dart
 lib/src/model/taxa_list_validation_error.dart
 lib/src/model/taxon.dart
@@ -1520,6 +1534,7 @@ test/annotation_request_test.dart
 test/annotation_test.dart
 test/app_user_token_obtain_pair_request_test.dart
 test/app_user_token_obtain_pair_test.dart
+test/area_meta_test.dart
 test/assignment_test.dart
 test/audience_filter_request_test.dart
 test/audience_filter_test.dart
@@ -2138,6 +2153,7 @@ test/paginated_notification_list_test.dart
 test/paginated_observation_list_test.dart
 test/paginated_partner_list_test.dart
 test/paginated_photo_prediction_list_test.dart
+test/paginated_report_stats_response_list_test.dart
 test/paginated_taxon_list_test.dart
 test/paginated_user_list_test.dart
 test/paginated_workspace_collaboration_group_list_test.dart
@@ -2207,6 +2223,9 @@ test/point_request_test.dart
 test/point_test.dart
 test/prediction_score_request_test.dart
 test/prediction_score_test.dart
+test/report_stats_meta_test.dart
+test/report_stats_response_test.dart
+test/report_stats_row_test.dart
 test/review_permission_test.dart
 test/simple_annotator_user_test.dart
 test/simple_photo_test.dart
@@ -2220,6 +2239,8 @@ test/species_characteristics_request_test.dart
 test/species_characteristics_test.dart
 test/species_classification_request_test.dart
 test/species_classification_test.dart
+test/statistics_permission_test.dart
+test/stats_api_test.dart
 test/taxa_api_test.dart
 test/taxa_list_rank_error_component_test.dart
 test/taxa_list_validation_error_test.dart

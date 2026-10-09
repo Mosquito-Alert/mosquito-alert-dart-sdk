@@ -23,6 +23,7 @@ import 'package:mosquito_alert/src/model/annotation_permission.dart';
 import 'package:mosquito_alert/src/model/annotation_request.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair.dart';
 import 'package:mosquito_alert/src/model/app_user_token_obtain_pair_request.dart';
+import 'package:mosquito_alert/src/model/area_meta.dart';
 import 'package:mosquito_alert/src/model/assignment.dart';
 import 'package:mosquito_alert/src/model/audience_filter.dart';
 import 'package:mosquito_alert/src/model/audience_filter_request.dart';
@@ -629,6 +630,7 @@ import 'package:mosquito_alert/src/model/paginated_notification_list.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
 import 'package:mosquito_alert/src/model/paginated_photo_prediction_list.dart';
+import 'package:mosquito_alert/src/model/paginated_report_stats_response_list.dart';
 import 'package:mosquito_alert/src/model/paginated_taxon_list.dart';
 import 'package:mosquito_alert/src/model/paginated_user_list.dart';
 import 'package:mosquito_alert/src/model/paginated_workspace_collaboration_group_list.dart';
@@ -694,6 +696,9 @@ import 'package:mosquito_alert/src/model/point.dart';
 import 'package:mosquito_alert/src/model/point_request.dart';
 import 'package:mosquito_alert/src/model/prediction_score.dart';
 import 'package:mosquito_alert/src/model/prediction_score_request.dart';
+import 'package:mosquito_alert/src/model/report_stats_meta.dart';
+import 'package:mosquito_alert/src/model/report_stats_response.dart';
+import 'package:mosquito_alert/src/model/report_stats_row.dart';
 import 'package:mosquito_alert/src/model/review_permission.dart';
 import 'package:mosquito_alert/src/model/simple_annotator_user.dart';
 import 'package:mosquito_alert/src/model/simple_photo.dart';
@@ -707,6 +712,7 @@ import 'package:mosquito_alert/src/model/species_characteristics.dart';
 import 'package:mosquito_alert/src/model/species_characteristics_request.dart';
 import 'package:mosquito_alert/src/model/species_classification.dart';
 import 'package:mosquito_alert/src/model/species_classification_request.dart';
+import 'package:mosquito_alert/src/model/statistics_permission.dart';
 import 'package:mosquito_alert/src/model/taxa_list_rank_error_component.dart';
 import 'package:mosquito_alert/src/model/taxa_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/taxon.dart';
@@ -757,6 +763,7 @@ part 'serializers.g.dart';
   AnnotationRequest,
   AppUserTokenObtainPair,
   AppUserTokenObtainPairRequest,
+  AreaMeta,
   Assignment,
   AudienceFilter,
   AudienceFilterRequest,
@@ -1363,6 +1370,7 @@ part 'serializers.g.dart';
   PaginatedObservationList,
   PaginatedPartnerList,
   PaginatedPhotoPredictionList,
+  PaginatedReportStatsResponseList,
   PaginatedTaxonList,
   PaginatedUserList,
   PaginatedWorkspaceCollaborationGroupList,
@@ -1428,6 +1436,9 @@ part 'serializers.g.dart';
   PointRequest,
   PredictionScore,
   PredictionScoreRequest,
+  ReportStatsMeta,
+  ReportStatsResponse,
+  ReportStatsRow,
   ReviewPermission,
   SimpleAnnotatorUser,
   SimplePhoto,
@@ -1441,6 +1452,7 @@ part 'serializers.g.dart';
   SpeciesCharacteristicsRequest,
   SpeciesClassification,
   SpeciesClassificationRequest,
+  StatisticsPermission,
   TaxaListRankErrorComponent,
   TaxaListValidationError,
   Taxon,
@@ -1507,6 +1519,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Taxon)]),
         () => ListBuilder<Taxon>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ReportStatsRow)]),
+        () => ListBuilder<ReportStatsRow>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(BitesCreateError)]),
@@ -1635,6 +1651,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UsersPartialUpdateError)]),
         () => ListBuilder<UsersPartialUpdateError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(ReportStatsResponse)]),
+        () => ListBuilder<ReportStatsResponse>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UsersUpdateError)]),

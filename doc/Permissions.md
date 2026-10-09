@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **identificationTask** | [**IdentificationTaskPermission**](IdentificationTaskPermission.md) |  | 
 **review** | [**ReviewPermission**](ReviewPermission.md) |  | 
 **message** | [**MessagePermission**](MessagePermission.md) |  | 
+**statistics** | [**StatisticsPermission**](StatisticsPermission.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

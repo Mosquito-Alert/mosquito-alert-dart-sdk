@@ -27,5 +27,10 @@ void main() {
       // TODO
     });
 
+    // StatisticsPermission statistics
+    test('to test the property `statistics`', () async {
+      // TODO
+    });
+
   });
 }

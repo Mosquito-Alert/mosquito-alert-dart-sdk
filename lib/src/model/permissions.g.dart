@@ -15,6 +15,8 @@ class _$Permissions extends Permissions {
   final ReviewPermission review;
   @override
   final MessagePermission message;
+  @override
+  final StatisticsPermission statistics;
 
   factory _$Permissions([void Function(PermissionsBuilder)? updates]) =>
       (PermissionsBuilder()..update(updates))._build();
@@ -23,7 +25,8 @@ class _$Permissions extends Permissions {
       {required this.annotation,
       required this.identificationTask,
       required this.review,
-      required this.message})
+      required this.message,
+      required this.statistics})
       : super._();
   @override
   Permissions rebuild(void Function(PermissionsBuilder) updates) =>
@@ -39,7 +42,8 @@ class _$Permissions extends Permissions {
         annotation == other.annotation &&
         identificationTask == other.identificationTask &&
         review == other.review &&
-        message == other.message;
+        message == other.message &&
+        statistics == other.statistics;
   }
 
   @override
@@ -49,6 +53,7 @@ class _$Permissions extends Permissions {
     _$hash = $jc(_$hash, identificationTask.hashCode);
     _$hash = $jc(_$hash, review.hashCode);
     _$hash = $jc(_$hash, message.hashCode);
+    _$hash = $jc(_$hash, statistics.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -59,7 +64,8 @@ class _$Permissions extends Permissions {
           ..add('annotation', annotation)
           ..add('identificationTask', identificationTask)
           ..add('review', review)
-          ..add('message', message))
+          ..add('message', message)
+          ..add('statistics', statistics))
         .toString();
   }
 }
@@ -90,6 +96,12 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
       _$this._message ??= MessagePermissionBuilder();
   set message(MessagePermissionBuilder? message) => _$this._message = message;
 
+  StatisticsPermissionBuilder? _statistics;
+  StatisticsPermissionBuilder get statistics =>
+      _$this._statistics ??= StatisticsPermissionBuilder();
+  set statistics(StatisticsPermissionBuilder? statistics) =>
+      _$this._statistics = statistics;
+
   PermissionsBuilder() {
     Permissions._defaults(this);
   }
@@ -101,6 +113,7 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
       _identificationTask = $v.identificationTask.toBuilder();
       _review = $v.review.toBuilder();
       _message = $v.message.toBuilder();
+      _statistics = $v.statistics.toBuilder();
       _$v = null;
     }
     return this;
@@ -128,6 +141,7 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
             identificationTask: identificationTask.build(),
             review: review.build(),
             message: message.build(),
+            statistics: statistics.build(),
           );
     } catch (_) {
       late String _$failedField;
@@ -140,6 +154,8 @@ class PermissionsBuilder implements Builder<Permissions, PermissionsBuilder> {
         review.build();
         _$failedField = 'message';
         message.build();
+        _$failedField = 'statistics';
+        statistics.build();
       } catch (e) {
         throw BuiltValueNestedFieldError(
             r'Permissions', _$failedField, e.toString());

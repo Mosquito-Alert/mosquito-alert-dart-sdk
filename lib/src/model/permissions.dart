@@ -5,6 +5,7 @@
 // ignore_for_file: unused_element
 import 'package:mosquito_alert/src/model/identification_task_permission.dart';
 import 'package:mosquito_alert/src/model/review_permission.dart';
+import 'package:mosquito_alert/src/model/statistics_permission.dart';
 import 'package:mosquito_alert/src/model/annotation_permission.dart';
 import 'package:mosquito_alert/src/model/message_permission.dart';
 import 'package:built_value/built_value.dart';
@@ -19,6 +20,7 @@ part 'permissions.g.dart';
 /// * [identificationTask] 
 /// * [review] 
 /// * [message] 
+/// * [statistics] 
 @BuiltValue()
 abstract class Permissions implements Built<Permissions, PermissionsBuilder> {
   @BuiltValueField(wireName: r'annotation')
@@ -32,6 +34,9 @@ abstract class Permissions implements Built<Permissions, PermissionsBuilder> {
 
   @BuiltValueField(wireName: r'message')
   MessagePermission get message;
+
+  @BuiltValueField(wireName: r'statistics')
+  StatisticsPermission get statistics;
 
   Permissions._();
 
@@ -75,6 +80,11 @@ class _$PermissionsSerializer implements PrimitiveSerializer<Permissions> {
     yield serializers.serialize(
       object.message,
       specifiedType: const FullType(MessagePermission),
+    );
+    yield r'statistics';
+    yield serializers.serialize(
+      object.statistics,
+      specifiedType: const FullType(StatisticsPermission),
     );
   }
 
@@ -126,6 +136,13 @@ class _$PermissionsSerializer implements PrimitiveSerializer<Permissions> {
             specifiedType: const FullType(MessagePermission),
           ) as MessagePermission;
           result.message.replace(valueDes);
+          break;
+        case r'statistics':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(StatisticsPermission),
+          ) as StatisticsPermission;
+          result.statistics.replace(valueDes);
           break;
         default:
           unhandled.add(key);
