@@ -10,12 +10,12 @@ class _$SimplePhoto extends SimplePhoto {
   @override
   final String uuid;
   @override
-  final String url;
+  final String? url;
 
   factory _$SimplePhoto([void Function(SimplePhotoBuilder)? updates]) =>
       (SimplePhotoBuilder()..update(updates))._build();
 
-  _$SimplePhoto._({required this.uuid, required this.url}) : super._();
+  _$SimplePhoto._({required this.uuid, this.url}) : super._();
   @override
   SimplePhoto rebuild(void Function(SimplePhotoBuilder) updates) =>
       (toBuilder()..update(updates)).build();
@@ -90,8 +90,7 @@ class SimplePhotoBuilder implements Builder<SimplePhoto, SimplePhotoBuilder> {
         _$SimplePhoto._(
           uuid: BuiltValueNullFieldError.checkNotNull(
               uuid, r'SimplePhoto', 'uuid'),
-          url:
-              BuiltValueNullFieldError.checkNotNull(url, r'SimplePhoto', 'url'),
+          url: url,
         );
     replace(_$result);
     return _$result;

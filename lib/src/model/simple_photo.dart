@@ -20,7 +20,7 @@ abstract class SimplePhoto implements Built<SimplePhoto, SimplePhotoBuilder> {
 
   /// URL of the photo associated with the item. Note: This URL may change over time. Do not rely on it for permanent storage.
   @BuiltValueField(wireName: r'url')
-  String get url;
+  String? get url;
 
   SimplePhoto._();
 
@@ -51,9 +51,9 @@ class _$SimplePhotoSerializer implements PrimitiveSerializer<SimplePhoto> {
       specifiedType: const FullType(String),
     );
     yield r'url';
-    yield serializers.serialize(
+    yield object.url == null ? null : serializers.serialize(
       object.url,
-      specifiedType: const FullType(String),
+      specifiedType: const FullType.nullable(String),
     );
   }
 
@@ -88,8 +88,9 @@ class _$SimplePhotoSerializer implements PrimitiveSerializer<SimplePhoto> {
         case r'url':
           final valueDes = serializers.deserialize(
             value,
-            specifiedType: const FullType(String),
-          ) as String;
+            specifiedType: const FullType.nullable(String),
+          ) as String?;
+          if (valueDes == null) continue;
           result.url = valueDes;
           break;
         default:

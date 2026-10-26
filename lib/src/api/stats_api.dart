@@ -10,6 +10,7 @@ import 'package:dio/dio.dart';
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
 import 'package:mosquito_alert/src/model/paginated_report_stats_response_list.dart';
+import 'package:mosquito_alert/src/model/stats_area.dart';
 
 class StatsApi {
 
@@ -18,6 +19,95 @@ class StatsApi {
   final Serializers _serializers;
 
   const StatsApi(this._dio, this._serializers);
+
+  /// areasList
+  /// Tree of areas (and their subdivisions) the current user can request statistics for. Each node&#39;s &#x60;key&#x60; is the value to send as &#x60;?area&#x3D;&#x60;.
+  ///
+  /// Parameters:
+  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
+  /// * [headers] - Can be used to add additional headers to the request
+  /// * [extras] - Can be used to add flags to the request
+  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
+  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
+  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
+  ///
+  /// Returns a [Future] containing a [Response] with a [BuiltList<StatsArea>] as data
+  /// Throws [DioException] if API call or serialization fails
+  Future<Response<BuiltList<StatsArea>>> areasList({ 
+    CancelToken? cancelToken,
+    Map<String, dynamic>? headers,
+    Map<String, dynamic>? extra,
+    ValidateStatus? validateStatus,
+    ProgressCallback? onSendProgress,
+    ProgressCallback? onReceiveProgress,
+  }) async {
+    final _path = r'/stats/areas/';
+    final _options = Options(
+      method: r'GET',
+      headers: <String, dynamic>{
+        ...?headers,
+      },
+      extra: <String, dynamic>{
+        'secure': <Map<String, String>>[
+          {
+            'type': 'apiKey',
+            'name': 'tokenAuth',
+            'keyName': 'Authorization',
+            'where': 'header',
+          },{
+            'type': 'apiKey',
+            'name': 'cookieAuth',
+            'keyName': 'sessionid',
+            'where': '',
+          },{
+            'type': 'http',
+            'scheme': 'bearer',
+            'name': 'jwtAuth',
+          },
+        ],
+        ...?extra,
+      },
+      validateStatus: validateStatus,
+    );
+
+    final _response = await _dio.request<Object>(
+      _path,
+      options: _options,
+      cancelToken: cancelToken,
+      onSendProgress: onSendProgress,
+      onReceiveProgress: onReceiveProgress,
+    );
+
+    BuiltList<StatsArea>? _responseData;
+
+    try {
+      final rawResponse = _response.data;
+      _responseData = rawResponse == null ? null : _serializers.deserialize(
+        rawResponse,
+        specifiedType: const FullType(BuiltList, [FullType(StatsArea)]),
+      ) as BuiltList<StatsArea>;
+
+    } catch (error, stackTrace) {
+      throw DioException(
+        requestOptions: _response.requestOptions,
+        response: _response,
+        type: DioExceptionType.unknown,
+        error: error,
+        stackTrace: stackTrace,
+      );
+    }
+
+    return Response<BuiltList<StatsArea>>(
+      data: _responseData,
+      headers: _response.headers,
+      isRedirect: _response.isRedirect,
+      requestOptions: _response.requestOptions,
+      redirects: _response.redirects,
+      statusCode: _response.statusCode,
+      statusMessage: _response.statusMessage,
+      extra: _response.extra,
+    );
+  }
 
   /// list
   /// Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of &#x60;data&#x60; depend on &#x60;group_by&#x60; (always includes &#x60;count&#x60;, plus &#x60;date&#x60; if grouped by date, &#x60;region_id&#x60;/&#x60;region_code&#x60;/&#x60;region_name&#x60; if grouped by region, and &#x60;type&#x60; if grouped by type).

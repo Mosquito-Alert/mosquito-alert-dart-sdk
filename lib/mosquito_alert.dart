@@ -730,6 +730,7 @@ export 'package:mosquito_alert/src/model/species_characteristics_request.dart';
 export 'package:mosquito_alert/src/model/species_classification.dart';
 export 'package:mosquito_alert/src/model/species_classification_request.dart';
 export 'package:mosquito_alert/src/model/statistics_permission.dart';
+export 'package:mosquito_alert/src/model/stats_area.dart';
 export 'package:mosquito_alert/src/model/taxa_list_rank_error_component.dart';
 export 'package:mosquito_alert/src/model/taxa_list_validation_error.dart';
 export 'package:mosquito_alert/src/model/taxon.dart';

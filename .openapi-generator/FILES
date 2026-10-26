@@ -717,6 +717,7 @@ doc/SpeciesClassification.md
 doc/SpeciesClassificationRequest.md
 doc/StatisticsPermission.md
 doc/StatsApi.md
+doc/StatsArea.md
 doc/TaxaApi.md
 doc/TaxaListRankErrorComponent.md
 doc/TaxaListValidationError.md
@@ -1486,6 +1487,7 @@ lib/src/model/species_characteristics_request.dart
 lib/src/model/species_classification.dart
 lib/src/model/species_classification_request.dart
 lib/src/model/statistics_permission.dart
+lib/src/model/stats_area.dart
 lib/src/model/taxa_list_rank_error_component.dart
 lib/src/model/taxa_list_validation_error.dart
 lib/src/model/taxon.dart
@@ -2241,6 +2243,7 @@ test/species_classification_request_test.dart
 test/species_classification_test.dart
 test/statistics_permission_test.dart
 test/stats_api_test.dart
+test/stats_area_test.dart
 test/taxa_api_test.dart
 test/taxa_list_rank_error_component_test.dart
 test/taxa_list_validation_error_test.dart

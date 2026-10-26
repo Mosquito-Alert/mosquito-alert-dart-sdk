@@ -2579,6 +2579,8 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..add(SpeciesClassificationRequest.serializer)
       ..add(SpeciesClassificationRequestConfidenceLabelEnum.serializer)
       ..add(StatisticsPermission.serializer)
+      ..add(StatsArea.serializer)
+      ..add(StatsAreaLevelEnum.serializer)
       ..add(TaxaListRankErrorComponent.serializer)
       ..add(TaxaListRankErrorComponentAttrEnum.serializer)
       ..add(TaxaListRankErrorComponentCodeEnum.serializer)
@@ -2902,6 +2904,9 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(SimpleUser)]),
           () => ListBuilder<SimpleUser>())
+      ..addBuilderFactory(
+          const FullType(BuiltList, const [const FullType(StatsArea)]),
+          () => ListBuilder<StatsArea>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(String)]),
           () => ListBuilder<String>())

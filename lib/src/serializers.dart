@@ -713,6 +713,7 @@ import 'package:mosquito_alert/src/model/species_characteristics_request.dart';
 import 'package:mosquito_alert/src/model/species_classification.dart';
 import 'package:mosquito_alert/src/model/species_classification_request.dart';
 import 'package:mosquito_alert/src/model/statistics_permission.dart';
+import 'package:mosquito_alert/src/model/stats_area.dart';
 import 'package:mosquito_alert/src/model/taxa_list_rank_error_component.dart';
 import 'package:mosquito_alert/src/model/taxa_list_validation_error.dart';
 import 'package:mosquito_alert/src/model/taxon.dart';
@@ -1453,6 +1454,7 @@ part 'serializers.g.dart';
   SpeciesClassification,
   SpeciesClassificationRequest,
   StatisticsPermission,
+  StatsArea,
   TaxaListRankErrorComponent,
   TaxaListValidationError,
   Taxon,
@@ -1539,6 +1541,10 @@ Serializers serializers = (_$serializers.toBuilder()
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(CampaignsListError)]),
         () => ListBuilder<CampaignsListError>(),
+      )
+      ..addBuilderFactory(
+        const FullType(BuiltList, [FullType(StatsArea)]),
+        () => ListBuilder<StatsArea>(),
       )
       ..addBuilderFactory(
         const FullType(BuiltList, [FullType(Observation)]),
