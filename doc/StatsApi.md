@@ -10,7 +10,7 @@ All URIs are relative to *https://api.mosquitoalert.com/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**areasList**](StatsApi.md#areaslist) | **GET** /stats/areas/ | 
-[**list**](StatsApi.md#list) | **GET** /stats/ | 
+[**reportsList**](StatsApi.md#reportslist) | **GET** /stats/reports/ | 
 
 
 # **areasList**
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 
-Tree of areas (and their subdivisions) the current user can request statistics for. Each node's `key` is the value to send as `?area=`.
+Tree of areas (and their subdivisions) the current user can request statistics for. Each node's `key` is the value to send as `?area=` .
 
 ### Example
 ```dart
@@ -60,8 +60,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list**
-> BuiltList<ReportStatsResponse> list(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type)
+# **reportsList**
+> BuiltList<ReportStatsResponse> reportsList(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type)
 
 
 
@@ -90,10 +90,10 @@ final int level = 56; // int | The NUTS level to aggregate by when grouping by r
 final BuiltList<String> type = ; // BuiltList<String> | Comma-separated subset of: bite, adult, site.
 
 try {
-    final response = api.list(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type);
+    final response = api.reportsList(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type);
     print(response);
 } on DioException catch (e) {
-    print('Exception when calling StatsApi->list: $e\n');
+    print('Exception when calling StatsApi->reportsList: $e\n');
 }
 ```
 

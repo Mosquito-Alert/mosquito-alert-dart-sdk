@@ -21,7 +21,7 @@ class StatsApi {
   const StatsApi(this._dio, this._serializers);
 
   /// areasList
-  /// Tree of areas (and their subdivisions) the current user can request statistics for. Each node&#39;s &#x60;key&#x60; is the value to send as &#x60;?area&#x3D;&#x60;.
+  /// Tree of areas (and their subdivisions) the current user can request statistics for. Each node&#39;s &#x60;key&#x60; is the value to send as &#x60;?area&#x3D;&#x60; .
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -109,7 +109,7 @@ class StatsApi {
     );
   }
 
-  /// list
+  /// reportsList
   /// Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of &#x60;data&#x60; depend on &#x60;group_by&#x60; (always includes &#x60;count&#x60;, plus &#x60;date&#x60; if grouped by date, &#x60;region_id&#x60;/&#x60;region_code&#x60;/&#x60;region_name&#x60; if grouped by region, and &#x60;type&#x60; if grouped by type).
   ///
   /// Parameters:
@@ -130,7 +130,7 @@ class StatsApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<ReportStatsResponse>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<ReportStatsResponse>>> list({ 
+  Future<Response<BuiltList<ReportStatsResponse>>> reportsList({ 
     String? area,
     bool? cumulative,
     String? dateFrom,
@@ -146,7 +146,7 @@ class StatsApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/stats/';
+    final _path = r'/stats/reports/';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

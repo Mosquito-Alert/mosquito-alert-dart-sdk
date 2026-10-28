@@ -7,7 +7,7 @@ void main() {
   final instance = MosquitoAlert().getStatsApi();
 
   group(StatsApi, () {
-    // Tree of areas (and their subdivisions) the current user can request statistics for. Each node's `key` is the value to send as `?area=`.
+    // Tree of areas (and their subdivisions) the current user can request statistics for. Each node's `key` is the value to send as `?area=` .
     //
     //Future<BuiltList<StatsArea>> areasList() async
     test('test areasList', () async {
@@ -16,8 +16,8 @@ void main() {
 
     // Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of `data` depend on `group_by` (always includes `count`, plus `date` if grouped by date, `region_id`/`region_code`/`region_name` if grouped by region, and `type` if grouped by type).
     //
-    //Future<BuiltList<ReportStatsResponse>> list({ String area, bool cumulative, String dateFrom, String dateTo, BuiltList<String> groupBy, String interval, int level, BuiltList<String> type }) async
-    test('test list', () async {
+    //Future<BuiltList<ReportStatsResponse>> reportsList({ String area, bool cumulative, String dateFrom, String dateTo, BuiltList<String> groupBy, String interval, int level, BuiltList<String> type }) async
+    test('test reportsList', () async {
       // TODO
     });
 
