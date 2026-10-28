@@ -629,7 +629,6 @@ doc/PaginatedNotificationList.md
 doc/PaginatedObservationList.md
 doc/PaginatedPartnerList.md
 doc/PaginatedPhotoPredictionList.md
-doc/PaginatedReportStatsResponseList.md
 doc/PaginatedTaxonList.md
 doc/PaginatedUserList.md
 doc/PaginatedWorkspaceCollaborationGroupList.md
@@ -1404,7 +1403,6 @@ lib/src/model/paginated_notification_list.dart
 lib/src/model/paginated_observation_list.dart
 lib/src/model/paginated_partner_list.dart
 lib/src/model/paginated_photo_prediction_list.dart
-lib/src/model/paginated_report_stats_response_list.dart
 lib/src/model/paginated_taxon_list.dart
 lib/src/model/paginated_user_list.dart
 lib/src/model/paginated_workspace_collaboration_group_list.dart
@@ -2155,7 +2153,6 @@ test/paginated_notification_list_test.dart
 test/paginated_observation_list_test.dart
 test/paginated_partner_list_test.dart
 test/paginated_photo_prediction_list_test.dart
-test/paginated_report_stats_response_list_test.dart
 test/paginated_taxon_list_test.dart
 test/paginated_user_list_test.dart
 test/paginated_workspace_collaboration_group_list_test.dart

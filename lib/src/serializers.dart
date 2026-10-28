@@ -630,7 +630,6 @@ import 'package:mosquito_alert/src/model/paginated_notification_list.dart';
 import 'package:mosquito_alert/src/model/paginated_observation_list.dart';
 import 'package:mosquito_alert/src/model/paginated_partner_list.dart';
 import 'package:mosquito_alert/src/model/paginated_photo_prediction_list.dart';
-import 'package:mosquito_alert/src/model/paginated_report_stats_response_list.dart';
 import 'package:mosquito_alert/src/model/paginated_taxon_list.dart';
 import 'package:mosquito_alert/src/model/paginated_user_list.dart';
 import 'package:mosquito_alert/src/model/paginated_workspace_collaboration_group_list.dart';
@@ -1371,7 +1370,6 @@ part 'serializers.g.dart';
   PaginatedObservationList,
   PaginatedPartnerList,
   PaginatedPhotoPredictionList,
-  PaginatedReportStatsResponseList,
   PaginatedTaxonList,
   PaginatedUserList,
   PaginatedWorkspaceCollaborationGroupList,

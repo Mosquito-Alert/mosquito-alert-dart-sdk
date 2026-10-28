@@ -2296,7 +2296,6 @@ Serializers _$serializers = (Serializers().toBuilder()
       ..add(PaginatedObservationList.serializer)
       ..add(PaginatedPartnerList.serializer)
       ..add(PaginatedPhotoPredictionList.serializer)
-      ..add(PaginatedReportStatsResponseList.serializer)
       ..add(PaginatedTaxonList.serializer)
       ..add(PaginatedUserList.serializer)
       ..add(PaginatedWorkspaceCollaborationGroupList.serializer)
@@ -2888,10 +2887,6 @@ Serializers _$serializers = (Serializers().toBuilder()
           const FullType(
               BuiltList, const [const FullType(ReportStatsMetaGroupByEnum)]),
           () => ListBuilder<ReportStatsMetaGroupByEnum>())
-      ..addBuilderFactory(
-          const FullType(
-              BuiltList, const [const FullType(ReportStatsResponse)]),
-          () => ListBuilder<ReportStatsResponse>())
       ..addBuilderFactory(
           const FullType(BuiltList, const [const FullType(ReportStatsRow)]),
           () => ListBuilder<ReportStatsRow>())

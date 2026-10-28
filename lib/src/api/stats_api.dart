@@ -9,7 +9,7 @@ import 'package:dio/dio.dart';
 
 import 'package:built_collection/built_collection.dart';
 import 'package:mosquito_alert/src/api_util.dart';
-import 'package:mosquito_alert/src/model/paginated_report_stats_response_list.dart';
+import 'package:mosquito_alert/src/model/report_stats_response.dart';
 import 'package:mosquito_alert/src/model/stats_area.dart';
 
 class StatsApi {
@@ -120,8 +120,6 @@ class StatsApi {
   /// * [groupBy] - Comma-separated subset of: date, type, region.
   /// * [interval] - The interval at which to aggregate data when grouping by date. Defaults to week.
   /// * [level] - The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
-  /// * [page] - A page number within the paginated result set.
-  /// * [pageSize] - Number of results to return per page.
   /// * [type] - Comma-separated subset of: bite, adult, site.
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
   /// * [headers] - Can be used to add additional headers to the request
@@ -130,9 +128,9 @@ class StatsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [PaginatedReportStatsResponseList] as data
+  /// Returns a [Future] containing a [Response] with a [BuiltList<ReportStatsResponse>] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<PaginatedReportStatsResponseList>> list({ 
+  Future<Response<BuiltList<ReportStatsResponse>>> list({ 
     String? area,
     bool? cumulative,
     String? dateFrom,
@@ -140,8 +138,6 @@ class StatsApi {
     BuiltList<String>? groupBy,
     String? interval,
     int? level,
-    int? page,
-    int? pageSize,
     BuiltList<String>? type,
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
@@ -187,8 +183,6 @@ class StatsApi {
       if (groupBy != null) r'group_by': encodeCollectionQueryParameter<String>(_serializers, groupBy, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
       if (interval != null) r'interval': encodeQueryParameter(_serializers, interval, const FullType(String)),
       if (level != null) r'level': encodeQueryParameter(_serializers, level, const FullType(int)),
-      if (page != null) r'page': encodeQueryParameter(_serializers, page, const FullType(int)),
-      if (pageSize != null) r'page_size': encodeQueryParameter(_serializers, pageSize, const FullType(int)),
       if (type != null) r'type': encodeCollectionQueryParameter<String>(_serializers, type, const FullType(BuiltList, [FullType(String)]), format: ListFormat.csv,),
     };
 
@@ -201,14 +195,14 @@ class StatsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    PaginatedReportStatsResponseList? _responseData;
+    BuiltList<ReportStatsResponse>? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(PaginatedReportStatsResponseList),
-      ) as PaginatedReportStatsResponseList;
+        specifiedType: const FullType(BuiltList, [FullType(ReportStatsResponse)]),
+      ) as BuiltList<ReportStatsResponse>;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -220,7 +214,7 @@ class StatsApi {
       );
     }
 
-    return Response<PaginatedReportStatsResponseList>(
+    return Response<BuiltList<ReportStatsResponse>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

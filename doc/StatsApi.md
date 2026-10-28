@@ -61,7 +61,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list**
-> PaginatedReportStatsResponseList list(area, cumulative, dateFrom, dateTo, groupBy, interval, level, page, pageSize, type)
+> BuiltList<ReportStatsResponse> list(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type)
 
 
 
@@ -87,12 +87,10 @@ final String dateTo = dateTo_example; // String |
 final BuiltList<String> groupBy = ; // BuiltList<String> | Comma-separated subset of: date, type, region.
 final String interval = interval_example; // String | The interval at which to aggregate data when grouping by date. Defaults to week.
 final int level = 56; // int | The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
-final int page = 56; // int | A page number within the paginated result set.
-final int pageSize = 56; // int | Number of results to return per page.
 final BuiltList<String> type = ; // BuiltList<String> | Comma-separated subset of: bite, adult, site.
 
 try {
-    final response = api.list(area, cumulative, dateFrom, dateTo, groupBy, interval, level, page, pageSize, type);
+    final response = api.list(area, cumulative, dateFrom, dateTo, groupBy, interval, level, type);
     print(response);
 } on DioException catch (e) {
     print('Exception when calling StatsApi->list: $e\n');
@@ -110,13 +108,11 @@ Name | Type | Description  | Notes
  **groupBy** | [**BuiltList&lt;String&gt;**](String.md)| Comma-separated subset of: date, type, region. | [optional] 
  **interval** | **String**| The interval at which to aggregate data when grouping by date. Defaults to week. | [optional] 
  **level** | **int**| The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2. | [optional] 
- **page** | **int**| A page number within the paginated result set. | [optional] 
- **pageSize** | **int**| Number of results to return per page. | [optional] 
  **type** | [**BuiltList&lt;String&gt;**](String.md)| Comma-separated subset of: bite, adult, site. | [optional] 
 
 ### Return type
 
-[**PaginatedReportStatsResponseList**](PaginatedReportStatsResponseList.md)
+[**BuiltList&lt;ReportStatsResponse&gt;**](ReportStatsResponse.md)
 
 ### Authorization
 
