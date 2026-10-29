@@ -128,9 +128,9 @@ class StatsApi {
   /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
   /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
   ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<ReportStatsResponse>] as data
+  /// Returns a [Future] containing a [Response] with a [ReportStatsResponse] as data
   /// Throws [DioException] if API call or serialization fails
-  Future<Response<BuiltList<ReportStatsResponse>>> reportsList({ 
+  Future<Response<ReportStatsResponse>> reportsList({ 
     String? area,
     bool? cumulative,
     String? dateFrom,
@@ -195,14 +195,14 @@ class StatsApi {
       onReceiveProgress: onReceiveProgress,
     );
 
-    BuiltList<ReportStatsResponse>? _responseData;
+    ReportStatsResponse? _responseData;
 
     try {
       final rawResponse = _response.data;
       _responseData = rawResponse == null ? null : _serializers.deserialize(
         rawResponse,
-        specifiedType: const FullType(BuiltList, [FullType(ReportStatsResponse)]),
-      ) as BuiltList<ReportStatsResponse>;
+        specifiedType: const FullType(ReportStatsResponse),
+      ) as ReportStatsResponse;
 
     } catch (error, stackTrace) {
       throw DioException(
@@ -214,7 +214,7 @@ class StatsApi {
       );
     }
 
-    return Response<BuiltList<ReportStatsResponse>>(
+    return Response<ReportStatsResponse>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,

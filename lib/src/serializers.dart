@@ -1657,10 +1657,6 @@ Serializers serializers = (_$serializers.toBuilder()
         () => ListBuilder<UsersPartialUpdateError>(),
       )
       ..addBuilderFactory(
-        const FullType(BuiltList, [FullType(ReportStatsResponse)]),
-        () => ListBuilder<ReportStatsResponse>(),
-      )
-      ..addBuilderFactory(
         const FullType(BuiltList, [FullType(UsersUpdateError)]),
         () => ListBuilder<UsersUpdateError>(),
       )
