@@ -113,11 +113,11 @@ class StatsApi {
   /// Aggregated report counts (for displaying data tables or charts, for example). The keys present on each row of &#x60;data&#x60; depend on &#x60;group_by&#x60; (always includes &#x60;count&#x60;, plus &#x60;date&#x60; if grouped by date, &#x60;region_id&#x60;/&#x60;region_code&#x60;/&#x60;region_name&#x60; if grouped by region, and &#x60;type&#x60; if grouped by type).
   ///
   /// Parameters:
-  /// * [area] - \"\\<level\\>:\\<id\\>\", e.g. \"country:ES\" or \"nuts2:34\".
+  /// * [area] - \"\\<level\\>:\\<id\\>\", e.g. \"country:ES\" or \"nuts2:34\". If omitted, the request applies to the whole world.
   /// * [cumulative] - Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
   /// * [dateFrom] 
   /// * [dateTo] 
-  /// * [groupBy] - Comma-separated subset of: date, type, region, country.
+  /// * [groupBy] - Comma-separated subset of: date, type, region.
   /// * [interval] - The interval at which to aggregate data when grouping by date. Defaults to week.
   /// * [level] - The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
   /// * [type] - Comma-separated subset of: bite, adult, site.
