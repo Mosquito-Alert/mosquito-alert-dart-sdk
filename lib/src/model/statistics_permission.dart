@@ -15,6 +15,7 @@ part 'statistics_permission.g.dart';
 /// * [change] 
 /// * [view] 
 /// * [delete] 
+/// * [viewWorld] 
 @BuiltValue()
 abstract class StatisticsPermission implements Built<StatisticsPermission, StatisticsPermissionBuilder> {
   @BuiltValueField(wireName: r'add')
@@ -28,6 +29,9 @@ abstract class StatisticsPermission implements Built<StatisticsPermission, Stati
 
   @BuiltValueField(wireName: r'delete')
   bool get delete;
+
+  @BuiltValueField(wireName: r'view_world')
+  bool get viewWorld;
 
   StatisticsPermission._();
 
@@ -70,6 +74,11 @@ class _$StatisticsPermissionSerializer implements PrimitiveSerializer<Statistics
     yield r'delete';
     yield serializers.serialize(
       object.delete,
+      specifiedType: const FullType(bool),
+    );
+    yield r'view_world';
+    yield serializers.serialize(
+      object.viewWorld,
       specifiedType: const FullType(bool),
     );
   }
@@ -122,6 +131,13 @@ class _$StatisticsPermissionSerializer implements PrimitiveSerializer<Statistics
             specifiedType: const FullType(bool),
           ) as bool;
           result.delete = valueDes;
+          break;
+        case r'view_world':
+          final valueDes = serializers.deserialize(
+            value,
+            specifiedType: const FullType(bool),
+          ) as bool;
+          result.viewWorld = valueDes;
           break;
         default:
           unhandled.add(key);

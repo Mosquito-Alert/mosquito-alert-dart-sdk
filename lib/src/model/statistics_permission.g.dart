@@ -15,6 +15,8 @@ class _$StatisticsPermission extends StatisticsPermission {
   final bool view;
   @override
   final bool delete;
+  @override
+  final bool viewWorld;
 
   factory _$StatisticsPermission(
           [void Function(StatisticsPermissionBuilder)? updates]) =>
@@ -24,7 +26,8 @@ class _$StatisticsPermission extends StatisticsPermission {
       {required this.add,
       required this.change,
       required this.view,
-      required this.delete})
+      required this.delete,
+      required this.viewWorld})
       : super._();
   @override
   StatisticsPermission rebuild(
@@ -42,7 +45,8 @@ class _$StatisticsPermission extends StatisticsPermission {
         add == other.add &&
         change == other.change &&
         view == other.view &&
-        delete == other.delete;
+        delete == other.delete &&
+        viewWorld == other.viewWorld;
   }
 
   @override
@@ -52,6 +56,7 @@ class _$StatisticsPermission extends StatisticsPermission {
     _$hash = $jc(_$hash, change.hashCode);
     _$hash = $jc(_$hash, view.hashCode);
     _$hash = $jc(_$hash, delete.hashCode);
+    _$hash = $jc(_$hash, viewWorld.hashCode);
     _$hash = $jf(_$hash);
     return _$hash;
   }
@@ -62,7 +67,8 @@ class _$StatisticsPermission extends StatisticsPermission {
           ..add('add', add)
           ..add('change', change)
           ..add('view', view)
-          ..add('delete', delete))
+          ..add('delete', delete)
+          ..add('viewWorld', viewWorld))
         .toString();
   }
 }
@@ -87,6 +93,10 @@ class StatisticsPermissionBuilder
   bool? get delete => _$this._delete;
   set delete(bool? delete) => _$this._delete = delete;
 
+  bool? _viewWorld;
+  bool? get viewWorld => _$this._viewWorld;
+  set viewWorld(bool? viewWorld) => _$this._viewWorld = viewWorld;
+
   StatisticsPermissionBuilder() {
     StatisticsPermission._defaults(this);
   }
@@ -98,6 +108,7 @@ class StatisticsPermissionBuilder
       _change = $v.change;
       _view = $v.view;
       _delete = $v.delete;
+      _viewWorld = $v.viewWorld;
       _$v = null;
     }
     return this;
@@ -127,6 +138,8 @@ class StatisticsPermissionBuilder
               view, r'StatisticsPermission', 'view'),
           delete: BuiltValueNullFieldError.checkNotNull(
               delete, r'StatisticsPermission', 'delete'),
+          viewWorld: BuiltValueNullFieldError.checkNotNull(
+              viewWorld, r'StatisticsPermission', 'viewWorld'),
         );
     replace(_$result);
     return _$result;

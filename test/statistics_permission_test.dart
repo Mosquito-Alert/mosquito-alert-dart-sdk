@@ -27,5 +27,10 @@ void main() {
       // TODO
     });
 
+    // bool viewWorld
+    test('to test the property `viewWorld`', () async {
+      // TODO
+    });
+
   });
 }

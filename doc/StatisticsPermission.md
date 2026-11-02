@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **change** | **bool** |  | 
 **view** | **bool** |  | 
 **delete** | **bool** |  | 
+**viewWorld** | **bool** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
