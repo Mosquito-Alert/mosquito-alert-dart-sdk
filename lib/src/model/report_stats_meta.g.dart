@@ -12,6 +12,8 @@ const ReportStatsMetaGroupByEnum _$reportStatsMetaGroupByEnum_type =
     const ReportStatsMetaGroupByEnum._('type');
 const ReportStatsMetaGroupByEnum _$reportStatsMetaGroupByEnum_region =
     const ReportStatsMetaGroupByEnum._('region');
+const ReportStatsMetaGroupByEnum _$reportStatsMetaGroupByEnum_country =
+    const ReportStatsMetaGroupByEnum._('country');
 const ReportStatsMetaGroupByEnum
     _$reportStatsMetaGroupByEnum_unknownDefaultOpenApi =
     const ReportStatsMetaGroupByEnum._('unknownDefaultOpenApi');
@@ -24,6 +26,8 @@ ReportStatsMetaGroupByEnum _$reportStatsMetaGroupByEnumValueOf(String name) {
       return _$reportStatsMetaGroupByEnum_type;
     case 'region':
       return _$reportStatsMetaGroupByEnum_region;
+    case 'country':
+      return _$reportStatsMetaGroupByEnum_country;
     case 'unknownDefaultOpenApi':
       return _$reportStatsMetaGroupByEnum_unknownDefaultOpenApi;
     default:
@@ -36,6 +40,7 @@ final BuiltSet<ReportStatsMetaGroupByEnum> _$reportStatsMetaGroupByEnumValues =
   _$reportStatsMetaGroupByEnum_date,
   _$reportStatsMetaGroupByEnum_type,
   _$reportStatsMetaGroupByEnum_region,
+  _$reportStatsMetaGroupByEnum_country,
   _$reportStatsMetaGroupByEnum_unknownDefaultOpenApi,
 ]);
 
@@ -115,12 +120,14 @@ class _$ReportStatsMetaGroupByEnumSerializer
     'date': 'date',
     'type': 'type',
     'region': 'region',
+    'country': 'country',
     'unknownDefaultOpenApi': 'unknown_default_open_api',
   };
   static const Map<Object, String> _fromWire = const <Object, String>{
     'date': 'date',
     'type': 'type',
     'region': 'region',
+    'country': 'country',
     'unknown_default_open_api': 'unknownDefaultOpenApi',
   };
 

@@ -117,7 +117,7 @@ class StatsApi {
   /// * [cumulative] - Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
   /// * [dateFrom] 
   /// * [dateTo] 
-  /// * [groupBy] - Comma-separated subset of: date, type, region.
+  /// * [groupBy] - Comma-separated subset of: date, type, region, country.
   /// * [interval] - The interval at which to aggregate data when grouping by date. Defaults to week.
   /// * [level] - The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
   /// * [type] - Comma-separated subset of: bite, adult, site.

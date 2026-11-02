@@ -84,7 +84,7 @@ final String area = area_example; // String | \"\\<level\\>:\\<id\\>\", e.g. \"c
 final bool cumulative = true; // bool | Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False.
 final String dateFrom = dateFrom_example; // String | 
 final String dateTo = dateTo_example; // String | 
-final BuiltList<String> groupBy = ; // BuiltList<String> | Comma-separated subset of: date, type, region.
+final BuiltList<String> groupBy = ; // BuiltList<String> | Comma-separated subset of: date, type, region, country.
 final String interval = interval_example; // String | The interval at which to aggregate data when grouping by date. Defaults to week.
 final int level = 56; // int | The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2.
 final BuiltList<String> type = ; // BuiltList<String> | Comma-separated subset of: bite, adult, site.
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
  **cumulative** | **bool**| Whether to return cumulative counts over time. It only applies when grouping by date. Defaults to False. | [optional] 
  **dateFrom** | **String**|  | [optional] 
  **dateTo** | **String**|  | [optional] 
- **groupBy** | [**BuiltList&lt;String&gt;**](String.md)| Comma-separated subset of: date, type, region. | [optional] 
+ **groupBy** | [**BuiltList&lt;String&gt;**](String.md)| Comma-separated subset of: date, type, region, country. | [optional] 
  **interval** | **String**| The interval at which to aggregate data when grouping by date. Defaults to week. | [optional] 
  **level** | **int**| The NUTS level to aggregate by when grouping by region. Defaults to NUTS 2. | [optional] 
  **type** | [**BuiltList&lt;String&gt;**](String.md)| Comma-separated subset of: bite, adult, site. | [optional] 

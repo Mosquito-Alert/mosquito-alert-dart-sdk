@@ -22,7 +22,7 @@ part 'report_stats_meta.g.dart';
 abstract class ReportStatsMeta implements Built<ReportStatsMeta, ReportStatsMetaBuilder> {
   @BuiltValueField(wireName: r'group_by')
   BuiltList<ReportStatsMetaGroupByEnum> get groupBy;
-  // enum groupByEnum {  date,  type,  region,  };
+  // enum groupByEnum {  date,  type,  region,  country,  };
 
   @BuiltValueField(wireName: r'interval')
   ReportStatsMetaIntervalEnum? get interval;
@@ -194,6 +194,8 @@ class ReportStatsMetaGroupByEnum extends EnumClass {
   static const ReportStatsMetaGroupByEnum type = _$reportStatsMetaGroupByEnum_type;
   @BuiltValueEnumConst(wireName: r'region')
   static const ReportStatsMetaGroupByEnum region = _$reportStatsMetaGroupByEnum_region;
+  @BuiltValueEnumConst(wireName: r'country')
+  static const ReportStatsMetaGroupByEnum country = _$reportStatsMetaGroupByEnum_country;
   @BuiltValueEnumConst(wireName: r'unknown_default_open_api', fallback: true)
   static const ReportStatsMetaGroupByEnum unknownDefaultOpenApi = _$reportStatsMetaGroupByEnum_unknownDefaultOpenApi;
 
